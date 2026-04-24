@@ -1,0 +1,90 @@
+# 🧘 Mantra Liste
+- Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present. 🎁
+- Stay humble, work hard, be kind. ✨
+- Trust the process. The universe knows the way. 🛰️
+- I am the architect of my own reality. 🏛️
+- Focus on the essential, let everything else be noise. 🌊
+- Discipline is the highest form of self-love. 🔱
+- Breathe in the future, breathe out the past. 🌬️
+- Gratitude turns what we have into enough. 🌿
+- One step at a time is enough for me. 👣
+- Peace comes from within. Do not seek it without. 🧘
+- Be the change you wish to see in the world. 🌏
+- Everything you need is already within you. ✨
+- The journey of a thousand miles begins with a single step. 🚀
+- Mistakes are just debug info for your next success. ⚙️
+- My attention is my most valuable currency. I spend it wisely. ⚖️
+- Order in the system, freedom in the mind. 🔱
+- I am enough, exactly as I am. 🌸
+- Choose growth over comfort every single time. 🌱
+- Every moment is a fresh beginning. 🌈
+- Inhale calm, exhale chaos. 🌌
+- I trust the timing of my life. ⏳
+- Quiet the mind, and the soul will speak. 🕊️
+- I am grateful for this breath and this moment. 🙏
+- Kindness is a superpower. Sprinkle it everywhere. 🦄
+- The soul always knows what to do to heal itself. 🩹
+- Humility is not thinking less of yourself, but thinking of yourself less. 🌿
+- Growth happens outside of the comfort zone. 🚀
+- I am open to the abundance of the universe. 🌌
+- Let go of what you cannot control. 🍃
+- Small steps lead to big destinations. 👣
+- Today is an aaawesome day to grow. ☀️
+- Fascinating things are happening all around me. 🪄
+- Clarity of mind leads to magic in the world. ✨
+- I am the captain of my soul. ⚓
+- Abundance is a state of mind. 💎
+- I honor my own pace; I am not in a race. 🐢
+- Comparison is the thief of joy. 🕊️
+- Listen to the whispers of your heart. ❤️
+- I am resilient, strong, and brave. 🛡️
+- Love is the bridge between you and everything. 🌉
+- What you seek is seeking you. ✨
+- Your vibration attracts your tribe. 📡
+- The sun will rise and we will try again. 🌅
+- Magic happens when you don't give up. 🪄
+- A grateful heart is a magnet for miracles. ✨
+- Simplicity is the ultimate sophistication. 🐚
+- Do what you can, with what you have, where you are. 📍
+- Radiate positivity and the world will reflect it back. ☀️
+- The universe has my back. 🛰️
+- May all beings be happy and free. 🕉️
+- Stay grounded, even when you reach for the stars. 🎋
+- I release all that no longer serves my highest good. 🕊️
+- Every challenge is an opportunity to learn. 📚
+- I choose to see the beauty in everything. 🌸
+- Deep breath. Your system is ready. You are ready. 🌌
+- Focus is a muscle; I train it every day. 🔱
+- I am worthy of all the good things coming my way. ✨
+- Live simply, so that others may simply live. 🌿
+- Be a light in the dark. 🕯️
+- My soul is at peace. 🌊
+- The way is the goal. 🌊
+- Your energy introduces you before you even speak. ✨
+- Seek respect, not attention. It lasts longer. ⚖️
+- Be the person your dog thinks you are. 🐕
+- Hard work beats talent when talent doesn't work hard. 🚀
+- Surround yourself with those who bring out the best in you. 💎
+- Don't let yesterday take up too much of today. ⏳
+- Happiness is an inside job. 🏠
+- Let your light shine so bright that others can see their way out of the dark. 🕯️
+- Faith is taking the first step even when you don't see the whole staircase. 👣
+- Collect moments, not things. 📸
+- Your life is your message to the world. Make it inspiring. 🌏
+- Bloom where you are planted. 🌸
+- Wherever you go, go with all your heart. ❤️
+- Courage is being scared to death but saddling up anyway. 🏇
+- To be kind is more important than to be right. ✨
+- Small deeds done are better than great deeds planned. 🏗️
+- Patience is the companion of wisdom. 🦉
+- The best way out is always through. 🛤️
+- Every day may not be good, but there is something good in every day. 🌈
+- Dream big, stay humble. 🚀
+- Your thoughts are the architects of your destiny. 🏛️
+- Focus on the solution, not the problem. 🪄
+- Silence is sometimes the best answer. 🧘
+- You are the creator of your own vibe. 📡
+- Work in silence, let your success be your noise. 🔱
+- I am blooming in my own time. 🌱
+- I choose to be kind to myself today. 💖
+- My potential is infinite. 🌌

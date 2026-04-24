@@ -1,0 +1,23 @@
+filters:
+  and:
+    - inbox == true
+views:
+  - type: table
+    name: Allbox
+    groupBy:
+      property: archtype
+      direction: ASC
+    order:
+      - inbox
+      - file.name
+      - archtype
+      - for
+      - priority
+      - status
+      - due
+      - do
+    columnSize:
+      note.inbox: 48
+      file.name: 142
+      note.archtype: 134
+      note.priority: 64

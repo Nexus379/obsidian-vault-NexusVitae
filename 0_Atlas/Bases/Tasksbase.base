@@ -1,0 +1,240 @@
+filters:
+  and:
+    - arch.contains("#4task")
+formulas:
+  State: |
+    if(status == "0start", "📫",
+      if(Status == "2passive" || status == "3idea", "⏳",
+        if(status == "1active", "⭐",
+            if(status == "done", "🌟",
+    if(Status == "archive", "💼",
+              if(Status == "canceled", "bin", "➖")
+            )
+        )
+      )
+    )
+    )
+  Wekday: |+
+    if(!due, "", date(due).format("dd"))
+
+  RecType: |
+    if(recdays > 0, "🔁", "📌")
+  Progress Bar: |
+    if(progress >= 100, "✅ Abgeschlossen", 
+      if(progress >= 90, "█████████░ 90%", 
+        if(progress >= 80, "████████░░ 80%", 
+          if(progress >= 70, "███████░░░ 70%", 
+            if(progress >= 60, "██████░░░░ 60%", 
+              if(progress >= 50, "█████░░░░░ 50%", 
+                if(progress >= 40, "████░░░░░░ 40%", 
+                  if(progress >= 30, "███░░░░░░░ 30%", 
+                    if(progress >= 20, "██░░░░░░░░ 20%", 
+                      if(progress >= 10, "█░░░░░░░░░ 10%", "░░░░░░░░░░ 0%")
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  GoArchive: |
+    if(due < (today() - "30d") && (recdays == null || recdays == 0 || recdays == ""), true, false)
+  ThisWeek: |+
+    if((date(due) >= today() && date(due) <= (today() + "7d")) || (date(do) >= today() && date(do) <= (today() + "7d")), true, false)
+
+  NextDue: |-
+    if(recdays == null || recdays == 0 || recdays == "", "", 
+      if(done == true, 
+        date(date(due) + (recdays + "d")).format("DD.MM.YYYY HH:mm"), 
+        date(due).format("DD.MM.YYYY HH:mm")
+      )
+    )
+  DaysUntil: |-
+    if(done == true, "✅", 
+      if(!due, "📥",
+        if(date(due) < today(), "⭕", 
+          if(date(due).format("YYYY-MM-DD") == today().format("YYYY-MM-DD"), "🌑",
+            if(number((date(due) - today()).days) <= 2, "🌘",
+              if(number((date(due) - today()).days) <= 5, "🌗",
+                if(number((date(due) - today()).days) <= 10, "🌖",
+                  if(number((date(due) - today()).days) <= 30, "🌕",
+    if(number((date(due) - today()).days) <= 90, "⚪️", ""))
+                )
+              )
+            )
+          )
+        ) + " " + number((date(due) - today()).days).floor()
+      )
+    )
+  NextDueState: |+
+    if(done == true, "✅",
+      if(date(nextdue) < today(), 
+        "🚨 (" + number((today() - date(nextdue)).days).toFixed(0) + "d)", 
+        if(date(nextdue).format("YYYY-MM-DD") == today().format("YYYY-MM-DD"), 
+          "⚡️", 
+          "🔜" + number((date(nextdue) - today()).days).toFixed(0) + " d"
+        )
+      )
+    )
+
+  Action: |+
+    if(done == true, false,
+      if((project3 == null || project3 == "" || project3 == [[]]) && !due && !do, true, 
+        if(number((date(due) - today()).days) <= 7 || number((date(do) - today()).days) <= 7, true, false)
+      )
+    )
+
+properties:
+  formula.Wekday:
+    displayName: weekday
+  note.task4:
+    displayName: task4
+  formula.State:
+    displayName: state
+  note.summary:
+    displayName: summary
+  note.By:
+    displayName: by
+  note.Tools:
+    displayName: tools
+  note.Item:
+    displayName: item
+  note.ItemValue:
+    displayName: itemvalue
+  note.LocaType:
+    displayName: localtype
+  note.Project:
+    displayName: project3
+  note.Note:
+    displayName: note5
+  note.Area:
+    displayName: area2
+  note.Resource:
+    displayName: resource6
+  note.Inbox:
+    displayName: inbox
+  note.Status:
+    displayName: status
+  note.Due:
+    displayName: due
+  formula.DaysUntil:
+    displayName: daysuntil
+  note.Do:
+    displayName: do
+  note.Progress:
+    displayName: progress
+  formula.Progress Bar:
+    displayName: progressBar
+  note.RecDays:
+    displayName: recdays
+  formula.RecType:
+    displayName: rectype
+  formula.ThisWeek:
+    displayName: thisweek
+  note.Done:
+    displayName: done
+  formula.NextDue:
+    displayName: nextdue
+  formula.Action:
+    displayName: action
+  formula.GoArchive:
+    displayName: goarchive
+  note.area:
+    displayName: area1
+  note.Goals3:
+    displayName: stars1
+  note.Summary:
+    displayName: summary
+  note.Review:
+    displayName: review
+  note.Space:
+    displayName: space
+  formula.NextDueState:
+    displayName: nextduestate
+views:
+  - type: table
+    name: Task Allview
+    groupBy:
+      property: due
+      direction: ASC
+    order:
+      - formula.DaysUntil
+      - file.name
+      - archtype
+      - status
+      - due
+      - priority
+      - do
+      - progress
+      - formula.Progress Bar
+      - RecDays
+      - formula.RecType
+      - formula.ThisWeek
+      - done
+      - formula.NextDue
+      - formula.Action
+      - formula.GoArchive
+      - parent
+      - child
+      - sibling
+      - Goals3
+      - Area
+      - Project
+      - task4
+      - Note
+      - Resource
+      - summary
+      - review
+      - cost
+      - itemvalue
+      - item
+      - location
+      - locatype
+      - person
+      - materials
+      - tools
+      - formula.NextDueState
+      - persona
+    sort: []
+    columnSize:
+      file.name: 146
+      note.archtype: 120
+      note.status: 99
+      formula.DaysUntil: 64
+      note.priority: 49
+      note.do: 103
+      note.progress: 119
+      formula.Progress Bar: 127
+      note.RecDays: 88
+      formula.RecType: 86
+      formula.ThisWeek: 93
+      formula.NextDue: 113
+      formula.Action: 69
+      formula.GoArchive: 93
+      note.parent: 100
+      note.child: 100
+      note.Project: 103
+      note.task4: 90
+      note.Note: 108
+      note.Resource: 107
+      note.location: 106
+  - type: table
+    name: Status
+    groupBy:
+      property: Status
+      direction: ASC
+    order:
+      - file.name
+      - archtype
+      - Priority
+      - Do
+      - Due
+  - type: cards
+    name: card
+    sort:
+      - property: archtype
+        direction: ASC
+    imageAspectRatio: 0.75
+    cardSize: 190

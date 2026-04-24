@@ -1,0 +1,978 @@
+{
+  "leafy_greens_dry_greens": {
+    "spirulina_powder": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Spirulina Powder", "icon": "🧬", "latin": "Arthrospira platensis (Cyanobacteria pulvis)", "sci": ["#sci/Microbiology", "#sci/Nutrition"],
+      "val": { "kcal": 290, "protein_g": 57.0, "iron_plant_mg": 28.5, "chlorophyll_mg": 1000.0 },
+      "meta": { "locations": ["rossmann", "budni", "denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "props": ["Micro-algae superfood", "Highest plant protein %", "Heavy metal detox support"],
+      "lang": { "de": "Spirulina Pulver", "en": "Spirulina Powder", "es": "Polvo de espirulina", "fr": "Poudre de spiruline", "ru": "Спирулина (порошок)", "ja": "スピルリナパウダー", "zh": "螺旋藻粉", "fa": "پودر اسپیرولینا", "hi": "स्पिरुलिना पाउडर", "ar": "مسحوق سبيرولينا" }
+    },
+    "matcha_powder": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Matcha Powder", "icon": "🍵", "latin": "Camellia sinensis (Folia pulvis)", "sci": ["#sci/Phytochemistry", "#sci/Neuroscience"],
+      "val": { "kcal": 324, "protein_g": 30.6, "caffeine_mg": 3200.0, "l_theanine_mg": 2000.0, "egcg_mg": 5200.0, "calcium_mg": 420.0, "iron_plant_mg": 17.0, "fiber_g": 38.5 },
+      "meta": { "locations": ["denns", "alnatura", "rossmann", "budni", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_status": "Ultra-high EGCG" },
+      "props": ["Whole leaf consumption", "L-Theanine for calm focus", "Sustained energy release"],
+      "lang": { "de": "Matcha Pulver", "en": "Matcha Powder", "es": "Polvo de matcha", "fr": "Poudre de matcha", "ru": "Матча (порошок)", "ja": "抹茶", "zh": "抹茶粉", "fa": "پودر ماچا", "hi": "माचा पाउडर", "ar": "مسحوق الماتشا" }
+    },
+    "chlorella_powder": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Chlorella Powder", "icon": "🧬", "latin": "Chlorella vulgaris (Algae pulvis)", "sci": ["#sci/Microbiology", "#sci/Nutrition"],
+      "val": { "kcal": 410, "protein_g": 58.0, "iron_plant_mg": 120.0, "chlorophyll_mg": 2500.0, "vit_b12_mcg": 100.0, "zinc_mg": 71.0 },
+      "meta": { "locations": ["rossmann", "budni", "denns", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "Micro-algae", "special": "Highest chlorophyll on earth" },
+      "props": ["Single-celled green algae", "Chelating agent for detox", "Source of active plant-B12"],
+      "lang": { "de": "Chlorella Pulver", "en": "Chlorella Powder", "es": "Polvo de clorela", "fr": "Poudre de chlorelle", "ru": "Хлорелла (порошок)", "ja": "クロレラパウダー", "zh": "小球藻粉", "fa": "پودر کلورلا", "hi": "क्लोरेला पाउडर", "ar": "مسحوق كلوريللا" }
+    },
+    "wheatgrass_powder": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Wheatgrass Powder", "icon": "🌱", "latin": "Triticum aestivum (Herba pulvis)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 260, "fiber_g": 34.0, "potassium_mg": 3800.0, "vit_a_mcg": 400.0, "iron_plant_mg": 15.0 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "gluten_status": "Gluten-Free (Grass stage)" },
+      "props": ["Young wheat shoots ground", "Extremely alkalizing", "Rich in living enzymes"],
+      "lang": { "de": "Weizengras Pulver", "en": "Wheatgrass Powder", "es": "Polvo de pasto de trigo", "fr": "Poudre d'herbe de blé", "ru": "Витграсс (порошок)", "ja": "ウィートグラスパウダー", "zh": "小麦草粉", "fa": "پودر علف گندم", "hi": "गेंहू के जवारे का पाउडर", "ar": "مسحوق عشب القمح" }
+    },
+    "moringa_powder": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Moringa Powder", "icon": "🍃", "latin": "Moringa oleifera (Folia pulvis)", "sci": ["#sci/Botany", "#sci/Pharmacognosy"],
+      "val": { "kcal": 320, "protein_g": 27.0, "calcium_mg": 2000.0, "vit_e_mg": 113.0, "iron_plant_mg": 28.0, "potassium_mg": 1324.0 },
+      "meta": { "locations": ["denns", "alnatura", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "Miracle Tree", "nutrient_density": "Off the charts" },
+      "props": ["Complete amino acid profile", "High antioxidant load", "Anti-inflammatory isothiocyanates"],
+      "lang": { "de": "Moringa Pulver", "en": "Moringa Powder", "es": "Polvo de moringa", "fr": "Poudre de moringa", "ru": "Моринга (порошок)", "ja": "モリンガパウダー", "zh": "辣木粉", "fa": "پودر مورینگا", "hi": "सहजन पाउडर", "ar": "مسحوق المورينجا" }
+    },
+    "barley_grass_powder": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Barley Grass Powder", "icon": "🌾", "latin": "Hordeum vulgare (Herba pulvis)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 337, "fiber_g": 39.0, "calcium_mg": 800.0, "iron_plant_mg": 10.0, "potassium_mg": 4300.0 },
+      "meta": { "locations": ["rossmann", "budni", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "enzymes": "Rich in SOD enzymes" },
+      "props": ["Highly concentrated chlorophyll", "Alkalizing effect", "Rich in minerals"],
+      "lang": { "de": "Gerstengras Pulver", "en": "Barley Grass Powder", "es": "Polvo de hierba de cebada", "fr": "Poudre d'herbe d'orge", "ru": "Порошок ячменной травы", "ja": "大麦若葉パウダー", "zh": "大麦草粉", "fa": "پودر علف جو", "hi": "जौ की घास का पाउडर", "ar": "مسحوق عشب الشعير" }
+    },
+    "broccoli_sprout_powder": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Broccoli Sprout Powder", "icon": "🥦", "latin": "Brassica oleracea (Germinatus pulvis)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 350, "protein_g": 35.0, "fiber_g": 28.0, "sulforaphane_mg": 1200.0 },
+      "meta": { "locations": ["online_specialty", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Sulforaphane Champion" },
+      "props": ["Concentrated sulforaphane for DNA protection", "Potent Phase II liver detoxifier", "Higher than mature broccoli"],
+      "lang": { "de": "Brokkolisprossen Pulver", "en": "Broccoli Sprout Powder", "es": "Polvo de brotes de brócoli", "fr": "Poudre de pousses de brocoli", "ru": "Порошок проростков брокколи", "ja": "ブロッコリースプラウトパウダー", "zh": "西兰花芽粉", "fa": "پودر جوانه کلم بروکلی", "hi": "ब्रोकोली स्प्राउट पाउडर", "ar": "مسحوق براعم البروكلي" }
+    },
+    "spinach_powder": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Spinach Powder", "icon": "🥬", "latin": "Spinacia oleracea (Folia pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 277, "protein_g": 28.0, "fiber_g": 23.0, "iron_plant_mg": 25.0, "potassium_mg": 3000.0 },
+      "meta": { "locations": ["denns", "dm", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Natural Green Food Coloring" },
+      "props": ["Used to naturally dye pasta", "Concentrated iron and potassium", "Retains nutrients of fresh spinach"],
+      "lang": { "de": "Spinat Pulver", "en": "Spinach Powder", "es": "Polvo de espinaca", "fr": "Poudre d'épinard", "ru": "Шпинатный порошок", "ja": "ほうれん草パウダー", "zh": "菠菜粉", "fa": "پودر اسفناج", "hi": "पालک पाउडर", "ar": "مسحوق السبانخ" }
+    },
+    "kale_powder": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Kale Powder", "icon": "🥬", "latin": "Brassica oleracea var. sabellica (Folia pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 300, "protein_g": 25.0, "fiber_g": 26.0, "vit_k_mcg": 3500.0, "calcium_mg": 850.0 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Vitamin K & Calcium" },
+      "props": ["Green Smoothie base ingredient", "Extremely high in bioavailable calcium", "Retains bitter notes"],
+      "lang": { "de": "Grünkohl Pulver", "en": "Kale Powder", "es": "Polvo de col rizada", "fr": "Poudre de chou frisé", "ru": "Порошок кейла", "ja": "ケールパウダー", "zh": "羽衣甘蓝粉", "fa": "پودر کلم پیچ", "hi": "केल पाउडर", "ar": "مسحوق الكرنب المجعد" }
+    },
+    "alfalfa_powder": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Alfalfa Powder", "icon": "🌿", "latin": "Medicago sativa (Herba pulvis)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 230, "protein_g": 33.0, "fiber_g": 40.0, "vit_k_mcg": 850.0, "phytoestrogens_mg": 45.0 },
+      "meta": { "locations": ["reformhaus", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Alkalizing & Mineralizing" },
+      "props": ["Known as the 'Father of all foods'", "Roots extract trace minerals", "Highly alkalizing"],
+      "lang": { "de": "Alfalfa Pulver", "en": "Alfalfa Powder", "es": "Polvo de alfalfa", "fr": "Poudre de luzerne", "ru": "Порошок люцерны", "ja": "アルファルファパウダー", "zh": "紫花苜蓿粉", "fa": "پودر یونجه", "hi": "अल्फाल्फा पाउडर", "ar": "مسحوق الفصة" }
+    }
+  },
+  "spices_dry": {
+    "--- ROOTS_AND_BARKS_POWDER ---": "Wurzeln & Rinden (Getrocknet & Gemahlen)",
+    "turmeric_powder": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Turmeric Powder", "icon": "🫙", "latin": "Curcuma longa (Rhizoma pulvis)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 312, "curcumin_mg": 3000.0, "iron_plant_mg": 55.0, "manganese_mg": 20.0 },
+      "meta": { "locations": ["lidl", "rewe", "asia_market", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Master Anti-inflammatory" },
+      "props": ["Concentrated Curcumin", "Needs black pepper for absorption", "Intense staining properties"],
+      "lang": { "de": "Kurkuma (Pulver)", "en": "Turmeric Powder", "es": "Cúrcuma en polvo", "fr": "Curcuma en poudre", "ru": "Куркума (порошок)", "ja": "ターメリックパウダー", "zh": "姜黄粉", "fa": "پودر زردچوبه", "hi": "हल्दी पाउडर", "ar": "كركم مطحون" }
+    },
+    "ginger_powder": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Ginger Powder", "icon": "🫙", "latin": "Zingiber officinale (Rhizoma pulvis)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 335, "gingerol_mg": 150.0, "magnesium_mg": 214.0, "potassium_mg": 1320.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Hotter than fresh ginger" },
+      "props": ["Potent anti-nausea effect", "Contains shogaols when dried", "Thermogenic properties"],
+      "lang": { "de": "Ingwer (Pulver)", "en": "Ginger Powder", "es": "Jengibre en polvo", "fr": "Gingembre en poudre", "ru": "Имбирь (порошок)", "ja": "ジンジャーパウダー", "zh": "姜粉", "fa": "پودر زنجبیل", "hi": "सोंठ (अदरक पाउडर)", "ar": "زنجبيل مطحون" }
+    },
+    "ceylon_cinnamon_ground": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Ceylon Cinnamon (Ground)", "icon": "🫙", "latin": "Cinnamomum verum (Cortex pulvis)", "sci": ["#sci/Pharmacognosy"],
+      "val": { "kcal": 247, "fiber_g": 53.0, "calcium_mg": 1000.0, "coumarin_mg": 0.1 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "safety": "True Cinnamon (Low Coumarin)" },
+      "props": ["Improves insulin sensitivity", "Distinctively sweet and delicate", "Safety: Superior to Cassia"],
+      "lang": { "de": "Ceylon-Zimt (Gemahlen)", "en": "Ceylon Cinnamon Ground", "es": "Canela molida", "fr": "Cannelle en poudre", "ru": "Корица молотая", "ja": "シナモンパウダー", "zh": "肉桂粉", "fa": "دارچین آسیاب شده", "hi": "दालचीनी पाउडर", "ar": "قرفة مطحونة" }
+    },
+    "--- SEEDS_FLOWERS_FRUITS_DRY ---": "Blüten, Samen & getrocknete Früchte",
+    "black_pepper_ground": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Black Pepper (Ground)", "icon": "⚫", "latin": "Piper nigrum (Fructus pulvis)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 251, "piperine_mg": 5000.0, "manganese_mg": 12.8 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Bioavailability Booster" },
+      "props": ["Piperine increases nutrient absorption", "Stimulates digestive enzymes", "Anti-bacterial properties"],
+      "lang": { "de": "Schwarzer Pfeffer (Gemahlen)", "en": "Black Pepper Ground", "es": "Pimienta negra molida", "fr": "Poivre noir moulu", "ru": "Черный перец молотый", "ja": "黒胡椒挽き", "zh": "黑胡椒粉", "fa": "فلفل سیاه آسیاب شده", "hi": "काली मिर्च पाउडर", "ar": "فلفل أسود مطحون" }
+    },
+    "cloves": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cloves (Whole/Ground)", "icon": "📍", "latin": "Syzygium aromaticum (Alabastra sicca)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 274, "eugenol_mg": 15000.0, "antioxidants_orac": 290283.0 },
+      "meta": { "locations": ["rewe", "kaufland", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "ranking": "Highest ORAC value of all foods" },
+      "props": ["Highest antioxidant concentration", "Numbing effect (Eugenol)", "Powerful antimicrobial"],
+      "lang": { "de": "Gewürznelken", "en": "Cloves", "es": "Clavo", "fr": "Clou de girofle", "ru": "Гвоздика (пряность)", "ja": "クローブ", "zh": "丁香", "fa": "میخک", "hi": "लौंग", "ar": "قرنفل" }
+    },
+    "cardamom": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Cardamom (Pods/Powder)", "icon": "🟢", "latin": "Elettaria cardamomum (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 311, "iron_plant_mg": 14.0, "magnesium_mg": 229.0 },
+      "meta": { "locations": ["orient_market", "asia_market", "denns"], "season": ["all_year"], "vegan": true },
+      "props": ["The 'Queen of Spices'", "Supports gastrointestinal health", "Refreshing effect"],
+      "lang": { "de": "Kardamom", "en": "Cardamom", "es": "Cardamomo", "fr": "Cardamome", "ru": "Кардамон", "ja": "カルダモン", "zh": "小豆蔻", "fa": "هل", "hi": "इलायची", "ar": "هيل" }
+    },
+    "nutmeg_ground": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Nutmeg (Ground)", "icon": "🌰", "latin": "Myristica fragrans (Semen pulvis)", "sci": ["#sci/Toxicology"],
+      "val": { "kcal": 525, "fat_total_g": 36.3, "myristicin_mg": 210.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "safety": "Toxic in large doses (Myristicin)" },
+      "props": ["Mild hallucinogen if overused", "Classic pairing with spinach", "Rich in essential oils"],
+      "lang": { "de": "Muskatnuss (Gemahlen)", "en": "Nutmeg Ground", "es": "Nuez moscada molida", "fr": "Muscade en poudre", "ru": "Мускатный орех молотый", "ja": "ナツメグパウダー", "zh": "肉豆蔻粉", "fa": "جوز هندی آسیاب شده", "hi": "जायफल पाउडर", "ar": "جوزة الطيب مطحونة" }
+    },
+    "saffron": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Saffron (Threads)", "icon": "🏵️", "latin": "Crocus sativus (Stigma sicca)", "sci": ["#sci/Neuroscience"],
+      "val": { "kcal": 310, "crocin_mg": 50.0, "safranal_mg": 10.0 },
+      "meta": { "locations": ["orient_market", "rewe", "gourmet_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "title": "Most expensive spice on Earth" },
+      "props": ["Hand-picked stigmas", "Studied for antidepressant effects", "Potent coloring agent"],
+      "lang": { "de": "Safran (Fäden)", "en": "Saffron", "es": "Azafrán", "fr": "Safran", "ru": "Шафран", "ja": "サフラン", "zh": "藏红花", "fa": "زعفران", "hi": "केसर", "ar": "زعفران" }
+    },
+    "paprika_powder": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Paprika Powder", "icon": "🌶️", "latin": "Capsicum annuum (Fructus pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 282, "vit_a_mcg": 2463.0, "vit_c_mg": 0.9, "iron_plant_mg": 21.1 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Massive Vitamin A" },
+      "props": ["Extremely high in carotenoids", "Releases flavor best in warm oil", "Vibrant natural color"],
+      "lang": { "de": "Paprikapulver", "en": "Paprika Powder", "es": "Pimentón", "fr": "Paprika en poudre", "ru": "Паприка (порошок)", "ja": "パプリカパウダー", "zh": "红椒粉", "fa": "پودر پاپریکا", "hi": "शिमला मिर्च पाउडर", "ar": "بابريكا مطحونة" }
+    },
+    "cayenne_pepper": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Cayenne Pepper", "icon": "🌶️", "latin": "Capsicum annuum (Fructus pulvis acris)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 318, "capsaicin_mg": 250.0, "vit_a_mcg": 2081.0, "potassium_mg": 2014.0 },
+      "meta": { "locations": ["lidl", "rewe", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Metabolism Boost (Capsaicin)" },
+      "props": ["High heat level", "Stimulates circulation", "Digestive aid"],
+      "lang": { "de": "Cayennepfeffer", "en": "Cayenne Pepper", "es": "Pimienta de Cayena", "fr": "Poivre de Cayenne", "ru": "Кайенский перец", "ja": "カイエンペッパー", "zh": "辣椒粉", "fa": "فلفل کاین", "hi": "लाल मिर्च", "ar": "فلفل كايين" }
+    },
+    "mixed_peppercorns": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Mixed Peppercorns", "icon": "🌈", "latin": "Piperis varietates (Fructus siccus)", "sci": ["#sci/Culinary_Science"],
+      "val": { "kcal": 255, "piperine_mg": 4500.0, "manganese_mg": 12.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Complex aromatic profile" },
+      "props": ["Blend of black, white, green, and pink", "Broad spectrum of terpenes", "Best freshly ground"],
+      "lang": { "de": "Bunter Pfeffer", "en": "Mixed Peppercorns", "es": "Pimienta de colores", "fr": "Mélange de poivres", "ru": "Смесь перцев", "ja": "ミックスペッパー", "zh": "五彩胡椒", "fa": "فلفل رنگی", "hi": "मिश्रित मिर्च", "ar": "فلفل مشكل" }
+    },
+    "white_pepper_ground": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "White Pepper (Ground)", "icon": "⚪", "latin": "Piper nigrum (Fructus decorticatus pulvis)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 296, "piperine_mg": 4800.0, "fiber_g": 26.0 },
+      "meta": { "locations": ["lidl", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Sharper, less floral than black" },
+      "props": ["Peeled ripe peppercorns", "Invisible in white sauces", "Fermented aroma notes"],
+      "lang": { "de": "Weißer Pfeffer (Gemahlen)", "en": "White Pepper Ground", "es": "Pimienta blanca molida", "fr": "Poivre blanc moulu", "ru": "Белый перец молотый", "ja": "白胡椒挽き", "zh": "白胡椒粉", "fa": "فلفل سفید آسیاب شده", "hi": "सफेद मिर्च पाउडर", "ar": "فلفل أبيض مطحون" }
+    },
+    "paprika_smoked": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Smoked Paprika", "icon": "💨", "latin": "Capsicum annuum (Fructus fumigatus pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 289, "vit_a_mcg": 2400.0, "iron_plant_mg": 18.0 },
+      "meta": { "locations": ["rewe", "edeka", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Pimentón de la Vera style" },
+      "props": ["Oak-wood smoked", "Deep umami depth", "Essential for vegan BBQ flavor"],
+      "lang": { "de": "Geräuchertes Paprikapulver", "en": "Smoked Paprika", "es": "Pimentón ahumado", "fr": "Paprika fumé", "ru": "Копченая паприка", "ja": "スモークパプリカパウダー", "zh": "熏制红椒粉", "fa": "پاپریکا دودی", "hi": "स्मोक्ड शिमला मिर्च", "ar": "بابريكا مدخنة" }
+    },
+    "garlic_powder": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Garlic Powder", "icon": "🧄", "latin": "Allium sativum (Bulbus pulvis)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 331, "allicin_potential_mg": 5.0, "selenium_mcg": 70.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Immune support" },
+      "props": ["Concentrated flavor", "Rich in organosulfur compounds", "Easy distribution in rubs"],
+      "lang": { "de": "Knoblauchpulver", "en": "Garlic Powder", "es": "Ajo en polvo", "fr": "Ail en poudre", "ru": "Чесночный порошок", "ja": "ガーリックパウダー", "zh": "大蒜粉", "fa": "پودر سیر", "hi": "लहसुन पाउडर", "ar": "ثوم مطحون" }
+    },
+    "onion_powder": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Onion Powder", "icon": "🧅", "latin": "Allium cepa (Bulbus pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 341, "quercetin_mg": 20.0, "potassium_mg": 985.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "props": ["Sweet and savory balance", "Contains quercetin", "Instant flavor base"],
+      "lang": { "de": "Zwiebelpulver", "en": "Onion Powder", "es": "Cebolla en polvo", "fr": "Oignon en poudre", "ru": "Луковый порошок", "ja": "オニオンパウダー", "zh": "洋葱粉", "fa": "پودر پیاز", "hi": "प्याज़ पाउडर", "ar": "بصل مطحون" }
+    },
+    "coriander_powder": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Coriander Powder", "icon": "🫙", "latin": "Coriandrum sativum (Fructus pulvis)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 298, "fiber_g": 41.9, "iron_plant_mg": 16.3, "linalool_mg": 50.0 },
+      "meta": { "locations": ["lidl", "kaufland", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Digestive aid / Anti-spasmodic" },
+      "props": ["Citrusy, floral aroma", "Essential for curry bases", "Contains linalool for gut relaxation"],
+      "lang": { "de": "Koriander (gemahlen)", "en": "Coriander Powder", "es": "Cilantro molido", "fr": "Coriandre en poudre", "ru": "Кориандр молотый", "ja": "コリアンダーパウダー", "zh": "香菜粉", "fa": "پودر گشنیز", "hi": "धनिया पाउडर", "ar": "كزبرة مطحونة" }
+    },
+    "fenugreek": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Fenugreek (Seeds/Powder)", "icon": "🫘", "latin": "Trigonella foenum-graecum (Semen siccum)", "sci": ["#sci/Nutrition", "#sci/Endocrinology"],
+      "val": { "kcal": 323, "protein_g": 23.0, "fiber_g": 24.6, "iron_plant_mg": 33.5, "saponins_mg": 50.0 },
+      "meta": { "locations": ["orient_market", "asia_market", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Blood sugar regulation" },
+      "props": ["Bittersweet, maple-like aroma", "Rich in galactomannan", "Supports insulin sensitivity"],
+      "lang": { "de": "Bockshornklee", "en": "Fenugreek", "es": "Fenogreco", "fr": "Fenugrec", "ru": "Пажитник", "ja": "フェヌグリーク", "zh": "胡芦巴", "fa": "شنبلیله", "hi": "मेथी", "ar": "حلبة" }
+    },
+    "anise_ground": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Anise (Ground)", "icon": "⭐", "latin": "Pimpinella anisum (Fructus pulvis)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 337, "anethole_mg": 30.0, "iron_plant_mg": 37.0 },
+      "meta": { "locations": ["rewe", "kaufland", "orient_market"], "season": ["all_year"], "vegan": true },
+      "props": ["Sweet licorice flavor", "Expectorant properties", "Classic baking spice"],
+      "lang": { "de": "Anis (gemahlen)", "en": "Anise Ground", "es": "Anís molido", "fr": "Anis poudre", "ru": "Анис молотый", "ja": "アニスパウダー", "zh": "茴芹粉", "fa": "پودر انیسون", "hi": "अनीस पाउडर", "ar": "يانسون مطحون" }
+    },
+    "fennel_powder": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fennel (Ground)", "icon": "🌿", "latin": "Foeniculum vulgare (Fructus pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 345, "calcium_mg": 1196.0, "fiber_g": 39.8 },
+      "meta": { "locations": ["rewe", "dm", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Anti-bloating" },
+      "props": ["Mild licorice notes", "Very high calcium content", "Soothes the digestive tract"],
+      "lang": { "de": "Fenchel (gemahlen)", "en": "Fennel Powder", "es": "Hinojo molido", "fr": "Fenouil poudre", "ru": "Фенхель молотый", "ja": "フェンネルパウダー", "zh": "小茴香粉", "fa": "پودر رازیانه", "hi": "सौंफ पाउडर", "ar": "شمر مطحون" }
+    },
+    "chili_flakes": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Chili Flakes (Pul Biber)", "icon": "🌶️", "latin": "Capsicum annuum (Fructus siccus fractus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 324, "capsaicin_mg": 150.0, "vit_a_mcg": 1400.0 },
+      "meta": { "locations": ["orient_market", "lidl", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Turkish table spice" },
+      "props": ["Coarsely ground with seeds", "Often slightly oiled and salted (Pul Biber)", "Moderate to high heat"],
+      "lang": { "de": "Chiliflocken / Pul Biber", "en": "Chili Flakes", "es": "Chile en escamas", "fr": "Piment en flocons", "ru": "Хлопья чили", "ja": "チリフレーク", "zh": "辣椒面", "fa": "فلفل پرک", "hi": "चिली फ्लेक्स", "ar": "فلفل حار مجروش" }
+    },
+    "black_mustard_powder": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Black Mustard (Ground)", "icon": "🫙", "latin": "Brassica nigra (Semen pulvis)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 508, "allyl_isothiocyanate_mg": 10.0, "protein_g": 26.0 },
+      "meta": { "locations": ["asia_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "props": ["Intense, sinus-clearing heat", "Releases pungency when wet", "Essential for authentic mustard paste"],
+      "lang": { "de": "Schwarzer Senf (gemahlen)", "en": "Black Mustard Powder", "es": "Mostaza negra molida", "fr": "Moutarde noire poudre", "ru": "Горчица черная молотая", "ja": "黒マスタードパウダー", "zh": "黑芥末粉", "fa": "پودر خردل سیاه", "hi": "काली सरसों पाउडर", "ar": "خردل أسود مطحون" }
+    },
+    "sumac": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Sumac", "icon": "🔴", "latin": "Rhus coriaria (Fructus pulvis)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 239, "vit_c_mg": 39.0, "anthocyanins_mg": 100.0 },
+      "meta": { "locations": ["orient_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Sour / Lemony" },
+      "props": ["Deep red berry powder", "Astringent and tangy", "Replaces lemon in Middle Eastern dishes"],
+      "lang": { "de": "Sumach", "en": "Sumac", "es": "Zumaque", "fr": "Sumac", "ru": "Сумах", "ja": "スマック", "zh": "漆树粉", "fa": "سماق", "hi": "सुमैक", "ar": "سماق" }
+    },
+    "pure_vanilla_powder": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Vanilla (Pure Powder)", "icon": "🍦", "latin": "Vanilla planifolia (Fructus pulvis)", "sci": ["#sci/Aromachology"],
+      "val": { "kcal": 288, "vanillin_mg": 2000.0, "magnesium_mg": 100.0 },
+      "meta": { "locations": ["rewe", "denns", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "purity": "100% Ground Beans" },
+      "props": ["Not vanilla sugar!", "Intense orchid aroma", "Contains thousands of tiny seeds"],
+      "lang": { "de": "Echte Vanille (gemahlen)", "en": "Pure Vanilla Powder", "es": "Vainilla pura en polvo", "fr": "Vanille en poudre", "ru": "Натуральная ваниль", "ja": "バニラパウダー", "zh": "香草粉", "fa": "پودر وانیل خالص", "hi": "वेनिला पाउडर", "ar": "فانيليا مطحونة" }
+    },
+    "--- VEGAN_PROTEIN_ISOLATES ---": "Pflanzliche Proteinkonzentrate",
+    "pea_protein_isolate": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Pea Protein Isolate", "icon": "💪", "latin": "Pisum sativum (Protein isolate)", "sci": ["#sci/SportsMedicine", "#sci/Nutrition"],
+      "val": { "kcal": 380, "protein_g": 80.0, "carbs_g": 2.0, "fat_total_g": 7.0, "iron_plant_mg": 25.0, "arginine_mg": 6500.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Hypoallergenic Muscle Building" },
+      "props": ["Rich in Arginine and Lysine", "Excellent solubility for shakes", "Very low glycemic response"],
+      "lang": { "de": "Erbsenprotein Isolat", "en": "Pea Protein Isolate", "es": "Proteína de guisante", "fr": "Protéine de pois", "ru": "Изолят горохового белка", "ja": "えんどう豆プロテイン", "zh": "豌豆蛋白", "fa": "ایزوله پروتئین نخود", "hi": "मटर प्रोटीन", "ar": "بروتين البازلاء" }
+    },
+    "rice_protein_isolate": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Rice Protein Isolate", "icon": "💪", "latin": "Oryza sativa (Protein isolate)", "sci": ["#sci/SportsMedicine"],
+      "val": { "kcal": 375, "protein_g": 82.0, "carbs_g": 3.0, "fat_total_g": 4.0, "leucine_mg": 6800.0 },
+      "meta": { "locations": ["dm", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Fast Absorption / Leucine rich" },
+      "props": ["Often combined with pea protein for full amino acid profile", "High in BCAAs (Leucine)", "Easily digestible"],
+      "lang": { "de": "Reisprotein Isolat", "en": "Rice Protein Isolate", "es": "Proteína de arroz", "fr": "Protéine de riz", "ru": "Изолят рисового белка", "ja": "ライスプロテイン", "zh": "大米蛋白", "fa": "ایزوله پروتئین برنج", "hi": "चावल प्रोटीन", "ar": "بروتين الأرز" }
+    },
+    "sunflower_protein": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Sunflower Protein", "icon": "🌻", "latin": "Helianthus annuus (Protein powder)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 345, "protein_g": 50.0, "fiber_g": 18.0, "magnesium_mg": 600.0 },
+      "meta": { "locations": ["denns", "alnatura", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Nutty / Mild" },
+      "props": ["Made from de-oiled sunflower seeds", "High fiber content", "Naturally rich in magnesium for muscle function"],
+      "lang": { "de": "Sonnenblumenprotein", "en": "Sunflower Protein", "es": "Proteína de girasol", "fr": "Protéine de tournesol", "ru": "Белок подсолнечника", "ja": "サンフラワープロテイン", "zh": "向日葵蛋白", "fa": "پروتئین آفتابگردان", "hi": "सूरजमुखी प्रोटीन", "ar": "بروتين عباد الشمس" }
+    },
+    "--- ENERGY_AND_RECOVERY_POWDERS ---": "Energie- & Regenerations-Pulver",
+    "maca_powder": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Maca Powder", "icon": "🌋", "latin": "Lepidium meyenii (Radix pulvis)", "sci": ["#sci/Endocrinology", "#sci/Pharmacognosy"],
+      "val": { "kcal": 325, "protein_g": 14.0, "fiber_g": 7.0, "iron_plant_mg": 14.8, "macamides_mg": 10.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Adaptogen / Hormonal Balance" },
+      "props": ["Root from the high Andes", "Increases stamina and libido", "Malty, caramel-like flavor"],
+      "lang": { "de": "Maca Pulver", "en": "Maca Powder", "es": "Maca en polvo", "fr": "Maca en poudre", "ru": "Мака перуанская", "ja": "マカパウダー", "zh": "玛咖粉", "fa": "پودر ماکا", "hi": "मका पाउडर", "ar": "مسحوق الماكا" }
+    },
+    "guarana_powder": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Guarana Powder", "icon": "👁️", "latin": "Paullinia cupana (Semen pulvis)", "sci": ["#sci/Pharmacology", "#sci/Neuroscience"],
+      "val": { "kcal": 322, "caffeine_tannin_bound_mg": 4000.0, "fiber_g": 12.0 },
+      "meta": { "locations": ["denns", "reformhaus", "dm", "rossmann"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Slow-release Caffeine" },
+      "props": ["Caffeine is bound to tannins (longer effect than coffee)", "Increases mental focus", "Bitter, earthy taste"],
+      "lang": { "de": "Guarana Pulver", "en": "Guarana Powder", "es": "Guaraná en polvo", "fr": "Guarana en poudre", "ru": "Гуарана (порошок)", "ja": "ガラナパウダー", "zh": "瓜拉纳粉", "fa": "پودر گوارانا", "hi": "गुआराना पाउडर", "ar": "مسحوق الغوارانا" }
+    },
+    "cacao_nibs": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Cacao Nibs", "icon": "🍫", "latin": "Theobroma cacao (Semen fractum)", "sci": ["#sci/Phytochemistry", "#sci/Neuroscience"],
+      "val": { "kcal": 601, "fat_total_g": 52.0, "magnesium_mg": 499.0, "theobromine_mg": 800.0, "fiber_g": 13.0 },
+      "meta": { "locations": ["dm", "rewe", "denns", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Mood booster / Magnesium King" },
+      "props": ["Pure fermented cacao beans crushed", "High in 'bliss molecule' Anandamide", "Crunchy texture, zero added sugar"],
+      "lang": { "de": "Kakaonibs", "en": "Cacao Nibs", "es": "Nibs de cacao", "fr": "Nibs de cacao", "ru": "Какао-нибсы", "ja": "カカオニブ", "zh": "可可碎", "fa": "نیبز کاکائو", "hi": "कोको निब्स", "ar": "نيبس الكاكاو" }
+    },
+    "beetroot_juice_powder": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Beetroot Juice Powder", "icon": "🩸", "latin": "Beta vulgaris (Succus pulvis)", "sci": ["#sci/SportsMedicine"],
+      "val": { "kcal": 350, "nitrates_mg": 2500.0, "potassium_mg": 2800.0, "iron_plant_mg": 8.0 },
+      "meta": { "locations": ["denns", "online_specialty", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Nitric Oxide Booster (Pump)" },
+      "props": ["High natural nitrates improve oxygen efficiency", "Used as a pre-workout performance enhancer", "Intense natural color"],
+      "lang": { "de": "Rote Bete Saftpulver", "en": "Beetroot Juice Powder", "es": "Remolacha en polvo", "fr": "Poudre de betterave", "ru": "Свекольный порошок", "ja": "ビーツパウダー", "zh": "甜菜根粉", "fa": "پودر چغندر", "hi": "चुकंदर का पाउडर", "ar": "مسحوق بنجر" }
+    },
+    "nutritional_yeast_flakes": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Nutritional Yeast Flakes", "icon": "💛", "latin": "Saccharomyces cerevisiae (Inactivatum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 344, "protein_g": 51.0, "fiber_g": 20.0, "vit_b1_mg": 41.0, "vit_b12_mcg": 44.0 },
+      "meta": { "locations": ["dm", "denns", "reformhaus", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "B-Vitamin Bomb / Vegan Cheese flavor" },
+      "props": ["Inactive yeast flakes", "Complete protein source", "Essential for vegan B12 supplementation"],
+      "lang": { "de": "Edelhefeflocken", "en": "Nutritional Yeast", "es": "Levadura nutricional", "fr": "Levure diététique", "ru": "Пищевые дрожжи", "ja": "ニュートリショナルイースト", "zh": "营养酵母", "fa": "مخمر خوراکی", "hi": "पोषक खमीर", "ar": "خميرة غذائية" }
+    },
+    "carob_powder": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Carob Powder", "icon": "🤎", "latin": "Ceratonia siliqua (Fructus pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 222, "fiber_g": 40.0, "calcium_mg": 348.0, "cyclitols_mg": 10.0 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Caffeine-free Cacao alternative" },
+      "props": ["Naturally sweet", "High in special fibers (cyclitols)", "Alkaline and very low in fat"],
+      "lang": { "de": "Carobpulver / Johannisbrotkernpulver", "en": "Carob Powder", "es": "Algarroba en polvo", "fr": "Poudre de caroube", "ru": "Кэроб (порошок)", "ja": "キャロブパウダー", "zh": "角豆粉", "fa": "پودر خرنوب", "hi": "कैरोब पाउडर", "ar": "مسحوق الخرنوب" }
+    },
+    "lupin_protein": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Lupin Protein Powder", "icon": "🌼", "latin": "Lupinus albus (Protein pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 330, "protein_g": 43.0, "fiber_g": 26.0, "iron_plant_mg": 6.0 },
+      "meta": { "locations": ["reformhaus", "denns", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Basic / Alkaline Protein" },
+      "props": ["Made from sweet lupins", "Highly alkalizing for the body", "Excellent regional soy alternative"],
+      "lang": { "de": "Lupinenprotein", "en": "Lupin Protein", "es": "Proteína de altramuz", "fr": "Protéine de lupin", "ru": "Люпиновый белок", "ja": "ルピナスプロテイン", "zh": "羽扇豆蛋白", "fa": "پروتئین لوپین", "hi": "ल्यूपिन प्रोटीन", "ar": "بروتين الترمس" }
+    }
+  },
+  "_2": {
+    "--- WHEAT_AND_GLUTEN_FLOURS ---": "Brot- und Backmehle (Mit Klebereiweiß)",
+    "all_purpose_wheat_flour": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Wheat Flour (Type 405 / AP)", "icon": "🌾", "latin": "Triticum aestivum (Semolina polita)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 348, "protein_g": 9.8, "carbs_g": 70.9, "fiber_g": 3.3, "fat_total_g": 1.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Standard Baking (Cake/Pastry)" },
+      "props": ["Highly refined endosperm", "Low ash content (0.4%)", "Fast glycemic response"],
+      "lang": { "de": "Weizenmehl (Type 405)", "en": "All-Purpose Wheat Flour", "es": "Harina de trigo refinada", "fr": "Farine de blé T45", "ru": "Пшеничная мука высшего сорта", "ja": "小麦粉 (薄力粉)", "zh": "中筋面粉", "fa": "آرد گندم سفید", "hi": "मैदा", "ar": "دقيق القمح الأبيض" }
+    },
+    "whole_wheat_flour": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Whole Wheat Flour", "icon": "🌾", "latin": "Triticum aestivum (Farina completa)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 339, "protein_g": 13.2, "carbs_g": 60.0, "fiber_g": 11.0, "iron_plant_mg": 3.9 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Retains bran and germ" },
+      "props": ["Contains all parts of the grain", "Requires more hydration in doughs", "Shorter shelf life due to oils in the germ"],
+      "lang": { "de": "Weizenvollkornmehl", "en": "Whole Wheat Flour", "es": "Harina de trigo integral", "fr": "Farine de blé complète", "ru": "Цельнозерновая пшеничная мука", "ja": "全粒粉", "zh": "全麦面粉", "fa": "آرد گندم کامل", "hi": "गेहूं का आटा", "ar": "دقيق القمح الكامل" }
+    },
+    "light_spelt_flour": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Spelt Flour (Type 630)", "icon": "🌾", "latin": "Triticum spelta (Farina typus 630)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 349, "protein_g": 11.5, "carbs_g": 69.0, "fiber_g": 3.7 },
+      "meta": { "locations": ["dm", "rewe", "denns", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Wheat Substitute" },
+      "props": ["Slightly nuttier flavor than wheat", "Gluten structure is more fragile", "Excellent for modern artisanal baking"],
+      "lang": { "de": "Dinkelmehl (Type 630)", "en": "Light Spelt Flour", "es": "Harina de espelta blanca", "fr": "Farine d'épeautre claire", "ru": "Спельтовая мука", "ja": "スペルト小麦粉", "zh": "斯佩耳特小麦粉", "fa": "آرد اسپلت", "hi": "स्पेल्ट का आटा", "ar": "دقيق الحنطة" }
+    },
+    "rye_flour": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Rye Flour (Type 1150)", "icon": "🍞", "latin": "Secale cereale (Farina typus 1150)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 335, "protein_g": 8.5, "carbs_g": 65.0, "fiber_g": 14.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Sourdough Base" },
+      "props": ["Requires sourdough acidification", "Very high water-binding capacity (pentosans)", "Dense, dark bread base"],
+      "lang": { "de": "Roggenmehl (Type 1150)", "en": "Rye Flour", "es": "Harina de centeno", "fr": "Farine de seigle", "ru": "Ржаная мука", "ja": "ライ麦粉", "zh": "黑麦面粉", "fa": "آرد چاودار", "hi": "राई का आटा", "ar": "دقيق الجاودار" }
+    },
+    "--- GLUTEN_FREE_FLOURS ---": "Glutenfreie Mehle & Low-Carb",
+    "defatted_almond_flour": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Almond Flour (Defatted)", "icon": "🌰", "latin": "Prunus dulcis (Semen deoleatum pulvis)", "sci": ["#sci/Nutrition", "#sci/Keto"],
+      "val": { "kcal": 315, "protein_g": 50.0, "carbs_g": 7.0, "fat_total_g": 11.0, "fiber_g": 16.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "macro_focus": "Ultra High Protein / Low Carb" },
+      "props": ["Oil is pressed out", "Absorbs huge amounts of liquid", "Staple in Keto and Low-Carb baking"],
+      "lang": { "de": "Mandelmehl (Entölt)", "en": "Defatted Almond Flour", "es": "Harina de almendra desgrasada", "fr": "Farine d'amande déshuilée", "ru": "Миндальная мука (обезжиренная)", "ja": "アーモンドプードル (脱脂)", "zh": "脱脂杏仁粉", "fa": "آرد بادام", "hi": "बादाम का आटा", "ar": "دقيق اللوز منزوع الدسم" }
+    },
+    "chickpea_flour": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Chickpea Flour (Besan)", "icon": "🧆", "latin": "Cicer arietinum (Semen pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 356, "protein_g": 22.0, "carbs_g": 53.0, "fiber_g": 10.0, "iron_plant_mg": 4.8 },
+      "meta": { "locations": ["orient_market", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Vegan Omelette Base" },
+      "props": ["Excellent binding properties", "Base for Pakoras", "Slightly bean-like taste when raw"],
+      "lang": { "de": "Kichererbsenmehl", "en": "Chickpea Flour / Besan", "es": "Harina de garbanzo", "fr": "Farine de pois chiche", "ru": "Нутная мука", "ja": "ひよこ豆粉", "zh": "鹰嘴豆粉", "fa": "آرد نخودچی", "hi": "बेसन", "ar": "دقيق الحمص" }
+    },
+    "buckwheat_flour": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Buckwheat Flour", "icon": "📐", "latin": "Fagopyrum esculentum (Semen pulvis)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 335, "protein_g": 12.6, "carbs_g": 70.6, "fiber_g": 10.0 },
+      "meta": { "locations": ["rewe", "denns", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Galettes & Soba" },
+      "props": ["100% Gluten-free", "Earthy, robust flavor", "Essential for French Galettes"],
+      "lang": { "de": "Buchweizenmehl", "en": "Buckwheat Flour", "es": "Harina de trigo sarraceno", "fr": "Farine de sarrasin", "ru": "Гречневая мука", "ja": "そば粉", "zh": "荞麦粉", "fa": "آرد گندم سیاه", "hi": "कुट्टू का आटा", "ar": "دقيق الحنطة السوداء" }
+    },
+    "rice_flour": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Rice Flour (White)", "icon": "🍚", "latin": "Oryza sativa (Caryopsis polita pulvis)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 366, "protein_g": 5.9, "carbs_g": 80.0, "fiber_g": 2.4 },
+      "meta": { "locations": ["asia_market", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Fine and neutral" },
+      "props": ["Neutral taste", "Gives a crisp texture to batters", "Does not absorb liquid as well as wheat"],
+      "lang": { "de": "Reismehl", "en": "Rice Flour", "es": "Harina de arroz", "fr": "Farine de riz", "ru": "Рисовая мука", "ja": "米粉", "zh": "粘米粉", "fa": "آرد برنج", "hi": "चावल का आटा", "ar": "دقيق الأرز" }
+    },
+    "--- KETO_AND_PROTEIN_FLOURS ---": "Low-Carb & Veganes Protein",
+    "coconut_flour": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Coconut Flour", "icon": "🥥", "latin": "Cocos nucifera (Semen deoleatum pulvis)", "sci": ["#sci/FoodScience", "#sci/Keto"],
+      "val": { "kcal": 443, "protein_g": 18.0, "carbs_g": 18.0, "fiber_g": 38.0, "fat_total_g": 15.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Extreme liquid absorption" },
+      "props": ["Acts like a sponge", "Very high in insoluble fiber", "Naturally sweet coconut flavor"],
+      "lang": { "de": "Kokosmehl", "en": "Coconut Flour", "es": "Harina de coco", "fr": "Farine de coco", "ru": "Кокосовая мука", "ja": "ココナッツフラワー", "zh": "椰子粉", "fa": "آرد نارگیل", "hi": "नारियल का आटा", "ar": "دقيق جوز الهند" }
+    },
+    "lupin_flour": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Lupin Flour", "icon": "🌼", "latin": "Lupinus albus (Semen pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 328, "protein_g": 40.0, "carbs_g": 10.0, "fiber_g": 28.0, "fat_total_g": 9.0 },
+      "meta": { "locations": ["denns", "reformhaus", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "macro_focus": "Insane Protein-to-Carb Ratio" },
+      "props": ["Highest plant protein source", "Extremely low active carbs", "Cross-allergy warning for peanuts"],
+      "lang": { "de": "Süßlupinenmehl", "en": "Lupin Flour", "es": "Harina de altramuz", "fr": "Farine de lupin", "ru": "Люпиновая мука", "ja": "ルピナス粉", "zh": "羽扇豆粉", "fa": "آرد لوپین", "hi": "ल्यूपिन का आटा", "ar": "دقيق الترمس" }
+    },
+    "--- GF_BAKING_SCIENCE ---": "Glutenfreie Bindemittel & Resistente Stärke",
+    "green_banana_flour": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Green Banana Flour", "icon": "🍌", "latin": "Musa acuminata (Fructus immaturus pulvis)", "sci": ["#sci/Microbiome"],
+      "val": { "kcal": 345, "protein_g": 4.0, "carbs_g": 74.0, "fiber_g": 10.0, "resistant_starch_g": 45.0 },
+      "meta": { "locations": ["denns", "reformhaus", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Type 2 Resistant Starch" },
+      "props": ["Supreme prebiotic food", "Maintain RS properties by raw consumption", "Neutral earthy taste"],
+      "lang": { "de": "Grünes Bananenmehl", "en": "Green Banana Flour", "es": "Harina de plátano verde", "fr": "Farine de banane verte", "ru": "Мука из зеленых бананов", "ja": "グリーンバナナ粉", "zh": "绿香蕉粉", "fa": "آرد موز سبز", "hi": "कच्चे केले का आटा", "ar": "دقيق الموز الأخضر" }
+    },
+    "psyllium_husk_powder": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Psyllium Husk Powder", "icon": "🌾", "latin": "Plantago ovata (Testa pulvis)", "sci": ["#sci/FoodScience", "#sci/Gastroenterology"],
+      "val": { "kcal": 189, "protein_g": 1.5, "carbs_g": 1.5, "fiber_g": 85.0 },
+      "meta": { "locations": ["dm", "rossmann", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "The Ultimate Gluten Replacer" },
+      "props": ["Provides stretch and elasticity", "Pure soluble fiber gel", "Essential for holding GF bread together"],
+      "lang": { "de": "Flohsamenschalenpulver", "en": "Psyllium Husk Powder", "es": "Polvo de cáscara de psyllium", "fr": "Poudre de téguments de psyllium", "ru": "Порошок псиллиума", "ja": "サイリウムハスク", "zh": "洋车前子壳粉", "fa": "پودر پوسته اسفرزه", "hi": "ईसबगोल पाउडर", "ar": "مسحوق قشور السيليوم" }
+    },
+    "xanthan_gum": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Xanthan Gum", "icon": "🧪", "latin": "Xanthomonas campestris (Polysaccharidum)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 300, "carbs_g": 78.0, "fiber_g": 78.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Micro-dosed Binder" },
+      "props": ["Bacterial fermentation product", "Prevents crumbling in GF baking", "Tiny amounts needed (1/2 tsp)"],
+      "lang": { "de": "Xanthan", "en": "Xanthan Gum", "es": "Goma xantana", "fr": "Gomme xanthane", "ru": "Ксантановая камедь", "ja": "キサンタンガム", "zh": "黄原胶", "fa": "صمغ زانتان", "hi": "ज़ांथन गम", "ar": "صمغ الزانثان" }
+    },
+    "arrowroot_powder": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Arrowroot Powder", "icon": "🌿", "latin": "Maranta arundinacea (Amylum)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 357, "protein_g": 0.3, "carbs_g": 88.2, "fiber_g": 3.4 },
+      "meta": { "locations": ["denns", "reformhaus", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Silky thickening agent" },
+      "props": ["More easily digested than cornstarch", "Creates perfectly clear fruit glazes", "Tolerates acidic ingredients"],
+      "lang": { "de": "Pfeilwurzelmehl", "en": "Arrowroot Powder", "es": "Arrurruz", "fr": "Marante", "ru": "Аррорут", "ja": "アロールート", "zh": "葛粉", "fa": "آروروت", "hi": "अरारोट", "ar": "أروروت" }
+    },
+    "cassava_flour": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Cassava Flour", "icon": "🍠", "latin": "Manihot esculenta (Radix completa pulvis)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 340, "protein_g": 1.5, "carbs_g": 80.0, "fiber_g": 4.0 },
+      "meta": { "locations": ["afro_market", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "1:1 Wheat Substitute" },
+      "props": ["Made from the WHOLE root", "Closest texture to wheat flour in GF baking", "Staple in Paleo diets"],
+      "lang": { "de": "Maniokmehl (Cassava)", "en": "Cassava Flour", "es": "Harina de yuca", "fr": "Farine de manioc", "ru": "Кассавовая мука", "ja": "カッサバ粉", "zh": "木薯全粉", "fa": "آرد کاساوا", "hi": "कसावा का आटा", "ar": "دقيق الكاسافا" }
+    },
+    "--- STARCHES_AND_THICKENERS ---": "Reine Stärken & Bindemittel",
+    "zea_mays_starch": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Cornstarch", "icon": "🌽", "latin": "Zea mays (Amylum)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 381, "protein_g": 0.3, "carbs_g": 91.0, "fiber_g": 0.0, "fat_total_g": 0.1 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Thickening agent" },
+      "props": ["Pure carbohydrate extracted from corn", "Must be mixed with cold liquid before heating", "Gluten-free thickening standard"],
+      "lang": { "de": "Maisstärke (Speisestärke)", "en": "Cornstarch", "es": "Maicena", "fr": "Fécule de maïs", "ru": "Кукурузный крахмал", "ja": "コーンスターチ", "zh": "玉米淀粉", "fa": "نشاسته ذرت", "hi": "कॉर्नस्टार्च", "ar": "نشا الذرة" }
+    },
+    "solanum_tuberosum_starch": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Potato Starch", "icon": "🥔", "latin": "Solanum tuberosum (Amylum)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 333, "protein_g": 0.1, "carbs_g": 83.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "High viscosity" },
+      "props": ["Tolerates higher temperatures than cornstarch", "Creates a clear, glossy finish in sauces", "Excellent for crispy frying batters"],
+      "lang": { "de": "Kartoffelstärke", "en": "Potato Starch", "es": "Fécula de patata", "fr": "Fécule de pomme de terre", "ru": "Картофельный крахмал", "ja": "片栗粉", "zh": "土豆淀粉", "fa": "نشاسته سیب زمینی", "hi": "आलू का स्टार्च", "ar": "نشا البطاطس" }
+    },
+    "manihot_esculenta_starch": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Tapioca Starch", "icon": "🧋", "latin": "Manihot esculenta (Amylum)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 358, "protein_g": 0.2, "carbs_g": 88.0, "fiber_g": 0.9 },
+      "meta": { "locations": ["asia_market", "afro_market", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Chewy / Elastic" },
+      "props": ["Extracted from the cassava root", "Gives boba pearls their chewiness", "Imparts elastic texture to GF breads"],
+      "lang": { "de": "Tapiokastärke", "en": "Tapioca Starch", "es": "Almidón de tapioca", "fr": "Fécule de tapioca", "ru": "Тапиоковый крахмал", "ja": "タピオカ粉", "zh": "木薯淀粉", "fa": "نشاسته تاپیوکا", "hi": "टैपिओका स्टार्च", "ar": "نشا التابيوكا" }
+    },
+    "oryza_sativa_starch": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Rice Starch", "icon": "🍚", "latin": "Oryza sativa (Amylum)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 366, "protein_g": 0.5, "carbs_g": 89.0, "fiber_g": 0.0, "fat_total_g": 0.1 },
+      "meta": { "locations": ["asia_market", "reformhaus", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Ultra-fine particle size" },
+      "props": ["Smallest starch granules of all cereals", "Produces the silkiest gels", "Extremely neutral flavor"],
+      "lang": { "de": "Reisstärke", "en": "Rice Starch", "es": "Almidón de arroz", "fr": "Amidon de riz", "ru": "Рисовый крахмал", "ja": "米でんぷん", "zh": "大米淀粉", "fa": "نشاسته برنج", "hi": "चावल का स्टार्च", "ar": "نشا الأرز" }
+    },
+    "--- GELLING_AGENTS ---": "Geliermittel & Vegane Gelatine",
+    "agar_agar": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Agar-Agar Powder", "icon": "🍮", "latin": "Gelidium / Gracilaria extract (Polysaccharidum)", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 306, "protein_g": 6.2, "carbs_g": 80.9, "fiber_g": 77.0, "calcium_mg": 625.0, "iron_plant_mg": 21.4 },
+      "meta": { "locations": ["dm", "rossmann", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "The Ultimate Vegan Gelatin" },
+      "props": ["Extracted from red seaweed", "Sets at room temperature", "Stronger gelling power than animal gelatin"],
+      "lang": { "de": "Agar-Agar", "en": "Agar-Agar", "es": "Agar-agar", "fr": "Agar-agar", "ru": "Агар-агар", "ja": "粉寒天 (Kanten)", "zh": "琼脂", "fa": "آگار آگار", "hi": "अगर-अगर", "ar": "أجار أجار" }
+    },
+    "apple_pectin": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Pectin (Apple/Citrus)", "icon": "🍎", "latin": "Pectinum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 325, "carbs_g": 81.0, "fiber_g": 81.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Jam & Jelly thickener" },
+      "props": ["Found in fruit cell walls", "Requires sugar and acid to gel properly", "Essential for traditional fruit jams"],
+      "lang": { "de": "Pektin", "en": "Pectin", "es": "Pectina", "fr": "Pectine", "ru": "Пектин", "ja": "ペクチン", "zh": "果胶", "fa": "پکتین", "hi": "पेक्टिन", "ar": "بكتين" }
+    },
+    "gelatin_powder": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Gelatin Powder (Animal)", "icon": "🦴", "latin": "Gelatina animalis", "sci": ["#sci/FoodScience", "#sci/Dermatology"],
+      "val": { "kcal": 335, "protein_g": 85.6, "carbs_g": 0.0, "fat_total_g": 0.1, "glycine_mg": 18000.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Pure Collagen Protein (Glycine)" },
+      "props": ["Derived from animal collagen", "Melts at body temperature", "Extremely high in the amino acid glycine"],
+      "lang": { "de": "Gelatine Pulver", "en": "Gelatin Powder", "es": "Gelatina en polvo", "fr": "Gélatine", "ru": "Желатин", "ja": "ゼラチン", "zh": "吉利丁 (明胶)", "fa": "ژلاتین", "hi": "जिलेटिन", "ar": "جيلاتين" }
+    },
+    "--- LEGUME_FLOURS ---": "Hülsenfrüchte (Extreme Protein-Werte)",
+    "defatted_soy_flour": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Soy Flour (Defatted)", "icon": "🫘", "latin": "Glycine max (Semen deoleatum pulvis)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 329, "protein_g": 51.5, "carbs_g": 33.9, "fiber_g": 17.5, "fat_total_g": 1.2 },
+      "meta": { "locations": ["reformhaus", "denns", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Protein fortification & Egg replacer" },
+      "props": ["Defatted version has over 50% protein", "Excellent binder in vegan baking", "Slightly nutty taste"],
+      "lang": { "de": "Sojamehl (Entfettet)", "en": "Defatted Soy Flour", "es": "Harina de soja", "fr": "Farine de soja", "ru": "Соевая мука", "ja": "大豆粉", "zh": "黄豆粉", "fa": "آرد سویا", "hi": "सोया का आटा", "ar": "دقيق الصويا" }
+    },
+    "red_lentil_flour": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Red Lentil Flour", "icon": "🔴", "latin": "Lens culinaris (Semen pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 352, "protein_g": 25.8, "carbs_g": 60.0, "fiber_g": 10.7, "iron_plant_mg": 7.5 },
+      "meta": { "locations": ["dm", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "GF Pasta Base" },
+      "props": ["Standard ingredient for GF pasta", "Beautiful orange-red color", "Fast cooking time"],
+      "lang": { "de": "Rotes Linsenmehl", "en": "Red Lentil Flour", "es": "Harina de lenteja roja", "fr": "Farine de lentille corail", "ru": "Мука из красной чечевицы", "ja": "赤レンズ豆粉", "zh": "红扁豆粉", "fa": "آرد عدس قرمز", "hi": "लाल मसूर का आटा", "ar": "دقيق العدس الأحمر" }
+    },
+    "--- SEED_AND_NUT_FLOURS ---": "Saaten & Nüsse (Low-Carb Helden)",
+    "defatted_flaxseed_meal": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Flaxseed Meal (Defatted)", "icon": "🤎", "latin": "Linum usitatissimum (Semen deoleatum pulvis)", "sci": ["#sci/Keto", "#sci/Nutrition"],
+      "val": { "kcal": 310, "protein_g": 35.0, "carbs_g": 4.0, "fiber_g": 35.0, "fat_total_g": 12.0 },
+      "meta": { "locations": ["dm", "rossmann", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Mucilaginous binder" },
+      "props": ["Forms a thick gel with water", "Lower in calories than whole flaxseed", "Essential for Keto breads"],
+      "lang": { "de": "Leinsamenmehl (Entölt)", "en": "Defatted Flaxseed Meal", "es": "Harina de lino", "fr": "Farine de lin", "ru": "Льняная мука", "ja": "亜麻仁パウダー", "zh": "亚麻籽粉", "fa": "آرد بذر کتان", "hi": "अलसी का आटा", "ar": "دقيق بذور الكتان" }
+    },
+    "pumpkin_seed_flour": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Pumpkin Seed Flour", "icon": "🎃", "latin": "Cucurbita pepo (Semen deoleatum pulvis)", "sci": ["#sci/Keto"],
+      "val": { "kcal": 380, "protein_g": 55.0, "carbs_g": 4.0, "fiber_g": 15.0, "fat_total_g": 13.0 },
+      "meta": { "locations": ["denns", "alnatura", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Green Baking" },
+      "props": ["Intense green color", "Massive protein content (55%)", "Strong, savory nutty flavor"],
+      "lang": { "de": "Kürbiskernmehl", "en": "Pumpkin Seed Flour", "es": "Harina de semilla de calabaza", "fr": "Farine de pépin de courge", "ru": "Тыквенная мука", "ja": "カボチャの種粉", "zh": "南瓜籽粉", "fa": "آرد تخم کدو", "hi": "कद्दू के बीज का आटा", "ar": "دقيق بذور اليقطين" }
+    },
+    "--- GF_GRAINS_AND_PSEUDOCEREALS ---": "Glutenfreie Getreidemehle",
+    "oat_flour": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Oat Flour (Certified GF)", "icon": "🥣", "latin": "Avena sativa (Caryopsis pulvis)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 404, "protein_g": 14.7, "carbs_g": 65.7, "fiber_g": 6.5, "beta_glucan_g": 3.0 },
+      "meta": { "locations": ["dm", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Soft and sweet" },
+      "props": ["Tender crumb and natural sweetness", "High in fat (prone to rancidity)", "Helps retain moisture in GF baking"],
+      "lang": { "de": "Hafermehl", "en": "Oat Flour", "es": "Harina de avena", "fr": "Farine d'avoine", "ru": "Овсяная мука", "ja": "オートミール粉", "zh": "燕麦粉", "fa": "آرد جو دوسر", "hi": "जई का आटा", "ar": "دقيق الشوفان" }
+    },
+    "teff_flour": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Teff Flour", "icon": "🌾", "latin": "Eragrostis tef (Caryopsis pulvis)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 367, "protein_g": 13.3, "carbs_g": 73.1, "fiber_g": 8.0, "iron_plant_mg": 7.6 },
+      "meta": { "locations": ["afro_market", "reformhaus", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Injera Bread Base" },
+      "props": ["Essential for fermented Injera flatbread", "Slightly sour, malty flavor", "Incredible iron and calcium levels"],
+      "lang": { "de": "Teffmehl", "en": "Teff Flour", "es": "Harina de teff", "fr": "Farine de teff", "ru": "Мука из теффа", "ja": "テフ粉", "zh": "苔麸粉", "fa": "آرد تف", "hi": "टेफ का आटा", "ar": "دقيق التيف" }
+    },
+    "millet_flour": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Millet Flour", "icon": "🌾", "latin": "Panicum miliaceum (Caryopsis pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 378, "protein_g": 11.0, "carbs_g": 73.0, "fiber_g": 8.5, "silica_mg": 5.0 },
+      "meta": { "locations": ["denns", "reformhaus", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Alkalizing / Silica rich" },
+      "props": ["Mild, slightly nutty flavor", "Highly alkalizing grain flour", "Rich in silica for skin and hair"],
+      "lang": { "de": "Hirsemehl", "en": "Millet Flour", "es": "Harina de mijo", "fr": "Farine de millet", "ru": "Пшенная мука", "ja": "キビ粉", "zh": "小米粉", "fa": "آرد ارزن", "hi": "बाजरे का आटा", "ar": "دقيق الدخن" }
+    },
+    "quinoa_flour": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Quinoa Flour", "icon": "🥣", "latin": "Chenopodium quinoa (Semen pulvis)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 368, "protein_g": 14.1, "carbs_g": 64.0, "fiber_g": 7.0, "lysine_mg": 700.0 },
+      "meta": { "locations": ["denns", "dm", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "protein_quality": "Complete Amino Acid Profile" },
+      "props": ["Contains all essential amino acids", "Earthier flavor than grain flours", "High mineral density (magnesium/iron)"],
+      "lang": { "de": "Quinoamehl", "en": "Quinoa Flour", "es": "Harina de quinua", "fr": "Farine de quinoa", "ru": "Мука киноа", "ja": "キヌア粉", "zh": "藜麦粉", "fa": "آرد کینوآ", "hi": "क्विनोआ आटा", "ar": "دقيق الكينوا" }
+    },
+    "glutinous_rice_flour": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Glutinous Rice Flour", "icon": "🍚", "latin": "Oryza sativa var. glutinosa (Caryopsis pulvis)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 348, "protein_g": 6.5, "carbs_g": 80.0, "amylopectin_percent": 98.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Super Sticky / Chewy" },
+      "props": ["Essential for Mochi and dumplings", "Extremely high amylopectin content", "Gluten-free despite the name 'glutinous'"],
+      "lang": { "de": "Klebreismehl", "en": "Glutinous Rice Flour", "es": "Harina de arroz glutinoso", "fr": "Farine de riz gluant", "ru": "Мука из клейкого риса", "ja": "もち粉", "zh": "糯米粉", "fa": "آرد برنج چسبناک", "hi": "चिपचिपे चावल का आटा", "ar": "دقيق الأرز الدبق" }
+    },
+    "harina_masa": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Masa Harina (Nixtamalized)", "icon": "🌽", "latin": "Zea mays (Caryopsis nixtamalizata pulvis)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 365, "protein_g": 9.0, "vit_b3_mg": 4.0, "calcium_mg": 150.0 },
+      "meta": { "locations": ["orient_market", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Nixtamalization (Lime water treatment)" },
+      "props": ["Traditional flour for tortillas and tamales", "Nixtamalization unlocks Vitamin B3 (Niacin)", "Distinctive savory corn flavor"],
+      "lang": { "de": "Masa Harina", "en": "Masa Harina", "es": "Masa harina", "fr": "Masa harina", "ru": "Маса harina", "ja": "マサ・ハリナ", "zh": "玉米面粉", "fa": "ماسا هارینا", "hi": "मासा एरिना", "ar": "ماسا هارينا" }
+    },
+    "--- SPECIALTY_ROOTS_AND_MOLECULAR_BINDERS ---": "Wurzeln & Super-Bindemittel",
+    "chestnut_flour": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Chestnut Flour", "icon": "🌰", "latin": "Castanea sativa (Fructus pulvis)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 365, "protein_g": 6.4, "carbs_g": 74.3, "fiber_g": 9.0, "fat_total_g": 3.6 },
+      "meta": { "locations": ["denns", "reformhaus", "italian_delicatessen"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "flavor": "Sweet and smoky" },
+      "props": ["Classic ingredient in Castagnaccio", "Naturally very sweet", "Slightly smoky aroma from drying"],
+      "lang": { "de": "Kastanienmehl", "en": "Chestnut Flour", "es": "Harina de castaña", "fr": "Farine de châtaigne", "ru": "Каштановая мука", "ja": "栗粉", "zh": "栗子粉", "fa": "آرد شاه بلوط", "hi": "चेस्टनट का आटा", "ar": "دقيق الكستناء" }
+    },
+    "tiger_nut_flour": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Tiger Nut Flour", "icon": "🟤", "latin": "Cyperus esculentus (Rhizoma pulvis)", "sci": ["#sci/Keto", "#sci/Nutrition"],
+      "val": { "kcal": 496, "protein_g": 4.5, "carbs_g": 42.1, "fiber_g": 33.0, "fat_total_g": 24.9 },
+      "meta": { "locations": ["denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "allergy_friendly": "Safe for nut allergies" },
+      "props": ["Nut-free almond alternative", "High in resistant starch", "Naturally sweet flavor"],
+      "lang": { "de": "Erdmandelmehl", "en": "Tiger Nut Flour", "es": "Harina de chufa", "fr": "Farine de souchet", "ru": "Мука из чуфы", "ja": "タイガーナッツパウダー", "zh": "油莎草粉", "fa": "آرد مغز ببر", "hi": "टाइगर नट का आटा", "ar": "دقيق حب العزيز" }
+    },
+    "konjac_powder": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Konjac Powder (Glucomannan)", "icon": "🥔", "latin": "Amorphophallus konjac (Rhizoma pulvis)", "sci": ["#sci/FoodScience", "#sci/Gastroenterology"],
+      "val": { "kcal": 10, "protein_g": 0.0, "carbs_g": 0.0, "fiber_g": 95.0 },
+      "meta": { "locations": ["asia_market", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Ultimate Zero-Carb Thickener" },
+      "props": ["95% soluble fiber Glucomannan", "Absorbs 50x its weight in water", "Base for Shirataki noodles"],
+      "lang": { "de": "Konjakmehl", "en": "Konjac Powder", "es": "Polvo de konjac", "fr": "Poudre de konjac", "ru": "Конжаковая мука", "ja": "こんにゃく粉", "zh": "魔芋粉", "fa": "پودر کنجاک", "hi": "कोनजैक पाउडर", "ar": "مسحوق الكونجاك" }
+    },
+    "kudzu_starch": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Kudzu Root Starch (Kuzu)", "icon": "🌿", "latin": "Pueraria montana (Amylum)", "sci": ["#sci/FoodScience", "#sci/Pharmacognosy"],
+      "val": { "kcal": 340, "protein_g": 0.2, "carbs_g": 84.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["denns", "asia_market", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Premium Healing Binder" },
+      "props": ["Highly revered in macrobiotics", "Produces brilliantly clear sauces", "Digestive healing properties"],
+      "lang": { "de": "Kuzu (Kudzu-Stärke)", "en": "Kudzu Starch", "es": "Almidón de kuzu", "fr": "Fécule de kuzu", "ru": "Крахмал кудзу", "ja": "葛粉 (Kuzuko)", "zh": "葛根粉", "fa": "نشاسته کودزو", "hi": "कुडज़ू starach", "ar": "نشا الكودزو" }
+    },
+    "locust_bean_gum": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Locust Bean Gum", "icon": "🧪", "latin": "Ceratonia siliqua (Polysaccharidum)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 190, "carbs_g": 77.0, "fiber_g": 77.0 },
+      "meta": { "locations": ["reformhaus", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "E410 Natural Stabilizer" },
+      "props": ["Extracted from carob seeds", "Prevents ice crystals in vegan ice cream", "Works synergistically with Xanthan"],
+      "lang": { "de": "Johannisbrotkernmehl", "en": "Locust Bean Gum", "es": "Goma garrofín", "fr": "Farine de graines de caroube", "ru": "Камедь рожкового дерева", "ja": "ローカストビーンガム", "zh": "刺槐豆胶", "fa": "صمغ خرنوب", "hi": "लोकल बीन गम", "ar": "صمغ خرنوب" }
+    },
+    "lotus_root_starch": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Lotus Root Starch", "icon": "🪷", "latin": "Nelumbo nucifera (Amylum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 345, "protein_g": 0.5, "carbs_g": 85.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "TCM Spleen Health" },
+      "props": ["Highly digestible starch", "Turns translucent and jelly-like", "Used for traditional Asian dessert soups"],
+      "lang": { "de": "Lotuswurzelstärke", "en": "Lotus Root Starch", "es": "Almidón de raíz de loto", "fr": "Fécule de racine de lotier", "ru": "Крахмал из корня лотоса", "ja": "蓮根粉", "zh": "藕粉", "fa": "نشاسته ریشه نیلوفر آبی", "hi": "कमल जड़ स्टार्च", "ar": "نشا جذور اللوتس" }
+    },
+    "--- DRIED_SEAWEED_SHEETS ---": "Getrocknete & Geröstete Algenprodukte",
+    "roasted_nori_sheets": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Sushi Nori (Roasted Sheets)", "icon": "🍙", "latin": "Pyropia yezoensis (Thallus torrefactus)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 349, "protein_g": 46.1, "carbs_g": 39.0, "fiber_g": 36.0, "iodine_mcg": 1200.0, "iron_plant_mg": 11.4 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Washed, pressed and roasted" },
+      "props": ["Paper-thin sheets for Sushi", "Protein density nearly 50%", "Toasted flavor releases massive umami"],
+      "lang": { "de": "Nori-Blätter (Geröstet)", "en": "Roasted Nori Sheets", "es": "Hojas de Nori", "fr": "Feuilles de Nori", "ru": "Листы нори", "ja": "焼き海苔 (Yaki-nori)", "zh": "烤海苔片", "fa": "ورقه نوری", "hi": "नोरी शीट्स", "ar": "أوراق نوري" }
+    }
+  },
+  "dried_fruits": {
+    "--- DRIED_FRUIT_FOUNDATIONS ---": "Die Energie-Anker (Konzentrierte Vitalität)",
+    "date": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Date (Fresh/Medjool)", "icon": "🌴", "latin": "Phoenix dactylifera (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 277, "sugar_total_g": 66.0, "fiber_g": 6.7, "potassium_mg": 696.0, "magnesium_mg": 54.0 },
+      "meta": { "locations": ["orient_market", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "props": ["The 'Bread of the Desert'", "Medjool is the 'King of Dates' for its caramel texture", "Extremely high potassium; great for blood pressure"],
+      "lang": { "de": "Dattel (Frisch/Medjool)", "en": "Date", "es": "Dátil", "fr": "Datte", "ru": "Финик", "ja": "デーツ", "zh": "椰枣", "fa": "خرما", "hi": "खजूर", "ar": "تمر" }
+    },
+    "raisin": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Raisin / Sultana", "icon": "🍇", "latin": "Vitis vinifera (Uva passa)", "sci": ["#sci/Toxicology"],
+      "val": { "kcal": 299, "carbs_g": 79.0, "iron_plant_mg": 1.9, "boron_mg": 0.6 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "safety": "EXTREMELY TOXIC TO DOGS" },
+      "props": ["Concentrated source of boron for bone health", "Sultanas are made from seedless green grapes", "High glycemic response"],
+      "lang": { "de": "Rosine / Sultanine", "en": "Raisin", "es": "Uva pasa", "fr": "Raisin sec", "ru": "Изюм", "ja": "レーズン", "zh": "葡萄干", "fa": "کشمش", "hi": "किशमिश", "ar": "زبيب" }
+    },
+    "goji_berry": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Goji Berry (Dried)", "icon": "🏮", "latin": "Lycium barbarum (Fructus siccus)", "sci": ["#sci/Pharmacognosy", "#sci/Nutrition"],
+      "val": { "kcal": 349, "protein_g": 14.3, "fiber_g": 13.0, "vit_a_mcg": 1341.0, "zeaxanthin_mg": 16.0, "iron_plant_mg": 6.8 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Eye health (Zeaxanthin Champion)" },
+      "props": ["Traditional Chinese Medicine staple", "Complete protein source (9 essential amino acids)", "Protects the retina from oxidative stress"],
+      "lang": { "de": "Goji-Beere (getrocknet)", "en": "Goji Berry", "es": "Baya de Goji", "fr": "Baie de Goji", "ru": "Годжи", "ja": "クコの実", "zh": "枸杞", "fa": "گوجی بری", "hi": "गोजी बेरी", "ar": "غوجي" }
+    },
+    "mulberry": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Mulberry (Dried)", "icon": "🍇", "latin": "Morus alba (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 340, "protein_g": 9.0, "fiber_g": 14.0, "iron_plant_mg": 9.7, "vit_c_mg": 36.4, "resveratrol_mg": 5.0 },
+      "meta": { "locations": ["denns", "dm", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Plant Iron Powerhouse" },
+      "props": ["Naturally honey-sweet with a crunchy texture", "Contains Resveratrol (antioxidant found in red wine)", "One of the highest iron contents among fruits"],
+      "lang": { "de": "Maulbeere (getrocknet)", "en": "Mulberry", "es": "Mora blanca", "fr": "Mûre blanche", "ru": "Шелковица", "ja": "マルベリー", "zh": "桑葚", "fa": "توت سفید", "hi": "शहतूत", "ar": "توت أبيض" }
+    },
+    "fig_dried": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Fig (Dried)", "icon": "🟤", "latin": "Ficus carica (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 249, "fiber_g": 9.8, "calcium_mg": 162.0, "magnesium_mg": 68.0, "potassium_mg": 680.0 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Bone Health (Calcium/Magnesium)" },
+      "props": ["Concentrated mineral source", "Natural laxative due to high fiber and seeds", "Alkalizing snack"],
+      "lang": { "de": "Feige (getrocknet)", "en": "Dried Fig", "es": "Higo seco", "fr": "Figue séchée", "ru": "Инжир сушеный", "ja": "ドライイチジク", "zh": "无花果干", "fa": "انجیر خشک", "hi": "अंजीर", "ar": "تين مجفف" }
+    },
+    "prune": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Prune (Dried Plum)", "icon": "🟣", "latin": "Prunus domestica (Fructus siccus)", "sci": ["#sci/Gastroenterology", "#sci/Osteology"],
+      "val": { "kcal": 240, "fiber_g": 7.1, "sorbitol_g": 14.7, "vit_k_mcg": 59.5, "boron_mg": 0.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Bone Density & Digestion" },
+      "props": ["Standard remedy for constipation (Sorbitol + Fiber)", "Studied for improving bone mineral density", "High Vitamin K1 levels"],
+      "lang": { "de": "Pflaume (getrocknet) / Backpflaume", "en": "Prune", "es": "Ciruela pasa", "fr": "Pruneau", "ru": "Чернослив", "ja": "プルーン", "zh": "西梅干", "fa": "آلو خشک", "hi": "सूखा बेर", "ar": "قراصيا" }
+    },
+    "apricot_dried": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Apricot (Dried)", "icon": "🟠", "latin": "Prunus armeniaca (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 241, "vit_a_mcg": 180.0, "iron_plant_mg": 2.7, "potassium_mg": 1162.0, "fiber_g": 7.3 },
+      "meta": { "locations": ["lidl", "kaufland", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "visual": "Orange (Sulfured) vs. Brown (Unsulfured)" },
+      "props": ["Massive potassium content for blood pressure", "High Beta-Carotene (Vitamin A precursor)", "Unsulfured versions are healthier for sensitive people"],
+      "lang": { "de": "Aprikose (getrocknet)", "en": "Dried Apricot", "es": "Orejones", "fr": "Abricot sec", "ru": "Курага", "ja": "ドライアプリコット", "zh": "杏干", "fa": "برگه زردآلو", "hi": "सूखी खुबानी", "ar": "مشمش مجفف" }
+    },
+    "cranberry_dried": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cranberry (Dried/Sweetened)", "icon": "🔴", "latin": "Vaccinium macrocarpon (Fructus siccus)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 308, "carbs_g": 82.0, "sugars_g": 65.0, "fiber_g": 5.7, "proanthocyanidins_mg": 40.0 },
+      "meta": { "locations": ["lidl", "kaufland", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Salad & Muesli Topping" },
+      "props": ["Usually sweetened because raw is too tart", "Retains anti-adhesive properties for urinary tract health", "Often oil-sprayed to prevent clumping"],
+      "lang": { "de": "Cranberry (getrocknet)", "en": "Dried Cranberry", "es": "Arándano rojo seco", "fr": "Canneberge séchée", "ru": "Сушеная клюква", "ja": "ドライクランベリー", "zh": "蔓越莓干", "fa": "کرنبri خشک", "hi": "सूखी क्रैनबेरी", "ar": "كرانبيري مجفف" }
+    },
+    "inca_berry": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Inca Berry (Dried Physalis)", "icon": "🏮", "latin": "Physalis peruviana (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 284, "protein_g": 6.8, "fiber_g": 19.0, "vit_c_mg": 20.0, "phosphorus_mg": 400.0 },
+      "meta": { "locations": ["denns", "dm", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Intensely sour and zesty" },
+      "props": ["Extremely high fiber content for a fruit", "Distinctive tart and tangy flavor profile", "Rich in bioflavonoids"],
+      "lang": { "de": "Physalis (getrocknet) / Inkabeere", "en": "Inca Berry", "es": "Alquequenje seco", "fr": "Physalis séché", "ru": "Физалис сушеный", "ja": "インカベリー", "zh": "灯笼果干", "fa": "فیسالیس خشک", "hi": "सूखी फाइसालis", "ar": "حرنكش مجفف" }
+    },
+    "banana_chips": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Banana Chips (Dried)", "icon": "🍌", "latin": "Musa acuminata (Fructus siccus fractus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 519, "magnesium_mg": 76.0, "potassium_mg": 536.0, "fiber_g": 7.7, "fat_total_g": 33.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Fried in coconut oil vs. Freeze-dried" },
+      "props": ["Standard chips are often fried and sweetened", "Soft dried bananas are a better source of slow-release energy", "High magnesium for muscle function"],
+      "lang": { "de": "Bananenchips / Getrocknete Banane", "en": "Banana Chips", "es": "Plátano deshidratado", "fr": "Banane séchée", "ru": "Банановые чипсы", "ja": "バナナチップス", "zh": "香蕉干", "fa": "چیپس موز", "hi": "केले के चिप्स", "ar": "رقائق الموز" }
+    },
+    "apple_dried": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Apple Rings (Dried)", "icon": "🍎", "latin": "Malus domestica (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 243, "fiber_g": 10.3, "vit_c_mg": 3.9, "potassium_mg": 450.0 },
+      "meta": { "locations": ["lidl", "dm", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "visual": "White (Sulfured) vs. Beige (Unsulfured)" },
+      "props": ["Rich in pectin (soluble fiber)", "Chewy texture, good for blood sugar stability", "Unsulfured rings are darker but more natural"],
+      "lang": { "de": "Apfelringe (getrocknet)", "en": "Dried Apple", "es": "Manzana deshidratada", "fr": "Pomme séchée", "ru": "Сушеные яблоки", "ja": "ドライアップル", "zh": "苹果干", "fa": "سیب خشک", "hi": "सूखा सेब", "ar": "تفاح مجفف" }
+    },
+    "mango_dried": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Mango (Dried)", "icon": "🥭", "latin": "Mangifera indica (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 319, "vit_a_mcg": 134.0, "fiber_g": 5.2, "sugar_total_g": 66.0 },
+      "meta": { "locations": ["dm", "rewe", "lidl", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "High Vitamin A (Retinol equivalents)" },
+      "props": ["Concentrated tropical flavor", "Natural source of beta-carotene", "High sugar density ('Nature's candy')"],
+      "lang": { "de": "Mango (getrocknet)", "en": "Dried Mango", "es": "Mango deshidratado", "fr": "Mangue séchée", "ru": "Сушеное манго", "ja": "ドライマンゴー", "zh": "芒果干", "fa": "انبه خشک", "hi": "सूखा आम", "ar": "مانجو مجفف" }
+    },
+    "pineapple_dried": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Pineapple (Dried)", "icon": "🍍", "latin": "Ananas comosus (Fructus siccus)", "sci": ["#sci/Enzymology"],
+      "val": { "kcal": 312, "manganese_mg": 1.5, "fiber_g": 5.0 },
+      "meta": { "locations": ["dm", "rewe", "orient_market"], "season": ["all_year"], "vegan": true },
+      "props": ["Very high in manganese for bone health", "Intense sweet-tart balance", "Natural enzymes mostly reduced by heat"],
+      "lang": { "de": "Ananas (getrocknet)", "en": "Dried Pineapple", "es": "Piña deshidratada", "fr": "Ananas séché", "ru": "Сушеный ананас", "ja": "ドライパイン", "zh": "菠萝干", "fa": "آناناس خشک", "hi": "सूखा अनानास", "ar": "أناناس مجفف" }
+    },
+    "papaya_dried": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Papaya (Dried)", "icon": "🧡", "latin": "Carica papaya (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 300, "vit_a_mcg": 90.0, "fiber_g": 4.5, "potassium_mg": 480.0 },
+      "meta": { "locations": ["orient_market", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "props": ["Often found as sugared cubes", "High in carotenoids", "Supports digestive health through lingering papain"],
+      "lang": { "de": "Papaya (getrocknet)", "en": "Dried Papaya", "es": "Papaya deshidratada", "fr": "Papaye séchée", "ru": "Сушеная папайя", "ja": "ドライパパイヤ", "zh": "木瓜干", "fa": "پاپایا خشک", "hi": "सूखा पपीता", "ar": "بابايا مجففة" }
+    }
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "supplement": {
+  "--- DROGERIE_MINERALS_AND_METALS ---": "Mineralien & Spurenelemente (Standard-Bioverfügbarkeit)",
+  "supp_magnesium_400_depot": {
+    "unit_price": 6.00,
+    "unit_type": "piece",
+    "label": "Magnesium 400 Depot (Doppelherz/Altapharma)", "icon": "💊", "latin": "Magnesium oxidum", "sci": ["#sci/Supplement"],
+    "val": { "kcal": 0, "magnesium_mg": 400.0, "vit_b1_mg": 1.1, "vit_b6_mg": 1.4, "vit_b12_mcg": 2.5 },
+    "meta": { "locations": ["rossmann", "dm", "budni"], "brand": "Standard", "vegan": true },
+    "props": ["Oxid-Form: Langsame Aufnahme, gut für die Langzeitversorgung", "Enthält oft B-Vitamine als Synergie-Bonus"],
+    "lang": { "de": "Magnesium 400 Depot", "en": "Magnesium 400 Depot" }
+  },
+  "supp_magnesium_citrat_stick": {
+    "unit_price": 8.00,
+    "unit_type": "piece",
+    "label": "Magnesium Citrat (Direkt-Stick)", "icon": "🧪", "latin": "Magnesium citricum", "sci": ["#sci/Bioavailability"],
+    "val": { "kcal": 5, "magnesium_mg": 400.0, "carbs_total_g": 1.2 },
+    "meta": { "locations": ["dm", "rossmann"], "brand": "Mivolis/WellMix", "vegan": true },
+    "props": ["Schnelle Resorption durch Citrat-Verbindung", "Ideal nach dem Sport zur sofortigen Entspannung"],
+    "lang": { "de": "Magnesium Citrat Stick" }
+  },
+  "supp_iron_vit_c_taxofit": {
+    "unit_price": 6.00,
+    "unit_type": "piece",
+    "label": "Eisen + Vitamin C (Taxofit/Doppelherz)", "icon": "🩸", "latin": "Ferrum (II) sulfat", "sci": ["#sci/Hematology"],
+    "val": { "kcal": 0, "iron_animal_mg": 50.0, "vit_c_mg": 50.0 },
+    "meta": { "locations": ["rossmann", "dm"], "brand": "Taxofit", "vegan": true },
+    "props": ["Hochdosiertes Eisen zur Blutbildung", "Vitamin C verbessert die Aufnahme im Darm entscheidend"],
+    "lang": { "de": "Eisen + Vitamin C" }
+  },
+  "supp_zinc_histidin_300": {
+    "unit_price": 6.00,
+    "unit_type": "piece",
+    "label": "Zink + Histidin + Vit C", "icon": "🛡️", "latin": "Zincum & Histidinum", "sci": ["#sci/Immunology"],
+    "val": { "kcal": 0, "zinc_mg": 15.0, "vit_c_mg": 300.0 },
+    "meta": { "locations": ["rossmann", "dm"], "brand": "Doppelherz", "vegan": true },
+    "props": ["Histidin dient als Aminosäure-Transporter für Zink", "Klassiker für das Immunsystem"],
+    "lang": { "de": "Zink + Histidin" }
+  },
+  "supp_calcium_600_d3": {
+    "unit_price": 5.00,
+    "unit_type": "piece",
+    "label": "Calcium 600 + D3 (Abtei/Mivolis)", "icon": "🦴", "latin": "Calcium carbonicum", "sci": ["#sci/Osteology"],
+    "val": { "kcal": 0, "calcium_mg": 600.0, "vit_d_mcg": 5.0 },
+    "meta": { "locations": ["rossmann", "dm"], "brand": "Abtei", "vegan": false },
+    "props": ["Unterstützt Knochenerhalt", "D3 ist nötig für die Calcium-Resorption"],
+    "lang": { "de": "Calcium + D3" }
+  },
+  "supp_selenium_mini": {
+    "unit_price": 6.00,
+    "unit_type": "piece",
+    "label": "Selen (Depot/Mini-Tabs)", "icon": "🛡️", "latin": "Selenium", "sci": ["#sci/Endocrinology"],
+    "val": { "kcal": 0, "selenium_mcg": 55.0 },
+    "meta": { "locations": ["rossmann", "dm"], "brand": "Taxofit", "vegan": true },
+    "props": ["Essenziell für die Schilddrüsenhormon-Konvertierung"],
+    "lang": { "de": "Selen" }
+  },
+
+  "--- DROGERIE_VITAMINS_AND_OILS ---": "Vitamine & Lipide (Basis-Standard)",
+  "supp_b_complex_all_in_one": {
+    "unit_price": 5.00,
+    "unit_type": "piece",
+    "label": "B-Komplex (Gesamtspektrum)", "icon": "⚡", "latin": "Vitamina B composita", "sci": ["#sci/Metabolism"],
+    "val": { "kcal": 0, "vit_b1_mg": 1.1, "vit_b2_mg": 1.4, "vit_b6_mg": 1.4, "vit_b12_mcg": 2.5, "folic_acid_mcg": 200.0, "vit_b3_mg": 16.0, "vit_b5_mg": 6.0, "vit_b7_mcg": 50.0 },
+    "meta": { "locations": ["rossmann", "dm", "budni"], "brand": "Altapharma", "vegan": true },
+    "props": ["Deckelt alle 8 B-Vitamine ab", "Wichtig für Nerven und Energiestoffwechsel"],
+    "lang": { "de": "Vitamin B-Komplex" }
+  },
+  "supp_vit_d3_1000_ie": {
+    "unit_price": 5.00,
+    "unit_type": "piece",
+    "label": "Vitamin D3 1000 IE (Basis)", "icon": "☀️", "latin": "Cholecalciferol", "sci": ["#sci/Endocrinology"],
+    "val": { "kcal": 1, "vit_d_mcg": 25.0, "fat_total_g": 0.1 },
+    "meta": { "locations": ["dm", "rossmann"], "brand": "Mivolis", "vegan": false },
+    "props": ["Sonnenvitamin zur Erhaltung des Spiegels", "Immer mit Fett einnehmen"],
+    "lang": { "de": "Vitamin D3 1000 IE" }
+  },
+  "supp_vit_c_depot_500": {
+    "unit_price": 5.00,
+    "unit_type": "piece",
+    "label": "Vitamin C 500 Depot", "icon": "🍊", "latin": "Acidum ascorbicum", "sci": ["#sci/Immunology"],
+    "val": { "kcal": 0, "vit_c_mg": 500.0 },
+    "meta": { "locations": ["rossmann", "dm"], "brand": "Altapharma", "vegan": true },
+    "props": ["Zeitverzögerte Freisetzung für konstanten Blutspiegel"],
+    "lang": { "de": "Vitamin C Depot" }
+  },
+  "supp_omega3_1000_standard": {
+    "unit_price": 8.00,
+    "unit_type": "piece",
+    "label": "Omega-3 1000mg (Fischöl)", "icon": "🐟", "latin": "Oleum piscium", "sci": ["#sci/Cardiology"],
+    "val": { "kcal": 9, "fat_total_g": 1.0, "omega3_total_mg": 300.0, "epa_mg": 180.0, "dha_mg": 120.0 },
+    "meta": { "locations": ["dm", "rossmann"], "brand": "Doppelherz", "vegan": false },
+    "props": ["Basis-Versorgung mit EPA/DHA", "Gut für Herzfunktion und Sehkraft"],
+    "lang": { "de": "Omega-3 1000mg" }
+  },
+
+  "--- DROGERIE_PROTEINS_AND_SPORT ---": "Proteine & Performance (Standard)",
+  "supp_whey_sportness_dm": {
+    "unit_price": 15.00,
+    "unit_type": "piece",
+    "label": "dm Sportness Whey Protein", "icon": "🥛", "latin": "Lactoserum", "sci": ["#sci/MuscleSynthesis"],
+    "val": { "kcal": 112, "protein_g": 23.0, "carbs_total_g": 2.1, "fat_total_g": 1.4 },
+    "meta": { "locations": ["dm"], "brand": "Sportness", "vegan": false },
+    "props": ["Schnell verfügbares Eiweiß für Muskelaufbau", "Gutes Aminosäureprofil"],
+    "lang": { "de": "Sportness Whey" }
+  },
+  "supp_vegan_protein_wellmix": {
+    "unit_price": 15.00,
+    "unit_type": "piece",
+    "label": "WellMix Vegan Protein", "icon": "🌱", "latin": "Proteinum vegetabile", "sci": ["#sci/Supplement"],
+    "val": { "kcal": 110, "protein_g": 21.0, "carbs_total_g": 1.5, "fat_total_g": 1.8 },
+    "meta": { "locations": ["rossmann"], "brand": "WellMix", "vegan": true },
+    "props": ["Mehrkomponenten-Protein (Erbse/Reis/Soya)", "Laktosefrei"],
+    "lang": { "de": "WellMix Vegan Protein" }
+  },
+  "supp_creatin_pur_rossmann": {
+    "unit_price": 20.00,
+    "unit_type": "piece",
+    "label": "Creatin Monohydrat (Pulver)", "icon": "💪", "latin": "Creatinum monohydricum", "sci": ["#sci/SportsMedicine"],
+    "val": { "kcal": 0, "creatine_g": 3.0 },
+    "meta": { "locations": ["rossmann"], "brand": "WellMix", "vegan": true },
+    "props": ["Steigert die körperliche Leistung bei Schnellkrafttraining", "Standard-Supp für Kraftsport"],
+    "lang": { "de": "Creatin Monohydrat" }
+  },
+
+  "--- DROGERIE_BIOHACKS_AND_EXTRACTS ---": "Extrakte & Spezial-Supps",
+  "supp_ashwagandha_doppelherz": {
+    "unit_price": 10.00,
+    "unit_type": "piece",
+    "label": "Ashwagandha + B6 + B12", "icon": "🧘", "latin": "Withania somnifera", "sci": ["#sci/Endocrinology"],
+    "val": { "kcal": 0, "vit_b6_mg": 1.4, "vit_b12_mcg": 2.5, "ashwagandha_extract_mg": 300.0 },
+    "meta": { "locations": ["rossmann", "dm"], "brand": "Doppelherz", "vegan": true },
+    "props": ["Adaptogen zur Stressresistenz", "Unterstützt das Nervensystem"],
+    "lang": { "de": "Ashwagandha Kapseln" }
+  },
+  "supp_melatonin_spray": {
+    "unit_price": 8.00,
+    "unit_type": "piece",
+    "label": "Melatonin Sofort-Spray", "icon": "🌙", "latin": "Melatoninum", "sci": ["#sci/Neurology"],
+    "val": { "kcal": 0, "melatonin_mg": 1.0 },
+    "meta": { "locations": ["dm", "rossmann"], "brand": "Mivolis/Kneipp", "vegan": true },
+    "props": ["Verkürzt die Einschlafzeit", "Direkte Aufnahme über die Schleimhaut"],
+    "lang": { "de": "Melatonin Spray" }
+  },
+  "supp_curcuma_750_piperin": {
+    "unit_price": 10.00,
+    "unit_type": "piece",
+    "label": "Curcuma 750 + Piperin", "icon": "🧡", "latin": "Curcuma longa", "sci": ["#sci/Immunology"],
+    "val": { "kcal": 2, "curcuma_root_mg": 750.0, "piperine_mg": 2.0 },
+    "meta": { "locations": ["rossmann", "dm"], "brand": "Taxofit", "vegan": true },
+    "props": ["Piperin erhöht die Bioverfügbarkeit massiv", "Natürliches Antioxidans"],
+    "lang": { "de": "Curcuma Kapseln" }
+  }
+ },
+  "supplement_premium": {
+  "--- PREMIUM_CELLULAR_MINERALS ---": "Hochverfügbare Chelat-Mineralien (Apotheke/Premium)",
+  "supp_magnesium_bisglycinate_premium": {
+    "unit_price": 30.00,
+    "unit_type": "piece",
+    "label": "Magnesium-Bisglycinat (Pure/Sunday/Thorne)", "icon": "💎", "latin": "Magnesium bisglycinatum", "sci": ["#sci/Bioavailability", "#sci/Neurology"],
+    "val": { "kcal": 0, "magnesium_mg": 100.0 },
+    "meta": { "locations": ["pharmacy", "online"], "brand": "Sunday/Pure", "vegan": true },
+    "props": ["An die Aminosäure Glycin gebunden: Passiert die Blut-Hirn-Schranke", "Keine abführende Wirkung", "Ideal für ZNS-Entspannung und Tiefschlaf"],
+    "lang": { "de": "Magnesium Bisglycinat (Premium)" }
+  },
+  "supp_zinc_picolinate_premium": {
+    "unit_price": 20.00,
+    "unit_type": "piece",
+    "label": "Zink-Picolinat (Pure Encapsulations)", "icon": "🛡️", "latin": "Zincum picolinicum", "sci": ["#sci/Immunology"],
+    "val": { "kcal": 0, "zinc_mg": 15.0 },
+    "meta": { "locations": ["pharmacy", "online"], "brand": "Pure", "vegan": true },
+    "props": ["Höchste zelluläre Aufnahmerate durch Picolinsäure-Bindung", "Hypoallergen: Frei von unnötigen Zusatzstoffen"],
+    "lang": { "de": "Zink Picolinat (Premium)" }
+  },
+  "supp_iron_bisglycinate_gentle": {
+    "unit_price": 25.00,
+    "unit_type": "piece",
+    "label": "Eisen-Bisglycinat (Gentle Iron)", "icon": "🩸", "latin": "Ferrum bisglycinatum", "sci": ["#sci/Hematology"],
+    "val": { "kcal": 0, "iron_animal_mg": 25.0, "vit_c_mg": 100.0 },
+    "meta": { "locations": ["online", "pharmacy"], "brand": "Solgar/Sunday", "vegan": true },
+    "props": ["Organisches Eisen-Chelat: 2-4 mal höhere Bioverfügbarkeit als Sulfat", "Verursacht keine Verstopfung oder Magenschmerzen"],
+    "lang": { "de": "Eisen Bisglycinat (Sanft)" }
+  },
+  "supp_calcium_malate_premium": {
+    "unit_price": 30.00,
+    "unit_type": "piece",
+    "label": "Calcium-Malat (Gereift)", "icon": "🦴", "latin": "Calcium malicum", "sci": ["#sci/Osteology"],
+    "val": { "kcal": 0, "calcium_mg": 250.0 },
+    "meta": { "locations": ["online"], "brand": "Thorne/Pure", "vegan": true },
+    "props": ["An Äpfelsäure gebunden: Optimale Aufnahme in die Knochenmatrix", "Reduziertes Risiko für Gefäßverkalkung im Vergleich zu Carbonat"],
+    "lang": { "de": "Calcium Malat (Premium)" }
+  },
+
+  "--- BIOACTIVE_VITAMINS_AND_LIPIDS ---": "Bioaktive Co-Faktoren & Reinstöle",
+  "supp_b_complex_bioactive_premium": {
+    "unit_price": 40.00,
+    "unit_type": "piece",
+    "label": "B-Complex Methylated (Bioaktiv)", "icon": "🧬", "latin": "Vitamina B methylata", "sci": ["#sci/Epigenetics"],
+    "val": { "kcal": 0, "vit_b1_mg": 50.0, "vit_b2_mg": 50.0, "vit_b6_mg": 20.0, "vit_b12_mcg": 500.0, "folic_acid_mcg": 400.0, "vit_b7_mcg": 500.0 },
+    "meta": { "locations": ["online"], "brand": "Thorne/Sunday", "vegan": true },
+    "props": ["Enthält Methylfolat (5-MTHF) und Methylcobalamin", "Direkt vom Körper verwertbar ohne Umwandlungsschritte in der Leber", "Ideal bei genetischen Methylierungs-Engpässen"],
+    "lang": { "de": "B-Komplex Bioaktiv" }
+  },
+  "supp_omega3_total_norsan": {
+    "unit_price": 35.00,
+    "unit_type": "piece",
+    "label": "Norsan Omega-3 Total (Premium Öl)", "icon": "🐟", "latin": "Oleum piscium purissimum", "sci": ["#sci/LipidScience"],
+    "val": { "kcal": 72, "fat_total_g": 8.0, "omega3_total_mg": 2000.0, "epa_mg": 1120.0, "dha_mg": 536.0, "vit_e_mg": 3.0, "vit_d_mcg": 20.0 },
+    "meta": { "locations": ["pharmacy", "online"], "brand": "Norsan", "vegan": false },
+    "props": ["Extrem niedriger TOTOX-Wert (Frische-Index)", "Natürliche Triglycerid-Form (kein künstliches Konzentrat)", "Kein fischiges Aufstoßen"],
+    "lang": { "de": "Norsan Omega-3 Öl" }
+  },
+  "supp_vit_d3_k2_all_trans_premium": {
+    "unit_price": 30.00,
+    "unit_type": "piece",
+    "label": "Vitamin D3 + K2 MK7 (All-Trans)", "icon": "☀️", "latin": "Cholecalciferol & MK-7", "sci": ["#sci/Endocrinology"],
+    "val": { "kcal": 0, "vit_d_mcg": 62.5, "vit_k2_mcg": 100.0 },
+    "meta": { "locations": ["online"], "brand": "Sunday Natural", "vegan": true },
+    "props": ["K2 als 100% All-Trans MK7 (K2Vital): Höchste Stabilität", "D3 aus Flechten in MCT-Trägeröl für sofortige Resorption"],
+    "lang": { "de": "Premium D3+K2 Tropfen" }
+  },
+
+  "--- ELITE_PERFORMANCE_AND_ISOLATES ---": "Maximale Reinheit für Sport & Zelle",
+  "supp_whey_isolate_isoclear": {
+    "unit_price": 40.00,
+    "unit_type": "piece",
+    "label": "Whey Isolat / Isoclear (ESN/More)", "icon": "🧃", "latin": "Lactoserum purissimum", "sci": ["#sci/MuscleSynthesis"],
+    "val": { "kcal": 105, "protein_g": 26.0, "leucine_g": 3.1, "fat_total_g": 0.1, "carbs_total_g": 0.5 },
+    "meta": { "locations": ["online"], "brand": "ESN/More", "vegan": false },
+    "props": ["Laktosefrei und fettfrei durch Cross-Flow-Microfiltration", "Maximaler Leucin-Spike (mTOR-Aktivierung)", "Belastet die Verdauung nicht"],
+    "lang": { "de": "Premium Whey Isolat" }
+  },
+  "supp_creapure_premium": {
+    "unit_price": 35.00,
+    "unit_type": "piece",
+    "label": "Creapure® (Reinstes Creatin)", "icon": "🏁", "latin": "Creatinum monohydricum (Creapure)", "sci": ["#sci/SportsMedicine"],
+    "val": { "kcal": 0, "creatine_g": 3.0 },
+    "meta": { "locations": ["online"], "brand": "Creapure Label", "vegan": true },
+    "props": ["In Deutschland hergestellt, weltweit reinster Standard", "Frei von Abbauprodukten wie Kreatinin oder Dicyandiamid"],
+    "lang": { "de": "Creapure® Creatin" }
+   }
+  }
+}

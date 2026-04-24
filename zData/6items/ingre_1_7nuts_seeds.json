@@ -1,0 +1,368 @@
+{
+  "nuts": {
+    "--- TRUE_AND_CULINARY_NUTS ---": "Baumnüsse & Exoten",
+    "walnut": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Walnut", "icon": "🧠", "latin": "Juglans regia (Semen siccum)", "sci": ["#sci/Nutrition", "#sci/Neuroscience"],
+      "val": { "kcal": 654, "fat_total_g": 65.2, "omega3_ala_g": 9.1, "protein_g": 15.2, "antioxidants_orac": 13541.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns", "weekly_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Brain shape, Brain food (ALA)" },
+      "props": ["Highest Omega-3 (ALA) content of any tree nut", "Looks like a human brain (Signature Doctrine)", "Rich in polyphenols in the papery skin"],
+      "lang": { "de": "Walnuss", "en": "Walnut", "es": "Nuez", "fr": "Noix", "ru": "Грецкий орех", "ja": "くるみ", "zh": "核桃", "fa": "گردو", "hi": "अखरोट", "ar": "جوز" }
+    },
+    "almond": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Almond", "icon": "🌰", "latin": "Prunus dulcis (Semen siccum)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 579, "fat_total_g": 49.9, "protein_g": 21.1, "vit_e_mg": 25.6, "calcium_mg": 268.0, "magnesium_mg": 270.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "nutrient_focus": "Vitamin E Champion" },
+      "props": ["Botanically a seed of a drupe, not a true nut", "Massive Vitamin E antioxidant load", "Highly alkalizing and rich in calcium"],
+      "lang": { "de": "Mandel", "en": "Almond", "es": "Almendra", "fr": "Amande", "ru": "Миндаль", "ja": "アーモンド", "zh": "杏仁", "fa": "بادام", "hi": "बादाम", "ar": "لوز" }
+    },
+    "brazil_nut": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Brazil Nut", "icon": "🌰", "latin": "Bertholletia excelsa (Semen siccum)", "sci": ["#sci/Toxicology", "#sci/Nutrition"],
+      "val": { "kcal": 659, "fat_total_g": 67.1, "protein_g": 14.3, "selenium_mcg": 1917.0, "magnesium_mg": 376.0 },
+      "meta": { "locations": ["kaufland", "rewe", "denns", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "safety": "Limit to 2-3 per day (Selenium toxicity)" },
+      "props": ["The most concentrated dietary source of Selenium on earth", "Crucial for thyroid function", "Grows wild in the Amazon rainforest"],
+      "lang": { "de": "Paranuss", "en": "Brazil Nut", "es": "Nuez de Brasil", "fr": "Noix du Brésil", "ru": "Бразильский орех", "ja": "ブラジルナッツ", "zh": "巴西坚果", "fa": "آجیل برزیلی", "hi": "ब्राजील नट", "ar": "جوز برازيلي" }
+    },
+    "cashew": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cashew", "icon": "🌙", "latin": "Anacardium occidentale (Semen siccum)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 553, "fat_total_g": 43.8, "protein_g": 18.2, "iron_plant_mg": 6.7, "zinc_mg": 5.8, "copper_mg": 2.2 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Vegan cheese/cream base" },
+      "props": ["Grows at the bottom of the 'cashew apple'", "Softer texture, blends perfectly into vegan creams", "Excellent source of copper and zinc"],
+      "lang": { "de": "Cashewkern", "en": "Cashew", "es": "Anacardo", "fr": "Noix de cajou", "ru": "Кешью", "ja": "カシューナッツ", "zh": "腰果", "fa": "بادام هندی", "hi": "काजू", "ar": "كاجو" }
+    },
+    "pistachio": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Pistachio", "icon": "🟢", "latin": "Pistacia vera (Semen siccum)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 562, "fat_total_g": 45.3, "protein_g": 20.2, "lutein_zeaxanthin_mcg": 2903.0, "melatonin_mcg": 23.0 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Eye health & Sleep" },
+      "props": ["Green color from chlorophyll and lutein", "One of the highest melatonin contents in food", "Lower calorie density than pecans"],
+      "lang": { "de": "Pistazie", "en": "Pistachio", "es": "Pistacho", "fr": "Pistache", "ru": "Фисташка", "ja": "ピスタチオ", "zh": "开心果", "fa": "پسته", "hi": "पिस्ता", "ar": "فستق" }
+    },
+    "hazelnut": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Hazelnut", "icon": "🌰", "latin": "Corylus avellana (Nux sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 628, "fat_total_g": 60.7, "protein_g": 14.9, "vit_e_mg": 15.0, "manganese_mg": 6.2 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "lipid_profile": "High MUFA (Oleic Acid)" },
+      "props": ["Classic nougat/chocolate pairing", "Very high in proanthocyanidins", "Skin contains most of the antioxidants"],
+      "lang": { "de": "Haselnuss", "en": "Hazelnut", "es": "Avellana", "fr": "Noisette", "ru": "Фундук", "ja": "ヘーゼルナッツ", "zh": "榛子", "fa": "فندق", "hi": "हेज़लनट", "ar": "بندق" }
+    },
+    "macadamia": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Macadamia Nut", "icon": "⚪", "latin": "Macadamia integrifolia (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 718, "fat_total_g": 75.8, "protein_g": 7.9, "mufa_g": 58.9, "manganese_mg": 4.1 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Ultra-buttery / Highest fat" },
+      "props": ["Highest fat and lowest protein of all nuts", "Incredible source of monounsaturated fats (MUFA)", "Extremely hard shell"],
+      "lang": { "de": "Macadamianuss", "en": "Macadamia", "es": "Nuez de macadamia", "fr": "Noix de macadamia", "ru": "Макадамия", "ja": "マカダミアナッツ", "zh": "夏威夷果", "fa": "ماکادمیا", "hi": "मैकाडामिया", "ar": "مكاديميا" }
+    },
+    "pecan": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Pecan", "icon": "🌰", "latin": "Carya illinoinensis (Semen siccum)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 691, "fat_total_g": 71.9, "protein_g": 9.1, "fiber_g": 9.6, "antioxidants_orac": 17940.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Highest ORAC value among tree nuts" },
+      "props": ["Sweeter, softer relative of the walnut", "Massive antioxidant capacity", "Staple in Southern US cuisine"],
+      "lang": { "de": "Pekannuss", "en": "Pecan", "es": "Nuez pecana", "fr": "Noix de pécan", "ru": "Пекан", "ja": "ピーカンナッツ", "zh": "碧根果", "fa": "پکان", "hi": "पेकन", "ar": "جوز البقان" }
+    },
+    "pine_nut": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Pine Nut", "icon": "🌲", "latin": "Pinus pinea (Semen siccum)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 673, "fat_total_g": 68.4, "protein_g": 13.7, "pinolenic_acid_g": 11.0, "manganese_mg": 8.8 },
+      "meta": { "locations": ["rewe", "kaufland", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Essential for Pesto Genovese" },
+      "props": ["Seeds extracted from pine cones", "Contains pinolenic acid (appetite suppressant)", "Very delicate and prone to rancidity"],
+      "lang": { "de": "Pinienkern", "en": "Pine Nut", "es": "Piñón", "fr": "Pignon de pin", "ru": "Кедровый орех", "ja": "松の実", "zh": "松子", "fa": "چلغوز", "hi": "चिलगोजा", "ar": "صنوبر" }
+    },
+    "peanut": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Peanut", "icon": "🥜", "latin": "Arachis hypogaea (Semen siccum)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 567, "fat_total_g": 49.2, "protein_g": 25.8, "fiber_g": 8.5, "biotin_mg": 0.13, "niacin_mg": 12.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "botany": "Legume, not a true nut" },
+      "props": ["Grows underground", "Highest protein content in the 'nut' category", "Extremely susceptible to aflatoxins"],
+      "lang": { "de": "Erdnuss", "en": "Peanut", "es": "Cacahuete", "fr": "Cacahuète", "ru": "Арахис", "ja": "ピーナッツ", "zh": "花生", "fa": "بادام زمینی", "hi": "मूंगफली", "ar": "فول سوداني" }
+    },
+    "tiger_nut": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Tiger Nut", "icon": "🟤", "latin": "Cyperus esculentus (Tuber siccum fractum)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 496, "fat_total_g": 24.9, "carbs_g": 42.1, "fiber_g": 33.0, "protein_g": 4.5 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "allergy_friendly": "Safe for nut allergies" },
+      "props": ["Botanically a tiny tuber/rhizome", "Naturally sweet, almond-like flavor", "Very high in resistant starch and fiber"],
+      "lang": { "de": "Erdmandel, Tigernuss", "en": "Tiger Nut", "es": "Chufa", "fr": "Souchet", "ru": "Чуфа", "ja": "タイガーナッツ", "zh": "油莎草", "fa": "مغز ببر", "hi": "टाइगर नट", "ar": "حب العزيز" }
+    },
+    "chestnut": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Chestnut", "icon": "🌰", "latin": "Castanea sativa (Semen recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 196, "fat_total_g": 1.3, "carbs_g": 44.0, "vit_c_mg": 26.0, "potassium_mg": 484.0 },
+      "meta": { "locations": ["rewe", "kaufland", "weekly_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "macro_focus": "High Carb, Low Fat Nut" },
+      "props": ["Unique among nuts: rich in Vitamin C", "Must be roasted or boiled", "Staple winter street food"],
+      "lang": { "de": "Esskastanie, Marone", "en": "Chestnut", "es": "Castaña", "fr": "Châtaigne", "ru": "Каштан", "ja": "栗", "zh": "板栗", "fa": "شاه‌بلوط", "hi": "चेस्टनट", "ar": "كستناء" }
+    },
+    "sacha_inchi": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Sacha Inchi (Inca Peanut)", "icon": "⭐", "latin": "Plukenetia volubilis (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 570, "protein_g": 27.0, "omega3_ala_g": 25.0, "vit_e_mg": 17.0 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "lipid_profile": "Extreme Omega-3" },
+      "props": ["Star-shaped pod from the Amazon", "One of the highest plant sources of Omega-3", "Usually roasted, tastes earthy"],
+      "lang": { "de": "Sacha Inchi, Inka-Erdnuss", "en": "Sacha Inchi", "es": "Sacha Inchi", "fr": "Sacha Inchi", "ru": "Сача Инчи", "ja": "サチャインチ", "zh": "印加果", "fa": "ساچا اینچی", "hi": "सचा इंची", "ar": "ساشا إنشي" }
+    },
+    "chinese_pine_nut": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Chinese Pine Nut", "icon": "🌲", "latin": "Pinus armandii (Semen siccum)", "sci": ["#sci/Toxicology"],
+      "val": { "kcal": 673, "fat_total_g": 68.0, "protein_g": 13.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "safety": "Can cause 'Pine Nut Syndrome' (Metallic taste)" },
+      "props": ["Short, triangular kernels", "May cause bitter metallic taste (dysgeusia)", "Cheaper alternative to Mediterranean pine nuts"],
+      "lang": { "de": "Chinesische Pinienkerne", "en": "Chinese Pine Nut", "es": "Piñón chino", "fr": "Pignon de pin chinois", "ru": "Китайский кедровый орех", "ja": "中国松の実", "zh": "华山松子", "fa": "چلغوز چینی", "hi": "चीनी चिलगोजा", "ar": "صنوبر صيني" }
+    },
+    "white_poppy_seed": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "White Poppy Seed", "icon": "⚪", "latin": "Papaver somniferum (Semen siccum album)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 525, "fat_total_g": 42.0, "protein_g": 18.0, "calcium_mg": 1400.0 },
+      "meta": { "locations": ["asia_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Thickening agent for Indian Curries" },
+      "props": ["Milder and less nutty than blue poppy seeds", "Used as a paste for texture and thickness", "Common in Mughlai cuisine"],
+      "lang": { "de": "Weißer Mohn", "en": "White Poppy Seed", "es": "Amapola blanca", "fr": "Pavot blanc", "ru": "Белый мак", "ja": "白ケシの実", "zh": "白罂粟籽", "fa": "خشخاش سفید", "hi": "खसखस (سفید)", "ar": "خشخاش أبيض" }
+    },
+    "water_chestnut": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Water Chestnut", "icon": "🌰", "latin": "Eleocharis dulcis (Cormus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 97, "carbs_g": 24.0, "fiber_g": 3.0, "potassium_mg": 584.0 },
+      "meta": { "locations": ["asia_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Retains crunch even after cooking" },
+      "props": ["Botanically a corm (aquatic vegetable)", "Sweet, apple-like crunch", "Essential for Dim Sum"],
+      "lang": { "de": "Wasserkastanie", "en": "Water Chestnut", "es": "Castaña de agua", "fr": "Châtaigne d'eau", "ru": "Водяной орех", "ja": "クワイ", "zh": "荸荠", "fa": "بلوط آبی", "hi": "सिंघाड़ा", "ar": "كستناء الماء" }
+    }
+  },
+"seeds": {
+    "--- SMALL_SEEDS_AND_KERNELS ---": "Samen, Kerne & Superfoods",
+    "flaxseed": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Flaxseed", "icon": "🤎", "latin": "Linum usitatissimum (Semen siccum)", "sci": ["#sci/Phytochemistry", "#sci/Nutrition"],
+      "val": { "kcal": 534, "fat_total_g": 42.2, "omega3_ala_g": 22.8, "protein_g": 18.3, "fiber_g": 27.3, "lignans_mg": 800.0 },
+      "meta": { "locations": ["lidl", "kaufland", "dm", "rossmann", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Omega-3 & Hormone balance" },
+      "props": ["Must be crushed/ground to absorb nutrients", "Highest plant source of lignans", "Mucilage properties excellent for digestion"],
+      "lang": { "de": "Leinsamen", "en": "Flaxseed", "es": "Semilla de lino", "fr": "Graine de lin", "ru": "Семя льна", "ja": "亜麻仁", "zh": "亚麻籽", "fa": "بذر کتان", "hi": "अलसी के बीज", "ar": "بذور الكتان" }
+    },
+    "chia_seed": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Chia Seed", "icon": "⚫", "latin": "Salvia hispanica (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 486, "fat_total_g": 30.7, "omega3_ala_g": 17.8, "protein_g": 16.5, "fiber_g": 34.4, "calcium_mg": 631.0 },
+      "meta": { "locations": ["lidl", "kaufland", "dm", "rossmann", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "hydration": "Absorbs 10x its weight in water" },
+      "props": ["Ancient Aztec energy fuel", "Forms a thick gel (vegan egg substitute)", "Massive calcium and fiber density"],
+      "lang": { "de": "Chiasamen", "en": "Chia Seed", "es": "Semilla de chía", "fr": "Graine de chia", "ru": "Семена чиа", "ja": "チアシード", "zh": "奇亚籽", "fa": "دانه چیا", "hi": "चिया बीज", "ar": "بذور الشيا" }
+    },
+    "hemp_seed": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Hemp Seed (Hulled)", "icon": "🌿", "latin": "Cannabis sativa (Semen decorticatum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 553, "fat_total_g": 48.7, "protein_g": 31.6, "fiber_g": 4.0, "magnesium_mg": 700.0, "iron_plant_mg": 7.9 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "protein_quality": "Complete Amino Acid Profile" },
+      "props": ["Perfect 3:1 ratio of Omega-6 to Omega-3", "Contains easily digestible Edestin protein", "Zero psychoactive compounds"],
+      "lang": { "de": "Hanfsamen (Geschält)", "en": "Hemp Seed", "es": "Semilla de cáñamo", "fr": "Graine de chanvre", "ru": "Конопляное семя", "ja": "ヘンプシード", "zh": "大麻籽", "fa": "شاهدانه", "hi": "भांग के बीज", "ar": "بذور القنب" }
+    },
+    "pumpkin_seed": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pumpkin Seed", "icon": "🎃", "latin": "Cucurbita pepo (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 559, "fat_total_g": 49.0, "protein_g": 30.2, "fiber_g": 6.0, "zinc_mg": 7.8, "magnesium_mg": 592.0, "tryptophan_mg": 576.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Zinc & Prostate Health" },
+      "props": ["Styrian seeds have no hard outer shell", "Extremely high in sleep-inducing tryptophan", "Traditional remedy for bladder function"],
+      "lang": { "de": "Kürbiskern", "en": "Pumpkin Seed", "es": "Semilla de calabaza", "fr": "Graine de citrouille", "ru": "Тыквенное семечко", "ja": "カボチャの種", "zh": "南瓜子", "fa": "تخمه کدو", "hi": "कद्दू के बीज", "ar": "بذور اليقطين" }
+    },
+    "sunflower_seed": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Sunflower Seed", "icon": "🌻", "latin": "Helianthus annuus (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 584, "fat_total_g": 51.5, "protein_g": 20.8, "fiber_g": 8.6, "vit_e_mg": 35.2, "selenium_mcg": 53.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "nutrient_focus": "Vitamin E heavyweight" },
+      "props": ["Cheap, nutrient-dense seed", "Massive Vitamin E content", "High linoleic acid content"],
+      "lang": { "de": "Sonnenblumenkern", "en": "Sunflower Seed", "es": "Semilla de girasol", "fr": "Graine de tournesol", "ru": "Семечко подсолнуха", "ja": "ひまわりの種", "zh": "葵花籽", "fa": "تخمه آفتابگردان", "hi": "सूरजमुखी के बीज", "ar": "بذور عباد الشمس" }
+    },
+    "sesame_seed": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Sesame Seed (Unhulled)", "icon": "🌾", "latin": "Sesamum indicum (Semen siccum cum cortice)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 573, "fat_total_g": 49.7, "protein_g": 17.7, "fiber_g": 11.8, "calcium_mg": 975.0, "iron_plant_mg": 14.6 },
+      "meta": { "locations": ["orient_market", "rewe", "kaufland", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Massive Plant Calcium" },
+      "props": ["Unhulled seeds contain 10x more calcium", "Contains unique lignans", "Base for Tahini paste"],
+      "lang": { "de": "Sesam (Ungeschält)", "en": "Sesame Seed", "es": "Semilla de sésamo", "fr": "Graine de sésame", "ru": "Кунжут", "ja": "ごま", "zh": "芝麻", "fa": "کنجد", "hi": "तिल", "ar": "سمسم" }
+    },
+    "black_sesame": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Black Sesame Seed", "icon": "⬛", "latin": "Sesamum indicum (Semen siccum nigrum)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 573, "fat_total_g": 49.7, "protein_g": 17.7, "calcium_mg": 975.0, "anthocyanins_mg": 20.0 },
+      "meta": { "locations": ["asia_market", "denns", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "TCM Kidney/Hair Health" },
+      "props": ["Stronger flavor than white sesame", "Hull intact, containing anthocyanins", "Revered in TCM"],
+      "lang": { "de": "Schwarzer Sesam", "en": "Black Sesame", "es": "Sésamo negro", "fr": "Sésame noir", "ru": "Черный кунжут", "ja": "黒ごま", "zh": "黑芝麻", "fa": "کنجد سیاه", "hi": "काला तिल", "ar": "سمسم أسود" }
+    },
+    "poppy_seed": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Poppy Seed", "icon": "🌑", "latin": "Papaver somniferum (Semen siccum)", "sci": ["#sci/Toxicology", "#sci/Nutrition"],
+      "val": { "kcal": 525, "fat_total_g": 41.6, "protein_g": 18.0, "fiber_g": 19.5, "calcium_mg": 1438.0, "manganese_mg": 6.7 },
+      "meta": { "locations": ["rewe", "kaufland", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "mineral_density": "Unrivaled Calcium" },
+      "props": ["Highest calcium content of any culinary seed", "Derived from opium poppy", "Crunchy nutty flavor"],
+      "lang": { "de": "Mohnsamen", "en": "Poppy Seed", "es": "Semilla de amapola", "fr": "Graine de pavot", "ru": "Мак", "ja": "ケシの実", "zh": "罂粟籽", "fa": "خشخاش", "hi": "खसखस", "ar": "بذور الخشخاش" }
+    },
+    "nigella_black_seed": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Black Seed (Nigella)", "icon": "🕳️", "latin": "Nigella sativa (Semen siccum)", "sci": ["#sci/Pharmacognosy", "#sci/Phytochemistry"],
+      "val": { "kcal": 345, "fat_total_g": 15.0, "protein_g": 16.0, "fiber_g": 40.0, "thymoquinone_mg": 15.0 },
+      "meta": { "locations": ["orient_market", "asia_market", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Panacea (Thymoquinone)" },
+      "props": ["Not related to black sesame or cumin", "Pungent flavor", "Famous ancient remedy"],
+      "lang": { "de": "Schwarzkümmel", "en": "Black Seed / Nigella", "es": "Ajenuz", "fr": "Nigelle", "ru": "Черный тмин", "ja": "ブラッククミン", "zh": "黑种草", "fa": "سیاه‌دانه", "hi": "कलौंजी", "ar": "حبة البركة" }
+    },
+    "white_chia_seed": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "White Chia Seed", "icon": "⚪", "latin": "Salvia hispanica (Semen siccum album)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 486, "fat_total_g": 30.7, "omega3_ala_g": 17.8, "protein_g": 16.5, "fiber_g": 34.4 },
+      "meta": { "locations": ["denns", "alnatura", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "visual": "Aesthetic alternative to black chia" },
+      "props": ["Nutritionally identical to black chia", "Chosen for lighter puddings", "Recessive gene variety"],
+      "lang": { "de": "Weiße Chiasamen", "en": "White Chia Seed", "es": "Chía blanca", "fr": "Chia blanc", "ru": "Белые семена чиа", "ja": "ホワイトチアシード", "zh": "白奇亚籽", "fa": "دانه چیا سفید", "hi": "सफेद चिया बीज", "ar": "بذور الشيا البيضاء" }
+    },
+    "cedar_nut": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Siberian Cedar Nut", "icon": "🌲", "latin": "Pinus sibirica (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 673, "fat_total_g": 61.0, "protein_g": 13.0, "pinolenic_acid_g": 15.0, "magnesium_mg": 251.0 },
+      "meta": { "locations": ["denns", "reformhaus", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "quality": "Wild harvested" },
+      "props": ["Wild harvested in Taiga", "Higher pinolenic acid than pine nuts", "Very aromatic"],
+      "lang": { "de": "Zedernkerne", "en": "Cedar Nut", "es": "Piñón siberiano", "fr": "Pignons de cèdre", "ru": "Кедровый орех", "ja": "シベリア松の実", "zh": "西伯利亚松子", "fa": "دانه سرو", "hi": "देवدار के बीज", "ar": "صنوبر سيبيري" }
+    },
+    "sweet_apricot_kernel": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Sweet Apricot Kernel", "icon": "🍑", "latin": "Prunus armeniaca (Semen siccum dulce)", "sci": ["#sci/Toxicology"],
+      "val": { "kcal": 614, "fat_total_g": 51.0, "protein_g": 25.0, "amygdalin_mg": 0.5 },
+      "meta": { "locations": ["denns", "orient_market", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "safety": "Sweet variety contains minimal amygdalin" },
+      "props": ["Looks like small almonds", "Marzipan-like aroma", "Traditional Persian snack"],
+      "lang": { "de": "Süße Aprikosenkerne", "en": "Sweet Apricot Kernel", "es": "Semilla de albaricoque dulce", "fr": "Amandes d'abricot douces", "ru": "Ядра абрикоса", "ja": "杏仁 (甘口)", "zh": "甜杏仁", "fa": "مغز زردآلو شیرین", "hi": "खुबानी के बीज", "ar": "بذور المشمش الحلو" }
+    },
+    "watermelon_seed": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Watermelon Seed (Dried)", "icon": "🍉", "latin": "Citrullus lanatus (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 557, "fat_total_g": 47.0, "protein_g": 28.3, "magnesium_mg": 515.0, "zinc_mg": 10.2 },
+      "meta": { "locations": ["orient_market", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "nutrient_focus": "Protein & Zinc Powerhouse" },
+      "props": ["Commonly roasted in Middle East", "Protein higher than peanuts", "Exceptional magnesium source"],
+      "lang": { "de": "Wassermelonenkerne (getrocknet)", "en": "Watermelon Seed", "es": "Semilla de sandía", "fr": "Graine de pastèque", "ru": "Семена арбуза", "ja": "スイカの種", "zh": "西瓜子", "fa": "تخم هندوانه", "hi": "तरबूज के बीज", "ar": "بذور البطيخ" }
+    },
+    "white_mustard_seed": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mustard Seed (White/Yellow)", "icon": "🟡", "latin": "Sinapis alba (Semen siccum)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 508, "fat_total_g": 36.2, "protein_g": 26.1, "selenium_mcg": 208.0, "magnesium_mg": 370.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Metabolism & Digestion" },
+      "props": ["Contains sinalbin (mild heat)", "Stimulates gastric juices", "Antimicrobial properties"],
+      "lang": { "de": "Senfsaat (Gelb)", "en": "White Mustard Seed", "es": "Mostaza blanca", "fr": "Moutarde blanche", "ru": "Горчица белая", "ja": "マスタードシード", "zh": "白芥子", "fa": "خردل سفید", "hi": "सफेद सरसों", "ar": "خردل أبيض" }
+    },
+    "black_mustard_seed": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Black Mustard Seed", "icon": "⚫", "latin": "Brassica nigra (Semen siccum nigrum)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 508, "fat_total_g": 36.0, "protein_g": 26.0, "allyl_isothiocyanate_mg": 10.0 },
+      "meta": { "locations": ["asia_market", "orient_market", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Pungent / Sharp heat" },
+      "props": ["Hotter than yellow mustard", "Essential for Indian Tadka", "Rich in volatile isothiocyanates"],
+      "lang": { "de": "Schwarzer Senf", "en": "Black Mustard Seed", "es": "Mostaza negra", "fr": "Moutarde noire", "ru": "Горчица черная", "ja": "黒芥子", "zh": "黑芥子", "fa": "خردل سیاه", "hi": "काली सरसों", "ar": "خردل أسود" }
+    },
+    "fennel_seed": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fennel Seed", "icon": "🌿", "latin": "Foeniculum vulgare (Semen siccum)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 345, "fat_total_g": 14.9, "fiber_g": 39.8, "anethole_mg": 50.0, "calcium_mg": 1196.0 },
+      "meta": { "locations": ["rewe", "dm", "orient_market", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Anti-bloating / Carminative" },
+      "props": ["Rich in anethole", "Powerful digestive aid", "Massive plant-based calcium source"],
+      "lang": { "de": "Fenchelsamen", "en": "Fennel Seed", "es": "Semilla de hinojo", "fr": "Graine de fenouil", "ru": "Фенхель (семена)", "ja": "フェンネルシード", "zh": "小茴香", "fa": "رازیانه", "hi": "सौफ़", "ar": "شمر" }
+    },
+    "anise": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Anise Seed", "icon": "⭐", "latin": "Pimpinella anisum (Semen siccum)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 337, "fat_total_g": 15.9, "fiber_g": 14.6, "iron_plant_mg": 37.0, "magnesium_mg": 170.0 },
+      "meta": { "locations": ["rewe", "orient_market", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Respiratory & Digestive health" },
+      "props": ["Sweet licorice aroma", "Expectorant properties", "Highest iron in seeds"],
+      "lang": { "de": "Anis", "en": "Anise", "es": "Anís", "fr": "Anis vert", "ru": "Анис", "ja": "アニス", "zh": "茴芹", "fa": "انیسون", "hi": "अनीस", "ar": "يانسون" }
+    },
+    "lotus_seed": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Lotus Seed (Makhana)", "icon": "🪷", "latin": "Nelumbo nucifera (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 332, "protein_g": 15.4, "fat_total_g": 2.0, "carbs_g": 64.0, "magnesium_mg": 210.0 },
+      "meta": { "locations": ["asia_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "TCM Kidney/Spleen support" },
+      "props": ["Often popped like popcorn", "Extremely low fat for a seed", "Ayurvedic remedy"],
+      "lang": { "de": "Lotussamen", "en": "Lotus Seed", "es": "Semilla de loto", "fr": "Graine de lotus", "ru": "Семена лотоса", "ja": "蓮の実", "zh": "莲子", "fa": "دانه نیلوفر آبی", "hi": "मखाना", "ar": "بذور اللوتس" }
+    },
+    "caraway": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Caraway Seed", "icon": "🌿", "latin": "Carum carvi (Semen siccum)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 333, "fat_total_g": 14.6, "fiber_g": 38.0, "iron_plant_mg": 16.2, "carvone_mg": 50.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestive_focus": "Anti-bloating" },
+      "props": ["Essential for heavy cabbage dishes", "Anise-like flavor", "High fiber and iron"],
+      "lang": { "de": "Kümmel", "en": "Caraway", "es": "Alcaravea", "fr": "Carvi", "ru": "Тмин", "ja": "キャラウェイ", "zh": "葛缕子", "fa": "زیره کوهی", "hi": "शाहजीरा", "ar": "كراوية" }
+    },
+    "cumin": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Cumin Seed", "icon": "🤎", "latin": "Cuminum cyminum (Semen siccum)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 375, "fat_total_g": 22.3, "protein_g": 17.8, "iron_plant_mg": 66.4, "cuminaldehyde_mg": 20.0 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Iron titan" },
+      "props": ["Massive iron concentration", "Curry base", "Enhances digestive enzymes"],
+      "lang": { "de": "Kreuzkümmel", "en": "Cumin", "es": "Comino", "fr": "Cumin", "ru": "Кумин, Зира", "ja": "クミン", "zh": "孜然", "fa": "زیره سبز", "hi": "जीरा", "ar": "كمون" }
+    }
+  }
+}

@@ -1,0 +1,926 @@
+{
+  "alcoholic_beverages": {
+    "--- COOKING_ALCOHOL_VERMOUTH ---": "Wermut (Martini & Co. zum Kochen & Mixen)",
+    "vermouth_martini_bianco": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Martini Bianco", "icon": "🍸", "latin": "Vinum aromaticum (Martini Albus)", "sci": ["#sci/Oenology", "#sci/Culinary"],
+      "val": { "vol_pct": 14.4, "kcal": 145, "sugar_g": 14.0 },
+      "meta": { "locations": ["everywhere"], "type": "Vermouth", "origin": "Italy" },
+      "quality_metrics": { "flavor": "Sweet, Vanilla, Herbal" },
+      "props": ["The world's most famous sweet white vermouth", "Essential for lighter cream sauces and risottos", "Infused with a secret blend of herbs and spices"],
+      "lang": { "de": "Martini Bianco", "en": "Martini Bianco", "es": "Martini Blanco", "fr": "Martini Blanc", "ru": "Мартини Бьянко", "ja": "マティーニ ビアンコ", "zh": "马提尼白威末酒", "fa": "مارتینی بیانکو", "hi": "मार्टिनी बियान्को", "ar": "مارتيني بيانكو" }
+    },
+    "vermouth_martini_extra_dry": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Martini Extra Dry", "icon": "🍸", "latin": "Vinum aromaticum (Martini Siccum)", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 18.0, "kcal": 110, "sugar_g": 2.8 },
+      "meta": { "locations": ["everywhere"], "type": "Vermouth" },
+      "props": ["Very low sugar content", "High acidity and herbal punch", "Perfect for deglazing fish pans and white meat sauces"],
+      "lang": { "de": "Martini Extra Dry", "en": "Martini Extra Dry", "es": "Martini Extra Seco", "fr": "Martini Extra Dry", "ru": "Мартини Экстра Драй", "ja": "マティーニ エクストラドライ", "zh": "马提尼特干威末酒", "fa": "مارتینی اکسترا درای", "hi": "मार्टिनी एक्स्ट्रा ड्राई", "ar": "مارتيني إكسترا دراي" }
+    },
+    "vermouth_noilly_prat_original_dry": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Noilly Prat Original Dry", "icon": "🇫🇷", "latin": "Vinum aromaticum (Noilly Prat)", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 18.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "France" },
+      "quality_metrics": { "chef_choice": "The gold standard for French cuisine" },
+      "props": ["Aged in oak barrels outdoors", "Deep, complex salty and herbal notes", "The secret ingredient for the perfect Beurre Blanc sauce"],
+      "lang": { "de": "Noilly Prat Dry", "en": "Noilly Prat Dry", "es": "Noilly Prat Seco", "fr": "Noilly Prat Original Dry", "ru": "Нойли Прат", "ja": "ノイリー・プラット", "zh": "诺利普拉特威末酒", "fa": "نویلی پرات", "hi": "नोइली प्रैट", "ar": "نويلي برات" }
+    },
+    "wine_port_sandeman_ruby": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Sandeman Port Ruby", "icon": "🍷", "latin": "Vinum Portucalense (Ruby)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 19.0, "sugar_g": 90.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "origin": "Portugal" },
+      "props": ["Rich, sweet red fortified wine", "Essential for reducing into thick, dark balsamic-style glazes", "Pairs perfectly with venison and dark red meats"],
+      "lang": { "de": "Sandeman Portwein Ruby", "en": "Sandeman Port Ruby", "es": "Oporto Sandeman Ruby", "fr": "Porto Sandeman Ruby", "ru": "Сандеман Портвейн", "ja": "サンデマン ポートワイン", "zh": "山地文波特酒", "fa": "پورت واین ساندمن", "hi": "सैंडमैन पोर्ट वाइन", "ar": "بورت واين ساندمان" }
+    },
+    "wine_white_cooking_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Vina de Sol Weißwein zum Kochen (Lidl)", "icon": "🍳", "latin": "Vinum album culinarium", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 11.0 },
+      "meta": { "locations": ["lidl"], "packaging": "Tetra Pak / Bottle" },
+      "props": ["Dry, neutral white wine without strong oak notes", "Budget-friendly for high-volume cooking", "High acidity to cut through fat"],
+      "lang": { "de": "Lidl Weißwein zum Kochen", "en": "Lidl White Cooking Wine", "es": "Vino blanco para cocinar", "fr": "Vin blanc de cuisine", "ru": "Белое вино для готовки", "ja": "料理用白ワイン", "zh": "烹饪白葡萄酒", "fa": "شراب سفید مخصوص پخت و پز", "hi": "कुकिंग के लिए व्हाइट वाइन", "ar": "نبيذ أبيض للطبخ" }
+    },
+    "wine_red_cooking_kaufland": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Classic Rotwein trocken (Kaufland)", "icon": "🍳", "latin": "Vinum rubrum culinarium", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 12.0 },
+      "meta": { "locations": ["kaufland"], "packaging": "Tetra Pak" },
+      "props": ["Standard dry red wine for stews and Bolognese", "Deep color, simple tannic structure", "Efficient for deglazing roasted meat"],
+      "lang": { "de": "Kaufland Rotwein zum Kochen", "en": "Kaufland Red Cooking Wine", "es": "Vino tinto para cocinar", "fr": "Vin rouge de cuisine", "ru": "Красное вино для готовки", "ja": "料理用赤ワイン", "zh": "烹饪红葡萄酒", "fa": "شراب قرمز مخصوص پخت و پز", "hi": "कुकिंग के लिए रेड वाइन", "ar": "نبيذ أحمر للطبخ" }
+    },
+    "--- COOKING_ALCOHOL_ASIAN_SPECIALS ---": "Asiatische Kochweine (Mirin & Sake)",
+    "wine_mirin_hon_mirin": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Hon-Mirin (Echter Koch-Reiswein)", "icon": "🍶", "latin": "Oryzae vinum culinarium (Hon-Mirin)", "sci": ["#sci/Fermentation", "#sci/Culinary"],
+      "val": { "vol_pct": 14.0, "kcal": 235, "sugar_g": 45.0 },
+      "meta": { "locations": ["rewe_feinkost", "asia_market", "kaufland_specialty"], "origin": "Japan" },
+      "quality_metrics": { "process": "Naturally fermented glutinous rice", "benefit": "Glossy shine (Teriyaki Effect)" },
+      "props": ["The 'gold standard' for Japanese cuisine", "High natural sugar content due to fermentation, not added sugar", "Provides a characteristic sweetness and umami depth to sauces"],
+      "lang": { "de": "Hon-Mirin (Echter Reiswein)", "en": "Hon-Mirin", "es": "Hon-Mirin", "fr": "Hon-Mirin", "ru": "Хон-Мирин", "ja": "本みりん", "zh": "本味醂", "fa": "میرین اصل", "hi": "होन-मिरिन", "ar": "هون ميرين" }
+    },
+    "wine_mirin_kikkoman": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Kikkoman Mirin-fu (Aji-Mirin)", "icon": "🍶", "latin": "Oryzae vinum culinarium (Kikkoman)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 12.0, "kcal": 210, "sugar_g": 40.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Kikkoman" },
+      "props": ["Most common supermarket brand in Germany", "Seasoned rice wine (Aji-Mirin) optimized for western kitchens", "Excellent for marinades, dressings, and glazes"],
+      "lang": { "de": "Kikkoman Mirin", "en": "Kikkoman Mirin", "es": "Mirin Kikkoman", "fr": "Mirin Kikkoman", "ru": "Мирин Киккоман", "ja": "キッコーマン みりん", "zh": "万字味醂", "fa": "میرین کیکومن", "hi": "किक्कोमैन मिरिन", "ar": "كيكومان ميرين" }
+    },
+    "wine_sake_cooking": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Cooking Sake (Ryorishu)", "icon": "🍶", "latin": "Oryzae vinum (Sake)", "sci": ["#sci/Fermentation"],
+      "val": { "vol_pct": 13.5 },
+      "meta": { "locations": ["asia_market", "rewe"], "origin": "Japan" },
+      "props": ["Dry rice wine for cooking", "Contains less sugar than Mirin", "Used to tenderize meat and neutralize fishy odors"],
+      "lang": { "de": "Koch-Sake", "en": "Cooking Sake", "es": "Sake para cocinar", "fr": "Sake de cuisine", "ru": "Кулинарное саке", "ja": "料理酒", "zh": "料理清酒", "fa": "ساکه مخصوص پخت و پز", "hi": "कुकिंग साके", "ar": "ساكي للطبخ" }
+    },
+    "--- RED_WINE_GERMAN_CLASSICS ---": "Deutsche Rotweine (Fruchtig & Elegant)",
+    "wine_red_dornfelder_k_classic": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "K-Classic Dornfelder (Trocken)", "icon": "🍷", "latin": "Vinum rubrum (Dornfelder)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 12.0, "kcal": 72, "sugar_g": 0.4 },
+      "meta": { "locations": ["kaufland"], "origin": "Germany (Pfalz/Rheinhessen)" },
+      "props": ["Most popular German red wine crossing", "Deep, dark purple color with very mild tannins", "Very approachable, dominated by cherry notes"],
+      "lang": { "de": "K-Classic Dornfelder", "en": "Dornfelder Red", "es": "Dornfelder tinto", "fr": "Dornfelder rouge", "ru": "Дорнфельдер", "ja": "ドルンフェルダー", "zh": "丹菲特红葡萄酒", "fa": "شراب قرمز دورنفِلدِر", "hi": "डोर्नफेल्डर वाइन", "ar": "نبيذ دورنفيلدر" }
+    },
+    "wine_red_spatburgunder_rewe": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "REWE Beste Wahl Spätburgunder (Pinot Noir)", "icon": "🍷", "latin": "Vinum rubrum (Pinus nigra)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 13.0 },
+      "meta": { "locations": ["rewe"], "origin": "Germany (Baden)" },
+      "props": ["The 'King of Red Wines' in Germany", "Lighter ruby color, very elegant and complex", "High-quality direct juice base, not from concentrate"],
+      "lang": { "de": "REWE Spätburgunder", "en": "Pinot Noir", "es": "Pinot Noir", "fr": "Pinot Noir", "ru": "Пино Нуар", "ja": "ピノ・ノワール", "zh": "黑皮诺", "fa": "پینو نوآر", "hi": "पिनो न्वार", "ar": "بينو نوار" }
+    },
+    "--- COOKING_ALCOHOL_SHERRY_PREMIUM ---": "Sherry (Die nussigen Kraftpakete)",
+    "wine_sherry_lustau_fino": {
+      "label": "Emilio Lustau Fino Jarana", "icon": "🇪🇸", "latin": "Vinum Xericum (Fino)", "sci": ["#sci/Oenology", "#sci/Culinary"],
+      "val": { "vol_pct": 15.0, "kcal": 115, "sugar_g": 0.0 },
+      "meta": { "locations": ["rewe_feinkost", "edeka_premium", "specialist"], "origin": "Spain (Jerez)" },
+      "quality_metrics": { "process": "Biological aging under Flor (Yeast)" },
+      "props": ["The benchmark for dry Sherry", "Bone dry, salty, and intensely nutty (almonds)", "The secret for world-class fish soups and light cream sauces"],
+      "lang": { "de": "Lustau Fino Sherry", "en": "Lustau Fino Sherry", "es": "Jerez Fino Lustau", "fr": "Sherry Fino Lustau", "ru": "Люстау Фино Херес", "ja": "ルスタウ フィノ", "zh": "卢士涛菲诺雪莉酒", "fa": "شری فینو لوستائو", "hi": "लुस्ताउ फिनो शेरी", "ar": "شيري فينو لوستاو" }
+    },
+    "wine_sherry_sandeman_medium_dry": {
+      "label": "Sandeman Sherry Medium Dry", "icon": "🍷", "latin": "Vinum Xericum (Sandeman)", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 15.0, "sugar_g": 38.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Sandeman" },
+      "props": ["The most famous 'English-style' Sherry brand", "Perfect balance of dry nuts and sweet raisins", "Ideal for deglazing mushrooms and poultry"],
+      "lang": { "de": "Sandeman Sherry", "en": "Sandeman Sherry", "es": "Jerez Sandeman", "fr": "Sherry Sandeman", "ru": "Сандеман Херес", "ja": "サンデマン シェリー", "zh": "山地文雪莉酒", "fa": "شری ساندمن", "hi": "सैंडमैन शेरी", "ar": "شيري ساندمان" }
+    },
+
+    "wine_port_taylors_select_reserve": {
+      "label": "Taylor's Select Reserve Port", "icon": "🍷", "latin": "Vinum Portucalense (Taylor's)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 20.0, "sugar_g": 100.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Portugal (Douro)" },
+      "quality_metrics": { "style": "Ruby Port (Rich & Fruity)" },
+      "props": ["Benchmark brand for high-end Port wine", "Massive dark berry concentration and natural sweetness", "Essential for reducing into thick glazes for dark meats (Beef, Venison)"],
+      "lang": { "de": "Taylor's Portwein", "en": "Taylor's Port", "es": "Oporto Taylor's", "fr": "Porto Taylor's", "ru": "Тейлорс Портвейн", "ja": "テイラーズ ポートワイン", "zh": "泰勒波特酒", "fa": "پورت واین تیلورز", "hi": "टेलर पोर्ट वाइन", "ar": "بورت واين تايلورز" }
+    },
+    "wine_port_graham_fine_white": {
+      "label": "Graham's Fine White Port", "icon": "🍷", "latin": "Vinum Portucalense (Albus)", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 19.0 },
+      "meta": { "locations": ["rewe", "edeka"], "brand": "Graham's" },
+      "props": ["Rare white port variety", "Golden color, honey and honey-dew notes", "Fascinating alternative for light fruit-based sauces or as a 'Port-Tonic'"],
+      "lang": { "de": "Graham's Weißer Portwein", "en": "Graham's White Port", "es": "Oporto Blanco Graham's", "fr": "Porto Blanc Graham's", "ru": "Грэмс Белый Портвейн", "ja": "グラハム ホワイトポート", "zh": "格兰姆白色波特酒", "fa": "پورت واین سفید گراهام", "hi": "ग्राहम व्हाइट पोर्ट", "ar": "بورت واين جراهام أبيض" }
+    },
+    "--- RED_WINE_INTERNATIONAL_HEAVYWEIGHTS ---": "Internationale Giganten (Kräftig & Edel)",
+    "wine_red_rioja_reserva": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Rioja Reserva (Tempranillo Blend)", "icon": "🇪🇸", "latin": "Vinum rubrum (Rioja Reserva)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 14.0, "kcal": 85 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Spain (Rioja)" },
+      "quality_metrics": { "aging": "min. 3 years (at least 1 in oak barrels)" },
+      "props": ["Aged in American or French oak (Barrique)", "Distinctive notes of vanilla, tobacco, and leather", "Very stable, high aging potential"],
+      "lang": { "de": "Rioja Reserva", "en": "Rioja Reserva", "es": "Rioja Reserva", "fr": "Rioja Reserva", "ru": "Риоха Резерва", "ja": "リオハ・レゼルバ", "zh": "里奥哈珍藏", "fa": "ریوخا رزرو", "hi": "रियोजा रिज़र्वा", "ar": "ريوخا ريسيرفا" }
+    },
+    "wine_red_chianti_classico": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Chianti Classico DOCG", "icon": "🇮🇹", "latin": "Vinum rubrum (Chianti)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 13.5 },
+      "meta": { "locations": ["rewe", "edeka", "lidl_premium"], "origin": "Italy (Tuscany)" },
+      "props": ["Main grape: Sangiovese", "High acidity and firm tannins", "Iconic black rooster (Gallo Nero) quality seal"],
+      "lang": { "de": "Chianti Classico", "en": "Chianti Classico", "es": "Chianti Classico", "fr": "Chianti Classico", "ru": "Кьянти Классико", "ja": "キャンティ・クラシコ", "zh": "经典基安蒂", "fa": "کیانتی کلاسیکو", "hi": "कियान्टी क्लासिको", "ar": "كيانتي كلاسيكو" }
+    },
+    "wine_red_cabernet_sauvignon_chile": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Casillero del Diablo Cabernet Sauvignon", "icon": "🇨🇱", "latin": "Vinum rubrum (Cabernet)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 13.5 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "origin": "Chile" },
+      "props": ["Global bestseller from the Concha y Toro winery", "Strong tannins, deep aromas of blackcurrant (cassis)", "Pairs perfectly with grilled red meats"],
+      "lang": { "de": "Casillero del Diablo", "en": "Casillero del Diablo", "es": "Casillero del Diablo", "fr": "Casillero del Diablo", "ru": "Касильеро дель Дьябло", "ja": "红魔鬼", "zh": "红魔鬼", "fa": "کازیرو دل دیابلو", "hi": "कैसिलरो डेल डियाब्लो", "ar": "كاسيليرو ديل ديابلو" }
+    },
+
+    "--- RED_WINE_TREND_AND_DISCOUNTER ---": "Trend-Weine & Discounter-Bestseller",
+    "wine_red_primitivo_lidl": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Primitivo di Puglia (Solevita/Lidl)", "icon": "🇮🇹", "latin": "Vinum rubrum (Primitivo)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 14.0, "sugar_g": 6.0 },
+      "meta": { "locations": ["lidl"], "origin": "Italy (Puglia)" },
+      "props": ["The most popular red wine style in Germany right now", "Velvety, fruity, and very low acidity", "Higher residual sugar makes it very 'smooth' for beginners"],
+      "lang": { "de": "Lidl Primitivo", "en": "Lidl Primitivo", "es": "Primitivo de Puglia", "fr": "Primitivo des Pouilles", "ru": "Примитиво Лидл", "ja": "プリミティーヴォ", "zh": "普里米蒂沃", "fa": "پریمیتیوو", "hi": "प्रिमिटिवो", "ar": "بريميتيفو" }
+    },
+    "wine_red_bordeaux_k_classic": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "K-Classic Bordeaux AOC", "icon": "🇫🇷", "latin": "Vinum rubrum (Burdurga)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 12.5 },
+      "meta": { "locations": ["kaufland"], "origin": "France (Bordeaux)" },
+      "props": ["Classic French blend of Merlot and Cabernet Sauvignon", "Earthy and dry with medium body", "Standard cooking and table wine for French dishes"],
+      "lang": { "de": "K-Classic Bordeaux", "en": "K-Classic Bordeaux", "es": "Bordeaux K-Classic", "fr": "Bordeaux K-Classic", "ru": "Бордо K-Classic", "ja": "ボルドー", "zh": "波尔多", "fa": "بوردو", "hi": "बोर्डो", "ar": "بوردو" }
+    },
+    "--- RED_WINE_PREMIUM_BRANDS_EUROPE ---": "Europäische Rotwein-Ikonen (Marken)",
+    "wine_red_marques_de_riscal_reserva": {
+      "unit_price": 25.00,
+      "unit_type": "piece",
+      "label": "Marqués de Riscal Rioja Reserva", "icon": "🇪🇸", "latin": "Vinum rubrum (Rioja Reserva)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 14.5, "kcal": 88, "sugar_g": 0.3 },
+      "meta": { "locations": ["rewe_feinkost", "edeka_premium", "wine_specialist"], "origin": "Spain (Rioja)" },
+      "quality_metrics": { "aging": "2 years in American oak", "grape": "Tempranillo / Graciano" },
+      "props": ["The legendary gold-netted bottle (original protection against counterfeiting)", "Aged to perfection with balsamic and spicy notes", "One of the most recognized Spanish premium wine brands"],
+      "lang": { "de": "Marqués de Riscal", "en": "Marqués de Riscal", "es": "Marqués de Riscal", "fr": "Marqués de Riscal", "ru": "Маркиз де Рискаль", "ja": "マルケス・デ・リスカル", "zh": "瑞格尔侯爵", "fa": "مارکوس د ریسکال", "hi": "मार्केस डी रिस्कल", "ar": "ماركيز دي ريسكال" }
+    },
+    "wine_red_antinori_tignanello": {
+      "unit_price": 180.00,
+      "unit_type": "piece",
+      "label": "Antinori Tignanello (Super Tuscan)", "icon": "🇮🇹", "latin": "Vinum rubrum (Antinori)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 14.0 },
+      "meta": { "locations": ["feinkost_kaefer", "high_end_wine_shops"], "origin": "Italy (Tuscany)" },
+      "quality_metrics": { "type": "Super Tuscan (IGT)", "grapes": "Sangiovese, Cabernet Sauvignon, Cabernet Franc" },
+      "props": ["The pioneer of 'Super Tuscans', aging in French Barrique", "Revolutionized Italian winemaking by breaking DOC laws", "Extremely dense, dark chocolate and berry aromas"],
+      "lang": { "de": "Antinori Tignanello", "en": "Antinori Tignanello", "es": "Antinori Tignanello", "fr": "Antinori Tignanello", "ru": "Антинори Тиньянелло", "ja": "アンティノリ ティニャネロ", "zh": "安东尼世家天娜", "fa": "آنتینوری تینیانلو", "hi": "एंटीनोरी टिग्नैनेलो", "ar": "أنتينوري تينانيللو" }
+    },
+    "wine_red_mouton_cadet_bordeaux": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Mouton Cadet Bordeaux (Baron Philippe de Rothschild)", "icon": "🇫🇷", "latin": "Vinum rubrum (Rothschild)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 13.5 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "France (Bordeaux)" },
+      "props": ["The world's leading Bordeaux AOC branded wine", "Created by Baron Philippe de Rothschild", "Elegant, tannin-driven, classic blackcurrant and leather notes"],
+      "lang": { "de": "Mouton Cadet", "en": "Mouton Cadet", "es": "Mouton Cadet", "fr": "Mouton Cadet", "ru": "Мутон Каде", "ja": "ムートン・カデ", "zh": "木桐嘉棣", "fa": "موتون کاده", "hi": "मुटन कैडेट", "ar": "موتون كاديت" }
+    },
+
+    "--- RED_WINE_PREMIUM_BRANDS_GLOBAL ---": "Internationale Rotwein-Giganten (New World Brands)",
+    "wine_red_penfolds_koonunga_hill": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Penfolds Koonunga Hill (Shiraz Cabernet)", "icon": "🇦🇺", "latin": "Vinum rubrum (Penfolds)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 14.5 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Australia" },
+      "props": ["Iconic Australian brand, famous for its 'Multi-Vineyard' blending philosophy", "Bold, spicy Shiraz meets structured Cabernet", "Intense dark fruit and sweet oak finish"],
+      "lang": { "de": "Penfolds Koonunga Hill", "en": "Penfolds Koonunga Hill", "es": "Penfolds", "fr": "Penfolds", "ru": "Пенфолдс Кунунга Хилл", "ja": "ペンフォールズ", "zh": "奔富", "fa": "پن‌فولدز", "hi": "पेनफोल्ड्स", "ar": "بينفولدز" }
+    },
+    "wine_red_casillero_del_diablo": {
+      "label": "Casillero del Diablo (Concha y Toro)", "icon": "🇨🇱", "latin": "Vinum rubrum (Casillero)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 13.5 },
+      "meta": { "locations": ["everywhere"], "origin": "Chile (Maipo Valley)" },
+      "props": ["The 'Devil's Cellar' - the most recognized wine brand from Chile", "Deep ruby red, strong tannins, classic chocolate and coffee finish", "Consistent global quality standard for Cabernet Sauvignon"],
+      "lang": { "de": "Casillero del Diablo", "en": "Casillero del Diablo", "es": "Casillero del Diablo", "fr": "Casillero del Diablo", "ru": "Касильеро дель Дьябло", "ja": "カッシェロ・デル・ディアブロ", "zh": "红魔鬼", "fa": "کازیرو دل دیابلو", "hi": "कैसिलरो डेल डियाब्लो", "ar": "كاسيليرو ديل ديابلو" }
+    },
+
+    "--- RED_WINE_PREMIUM_BRANDS_GERMAN ---": "Deutsche Rotwein-Benchmark (Marken)",
+    "wine_red_knipser_cuvee_x": {
+      "unit_price": 50.00,
+      "unit_type": "piece",
+      "label": "Knipser Cuvée X", "icon": "🍷", "latin": "Vinum rubrum (Knipser)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 14.0 },
+      "meta": { "locations": ["rewe_feinkost", "specialized_shops"], "origin": "Germany (Pfalz)" },
+      "quality_metrics": { "style": "Bordeaux-Blend in Germany" },
+      "props": ["One of Germany's top-tier red wine producers", "Aged in French barriques for 20+ months", "Deep complex fruit, high international rating"],
+      "lang": { "de": "Knipser Cuvée X", "en": "Knipser Cuvée X", "es": "Knipser", "fr": "Knipser", "ru": "Книпсер Кюве Х", "ja": "クニプサー", "zh": "Knipser", "fa": "نیپسر", "hi": "निप्सर", "ar": "كنيبسر" }
+    },
+    "--- WHITE_WINE_GERMAN_RIESLING_ELITE ---": "Deutsche Riesling-Benchmarks (Die Weltspitze)",
+    "wine_white_dr_loosen_riesling": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Dr. Loosen Riesling (Blauschiefer)", "icon": "🍷", "latin": "Vinum album (Dr. Loosen)", "sci": ["#sci/Oenology", "#sci/Geology"],
+      "val": { "vol_pct": 10.5, "kcal": 78, "sugar_g": 9.0 },
+      "meta": { "locations": ["rewe", "edeka", "wine_specialist"], "origin": "Germany (Mosel)", "soil": "Blue Slate (Schiefer)" },
+      "quality_metrics": { "acidity": "High / Crisp", "style": "Mineral-driven" },
+      "props": ["The global face of Mosel Riesling", "Grown on steep blue slate slopes for extreme minerality", "Incredible balance between high acidity and fine residual sugar"],
+      "lang": { "de": "Dr. Loosen Blauschiefer", "en": "Dr. Loosen Blue Slate", "es": "Dr. Loosen Riesling", "fr": "Dr. Loosen Riesling", "ru": "Доктор Лоозен Рислинг", "ja": "ドクター・ローゼン リースリング", "zh": "露森酒庄雷司令", "fa": "دکتر لوزن ریسلینگ", "hi": "डॉ. लूसेन रिसलिंग", "ar": "دكتور لوزن ريسلينج" }
+    },
+    "wine_white_robert_weil_riesling": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Robert Weil Riesling (Rheingau)", "icon": "🍷", "latin": "Vinum album (Weil)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 12.0 },
+      "meta": { "locations": ["rewe_feinkost", "edeka_premium", "wine_specialist"], "origin": "Germany (Rheingau)" },
+      "props": ["The benchmark for elegant Rheingau Riesling", "Distinctive sky-blue label (Tiffany-Blue)", "Clear peach and citrus aromas with a very long finish"],
+      "lang": { "de": "Robert Weil Riesling", "en": "Robert Weil Riesling", "es": "Robert Weil Riesling", "fr": "Robert Weil Riesling", "ru": "Роберт Вайль Рислинг", "ja": "ロバート・ヴァイル リースリング", "zh": "罗伯特魏尔雷司令", "fa": "روبرت وایل ریسلینگ", "hi": "रॉबर्ट वेइल रिसलिंग", "ar": "روبرت ويل ريسلينج" }
+    },
+    "wine_white_markus_molitor_haus_klosterberg": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Markus Molitor Haus Klosterberg Riesling", "icon": "🍷", "latin": "Vinum album (Molitor)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 11.5 },
+      "meta": { "locations": ["rewe", "edeka", "specialist"], "origin": "Germany (Mosel)" },
+      "props": ["Produced by the '100-point winemaker' Markus Molitor", "Very precise, dancing acidity", "Iconic white capsule (trocken)"],
+      "lang": { "de": "Markus Molitor Riesling", "en": "Markus Molitor Riesling", "es": "Markus Molitor Riesling", "fr": "Markus Molitor Riesling", "ru": "Маркус Молитор Рислинг", "ja": "マルクス・モリトール リースリング", "zh": "马库斯莫里特雷司令", "fa": "مارکوس مولیتور ریسلینگ", "hi": "मार्कस मोलिटर रिसलिंग", "ar": "ماركوس موليتور ريسلينج" }
+    },
+
+    "--- WHITE_WINE_INTERNATIONAL_LEGENDS ---": "Internationale Weißwein-Giganten (Marken)",
+    "wine_white_cloudy_bay_sauvignon_blanc": {
+      "unit_price": 35.00,
+      "unit_type": "piece",
+      "label": "Cloudy Bay Sauvignon Blanc", "icon": "🇳🇿", "latin": "Vinum album (Cloudy Bay)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 13.5, "kcal": 82 },
+      "meta": { "locations": ["rewe_feinkost", "edeka_premium", "kaufland_specialty"], "origin": "New Zealand (Marlborough)" },
+      "quality_metrics": { "aroma_profile": "Gooseberry, Elderflower, Grapefruit" },
+      "props": ["The brand that put New Zealand on the global wine map", "Explosive tropical and herbaceous aromas", "Extremely crisp and refreshing"],
+      "lang": { "de": "Cloudy Bay Sauvignon Blanc", "en": "Cloudy Bay Sauvignon Blanc", "es": "Cloudy Bay Sauvignon Blanc", "fr": "Cloudy Bay Sauvignon Blanc", "ru": "Клауди Бэй Совиньон Блан", "ja": "クラウディー・ベイ ソーヴィニヨン・ブラン", "zh": "云湾长相思", "fa": "کلودی بی سوویینیون بلان", "hi": "क्लाउडी बे सॉविनन ब्लैंक", "ar": "كلاودي باي سوفينيون بلان" }
+    },
+    "wine_white_santa_margherita_pinot_grigio": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Santa Margherita Pinot Grigio Valdadige", "icon": "🇮🇹", "latin": "Vinum album (Santa Margherita)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 12.5 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Italy (Alto Adige)" },
+      "props": ["The world's most famous Pinot Grigio brand", "Pioneered the 'white' vinification of Pinot Grigio (without skin contact)", "Clean, dry, and incredibly versatile with food"],
+      "lang": { "de": "Santa Margherita Pinot Grigio", "en": "Santa Margherita Pinot Grigio", "es": "Pinot Grigio Santa Margherita", "fr": "Pinot Grigio Santa Margherita", "ru": "Санта Маргерита Пино Гриджио", "ja": "サンタ・マルゲリータ ピノ・グリージョ", "zh": "圣玛格丽特灰皮诺", "fa": "سانتا مارگریتا پینو گریجیو", "hi": "सांता मारगेरिटा पिनो ग्रिगियो", "ar": "سانتا مارغريتا بينو غريجيو" }
+    },
+    "wine_white_louis_jadot_chablis": {
+      "unit_price": 30.00,
+      "unit_type": "piece",
+      "label": "Louis Jadot Chablis (Chardonnay)", "icon": "🇫🇷", "latin": "Vinum album (Chablis)", "sci": ["#sci/Geology"],
+      "val": { "vol_pct": 13.0 },
+      "meta": { "locations": ["rewe_feinkost", "specialized_shops"], "origin": "France (Burgundy/Chablis)" },
+      "quality_metrics": { "soil": "Kimmeridgian Limestone (Kalkstein)" },
+      "props": ["100% Chardonnay from the chalky soils of Chablis", "Steel-fermented to preserve a flinty, 'stony' minerality", "No heavy oak, just pure elegance and lemon-zest notes"],
+      "lang": { "de": "Louis Jadot Chablis", "en": "Louis Jadot Chablis", "es": "Chablis Louis Jadot", "fr": "Louis Jadot Chablis", "ru": "Луи Жадо Шабли", "ja": "ルイ・ジャド シャブリ", "zh": "路易亚都夏布利", "fa": "لویی ژادو شابلی", "hi": "लुई जैडोट चैब्लिस", "ar": "لويس جادوت شابليه" }
+    },
+    "wine_white_antinori_cervaro_della_sala": {
+      "unit_price": 60.00,
+      "unit_type": "piece",
+      "label": "Antinori Cervaro della Sala (Premium Chardonnay)", "icon": "🇮🇹", "latin": "Vinum album (Cervaro)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 13.0 },
+      "meta": { "locations": ["feinkost_kaefer", "high_end_shops"], "origin": "Italy (Umbria)" },
+      "quality_metrics": { "style": "Oaked (Barrique aged)" },
+      "props": ["Italy's most prestigious white wine brand", "Blend of Chardonnay and Grechetto", "Buttery, vanilla notes with intense complexity and aging potential"],
+      "lang": { "de": "Antinori Cervaro della Sala", "en": "Antinori Cervaro della Sala", "es": "Cervaro della Sala", "fr": "Cervaro della Sala", "ru": "Черваро делла Сала", "ja": "チェルヴァロ・デラ・サラ", "zh": "芝华露", "fa": "سروارو دلا سالا", "hi": "सर्वारो डेला साला", "ar": "سيرفارو ديلا سالا" }
+    },
+    "--- WHITE_WINE_PRIVATE_LABEL_GERMAN ---": "Deutsche Weißwein-Eigenmarken (Alltags-Klassiker)",
+    "wine_white_grauburgunder_rewe": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "REWE Beste Wahl Grauburgunder (Pinot Grigio Style)", "icon": "🍷", "latin": "Vinum album (Pinus grisea)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 12.5, "kcal": 75, "sugar_g": 4.0 },
+      "meta": { "locations": ["rewe"], "origin": "Germany (Rheinhessen/Pfalz)" },
+      "props": ["The most popular German white wine variety for daily consumption", "Low acidity, mild nutty and pear aromas", "Extremely versatile for pasta and poultry"],
+      "lang": { "de": "REWE Grauburgunder", "en": "REWE Pinot Gris", "es": "Pinot Grigio REWE", "fr": "Pinot Gris REWE", "ru": "REWE Граубургундер", "ja": "REWE グラウブルグンダー", "zh": "REWE 灰皮诺", "fa": "پینو گری ریوه", "hi": "रीवे पिनो ग्रिस", "ar": "ريوه بينو غري" }
+    },
+    "wine_white_riesling_k_classic": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "K-Classic Riesling (Trocken)", "icon": "🍷", "latin": "Vinum album (Riesling)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 12.0, "kcal": 70, "sugar_g": 6.5 },
+      "meta": { "locations": ["kaufland"], "origin": "Germany (Pfalz)" },
+      "props": ["Budget benchmark for German Riesling", "Crisp acidity with classic green apple and citrus notes", "High-volume standard for 'Schorle' (wine spritzer)"],
+      "lang": { "de": "K-Classic Riesling", "en": "K-Classic Riesling", "es": "Riesling K-Classic", "fr": "Riesling K-Classic", "ru": "K-Classic Рислинг", "ja": "K-Classic リースリング", "zh": "K-Classic 雷司令", "fa": "ریسلینگ کا-کلاسیک", "hi": "के-क्लासिक रिसलिंग", "ar": "ك-كلاسيك ريسلينج" }
+    },
+    "wine_white_muller_thurgau_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Vina de Sol Müller-Thurgau (Lidl)", "icon": "🥂", "latin": "Vinum album (Muller-Thurgau)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 11.5 },
+      "meta": { "locations": ["lidl"], "packaging": "1.0L / Tetra Pak available" },
+      "props": ["Very mild acidity, easy to drink", "Slightly floral and musky notes", "The ultimate high-volume cooking wine or party spritzer base"],
+      "lang": { "de": "Lidl Müller-Thurgau", "en": "Lidl Muller-Thurgau", "es": "Müller-Thurgau Lidl", "fr": "Müller-Thurgau Lidl", "ru": "Мюллер-Тургау Лидл", "ja": "リドル ミュラー・トゥルガウ", "zh": "Lidl 缪勒-图高", "fa": "مولر-تورگاو لیدل", "hi": "लिल म्यूलर-थर्गाउ", "ar": "ليدل مولر-تورغاو" }
+    },
+
+    "--- WHITE_WINE_PRIVATE_LABEL_INTERNATIONAL ---": "Internationale Weißwein-Eigenmarken",
+    "wine_white_chardonnay_k_classic": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "K-Classic Chardonnay (Pays d'Oc)", "icon": "🇫🇷", "latin": "Vinum album (Chardonnay)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 13.0 },
+      "meta": { "locations": ["kaufland"], "origin": "France (Languedoc)" },
+      "props": ["Full-bodied white wine from Southern France", "Notes of exotic fruits and a slight buttery finish", "Excellent for creamy sauces and salmon dishes"],
+      "lang": { "de": "K-Classic Chardonnay", "en": "K-Classic Chardonnay", "es": "Chardonnay K-Classic", "fr": "Chardonnay K-Classic", "ru": "K-Classic Шардоне", "ja": "K-Classic シャルドネ", "zh": "K-Classic 夏多内", "fa": "شاردونی کا-کلاسیک", "hi": "के-क्लासिक शारडोने", "ar": "ك-كلاسيك شاردونيه" }
+    },
+    "wine_white_sauvignon_blanc_lidl": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Cimarosa Sauvignon Blanc (Lidl)", "icon": "🇳🇿", "latin": "Vinum album (Sauvignon)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 12.5 },
+      "meta": { "locations": ["lidl"], "origin": "New Zealand (Marlborough) / South Africa" },
+      "props": ["One of Lidl's most famous private label successes", "Intense aromas of gooseberry and fresh cut grass", "Technologically very close to premium New Zealand brands at a fraction of the cost"],
+      "lang": { "de": "Lidl Sauvignon Blanc", "en": "Lidl Sauvignon Blanc", "es": "Sauvignon Blanc Lidl", "fr": "Sauvignon Blanc Lidl", "ru": "Совиньон Блан Лидл", "ja": "リドル ソーヴィニヨン・ブラン", "zh": "Lidl 长相思", "fa": "سوویینیون بلان لیدل", "hi": "लिल सॉविनन ब्लैंक", "ar": "ليدل سوفينيون بلان" }
+    },
+    "--- WHISKY_SCOTCH_SINGLE_MALT ---": "Schottische Single Malts (Die regionalen Ikonen)",
+    "whisky_scotch_highland_park_12": {
+      "unit_price": 45.00,
+      "unit_type": "piece",
+      "label": "Highland Park 12 Years (Viking Honour)", "icon": "🥃", "latin": "Aqua vitae (Orcadensis)", "sci": ["#sci/Chemistry", "#sci/Oenology"],
+      "val": { "vol_pct": 40.0, "kcal": 225 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland", "specialist"], "origin": "Scotland (Orkney Islands)", "aging_years": 12 },
+      "quality_metrics": { "peat_level": "Medium / Heather Smoke" },
+      "props": ["The 'Highlander' from the far north (Orkney Islands)", "Perfect balance of honey sweetness and aromatic peat smoke", "Distilled using traditional floor malting"],
+      "lang": { "de": "Highland Park 12", "en": "Highland Park 12", "es": "Highland Park 12", "fr": "Highland Park 12", "ru": "Хайленд Парк 12", "ja": "ハイランドパーク 12年", "zh": "高原骑士12年", "fa": "هایلند پارک ۱۲", "hi": "हाइलैंड पार्क 12", "ar": "هايلاند بارك 12" }
+    },
+    "whisky_scotch_glenfiddich_12": {
+      "unit_price": 35.00,
+      "unit_type": "piece",
+      "label": "Glenfiddich 12 Years", "icon": "🥃", "latin": "Aqua vitae (Vallis Cervi)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 40.0, "kcal": 222 },
+      "meta": { "locations": ["everywhere"], "origin": "Scotland (Speyside)", "aging_years": 12 },
+      "props": ["The world's best-selling single malt", "Aged in American oak and European sherry oak", "Distinctive fresh pear and subtle oak flavor"],
+      "lang": { "de": "Glenfiddich 12", "en": "Glenfiddich 12", "es": "Glenfiddich 12", "fr": "Glenfiddich 12", "ru": "Гленфиддик 12", "ja": "グレンフィディック 12年", "zh": "格兰菲迪12年", "fa": "گلنفیدیک ۱۲", "hi": "ग्लेनफिडिच 12", "ar": "غلينفيديتش 12" }
+    },
+    "whisky_scotch_laphroaig_10": {
+      "unit_price": 40.00,
+      "unit_type": "piece",
+      "label": "Laphroaig 10 Years", "icon": "🔥", "latin": "Aqua vitae (Islaia amara)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 40.0, "kcal": 230 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Scotland (Islay)", "aging_years": 10 },
+      "quality_metrics": { "flavor_profile": "Heavy Peat, Sea Salt, Medicinal/Iodine" },
+      "props": ["The most polarizing 'medicinal' malt from the island of Islay", "Extreme peat smoke levels from burning local moss", "Tastes of sea salt, seaweed, and campfire"],
+      "lang": { "de": "Laphroaig 10", "en": "Laphroaig 10", "es": "Laphroaig 10", "fr": "Laphroaig 10", "ru": "Лафройг 10", "ja": "ラフロイグ 10年", "zh": "拉弗格10年", "fa": "لافرویگ ۱۰", "hi": "लाफ्रोइग 10", "ar": "لافرويغ 10" }
+    },
+    "whisky_scotch_the_macallan_12": {
+      "unit_price": 100.00,
+      "unit_type": "piece",
+      "label": "The Macallan 12 Years Double Cask", "icon": "🥃", "latin": "Aqua vitae (Macallan)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["feinkost_kaefer", "specialist"], "origin": "Scotland (Speyside)" },
+      "props": ["The 'Rolls Royce' of whiskies", "Intense sherry influence, notes of dried fruit and butterscotch", "Extremely smooth, low-smoke profile"],
+      "lang": { "de": "The Macallan 12", "en": "The Macallan 12", "es": "The Macallan 12", "fr": "The Macallan 12", "ru": "Макаллан 12", "ja": "ザ・マッカラン 12年", "zh": "麦卡伦12年", "fa": "مک‌کالن ۱۲", "hi": "मैकलान 12", "ar": "ماكالان 12" }
+    },
+	"whisky_scotch_dalwhinnie_15": {
+      "unit_price": 50.00,
+      "unit_type": "piece",
+      "label": "Dalwhinnie 15 Years", "icon": "🍯", "latin": "Aqua vitae (Dalwhinnie)", "sci": ["#sci/Meteorology", "#sci/Oenology"],
+      "val": { "vol_pct": 43.0, "kcal": 235 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland", "specialist"], "origin": "Scotland (Highlands)", "aging_years": 15 },
+      "quality_metrics": { "flavor_profile": "Honey, Heather, Light Smoke" },
+      "props": ["Known as 'The Gentle Dram' from Scotland's highest and coldest distillery", "Extremely long aging (15 years) for a standard malt, creating immense smoothness", "Notes of heather honey and a very delicate, clean finish"],
+      "lang": { "de": "Dalwhinnie 15", "en": "Dalwhinnie 15", "es": "Dalwhinnie 15", "fr": "Dalwhinnie 15", "ru": "Далвинни 15", "ja": "ダルウィニー 15年", "zh": "达尔维尼15年", "fa": "دلوینی ۱۵", "hi": "डलविनी 15", "ar": "دالويني 15" }
+    },
+    "whisky_scotch_lagavulin_16": {
+      "unit_price": 90.00,
+      "unit_type": "piece",
+      "label": "Lagavulin 16 Years", "icon": "🔥", "latin": "Aqua vitae (Islaia Regalis)", "sci": ["#sci/Phytochemistry", "#sci/Chemistry"],
+      "val": { "vol_pct": 43.0, "kcal": 240 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland", "specialist"], "origin": "Scotland (Islay)", "aging_years": 16 },
+      "quality_metrics": { "smoke_intensity": "Very High / Peat Monster" },
+      "props": ["The 'King of Islay' - legendary for its intense, dried-fruit peat smoke", "Slowest distillation process in Scotland, allowing maximum copper contact", "Rich, salty, and sweet sherry-cask influence"],
+      "lang": { "de": "Lagavulin 16", "en": "Lagavulin 16", "es": "Lagavulin 16", "fr": "Lagavulin 16", "ru": "Лагавулин 16", "ja": "ラガヴーリン 16年", "zh": "乐加维林16年", "fa": "لاگاوولین ۱۶", "hi": "लागावलिन 16", "ar": "لاغافولين 16" }
+    },
+    "whisky_scotch_talisker_10": {
+      "unit_price": 45.00,
+      "unit_type": "piece",
+      "label": "Talisker 10 Years", "icon": "🌊", "latin": "Aqua vitae (Scaia)", "sci": ["#sci/Geology"],
+      "val": { "vol_pct": 45.8, "kcal": 250 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Scotland (Isle of Skye)", "aging_years": 10 },
+      "props": ["'Made by the Sea' - the only distillery on the Isle of Skye", "Distinctive explosive peppery finish (the Talisker kick)", "Salty maritime air meets volcanic smoke notes"],
+      "lang": { "de": "Talisker 10", "en": "Talisker 10", "es": "Talisker 10", "fr": "Talisker 10", "ru": "Талискер 10", "ja": "タリスカー 10年", "zh": "泰斯卡10年", "fa": "تالیسکر ۱۰", "hi": "टालिस्कर 10", "ar": "تاليسكر 10" }
+    },
+    "whisky_scotch_glenmorangie_10": {
+      "unit_price": 40.00,
+      "unit_type": "piece",
+      "label": "Glenmorangie The Original (10 Years)", "icon": "🦒", "latin": "Aqua vitae (Vallis Tranquillitatis)", "sci": ["#sci/Physics"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["everywhere"], "origin": "Scotland (Highlands)" },
+      "quality_metrics": { "distillation": "Tallest copper stills in Scotland (Giraffe Stills)" },
+      "props": ["Extremely fruity and floral due to very tall stills that only let light vapors pass", "Aged in first-fill American oak for creamy vanilla notes", "Benchmark for an approachable yet complex Highland malt"],
+      "lang": { "de": "Glenmorangie 10", "en": "Glenmorangie 10", "es": "Glenmorangie 10", "fr": "Glenmorangie 10", "ru": "Гленморанджи 10", "ja": "グレンモーレンジィ 10年", "zh": "格兰杰10年", "fa": "گلنمورنجی ۱۰", "hi": "ग्लेनमोरंगी 10", "ar": "غلينمورانجي 10" }
+    },
+    "whisky_scotch_ardbeg_10": {
+      "unit_price": 60.00,
+      "unit_type": "piece",
+      "label": "Ardbeg 10 Years (The Ultimate)", "icon": "💣", "latin": "Aqua vitae (Islaia Ultima)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 46.0 },
+      "meta": { "locations": ["rewe", "edeka", "specialist"], "origin": "Scotland (Islay)" },
+      "props": ["Untamed peat smoke mixed with a surprising citrus sweetness", "Non-chill filtered for maximum texture and mouthfeel", "Often considered the most complex of all Islay malts"],
+      "lang": { "de": "Ardbeg 10", "en": "Ardbeg 10", "es": "Ardbeg 10", "fr": "Ardbeg 10", "ru": "Ардбег 10", "ja": "アードベッグ 10年", "zh": "雅柏10年", "fa": "آردبگ ۱۰", "hi": "आर्डबेग 10", "ar": "أردبيج 10" }
+    },
+    "whisky_scotch_oban_14": {
+      "unit_price": 70.00,
+      "unit_type": "piece",
+      "label": "Oban 14 Years", "icon": "⚓", "latin": "Aqua vitae (Oban)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 43.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Scotland (Highlands/Coast)" },
+      "props": ["A 'bridge' between the smoky islands and the fruity highlands", "Subtle saltiness mixed with orange peel and honey notes", "Produced in one of the smallest distilleries in Scotland"],
+      "lang": { "de": "Oban 14", "en": "Oban 14", "es": "Oban 14", "fr": "Oban 14", "ru": "Обан 14", "ja": "オーバン 14年", "zh": "欧本14年", "fa": "اوبان ۱۴", "hi": "ओबन 14", "ar": "أوبان 14" }
+    },
+
+    "--- WHISKEY_IRISH_AND_BLENDED ---": "Irish Whiskey & Blended Scotch (Die Weichen)",
+    "whiskey_irish_jameson": {
+      "unit_price": 25.00,
+      "unit_type": "piece",
+      "label": "Jameson Irish Whiskey", "icon": "🇮🇪", "latin": "Aqua vitae (Hibernica)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 40.0, "kcal": 220 },
+      "meta": { "locations": ["everywhere"], "origin": "Ireland (Midleton)" },
+      "quality_metrics": { "process": "Triple Distilled (Extremely Smooth)" },
+      "props": ["Triple distillation makes it much smoother and less smoky than Scotch", "Classic notes of vanilla and spicy wood", "Global benchmark for Irish Whiskey"],
+      "lang": { "de": "Jameson Whiskey", "en": "Jameson Whiskey", "es": "Jameson", "fr": "Jameson", "ru": "Джемесон", "ja": "ジェムソン", "zh": "尊美醇", "fa": "جیمسون", "hi": "जेमसन", "ar": "جيمسون" }
+    },
+    "whisky_scotch_johnnie_walker_black": {
+      "unit_price": 30.00,
+      "unit_type": "piece",
+      "label": "Johnnie Walker Black Label (12 Years)", "icon": "🎩", "latin": "Aqua vitae (Walker)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["everywhere"], "type": "Blended Scotch" },
+      "props": ["A blend of approx. 40 different whiskies from across Scotland", "Iconic smoke-meets-fruit balance", "The most famous premium blend worldwide"],
+      "lang": { "de": "Johnnie Walker Black", "en": "Johnnie Walker Black", "es": "Johnnie Walker Etiqueta Negra", "fr": "Johnnie Walker Black", "ru": "Джонни Уокер Блэк", "ja": "ジョニーウォーカー ブラック", "zh": "尊尼获加黑牌", "fa": "جانی واکر بلک", "hi": "जॉनी वॉकर ब्लैक", "ar": "جوني ووكر بلاك" }
+    },
+
+    "--- WHISKEY_AMERICAN_BOURBON ---": "American Whiskey (Bourbon & Tennessee)",
+    "whiskey_usa_jack_daniels_old_no7": {
+      "unit_price": 25.00,
+      "unit_type": "piece",
+      "label": "Jack Daniel’s Old No. 7", "icon": "🎸", "latin": "Aqua vitae (Tennessee)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 40.0, "kcal": 222 },
+      "meta": { "locations": ["everywhere"], "origin": "USA (Tennessee)" },
+      "quality_metrics": { "process": "Charcoal Mellowing (Lincoln County Process)" },
+      "props": ["Filtered through 3 meters of maple charcoal for sweetness", "Dominated by vanilla, caramel, and toasted oak", "The global face of American whiskey"],
+      "lang": { "de": "Jack Daniel's", "en": "Jack Daniel's", "es": "Jack Daniel's", "fr": "Jack Daniel's", "ru": "Джек Дэниэлс", "ja": "ジャックダニエル", "zh": "杰克丹尼", "fa": "جک دنیلز", "hi": "जैक डेनियल्स", "ar": "جاك دانيالز" }
+    },
+    "whiskey_usa_jim_beam_white": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Jim Beam White Label", "icon": "🥃", "latin": "Aqua vitae (Kentucky)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["everywhere"], "origin": "USA (Kentucky)", "type": "Bourbon" },
+      "props": ["Classic Kentucky Straight Bourbon", "High corn content in the mash (at least 51%)", "Known for a spicy, oaky profile with vanilla finish"],
+      "lang": { "de": "Jim Beam", "en": "Jim Beam", "es": "Jim Beam", "fr": "Jim Beam", "ru": "Джим Бим", "ja": "ジムビーム", "zh": "占边", "fa": "جیم بیم", "hi": "जिम बीम", "ar": "جيم بيم" }
+    },
+    "--- SPIRITS_VODKA_THE_PURITY ---": "Wodka (Die neutralen Basen)",
+    "spirit_vodka_absolut": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Absolut Vodka", "icon": "🇸🇪", "latin": "Aqua vitae (Absolut)", "sci": ["#sci/Chemistry", "#sci/Distillation"],
+      "val": { "vol_pct": 40.0, "kcal": 231 },
+      "meta": { "locations": ["everywhere"], "origin": "Sweden", "base": "Winter Wheat" },
+      "quality_metrics": { "process": "Continuous Distillation" },
+      "props": ["The global standard for neutral vodka", "No added sugar, extremely clean profile", "Produced in Åhus, Sweden, using only local ingredients"],
+      "lang": { "de": "Absolut Vodka", "en": "Absolut Vodka", "es": "Absolut Vodka", "fr": "Absolut Vodka", "ru": "Абсолют Водка", "ja": "アブソルート ウォッカ", "zh": "绝对伏特加", "fa": "ودکا ابسولوت", "hi": "एब्सोल्यूट वोदका", "ar": "فودكا أبسولوت" }
+    },
+    "spirit_vodka_gorbatschow": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Wodka Gorbatschow (Blau)", "icon": "🏙️", "latin": "Aqua vitae (Gorbatschow)", "sci": ["#sci/Chemistry"],
+      "val": { "vol_pct": 37.5 },
+      "meta": { "locations": ["everywhere"], "origin": "Germany (Berlin)" },
+      "quality_metrics": { "filtration": "Triple Cold Filtration" },
+      "props": ["Germany's most consumed vodka brand", "Famous for its extreme cold filtration process for mildness", "The standard mixer for 'Wodka-O' or 'Wodka-Energy'"],
+      "lang": { "de": "Wodka Gorbatschow", "en": "Gorbatschow Vodka", "es": "Vodka Gorbatschow", "fr": "Vodka Gorbatschow", "ru": "Водка Горбачев", "ja": "ゴルバチョフ ウォッカ", "zh": "戈尔巴乔夫伏特加", "fa": "ودکا گورباچف", "hi": "गोरबाचोव वोदका", "ar": "فودكا غورباتشوف" }
+    },
+
+    "--- SPIRITS_GIN_THE_BOTANICALS ---": "Gin (Wacholder & Kräuter-Extraktion)",
+    "spirit_gin_tanqueray_london_dry": {
+      "unit_price": 25.00,
+      "unit_type": "piece",
+      "label": "Tanqueray London Dry Gin", "icon": "🇬🇧", "latin": "Spiritus iuniperus (Tanqueray)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 43.1 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "type": "London Dry Gin" },
+      "props": ["A 'four-botanical' masterpiece: Juniper, Coriander, Angelica root, Liquorice", "The bartender's favorite for a classic Gin & Tonic", "Perfect balance of dry spice and piney juniper"],
+      "lang": { "de": "Tanqueray London Dry", "en": "Tanqueray London Dry", "es": "Tanqueray London Dry", "fr": "Tanqueray London Dry", "ru": "Танкерей Лондон Драй", "ja": "タンカレー ロンドンドライ", "zh": "添加利伦敦干金酒", "fa": "جین تنکره", "hi": "टैन्केरे लंदन ड्राई", "ar": "تانكيراي لندن دراي" }
+    },
+    "spirit_gin_hendricks": {
+      "unit_price": 40.00,
+      "unit_type": "piece",
+      "label": "Hendrick's Gin", "icon": "🥒", "latin": "Spiritus iuniperus (Hendrick's)", "sci": ["#sci/Botanics"],
+      "val": { "vol_pct": 41.4 },
+      "meta": { "locations": ["rewe", "edeka", "specialist"], "origin": "Scotland" },
+      "quality_metrics": { "infusion": "Cucumber & Rose Petals" },
+      "props": ["Pioneer of the 'New Western' Gin style", "Infused with Bulgarian Rosa Damascena and specially selected cucumbers", "Best served with a slice of cucumber instead of lemon"],
+      "lang": { "de": "Hendrick's Gin", "en": "Hendrick's Gin", "es": "Ginebra Hendrick's", "fr": "Gin Hendrick's", "ru": "Хендрикс Джин", "ja": "ヘンドリックス ジン", "zh": "亨利爵士金酒", "fa": "جین هندریکس", "hi": "हेनड्रिक्स जिन", "ar": "جين هندريكس" }
+    },
+
+    "--- SPIRITS_RUM_CANE_ESSENTIALS ---": "Rum (Zuckerrohr-Destillate)",
+    "spirit_rum_havana_club_3": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Havana Club Añejo 3 Años", "icon": "🇨🇺", "latin": "Spiritus sacchari (Havana)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["everywhere"], "origin": "Cuba", "aging": "3 Years" },
+      "props": ["The essential rum for a 'Mojito' or 'Daiquiri'", "Light straw color from 3 years of aging (filtered to be clear-ish)", "Notes of vanilla, caramelized pear, and banana"],
+      "lang": { "de": "Havana Club 3 Jahre", "en": "Havana Club 3 Years", "es": "Havana Club 3 Años", "fr": "Havana Club 3 Ans", "ru": "Гавана Клаб 3 года", "ja": "ハバナクラブ 3年", "zh": "哈瓦那俱乐部3年", "fa": "هاوانا کلاب ۳ ساله", "hi": "हवाना क्लब 3 साल", "ar": "هافانا كلوب 3 سنوات" }
+    },
+    "spirit_rum_bacardi_carta_blanca": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Bacardi Carta Blanca", "icon": "🦇", "latin": "Spiritus sacchari (Bacardi)", "sci": ["#sci/Distillation"],
+      "val": { "vol_pct": 37.5 },
+      "meta": { "locations": ["everywhere"], "type": "White Rum" },
+      "props": ["The world's most famous white rum", "Charcoal filtered for maximum smoothness", "Standard for 'Cuba Libre' and 'Piña Colada'"],
+      "lang": { "de": "Bacardi Weiß", "en": "Bacardi White", "es": "Bacardi Carta Blanca", "fr": "Bacardi Carta Blanca", "ru": "Бакарди Карта Бланка", "ja": "バカルディ ホワイト", "zh": "百加得白朗姆酒", "fa": "باکاردی سفید", "hi": "बकार्डी व्हाइट", "ar": "باكاردي كارتا بلانكا" }
+    },
+
+    "--- SPIRITS_TEQUILA_AGAVE_SPIRIT ---": "Tequila (Blaue Weber-Agave)",
+    "spirit_tequila_jose_cuervo_especial": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Jose Cuervo Especial Gold", "icon": "🇲🇽", "latin": "Spiritus agavae (Cuervo)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 38.0 },
+      "meta": { "locations": ["everywhere"], "type": "Tequila Joven" },
+      "props": ["The world's best-selling tequila brand", "A 'mixto' tequila (blend of agave and other sugars)", "Classic choice for 'Margaritas' or 'Tequila Sunrise'"],
+      "lang": { "de": "Jose Cuervo Gold", "en": "Jose Cuervo Gold", "es": "Jose Cuervo Oro", "fr": "Jose Cuervo Gold", "ru": "Хосе Куэрво Голд", "ja": "ホセ・クエルボ ゴールド", "zh": "豪帅快活金快活", "fa": "خوزه کوئروو گلد", "hi": "जोस कुएर्वो गोल्ड", "ar": "خوسيه كويرفو جولد" }
+    },
+
+    "--- SPIRITS_LIQUEUR_BAR_ADDITIONS ---": "Liköre (Die unverzichtbaren Ergänzungen)",
+    "liqueur_orange_cointreau": {
+      "unit_price": 25.00,
+      "unit_type": "piece",
+      "label": "Cointreau (Triple Sec)", "icon": "🍊", "latin": "Liquor aurantii (Cointreau)", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 40.0, "sugar_g": 25.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "France" },
+      "props": ["Crystal clear orange liqueur made from sweet and bitter orange peels", "Essential for Margarita, Cosmopolitan, and Sidecar", "Perfect balance of alcohol heat and citrus sweetness"],
+      "lang": { "de": "Cointreau", "en": "Cointreau", "es": "Cointreau", "fr": "Cointreau", "ru": "Куантро", "ja": "コアントロー", "zh": "君度", "fa": "کوآنترو", "hi": "क्वाइंट्रो", "ar": "كوانترو" }
+    },
+    "spirit_cachaca_pitu": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Pitú (Cachaça)", "icon": "🦐", "latin": "Spiritus sacchari brasiliensis", "sci": ["#sci/Fermentation"],
+      "val": { "vol_pct": 38.0 },
+      "meta": { "locations": ["everywhere"], "origin": "Brazil" },
+      "props": ["The absolute standard for 'Caipirinha' in Germany", "Made from fresh sugar cane juice (unlike Rum which is mostly from molasses)", "Raw, grassy, and powerful aroma"],
+      "lang": { "de": "Pitú Cachaça", "en": "Pitú Cachaça", "es": "Cachaça Pitú", "fr": "Cachaça Pitú", "ru": "Питу Кашаса", "ja": "ピトゥ カシャーサ", "zh": "Pitú 卡夏萨", "fa": "پیتو کاشاسا", "hi": "पीटू काचासा", "ar": "بيتو كاشاسا" }
+    },
+    "--- SPIRITS_VODKA_EXTENDED ---": "Wodka (Von Standard bis Luxus)",
+    "spirit_vodka_smirnoff_red": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Smirnoff No. 21", "icon": "🏙️", "latin": "Aqua vitae (Smirnoff)", "sci": ["#sci/Distillation"],
+      "val": { "vol_pct": 37.5, "kcal": 210 },
+      "meta": { "locations": ["everywhere"], "origin": "Global", "base": "Grain" },
+      "props": ["The world's best-selling vodka", "Triple distilled and ten times charcoal filtered", "The neutral workhorse for high-volume mixing"],
+      "lang": { "de": "Smirnoff Red Label", "en": "Smirnoff No. 21", "es": "Smirnoff Rojo", "fr": "Smirnoff Rouge", "ru": "Смирнофф", "ja": "スミノフ", "zh": "皇冠伏特加", "fa": "اسمیرنوف", "hi": "स्मिरनॉफ", "ar": "سميرنوف" }
+    },
+    "spirit_vodka_grey_goose": {
+      "unit_price": 50.00,
+      "unit_type": "piece",
+      "label": "Grey Goose Vodka", "icon": "🦢", "latin": "Aqua vitae (Anser griseus)", "sci": ["#sci/Chemistry"],
+      "val": { "vol_pct": 40.0, "kcal": 231 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "France (Cognac region)" },
+      "quality_metrics": { "base": "French Winter Wheat & Spring Water" },
+      "props": ["Premium French vodka, designed to be 'tastable'", "Distilled only once to preserve wheat characteristics", "Perfect for Vesper Martinis and neat consumption"],
+      "lang": { "de": "Grey Goose", "en": "Grey Goose", "es": "Grey Goose", "fr": "Grey Goose", "ru": "Грей Гуз", "ja": "グレイグース", "zh": "灰雁伏特加", "fa": "گری گوس", "hi": "ग्रे गूज", "ar": "غري غوز" }
+    },
+    "spirit_vodka_belvedere": {
+      "unit_price": 45.00,
+      "unit_type": "piece",
+      "label": "Belvedere Vodka", "icon": "🏰", "latin": "Aqua vitae (Belvedere)", "sci": ["#sci/Distillation"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["rewe_feinkost", "edeka_premium"], "origin": "Poland" },
+      "props": ["Polish luxury vodka made from 100% Dankowskie Gold Rye", "Quadruple distilled for purity and a spicy rye finish", "Certified 'Polska Wódka' quality"],
+      "lang": { "de": "Belvedere Vodka", "en": "Belvedere Vodka", "es": "Belvedere", "fr": "Belvedere", "ru": "Бельведер", "ja": "ベルヴェデール", "zh": "雪树伏特加", "fa": "بلودیر", "hi": "बेलवेडियर", "ar": "بيلفيدير" }
+    },
+
+    "--- SPIRITS_GIN_THE_BIG_BRANDS ---": "Gin (Die Wacholder-Benchmarks)",
+    "spirit_gin_bombay_sapphire": {
+      "unit_price": 25.00,
+      "unit_type": "piece",
+      "label": "Bombay Sapphire London Dry Gin", "icon": "💎", "latin": "Spiritus iuniperus (Sapphirus)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["everywhere"], "origin": "England" },
+      "quality_metrics": { "process": "Vapour Infusion (10 Botanicals)" },
+      "props": ["Known for its iconic blue bottle", "Gentler than traditional gins due to vapour infusion", "Balanced citrus and spicy notes"],
+      "lang": { "de": "Bombay Sapphire", "en": "Bombay Sapphire", "es": "Bombay Sapphire", "fr": "Bombay Sapphire", "ru": "Бомбей Сапфир", "ja": "ボンベイ・サファイア", "zh": "孟买蓝宝石金酒", "fa": "بمبی سفایر", "hi": "बॉम्बे सैफायर", "ar": "بومباي سافير" }
+    },
+    "spirit_gin_beefeater_london_dry": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Beefeater London Dry Gin", "icon": "💂", "latin": "Spiritus iuniperus (Londinium)", "sci": ["#sci/Botanics"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["everywhere"], "origin": "London, England" },
+      "props": ["The most awarded gin in the world", "Classic heavy juniper profile, very 'dry'", "Macerated for 24 hours before distillation"],
+      "lang": { "de": "Beefeater Gin", "en": "Beefeater Gin", "es": "Ginebra Beefeater", "fr": "Gin Beefeater", "ru": "Бифитер Джин", "ja": "ビーフィーター", "zh": "必富达金酒", "fa": "بیفیتر", "hi": "बीफीटर जिन", "ar": "بيفيتر جين" }
+    },
+    "spirit_gin_monkey_47": {
+      "unit_price": 40.00,
+      "unit_type": "piece",
+      "label": "Monkey 47 Schwarzwald Dry Gin", "icon": "🐒", "latin": "Spiritus iuniperus (Silva Nigra)", "sci": ["#sci/Botanics"],
+      "val": { "vol_pct": 47.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Germany (Black Forest)" },
+      "quality_metrics": { "botanicals": "47 different ingredients including lingonberries" },
+      "props": ["Premium cult gin from the Black Forest", "Incredibly complex with floral and peppery notes", "Named after the 47 botanicals and 47% alcohol content"],
+      "lang": { "de": "Monkey 47", "en": "Monkey 47", "es": "Monkey 47", "fr": "Monkey 47", "ru": "Манки 47", "ja": "モンキー 47", "zh": "47猴金酒", "fa": "مانکی ۴۷", "hi": "मंकी 47", "ar": "مونكي 47" }
+    },
+
+    "--- SPIRITS_RUM_THE_FULL_STRENGTH ---": "Rum (Süße & Würze)",
+    "spirit_rum_captain_morgan_spiced": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Captain Morgan Spiced Gold", "icon": "🏴‍☠️", "latin": "Spiritus sacchari conditus", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 35.0, "kcal": 190 },
+      "meta": { "locations": ["everywhere"], "type": "Spiced Rum" },
+      "props": ["Technically a 'Spirit Drink' due to added spice and sugar", "Dominated by vanilla and caramel notes", "The standard for 'Captain & Cola'"],
+      "lang": { "de": "Captain Morgan Spiced", "en": "Captain Morgan Spiced", "es": "Captain Morgan", "fr": "Captain Morgan Spiced", "ru": "Капитан Морган", "ja": "キャプテン・モルガン", "zh": "摩根船长", "fa": "کاپیتان مورگان", "hi": "कैप्टन मॉर्गन", "ar": "كابتن مورغان" }
+    },
+    "spirit_rum_diplomatico_reserva": {
+      "unit_price": 45.00,
+      "unit_type": "piece",
+      "label": "Diplomático Reserva Exclusiva", "icon": "🥃", "latin": "Spiritus sacchari (Venezuelensis)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["rewe_feinkost", "specialist"], "origin": "Venezuela" },
+      "props": ["Premium sipping rum, very dark and rich", "Complex notes of orange peel, maple syrup, and liquorice", "Aged for up to 12 years in oak casks"],
+      "lang": { "de": "Diplomático Reserva", "en": "Diplomático Reserva", "es": "Diplomático", "fr": "Diplomático Reserva", "ru": "Дипломатико", "ja": "ディプロマティコ", "zh": "外交官朗姆酒", "fa": "دیپلماتیکو", "hi": "डिप्लोमैटिको", "ar": "دبلوماسي" }
+    },
+    "spirit_rum_myers_dark": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Myers's Rum Original Dark", "icon": "🥃", "latin": "Spiritus sacchari niger", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["rewe", "edeka"], "origin": "Jamaica" },
+      "props": ["Classic Jamaican dark rum", "Heavy, pungent, and buttery molasses profile", "Essential for Tiki cocktails like the Planter's Punch"],
+      "lang": { "de": "Myers's Rum", "en": "Myers's Rum", "es": "Myers's Rum", "fr": "Rhum Myers's", "ru": "Майерс Рам", "ja": "マイヤーズ・ラム", "zh": "麦尔斯朗姆酒", "fa": "رام مایرز", "hi": "मायर्स रम", "ar": "رام مايرز" }
+    },
+
+    "--- SPIRITS_TEQUILA_&_MEZCAL ---": "Agaven-Destillate (Mexikos Stolz)",
+    "spirit_tequila_sierra_silver": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Sierra Tequila Silver", "icon": "👒", "latin": "Spiritus agavae (Sierra)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 38.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Sierra" },
+      "props": ["Instantly recognizable by the small red sombrero cap", "Standard 'party tequila' in Germany", "Fruity, clear, and sharp"],
+      "lang": { "de": "Sierra Tequila Silver", "en": "Sierra Silver", "es": "Sierra Silver", "fr": "Sierra Silver", "ru": "Сиерра Сильвер", "ja": "シエラ・テキーラ", "zh": "希艾拉龙舌兰", "fa": "سِرا تکیلا", "hi": "सिएरा टकीला", "ar": "تيكيلا سييرا" }
+    },
+    "spirit_tequila_patron_silver": {
+      "unit_price": 55.00,
+      "unit_type": "piece",
+      "label": "Patrón Silver Tequila", "icon": "🐝", "latin": "Spiritus agavae (Patron)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["rewe_feinkost", "edeka_premium", "kaufland_specialty"], "type": "100% Agave" },
+      "props": ["Ultra-premium tequila benchmark", "Hand-crafted from 100% Weber Blue Agave", "Very smooth with hints of citrus and light pepper"],
+      "lang": { "de": "Patrón Silver", "en": "Patrón Silver", "es": "Patrón Silver", "fr": "Patrón Silver", "ru": "Патрон Сильвер", "ja": "パトロン シルバー", "zh": "培恩银色龙舌兰", "fa": "پاترون سیلور", "hi": "पैट्रॉन सिल्वर", "ar": "باترون سيلفر" }
+    },
+
+    "--- APERITIFS_&_LIQUEURS ---": "Aperitifs & Liköre (Die Cocktail-Farben)",
+    "liqueur_aperol": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Aperol", "icon": "🍹", "latin": "Liquor amarus (Aperol)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 11.0, "kcal": 155, "sugar_g": 24.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Campari Group" },
+      "props": ["Orange-red Italian bitter liqueur", "Key ingredient for the 'Aperol Spritz'", "Notes of rhubarb, gentian, and bitter orange"],
+      "lang": { "de": "Aperol", "en": "Aperol", "es": "Aperol", "fr": "Aperol", "ru": "Апероль", "ja": "アペロール", "zh": "阿佩罗", "fa": "آپرول", "hi": "एपेरोल", "ar": "أبيرول" }
+    },
+    "liqueur_campari": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Campari Bitter", "icon": "🍷", "latin": "Liquor amarus (Campari)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 25.0, "kcal": 240, "sugar_g": 24.8 },
+      "meta": { "locations": ["everywhere"] },
+      "props": ["Iconic deep red bitter from Milan", "Infused with aromatic herbs and fruit", "Essential for Negroni and Americano"],
+      "lang": { "de": "Campari", "en": "Campari", "es": "Campari", "fr": "Campari", "ru": "Кампари", "ja": "カンパリ", "zh": "金巴利", "fa": "کامپاری", "hi": "कैम्पारी", "ar": "كامباري" }
+    },
+    "liqueur_ramazzotti_amaro": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Ramazzotti Amaro", "icon": "🇮🇹", "latin": "Liquor herbaceus (Ramazzotti)", "sci": ["#sci/Pharmacology"],
+      "val": { "vol_pct": 30.0 },
+      "meta": { "locations": ["everywhere"] },
+      "props": ["Classic Italian Digestif with 33 different herbs", "Notes of orange peel, cardamom, and cinnamon", "Usually served neat with lemon or as a mixer"],
+      "lang": { "de": "Ramazzotti Amaro", "en": "Ramazzotti Amaro", "es": "Ramazzotti", "fr": "Ramazzotti", "ru": "Рамазотти", "ja": "ラマゾッティ", "zh": "阿玛罗拉马佐提", "fa": "رامازوتی", "hi": "रामज़ोती", "ar": "رامازوتي" }
+    },
+    "liqueur_disaronno_amaretto": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Disaronno Originale", "icon": "🥃", "latin": "Liquor amygdalae (Disaronno)", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 28.0 },
+      "meta": { "locations": ["everywhere"] },
+      "props": ["Sweet almond-flavored liqueur (technically made from apricot kernels)", "Unique square bottle design", "Essential for 'Amaretto Sour'"],
+      "lang": { "de": "Disaronno Amaretto", "en": "Disaronno Originale", "es": "Disaronno", "fr": "Disaronno", "ru": "Дисаронно Амаретто", "ja": "ディサローノ", "zh": "帝萨诺安玛乐妥", "fa": "دیسارونو آمارتو", "hi": "डिसारोनो अमरेटो", "ar": "ديسارونو أمارتو" }
+    },
+    "liqueur_baileys_irish_cream": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Baileys Irish Cream", "icon": "🥛", "latin": "Liquor lactis (Hibernicus)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 17.0, "kcal": 327, "sugar_g": 20.0, "fat_g": 13.0 },
+      "meta": { "locations": ["everywhere"] },
+      "quality_metrics": { "ingredients": "Irish Whiskey & Dairy Cream" },
+      "props": ["Emulsion of cream and whiskey, stabilized by a secret process", "Very high calorie density due to cream and sugar", "Global leader in cream liqueurs"],
+      "lang": { "de": "Baileys", "en": "Baileys", "es": "Baileys", "fr": "Baileys", "ru": "Бейлис", "ja": "ベイリーズ", "zh": "百利甜酒", "fa": "بیلیز", "hi": "बेलीज", "ar": "بيليز" }
+    },
+    "liqueur_jaegermeister": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Jägermeister", "icon": "🦌", "latin": "Liquor herbaceus (Venator)", "sci": ["#sci/Botanics"],
+      "val": { "vol_pct": 35.0, "kcal": 250 },
+      "meta": { "locations": ["everywhere"], "origin": "Germany (Wolfenbüttel)" },
+      "props": ["Herbal liqueur made from 56 different botanicals", "Macerated for weeks, then aged in oak barrels for one year", "Massive global success as a shot or 'Jäger-Bomb'"],
+      "lang": { "de": "Jägermeister", "en": "Jägermeister", "es": "Jägermeister", "fr": "Jägermeister", "ru": "Егермейстер", "ja": "イェーガーマイスター", "zh": "野格", "fa": "یگرمیستر", "hi": "जेगरमिस्टर", "ar": "ييغرمايستر" }
+    },
+    "--- LIQUEURS_FRUIT_ESSENTIALS ---": "Fruchtliköre (Die Aroma-Bomben)",
+    "liqueur_fruit_grand_marnier": {
+      "unit_price": 30.00,
+      "unit_type": "piece",
+      "label": "Grand Marnier (Cordon Rouge)", "icon": "🍊", "latin": "Liquor aurantii (Cognac base)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 40.0, "sugar_g": 20.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "France" },
+      "props": ["Premium blend of French Cognac and bitter Caribbean orange essence", "Heavier and more complex than Cointreau", "Essential for Crêpe Suzette and B-52 cocktails"],
+      "lang": { "de": "Grand Marnier", "en": "Grand Marnier", "es": "Grand Marnier", "fr": "Grand Marnier", "ru": "Гран Марнье", "ja": "グラン・マルニエ", "zh": "柑曼怡", "fa": "گراند مارنیه", "hi": "ग्रैंड मार्नियर", "ar": "غراند مارنييه" }
+    },
+    "liqueur_fruit_chambord": {
+      "unit_price": 35.00,
+      "unit_type": "piece",
+      "label": "Chambord Liqueur Royale", "icon": "🍇", "latin": "Liquor rubi (Chambord)", "sci": ["#sci/Botanics"],
+      "val": { "vol_pct": 16.5 },
+      "meta": { "locations": ["rewe_feinkost", "edeka_premium", "specialist"], "origin": "France" },
+      "props": ["Ultra-premium black raspberry liqueur", "Infused with honey, vanilla, and cognac", "Iconic spherical bottle inspired by the French monarchy"],
+      "lang": { "de": "Chambord", "en": "Chambord", "es": "Chambord", "fr": "Chambord", "ru": "Шамбор", "ja": "シャンボール", "zh": "香波德", "fa": "شامبورد", "hi": "चैंबर्ड", "ar": "شامبورد" }
+    },
+    "liqueur_fruit_midori": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Midori Melon Liqueur", "icon": "🍈", "latin": "Liquor melonis (Midori)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 20.0 },
+      "meta": { "locations": ["rewe", "edeka", "specialist"], "origin": "Japan/Global" },
+      "props": ["Neon-green liqueur based on Japanese muskmelons", "Extremely sweet and aromatic", "Key ingredient for the 'Midori Sour'"],
+      "lang": { "de": "Midori", "en": "Midori", "es": "Midori", "fr": "Midori", "ru": "Мидори", "ja": "ミドリ メロンリキュール", "zh": "蜜多丽", "fa": "میدوری", "hi": "मिडोरी", "ar": "ميدوري" }
+    },
+    "liqueur_fruit_peachtree": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "De Kuyper Peachtree", "icon": "🍑", "latin": "Liquor persicae", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 15.0 },
+      "meta": { "locations": ["everywhere"], "brand": "De Kuyper" },
+      "props": ["The world's leading peach liqueur", "Crystal clear, intense sun-ripened peach flavor", "Essential for 'Sex on the Beach'"],
+      "lang": { "de": "Peachtree", "en": "Peachtree", "es": "Licor de Melocotón", "fr": "Crème de Pêche", "ru": "Пичтри", "ja": "ピーチツリー", "zh": "蜜桃力娇酒", "fa": "پیچ‌تری", "hi": "पीचट्री", "ar": "بيشتري" }
+    },
+
+    "--- LIQUEURS_HERBAL_ELIXIRS ---": "Kräuter- & Klosterliköre (Die heiligen Elixiere)",
+    "liqueur_herbal_chartreuse_verte": {
+      "unit_price": 50.00,
+      "unit_type": "piece",
+      "label": "Chartreuse Verte (Grün)", "icon": "🌿", "latin": "Liquor Carthusianus viridis", "sci": ["#sci/Pharmacology", "#sci/Botanics"],
+      "val": { "vol_pct": 55.0 },
+      "meta": { "locations": ["specialist", "rewe_feinkost"], "origin": "France" },
+      "quality_metrics": { "complexity": "130 different plants and flowers" },
+      "props": ["Only three monks in the world know the secret recipe", "Naturally green color from chlorophyll", "One of the few liqueurs that continues to age in the bottle"],
+      "lang": { "de": "Grüne Chartreuse", "en": "Green Chartreuse", "es": "Chartreuse Verde", "fr": "Chartreuse Verte", "ru": "Зеленый Шартрёз", "ja": "シャルトルーズ ヴェール", "zh": "查特酒绿色", "fa": "شارتوز سبز", "hi": "ग्रीन चार्टreuse", "ar": "شارتوز أخضر" }
+    },
+    "liqueur_herbal_benedictine": {
+      "unit_price": 35.00,
+      "unit_type": "piece",
+      "label": "Bénédictine D.O.M.", "icon": "⛪", "latin": "Liquor Benedictinus", "sci": ["#sci/Botanics"],
+      "val": { "vol_pct": 40.0 },
+      "meta": { "locations": ["rewe", "edeka", "specialist"], "origin": "France" },
+      "props": ["Ancient herbal liqueur based on 27 plants and spices", "D.O.M. stands for 'Deo Optimo Maximo' (To God, most good, most great)", "Rich, honeyed, and complex flavor"],
+      "lang": { "de": "Bénédictine", "en": "Bénédictine", "es": "Bénédictine", "fr": "Bénédictine", "ru": "Бенедиктин", "ja": "ベネディクティン", "zh": "廊酒", "fa": "بندیکتین", "hi": "बेनेडिक्टिन", "ar": "بنديكتين" }
+    },
+
+    "--- LIQUEURS_DESSERT_BEAN_NUT ---": "Kaffee, Nuss & Vanille (Dessert-Standards)",
+    "liqueur_coffee_kahlua": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Kahlúa Coffee Liqueur", "icon": "☕", "latin": "Liquor coffei (Kahlua)", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 16.0, "sugar_g": 44.0 },
+      "meta": { "locations": ["everywhere"], "origin": "Mexico", "base": "Rum & Arabica Coffee" },
+      "props": ["World's best-selling coffee liqueur", "Rich notes of bittersweet coffee, roasted chestnuts, and vanilla", "Essential for 'White Russian' and 'Espresso Martini'"],
+      "lang": { "de": "Kahlúa", "en": "Kahlúa", "es": "Kahlúa", "fr": "Kahlúa", "ru": "Калуа", "ja": "カルーア", "zh": "甘露咖啡力娇酒", "fa": "کالوا", "hi": "काहलुआ", "ar": "كاهلوا" }
+    },
+    "liqueur_vanilla_licor_43": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Licor 43 (Cuarenta y Tres)", "icon": "🇪🇸", "latin": "Liquor vanillae (43)", "sci": ["#sci/Botanics"],
+      "val": { "vol_pct": 31.0 },
+      "meta": { "locations": ["everywhere"], "origin": "Spain (Cartagena)" },
+      "props": ["Named after its 43 secret ingredients", "Dominant vanilla and citrus profile", "Extremely popular in Germany when mixed with milk ('Blanco 43')"],
+      "lang": { "de": "Licor 43", "en": "Licor 43", "es": "Licor 43", "fr": "Licor 43", "ru": "Ликер 43", "ja": "リコール 43", "zh": "43度利口酒", "fa": "لیکور ۴۳", "hi": "लिकर 43", "ar": "ليكور 43" }
+    },
+    "liqueur_nut_frangelico": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Frangelico Hazelnut Liqueur", "icon": "🌰", "latin": "Liquor avellanae (Frangelico)", "sci": ["#sci/Culinary"],
+      "val": { "vol_pct": 20.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Italy" },
+      "props": ["Made from Tonda Gentile hazelnuts", "Distinctive bottle shaped like a monk with a rope belt", "Notes of toasted hazelnuts, cocoa, and vanilla"],
+      "lang": { "de": "Frangelico", "en": "Frangelico", "es": "Frangelico", "fr": "Frangelico", "ru": "Франжелико", "ja": "フランジェリコ", "zh": "榛子利口酒", "fa": "فرانجلیکو", "hi": "फ्रैंगेलिको", "ar": "فرانجليكو" }
+    },
+    "liqueur_cream_queen_margot": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Queen Margot Irish Cream (Lidl)", "icon": "🥛", "latin": "Liquor lactis (Lidl)", "sci": ["#sci/FoodScience"],
+      "val": { "vol_pct": 17.0 },
+      "meta": { "locations": ["lidl"], "alternative_to": "Baileys" },
+      "props": ["Lidl's budget response to Baileys", "Technologically very similar cream emulsion", "Exceptional value for baking or large parties"],
+      "lang": { "de": "Queen Margot Irish Cream", "en": "Queen Margot Cream", "es": "Crema de whisky Lidl", "fr": "Crème de whisky Lidl", "ru": "Лидл Ирландский крем", "ja": "リドル アイリッシュクリーム", "zh": "Lidl 爱尔兰奶油力娇酒", "fa": "آیریش کرم لیدل", "hi": "लिल आयरिश क्रीम", "ar": "ليدل آيريش كريم" }
+    },
+    
+    "liqueur_herbal_jagdstolz": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Jagdstolz Kräuterlikör (REWE/ja!)", "icon": "🦌", "latin": "Liquor herbaceus (ja!)", "sci": ["#sci/Botanics"],
+      "val": { "vol_pct": 35.0 },
+      "meta": { "locations": ["rewe", "penny"], "alternative_to": "Jägermeister" },
+      "props": ["The entry-level herbal liqueur of the REWE group", "Similar spice profile to Jägermeister but usually sweeter", "High-volume party standard"],
+      "lang": { "de": "Jagdstolz", "en": "Jagdstolz", "es": "Licor de hierbas ja!", "fr": "Liqueur de plantes ja!", "ru": "REWE Травяной ликер", "ja": "REWE ハーブリキュール", "zh": "REWE 草本力娇酒", "fa": "لیکور گیاهی ریوه", "hi": "रीवे हर्बल लिकर", "ar": "ريوه ليكور أعشاب" }
+    },
+    "--- SPIRITS_GREEK_SUNSHINE ---": "Metaxa (Die griechische Spirituosen-Legende)",
+    "spirit_metaxa_5_stars": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Metaxa 5 Stars (Classic Edition)", "icon": "☀️", "latin": "Spiritus Graecus (V stellae)", "sci": ["#sci/Oenology", "#sci/Distillation"],
+      "val": { "vol_pct": 38.0, "kcal": 215 },
+      "meta": { "locations": ["everywhere"], "origin": "Greece", "type": "Amber Spirit" },
+      "quality_metrics": { "components": "Wine distillates, Muscat wine, Mediterranean botanicals" },
+      "props": ["The classic 'floral' Metaxa", "Aged for at least 5 years in oak barrels", "Smooth, slightly sweet with notes of orange peel and rose petals"],
+      "lang": { "de": "Metaxa 5 Sterne", "en": "Metaxa 5 Stars", "es": "Metaxa 5 Estrellas", "fr": "Metaxa 5 Étoiles", "ru": "Метакса 5 звезд", "ja": "メタクサ 5スター", "zh": "梅塔莎5星", "fa": "متاکسا ۵ ستاره", "hi": "मेटैक्सा 5 स्टार", "ar": "ميتاكسا 5 نجوم" }
+    },
+    "spirit_metaxa_7_stars": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Metaxa 7 Stars (Amphora)", "icon": "🏺", "latin": "Spiritus Graecus (VII stellae)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 40.0, "kcal": 228 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "origin": "Greece", "aging": "min. 7 Years" },
+      "props": ["More intense and sophisticated than the 5-star version", "Deeper amber color, notes of old honey, black raisins, and dried fruit", "Served in an elegant 'Amphora' style bottle"],
+      "lang": { "de": "Metaxa 7 Sterne", "en": "Metaxa 7 Stars", "es": "Metaxa 7 Estrellas", "fr": "Metaxa 7 Étoiles", "ru": "Метакса 7 звезд", "ja": "メタクサ 7スター", "zh": "梅塔莎7星", "fa": "متاکسا ۷ ستاره", "hi": "मेटैक्सा 7 स्टार", "ar": "ميتاكسا 7 نجوم" }
+    },
+
+    "--- LIQUEURS_ANISE_CLASSICS ---": "Sambuca (Der italienische Digestif)",
+    "liqueur_sambuca_molinari": {
+      "unit_price": 18.00,
+      "unit_type": "piece",
+      "label": "Molinari Sambuca Extra", "icon": "☕", "latin": "Liquor anisi (Molinari)", "sci": ["#sci/Phytochemistry"],
+      "val": { "vol_pct": 42.0, "sugar_g": 35.0 },
+      "meta": { "locations": ["everywhere"], "origin": "Italy" },
+      "quality_metrics": { "ingredients": "Star anise, herbs, and high sugar content" },
+      "props": ["The world's leading Sambuca brand", "Traditionally served with three coffee beans ('con la mosca')", "Crystal clear, extremely sweet, and powerful anise aroma"],
+      "lang": { "de": "Molinari Sambuca", "en": "Molinari Sambuca", "es": "Sambuca Molinari", "fr": "Sambuca Molinari", "ru": "Молинари Самбука", "ja": "モリナリ サンブーカ", "zh": "莫利纳里珊布卡", "fa": "سامبوکا مولیناری", "hi": "मोलिनारी साम्बुका", "ar": "سامبوكا موليناري" }
+    },
+
+    "--- WINE_RED_THE_SOFT_GIANT ---": "Merlot (Der samtige Weltstar)",
+    "wine_red_merlot_casillero": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Casillero del Diablo Merlot", "icon": "🍷", "latin": "Vinum rubrum (Merlot)", "sci": ["#sci/Oenology"],
+      "val": { "vol_pct": 13.5 },
+      "meta": { "locations": ["everywhere"], "origin": "Chile (Rapel Valley)" },
+      "props": ["Global benchmark for a smooth, fruit-forward Merlot", "Low tannins, notes of dark plums and chocolate", "The ultimate 'crowd pleaser' red wine"],
+      "lang": { "de": "Casillero Merlot", "en": "Casillero Merlot", "es": "Casillero Merlot", "fr": "Casillero Merlot", "ru": "Касильеро Мерло", "ja": "メルロー", "zh": "梅洛红葡萄酒", "fa": "شراب مرلو", "hi": "मर्लो वाइन", "ar": "نبيذ ميرلو" }
+    },
+
+    "--- COOKING_ALCOHOL_ITALIAN_SPECIALS ---": "Marsala (Der Star für Tiramisu & Saucen)",
+    "wine_marsala_pellegrino_superiore": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Marsala Superiore Dolce (Pellegrino)", "icon": "🇮🇹", "latin": "Vinum Marsala (Dulcis)", "sci": ["#sci/Oenology", "#sci/Culinary"],
+      "val": { "vol_pct": 18.0, "sugar_g": 100.0 },
+      "meta": { "locations": ["rewe_feinkost", "edeka", "specialist"], "origin": "Sicily, Italy" },
+      "quality_metrics": { "process": "Fortified wine with oak aging" },
+      "props": ["Essential for an authentic Tiramisu and Scaloppine al Marsala", "Deep amber color with notes of dried figs, dates, and caramel", "Extremely long-lasting due to high alcohol and sugar content"],
+      "lang": { "de": "Marsala Wein", "en": "Marsala Wine", "es": "Vino Marsala", "fr": "Vin de Marsala", "ru": "Марсала", "ja": "マルサラワイン", "zh": "玛萨拉酒", "fa": "شراب مارسالا", "hi": "मार्साला वाइन", "ar": "نبيذ مارسالا" }
+    }
+  }
+}

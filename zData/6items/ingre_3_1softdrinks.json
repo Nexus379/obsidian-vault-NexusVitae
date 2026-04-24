@@ -1,0 +1,1225 @@
+{
+  "beverages": {
+    "--- WATER_BRANDED_STILL_INTERNATIONAL ---": "Stille Markenwässer (Internationale Klassiker)",
+    "water_still_volvic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Volvic Naturelle", "icon": "🌋", "latin": "Aqua vulcana (Volvic)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 12.0, "magnesium_mg": 8.0, "sodium_mg": 12.0, "silica_mg": 32.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "dm"], "source": "Auvergne (France)", "vegan": true },
+      "quality_metrics": { "mineral_density": "Very Low (Soft)", "purity": "High volcanic filtration" },
+      "props": ["Filtered through six layers of volcanic rock", "Extremely low mineral density makes it very soft", "Unique silica content"],
+      "lang": { "de": "Volvic Naturelle", "en": "Volvic Water", "es": "Agua Volvic", "fr": "Eau de Volvic", "ru": "Вольвик", "ja": "ボルヴィック", "zh": "富维克", "fa": "ولنیک", "hi": "वोल्विक", "ar": "فولفيك" }
+    },
+    "water_still_evian": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Evian (Still)", "icon": "🏔️", "latin": "Aqua alpina (Evian)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 80.0, "magnesium_mg": 26.0, "sodium_mg": 6.5, "bicarbonate_mg": 360.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "source": "Évian-les-Bains (French Alps)", "vegan": true },
+      "quality_metrics": { "mineral_balance": "Neutral/Alkaline", "mineral_density": "Medium" },
+      "props": ["Naturally filtered through glacial rocks for 15 years", "Very balanced, neutral and crisp taste", "Global benchmark for premium still water"],
+      "lang": { "de": "Evian Still", "en": "Evian Water", "es": "Agua Evian", "fr": "Eau d'Évian", "ru": "Эвиан", "ja": "エビアン", "zh": "依云", "fa": "آب اویان", "hi": "एवियन", "ar": "إيفيان" }
+    },
+    "water_still_vittel": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Vittel Bonne Source", "icon": "💧", "latin": "Aqua mineralis (Vittel)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 240.0, "magnesium_mg": 42.0, "sodium_mg": 5.2, "sulfate_mg": 400.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "source": "Vosges Mountains (France)", "vegan": true },
+      "quality_metrics": { "mineral_density": "High (Calcium Focus)", "mouthfeel": "Firm due to sulfates" },
+      "props": ["Significantly higher calcium content than Evian or Volvic", "Often used in gastronomy as a reliable still water", "Distinctive firm mouthfeel due to sulfates"],
+      "lang": { "de": "Vittel Still", "en": "Vittel Water", "es": "Agua Vittel", "fr": "Eau Vittel", "ru": "Виттель", "ja": "ヴィッテル", "zh": "伟图", "fa": "ویتل", "hi": "विट्टेल", "ar": "فيتيل" }
+    },
+
+    "--- WATER_BRANDED_STILL_GERMAN ---": "Stille Markenwässer (Deutsche Quellen)",
+    "water_still_vio": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "ViO Still", "icon": "💧", "latin": "Aqua mineralis (Lüneburger Heide)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 51.0, "magnesium_mg": 5.3, "sodium_mg": 15.0 },
+      "meta": { "locations": ["rewe", "edeka", "gastronomy"], "source": "Lüder (Lüneburg Heath)", "brand": "Apollinaris / Coca-Cola" },
+      "quality_metrics": { "mineral_density": "Low", "purity": "High" },
+      "props": ["Exceptionally soft and easy to drink", "Extremely popular in German modern gastronomy", "Neutral flavor profile that doesn't overpower food"],
+      "lang": { "de": "ViO Still", "en": "ViO Still Water", "es": "Agua ViO", "fr": "Eau ViO", "ru": "ВиО Стиль", "ja": "ViO スティル", "zh": "ViO 纯净水", "fa": "آب وی‌او", "hi": "वीओ स्टिल", "ar": "فيو مياه" }
+    },
+    "water_still_gerolsteiner": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Gerolsteiner Naturelle", "icon": "💧", "latin": "Aqua mineralis (Gerolstein - Naturelle)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 44.0, "magnesium_mg": 12.0, "sodium_mg": 11.0, "bicarbonate_mg": 217.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "source": "Volcanic Eifel", "vegan": true },
+      "quality_metrics": { "mineral_density": "Moderate (Unlike its sparkling counterpart)", "source_type": "Volcanic Rock" },
+      "props": ["Comes from a different, softer spring than Gerolsteiner Sparkling", "Mild and balanced compared to their highly mineralized carbonated versions", "No naturally occurring carbonation"],
+      "lang": { "de": "Gerolsteiner Naturelle", "en": "Gerolsteiner Naturelle", "es": "Gerolsteiner Sin Gas", "fr": "Gerolsteiner Plate", "ru": "Герольштайнер Натюрель", "ja": "ゲロルシュタイナー ナチュレル", "zh": "极多乐无气泡", "fa": "گرولشتاینر بدون گاز", "hi": "गेरोलस्टीनर स्टिल", "ar": "جيرولشتاينر جافة" }
+    },
+    "water_still_black_forest": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Black Forest Still", "icon": "🌲", "latin": "Aqua mineralis (Schwarzwald)", "sci": ["#sci/Pediatrics", "#sci/Hydration"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 6.7, "magnesium_mg": 2.6, "sodium_mg": 1.1 },
+      "meta": { "locations": ["rewe", "edeka", "dm"], "source": "Hansjakobquelle (Black Forest)", "baby_safe": true },
+      "quality_metrics": { "mineral_density": "Extremely Low (Ultra-Soft)", "sodium_level": "Trace amounts only" },
+      "props": ["One of the softest mineral waters in Germany", "Highly recommended for preparing baby food due to minimal sodium", "Very smooth, almost sweet mouthfeel"],
+      "lang": { "de": "Black Forest Still", "en": "Black Forest Still", "es": "Black Forest Sin Gas", "fr": "Black Forest Plate", "ru": "Блэк Форест Стиль", "ja": "ブラックフォレスト スティル", "zh": "黑森林纯净水", "fa": "بلک فارست", "hi": "ब्लैक फॉरेस्ट स्टिल", "ar": "بلاك فورست جافة" }
+    },
+
+    "--- WATER_PRIVATE_LABEL_STILL ---": "Stille Wässer (Discounter & Supermarkt Eigenmarken)",
+    "water_still_saskia": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Saskia Still (Lidl)", "icon": "💧", "latin": "Aqua saskia (Lidl)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 40.0, "magnesium_mg": 6.0, "sodium_mg": 8.0 },
+      "meta": { "locations": ["lidl"], "source": "Varies (e.g., Jessen)", "baby_safe": true },
+      "quality_metrics": { "mineral_density": "Low to Medium", "consistency": "Varies by regional source" },
+      "props": ["Lidl's extreme high-volume private label", "Mineral values vary heavily depending on the regional source", "Consistently rated 'Good' to 'Very Good' in independent tests"],
+      "lang": { "de": "Saskia Still", "en": "Saskia Still", "es": "Saskia Sin Gas", "fr": "Saskia Plate", "ru": "Саския Стиль", "ja": "サスキア スティル", "zh": "Saskia 纯净水", "fa": "ساسکیا بدون گاز", "hi": "सस्किया स्टिल", "ar": "ساسكيا جافة" }
+    },
+    "water_still_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Still (Kaufland)", "icon": "💧", "latin": "Aqua kauflandia (Still)", "sci": ["#sci/Hydration", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 45.0, "magnesium_mg": 5.0, "sodium_mg": 8.0 },
+      "meta": { "locations": ["kaufland"], "source": "Often Löningen", "baby_safe": true },
+      "quality_metrics": { "mineral_density": "Low", "price_segment": "Budget" },
+      "props": ["Standard budget hydration without carbonation", "Pink label standard across German Kaufland stores", "Neutral mineral profile"],
+      "lang": { "de": "K-Classic Still", "en": "K-Classic Still", "es": "K-Classic Sin Gas", "fr": "K-Classic Plate", "ru": "K-Classic Стиль", "ja": "K-Classic スティル", "zh": "K-Classic 纯净水", "fa": "کا-کلاسیک بدون گاز", "hi": "के-क्लासिक स्टिल", "ar": "ك-كلاسيك جافة" }
+    },
+    "water_still_quellbrunn": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Quellbrunn Naturell (Aldi Nord)", "icon": "💧", "latin": "Aqua quellbrunn (Aldi)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 48.0, "magnesium_mg": 4.5, "sodium_mg": 11.0 },
+      "meta": { "locations": ["aldi_nord"], "source": "Regional German springs", "vegan": true },
+      "quality_metrics": { "mineral_density": "Low", "taste_profile": "Neutral" },
+      "props": ["Aldi Nord's staple for non-carbonated water", "Clean and highly affordable", "Soft mineral profile"],
+      "lang": { "de": "Quellbrunn Naturell", "en": "Quellbrunn Naturell", "es": "Quellbrunn Sin Gas", "fr": "Quellbrunn Plate", "ru": "Квелльбрунн Натюрель", "ja": "クウェルブルン ナチュレル", "zh": "Quellbrunn 纯净水", "fa": "کوئل‌برون بدون گاز", "hi": "क्वेलब्रून स्टिल", "ar": "كويلبرون جافة" }
+    },
+    "water_still_ja": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "ja! Still (REWE)", "icon": "💧", "latin": "Aqua rewe (Still)", "sci": ["#sci/Hydration", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 35.0, "magnesium_mg": 12.0, "sodium_mg": 6.0 },
+      "meta": { "locations": ["rewe", "penny"], "source": "Varies regionally", "vegan": true },
+      "quality_metrics": { "mineral_density": "Low", "price_segment": "Entry-level" },
+      "props": ["Entry-level price point for the REWE group", "Light mineralization, very soft", "Suitable for infant nutrition (when indicated on label)"],
+      "lang": { "de": "ja! Still", "en": "ja! Still Water", "es": "ja! Sin Gas", "fr": "ja! Plate", "ru": "ja! Стиль", "ja": "ja! スティル", "zh": "ja! 纯净水", "fa": "یا! بدون گاز", "hi": "जा! स्टिल जल", "ar": "يا! مياه جافة" }
+    },
+	
+
+    "--- WATER_BRANDED_MEDIUM_GERMAN ---": "Medium Markenwässer (Deutsche Klassiker)",
+    "water_medium_gerolsteiner": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Gerolsteiner Medium", "icon": "🫧", "latin": "Aqua mineralis carbonata (Gerolstein)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.8, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 348.0, "magnesium_mg": 108.0, "sodium_mg": 118.0, "bicarbonate_mg": 1816.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "beverage_market"], "source": "Volcanic Eifel", "vegan": true },
+      "quality_metrics": { "mineral_density": "Extremely High (TDS > 2500mg/l)", "carbonation": "Medium (approx 4.5 g/l)" },
+      "props": ["Germany's most exported mineral water", "Exceptionally high natural calcium and magnesium content", "Distinctive, slightly salty/mineral taste profile due to volcanic rock filtration"],
+      "lang": { "de": "Gerolsteiner Medium", "en": "Gerolsteiner Medium", "es": "Gerolsteiner Medium", "fr": "Gerolsteiner Medium", "ru": "Герольштайнер Медиум", "ja": "ゲロルシュタイナー ミディアム", "zh": "极多乐中度气泡", "fa": "گرولشتاینر مدیوم", "hi": "गेरोलस्टीनर मीडियम", "ar": "جيرولشتاينر ميديوم" }
+    },
+    "water_medium_vilsa": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Vilsa Medium", "icon": "🫧", "latin": "Aqua mineralis carbonata (Vilsa)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 62.0, "magnesium_mg": 5.0, "sodium_mg": 14.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "source": "Bruchhausen-Vilsen", "vegan": true },
+      "quality_metrics": { "purity": "Naturally low in sodium", "carbonation": "Medium" },
+      "props": ["Very balanced, mild mineral profile from Northern Germany", "Gentle carbonation ideal for everyday hydration", "High purity, often certified for infant nutrition"],
+      "lang": { "de": "Vilsa Medium", "en": "Vilsa Medium", "es": "Vilsa Medium", "fr": "Vilsa Medium", "ru": "Вильза Медиум", "ja": "ヴィルザ ミディアム", "zh": "Vilsa 中度气泡", "fa": "ویلسا مدیوم", "hi": "विल्सा मीडियम", "ar": "فيلسا ميديوم" }
+    },
+    "water_medium_bismarck": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Fürst Bismarck Medium", "icon": "🫧", "latin": "Aqua mineralis carbonata (Bismarck)", "sci": ["#sci/Hydration", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 60.8, "magnesium_mg": 4.0, "sodium_mg": 10.2, "bicarbonate_mg": 188.0 },
+      "meta": { "locations": ["rewe", "edeka", "famila"], "source": "Aumühle (Billetal)", "baby_safe": true },
+      "quality_metrics": { "mineral_density": "Low-Medium", "carbonation": "Fine bubbles" },
+      "props": ["Low sodium content with pleasant, fine bubbles", "Sourced from a protected nature reserve near Hamburg", "Classic, mild Northern German profile"],
+      "lang": { "de": "Fürst Bismarck Medium", "en": "Bismarck Medium", "es": "Bismarck Medium", "fr": "Bismarck Medium", "ru": "Бисмарк Медиум", "ja": "ビスマルク ミディアム", "zh": "俾斯麦中度气泡", "fa": "بیسمارک مدیوم", "hi": "बिस्मार्क मीडियम", "ar": "بيسمارك ميديوم" }
+    },
+	"--- WATER_BRANDED_CLASSIC_GERMAN ---": "Sprudelnde Markenwässer (Starke Kohlensäure)",
+    "water_classic_bismarck": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Fürst Bismarck Classic", "icon": "🫧", "latin": "Aqua mineralis carbonata (Bismarck)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 60.8, "magnesium_mg": 4.0, "sodium_mg": 10.2, "bicarbonate_mg": 188.0 },
+      "meta": { "locations": ["rewe", "edeka", "famila", "beverage_market"], "source": "Aumühle (Billetal)", "type": "High Carbonation" },
+      "quality_metrics": { "carbonation": "High (Spritzig)", "mineral_density": "Low-Medium" },
+      "props": ["The classic Northern German sparkling water", "Intense, large-bubbled carbonation (Spritzig)", "Low sodium, highly refreshing and neutral taste"],
+      "lang": { "de": "Fürst Bismarck Classic", "en": "Bismarck Classic", "es": "Bismarck con gas", "fr": "Bismarck Gazeuse", "ru": "Бисмарк Классик", "ja": "ビスマルク クラシック", "zh": "俾斯麦强气泡", "fa": "بیسمارک کلاسیک", "hi": "बिस्मार्क क्लासिक", "ar": "بيسمارك كلاسيك" }
+    },
+    "water_classic_magnus": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Magnus Classic", "icon": "🫧", "latin": "Aqua norderstediensis carbonata", "sci": ["#sci/Hydration", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 68.0, "magnesium_mg": 4.0, "sodium_mg": 9.8, "bicarbonate_mg": 138.0 },
+      "meta": { "locations": ["rewe", "edeka", "beverage_market"], "source": "Norderstedt", "vegan": true },
+      "quality_metrics": { "carbonation": "High", "taste_profile": "Neutral and clear" },
+      "props": ["Highly carbonated version of the Northern German classic", "Clear, neutral taste profile", "Cuts perfectly through heavy meals due to strong fizz"],
+      "lang": { "de": "Magnus Classic", "en": "Magnus Sparkling", "es": "Magnus con gas", "fr": "Magnus Gazeuse", "ru": "Магнус Классик", "ja": "マグヌス クラシック", "zh": "马格努斯强气泡", "fa": "مگنوس کلاسیک", "hi": "मैग्नस क्लासिक", "ar": "ماغنوس كلاسيك" }
+    },
+    "water_classic_hella": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "hella classic", "icon": "🫧", "latin": "Aqua mineralis (Trappenkamp)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 49.0, "magnesium_mg": 3.0, "sodium_mg": 21.0 },
+      "meta": { "locations": ["rewe", "famila", "edeka"], "source": "Trappenkamp", "vegan": true },
+      "quality_metrics": { "carbonation": "High (Biting)", "mineral_density": "Low" },
+      "props": ["Extremely popular brand in Schleswig-Holstein and Hamburg", "Strong, biting carbonation", "Fresh and neutral mineral profile"],
+      "lang": { "de": "hella classic", "en": "hella classic", "es": "hella con gas", "fr": "hella gazeuse", "ru": "Хелла Классик", "ja": "ヘラ クラシック", "zh": "hella 强气泡", "fa": "هلا کلاسیک", "hi": "हेला क्लासिक", "ar": "هيلا كلاسيك" }
+    },
+    "water_classic_gerolsteiner": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Gerolsteiner Sprudel (Blau)", "icon": "🫧", "latin": "Aqua mineralis carbonata (Gerolstein)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.7, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 348.0, "magnesium_mg": 108.0, "sodium_mg": 118.0, "bicarbonate_mg": 1816.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "everywhere"], "source": "Volcanic Eifel", "vegan": true },
+      "quality_metrics": { "carbonation": "approx. 7 g/l CO2 (Very High)", "mineral_density": "Extreme" },
+      "props": ["The original blue label Gerolsteiner", "Massive mineral density meets aggressive carbonation", "Germany's most iconic and exported sparkling water"],
+      "lang": { "de": "Gerolsteiner Sprudel", "en": "Gerolsteiner Sparkling", "es": "Gerolsteiner con gas", "fr": "Gerolsteiner Gazeuse", "ru": "Герольштайнер Шпрюдель", "ja": "ゲロルシュタイナー シュプルーデル", "zh": "极多乐强气泡", "fa": "گرولشتاینر گازدار", "hi": "गेरोलस्टीनर स्पार्कलिंग", "ar": "جيرولشتاينر فوار" }
+    },
+    "water_classic_franken_brunnen": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Franken Brunnen Spritzig", "icon": "🫧", "latin": "Aqua mineralis (Frankonia)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.8, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 286.0, "magnesium_mg": 68.0, "sodium_mg": 14.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "source": "Neustadt an der Aisch (Bavaria)", "vegan": true },
+      "quality_metrics": { "carbonation": "High", "mineral_ratio": "High Calcium / Low Sodium" },
+      "props": ["Market leader in Bavaria and Franconia", "High calcium content but very low sodium", "Intense carbonation"],
+      "lang": { "de": "Franken Brunnen Spritzig", "en": "Franken Brunnen Sparkling", "es": "Franken Brunnen con gas", "fr": "Franken Brunnen Gazeuse", "ru": "Франкен Бруннен", "ja": "フランケンブルンネン", "zh": "法兰克福之泉强气泡", "fa": "فرانکن برونن", "hi": "फ्रैंकन ब्रुनेन", "ar": "فرانكن برونن" }
+    },	
+
+    "--- WATER_PRIVATE_LABEL_MEDIUM ---": "Medium Wässer (Discounter & Supermarkt)",
+    "water_medium_saskia_woerth": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Saskia Medium (Lidl - Wörth Quelle)", "icon": "🫧", "latin": "Aqua saskia carbonata (Wörth)", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 87.4, "magnesium_mg": 15.5, "sodium_mg": 9.6, "bicarbonate_mg": 351.0 },
+      "meta": { "locations": ["lidl"], "source": "Wörth am Rhein", "vegan": true },
+      "quality_metrics": { "mineral_density": "Moderate to High", "carbonation": "Medium" },
+      "props": ["Significantly higher mineralization than the 'Jessen' source often used for Still", "Perfectly balanced calcium-to-magnesium ratio", "Crisp carbonation that holds up well when warm"],
+      "lang": { "de": "Saskia Medium", "en": "Saskia Medium", "es": "Saskia Medium", "fr": "Saskia Medium", "ru": "Саския Медиум", "ja": "サスキア ミディアム", "zh": "Saskia 中度气泡", "fa": "ساسکیا مدیوم", "hi": "सस्किया मीडियम", "ar": "ساسكيا ميديوم" }
+    },
+    "water_medium_aqua_culinaris": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Aqua Culinaris Medium (Aldi Süd)", "icon": "🫧", "latin": "Aqua culinaris carbonata", "sci": ["#sci/Hydration", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 161.0, "magnesium_mg": 26.0, "sodium_mg": 15.0, "bicarbonate_mg": 466.0 },
+      "meta": { "locations": ["aldi_süd"], "source": "Varies (often Kurquelle/Erberskopf)", "high_mineral": true },
+      "quality_metrics": { "nutrient_focus": "High Calcium Discounter", "carbonation": "Medium" },
+      "props": ["Surprisingly high calcium content for a budget brand", "Stronger mineral taste, highly satisfying post-workout", "Excellent price-to-mineral ratio"],
+      "lang": { "de": "Aqua Culinaris Medium", "en": "Aqua Culinaris Medium", "es": "Aqua Culinaris Medium", "fr": "Aqua Culinaris Medium", "ru": "Аква Кулинарис Медиум", "ja": "アクア・クリナリス ミディアム", "zh": "Aqua Culinaris 中度气泡", "fa": "آکوا کولیناریس مدیوم", "hi": "एक्वा कुलिनारिस मीडियम", "ar": "أكوا كوليناريس ميديوم" }
+    },
+    "water_medium_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Medium (Kaufland)", "icon": "🫧", "latin": "Aqua kauflandia carbonata", "sci": ["#sci/Hydration", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 45.0, "magnesium_mg": 5.0, "sodium_mg": 8.0 },
+      "meta": { "locations": ["kaufland"], "source": "Often Löningen", "vegan": true },
+      "quality_metrics": { "mineral_density": "Low", "carbonation": "Gentle" },
+      "props": ["Light green label standard across German Kaufland stores", "Mild carbonation that doesn't overpower the neutral taste", "Very consistent budget quality"],
+      "lang": { "de": "K-Classic Medium", "en": "K-Classic Medium", "es": "K-Classic Medium", "fr": "K-Classic Medium", "ru": "K-Classic Медиум", "ja": "K-Classic ミディアム", "zh": "K-Classic 中度气泡", "fa": "کا-کلاسیک مدیوم", "hi": "के-क्लासिक मीडियम", "ar": "ك-كلاسيك ميديوم" }
+    },
+    "water_medium_ja": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "ja! Medium (REWE)", "icon": "🫧", "latin": "Aqua rewe carbonata (Medium)", "sci": ["#sci/Hydration", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 35.0, "magnesium_mg": 12.0, "sodium_mg": 6.0 },
+      "meta": { "locations": ["rewe", "penny"], "source": "Varies regionally", "vegan": true },
+      "quality_metrics": { "mineral_density": "Low", "carbonation": "Mild" },
+      "props": ["Gentle fizz, highly approachable for sensitive stomachs", "Light mineralization, very soft base water", "Budget-friendly everyday water"],
+      "lang": { "de": "ja! Medium", "en": "ja! Medium Water", "es": "ja! Medium", "fr": "ja! Medium", "ru": "ja! Медиум", "ja": "ja! ミディアム", "zh": "ja! 中度气泡", "fa": "یا! مدیوم", "hi": "जा! मीडियम", "ar": "يا! ميديوم" }
+    },
+
+    "--- MEDICINAL_AND_HEALING_WATERS ---": "Heilwasser & Funktionale Wässer",
+    "water_medicinal_fachingen": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Staatl. Fachingen (Medium)", "icon": "🩺", "latin": "Aqua medicinalis (Fachingen)", "sci": ["#sci/Gastroenterology", "#sci/Geology"],
+      "val": { "kcal": 0, "water_g": 99.6, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 98.0, "magnesium_mg": 59.0, "sodium_mg": 564.0, "bicarbonate_mg": 1846.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "pharmacy"], "source": "Lahn Valley", "medical_use": true },
+      "quality_metrics": { "benefit": "Acid-base balance (High Bicarbonate)", "mineral_density": "Very High" },
+      "props": ["Famous for its extremely high natural bicarbonate (Hydrogencarbonat) content", "Naturally neutralizes stomach acid, a traditional remedy for heartburn", "Sold in iconic green glass bottles"],
+      "lang": { "de": "Staatl. Fachingen", "en": "Staatl. Fachingen", "es": "Fachingen", "fr": "Fachingen", "ru": "Фахинген", "ja": "ファヒンゲン", "zh": "法兴根", "fa": "فاخینگن", "hi": "फैचिंगेन", "ar": "فاشينجين" }
+    },
+    "water_medicinal_hirschquelle": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Hirschquelle Heilwasser", "icon": "🦌", "latin": "Aqua medicinalis (Hirschquelle)", "sci": ["#sci/Gastroenterology", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.7, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 204.0, "magnesium_mg": 147.0, "sodium_mg": 118.0, "bicarbonate_mg": 1419.0 },
+      "meta": { "locations": ["rewe", "kaufland", "beverage_market"], "source": "Bad Teinach", "medical_use": true },
+      "quality_metrics": { "benefit": "Stimulates digestion and pancreas function", "mineral_density": "Very High" },
+      "props": ["Officially registered medicinal water in Germany", "Excellent natural source of magnesium for muscle recovery", "Promotes gastric and intestinal function"],
+      "lang": { "de": "Hirschquelle Heilwasser", "en": "Hirschquelle Medicinal Water", "es": "Agua medicinal Hirschquelle", "fr": "Eau médicinale Hirschquelle", "ru": "Лечебная вода Хиршвилле", "ja": "ヒルシュクヴェレ薬用水", "zh": "Hirschquelle 疗养水", "fa": "آب درمانی هیرش‌کوله", "hi": "हिर्श्चक्वेल जल", "ar": "مياه هيرشكفيله العلاجية" }
+    },
+
+    "--- HIGH_MAGNESIUM_AND_SPORTS_WATERS ---": "Extrem mineralisierte Sportwässer (Fokus: Magnesium)",
+    "water_magnesium_donat": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Donat Mg (Rogaska)", "icon": "👑", "latin": "Aqua medicinalis (Donat)", "sci": ["#sci/Gastroenterology", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 98.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 380.0, "magnesium_mg": 1030.0, "sodium_mg": 1500.0, "sulfate_mg": 2100.0 },
+      "meta": { "locations": ["pharmacy", "specialty_store", "online"], "source": "Rogaška Slatina (Slovenia)" },
+      "quality_metrics": { "mineral_density": "World Record Magnesium Level", "effect": "Osmotic laxative at high dose" },
+      "props": ["The most magnesium-rich natural mineral water in the world (>1000mg/L)", "Acts as an osmotic laxative in larger amounts; consumed in 'shot' sizes", "Intense, heavy, and metallic taste profile due to massive mineral payload"],
+      "lang": { "de": "Donat Mg", "en": "Donat Mg", "es": "Donat Mg", "fr": "Donat Mg", "ru": "Донат Магний", "ja": "ドナトMg", "zh": "Donat Mg 镁水", "fa": "دونات ام‌جی", "hi": "डोनट एमजी", "ar": "دونات مغنيسيوم" }
+    },
+    "water_sports_ensinger": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Ensinger Sport (Classic/Medium)", "icon": "🚴", "latin": "Aqua mineralis (Ensinger)", "sci": ["#sci/SportsMedicine", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.7, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 528.0, "magnesium_mg": 124.0, "sodium_mg": 28.0, "sulfate_mg": 1463.0 },
+      "meta": { "locations": ["rewe", "kaufland", "beverage_market"], "source": "Ensingen (Baden-Württemberg)", "vegan": true },
+      "quality_metrics": { "benefit": "Extreme Calcium-Magnesium Density / Low Sodium", "mineral_density": "Very High" },
+      "props": ["The ultimate natural sports water in Germany", "Provides over 500mg of calcium per liter (half the daily requirement)", "Low sodium makes it ideal for everyday massive hydration"],
+      "lang": { "de": "Ensinger Sport", "en": "Ensinger Sport", "es": "Ensinger Sport", "fr": "Ensinger Sport", "ru": "Энзингер Спорт", "ja": "エンジンスポーツ", "zh": "Ensinger 运动水", "fa": "انزینگر اسپورت", "hi": "एन्सिंगर स्पोर्ट", "ar": "إينسينغر سبورت" }
+    },
+    "water_sports_rosbacher": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Rosbacher (Klassisch/Medium)", "icon": "🏃", "latin": "Aqua mineralis (Rosbacher)", "sci": ["#sci/SportsMedicine", "#sci/Nutrition"],
+      "val": { "kcal": 0, "water_g": 99.8, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "calcium_mg": 211.0, "magnesium_mg": 104.0, "sodium_mg": 47.0 },
+      "meta": { "locations": ["rewe", "edeka", "beverage_market"], "source": "Rosbach (Hesse)", "vegan": true },
+      "quality_metrics": { "mix": "The 2:1 Calcium to Magnesium Ratio", "mineral_density": "Medium-High" },
+      "props": ["Marketed specifically for its 2:1 ratio of Calcium (211mg) to Magnesium (104mg)", "Mimics the ratio of mineral loss through human sweat", "Famous through endorsements by Formula 1 champions"],
+      "lang": { "de": "Rosbacher", "en": "Rosbacher", "es": "Rosbacher", "fr": "Rosbacher", "ru": "Росбахер", "ja": "ロスバッハ", "zh": "罗丝巴赫", "fa": "رسباخر", "hi": "रोस्बाकर", "ar": "روزباخر" }
+    },
+	
+    "--- SODA_COLA_VARIANTS ---": "Cola-Getränke (Originale, Indie & Discounter)",
+    "soda_cola_coca_cola": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Coca-Cola Original Taste", "icon": "🥤", "latin": "Potio carbonata (Cola classic)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 42, "water_g": 89.4, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.6, "sugar_g": 10.6, "fiber_g": 0.0, "caffeine_mg": 10.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "acid_profile": "Phosphoric acid tang", "sweetener": "100% Sugar/HFCS" },
+      "props": ["The global benchmark", "High glycemic index", "Classic phosphoric acid tang"],
+      "lang": { "de": "Coca-Cola Original", "en": "Coca-Cola Classic", "es": "Coca-Cola", "fr": "Coca-Cola", "ru": "Кока-Кола", "ja": "コカ・コーラ", "zh": "可口可乐", "fa": "کوکاکولا", "hi": "कोका-कोला", "ar": "كوكا كولا" }
+    },
+    "soda_cola_pepsi": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Pepsi Original", "icon": "🥤", "latin": "Potio carbonata (Pepsi)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 28, "water_g": 93.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 7.0, "sugar_g": 7.0, "fiber_g": 0.0, "caffeine_mg": 11.0 },
+      "meta": { "locations": ["everywhere"], "note": "Sugar-reduced EU version" },
+      "quality_metrics": { "flavor_profile": "Citrus-heavy", "sweetener_system": "Sugar + Sweetener blend (EU)" },
+      "props": ["Sweeter, citrusy profile", "Blended with artificial sweeteners in Germany to reduce sugar", "Slightly higher caffeine than Coke"],
+      "lang": { "de": "Pepsi Cola", "en": "Pepsi Original", "es": "Pepsi", "fr": "Pepsi", "ru": "Пепси", "ja": "ペプシコーラ", "zh": "百事可乐", "fa": "پپسی", "hi": "पेप्सी", "ar": "بيبسي" }
+    },
+    "soda_cola_fritz": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "fritz-kola", "icon": "🖤", "latin": "Potio carbonata (Cola fritz)", "sci": ["#sci/Pharmacology", "#sci/FoodScience"],
+      "val": { "kcal": 42, "water_g": 89.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.5, "sugar_g": 10.5, "fiber_g": 0.0, "caffeine_mg": 25.0 },
+      "meta": { "locations": ["rewe", "edeka", "gastronomy"], "vegan": true },
+      "quality_metrics": { "benefit": "Vielviel Koffein (25mg/100ml)", "flavor_profile": "Lemon/Citrus-Cola blend" },
+      "props": ["Hamburg indie brand classic", "Contains 2.5x the caffeine of Coca-Cola (almost energy drink level)", "Slightly less sweet, hint of lemon"],
+      "lang": { "de": "fritz-kola", "en": "fritz-kola", "es": "fritz-kola", "fr": "fritz-kola", "ru": "Фриц-Кола", "ja": "フリッツ・コーラ", "zh": "Fritz-Kola", "fa": "فریتس کولا", "hi": "फ्रिट्ज़-कोला", "ar": "فريتز كولا" }
+    },
+    "soda_cola_afri": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "afri cola", "icon": "🌴", "latin": "Potio carbonata (Afri)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 42, "water_g": 89.4, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.6, "sugar_g": 10.6, "fiber_g": 0.0, "caffeine_mg": 25.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "vegan": true },
+      "quality_metrics": { "caffeine_density": "Maximum legal limit (25mg)", "carbonation": "High" },
+      "props": ["Historic German cola brand", "Also features the high 25mg/100ml caffeine limit", "Distinctive palm tree bottle design"],
+      "lang": { "de": "afri cola", "en": "afri cola", "es": "afri cola", "fr": "afri cola", "ru": "Афри Кола", "ja": "アフリ・コーラ", "zh": "Afri 可乐", "fa": "افری کولا", "hi": "अफ्री कोला", "ar": "أفري كولا" }
+    },
+    "soda_cola_freeway": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Freeway Cola (Lidl)", "icon": "🥤", "latin": "Potio carbonata (Freeway)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 43, "water_g": 89.4, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.6, "sugar_g": 10.6, "fiber_g": 0.0, "caffeine_mg": 10.0 },
+      "meta": { "locations": ["lidl"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget / Discounter", "sweetener": "100% Sugar" },
+      "props": ["Lidl's flagship private label", "Matches Coca-Cola's nutritional profile almost exactly", "High carbonation"],
+      "lang": { "de": "Freeway Cola", "en": "Freeway Cola", "es": "Freeway Cola", "fr": "Freeway Cola", "ru": "Фривей Кола", "ja": "フリーウェイ コーラ", "zh": "Freeway 可乐", "fa": "فری‌وی کولا", "hi": "फ्रीवे कोला", "ar": "فري واي كولا" }
+    },
+    "soda_cola_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Cola (Kaufland)", "icon": "🥤", "latin": "Potio carbonata (K-Classic)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 44, "water_g": 89.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 11.0, "sugar_g": 11.0, "fiber_g": 0.0, "caffeine_mg": 10.0 },
+      "meta": { "locations": ["kaufland"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget / Discounter", "sweetness": "High" },
+      "props": ["Kaufland budget equivalent", "Slightly higher sugar content than Coke", "Available in 1.5L bulk sizes"],
+      "lang": { "de": "K-Classic Cola", "en": "K-Classic Cola", "es": "Cola K-Classic", "fr": "Cola K-Classic", "ru": "K-Classic Кола", "ja": "K-Classic コーラ", "zh": "K-Classic 可乐", "fa": "کولا کا-کلاسیک", "hi": "के-क्लासिक कोला", "ar": "ك-كلاسيك كولا" }
+    },
+
+    "--- SODA_LEMON_LIME_VARIANTS ---": "Zitronen-/Limettenlimonaden (Clear Sodas)",
+    "soda_lemon_sprite": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Sprite", "icon": "🍋", "latin": "Potio carbonata (Citrus-Lymon)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 37, "water_g": 91.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 9.0, "sugar_g": 9.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "flavor_profile": "Lemon/Lime clear soda", "caffeine": "Zero" },
+      "props": ["Coca-Cola's lemon-lime leader", "Clear, caffeine-free", "Often reduced sugar in modern EU formulations"],
+      "lang": { "de": "Sprite", "en": "Sprite", "es": "Sprite", "fr": "Sprite", "ru": "Спрайт", "ja": "スプライト", "zh": "雪碧", "fa": "اسپرایت", "hi": "स्प्राइट", "ar": "سبرايت" }
+    },
+    "soda_lemon_7up": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "7UP", "icon": "🍋", "latin": "Potio carbonata (7UP)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 33, "water_g": 91.7, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 8.3, "sugar_g": 8.3, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "PepsiCo" },
+      "quality_metrics": { "flavor_profile": "Lime-forward clear soda", "caffeine": "Zero" },
+      "props": ["PepsiCo's direct rival to Sprite", "Slightly less sugar, crisper lime focus", "Completely caffeine-free"],
+      "lang": { "de": "7UP", "en": "7UP", "es": "7UP", "fr": "7UP", "ru": "7 Ап", "ja": "セブンアップ", "zh": "七喜", "fa": "سون آپ", "hi": "7अप", "ar": "سفن أب" }
+    },
+    "soda_lemon_freeway_up": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Freeway UP (Lidl)", "icon": "🍋", "latin": "Potio carbonata (Freeway Lymon)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 39, "water_g": 90.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 9.5, "sugar_g": 9.5, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget / Discounter", "caffeine": "Zero" },
+      "props": ["Lidl's Sprite/7UP clone", "Classic green bottle design", "Solid sweet-sour balance"],
+      "lang": { "de": "Freeway UP", "en": "Freeway UP", "es": "Freeway UP", "fr": "Freeway UP", "ru": "Фривей Ап", "ja": "フリーウェイ UP", "zh": "Freeway UP", "fa": "فری‌وی آپ", "hi": "फ्रीवे अप", "ar": "فري واي أب" }
+    },
+    "soda_lemon_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Zitrone (Kaufland)", "icon": "🍋", "latin": "Potio carbonata (K-Classic Lymon)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 40, "water_g": 90.2, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 9.8, "sugar_g": 9.8, "fiber_g": 0.0 },
+      "meta": { "locations": ["kaufland"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget / Discounter", "carbonation": "High" },
+      "props": ["Kaufland's clear lemon soda", "Slightly higher calorie density than 7UP", "Refreshing high carbonation"],
+      "lang": { "de": "K-Classic Zitronenlimonade", "en": "K-Classic Lemon", "es": "Limonada K-Classic", "fr": "Limonade K-Classic", "ru": "Лимонад K-Classic", "ja": "K-Classic レモン", "zh": "K-Classic 柠檬", "fa": "لیموناد کا-کلاسیک", "hi": "के-क्लासिक लेमन", "ar": "ليمون ك-كلاسيك" }
+    },
+
+    "--- SODA_COLA_MIX_VARIANTS ---": "Cola-Mix Getränke (Spezi-Kategorie)",
+    "soda_mix_paulaner_spezi": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Paulaner Spezi", "icon": "🥤", "latin": "Potio carbonata (Spezi Paulaner)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 36, "water_g": 91.1, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 8.9, "sugar_g": 8.9, "fiber_g": 0.0, "caffeine_mg": 7.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "vegan": true },
+      "quality_metrics": { "benefit": "The gold standard of Cola-Mix", "fruit_content": "Real orange juice concentrate used" },
+      "props": ["Contains real orange juice concentrate and mandarin extract", "Cult classic in Germany, highly defended recipe", "Fruity, less aggressive acid profile than Mezzo Mix"],
+      "lang": { "de": "Paulaner Spezi", "en": "Paulaner Spezi", "es": "Paulaner Spezi", "fr": "Paulaner Spezi", "ru": "Паулайнер Шпеци", "ja": "パウラーナー シュペッツィ", "zh": "柏龙 Spezi", "fa": "پاولانر اشپتسی", "hi": "पॉलानर स्पेज़ी", "ar": "باولانر سبيزي" }
+    },
+    "soda_mix_mezzo_mix": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mezzo Mix", "icon": "🥤", "latin": "Potio carbonata (Mezzo)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 43, "water_g": 89.7, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.3, "sugar_g": 10.3, "fiber_g": 0.0, "caffeine_mg": 6.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Coca-Cola Company" },
+      "quality_metrics": { "flavor_profile": "Cola/Orange hybrid", "sweetness": "High" },
+      "props": ["Coca-Cola's classic mix of Coke and Fanta", "Higher sugar content than Paulaner Spezi", "Standard in fast-food chains"],
+      "lang": { "de": "Mezzo Mix", "en": "Mezzo Mix", "es": "Mezzo Mix", "fr": "Mezzo Mix", "ru": "Меццо Микс", "ja": "メッツォミックス", "zh": "Mezzo Mix", "fa": "متزو میکس", "hi": "मेज़ो मिक्स", "ar": "ميزو ميكس" }
+    },
+    "soda_mix_schwip_schwap": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Schwip Schwap", "icon": "🥤", "latin": "Potio carbonata (Schwip)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 28, "water_g": 93.3, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 6.7, "sugar_g": 6.6, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "PepsiCo" },
+      "quality_metrics": { "flavor_profile": "Citrus-heavy Cola mix", "sweetener_system": "Sugar + Sweetener blend (EU)" },
+      "props": ["PepsiCo's Cola-Mix", "Lowest calorie count of the big three due to sweetener blend", "Very citrus-forward taste"],
+      "lang": { "de": "Schwip Schwap", "en": "Schwip Schwap", "es": "Schwip Schwap", "fr": "Schwip Schwap", "ru": "Швип Швап", "ja": "シュウィップ・シュワップ", "zh": "Schwip Schwap", "fa": "شویپ شواپ", "hi": "श्विप श्वाप", "ar": "شويب شويب" }
+    },
+    "soda_mix_freeway": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Freeway Mixx (Lidl)", "icon": "🥤", "latin": "Potio carbonata (Freeway Mix)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 42, "water_g": 89.6, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.4, "sugar_g": 10.4, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget / Discounter", "sweetness": "High" },
+      "props": ["Lidl's Mezzo Mix equivalent", "Full sugar profile, heavily carbonated", "Excellent budget choice for parties"],
+      "lang": { "de": "Freeway Mixx", "en": "Freeway Mixx", "es": "Freeway Mixx", "fr": "Freeway Mixx", "ru": "Фривей Микс", "ja": "フリーウェイ ミックス", "zh": "Freeway Mixx", "fa": "فری‌وی میکس", "hi": "फ्रीवे मिक्स", "ar": "فري واي ميكس" }
+    },
+	
+    "--- SODA_ORANGE_AND_FRUIT ---": "Orangen- & Fruchtlimonaden (Das Fanta-Universum)",
+    "soda_orange_fanta_original": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fanta Orange", "icon": "🍊", "latin": "Potio carbonata (Citrus aurantium)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 38, "water_g": 90.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 9.1, "sugar_g": 9.1, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true, "brand": "Coca-Cola" },
+      "quality_metrics": { "fruit_content": "3% Orangen- und Zitrussaft (in DE)", "caffeine": "Zero" },
+      "props": ["The classic orange soda, originally invented in Germany", "Varies heavily by country (e.g., Italian Fanta has much more real juice)", "Caffeine-free"],
+      "lang": { "de": "Fanta Orange", "en": "Fanta Orange", "es": "Fanta Naranja", "fr": "Fanta Orange", "ru": "Фанта Апельсин", "ja": "ファンタ オレンジ", "zh": "芬达橙味", "fa": "فانتا پرتقالی", "hi": "फैंटा ऑरेंज", "ar": "فانتا برتقال" }
+    },
+    "soda_orange_fanta_zero": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fanta Orange Zero", "icon": "🧡", "latin": "Potio carbonata (Fanta acalorica)", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 3, "water_g": 99.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.5, "sugar_g": 0.4, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "vegan": true },
+      "quality_metrics": { "sweetener_system": "Aspartame & Acesulfame-K", "mouthfeel": "Thinner than original" },
+      "props": ["Zero sugar alternative to the classic", "Uses Aspartame and Acesulfame-K", "Slightly thinner mouthfeel than the sugary original"],
+      "lang": { "de": "Fanta Zero", "en": "Fanta Zero", "es": "Fanta Zero", "fr": "Fanta Sans Sucres", "ru": "Фанта Зеро", "ja": "ファンタ ゼロ", "zh": "芬达零度", "fa": "فانتا زیرو", "hi": "फैंटा ज़ीरो", "ar": "فانتا زيرو" }
+    },
+    "soda_fruit_fanta_exotic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fanta Exotic", "icon": "🌴", "latin": "Potio carbonata (Fructus exotica)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 43, "water_g": 89.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.5, "sugar_g": 10.5, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "vegan": true },
+      "quality_metrics": { "flavor_profile": "Tropical Fruit Blend", "sweetness": "Very High" },
+      "props": ["Tropical blend (passion fruit, peach, citrus)", "Higher sugar density than regular Fanta Orange", "Absolute cult classic in Europe"],
+      "lang": { "de": "Fanta Exotic", "en": "Fanta Exotic", "es": "Fanta Exótica", "fr": "Fanta Exotique", "ru": "Фанта Экзотик", "ja": "ファンタ エキゾチック", "zh": "芬达热带水果", "fa": "فانتا استوایی", "hi": "फैंटा एक्सोटिक", "ar": "فانتا إكزوتيك" }
+    },
+    "soda_lemon_fanta_lemon": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fanta Lemon", "icon": "🍋", "latin": "Potio carbonata (Fanta Limon)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 33, "water_g": 92.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 8.0, "sugar_g": 8.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland"], "vegan": true },
+      "quality_metrics": { "texture": "Cloudy (Trüb)", "acidity": "Tart/Refresh" },
+      "props": ["Cloudy lemon soda (unlike clear Sprite)", "Tart and less sweet profile", "Extremely refreshing summer drink"],
+      "lang": { "de": "Fanta Lemon", "en": "Fanta Lemon", "es": "Fanta Limón", "fr": "Fanta Citron", "ru": "Фанта Лимон", "ja": "ファンタ レモン", "zh": "芬达柠檬", "fa": "فانتا لیمو", "hi": "फैंटा लेमन", "ar": "فانتا ليمون" }
+    },
+
+    "--- SODA_ORANGE_COMPETITORS_AND_DISCOUNTER ---": "Orangen-Limpos (Wettbewerber & Eigenmarken)",
+    "soda_orange_mirinda": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mirinda Orange", "icon": "🍊", "latin": "Potio carbonata (Mirinda)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 31, "water_g": 92.2, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 7.8, "sugar_g": 7.8, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "brand": "PepsiCo" },
+      "quality_metrics": { "sweetener_system": "Sugar + Sweetener blend (EU)", "flavor_profile": "Candy-like Orange" },
+      "props": ["PepsiCo's direct answer to Fanta", "Often uses sweetener blends in the EU to reduce calories (hence only 31 kcal)", "Slightly more artificial, candy-like orange flavor"],
+      "lang": { "de": "Mirinda", "en": "Mirinda", "es": "Mirinda", "fr": "Mirinda", "ru": "Миринда", "ja": "ミリンダ", "zh": "美年达", "fa": "میریندا", "hi": "मिरिंडा", "ar": "ميريندا" }
+    },
+    "soda_orange_fritz_limo": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "fritz-limo Orange", "icon": "🍊", "latin": "Potio carbonata (fritz Aurantium)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 41, "water_g": 90.0, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 10.0, "sugar_g": 10.0, "fiber_g": 0.1 },
+      "meta": { "locations": ["rewe", "edeka", "gastronomy"], "vegan": true },
+      "quality_metrics": { "fruit_content": "10.5% Orange, 1.5% Mandarin, 5% Lemon", "texture": "Unfiltered (contains fruit solids)" },
+      "props": ["Premium indie lemonade", "Massive 17% real juice content makes it vastly superior in natural taste", "Unfiltered, contains slight fruit solids"],
+      "lang": { "de": "fritz-limo Orange", "en": "fritz-limo Orange", "es": "fritz-limo Naranja", "fr": "fritz-limo Orange", "ru": "Фриц-Лимо Апельсин", "ja": "フリッツ・リモ オレンジ", "zh": "Fritz-Limo 橙味", "fa": "فریتس لیمو پرتقالی", "hi": "फ्रिट्ज़-लिमो ऑरेंज", "ar": "فريتز ليمو برتقال" }
+    },
+    "soda_orange_freeway": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Freeway Orange (Lidl)", "icon": "🍊", "latin": "Potio carbonata (Freeway Aurantium)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 41, "water_g": 90.2, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 9.8, "sugar_g": 9.8, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget / Discounter", "sweetener": "100% Sugar" },
+      "props": ["Lidl's budget alternative to Fanta", "Full sugar profile (no artificial sweeteners in the classic version)", "Intense bright orange color"],
+      "lang": { "de": "Freeway Orange", "en": "Freeway Orange", "es": "Freeway Naranja", "fr": "Freeway Orange", "ru": "Фривей Апельсин", "ja": "フリーウェイ オレンジ", "zh": "Freeway 橙味", "fa": "فری‌وی پرتقالی", "hi": "फ्रीवे ऑरेंज", "ar": "فري واي برتقال" }
+    },
+    "soda_orange_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Orange (Kaufland)", "icon": "🍊", "latin": "Potio carbonata (K-Classic Aurantium)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 40, "water_g": 90.4, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 9.6, "sugar_g": 9.6, "fiber_g": 0.0 },
+      "meta": { "locations": ["kaufland"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget / Discounter", "availability": "Bulk PET sizes" },
+      "props": ["Kaufland's standard orange soda", "Very similar nutritional profile to Freeway", "Available in large bulk PET bottles"],
+      "lang": { "de": "K-Classic Orange", "en": "K-Classic Orange", "es": "Naranja K-Classic", "fr": "Orange K-Classic", "ru": "K-Classic Апельсин", "ja": "K-Classic オレンジ", "zh": "K-Classic 橙味", "fa": "پرتقالی کا-کلاسیک", "hi": "के-क्लासिक ऑरेंज", "ar": "برتقال ك-كلاسيك" }
+    },
+	
+    "--- ENERGY_PREMIUM_250ML_PIONEERS ---": "Red Bull (Die Premium 250ml-Klasse)",
+    "energy_red_bull_original": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Red Bull Energy Drink", "icon": "🐂", "latin": "Potio excitans (Taurinum)", "sci": ["#sci/Pharmacology", "#sci/Nutrition"],
+      "val": { "kcal": 45, "water_g": 89.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 11.0, "sugar_g": 11.0, "fiber_g": 0.0, "caffeine_mg": 32.0, "taurine_mg": 400.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "benefit": "Temporary cognitive performance boost", "caffeine_density": "32mg/100ml" },
+      "props": ["The global pioneer of energy drinks", "Classic 'gummy bear' flavor profile", "Premium pricing model globally"],
+      "lang": { "de": "Red Bull Classic", "en": "Red Bull", "es": "Red Bull", "fr": "Red Bull", "ru": "Ред Булл", "ja": "レッドブル", "zh": "红牛", "fa": "ردبول", "hi": "रेड बुल", "ar": "ريد بول" }
+    },
+    "energy_red_bull_sugarfree": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Red Bull Sugarfree", "icon": "🤍", "latin": "Potio excitans (Taurinum acalorica)", "sci": ["#sci/Nutrition", "#sci/Pharmacology"],
+      "val": { "kcal": 3, "water_g": 99.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "caffeine_mg": 32.0, "taurine_mg": 400.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "sweetener_system": "Aspartame & Acesulfame-K", "caffeine_density": "32mg/100ml" },
+      "props": ["Uses Aspartame and Acesulfame-K", "Maintains the classic acidic bite without the syrupy mouthfeel", "Light blue/silver can design"],
+      "lang": { "de": "Red Bull Sugarfree", "en": "Red Bull Sugarfree", "es": "Red Bull Sin Azúcar", "fr": "Red Bull Sans Sucre", "ru": "Ред Булл без сахара", "ja": "レッドブル シュガーフリー", "zh": "无糖红牛", "fa": "ردبول بدون قند", "hi": "रेड बुल शुगरफ्री", "ar": "ريد بول خالي من السكر" }
+    },
+    "energy_red_bull_yellow_tropical": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Red Bull Yellow Edition (Tropical)", "icon": "🍍", "latin": "Potio excitans (Fructus exotica)", "sci": ["#sci/Culinary", "#sci/Pharmacology"],
+      "val": { "kcal": 45, "water_g": 89.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 11.0, "sugar_g": 11.0, "fiber_g": 0.0, "caffeine_mg": 32.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "flavor": "Tropical Fruits" },
+      "quality_metrics": { "flavor_profile": "Pineapple/Tropical", "caffeine_density": "32mg/100ml" },
+      "props": ["One of the most successful Red Bull flavor variants", "Intense pineapple and tropical fruit notes", "Perfect for summer mixology"],
+      "lang": { "de": "Red Bull Yellow Edition", "en": "Red Bull Tropical", "es": "Red Bull Tropical", "fr": "Red Bull Tropical", "ru": "Ред Булл Тропик", "ja": "レッドブル トロピカル", "zh": "红牛热带风味", "fa": "ردبول استوایی", "hi": "रेड बुल ट्रॉपिकल", "ar": "ريد بول استوائي" }
+    },
+
+    "--- ENERGY_VOLUME_500ML_KINGS ---": "Monster & Rockstar (Die 500ml Flavor-Giganten)",
+    "energy_monster_original": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Monster Energy (Green)", "icon": "💚", "latin": "Potio excitans (Monster Original)", "sci": ["#sci/Pharmacology", "#sci/FoodScience"],
+      "val": { "kcal": 47, "water_g": 88.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 12.0, "sugar_g": 11.0, "fiber_g": 0.0, "caffeine_mg": 32.0, "taurine_mg": 400.0 },
+      "meta": { "locations": ["everywhere"], "volume_ml": 500 },
+      "quality_metrics": { "botanicals": "Ginseng & Guarana extracts added", "format": "High volume (500ml)" },
+      "props": ["Sweet, salty, and citrus flavor profile", "Contains Ginseng and Guarana extracts", "Standard for high-volume 500ml energy drinks"],
+      "lang": { "de": "Monster Energy Original", "en": "Monster Original", "es": "Monster Verde", "fr": "Monster Energy", "ru": "Монстр Энерджи", "ja": "モンスターエナジー", "zh": "魔爪能量", "fa": "مانستر اصلی", "hi": "मॉन्स्टर", "ar": "مونستر إنرجي" }
+    },
+    "energy_monster_ultra_white": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Monster Ultra (White / Zero Sugar)", "icon": "🤍", "latin": "Potio excitans (Ultra acalorica)", "sci": ["#sci/Nutrition", "#sci/Pharmacology"],
+      "val": { "kcal": 2, "water_g": 99.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.9, "sugar_g": 0.0, "fiber_g": 0.0, "caffeine_mg": 30.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl", "edeka"], "flavor": "Citrus / Grapefruit" },
+      "quality_metrics": { "sugar_status": "Zero Sugar / Erythritol & Sucralose blend", "caffeine_density": "30mg/100ml" },
+      "props": ["Zero sugar, zero calories", "Light, refreshing citrus taste with slightly less carbonation", "The undisputed king of sugar-free energy drinks globally"],
+      "lang": { "de": "Monster Ultra White", "en": "Monster Ultra White", "es": "Monster Ultra Blanco", "fr": "Monster Ultra Blanc", "ru": "Монстр Ультра", "ja": "モンスター ウルトラ", "zh": "魔爪无糖白罐", "fa": "مانستر اولترا", "hi": "मॉन्स्टर अल्ट्रा", "ar": "مونستر ألترا" }
+    },
+    "energy_monster_mango_loco": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Monster Mango Loco (Juice)", "icon": "🥭", "latin": "Potio excitans (Mangifera mix)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 48, "water_g": 88.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 12.0, "sugar_g": 11.0, "fiber_g": 0.0, "caffeine_mg": 32.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "flavor": "Mango / Exotic Fruit" },
+      "quality_metrics": { "juice_content": "Contains 15% real fruit juice", "mouthfeel": "Thick / Viscous" },
+      "props": ["Juice-based energy drink (contains 15% real fruit juice)", "Deep tropical flavor inspired by 'Dia de los Muertos'", "Thicker mouthfeel due to juice content"],
+      "lang": { "de": "Monster Mango Loco", "en": "Monster Mango Loco", "es": "Monster Mango Loco", "fr": "Monster Mango Loco", "ru": "Монстр Манго Локо", "ja": "マンゴーロコ", "zh": "魔爪芒果味", "fa": "مانستر منگو لوکو", "hi": "मॉन्स्टर मैंगो", "ar": "مونستر مانجو لوكو" }
+    },
+    "energy_rockstar_original": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Rockstar Energy Original", "icon": "⭐", "latin": "Potio excitans (Rockstar)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 49, "water_g": 88.6, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 11.4, "sugar_g": 11.4, "fiber_g": 0.0, "caffeine_mg": 32.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "PepsiCo" },
+      "quality_metrics": { "botanicals": "Guarana, Ginseng, Ginkgo Biloba", "format": "High volume (500ml)" },
+      "props": ["PepsiCo's major competitor to Monster", "Slightly sweeter and fruitier than Monster Original", "Contains Guarana, Ginseng, and Ginkgo Biloba"],
+      "lang": { "de": "Rockstar Original", "en": "Rockstar Original", "es": "Rockstar", "fr": "Rockstar", "ru": "Рокстар", "ja": "ロックスター", "zh": "摇滚之星", "fa": "راکستار", "hi": "रॉकस्टार", "ar": "روكستار" }
+    },
+
+    "--- ENERGY_PRIVATE_LABEL_DISCOUNTER ---": "Eigenmarken (Die hochoptimierten Preis-Leistungs-Sieger)",
+    "energy_kong_strong_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Kong Strong Classic (Lidl)", "icon": "🦍", "latin": "Potio excitans (Lidl)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 45, "water_g": 89.2, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.8, "sugar_g": 10.8, "fiber_g": 0.0, "caffeine_mg": 32.0 },
+      "meta": { "locations": ["lidl"], "brand": "Kong Strong" },
+      "quality_metrics": { "price_segment": "Budget Discounter", "flavor_match": "Red Bull Clone" },
+      "props": ["Lidl's flagship energy drink", "Flavor profile engineered to mimic Red Bull perfectly", "Available in small 250ml cans and large 500ml PET bottles"],
+      "lang": { "de": "Kong Strong Classic", "en": "Kong Strong Classic", "es": "Kong Strong", "fr": "Kong Strong", "ru": "Конг Стронг", "ja": "コング・ストロング", "zh": "Kong Strong", "fa": "کونگ استرانگ", "hi": "कोंग स्ट्रॉन्ग", "ar": "كونغ سترونج" }
+    },
+    "energy_kong_strong_colossus": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Kong Strong Colossus (Lidl - Wild Berry)", "icon": "🫐", "latin": "Potio excitans (Lidl Baccae)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 46, "water_g": 89.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 11.0, "sugar_g": 11.0, "fiber_g": 0.0, "caffeine_mg": 32.0 },
+      "meta": { "locations": ["lidl"], "flavor": "Wild Berry / Blue" },
+      "quality_metrics": { "color": "Deep Blue/Neon", "carbonation": "High" },
+      "props": ["Lidl's answer to colorful 'Blue' energy editions", "Strong artificial berry aroma, deep blue color", "Highly carbonated and extremely sweet"],
+      "lang": { "de": "Kong Strong Wild Berry", "en": "Kong Strong Wild Berry", "es": "Kong Strong Arándano", "fr": "Kong Strong Baies Sauvages", "ru": "Конг Стронг Ягода", "ja": "コング ベリー", "zh": "Kong Strong 野莓味", "fa": "کونگ استرانگ بری", "hi": "कोंग स्ट्रॉन्ग बेरी", "ar": "كونغ سترونج توت" }
+    },
+    "energy_crazy_wolf_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Crazy Wolf Classic (Kaufland)", "icon": "🐺", "latin": "Potio excitans (Kauflandia)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 44, "water_g": 89.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.1, "sugar_g": 10.1, "fiber_g": 0.0, "caffeine_mg": 30.0 },
+      "meta": { "locations": ["kaufland"], "brand": "Crazy Wolf" },
+      "quality_metrics": { "price_segment": "Budget Discounter", "caffeine": "Slightly below max limit (30mg)" },
+      "props": ["Kaufland's budget standard energy drink", "Slightly less caffeine (30mg) than the legal max", "Known for a vast array of cheap flavor variants"],
+      "lang": { "de": "Crazy Wolf Classic", "en": "Crazy Wolf Classic", "es": "Crazy Wolf", "fr": "Crazy Wolf", "ru": "Крейзи Вульф", "ja": "クレイジー・ウルフ", "zh": "Crazy Wolf", "fa": "کریزی ولف", "hi": "क्रेज़ी वुल्फ", "ar": "كريزي وولف" }
+    },
+    "energy_crazy_wolf_apple": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Crazy Wolf Apple", "icon": "🍏", "latin": "Potio excitans (Kauflandia Malus)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 44, "water_g": 89.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.1, "sugar_g": 10.1, "fiber_g": 0.0, "caffeine_mg": 30.0 },
+      "meta": { "locations": ["kaufland"], "flavor": "Sour Green Apple" },
+      "quality_metrics": { "flavor_profile": "Sour/Tart Apple", "color": "Neon Green" },
+      "props": ["Refreshing green apple flavor with balanced acidity", "Distinctive neon-green liquid", "Extremely popular budget alternative to Rockstar Sour Apple"],
+      "lang": { "de": "Crazy Wolf Apfel", "en": "Crazy Wolf Apple", "es": "Crazy Wolf Manzana", "fr": "Crazy Wolf Pomme", "ru": "Крейзи Вульф Яблоко", "ja": "クレイジー アップル", "zh": "Crazy Wolf 苹果味", "fa": "کریزی ولف سیب", "hi": "क्रेज़ी वुल्फ एप्पल", "ar": "كريزي وولف تفاح" }
+    },
+    "energy_flying_power_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Flying Power (Aldi)", "icon": "🦅", "latin": "Potio excitans (Aldia)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 45, "water_g": 89.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 11.0, "sugar_g": 11.0, "fiber_g": 0.0, "caffeine_mg": 32.0 },
+      "meta": { "locations": ["aldi_nord", "aldi_süd"], "brand": "Flying Power" },
+      "quality_metrics": { "price_segment": "Budget Discounter", "flavor_match": "Red Bull Clone" },
+      "props": ["Traditional Aldi energy brand", "Classic Red Bull clone profile", "Consistent mineralized base and carbonation"],
+      "lang": { "de": "Flying Power Classic", "en": "Flying Power", "es": "Flying Power", "fr": "Flying Power", "ru": "Флайинг Пауэр", "ja": "フライング・パワー", "zh": "Flying Power", "fa": "فلاینگ پاور", "hi": "फ्लाइंग पावर", "ar": "فلاينج باور" }
+    },
+    "energy_booster_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Booster Energy (Edeka/Netto)", "icon": "🚀", "latin": "Potio excitans (Edeka)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 46, "water_g": 89.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 11.0, "sugar_g": 11.0, "fiber_g": 0.0, "caffeine_mg": 32.0 },
+      "meta": { "locations": ["edeka", "netto"], "brand": "Booster" },
+      "quality_metrics": { "acidity": "Slightly higher than average", "price_segment": "Budget" },
+      "props": ["The private label energy drink of the Edeka Group", "Slightly fruitier and more acidic than Kong Strong", "Available in 'Absolute Zero' and 'Juicy' variants"],
+      "lang": { "de": "Booster Energy", "en": "Booster Energy", "es": "Booster", "fr": "Booster", "ru": "Бустер", "ja": "ブースター エナジー", "zh": "Booster 能量", "fa": "بوستر انرژی", "hi": "बूस्टर एनर्जी", "ar": "بوستر إنرجي" }
+    },
+    "energy_crazy_wolf_sugarfree": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Crazy Wolf Sugarfree", "icon": "🐺", "latin": "Potio excitans (Wolf acalorica)", "sci": ["#sci/Nutrition", "#sci/Pharmacology"],
+      "val": { "kcal": 3, "water_g": 99.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "caffeine_mg": 30.0 },
+      "meta": { "locations": ["kaufland"], "vegan": true, "brand": "Crazy Wolf" },
+      "quality_metrics": { "sweetener_system": "Aspartame & Acesulfame-K", "caffeine": "30mg/100ml" },
+      "props": ["The low-budget diet energy staple at Kaufland", "Slightly more acidic bite than the classic version", "Uses Aspartame and Acesulfame-K"],
+      "lang": { "de": "Crazy Wolf Zuckerfrei", "en": "Crazy Wolf Sugarfree", "es": "Crazy Wolf Sin Azúcar", "fr": "Crazy Wolf Sans Sucre", "ru": "Крейзи Вульф без сахара", "ja": "クレイジー シュガーフリー", "zh": "Crazy Wolf 无糖", "fa": "کریزی ولف بدون قند", "hi": "क्रेज़ी वुल्फ शुगरफ्री", "ar": "كريزي وولف خالي من السكر" }
+    },
+    "energy_crazy_wolf_cherry": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Crazy Wolf Cherry", "icon": "🍒", "latin": "Potio excitans (Kauflandia Cerasus)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 44, "water_g": 89.9, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.1, "sugar_g": 10.1, "fiber_g": 0.0, "caffeine_mg": 30.0 },
+      "meta": { "locations": ["kaufland"], "flavor": "Sweet Cherry", "brand": "Crazy Wolf" },
+      "quality_metrics": { "color": "Intense Red", "flavor_profile": "Sweet Cherry" },
+      "props": ["Sweet, dark cherry aroma", "Intense red color", "A classic budget 'Cherry-Energy' profile"],
+      "lang": { "de": "Crazy Wolf Kirsche", "en": "Crazy Wolf Cherry", "es": "Crazy Wolf Cereza", "fr": "Crazy Wolf Cerise", "ru": "Крейзи Вульф Вишня", "ja": "クレイジー チェリー", "zh": "Crazy Wolf 樱桃味", "fa": "کریزی ولف گیلاس", "hi": "क्रेज़ी वुल्फ चेरी", "ar": "كريزي وولف كرز" }
+    },
+    "energy_crazy_wolf_cactus": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Crazy Wolf Cactus", "icon": "🌵", "latin": "Potio excitans (Kauflandia Opuntia)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 45, "water_g": 89.8, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.2, "sugar_g": 10.2, "fiber_g": 0.0, "caffeine_mg": 30.0 },
+      "meta": { "locations": ["kaufland"], "flavor": "Cactus Fruit / Opuntia", "brand": "Crazy Wolf" },
+      "quality_metrics": { "flavor_profile": "Prickly Pear / Floral", "color": "Light Green" },
+      "props": ["Unique floral-sweet flavor of prickly pear (Kaktusfeige)", "Extremely popular and trendy summer edition flavor", "Refreshing light green profile"],
+      "lang": { "de": "Crazy Wolf Kaktus", "en": "Crazy Wolf Cactus", "es": "Crazy Wolf Cactus", "fr": "Crazy Wolf Cactus", "ru": "Крейзи Вульф Кактус", "ja": "クレイジー サボテン", "zh": "Crazy Wolf 仙人掌味", "fa": "کریزی ولف کاکتوس", "hi": "क्रेज़ी वुल्फ कैक्टस", "ar": "كريزي وولف صبار" }
+    },
+    "energy_crazy_wolf_cola": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Crazy Wolf Cola-Energy", "icon": "🥤", "latin": "Potio excitans (Kauflandia Cola)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 43, "water_g": 89.6, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 10.4, "sugar_g": 10.4, "fiber_g": 0.0, "caffeine_mg": 30.0 },
+      "meta": { "locations": ["kaufland"], "flavor": "Cola Mix", "brand": "Crazy Wolf" },
+      "quality_metrics": { "flavor_profile": "Cola/Energy Hybrid", "caffeine_density": "30mg/100ml" },
+      "props": ["Hybrid between traditional cola and an energy drink", "Darker color, caramel notes mixed with taurine bite", "A budget tribute to the classic 'Red Bull Cola' concept"],
+      "lang": { "de": "Crazy Wolf Cola", "en": "Crazy Wolf Cola", "es": "Crazy Wolf Cola", "fr": "Crazy Wolf Cola", "ru": "Крейзи Вульф Кола", "ja": "クレイジー コーラ", "zh": "Crazy Wolf 可乐味", "fa": "کریزی ولف کولا", "hi": "क्रेज़ी वुल्फ कोला", "ar": "كريزي وولف كولا" }
+    },
+	
+    "--- BRANDED_JUICES_AMECKE_PREMIUM ---": "Amecke Säfte (Sanft & Funktional)",
+    "juice_apple_amecke_mild": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Amecke Sanfte Säfte Apfel naturtrüb", "icon": "🍏", "latin": "Succus mali mitis (Amecke)", "sci": ["#sci/Gastroenterology", "#sci/Nutrition"],
+      "val": { "kcal": 45, "water_g": 89.5, "protein_g": 0.1, "fat_total_g": 0.1, "carbs_total_g": 10.5, "sugar_g": 10.0, "fiber_g": 0.5 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "vegan": true },
+      "quality_metrics": { "benefit": "Acid-reduced for sensitive stomachs", "purity": "100% Direct Juice" },
+      "props": ["Specially selected low-acid apple varieties", "Gentle on the stomach lining", "Premium direct juice, not from concentrate"],
+      "lang": { "de": "Amecke Sanfter Apfel", "en": "Amecke Mild Apple", "es": "Amecke Manzana Suave", "fr": "Amecke Pomme Douce", "ru": "Амеке Мягкое Яблоко", "ja": "アメッケ マイルドアップル", "zh": "Amecke 温和苹果汁", "fa": "آمکه سیب ملایم", "hi": "अमेके माइल्ड एप्पल", "ar": "أميكه تفاح خفيف" }
+    },
+    "juice_orange_amecke_mild": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Amecke Sanfte Säfte Orange", "icon": "🍊", "latin": "Succus aurantii mitis (Amecke)", "sci": ["#sci/Gastroenterology", "#sci/Nutrition"],
+      "val": { "kcal": 43, "water_g": 90.0, "protein_g": 0.7, "fat_total_g": 0.2, "carbs_total_g": 9.0, "sugar_g": 9.0, "fiber_g": 0.2, "vit_c_mg": 30.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "vegan": true },
+      "quality_metrics": { "benefit": "Acid-reduced (pH optimized)", "purity": "100% Direct Juice" },
+      "props": ["Removes the harsh citric bite of standard orange juice", "100% direct juice", "Ideal for breakfast without acid reflux"],
+      "lang": { "de": "Amecke Sanfte Orange", "en": "Amecke Mild Orange", "es": "Amecke Naranja Suave", "fr": "Amecke Orange Douce", "ru": "Амеке Мягкий Апельсин", "ja": "アメッケ マイルドオレンジ", "zh": "Amecke 温和橙汁", "fa": "آمکه پرتقال ملایم", "hi": "अमेके माइल्ड ऑरेंज", "ar": "أميكه برتقال خفيف" }
+    },
+    "juice_grape_amecke_iron": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Amecke Rote Traube + Eisen", "icon": "🍇", "latin": "Succus vitis rubrae (Amecke + Ferrum)", "sci": ["#sci/Nutrition", "#sci/Supplementation"],
+      "val": { "kcal": 66, "water_g": 84.0, "protein_g": 0.2, "fat_total_g": 0.1, "carbs_total_g": 15.6, "sugar_g": 15.6, "fiber_g": 0.1, "iron_mg": 2.1, "vit_c_mg": 12.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "vegan": true },
+      "quality_metrics": { "benefit": "Bioavailable Iron (Iron(II) + Vit C synergy)", "fortification": "High" },
+      "props": ["Functional juice heavily fortified with iron", "Contains added Vitamin C to boost iron absorption", "Very sweet, deep red grape base"],
+      "lang": { "de": "Amecke Traube + Eisen", "en": "Amecke Grape + Iron", "es": "Amecke Uva + Hierro", "fr": "Amecke Raisin + Fer", "ru": "Амеке Виноград + Железо", "ja": "アメッケ グレープ＋鉄分", "zh": "Amecke 葡萄+铁", "fa": "آمکه انگور و آهن", "hi": "अमेके ग्रेप + आयरन", "ar": "أميكه عنب + حديد" }
+    },
+    "juice_multi_amecke_zinc": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Amecke Apfel-Traube-Himbeere + Zink", "icon": "🫐", "latin": "Succus multifructus (Amecke + Zincum)", "sci": ["#sci/Immunology", "#sci/Nutrition"],
+      "val": { "kcal": 48, "water_g": 88.0, "protein_g": 0.2, "fat_total_g": 0.1, "carbs_total_g": 11.0, "sugar_g": 10.5, "fiber_g": 0.3, "zinc_mg": 1.5, "vit_c_mg": 24.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "vegan": true },
+      "quality_metrics": { "benefit": "Immune system support", "fortification": "Zinc + Vit C" },
+      "props": ["Functional multi-fruit blend focused on immune health", "Fortified with Zinc and Vitamin C", "Pleasant berry-forward taste profile"],
+      "lang": { "de": "Amecke Himbeere + Zink", "en": "Amecke Raspberry + Zinc", "es": "Amecke Frambuesa + Zinc", "fr": "Amecke Framboise + Zinc", "ru": "Амеке Малина + Цинк", "ja": "アメッケ ラズベリー＋亜鉛", "zh": "Amecke 覆盆子+锌", "fa": "آمکه تمشک و روی", "hi": "अमेके रास्पबेरी + जिंक", "ar": "أميكه توت عليق + زنك" }
+    },
+	
+    "--- BRANDED_JUICES_INNOCENT_CHILLED ---": "Innocent (Direktsäfte aus dem Kühlregal)",
+    "juice_orange_innocent_pulp": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Innocent Orange (Mit viel Fruchtfleisch)", "icon": "🍊", "latin": "Succus aurantii directus (Innocent)", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 36, "water_g": 91.0, "protein_g": 0.7, "fat_total_g": 0.2, "carbs_total_g": 7.4, "sugar_g": 7.4, "fiber_g": 0.8, "vit_c_mg": 28.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "vegan": true },
+      "quality_metrics": { "process": "Cold-pressed / Never from concentrate", "storage": "Chilled only (2-8°C)" },
+      "props": ["Premium chilled juice segment", "Retains pulp for added fiber and natural texture", "Tastes closest to freshly squeezed homemade juice"],
+      "lang": { "de": "Innocent Orange (mit Fruchtfleisch)", "en": "Innocent Orange with Pulp", "es": "Innocent Naranja con Pulpa", "fr": "Innocent Orange avec Pulpe", "ru": "Инносент Апельсин с мякотью", "ja": "イノセント オレンジ 果肉入り", "zh": "Innocent 带果肉橙汁", "fa": "آب پرتقال پالپ‌دار اینوسنت", "hi": "इनोसेंट ऑरेंज पल्प के साथ", "ar": "إينوسينت برتقال مع اللب" }
+    },
+    "juice_apple_innocent_cloudy": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Innocent Apfelsaft (Naturtrüb)", "icon": "🍏", "latin": "Succus mali non filtratus (Innocent)", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 42, "water_g": 89.0, "protein_g": 0.1, "fat_total_g": 0.1, "carbs_total_g": 10.0, "sugar_g": 10.0, "fiber_g": 0.3, "vit_c_mg": 12.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "vegan": true },
+      "quality_metrics": { "texture": "Naturally cloudy (Pectin)", "process": "Direct juice" },
+      "props": ["Blend of sweet and tart apple varieties", "Gently pressed and kept chilled to preserve orchard-fresh flavor", "Naturally cloudy with apple pectin"],
+      "lang": { "de": "Innocent Apfelsaft", "en": "Innocent Apple Juice", "es": "Innocent Manzana", "fr": "Innocent Pomme", "ru": "Инносент Яблоко", "ja": "イノセント アップル", "zh": "Innocent 苹果汁", "fa": "آب سیب اینوسنت", "hi": "इनोसेंट एप्पल जूस", "ar": "إينوسينت عصير تفاح" }
+    },
+
+    "--- SMOOTHIES_INNOCENT_SUPER_BLEND ---": "Innocent (Klassik & Super Smoothies)",
+    "smoothie_innocent_mango_passion": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Innocent Smoothie (Mango & Maracuja)", "icon": "🥭", "latin": "Fructus tritus (Mango/Passiflora)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 54, "water_g": 86.0, "protein_g": 0.6, "fat_total_g": 0.2, "carbs_total_g": 11.0, "sugar_g": 11.0, "fiber_g": 1.4, "vit_c_mg": 30.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland", "to_go_bakeries"], "vegan": true },
+      "quality_metrics": { "texture": "Thick / Puree base", "purity": "100% Fruit" },
+      "props": ["A blend of crushed fruit and juice, not just liquid", "High fruit density provides intense flavor and natural dietary fiber", "Often consumed as a small liquid meal or snack"],
+      "lang": { "de": "Innocent Smoothie Mango Maracuja", "en": "Innocent Smoothie Mango Passion", "es": "Innocent Smoothie Mango", "fr": "Innocent Smoothie Mangue Passion", "ru": "Смузи Инносент Манго", "ja": "イノセント スムージー マンゴー", "zh": "Innocent 芒果百香果冰沙", "fa": "اسموتی انبه اینوسنت", "hi": "इनोसेंट मैंगो स्मूदी", "ar": "عصير إينوسينت مانجو" }
+    },
+    "smoothie_innocent_green_blend": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Innocent Smoothie (Kiwi, Apfel & Limette)", "icon": "🥝", "latin": "Fructus tritus viridis (Innocent)", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 44, "water_g": 88.0, "protein_g": 0.4, "fat_total_g": 0.1, "carbs_total_g": 10.0, "sugar_g": 9.2, "fiber_g": 1.2, "vit_c_mg": 25.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "vegan": true },
+      "quality_metrics": { "flavor_profile": "Tart & Refreshing", "purity": "100% Fruit" },
+      "props": ["The classic 'Green Smoothie' profile", "Tart and refreshing due to kiwi and lime", "Slightly lower sugar content than tropical smoothie variants"],
+      "lang": { "de": "Innocent Smoothie Kiwi Apfel", "en": "Innocent Smoothie Kiwi Apple", "es": "Innocent Smoothie Kiwi Manzana", "fr": "Innocent Smoothie Kiwi Pomme", "ru": "Смузи Инносент Киви", "ja": "イノセント スムージー キウイ", "zh": "Innocent 奇异果冰沙", "fa": "اسموتی کیوی اینوسنت", "hi": "इनोसेंट कीवी स्मूदी", "ar": "عصير إينوسينت كيوي" }
+    },
+    "smoothie_innocent_blue_spark": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Innocent Super Smoothie Blue Spark", "icon": "🌊", "latin": "Fructus tritus caeruleus (Spirulina)", "sci": ["#sci/Supplementation", "#sci/Nutrition"],
+      "val": { "kcal": 51, "water_g": 85.2, "protein_g": 0.5, "fat_total_g": 0.1, "carbs_total_g": 10.0, "sugar_g": 9.6, "fiber_g": 1.3, "vit_c_mg": 24.0, "vit_b3_mg": 2.4 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "functional": "Energy/Vitamins", "vegan": true },
+      "quality_metrics": { "color_source": "Natural Phycocyanin", "fortification": "Vitamins" },
+      "props": ["Contains Spirulina extract giving it a natural bright blue color", "Fortified with extra B-Vitamins and Vitamin C", "No artificial colors"],
+      "lang": { "de": "Innocent Blue Spark", "en": "Innocent Blue Spark", "es": "Innocent Blue Spark", "fr": "Innocent Blue Spark", "ru": "Innocent Голубая искра", "ja": "イノセント ブルー・スパーク", "zh": "Innocent 蓝色火花", "fa": "اسموتى آبی اینوسنت", "hi": "इनोसेंट ब्लू स्पार्क", "ar": "إينوسنت بلو سبارك" }
+    },
+    "smoothie_innocent_recharge": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Innocent Super Smoothie Recharge", "icon": "🥕", "latin": "Fructus tritus (Daucus/Zingiber)", "sci": ["#sci/Immunology", "#sci/Nutrition"],
+      "val": { "kcal": 46, "water_g": 88.0, "protein_g": 0.5, "fat_total_g": 0.1, "carbs_total_g": 9.5, "sugar_g": 9.0, "fiber_g": 1.2, "vit_c_mg": 32.0 },
+      "meta": { "locations": ["rewe", "edeka"], "functional": "Immune Boost", "vegan": true },
+      "quality_metrics": { "active_ingredients": "Gingerols", "benefit": "Immunity" },
+      "props": ["Mandarin, Carrot, Apple, Ginger, Flaxseeds", "Slightly spicy kick from the ginger", "Fortified with Vitamin C and E"],
+      "lang": { "de": "Innocent Recharge", "en": "Innocent Recharge", "es": "Innocent Recharge", "fr": "Innocent Recharge", "ru": "Innocent Перезарядка", "ja": "イノセント リチャージ", "zh": "Innocent 充电", "fa": "اسموتى ری‌شارژ اینوسنت", "hi": "इनोसेंट रिचार्ज", "ar": "إينوسنت ريتشارج" }
+    },
+	
+    "--- SMOOTHIES_TRUE_FRUITS_FULL_PALETTE ---": "true fruits (Das komplette Glas-Regal)",
+    "smoothie_true_fruits_yellow": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "true fruits yellow", "icon": "🥭", "latin": "Fructus tritus flavus", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 56, "water_g": 83.5, "protein_g": 0.6, "fat_total_g": 0.2, "carbs_total_g": 12.0, "sugar_g": 11.5, "fiber_g": 1.5 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "packaging": "Glass", "vegan": true },
+      "quality_metrics": { "purity": "No concentrates", "viscosity": "Extremely thick puree" },
+      "props": ["Mango, Maracuja, Apple, Orange", "The iconic flagship flavor", "Heavy glass bottle ensures zero plastic migration"],
+      "lang": { "de": "true fruits yellow", "en": "true fruits yellow", "es": "true fruits amarillo", "fr": "true fruits jaune", "ru": "true fruits желтый", "ja": "true fruits イエロー", "zh": "true fruits 黄色冰沙", "fa": "اسموتی زرد ترو فروتس", "hi": "ट्रू फ्रूट्स येलो", "ar": "ترو فروتس أصفر" }
+    },
+    "smoothie_true_fruits_purple": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "true fruits purple", "icon": "🫐", "latin": "Fructus tritus purpureus", "sci": ["#sci/Phytochemistry", "#sci/Nutrition"],
+      "val": { "kcal": 55, "water_g": 84.0, "protein_g": 0.5, "fat_total_g": 0.2, "carbs_total_g": 11.8, "sugar_g": 11.3, "fiber_g": 1.8 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "packaging": "Glass", "vegan": true },
+      "quality_metrics": { "antioxidant_status": "High (Dark Berry Phenols)", "viscosity": "High" },
+      "props": ["Apple, Banana, Orange, Blackcurrant, Blueberry", "High in natural antioxidants"],
+      "lang": { "de": "true fruits purple", "en": "true fruits purple", "es": "true fruits morado", "fr": "true fruits violet", "ru": "true fruits фиолетовый", "ja": "true fruits パープル", "zh": "true fruits 紫色冰沙", "fa": "اسموتی بنفش ترو فروتس", "hi": "ट्रू फ्रूट्स पर्पल", "ar": "ترو فروتس بنفسجي" }
+    },
+    "smoothie_true_fruits_green": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "true fruits green", "icon": "🥬", "latin": "Fructus tritus viridis", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 49, "water_g": 86.0, "protein_g": 0.8, "fat_total_g": 0.2, "carbs_total_g": 10.5, "sugar_g": 9.8, "fiber_g": 2.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "packaging": "Glass", "vegan": true },
+      "quality_metrics": { "green_ratio": "Leafy greens included", "viscosity": "High" },
+      "props": ["Contains Spinach, Kale, Matcha", "Earthy, sweet green classic"],
+      "lang": { "de": "true fruits green", "en": "true fruits green", "es": "true fruits verde", "fr": "true fruits vert", "ru": "true fruits зеленый", "ja": "true fruits グリーン", "zh": "true fruits 绿色冰沙", "fa": "اسموتی سبز ترو فروتس", "hi": "ट्रू फ्रूट्स ग्रीन", "ar": "ترو فروتس أخضر" }
+    },
+    "smoothie_true_fruits_pink": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "true fruits pink", "icon": "🐉", "latin": "Fructus tritus roseus", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 52, "water_g": 85.0, "protein_g": 0.5, "fat_total_g": 0.2, "carbs_total_g": 11.0, "sugar_g": 10.5, "fiber_g": 1.6 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "packaging": "Glass", "vegan": true },
+      "quality_metrics": { "color_source": "Natural Pink Dragonfruit", "viscosity": "High" },
+      "props": ["Pink Dragonfruit (Pitaya), Guanabana, Banana", "Striking natural neon pink color"],
+      "lang": { "de": "true fruits pink", "en": "true fruits pink", "es": "true fruits rosa", "fr": "true fruits rose", "ru": "true fruits розовый", "ja": "true fruits ピンク", "zh": "true fruits 粉色冰沙", "fa": "اسموتی صورتی ترو فروتس", "hi": "ट्रू फ्रूट्स पिंक", "ar": "ترو فروتس وردي" }
+    },
+    "smoothie_true_fruits_white": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "true fruits white", "icon": "🥥", "latin": "Fructus tritus albus", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 68, "water_g": 82.0, "protein_g": 0.8, "fat_total_g": 1.2, "carbs_total_g": 13.5, "sugar_g": 12.8, "fiber_g": 1.5 },
+      "meta": { "locations": ["rewe", "edeka"], "packaging": "Glass", "vegan": true },
+      "quality_metrics": { "texture": "Creamy / Dessert-like", "fat_source": "Coconut milk" },
+      "props": ["Coconut milk, Vanilla, Banana, Apple", "Very creamy, dessert-like profile", "Higher calories due to coconut fat"],
+      "lang": { "de": "true fruits white", "en": "true fruits white", "es": "true fruits blanco", "fr": "true fruits blanc", "ru": "true fruits белый", "ja": "true fruits ホワイト", "zh": "true fruits 白色冰沙", "fa": "اسموتی سفید ترو فروتس", "hi": "ट्रू फ्रूट्स व्हाइट", "ar": "ترو فروتس أبيض" }
+    },
+	
+    "--- SMOOTHIES_PRIVATE_LABEL_DISCOUNTER_FULL ---": "Lidl & Aldi (Die komplette Farbpalette)",
+    "smoothie_solevita_yellow": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Solevita Smoothie Mango-Maracuja (Lidl)", "icon": "🥭", "latin": "Fructus tritus flavus (Solevita)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 54, "water_g": 86.0, "protein_g": 0.5, "fat_total_g": 0.2, "carbs_total_g": 11.5, "sugar_g": 11.0, "fiber_g": 1.2 },
+      "meta": { "locations": ["lidl"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget", "purity": "No added sugar" },
+      "props": ["Lidl's flagship yellow budget smoothie"],
+      "lang": { "de": "Solevita Smoothie Gelb", "en": "Solevita Yellow Smoothie", "es": "Smoothie amarillo Solevita", "fr": "Smoothie jaune Solevita", "ru": "Желтый смузи Solevita", "ja": "Solevita イエロー・スムージー", "zh": "Solevita 黄色冰沙", "fa": "اسموتی زرد سولوویتا", "hi": "सोलेविटा पीला स्मूदी", "ar": "عصير سوليفيتا أصفر" }
+    },
+    "smoothie_solevita_green": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Solevita Smoothie Apfel-Spinat (Lidl)", "icon": "🥬", "latin": "Fructus tritus viridis (Solevita)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 48, "water_g": 86.5, "protein_g": 0.8, "fat_total_g": 0.3, "carbs_total_g": 10.2, "sugar_g": 9.8, "fiber_g": 1.6 },
+      "meta": { "locations": ["lidl"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "green_content": "Fruit-heavy blend", "price_segment": "Budget" },
+      "props": ["Lidl's green smoothie equivalent", "Smooth, not overly grassy"],
+      "lang": { "de": "Solevita Smoothie Grün", "en": "Solevita Green Smoothie", "es": "Smoothie verde Solevita", "fr": "Smoothie vert Solevita", "ru": "Зеленый смузи Solevita", "ja": "Solevita グリーン・スムージー", "zh": "Solevita 绿色冰沙", "fa": "اسموتی سبز سولوویتا", "hi": "सोलेविटा हरा स्मूदी", "ar": "عصير سوليفيتا أخضر" }
+    },
+    "smoothie_solevita_red": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Solevita Smoothie Granatapfel-Beere (Lidl)", "icon": "🍒", "latin": "Fructus tritus ruber (Solevita)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 52, "water_g": 85.5, "protein_g": 0.6, "fat_total_g": 0.2, "carbs_total_g": 11.0, "sugar_g": 10.5, "fiber_g": 1.5 },
+      "meta": { "locations": ["lidl"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "flavor_profile": "Tart Berry", "price_segment": "Budget" },
+      "props": ["Deep red berry blend with a tart pomegranate finish"],
+      "lang": { "de": "Solevita Smoothie Rot", "en": "Solevita Red Smoothie", "es": "Smoothie rojo Solevita", "fr": "Smoothie rouge Solevita", "ru": "Красный смузи Solevita", "ja": "Solevita レッド・スムージー", "zh": "Solevita 红色冰沙", "fa": "اسموتی قرمز سولوویتا", "hi": "सोलेविटा लाल स्मूदी", "ar": "عصير سوليفيتا أحمر" }
+    },
+    "smoothie_rio_d_oro_yellow": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Rio d'Oro Smoothie Mango (Aldi)", "icon": "🥭", "latin": "Fructus tritus flavus (Aldia)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 55, "water_g": 85.8, "protein_g": 0.5, "fat_total_g": 0.2, "carbs_total_g": 11.8, "sugar_g": 11.2, "fiber_g": 1.3 },
+      "meta": { "locations": ["aldi_nord", "aldi_süd"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "texture": "Heavy Puree", "price_segment": "Budget" },
+      "props": ["Aldi's heavy, sweet mango puree blend"],
+      "lang": { "de": "Rio d'Oro Smoothie Gelb", "en": "Rio d'Oro Yellow Smoothie", "es": "Smoothie amarillo Rio d'Oro", "fr": "Smoothie jaune Rio d'Oro", "ru": "Желтый смузи Rio d'Oro", "ja": "Rio d'Oro イエロー・スムージー", "zh": "Rio d'Oro 黄色冰沙", "fa": "اسموتی زرد ریو دورو", "hi": "रियो डी'ओरो पीला स्मूदी", "ar": "عصير ريو دورو أصفر" }
+    },
+    "smoothie_rio_d_oro_green": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Rio d'Oro Smoothie Grünkohl-Spinat (Aldi)", "icon": "🥦", "latin": "Fructus tritus viridis (Aldia)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 45, "water_g": 87.0, "protein_g": 0.9, "fat_total_g": 0.2, "carbs_total_g": 9.5, "sugar_g": 9.0, "fiber_g": 1.9 },
+      "meta": { "locations": ["aldi_nord", "aldi_süd"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "flavor_profile": "Earthy", "price_segment": "Budget" },
+      "props": ["Slightly earthier profile with kale (Grünkohl)"],
+      "lang": { "de": "Rio d'Oro Smoothie Grün", "en": "Rio d'Oro Green Smoothie", "es": "Smoothie verde Rio d'Oro", "fr": "Smoothie vert Rio d'Oro", "ru": "Зеленый смузи Rio d'Oro", "ja": "Rio d'Oro グリーン・スムージー", "zh": "Rio d'Oro 绿色冰沙", "fa": "اسموتی سبز ریو دورو", "hi": "रियो डी'ओरो हरा स्मूदी", "ar": "عصير ريو دورو أخضر" }
+    },
+
+    "--- SMOOTHIES_PRIVATE_LABEL_SUPERMARKET_FULL ---": "REWE, Edeka & Kaufland To-Go",
+    "smoothie_rewe_to_go_yellow": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "REWE to go Smoothie Mango-Maracuja", "icon": "🥭", "latin": "Fructus tritus flavus (REWE)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 55, "water_g": 86.0, "protein_g": 0.6, "fat_total_g": 0.2, "carbs_total_g": 11.4, "sugar_g": 11.0, "fiber_g": 1.2 },
+      "meta": { "locations": ["rewe"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "purity": "100% Fruit", "price_segment": "Supermarket Convenience" },
+      "props": ["Standard yellow blend for immediate consumption", "High mango puree content"],
+      "lang": { "de": "REWE to go Smoothie Gelb", "en": "REWE to go Yellow Smoothie", "es": "Smoothie amarillo REWE", "fr": "Smoothie jaune REWE", "ru": "Желтый смузи REWE", "ja": "REWE イエロー・スムージー", "zh": "REWE 黄色冰沙", "fa": "اسموتی زرد ریوه", "hi": "रीवे पीला स्मूदी", "ar": "عصير ريوه أصفر" }
+    },
+    "smoothie_rewe_to_go_green": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "REWE to go Smoothie Apfel-Kiwi-Spinat", "icon": "🥝", "latin": "Fructus tritus viridis (REWE)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 47, "water_g": 87.0, "protein_g": 0.8, "fat_total_g": 0.2, "carbs_total_g": 10.0, "sugar_g": 9.5, "fiber_g": 1.8 },
+      "meta": { "locations": ["rewe"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "flavor_profile": "Balanced Green", "price_segment": "Supermarket Convenience" },
+      "props": ["Balanced green smoothie profile", "Less sweet than pure fruit variants"],
+      "lang": { "de": "REWE to go Smoothie Grün", "en": "REWE to go Green Smoothie", "es": "Smoothie verde REWE", "fr": "Smoothie vert REWE", "ru": "Зеленый смузи REWE", "ja": "REWE グリーン・スムージー", "zh": "REWE 绿色冰沙", "fa": "اسموتی سبز ریوه", "hi": "रीवे हरा स्मूदी", "ar": "عصير ريوه أخضر" }
+    },
+    "smoothie_rewe_to_go_red": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "REWE to go Smoothie Erdbeer-Banane", "icon": "🍓", "latin": "Fructus tritus ruber (REWE)", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 53, "water_g": 86.2, "protein_g": 0.5, "fat_total_g": 0.2, "carbs_total_g": 11.5, "sugar_g": 11.0, "fiber_g": 1.4 },
+      "meta": { "locations": ["rewe"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "texture": "Thick Banana Base", "flavor": "Sweet Strawberry" },
+      "props": ["Classic, very sweet strawberry-banana mix"],
+      "lang": { "de": "REWE to go Smoothie Rot", "en": "REWE to go Red Smoothie", "es": "Smoothie rojo REWE", "fr": "Smoothie rouge REWE", "ru": "Красный смузи REWE", "ja": "REWE レッド・スムージー", "zh": "REWE 红色冰沙", "fa": "اسموتی قرمز ریوه", "hi": "रीवे लाल स्मूदी", "ar": "عصير ريوه أحمر" }
+    },
+    "smoothie_edeka_deli_yellow": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "EDEKA Deli Smoothie Mango", "icon": "🥭", "latin": "Fructus tritus flavus (Edeka)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 54, "water_g": 86.5, "protein_g": 0.5, "fat_total_g": 0.2, "carbs_total_g": 11.2, "sugar_g": 10.8, "fiber_g": 1.3 },
+      "meta": { "locations": ["edeka"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "purity": "Premium direct juice", "quality_tier": "Supermarket Premium Convenience" },
+      "props": ["Edeka's premium convenience private label", "Very smooth puree texture"],
+      "lang": { "de": "EDEKA Deli Smoothie Mango", "en": "EDEKA Deli Mango Smoothie", "es": "Smoothie mango EDEKA", "fr": "Smoothie mangue EDEKA", "ru": "EDEKA Дели Манго смузи", "ja": "EDEKA マンゴー・スムージー", "zh": "EDEKA 芒果冰沙", "fa": "اسموتی انبه ادکا", "hi": "एडेका मैंगो स्मूदी", "ar": "عصير إيديكا مانجو" }
+    },
+    "smoothie_k_to_go_green": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-to-go Smoothie Apfel-Minze (Kaufland)", "icon": "🍏", "latin": "Fructus tritus viridis (Kauflandia)", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 46, "water_g": 87.5, "protein_g": 0.4, "fat_total_g": 0.1, "carbs_total_g": 9.8, "sugar_g": 9.4, "fiber_g": 1.1 },
+      "meta": { "locations": ["kaufland"], "packaging": "PET", "vegan": true },
+      "quality_metrics": { "flavor_profile": "Minty / Refreshing", "acidity": "Medium" },
+      "props": ["Unique refreshing profile with a hint of mint"],
+      "lang": { "de": "K-to-go Smoothie Apfel-Minze", "en": "K-to-go Apple Mint Smoothie", "es": "Smoothie manzana menta K-to-go", "fr": "Smoothie pomme menthe K-to-go", "ru": "K-to-go Яблоко-мята смузи", "ja": "K-to-go アップル・ミント", "zh": "K-to-go 苹果薄荷冰沙", "fa": "اسموتی سیب و نعنا کا-تو-گو", "hi": "के-टू-गो एप्पल मिंट स्मूदी", "ar": "عصير ك-تو-جو تفاح ونعناع" }
+    },
+	
+    "--- ICED_TEA_GLOBAL_LEADERS ---": "Die globalen Extrakt-Giganten",
+    "iced_tea_lipton_peach": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lipton Ice Tea Peach", "icon": "🍑", "latin": "Thea frigida (Lipton Persica)", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 30, "water_g": 92.0, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 7.3, "sugar_g": 7.2, "fiber_g": 0.0, "tea_extract_g": 0.12 },
+      "meta": { "locations": ["everywhere"], "brand": "PepsiCo / Unilever", "vegan": true },
+      "quality_metrics": { "process": "Water, Sugar, Black Tea Extract", "sweetener_system": "Sugar/Stevia blend (DACH)" },
+      "props": ["The global benchmark for peach iced tea", "Uses tea extract rather than brewed tea for extreme consistency", "Slightly reduced sugar in modern DACH formulations"],
+      "lang": { "de": "Lipton Pfirsich", "en": "Lipton Peach", "es": "Lipton Melocotón", "fr": "Lipton Pêche", "ru": "Липтон Персик", "ja": "リプトン ピーチ", "zh": "立顿蜜桃红茶", "fa": "چای سرد هلو لیپتون", "hi": "लिप्टन पीच", "ar": "ليبتون خوخ" }
+    },
+    "iced_tea_fuze_peach_hibiscus": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fuze Tea Pfirsich-Hibiskus", "icon": "🌺", "latin": "Thea frigida (Fuze Persica/Hibiscus)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 33, "water_g": 91.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 7.8, "sugar_g": 7.8, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Coca-Cola", "vegan": true },
+      "quality_metrics": { "flavor_engineering": "Dual-note infusion", "tea_source": "Sustainably sourced extract" },
+      "props": ["Coca-Cola's premium successor to Nestea", "Blends classic black tea extract with herbal/floral notes (Hibiscus)", "Very strong, perfumed aroma"],
+      "lang": { "de": "Fuze Tea Pfirsich-Hibiskus", "en": "Fuze Tea Peach Hibiscus", "es": "Fuze Tea Melocotón Hibisco", "fr": "Fuze Tea Pêche Hibiscus", "ru": "Фьюз Ти Персик-Гибискус", "ja": "フューズティー ピーチ", "zh": "Fuze Tea 蜜桃芙蓉", "fa": "فیوز تی هلو و هیبیسکوس", "hi": "फ्यूज़ टी पीच", "ar": "فيوز تي خوخ وكركديه" }
+    },
+    "iced_tea_lipton_lemon": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lipton Ice Tea Lemon", "icon": "🍋", "latin": "Thea frigida (Lipton Limon)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 29, "water_g": 92.5, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 7.0, "sugar_g": 6.8, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "PepsiCo / Unilever", "vegan": true },
+      "quality_metrics": { "acidity": "Tart/Citrus", "process": "Extract-based" },
+      "props": ["The classic rival to peach", "Tart, highly acidic profile", "Extremely refreshing when served ice cold"],
+      "lang": { "de": "Lipton Zitrone", "en": "Lipton Lemon", "es": "Lipton Limón", "fr": "Lipton Citron", "ru": "Липтон Лимон", "ja": "リプトン レモン", "zh": "立顿柠檬红茶", "fa": "چای سرد لیمو لیپتون", "hi": "लिप्टन लेमन", "ar": "ليبتون ليمون" }
+    },
+
+    "--- ICED_TEA_GERMAN_CLASSICS ---": "Die direkt gebrühten 2L-Könige",
+    "iced_tea_pfanner_peach": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pfanner Eistee Pfirsich", "icon": "🍑", "latin": "Thea frigida (Pfanner Persica)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 28, "water_g": 92.8, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 6.8, "sugar_g": 6.8, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "packaging": "2L Tetra Pak", "vegan": true },
+      "quality_metrics": { "process": "Directly brewed from rosehip and hibiscus (Base)", "format": "High volume 2L" },
+      "props": ["The absolute ruler of the German 2L carton segment", "Directly brewed, not from extract", "Distinctive fruit-tea base rather than pure black tea"],
+      "lang": { "de": "Pfanner Pfirsich", "en": "Pfanner Peach", "es": "Pfanner Melocotón", "fr": "Pfanner Pêche", "ru": "Пфаннер Персик", "ja": "プファナー ピーチ", "zh": "Pfanner 蜜桃", "fa": "پفانر هلو", "hi": "प्फैनर पीच", "ar": "بفانر خوخ" }
+    },
+    "iced_tea_pfanner_der_gruene": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pfanner Der Grüne (Zitrone-Kaktusfeige)", "icon": "🌵", "latin": "Thea viridis frigida (Pfanner)", "sci": ["#sci/Phytochemistry", "#sci/FoodScience"],
+      "val": { "kcal": 26, "water_g": 93.2, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 6.2, "sugar_g": 6.2, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "packaging": "2L Tetra Pak", "vegan": true },
+      "quality_metrics": { "process": "Directly brewed green tea", "flavor": "Citrus/Floral" },
+      "props": ["Directly brewed green tea", "Unique lemon and prickly pear (Kaktusfeige) flavor", "Massive cult following in DACH region"],
+      "lang": { "de": "Pfanner Der Grüne", "en": "Pfanner The Green", "es": "Pfanner Verde", "fr": "Pfanner Le Vert", "ru": "Пфаннер Зеленый", "ja": "プファナー グリーン", "zh": "Pfanner 绿茶", "fa": "پفانر سبز", "hi": "प्फैनर ग्रीन", "ar": "بفانر الأخضر" }
+    },
+
+    "--- ICED_TEA_WATER_INFUSIONS ---": "Tee-Wässer (Leicht & Still)",
+    "iced_tea_volvic_peach": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Volvic Tee Pfirsich", "icon": "💧", "latin": "Aqua theae (Volvic Persica)", "sci": ["#sci/Hydration", "#sci/Nutrition"],
+      "val": { "kcal": 16, "water_g": 96.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 3.9, "sugar_g": 3.9, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "dm"], "base": "Volvic Mineral Water", "vegan": true },
+      "quality_metrics": { "benefit": "Low Sugar Hydration (approx. 50% less sugar than Lipton)", "texture": "Still Water Base" },
+      "props": ["Marketed as tea-infused water rather than heavy iced tea", "Very light, non-sticky mouthfeel", "Excellent hydration with subtle flavor"],
+      "lang": { "de": "Volvic Tee Pfirsich", "en": "Volvic Tea Peach", "es": "Volvic Té Melocotón", "fr": "Volvic Thé Pêche", "ru": "Вольвик Чай Персик", "ja": "ボルヴィック ティー ピーチ", "zh": "富维克蜜桃茶", "fa": "چای هلو ولنیک", "hi": "वोल्विक टी पीच", "ar": "فولفيك شاي خوخ" }
+    },
+	
+    "--- ICED_TEA_PRIVATE_LABEL_DISCOUNTER ---": "Eigenmarken (Aldi, Lidl, Kaufland, REWE)",
+    "iced_tea_solevita_peach": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Solevita Eistee Pfirsich (Lidl)", "icon": "🍑", "latin": "Thea frigida (Solevita Persica)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 28, "water_g": 92.8, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 6.8, "sugar_g": 6.8, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl"], "packaging": "1.5L PET", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget", "process": "Extract-based" },
+      "props": ["Lidl's extreme high-volume budget iced tea", "Extract-based, closely mimics the Lipton flavor profile", "Often uses a blend of sugar and sweeteners to keep costs low"],
+      "lang": { "de": "Solevita Eistee Pfirsich", "en": "Solevita Iced Tea Peach", "es": "Solevita Té Melocotón", "fr": "Solevita Thé Pêche", "ru": "Солевита Чай Персик", "ja": "ソレヴィータ ピーチティー", "zh": "Solevita 蜜桃茶", "fa": "چای هلو سولوویتا", "hi": "सोलेविटा पीच टी", "ar": "سوليفيتا شاي خوخ" }
+    },
+    "iced_tea_trader_joes_peach": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Trader Joe's Eistee Pfirsich (Aldi)", "icon": "🍑", "latin": "Thea frigida (Aldia Persica)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 31, "water_g": 92.1, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 7.4, "sugar_g": 7.4, "fiber_g": 0.0 },
+      "meta": { "locations": ["aldi_nord", "aldi_süd"], "packaging": "1.5L PET", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget", "flavor_profile": "Classic Sweet Peach" },
+      "props": ["Aldi's classic iced tea standard", "Available in both Peach and Lemon", "Reliable, sweet black tea extract base"],
+      "lang": { "de": "Trader Joe's Pfirsich", "en": "Trader Joe's Peach", "es": "Trader Joe's Melocotón", "fr": "Trader Joe's Pêche", "ru": "Трейдер Джо Персик", "ja": "トレーダージョーズ ピーチ", "zh": "Trader Joe's 蜜桃茶", "fa": "چای هلو تریدر جو", "hi": "ट्रेडर जोस पीच", "ar": "تريدر جوز خوخ" }
+    },
+    "iced_tea_k_classic_lemon": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Eistee Zitrone (Kaufland)", "icon": "🍋", "latin": "Thea frigida (K-Classic Limon)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 29, "water_g": 92.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 7.0, "sugar_g": 7.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["kaufland"], "packaging": "1.5L PET", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget", "acidity": "High" },
+      "props": ["Kaufland's budget response to Lipton Lemon", "High acidity, very sweet", "Usually extract-based"],
+      "lang": { "de": "K-Classic Eistee Zitrone", "en": "K-Classic Lemon Tea", "es": "Té Limón K-Classic", "fr": "Thé Citron K-Classic", "ru": "K-Classic Чай Лимон", "ja": "K-Classic レモンティー", "zh": "K-Classic 柠檬茶", "fa": "چای لیمو کا-کلاسیک", "hi": "के-क्लासिक लेमन टी", "ar": "ك-كلاسيك شاي ليمون" }
+    },
+    "iced_tea_ja_peach": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "ja! Eistee Pfirsich (REWE)", "icon": "🍑", "latin": "Thea frigida (ja! Persica)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 28, "water_g": 92.8, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 6.7, "sugar_g": 6.7, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "penny"], "packaging": "1.5L PET", "vegan": true },
+      "quality_metrics": { "price_segment": "Entry-level Budget", "consistency": "High" },
+      "props": ["Entry-level budget iced tea of the REWE group", "Standard extract formulation", "Very consistent quality across regions"],
+      "lang": { "de": "ja! Eistee Pfirsich", "en": "ja! Peach Tea", "es": "Té Melocotón ja!", "fr": "Thé Pêche ja!", "ru": "ja! Чай Персик", "ja": "ja! ピーチティー", "zh": "ja! 蜜桃茶", "fa": "چای هلو یا!", "hi": "जा! पीच टी", "ar": "يا! شاي خوخ" }
+    },
+	
+    "--- SODA_MATE_THE_ORIGINALS ---": "Mate-Limonaden (Die Club- & Hacker-Klassiker)",
+    "soda_mate_club_mate": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Club-Mate", "icon": "🧉", "latin": "Potio carbonata (Ilex paraguariensis)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 20, "water_g": 94.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 5.0, "sugar_g": 5.0, "fiber_g": 0.0, "caffeine_mg": 20.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "späti"], "brand": "Brauerei Loscher", "vegan": true },
+      "quality_metrics": { "benefit": "Low sugar sustained energy (Tannin-bound caffeine)", "flavor_profile": "Smoky/Earthy" },
+      "props": ["The absolute pioneer of the German mate culture", "Earthy, slightly smoky flavor profile (often polarizing at first)", "Standard currency in hacker spaces and techno clubs"],
+      "lang": { "de": "Club-Mate", "en": "Club-Mate", "es": "Club-Mate", "fr": "Club-Mate", "ru": "Клуб-Мате", "ja": "クラブマテ", "zh": "Club-Mate 玛黛茶", "fa": "کلاب ماته", "hi": "क्लब-मेट", "ar": "كلوب ماتي" }
+    },
+    "soda_mate_mio_mio": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mio Mio Mate", "icon": "🧉", "latin": "Potio carbonata (Mio Ilex)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 24, "water_g": 93.8, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 5.7, "sugar_g": 5.7, "fiber_g": 0.0, "caffeine_mg": 20.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "späti"], "brand": "Vivaris", "vegan": true },
+      "quality_metrics": { "flavor_profile": "Sweet & Fruity", "market_position": "Mainstream Alternative" },
+      "props": ["The most successful mainstream alternative to Club-Mate", "Slightly sweeter, fruitier, and less smoky", "Highly approachable for 'Mate-Beginners'"],
+      "lang": { "de": "Mio Mio Mate", "en": "Mio Mio Mate", "es": "Mio Mio Mate", "fr": "Mio Mio Mate", "ru": "Мио Мио Мате", "ja": "ミオミオ マテ", "zh": "Mio Mio 玛黛茶", "fa": "میو میو ماته", "hi": "मियो मियो मेट", "ar": "ميو ميو ماتي" }
+    },
+    "soda_mate_fritz_mate": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "fritz-mate", "icon": "🧉", "latin": "Potio carbonata (Fritz Ilex)", "sci": ["#sci/Pharmacology", "#sci/FoodScience"],
+      "val": { "kcal": 22, "water_g": 94.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 5.5, "sugar_g": 5.5, "fiber_g": 0.0, "caffeine_mg": 25.0 },
+      "meta": { "locations": ["rewe", "edeka", "gastronomy"], "brand": "fritz-kola", "vegan": true },
+      "quality_metrics": { "caffeine": "Maximum legal limit for sodas (25mg/100ml)", "carbonation": "High" },
+      "props": ["fritz-kola's entry into the mate market", "Hits the absolute legal ceiling for caffeine in lemonades", "Strong, distinct flavor with high carbonation"],
+      "lang": { "de": "fritz-mate", "en": "fritz-mate", "es": "fritz-mate", "fr": "fritz-mate", "ru": "Фриц-Мате", "ja": "フリッツ・マテ", "zh": "fritz-mate", "fa": "فریتس ماته", "hi": "फ्रिट्ज़ मेट", "ar": "فريتز ماتي" }
+    },
+
+    "--- SODA_MATE_DISCOUNTER_AND_BUDGET ---": "Mate-Limonaden (Eigenmarken & Budget)",
+    "soda_mate_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Mate (Kaufland)", "icon": "🧉", "latin": "Potio carbonata (K-Classic Ilex)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 21, "water_g": 94.3, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 5.2, "sugar_g": 5.2, "fiber_g": 0.0, "caffeine_mg": 20.0 },
+      "meta": { "locations": ["kaufland"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget", "packaging": "PET" },
+      "props": ["Kaufland's budget clone of the classic mate profile", "Priced significantly lower than the branded glass bottles", "Sold in PET bottles for convenience"],
+      "lang": { "de": "K-Classic Mate", "en": "K-Classic Mate", "es": "Mate K-Classic", "fr": "Maté K-Classic", "ru": "K-Classic Мате", "ja": "K-Classic マテ", "zh": "K-Classic 玛黛茶", "fa": "ماته کا-کلاسیک", "hi": "के-क्लासिक मेट", "ar": "ك-كلاسيك ماتي" }
+    },
+    "soda_mate_gut_guenstig": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Gut & Günstig Mate-Tee (Edeka)", "icon": "🧉", "latin": "Potio carbonata (Edeka Ilex)", "sci": ["#sci/FoodScience", "#sci/Pharmacology"],
+      "val": { "kcal": 22, "water_g": 94.1, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 5.4, "sugar_g": 5.4, "fiber_g": 0.0, "caffeine_mg": 20.0 },
+      "meta": { "locations": ["edeka"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget", "flavor_balance": "Neutral" },
+      "props": ["Edeka's house brand mate", "Solid middle-ground flavor profile (not too smoky, not too sweet)", "High-volume budget option"],
+      "lang": { "de": "Gut & Günstig Mate", "en": "Gut & Günstig Mate", "es": "Mate Gut & Günstig", "fr": "Maté Gut & Günstig", "ru": "Gut & Günstig Мате", "ja": "Gut & Günstig マテ", "zh": "Gut & Günstig 玛黛茶", "fa": "ماته گوت و گونستیگ", "hi": "गट एंड गुन्स्टिग मेट", "ar": "جوت أند جونستيج ماتي" }
+    },
+	
+    "--- MIXERS_SCHWEPPES_THE_STANDARD ---": "Schweppes (Der globale Standard)",
+    "mixer_tonic_schweppes": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Schweppes Indian Tonic Water", "icon": "🍸", "latin": "Potio carbonata amara (Cinchona)", "sci": ["#sci/Chemistry", "#sci/Pharmacology"],
+      "val": { "kcal": 36, "water_g": 90.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 8.9, "sugar_g": 8.9, "fiber_g": 0.0, "quinine_mg": 7.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "botanical": "Contains natural Quinine (Chinin)", "carbonation": "High" },
+      "props": ["The global benchmark for Tonic Water", "Glows blue under UV light due to quinine", "Crisp, bitter profile engineered specifically for mixing with Gin"],
+      "lang": { "de": "Schweppes Tonic Water", "en": "Schweppes Tonic Water", "es": "Tónica Schweppes", "fr": "Schweppes Tonic", "ru": "Швепс Тоник", "ja": "シュウェップス トニック", "zh": "怡泉汤力水", "fa": "تونیک واتر شوپس", "hi": "श्वेप्स टॉनिक", "ar": "شويبس تونيك" }
+    },
+    "mixer_bitter_lemon_schweppes": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Schweppes Original Bitter Lemon", "icon": "🍋", "latin": "Potio carbonata amara (Limon)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 51, "water_g": 86.8, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 12.6, "sugar_g": 12.6, "fiber_g": 0.0, "quinine_mg": 3.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "texture": "Cloudy", "flavor_balance": "High Sweet/Sour/Bitter" },
+      "props": ["Cloudy lemon drink with added quinine", "Significantly higher sugar content to balance the extreme sour/bitter mix", "Classic mixer for Vodka"],
+      "lang": { "de": "Schweppes Bitter Lemon", "en": "Schweppes Bitter Lemon", "es": "Schweppes Bitter Lemon", "fr": "Schweppes Bitter Lemon", "ru": "Швепс Биттер Лемон", "ja": "シュウェップス ビターレモン", "zh": "怡泉苦柠水", "fa": "بیتر لیمون شوپس", "hi": "श्वेप्स बिटर लेमन", "ar": "شويبس بيتر ليمون" }
+    },
+    "mixer_ginger_ale_schweppes": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Schweppes American Ginger Ale", "icon": "🫚", "latin": "Potio carbonata (Zingiber mite)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 36, "water_g": 90.4, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 9.0, "sugar_g": 9.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "quinine": "Zero", "flavor": "Mild Ginger/Caramel" },
+      "props": ["Golden, clear color", "Mild ginger flavor, very sweet and aromatic", "Contains NO quinine (not bitter)"],
+      "lang": { "de": "Schweppes Ginger Ale", "en": "Schweppes Ginger Ale", "es": "Schweppes Ginger Ale", "fr": "Schweppes Ginger Ale", "ru": "Швепс Имбирный Эль", "ja": "シュウェップス ジンジャーエール", "zh": "怡泉干姜水", "fa": "جینجر ایل شوپس", "hi": "श्वेप्स जिंजर एल", "ar": "شويبس جينجر أيل" }
+    },
+
+    "--- MIXERS_PREMIUM_BAR_BRANDS ---": "Premium Mixer (Thomas Henry & Fever-Tree)",
+    "mixer_tonic_thomas_henry": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Thomas Henry Tonic Water", "icon": "🍸", "latin": "Potio carbonata amara (Thomas Henry)", "sci": ["#sci/Chemistry", "#sci/FoodScience"],
+      "val": { "kcal": 38, "water_g": 90.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 9.3, "sugar_g": 9.3, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland", "bars"], "vegan": true },
+      "quality_metrics": { "carbonation": "Extremely High", "bitterness": "Dry/Pronounced" },
+      "props": ["Berlin-based premium mixer brand", "Slightly higher quinine content for a more pronounced, dry bitterness", "Highly carbonated to keep long drinks fizzy longer"],
+      "lang": { "de": "Thomas Henry Tonic", "en": "Thomas Henry Tonic", "es": "Thomas Henry Tónica", "fr": "Thomas Henry Tonic", "ru": "Томас Генри Тоник", "ja": "トーマス・ヘンリー トニック", "zh": "托马斯亨利汤力水", "fa": "تونیک توماس هنری", "hi": "थॉमस हेनरी टॉनिक", "ar": "توماس هنري تونيك" }
+    },
+    "mixer_ginger_beer_thomas_henry": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Thomas Henry Spicy Ginger (Ginger Beer)", "icon": "🔥", "latin": "Potio carbonata (Zingiber forte)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 59, "water_g": 85.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 14.0, "sugar_g": 14.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "edeka", "bars"], "vegan": true },
+      "quality_metrics": { "intensity": "High spiciness (Capsaicin/Gingerol)", "texture": "Cloudy" },
+      "props": ["This is Ginger BEER, not Ginger Ale", "Cloudy, extremely spicy and fiery profile", "The essential ingredient for a 'Moscow Mule'"],
+      "lang": { "de": "Thomas Henry Spicy Ginger", "en": "Thomas Henry Spicy Ginger", "es": "Thomas Henry Spicy Ginger", "fr": "Thomas Henry Spicy Ginger", "ru": "Томас Генри Пряный Имбирь", "ja": "トーマス・ヘンリー スパイシージンジャー", "zh": "托马斯亨利辣姜汁", "fa": "جینجر بیر توماس هنری", "hi": "थॉमस हेनरी स्पाइसी जिंजर", "ar": "توماس هنري جينجر بيرة" }
+    },
+    "mixer_tonic_fever_tree": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Fever-Tree Premium Indian Tonic Water", "icon": "🌿", "latin": "Potio carbonata amara (Fever-Tree)", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 31, "water_g": 92.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 7.4, "sugar_g": 7.4, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "edeka"], "vegan": true },
+      "quality_metrics": { "ingredient_sourcing": "DRC Quinine", "sweetener": "Natural Cane Sugar" },
+      "props": ["Global premium leader, famously uses quinine from the 'fever trees' of the DRC", "Lower sugar content, utilizing natural cane sugar", "Very clean, elegant flavor profile"],
+      "lang": { "de": "Fever-Tree Tonic", "en": "Fever-Tree Tonic", "es": "Tónica Fever-Tree", "fr": "Fever-Tree Tonic", "ru": "Фивер-Три Тоник", "ja": "フィーバーツリー トニック", "zh": "发烧树汤力水", "fa": "تونیک فیور تری", "hi": "फीवर-ट्री टॉनिक", "ar": "فيفر تري تونيك" }
+    },
+
+    "--- MIXERS_PRIVATE_LABEL_DISCOUNTER ---": "Eigenmarken (Lidl, Kaufland, REWE)",
+    "mixer_tonic_freeway": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Freeway Tonic Water (Lidl)", "icon": "🍸", "latin": "Potio carbonata amara (Freeway)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 34, "water_g": 91.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 8.0, "sugar_g": 8.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget", "carbonation": "High" },
+      "props": ["Lidl's budget tonic water", "Solid quinine bitterness, highly carbonated", "Excellent price-performance for high-volume party mixing"],
+      "lang": { "de": "Freeway Tonic Water", "en": "Freeway Tonic Water", "es": "Tónica Freeway", "fr": "Tonic Freeway", "ru": "Фривей Тоник", "ja": "フリーウェイ トニック", "zh": "Freeway 汤力水", "fa": "تونیک واتر فری‌وی", "hi": "फ्रीवे टॉनिक", "ar": "فري واي تونيك" }
+    },
+    "mixer_bitter_lemon_freeway": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Freeway Bitter Lemon (Lidl)", "icon": "🍋", "latin": "Potio carbonata amara (Freeway Limon)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 48, "water_g": 87.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 11.5, "sugar_g": 11.5, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl"], "vegan": true },
+      "quality_metrics": { "texture": "Cloudy", "sweetener": "100% Sugar" },
+      "props": ["Direct clone of Schweppes Bitter Lemon", "Cloudy texture with strong citrus acidity", "Sweetened with sugar (no sweeteners in the classic version)"],
+      "lang": { "de": "Freeway Bitter Lemon", "en": "Freeway Bitter Lemon", "es": "Freeway Bitter Lemon", "fr": "Freeway Bitter Lemon", "ru": "Фривей Биттер Лемон", "ja": "フリーウェイ ビターレモン", "zh": "Freeway 苦柠水", "fa": "بیتر لیمون فری‌وی", "hi": "फ्रीवे बिटर लेमन", "ar": "فري واي بيتر ليمون" }
+    },
+    "mixer_bitter_lemon_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Bitter Lemon (Kaufland)", "icon": "🍋", "latin": "Potio carbonata amara (K-Classic)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 50, "water_g": 87.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 12.0, "sugar_g": 12.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["kaufland"], "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Bulk", "sugar_content": "High" },
+      "props": ["Kaufland's budget bitter lemon", "Matches the high sugar content of the original brand leaders", "Sold in convenient 1.5L bulk bottles"],
+      "lang": { "de": "K-Classic Bitter Lemon", "en": "K-Classic Bitter Lemon", "es": "Bitter Lemon K-Classic", "fr": "Bitter Lemon K-Classic", "ru": "K-Classic Биттер Лемон", "ja": "K-Classic ビターレモン", "zh": "K-Classic 苦柠水", "fa": "بیتر لیمون کا-کلاسیک", "hi": "के-क्लासिक बिटर लेमन", "ar": "ك-كلاسيك بيتر ليمون" }
+    },
+    "mixer_ginger_ale_ja": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "ja! Ginger Ale (REWE)", "icon": "🫚", "latin": "Potio carbonata (ja! Zingiber)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 36, "water_g": 90.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 8.9, "sugar_g": 8.9, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "penny"], "vegan": true },
+      "quality_metrics": { "price_segment": "Entry-level Budget", "flavor": "Mild Ginger" },
+      "props": ["REWE's entry-level Ginger Ale", "Sweet, golden, and mild", "Great budget filler for whiskey or purely on ice"],
+      "lang": { "de": "ja! Ginger Ale", "en": "ja! Ginger Ale", "es": "Ginger Ale ja!", "fr": "Ginger Ale ja!", "ru": "ja! Имбирный Эль", "ja": "ja! ジンジャーエール", "zh": "ja! 干姜水", "fa": "جینجر ایل یا!", "hi": "जा! जिंजर एल", "ar": "يا! جينجر أيل" }
+    }
+  }
+}

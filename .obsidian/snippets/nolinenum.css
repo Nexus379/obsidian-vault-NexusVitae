@@ -1,0 +1,14 @@
+/* Versteckt Zeilennummern im Editor für Files mit dieser Klasse */
+.no-line-numbers .cm-lineNumbers {
+    display: none !important;
+}
+
+/* Versteckt den Verschiebe-Rand links ebenfalls für maximalen Platz */
+.no-line-numbers .cm-gutterElement {
+    display: none !important;
+}
+
+/* Bonus: Versteckt den Titel der Datei in der Sidebar für mehr Platz */
+.no-line-numbers .inline-title {
+    display: none !important;
+}

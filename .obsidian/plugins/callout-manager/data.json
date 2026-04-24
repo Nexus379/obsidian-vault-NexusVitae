@@ -1,0 +1,933 @@
+{
+  "callouts": {
+    "custom": [
+      "soul",
+      "area",
+      "note",
+      "dataview",
+      "bin",
+      "mind",
+      "task",
+      "incubator",
+      "project",
+      "organize",
+      "creativity",
+      "activity",
+      "body",
+      "low",
+      "relationship",
+      "urgent",
+      "high",
+      "stars",
+      "formula",
+      "capacities-body",
+      "capacities-card",
+      "capacities-card-prop",
+      "capacities-index",
+      "capacities-prop",
+      "capacities-prop-image",
+      "capacities-sidebar",
+      "seealso",
+      "seedling",
+      "grow",
+      "cancled",
+      "flow",
+      "archive",
+      "grown",
+      "review",
+      "hub",
+      "idea",
+      "overview",
+      "log",
+      "calendar",
+      "fleeting",
+      "permanent",
+      "literature",
+      "atomic",
+      "reference",
+      "math",
+      "english",
+      "latin",
+      "physics",
+      "chemistry",
+      "biology",
+      "german",
+      "pse",
+      "history",
+      "evergreen",
+      "source",
+      "routine",
+      "link",
+      "zettelkasten",
+      "scientae",
+      "inbox",
+      "collect",
+      "important-and-urgent",
+      "not-imp-urg",
+      "pink",
+      "purpose",
+      "vision",
+      "goals",
+      "quick",
+      "journal",
+      "pkm",
+      "date",
+      "food",
+      "life",
+      "decent",
+      "meal",
+      "breakfast",
+      "lunch",
+      "cena",
+      "bento",
+      "alchemy",
+      "microscope",
+      "law",
+      "cake"
+    ],
+    "settings": {
+      "hub": [
+        {
+          "changes": {
+            "icon": "lucide-bot",
+            "color": "132, 102, 67"
+          }
+        }
+      ],
+      "formula": [
+        {
+          "changes": {
+            "color": "198, 208, 245"
+          }
+        }
+      ],
+      "idea": [
+        {
+          "changes": {
+            "color": "221, 215, 187"
+          }
+        }
+      ],
+      "example": [
+        {
+          "changes": {
+            "color": "249, 205, 159"
+          }
+        }
+      ],
+      "capacities-body": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "capacities-card": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "capacities-card-prop": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "capacities-index": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "capacities-prop": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "capacities-prop-image": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "capacities-sidebar": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "bug": [
+        {
+          "changes": {
+            "color": "243, 139, 168"
+          }
+        }
+      ],
+      "danger": [
+        {
+          "changes": {
+            "color": "243, 139, 168"
+          }
+        }
+      ],
+      "error": [
+        {
+          "changes": {
+            "color": "243, 139, 168"
+          }
+        }
+      ],
+      "fail": [
+        {
+          "changes": {
+            "color": "243, 139, 168"
+          }
+        }
+      ],
+      "failure": [
+        {
+          "changes": {
+            "color": "243, 139, 168"
+          }
+        }
+      ],
+      "missing": [
+        {
+          "changes": {
+            "color": "243, 139, 168"
+          }
+        }
+      ],
+      "soul": [
+        {
+          "changes": {
+            "icon": "lucide-book-heart",
+            "color": "240, 173, 212"
+          }
+        }
+      ],
+      "area": [
+        {
+          "changes": {
+            "icon": "lucide-aperture",
+            "color": "67, 154, 208"
+          }
+        }
+      ],
+      "note": [
+        {
+          "changes": {
+            "icon": "lucide-notebook-pen",
+            "color": "112, 116, 240"
+          }
+        }
+      ],
+      "dataview": [
+        {
+          "changes": {
+            "icon": "lucide-boxes",
+            "color": "179, 217, 230"
+          }
+        }
+      ],
+      "bin": [
+        {
+          "changes": {
+            "icon": "lucide-shopping-basket",
+            "color": "166, 155, 155"
+          }
+        }
+      ],
+      "info": [
+        {
+          "changes": {
+            "color": "82, 139, 212"
+          }
+        }
+      ],
+      "overview": [
+        {
+          "changes": {
+            "icon": "lucide-bot",
+            "color": "230, 209, 167"
+          }
+        }
+      ],
+      "seealso": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "todo": [
+        {
+          "changes": {
+            "color": "251, 116, 121"
+          }
+        }
+      ],
+      "attention": [
+        {
+          "changes": {
+            "color": "249, 134, 138"
+          }
+        }
+      ],
+      "caution": [
+        {
+          "changes": {
+            "color": "242, 186, 188"
+          }
+        }
+      ],
+      "faq": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "help": [
+        {
+          "changes": {
+            "color": "166, 189, 197"
+          }
+        }
+      ],
+      "question": [
+        {
+          "changes": {
+            "color": "251, 157, 160"
+          }
+        }
+      ],
+      "warning": [
+        {
+          "changes": {
+            "color": "248, 171, 173"
+          }
+        }
+      ],
+      "mind": [
+        {
+          "changes": {
+            "icon": "lucide-brain",
+            "color": "75, 160, 251"
+          }
+        }
+      ],
+      "abstract": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "hint": [
+        {
+          "changes": {
+            "color": "251, 213, 214"
+          }
+        }
+      ],
+      "important": [
+        {
+          "changes": {
+            "icon": "lucide-badge-alert",
+            "color": "208, 181, 48"
+          }
+        }
+      ],
+      "summary": [
+        {
+          "changes": {
+            "color": "172, 236, 192"
+          }
+        }
+      ],
+      "tip": [
+        {
+          "changes": {
+            "color": "244, 200, 201"
+          }
+        }
+      ],
+      "check": [
+        {
+          "changes": {
+            "color": "103, 228, 141"
+          }
+        }
+      ],
+      "task": [
+        {
+          "changes": {
+            "icon": "lucide-clipboard-list",
+            "color": "100, 206, 151"
+          }
+        }
+      ],
+      "incubator": [
+        {
+          "changes": {
+            "icon": "lucide-brackets",
+            "color": "149, 219, 214"
+          }
+        }
+      ],
+      "project": [
+        {
+          "changes": {
+            "icon": "lucide-blocks",
+            "color": "104, 154, 91"
+          }
+        }
+      ],
+      "done": [
+        {
+          "changes": {
+            "color": "68, 207, 110"
+          }
+        }
+      ],
+      "success": [
+        {
+          "changes": {
+            "color": "68, 207, 110"
+          }
+        }
+      ],
+      "organize": [
+        {
+          "changes": {
+            "icon": "lucide-box",
+            "color": "47, 218, 75"
+          }
+        }
+      ],
+      "creativity": [
+        {
+          "changes": {
+            "icon": "lucide-brush",
+            "color": "210, 193, 81"
+          }
+        }
+      ],
+      "activity": [
+        {
+          "changes": {
+            "icon": "lucide-bike",
+            "color": "233, 151, 63"
+          }
+        }
+      ],
+      "body": [
+        {
+          "changes": {
+            "icon": "lucide-book-copy",
+            "color": "251, 70, 76"
+          }
+        }
+      ],
+      "low": [
+        {
+          "changes": {
+            "icon": "lucide-box-select"
+          }
+        }
+      ],
+      "tldr": [
+        {
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
+      ],
+      "relationship": [
+        {
+          "changes": {
+            "icon": "lucide-align-horizontal-space-around",
+            "color": "89, 179, 217"
+          }
+        }
+      ],
+      "urgent": [
+        {
+          "changes": {
+            "icon": "lucide-alert-circle",
+            "color": "225, 178, 127"
+          }
+        }
+      ],
+      "high": [
+        {
+          "changes": {
+            "icon": "lucide-alert-triangle",
+            "color": "244, 134, 137"
+          }
+        }
+      ],
+      "stars": [
+        {
+          "changes": {
+            "icon": "lucide-stars",
+            "color": "185, 178, 100"
+          }
+        }
+      ],
+      "seedling": [
+        {
+          "changes": {
+            "icon": "lucide-bean",
+            "color": "145, 79, 43"
+          }
+        }
+      ],
+      "grow": [
+        {
+          "changes": {
+            "icon": "lucide-battery-medium",
+            "color": "64, 118, 40"
+          }
+        }
+      ],
+      "cancled": [
+        {
+          "changes": {
+            "icon": "lucide-x",
+            "color": "117, 112, 112"
+          }
+        }
+      ],
+      "flow": [
+        {
+          "changes": {
+            "icon": "lucide-brain-circuit",
+            "color": "191, 193, 83"
+          }
+        }
+      ],
+      "archive": [
+        {
+          "changes": {
+            "icon": "lucide-backpack",
+            "color": "87, 66, 66"
+          }
+        }
+      ],
+      "grown": [
+        {
+          "changes": {
+            "icon": "lucide-tree-deciduous",
+            "color": "20, 173, 0"
+          }
+        }
+      ],
+      "review": [
+        {
+          "changes": {
+            "icon": "star-list",
+            "color": "164, 161, 70"
+          }
+        }
+      ],
+      "log": [
+        {
+          "changes": {
+            "icon": "lucide-calendar-clock",
+            "color": "96, 159, 106"
+          }
+        }
+      ],
+      "calendar": [
+        {
+          "changes": {
+            "icon": "lucide-calendar-heart",
+            "color": "35, 108, 118"
+          }
+        }
+      ],
+      "fleeting": [
+        {
+          "changes": {
+            "icon": "lucide-flag-triangle-left",
+            "color": "226, 197, 115"
+          }
+        }
+      ],
+      "permanent": [
+        {
+          "changes": {
+            "icon": "lucide-codesandbox",
+            "color": "138, 80, 25"
+          }
+        }
+      ],
+      "literature": [
+        {
+          "changes": {
+            "icon": "lucide-book-open-check",
+            "color": "0, 213, 255"
+          }
+        }
+      ],
+      "atomic": [
+        {
+          "changes": {
+            "icon": "lucide-id-card",
+            "color": "200, 0, 255"
+          }
+        }
+      ],
+      "reference": [
+        {
+          "changes": {
+            "icon": "lucide-book-marked",
+            "color": "210, 70, 98"
+          }
+        }
+      ],
+      "math": [
+        {
+          "changes": {
+            "icon": "lucide-sigma",
+            "color": "39, 98, 236"
+          }
+        }
+      ],
+      "english": [
+        {
+          "changes": {
+            "icon": "lucide-square-user-round",
+            "color": "222, 33, 43"
+          }
+        }
+      ],
+      "latin": [
+        {
+          "changes": {
+            "icon": "lucide-landmark",
+            "color": "0, 191, 255"
+          }
+        }
+      ],
+      "physics": [
+        {
+          "changes": {
+            "icon": "lucide-magnet",
+            "color": "31, 209, 197"
+          }
+        }
+      ],
+      "chemistry": [
+        {
+          "changes": {
+            "icon": "lucide-atom",
+            "color": "28, 196, 154"
+          }
+        }
+      ],
+      "biology": [
+        {
+          "changes": {
+            "icon": "lucide-microscope",
+            "color": "61, 194, 70"
+          }
+        }
+      ],
+      "german": [
+        {
+          "changes": {
+            "icon": "lucide-beer",
+            "color": "205, 208, 47"
+          }
+        }
+      ],
+      "pse": [
+        {
+          "changes": {
+            "icon": "lucide-scale",
+            "color": "245, 115, 46"
+          }
+        }
+      ],
+      "history": [
+        {
+          "changes": {
+            "icon": "lucide-scroll-text",
+            "color": "244, 89, 37"
+          }
+        }
+      ],
+      "evergreen": [
+        {
+          "changes": {
+            "icon": "lucide-trees",
+            "color": "30, 153, 5"
+          }
+        }
+      ],
+      "source": [
+        {
+          "changes": {
+            "icon": "lucide-bookmark",
+            "color": "232, 125, 125"
+          }
+        }
+      ],
+      "routine": [
+        {
+          "changes": {
+            "icon": "lucide-goal",
+            "color": "237, 2, 128"
+          }
+        }
+      ],
+      "link": [
+        {
+          "changes": {
+            "icon": "link",
+            "color": "104, 151, 166"
+          }
+        }
+      ],
+      "zettelkasten": [
+        {
+          "changes": {
+            "icon": "box-glyph",
+            "color": "187, 163, 139"
+          }
+        }
+      ],
+      "scientae": [
+        {
+          "changes": {
+            "icon": "lucide-codesandbox",
+            "color": "168, 103, 165"
+          }
+        }
+      ],
+      "inbox": [
+        {
+          "changes": {
+            "icon": "lucide-mail-plus",
+            "color": "83, 223, 221"
+          }
+        }
+      ],
+      "collect": [
+        {
+          "changes": {
+            "icon": "lucide-cat",
+            "color": "188, 78, 116"
+          }
+        }
+      ],
+      "important-and-urgent": [
+        {
+          "changes": {
+            "icon": "lucide-zap",
+            "color": "158, 61, 76"
+          }
+        }
+      ],
+      "not-imp-urg": [
+        {
+          "changes": {
+            "icon": "lucide-cloud",
+            "color": "68, 207, 110"
+          }
+        }
+      ],
+      "pink": [
+        {
+          "changes": {
+            "icon": "lucide-heart",
+            "color": "212, 52, 234"
+          }
+        }
+      ],
+      "purpose": [
+        {
+          "changes": {
+            "icon": "lucide-tree-palm"
+          }
+        },
+        {
+          "condition": {
+            "colorScheme": "light"
+          },
+          "changes": {
+            "color": "171, 63, 168"
+          }
+        },
+        {
+          "condition": {
+            "colorScheme": "dark"
+          },
+          "changes": {
+            "color": "161, 75, 185"
+          }
+        }
+      ],
+      "vision": [
+        {
+          "changes": {
+            "icon": "star-list",
+            "color": "180, 49, 156"
+          }
+        }
+      ],
+      "goals": [
+        {
+          "changes": {
+            "icon": "lucide-target",
+            "color": "186, 54, 100"
+          }
+        }
+      ],
+      "quick": [
+        {
+          "changes": {
+            "icon": "lucide-inbox",
+            "color": "220, 129, 24"
+          }
+        }
+      ],
+      "journal": [
+        {
+          "changes": {
+            "icon": "lucide-calendar-heart",
+            "color": "229, 153, 223"
+          }
+        }
+      ],
+      "pkm": [
+        {
+          "changes": {
+            "icon": "lucide-calendar-cog",
+            "color": "86, 122, 194"
+          }
+        }
+      ],
+      "date": [
+        {
+          "changes": {
+            "icon": "lucide-calendar-clock",
+            "color": "108, 202, 249"
+          }
+        }
+      ],
+      "food": [
+        {
+          "changes": {
+            "icon": "lucide-hamburger",
+            "color": "118, 167, 126"
+          }
+        }
+      ],
+      "life": [
+        {
+          "changes": {
+            "icon": "lucide-heart-handshake",
+            "color": "202, 7, 228"
+          }
+        }
+      ],
+      "decent": [
+        {
+          "changes": {
+            "icon": "lucide-codesandbox",
+            "color": "74, 82, 94"
+          }
+        }
+      ],
+      "meal": [
+        {
+          "changes": {
+            "icon": "lucide-soup",
+            "color": "126, 160, 143"
+          }
+        }
+      ],
+      "breakfast": [
+        {
+          "changes": {
+            "icon": "lucide-egg-fried",
+            "color": "75, 104, 104"
+          }
+        }
+      ],
+      "lunch": [
+        {
+          "changes": {
+            "icon": "lucide-hamburger",
+            "color": "118, 162, 142"
+          }
+        }
+      ],
+      "cena": [
+        {
+          "changes": {
+            "icon": "lucide-beef",
+            "color": "132, 88, 111"
+          }
+        }
+      ],
+      "bento": [
+        {
+          "changes": {
+            "icon": "lucide-sandwich",
+            "color": "126, 180, 154"
+          }
+        }
+      ],
+      "alchemy": [
+        {
+          "changes": {
+            "icon": "lucide-cooking-pot",
+            "color": "37, 128, 25"
+          }
+        }
+      ],
+      "microscope": [
+        {
+          "changes": {
+            "icon": "lucide-microscope",
+            "color": "155, 197, 196"
+          }
+        }
+      ],
+      "law": [
+        {
+          "changes": {
+            "icon": "lucide-scale",
+            "color": "108, 167, 145"
+          }
+        }
+      ],
+      "cake": [
+        {
+          "changes": {
+            "icon": "lucide-cake-slice",
+            "color": "205, 151, 242"
+          }
+        }
+      ]
+    }
+  },
+  "calloutDetection": {
+    "obsidian": true,
+    "theme": true,
+    "snippet": true
+  }
+}

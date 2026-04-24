@@ -1,0 +1,379 @@
+{
+  "self_care_matrix": {
+    "--- THE_EYE_ARCHITECTS ---": "Augen-Make-up (Kajal & Liner)",
+    "beauty_kajal_alverde_naturkosmetik": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alverde Kajal Eyeliner", "icon": "✏️", "room": "bathroom", "latin": "Stilus oculorum naturalis", "sci": ["#sci/Cosmetology", "#sci/Biology"],
+      "val": { "form": "Pencil", "ingredients": "Organic Oils & Wax", "pl_score": 8.5 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "quality_metrics": { "skin_compatibility": "Ophthalmologically tested", "sustainability": "Certified Natural (Natrue)" },
+      "props": ["Technologisch auf Bienenwachs-Basis für weichen Auftrag", "Keine synthetischen Konservierungsstoffe", "Ideal für sensible Augen und Kontaktlinsenträger"],
+      "lang": { "de": "Alverde Kajal", "en": "Alverde Eyeliner Pencil", "es": "Lápiz de ojos Alverde" }
+    },
+
+    "--- THE_HAIR_ENGINEERS ---": "Haarpflege (Reinigung & Struktur)",
+    "care_shampoo_alverde_bio_quitte": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Bio-Quitte Shampoo", "icon": "🧴", "room": "bathroom", "latin": "Capillus purgator naturalis", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 5.5, "surfactants": "Sugar-based (Mild)", "pl_score": 9.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "quality_metrics": { "silicone_free": "Yes", "vegan": "Yes" },
+      "props": ["Technologisch sanfte Reinigung ohne Sulfate", "Bewahrt den natürlichen Säureschutzmantel der Kopfhaut", "Hinterlässt keine Build-up-Rückstände"],
+      "lang": { "de": "Alverde Bio-Shampoo", "en": "Alverde Organic Shampoo" }
+    },
+    "care_shampoo_cien_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Cien Tag für Tag Shampoo (Lidl)", "icon": "🛒", "room": "bathroom", "val": { "form": "Liquid", "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "Cien" },
+      "props": ["Der technologische Preis-Leistungs-König für die tägliche Wäsche", "Klassische Tensid-Mischung für maximale Reinigungskraft", "Sehr gute Kämmbarkeit zum kleinsten Preis"],
+      "lang": { "de": "Lidl Cien Shampoo", "en": "Lidl Cien Shampoo" }
+    },
+    "care_conditioner_alverde_repair": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Repair Spülung (Bio-Avocado)", "icon": "🥑", "room": "bathroom", "sci": ["#sci/MaterialsScience"],
+      "val": { "form": "Cream", "exposure_time": "2-3 min", "pl_score": 8.5 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "quality_metrics": { "repair_tech": "Plant-based keratin complex" },
+      "props": ["Schließt technologisch die Schuppenschicht des Haares ($Cuticula$)", "Verhindert Haarbruch durch pflanzliche Proteine", "Macht das Haar weich ohne schwere Silikone"],
+      "lang": { "de": "Alverde Spülung", "en": "Alverde Conditioner" }
+    },
+    "--- THE_FACE_ARCHITECTS ---": "Teint-Optimierung (Make-up & BB-Cream)",
+    "beauty_bb_cream_alverde_7in1": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Alverde BB Cream 7in1 (Bio-Zitronenmelisse)", "icon": "🧴", "room": "bathroom", "pl_score": 9.0,
+      "val": { "coverage": "Light/Natural", "spf": "None/Low", "skin_type": "Sensitive/Normal" },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologisch kombinierte Pflege und Tönung", "Kaschiert Rötungen ohne 'Maskeneffekt'", "Mineralische Pigmente statt synthetischer Farbstoffe"],
+      "lang": { "de": "Alverde BB Cream", "en": "Alverde Beauty Balm" }
+    },
+    "beauty_powder_alverde_compact": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Alverde Compact Powder", "icon": "🎨", "room": "bathroom", "pl_score": 8.5,
+      "val": { "finish": "Mattifying", "ingredients": "Silk/Minerals" },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Fixiert das Make-up technologisch durch hohe Adsorptionskraft", "Verhindert Glanz durch überschüssiges Sebum", "Sehr feine Mahlung für natürliches Hautbild"],
+      "lang": { "de": "Alverde Kompaktpuder", "en": "Alverde Pressed Powder" }
+    },
+
+    "--- THE_CURL_ENGINEERS ---": "Locken-Physik (Reinigung & Definition)",
+    "care_shampoo_alverde_locken": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Locken-Shampoo (Bio-Leinsamen & Bio-Sheabutter)", "icon": "🌀", "room": "bathroom", "sci": ["#sci/Biology"],
+      "val": { "sulfate_free": "Yes", "moisture_level": "Extreme", "pl_score": 9.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologisch optimiert für die elliptische Struktur von Locken", "Verhindert Frizz durch intensive Rückfettung", "Reinigt sanft ohne die natürliche Öl-Barriere zu zerstören"],
+      "lang": { "de": "Alverde Locken-Shampoo", "en": "Alverde Curl Shampoo" }
+    },
+    "care_conditioner_alverde_locken": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Locken-Spülung", "icon": "🥑", "room": "bathroom", "val": { "silicone_free": "Yes", "pl_score": 9.0 },
+      "props": ["Sorgt für die Bündelung der Locken durch Faserglättung", "Extreme Kämmbarkeit ohne chemische Weichmacher"],
+      "lang": { "de": "Alverde Locken-Spülung", "en": "Alverde Curl Conditioner" }
+    },
+
+    "--- THE_FLORAL_BARS ---": "Feste Seifen (Lavendel & Ylang-Ylang)",
+    "care_soap_alverde_lavendel": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Alverde Pflanzenölseife Lavendel", "icon": "💜", "room": "bathroom", "latin": "Lavandula angustifolia", "sci": ["#sci/Aromatherapy"],
+      "val": { "form": "Solid Bar", "scent": "Relaxing", "pl_score": 9.5 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Traditionell gesiedete Seife mit echten Lavendelblüten", "Wirkt technologisch beruhigend auf das zentrale Nervensystem", "Plastikfreie Verpackung"],
+      "lang": { "de": "Alverde Lavendelseife", "en": "Alverde Lavender Soap" }
+    },
+    "care_soap_ylang_ylang_special": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alverde Pflanzenölseife (Exotisch - Ylang-Ylang Mix)", "icon": "🟡", "room": "bathroom", "latin": "Cananga odorata", "pl_score": 8.0,
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde / Naturkind" },
+      "props": ["Seltener Fund: Ylang-Ylang sorgt für ein sinnliches Aroma-Profil", "Technologisch rückfettend durch pflanzliches Glycerin", "Oft in Kombination mit Malve oder Rose"],
+      "lang": { "de": "Ylang-Ylang Seife", "en": "Ylang Ylang Soap" }
+    },
+	
+    "care_shower_gel_cien_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Cien Family Duschgel", "icon": "🌊", "room": "bathroom", "val": { "size": "500ml", "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "Cien" },
+      "props": ["Maximale Effizienz für den ganzen Körper", "Technologisch ausgewogener pH-Wert", "Hinterlässt einen klassischen Frischeduft"],
+      "lang": { "de": "Lidl Cien Duschgel", "en": "Lidl Cien Shower Gel" }
+    },
+    "care_hand_soap_alverde_bio": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alverde Flüssigseife Bio-Minze", "icon": "🧼", "room": "bathroom", "val": { "refillable": "Yes", "pl_score": 9.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Natürliche Desinfektion durch ätherische Öle", "Rückfettende Komponenten verhindern das Austrocknen der Hände"],
+      "lang": { "de": "Alverde Bio-Seife", "en": "Alverde Liquid Soap" }
+    },
+	
+    "--- THE_ORBITAL_GUARDS ---": "Augenpflege (Sensible Zonen)",
+    "care_eye_cream_alverde_wildrose": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Alverde Augencreme Bio-Wildrose", "icon": "👁️", "room": "bathroom", "sci": ["#sci/Dermatology"],
+      "val": { "moisture_level": "High", "pl_score": 9.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologisch optimiert für die extrem dünne Haut der Augenpartie", "Glättet erste Fältchen durch natürliche Retinol-Vorstufen", "Ohne Duftstoffe, um die Schleimhäute nicht zu irritieren"],
+      "lang": { "de": "Alverde Augencreme", "en": "Alverde Eye Cream" }
+    },
+
+    "--- THE_KERATIN_STABILIZERS ---": "Nagelpflege (Struktur-Härtung)",
+    "care_nail_oil_alverde_aprikose": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Nagelpflegeöl (Aprikose)", "icon": "💅", "room": "bathroom", "sci": ["#sci/Biology"],
+      "val": { "ingredients": "Apricot Kernel Oil / Vitamin E", "pl_score": 9.5 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologische Tiefenpflege für die Nagelplatte und Nagelhaut", "Verhindert das Splittern durch Flexibilitäts-Optimierung", "Natürlicher Glanz ohne chemischen Lack"],
+      "lang": { "de": "Alverde Nagelöl", "en": "Alverde Nail Oil" }
+    },
+
+    "--- THE_BODY_BARRIER ---": "Körperlotion (Großflächen-Hydratation)",
+    "care_body_lotion_alverde_bio_olive": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Bodylotion Bio-Olive", "icon": "🧴", "room": "bathroom", "val": { "skin_type": "Very Dry", "pl_score": 9.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Maximale Rückfettung durch technologisch wertvolles Olivenöl", "Langzeit-Feuchtigkeitsschutz (24h)", "Ideal als Basis für deine Ylang-Ylang Aroma-Hacks"],
+      "lang": { "de": "Alverde Bodylotion", "en": "Alverde Body Lotion" }
+    },
+    "care_face_cream_alverde_aqua_24h": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Alverde Aqua 24h Hyaluron Meeresalge", "icon": "🌊", "room": "bathroom", "sci": ["#sci/Chemistry"],
+      "val": { "active_ing": "Natural Hyaluron", "form": "Gel-Cream", "pl_score": 9.5 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologischer Feuchtigkeits-Booster durch Algen-Extrakte", "Sehr leicht, zieht sofort ein (perfekt unter Make-up/Puder)", "Kühlt und erfrischt die Zellstruktur"],
+      "lang": { "de": "Alverde Aqua Gesichtscreme", "en": "Alverde Aqua Face Cream" }
+    }
+  },
+  "dental_hygiene_matrix": {
+    "--- THE_ENAMEL_GUARDS ---": "Zahnpasta (Fluorid- & Schutz-Tech)",
+    "care_toothpaste_cien_dental_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Cien Dental Rundumschutz (Lidl)", "icon": "🪥", "room": "bathroom", "latin": "Pasta dentaria economica", "sci": ["#sci/Chemistry", "#sci/Medicine"],
+      "val": { "fluoride_ppm": 1450, "rda_value": "Medium (approx. 70)", "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "Cien" },
+      "quality_metrics": { "stiftung_warentest": "Very Good (1.2 - 1.5)", "protection": "Caries prophylaxis" },
+      "props": ["Der technologische Preis-Leistungs-Killer", "Enthält die ideale Fluoridmenge für Erwachsene", "Sehr stabile Schaumbildung für Partikelabtransport"],
+      "lang": { "de": "Lidl Cien Zahnpasta", "en": "Lidl Cien Toothpaste" }
+    },
+    "care_toothpaste_elmex_professional": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Elmex Sensitive Professional", "icon": "🛡️", "room": "bathroom", "latin": "Pasta dentaria premium", "sci": ["#sci/Chemistry"],
+      "val": { "active_ing": "Amine Fluoride (Olaflur)", "pl_score": 6.5 },
+      "meta": { "locations": ["everywhere", "budni"], "brand": "Elmex (CP)" },
+      "quality_metrics": { "clinical_proven": "Yes", "specialization": "Sensitive teeth" },
+      "props": ["Technologisch überlegenes Aminfluorid baut eine Schutzschicht auf", "Verschließt offene Dentinkanäle sofort", "Teurer, aber medizinisch bei Schmerzempfindlichkeit unerreicht"],
+      "lang": { "de": "Elmex Professional", "en": "Elmex Sensitive" }
+    },
+    "care_toothpaste_alverde_bio_minze": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alverde Zahncreme Bio-Minze", "icon": "🌱", "room": "bathroom", "val": { "fluoride": "Optional / with or without", "pl_score": 8.5 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Naturkosmetik-Ansatz ohne synthetische Farbstoffe", "Milde Reinigungskörper schützen den Zahnschmelz", "Sehr natürlicher Geschmack durch ätherische Öle"],
+      "lang": { "de": "Alverde Zahnpasta", "en": "Alverde Natural Toothpaste" }
+    },
+	"care_toothpaste_cien_dental": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Cien Dental Rundumschutz", "room": "bathroom", "pl_score": 10.0,
+      "use_case": "Kariesprophylaxe & Zahnschmelzhärtung",
+      "tech_benefit": "Präzise Fluorid-Dosis ($1450 ppm$); wandelt Hydroxyapatit in säureresistenten Fluorapatit um.",
+      "meta": { "locations": ["lidl"], "brand": "Cien" }
+    },
+    "--- THE_GREEN_PROTECTORS ---": "Natur-Zahnpasta (Bio-Wirkstoffe)",
+    "care_toothpaste_alverde_5in1_nanaminze": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alverde 5-in-1 Zahncreme (Nanaminze)", "icon": "🌱", "room": "bathroom", "sci": ["#sci/Biology", "#sci/Dentistry"],
+      "val": { "fluoride_ppm": 1450, "surfactants": "Sodium Coco-Sulfate (Mild)", "pl_score": 9.5 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologisch der beste Kompromiss: Naturkosmetik MIT Fluorid", "Schützt effektiv vor Karies durch remineralisierende Salze", "Sehr milder Geschmack, keine synthetischen Süßstoffe"],
+      "lang": { "de": "Alverde 5-in-1", "en": "Alverde 5-in-1 Toothpaste" }
+    },
+    "care_toothpaste_alverde_fluoridfrei": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alverde Zahncreme Bio-Minze (Fluoridfrei)", "icon": "🍃", "room": "bathroom", "val": { "fluoride": "None", "pl_score": 8.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Für Anhänger der 100% fluoridfreien Philosophie", "Reinigt technologisch durch Kieselsäure-Putzkörper ($Silica$)", "Setzt auf Kräuterextrakte zur Zahnfleischstärkung"],
+      "lang": { "de": "Alverde Fluoridfrei", "en": "Alverde Fluoride-Free" }
+    },
+    "care_toothpaste_weleda_sole": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Weleda Sole-Zahncreme", "icon": "🌊", "room": "bathroom", "sci": ["#sci/Chemistry"],
+      "val": { "form": "Non-foaming", "cleaning_agent": "Salt (Sodium Bicarbonate)", "pl_score": 8.5 },
+      "meta": { "locations": ["budni", "dm", "pharmacy"], "brand": "Weleda" },
+      "props": ["Technologischer Klassiker: Putzen mit Salz-Kristallen", "Neutralisiert Säuren molekular durch Natron", "Regt den Speichelfluss zur natürlichen Selbstreinigung an"],
+      "lang": { "de": "Weleda Sole", "en": "Weleda Salt Toothpaste" }
+    },
+
+    "--- THE_MECHANICAL_SQUAD ---": "Zahnbürsten & Tools",
+    "care_toothbrush_dontodent_dm_budni": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Dontodent Akku-Zahnbürste Active", "icon": "⚡", "room": "bathroom", "sci": ["#sci/Engineering"],
+      "val": { "tech": "Oscillating-Rotating", "pl_score": 9.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Dontodent" },
+      "props": ["Die technologische Budget-Alternative zu Oral-B", "Kompatibel mit den meisten Marken-Aufsteckbürsten", "Gute Reinigungsleistung durch hohe Rotationsfrequenz"],
+      "lang": { "de": "Dontodent Elektro-Bürste", "en": "Dontodent Electric Toothbrush" }
+    },
+    "care_interdental_sticks_cien_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cien Interdental-Sticks", "icon": "🧵", "room": "bathroom", "val": { "size_range": "ISO 0 - ISO 3", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "Cien" },
+      "props": ["Technologisch essenziell für die Reinigung der Zahnzwischenräume", "Viel effektiver als normale Zahnseide", "Gummierte Struktur schont das Zahnfleisch"],
+      "lang": { "de": "Lidl Interdental-Sticks", "en": "Lidl Interdental Brushes" }
+    }
+  },
+  "aroma_customization_matrix": {
+    "--- THE_NEUTRAL_BASES ---": "Neutrale Trägersysteme (Basis)",
+    "care_laundry_neutral_lotion_alverde": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Alverde Ultra Sensitiv Körperlotion", "icon": "🧴", "room": "bathroom", "pl_score": 9.5,
+      "val": { "fragrance_free": "Yes", "silicone_free": "Yes", "moisture_tech": "Hydro-Complex" },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologisch perfekte Leinwand für eigene Düfte", "Keine Eigen-Parfümierung, die mit Aroma-Ölen kollidiert", "Zieht schnell ein ohne Fettfilm"],
+      "lang": { "de": "Alverde Ultra Sensitiv Lotion", "en": "Alverde Neutral Body Lotion" }
+    },
+    "care_neutral_soap_alverde": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Alverde Pflanzenölseife (Neutral / Unparfümiert)", "icon": "🧼", "room": "bathroom", "val": { "pl_score": 10.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Reine Pflanzenölbasis ohne synthetische Zusätze", "Ideal für das 'Scent-Layering' beim Händewaschen"],
+      "lang": { "de": "Alverde Neutralseife", "en": "Alverde Neutral Soap" }
+    },
+
+    "--- THE_AROMA_MODULES ---": "Ätherische Wirkstoffe (Aroma)",
+    "aroma_oil_ylang_ylang": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Ylang-Ylang Ätherisches Öl", "icon": "🟡", "room": "bathroom", "latin": "Cananga odorata", "sci": ["#sci/Aromatherapy", "#sci/OrganicChemistry"],
+      "val": { "purity": "100% Essential Oil", "effect": "Euphoric / Relaxing" },
+      "meta": { "locations": ["budni", "dm", "health_store"], "brand": "Primavera / Alverde" },
+      "props": ["Technologisch hochkonzentrierte Terpene für intensiven Duft", "Wirkt regulierend auf die Talgproduktion der Haut", "Sinnliches, exotisches Aroma-Profil"],
+      "lang": { "de": "Ylang-Ylang Öl", "en": "Ylang Ylang Essential Oil" }
+    },
+    "aroma_oil_lavendel_bio": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Bio-Lavendelöl", "icon": "💜", "room": "bathroom", "latin": "Lavandula angustifolia", "val": { "effect": "Calming / Antiseptic" },
+      "props": ["Der Klassiker für die Abend-Routine", "Technologisch beruhigend für gereizte Hautpartien"],
+      "lang": { "de": "Lavendelöl", "en": "Lavender Essential Oil" }
+    },
+	"--- THE_CROWN_JEWEL ---": "Spitzenreiter der Regeneration",
+    "care_wildrosenoel_alverde": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Alverde Bio-Wildrosenöl", "room": "bathroom", "pl_score": 9.5,
+      "use_case": "Narbenpflege, Haut-Glow, Zellregeneration",
+      "tech_benefit": "Enthält natürliche Transretinolsäure ($Vitamin A$); regeneriert Gewebe ohne Porenverstopfung durch Mineralöle.",
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Beste natürliche Alternative zu Bio-Oil", "Hoher Anteil an Omega-3 und Omega-6 Fettsäuren"]
+    }
+  },
+  "feminine_hygiene_nature": {
+    "--- THE_ABSORPTION_CORES ---": "Tampons (Interne Kapillar-Logistik)",
+    "hygiene_tampons_alverde_bio": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Bio-Tampons (Normal/Super)", "icon": "🌿", "room": "bathroom", "sci": ["#sci/Biology", "#sci/MaterialsScience"],
+      "val": { "material": "100% Bio-Baumwolle", "chlorine_free": "Yes", "pl_score": 9.5 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologisch rein: Kein Plastiküberzug, keine synthetischen Fasern", "Kern und Rückholfaden aus zertifizierter Bio-Baumwolle", "Hohe Saugfähigkeit durch natürliche Faserstruktur"],
+      "lang": { "de": "Alverde Bio-Tampons", "en": "Alverde Organic Tampons" }
+    },
+
+    "--- THE_EXTERNAL_BARRIERS ---": "Binden & Einlagen (Oberflächen-Tech)",
+    "hygiene_binden_alverde_bio": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Bio-Binden / Slipeinlagen", "icon": "☁️", "room": "bathroom", "sci": ["#sci/Physics"],
+      "val": { "surface": "Organic Cotton", "backsheet": "Bio-Plastic (Compostable)", "pl_score": 9.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Atmungsaktive Barriere-Schicht aus nachwachsenden Rohstoffen", "Keine Duftstoffe oder optische Aufheller molekular nachweisbar", "Besonders hautschonend bei sensibler Gewebestruktur"],
+      "lang": { "de": "Alverde Bio-Binden", "en": "Alverde Organic Pads" }
+    },
+
+    "--- THE_SUSTAINABLE_ALTERNATIVE ---": "Menstruationstassen (Material-Wissenschaft)",
+    "hygiene_cup_selenz_alverde": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Alverde Menstruationstasse", "icon": "🍷", "room": "bathroom", "val": { "material": "Medical Grade Silicone", "reusable": "Yes", "pl_score": 10.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Alverde" },
+      "props": ["Technologisch die effizienteste Lösung: Hält bis zu 10 Jahre", "Kein Austrocknen der Schleimhäute (keine Saugwirkung, nur Auffangen)", "Frei von Weichmachern (BPA) und Latex"],
+      "lang": { "de": "Alverde Menstasse", "en": "Alverde Menstrual Cup" }
+    },
+    "--- THE_TEXTILE_ENGINEERS ---": "Perioden-Unterwäsche (Mehrweg-Logistik)",
+    "hygiene_period_panty_selenz_dm_budni": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Jessa / Budni Perioden-Unterwäsche", "icon": "🩲", "room": "bathroom", "sci": ["#sci/TextileEngineering"],
+      "val": { "layers": 4, "absorption": "2-3 Tampons", "pl_score": 9.5 },
+      "meta": { "locations": ["budni", "dm", "rossmann"], "brand": "Jessa / Facelle" },
+      "props": ["Technologisches 4-Schichten-System: Trockenvlies, Saugkern, Membran, Baumwolle", "Bio-Baumwolle direkt auf der Haut", "Waschbar bei 40°C (Silberionenfrei bei Bio-Modellen)"],
+      "lang": { "de": "Perioden-Unterhose", "en": "Period Panty" }
+    },
+
+    "--- THE_BRAND_SYNERGY ---": "Natur-Alternativen (Vergleichswerte)",
+    "hygiene_facelle_nature_rossmann": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Facelle Natur (Rossmann)", "icon": "🌿", "val": { "material": "Organic Cotton", "pl_score": 9.0 },
+      "props": ["Technologisch gleichwertig zu Alverde", "Sehr gute Passform bei den Flügel-Binden"],
+      "lang": { "de": "Rossmann Bio-Hygiene", "en": "Rossmann Organic Hygiene" }
+    },
+    "hygiene_jessa_nature_dm": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Jessa Nature (dm)", "icon": "🍃", "val": { "material": "FSC-certified Wood Pulp / Cotton", "pl_score": 9.0 },
+      "props": ["Nutzt chlorfrei gebleichten Zellstoff und Bio-Baumwolle", "Verpackung aus Recycling-Karton"],
+      "lang": { "de": "dm Jessa Nature", "en": "dm Jessa Nature" }
+    },
+    "--- THE_DAILY_FRESHNESS ---": "Slipeinlagen (Täglicher Schutz)",
+    "hygiene_panty_liners_jessa_nature": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Jessa Nature Slipeinlagen (dm/Budni)", "icon": "☁️", "room": "bathroom", "sci": ["#sci/Dermatology"],
+      "val": { "material": "100% Organic Cotton Top", "breathability": "High", "pl_score": 9.5 },
+      "props": ["Technologisch atmungsaktiv ohne Plastikfolie", "Ideal für die tägliche Frische, verhindert Feuchtigkeitsstau", "Ohne Duftstoffe molekular rein für die Schleimhäute"],
+      "lang": { "de": "Jessa Bio-Slipeinlagen", "en": "Jessa Organic Liners" }
+    },
+
+    "--- THE_SECURE_HOLD ---": "Binden mit Flügeln (Stabilitäts-Tech)",
+    "hygiene_pads_wings_facelle_nature": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Facelle Natur Ultra-Binden Flügel (Rossmann)", "icon": "🦋", "room": "bathroom", "val": { "wings": "Double-Adhesion", "pl_score": 9.0 },
+      "props": ["Flügel sorgen technologisch für fixierten Sitz bei Bewegung", "Extra weiche Oberfläche aus Bio-Baumwolle", "Saugkern aus FSC-zertifizierter Zellulose"],
+      "lang": { "de": "Facelle Flügelbinden", "en": "Facelle Wings Pads" }
+    },
+
+    "--- THE_NIGHT_SHIELD ---": "Nachtbinden (Maximal-Volumen)",
+    "hygiene_pads_night_alverde_bio": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alverde Bio-Binden Nacht", "icon": "🌙", "room": "bathroom", "sci": ["#sci/Physics"],
+      "val": { "length": "Extended", "absorption": "Heavy Duty", "pl_score": 9.0 },
+      "props": ["Technologisch verlängerte Rückseite für Schutz im Liegen", "Maximale Kapillarwirkung für die Nachtruhe", "Sicherer Auslaufschutz ohne synthetische Superabsorber"],
+      "lang": { "de": "Alverde Nachtbinden", "en": "Alverde Night Pads" }
+    }
+  }
+}

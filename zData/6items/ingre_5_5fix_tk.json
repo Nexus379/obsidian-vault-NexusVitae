@@ -1,0 +1,933 @@
+{
+  "tk_frozen_bio_berries_matrix": {
+    "--- THE_BLUE_ANTIOXIDANTS ---": "Bio-Heidelbeeren (Blaubeeren - Anthocyan-Power)",
+    "tk_bio_blueberries_alnatura": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Alnatura Bio Heidelbeeren (TK)", "icon": "🫐", "latin": "Vaccinium myrtillus (Frozen)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 42, "water_g": 84.0, "protein_g": 0.6, "fat_total_g": 0.5, "carbs_total_g": 7.4, "sugar_g": 7.3, "fiber_g": 4.8, "anthocyanins_mg": 300.0 },
+      "meta": { "locations": ["alnatura", "rewe", "edeka"], "brand": "Alnatura", "vegan": true },
+      "quality_metrics": { "process": "IQF (Schockgefrostet)", "origin": "EU-Agriculture (Organic)" },
+      "props": ["Wildwuchs-Qualität oder kontrollierter Bio-Anbau", "Extrem hoher Anteil an sekundären Pflanzenstoffen", "Perfekt für Smoothies und Porridge ohne Wasserverlust"],
+      "lang": { "de": "Bio Heidelbeeren (TK)", "en": "Organic Blueberries (Frozen)", "es": "Arándanos bio congelados", "fr": "Myrtilles bio surgelées", "ru": "Био черника замороженная", "ja": "有機冷凍ブルーベリー", "zh": "有机冷冻蓝莓", "fa": "بلوبری بیو منجمد", "hi": "जैविक फ्रोजन ब्लूबेरी", "ar": "توت أزرق عضوي مجمد" }
+    },
+    "tk_bio_blueberries_lidl_organic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Lidl Bio Organic Heidelbeeren", "icon": "🔵", "latin": "Vaccinium lidlianum bio", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 45, "water_g": 83.5, "protein_g": 0.7, "fat_total_g": 0.6, "carbs_total_g": 8.1, "sugar_g": 8.0 },
+      "meta": { "locations": ["lidl"], "brand": "Bio Organic", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Bio", "packaging": "Resealable pouch" },
+      "props": ["Lidls Preis-Leistungs-Sieger im TK-Bio-Bereich", "Gleichbleibende Größe der Beeren durch Sortierung", "Sehr geringer Bruchanteil im Beutel"],
+      "lang": { "de": "Lidl Bio Heidelbeeren", "en": "Lidl Organic Blueberries", "es": "Arándanos Lidl Bio", "fr": "Myrtilles Bio Lidl", "ru": "Био черника Лидл", "ja": "Lidl 有機ブルーベリー", "zh": "Lidl 有机蓝莓", "fa": "بلوبری بیو لیدل", "hi": "लिडल जैविक ब्लूबेरी", "ar": "توت أزرق عضوي ليدل" }
+    },
+
+    "--- THE_FRAGILE_RUBIES ---": "Bio-Himbeeren (Die empfindliche Elite)",
+    "tk_bio_raspberries_k_bio": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "K-Bio Himbeeren (TK)", "icon": "🍓", "latin": "Rubus idaeus (Frozen)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 52, "water_g": 85.0, "protein_g": 1.3, "fat_total_g": 0.3, "carbs_total_g": 5.0, "sugar_g": 4.8, "fiber_g": 4.7 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Bio", "vegan": true },
+      "quality_metrics": { "texture": "Whole fruit stability", "acidity": "Natural tartness" },
+      "props": ["Kauflands Bio-Himbeeren für Desserts und Backen", "Technologisch schwierig zu frosten, da die Frucht sehr wasserreich ist", "Hoher Vitamin-C-Gehalt bleibt durch Kälte stabil"],
+      "lang": { "de": "Bio Himbeeren (TK)", "en": "Organic Raspberries (Frozen)", "es": "Frambuesas bio congeladas", "fr": "Framboises bio surgelées", "ru": "Био малина замороженная", "ja": "有機冷凍ラズベリー", "zh": "有机冷冻覆盆子", "fa": "تمشک بیو منجمد", "hi": "जैविक फ्रोजन रास्पबेरी", "ar": "توت علّيق عضوي مجمد" }
+    },
+
+    "--- THE_ULTIMATE_SMOOTHIE_BASE ---": "Bio-Beerenmischungen (Diversität)",
+    "tk_bio_berry_mix_alnatura": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Alnatura Bio Beerenmischung", "icon": "🥣", "latin": "Mistura fructus silvestris", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 48, "water_g": 84.0, "protein_g": 0.9, "fat_total_g": 0.4, "carbs_total_g": 7.5, "sugar_g": 7.2 },
+      "meta": { "locations": ["alnatura", "dm", "rewe"], "brand": "Alnatura", "vegan": true },
+      "quality_metrics": { "composition": "Blueberries, Raspberries, Red/Black Currants", "purity": "No added sugar" },
+      "props": ["Die technologische Allzweckwaffe für das Frühstück", "Kombiniert verschiedene Anthocyane und Vitamine", "Sehr dekorativ für Bowls nach dem Auftauen"],
+      "lang": { "de": "Bio Beerenmischung", "en": "Organic Berry Mix", "es": "Mezcla de bayas bio", "fr": "Mélange de baies bio", "ru": "Био ягодная смесь", "ja": "有機冷凍ベリーミックス", "zh": "有机冷冻混合莓果", "fa": "میکس بیو توت منجمد", "hi": "जैविक बेरी मिक्स", "ar": "مزيج توت عضوي مجمد" }
+    },
+    "tk_bio_berry_mix_freshona_lidl": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Freshona Bio Beerenmischung (Lidl)", "icon": "🥤", "latin": "Mistura lidliana bio", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 50, "water_g": 83.0, "protein_g": 1.0, "fat_total_g": 0.5, "carbs_total_g": 8.0, "sugar_g": 7.8 },
+      "meta": { "locations": ["lidl"], "brand": "Freshona / Bio Organic", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Multi-Fruit", "inclusion_ratio": "Balanced" },
+      "props": ["Günstige Alternative für den täglichen Smoothie-Bedarf", "Enthält oft einen höheren Anteil an sauren Johannisbeeren", "Hält sich im Gefrierfach problemlos 12 Monate"],
+      "lang": { "de": "Lidl Bio Beerenmix", "en": "Lidl Organic Berry Mix", "es": "Mezcla de bayas Lidl Bio", "fr": "Mélange de baies Bio Lidl", "ru": "Ягодный микс Лидл", "ja": "Lidl 有機ベリーミックス", "zh": "Lidl 有机混合莓果", "fa": "میکس بیو توت لیدل", "hi": "लिडल जैविक बेरी मिक्स", "ar": "مزيج توت ليدل العضوي" }
+    },
+    "--- KAUFLAND_K_CLASSIC_POWER ---": "K-Classic (Kaufland Standard-Sortiment)",
+    "tk_raspberries_k_classic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "K-Classic Himbeeren (TK)", "icon": "🍓", "latin": "Rubus idaeus (Standard)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 53, "water_g": 84.5, "protein_g": 1.4, "fat_total_g": 0.3, "carbs_total_g": 4.9, "sugar_g": 4.7, "fiber_g": 4.8 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "process": "IQF (Single frozen)", "texture": "Whole fruit guarantee" },
+      "props": ["Die Preis-Leistungs-Referenz bei Kaufland", "Technologisch darauf optimiert, beim Auftauen wenig Saft zu verlieren", "Ideal für Kuchenbeläge und heiße Himbeeren"],
+      "lang": { "de": "K-Classic Himbeeren", "en": "Kaufland Raspberries", "es": "Frambuesas K-Classic", "fr": "Framboises K-Classic", "ru": "Малина К-Классик", "ja": "K-Classic ラズベリー", "zh": "K-Classic 覆盆子", "fa": "تمشک کا-کلاسیک", "hi": "के-क्लासिक रास्पबेरी", "ar": "توت علّيق ك-كلاسيك" }
+    },
+    "tk_berry_mix_k_classic_family": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "K-Classic Beerenmischung (750g)", "icon": "🥣", "latin": "Mistura fructus (Family Pack)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 45, "water_g": 85.0, "protein_g": 1.0, "fat_total_g": 0.5, "carbs_total_g": 6.8, "sugar_g": 6.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "variety": "Sour cherries, Raspberries, Blueberries, Currants", "size": "Bulk pack" },
+      "props": ["Maximale Wirtschaftlichkeit für tägliche Nutzer", "Enthält technologisch bedingt oft mehr Johannisbeeren zur Säureregulierung", "Perfekt für Meal-Prepping und große Shakes"],
+      "lang": { "de": "K-Classic Beerenmischung", "en": "K-Classic Berry Mix", "es": "Mezcla de bayas K-Classic", "fr": "Mélange de baies K-Classic", "ru": "Ягодный микс К-Классик", "ja": "K-Classic ベリーミックス", "zh": "K-Classic 混合莓果", "fa": "میکس توت کا-کلاسیک", "hi": "के-क्लासिक बेरी मिक्स", "ar": "مزيج توت ك-كلاسيك" }
+    },
+
+    "--- REWE_AND_EDEKA_PREMIUM ---": "REWE Beste Wahl & EDEKA (Qualitäts-Fokus)",
+    "tk_wild_blueberries_rewe_beste_wahl": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "REWE Beste Wahl Wald-Heidelbeeren", "icon": "🫐", "latin": "Vaccinium myrtillus (Wild)", "sci": ["#sci/Phytochemistry", "#sci/Botany"],
+      "val": { "kcal": 38, "water_g": 86.0, "protein_g": 0.6, "fat_total_g": 0.4, "carbs_total_g": 6.5, "sugar_g": 6.2, "antioxidants": "High" },
+      "meta": { "locations": ["rewe"], "brand": "REWE Beste Wahl", "vegan": true },
+      "quality_metrics": { "source": "Wild harvest (smaller berries)", "dye_intensity": "Intense violet (Anthocyanins)" },
+      "props": ["Wald-Heidelbeeren sind kleiner und farbintensiver als Kulturheidelbeeren", "Färben Zunge und Zähne technologisch stärker durch höhere Farbstoffdichte", "Aromatisch deutlich kräftiger"],
+      "lang": { "de": "REWE Wald-Heidelbeeren", "en": "REWE Wild Blueberries", "es": "Arándanos silvestres REWE", "fr": "Myrtilles sauvages REWE", "ru": "Лесная черника РЕВЕ", "ja": "REWE 野生ブルーベリー", "zh": "REWE 野生蓝莓", "fa": "بلوبری وحشی رِوه", "hi": "रेवे जंगली ब्लूबेरी", "ar": "توت أزرق بري ريفي" }
+    },
+    "tk_strawberries_gut_guenstig_edeka": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Gut & Günstig Erdbeeren (EDEKA)", "icon": "🍓", "latin": "Fragaria ananassa (Frozen)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 32, "water_g": 89.0, "protein_g": 0.7, "fat_total_g": 0.4, "carbs_total_g": 5.5, "sugar_g": 5.3 },
+      "meta": { "locations": ["edeka"], "brand": "Gut & Günstig", "vegan": true },
+      "quality_metrics": { "fruit_size": "Large (Whole fruits)", "calibration": "Industrial standard" },
+      "props": ["Edekas Preis-Hammer für Erdbeer-Liebhaber", "Technologisch bedingt beim Auftauen oft weicher als Heidelbeeren", "Ideal zum Pürieren für Saucen oder Eiscreme-Basen"],
+      "lang": { "de": "G&G Erdbeeren", "en": "G&G Strawberries", "es": "Fresas G&G", "fr": "Fraises G&G", "ru": "Клубника Г&Г", "ja": "G&G いちご", "zh": "G&G 草莓", "fa": "توت‌فرنگی گوت اند گونشتیگ", "hi": "जी एंड जी स्ट्रॉबेरी", "ar": "فراولة ج & ج" }
+    },
+
+    "--- THE_BRAMBLE_ELITE ---": "Brombeeren (Struktur & Eisen)",
+    "tk_blackberries_bio_organic_lidl": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Lidl Bio Organic Brombeeren", "icon": "🍇", "latin": "Rubus fruticosus (Bio)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 43, "water_g": 85.0, "protein_g": 1.2, "fat_total_g": 0.5, "carbs_total_g": 6.2, "sugar_g": 6.0, "fiber_g": 5.0 },
+      "meta": { "locations": ["lidl"], "brand": "Bio Organic", "vegan": true },
+      "quality_metrics": { "texture": "Firm drupelets", "origin": "Controlled Organic" },
+      "props": ["Besonders ballaststoffreich durch die vielen kleinen Kerne", "Enthalten signifikante Mengen an Eisen und Magnesium", "Behalten ihre Form technologisch sehr gut bei vorsichtigem Auftauen"],
+      "lang": { "de": "Bio Brombeeren", "en": "Organic Blackberries", "es": "Moras bio", "fr": "Mûres bio", "ru": "Био ежевика", "ja": "有機ブラックベリー", "zh": "有机黑莓", "fa": "تمشک سیاه بیو", "hi": "जैविक ब्लैकबेरी", "ar": "توت أسود عضوي" }
+    },
+  
+    "--- THE_SPINACH_EMPIRE ---": "Spinat-Varianten (Eisen & Folsäure)",
+    "tk_spinach_iglo_rahm": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Iglo Rahm-Spinat (mit dem Blubb)", "icon": "🍃", "latin": "Spinacia oleracea cremosa", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 53, "water_g": 88.0, "protein_g": 2.1, "fat_total_g": 2.5, "carbs_total_g": 3.2, "sugar_g": 0.5, "fiber_g": 2.2, "vitamin_a_re": 500.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": false },
+      "quality_metrics": { "texture": "Ultra-creamy (Emulsified)", "process": "Flash-frozen after blanching" },
+      "props": ["Der deutsche Benchmark für TK-Gemüse", "Technologisch perfektionierte Sahne-Emulsion", "Enthält signifikante Mengen an Vitamin K und Vitamin A"],
+      "lang": { "de": "Rahmspinat", "en": "Creamed Spinach", "es": "Espinacas a la crema", "fr": "Épinards à la crème", "ru": "Шпинат со сливками", "ja": "クリームほうれん草", "zh": "奶油菠菜", "fa": "اسفناج خامه‌ای", "hi": "क्रीमयुक्त पालक", "ar": "سبانخ بالكريمة" }
+    },
+    "tk_spinach_bio_blatt_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lidl Bio Organic Blattspinat", "icon": "🌿", "latin": "Spinacia oleracea (Bio)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 23, "water_g": 91.0, "protein_g": 2.5, "fat_total_g": 0.4, "carbs_total_g": 0.6, "sugar_g": 0.5, "iron_mg": 2.7 },
+      "meta": { "locations": ["lidl"], "brand": "Bio Organic", "vegan": true },
+      "quality_metrics": { "purity": "100% Leaf (no stems)", "origin": "Controlled Organic" },
+      "props": ["Reiner Blattspinat ohne Zusätze", "Höchste Nährstoffdichte bei minimalen Kalorien", "Ideal für Smoothies oder als Beilage mit Knoblauch"],
+      "lang": { "de": "Bio Blattspinat", "en": "Organic Leaf Spinach", "es": "Espinacas frescas bio", "fr": "Épinards bio en branches", "ru": "Био шпинат в листьях", "ja": "有機ほうれん草の葉", "zh": "有机菠菜叶", "fa": "اسفناج بیو برگی", "hi": "जैविक पालक के पत्ते", "ar": "سبانخ عضوية أوراق" }
+    },
+
+    "--- THE_GREEN_PEARLS ---": "Erbsen (Protein-Hämmer aus dem Frost)",
+    "tk_peas_iglo_gartenerbsen": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Iglo Gartenerbsen (Extra fein)", "icon": "🟢", "latin": "Pisum sativum (Iglo)", "sci": ["#sci/FoodScience", "#sci/Biology"],
+      "val": { "kcal": 75, "water_g": 78.0, "protein_g": 5.5, "fat_total_g": 0.5, "carbs_total_g": 10.0, "sugar_g": 3.0, "fiber_g": 5.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": true },
+      "quality_metrics": { "process": "IQF (Individually Quick Frozen)", "time_to_frost": "< 3 hours after harvest" },
+      "props": ["Technologisch extrem schnell verarbeitet, um den Zucker nicht in Stärke umzuwandeln", "Knackige Textur und süßlicher Geschmack", "Hervorragende pflanzliche Proteinquelle"],
+      "lang": { "de": "Gartenerbsen", "en": "Garden Peas", "es": "Guisantes", "fr": "Petits pois", "ru": "Зеленый горошек", "ja": "グリーンピース", "zh": "豌豆", "fa": "نخود فرنگی", "hi": "हरी मटर", "ar": "بازلاء" }
+    },
+    "tk_peas_k_classic_kaufland": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Erbsen (Junge Erbsen)", "icon": "🌳", "latin": "Pisum sativum kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 78, "water_g": 77.0, "protein_g": 5.2, "fat_total_g": 0.4, "carbs_total_g": 11.0, "sugar_g": 3.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Leader", "calibration": "Mixed sizes" },
+      "props": ["Kauflands Preis-Leistungs-Sieger für die Vorratskammer", "Etwas größere Sortierung als die 'extra feinen' Marken-Erbsen", "Ideal für Eintöpfe und Suppen"],
+      "lang": { "de": "Kaufland Erbsen", "en": "Kaufland Peas", "es": "Guisantes K-Classic", "fr": "Petits pois K-Classic", "ru": "Горошек К-Классик", "ja": "K-Classic ピース", "zh": "K-Classic 豌豆", "fa": "نخود فرنگی کا-کلاسیک", "hi": "के-क्लासिक मटर", "ar": "بازلاء ك-كلاسيك" }
+    },
+
+    "--- THE_PAN_READY_ELITE ---": "Pfannengemüse (Mischungen & Würze)",
+    "tk_pan_veg_frosta_asia": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Frosta Pfannengemüse (Asia Mix)", "icon": "🥢", "latin": "Mistura vegetabilis asiatica", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 45, "water_g": 85.0, "protein_g": 1.5, "fat_total_g": 1.0, "carbs_total_g": 6.5, "sugar_g": 3.5 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "brand": "Frosta", "vegan": true },
+      "quality_metrics": { "reinheitsgebot": "No flavor enhancers, no colorings", "transparency": "Region of origin shown online" },
+      "props": ["Goldstandard für Transparenz und Reinheit", "Enthält Mungobohnenkeimlinge, Paprika, Pilze und Bambus", "Wird direkt in der Pfanne ohne zusätzliches Auftauen zubereitet"],
+      "lang": { "de": "Frosta Asia Mix", "en": "Frosta Asia Stir-fry", "es": "Verduras asiáticas Frosta", "fr": "Mélange asiatique Frosta", "ru": "Азиатская смесь Фроста", "ja": "Frosta アジアミックス", "zh": "Frosta 亚洲风味蔬菜", "fa": "میکس آسیایی فروستا", "hi": "फ्रोस्टा एशिया मिक्स", "ar": "مزيج فروستا الآسيوي" }
+    },
+    "tk_broccoli_bio_k_bio": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Bio Broccoli Röschen", "icon": "🥦", "latin": "Brassica oleracea italica", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 34, "water_g": 89.0, "protein_g": 3.0, "fat_total_g": 0.4, "carbs_total_g": 2.5, "sugar_g": 1.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Bio", "vegan": true },
+      "quality_metrics": { "purity": "Florets only (no stems)", "organic_standard": "EU-Bio" },
+      "props": ["Einzeln entnehmbare Röschen in Bio-Qualität", "Hoher Sulforaphan-Gehalt (Antioxidans)", "Bleibt technologisch knackig durch schnelles Blanchieren vor dem Frosten"],
+      "lang": { "de": "Bio Broccoli", "en": "Organic Broccoli", "es": "Brócoli bio", "fr": "Brocolis bio", "ru": "Био брокколи", "ja": "有機ブロッコリー", "zh": "有机西兰花", "fa": "بروکلی بیو", "hi": "जैविक ब्रोकोली", "ar": "بروكلي عضوي" }
+    }
+	},
+  "tk_frozen_veggie_extended": {
+    "--- THE_SOUP_FOUNDATION ---": "Suppengrün & Basis-Mixe (Aroma-Konzentrat)",
+    "tk_soup_greens_freshona_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Freshona Suppengrün (TK)", "icon": "🥣", "latin": "Mistura holeribus suppae", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 35, "water_g": 89.0, "protein_g": 1.2, "fat_total_g": 0.3, "carbs_total_g": 5.2, "sugar_g": 4.8, "fiber_g": 3.1 },
+      "meta": { "locations": ["lidl"], "brand": "Freshona", "vegan": true },
+      "quality_metrics": { "components": "Carrots, Leek, Celeriac, Parsley", "cut": "Fine dice (Brunoise/Small cubes)" },
+      "props": ["Die technologische Wunderwaffe für Saucenansätze (Soßenspiegel)", "Perfekt ausbalanciertes Verhältnis der Aromageber", "Spart ca. 15 Minuten Vorbereitungszeit pro Kochvorgang"],
+      "lang": { "de": "Suppengrün (TK)", "en": "Soup Vegetables (Mix)", "es": "Verduras para sopa", "fr": "Légumes pour potage", "ru": "Суповой набор (овощи)", "ja": "スープ用野菜ミックス", "zh": "汤用蔬菜丁", "fa": "سبزیجات سوپ منجمد", "hi": "सूप वाली सब्जियां", "ar": "خضار للحساء مجمدة" }
+    },
+
+    "--- THE_FLORET_ELITE ---": "Brokkoli & Blumenkohl (Kohl-Power)",
+    "tk_broccoli_gut_guenstig_edeka": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Gut & Günstig Broccoli (Röschen)", "icon": "🥦", "latin": "Brassica oleracea italica (Standard)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 32, "water_g": 90.0, "protein_g": 3.1, "fat_total_g": 0.3, "carbs_total_g": 2.2, "sugar_g": 1.4, "fiber_g": 2.9 },
+      "meta": { "locations": ["edeka"], "brand": "Gut & Günstig", "vegan": true },
+      "quality_metrics": { "part": "Florets only (min. 80%)", "size_calibration": "Uniform for even cooking" },
+      "props": ["Edekas Preis-Leistungs-Standard für Brokkoli", "Hält durch Schockfrostung die grüne Farbe extrem stabil", "Perfekt für Aufläufe oder als schnelle Beilage"],
+      "lang": { "de": "Broccoli Röschen", "en": "Broccoli Florets", "es": "Brócoli en ramilletes", "fr": "Brocolis en bouquets", "ru": "Соцветия брокколи", "ja": "ブロッコリー・フローレット", "zh": "西兰花瓣", "fa": "کلم بروکلی منجمد", "hi": "ब्रोकोली फ्लोरेट्स", "ar": "زهرات بروكلي" }
+    },
+    "tk_cauliflower_k_classic_kaufland": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Blumenkohl (TK)", "icon": "☁️", "latin": "Brassica oleracea botrytis", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 25, "water_g": 92.0, "protein_g": 1.9, "fat_total_g": 0.2, "carbs_total_g": 2.3, "sugar_g": 1.9, "fiber_g": 2.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "color": "Pure white (no browning)", "texture": "Firm to the bite" },
+      "props": ["Vielseitiger Low-Carb-Champion", "Technologisch überlegen, da kein Geruch beim Schneiden in der Küche", "Reich an Vitamin C und K"],
+      "lang": { "de": "Blumenkohl (TK)", "en": "Cauliflower (Frozen)", "es": "Coliflor congelada", "fr": "Chou-fleur surgelé", "ru": "Цветная капуста замороженная", "ja": "冷凍カリフラワー", "zh": "冷冻花椰菜", "fa": "گل کلم منجمد", "hi": "फ्रोजन फूलगोभी", "ar": "قرنبيط مجمد" }
+    },
+
+    "--- THE_GREEN_BEAM ---": "Prinzessbohnen & Rosenkohl (Struktur-Gemüse)",
+    "tk_green_beans_rewe_beste_wahl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "REWE Beste Wahl Prinzessbohnen", "icon": "🥢", "latin": "Phaseolus vulgaris (Fine)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 31, "water_g": 90.0, "protein_g": 1.9, "fat_total_g": 0.2, "carbs_total_g": 5.1, "sugar_g": 1.2, "fiber_g": 2.8 },
+      "meta": { "locations": ["rewe"], "brand": "REWE Beste Wahl", "vegan": true },
+      "quality_metrics": { "type": "Extra fine (Prinzess)", "preparation": "Cleanly topped and tailed" },
+      "props": ["Besonders zarte Bohnen ohne störende Fäden", "Bleiben technologisch knackig, wenn sie nur kurz gedünstet werden", "Enthalten viel Kalium und Magnesium"],
+      "lang": { "de": "Prinzessbohnen", "en": "Green Beans (Fine)", "es": "Judías verdes finas", "fr": "Haricots verts fins", "ru": "Стручковая фасоль", "ja": "インゲン", "zh": "四季豆", "fa": "لوبیا سبز منجمد", "hi": "हरी फलियाँ", "ar": "فاصوليا خضراء" }
+    },
+    "tk_brussels_sprouts_iglo": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Iglo Rosenkohl", "icon": "🌳", "latin": "Brassica oleracea gemmifera", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 45, "water_g": 86.0, "protein_g": 4.0, "fat_total_g": 0.5, "carbs_total_g": 3.5, "sugar_g": 2.0, "fiber_g": 4.2 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": true },
+      "quality_metrics": { "bitterness": "Controlled (Mild varieties)", "size": "Uniform diameter" },
+      "props": ["Der Winter-Klassiker technologisch perfekt schockgefrostet", "Verliert durch Frost einen Teil der Bitterstoffe (wird süßer)", "Extrem hoher Gehalt an Vitamin C (mehr als Orangen!)"],
+      "lang": { "de": "Rosenkohl (TK)", "en": "Brussels Sprouts", "es": "Coles de Bruselas", "fr": "Choux de Bruxelles", "ru": "Брюссельская капуста", "ja": "芽キャベツ", "zh": "抱子甘蓝", "fa": "کلم بروکسل منجمد", "hi": "ब्रसेल्स स्प्राउट्स", "ar": "كرنب بروكسل" }
+    },
+    "--- THE_ROYAL_MIXES ---": "Rahm- & Königsgemüse (Klassische Mischungen)",
+    "tk_veg_iglo_koenigsgemuese": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Iglo Königsgemüse (Rahm-Version)", "icon": "👑", "latin": "Mistura vegetabilis regia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 65, "water_g": 85.0, "protein_g": 2.2, "fat_total_g": 3.8, "carbs_total_g": 4.5, "sugar_g": 2.1, "fiber_g": 2.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": false },
+      "quality_metrics": { "components": "Cauliflower, Broccoli, Carrots", "sauce": "Creamy Béchamel-style" },
+      "props": ["Die beliebteste Gemüsemischung Deutschlands", "Technologisch perfekt abgestimmte Garzeiten der drei Gemüsesorten", "Der Rahm sorgt für eine hohe Akzeptanz, auch bei Kindern"],
+      "lang": { "de": "Königsgemüse", "en": "King's Vegetables (Creamed)", "es": "Verduras reales a la crema", "fr": "Légumes royaux à la crème", "ru": "Королевская овощная смесь", "ja": "キングズ・ベジタブル", "zh": "皇家奶油蔬菜罐头", "fa": "میکس سبزیجات شاهانه", "hi": "शाही सब्जियां", "ar": "خضار ملكية بالكريمة" }
+    },
+    "tk_veg_mix_mexican_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Freshona Mexiko-Mix (Lidl)", "icon": "🇲🇽", "latin": "Mistura mexicana lidliana", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 82, "water_g": 78.0, "protein_g": 3.8, "fat_total_g": 0.8, "carbs_total_g": 13.0, "sugar_g": 3.2, "fiber_g": 4.5 },
+      "meta": { "locations": ["lidl"], "brand": "Freshona", "vegan": true },
+      "quality_metrics": { "components": "Sweetcorn, Peas, Red Peppers, Kidney Beans", "texture": "Firm / High starch" },
+      "props": ["Lidls Standard-Mix für Reisgerichte und Salate", "Besonders protein- und ballaststoffreich durch die Bohnen", "Bleibt technologisch extrem knackig beim Braten"],
+      "lang": { "de": "Mexiko-Mix", "en": "Mexican Style Mix", "es": "Mezcla mexicana", "fr": "Mélange mexicain", "ru": "Мексиканская смесь", "ja": "メキシカンミックス", "zh": "墨西哥风味蔬菜", "fa": "میکس مکزیکی", "hi": "मेक्सिकन मिक्स", "ar": "مزيج مكسيكي" }
+    },
+
+    "--- THE_HERB_MATRIX ---": "TK-Kräuter (Die Aroma-Konzentrate)",
+    "tk_herbs_8_mix_iglo": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Iglo 8-Kräuter Mix", "icon": "🌿", "latin": "Mistura octo herbarum", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 42, "water_g": 85.0, "protein_g": 3.0, "fat_total_g": 0.7, "carbs_total_g": 3.5, "fiber_g": 4.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": true },
+      "quality_metrics": { "components": "Parsley, Chives, Chervil, Borage, Pimpernel, Sorrel, Cress, Dill", "process": "Flash-frozen within hours" },
+      "props": ["Die technologische Wunderwaffe für Frankfurter Grüne Soße oder Dressings", "Ätherische Öle bleiben durch die Kälte fast zu 100% erhalten", "Kein Hacken nötig, sofort streufähig"],
+      "lang": { "de": "8-Kräuter Mix", "en": "8-Herb Mix", "es": "Mezcla de 8 hierbas", "fr": "Mélange de 8 herbes", "ru": "Смесь из 8 трав", "ja": "8種のハーブミックス", "zh": "八味香草混合装", "fa": "میکس ۸ گیاه معطر", "hi": "8-हर्ब मिक्स", "ar": "مزيج 8 أعشاب" }
+    },
+    "tk_herbs_parsley_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Petersilie (TK)", "icon": "🍃", "latin": "Petroselinum crispum (Frozen)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 45, "water_g": 84.0, "protein_g": 3.5, "fat_total_g": 0.5, "carbs_total_g": 4.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "type": "Curly or Flat leaf", "purity": "No added salt" },
+      "props": ["Kauflands Basis-Kraut für jede Küche", "Deutlich intensiver als getrocknete Petersilie", "Enthält extrem viel Vitamin C und Eisen"],
+      "lang": { "de": "Petersilie (TK)", "en": "Parsley (Frozen)", "es": "Perejil congelado", "fr": "Persil surgelé", "ru": "Петрушка замороженная", "ja": "冷凍パセリ", "zh": "冷冻欧芹", "fa": "جعفری منجمد", "hi": "फ्रोजन पार्सले", "ar": "بقدونس مجمد" }
+    },
+	
+    "--- THE_ORGANIC_HERB_GARDEN ---": "Bio-Kräuter (Reinheit & Ätherische Öle)",
+    "tk_bio_basil_alnatura": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alnatura Bio Basilikum (TK)", "icon": "🌿", "latin": "Ocimum basilicum (Bio)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 23, "water_g": 92.0, "protein_g": 2.5, "fat_total_g": 0.6, "carbs_total_g": 1.1, "fiber_g": 1.6 },
+      "meta": { "locations": ["alnatura", "rewe", "edeka"], "brand": "Alnatura", "vegan": true },
+      "quality_metrics": { "origin": "EU-Organic", "process": "Aroma-Safe Flash Frozen" },
+      "props": ["Vorgeschnitten und streufähig", "Technologisch überlegen gegenüber getrocknetem Basilikum (behält das typische Aroma)", "Unverzichtbar für Pesto-Basen oder Tomate-Mozzarella-Finishing"],
+      "lang": { "de": "Bio Basilikum (TK)", "en": "Organic Basil (Frozen)", "es": "Albahaca bio congelada", "fr": "Basilic bio surgelé", "ru": "Био базилик замороженный", "ja": "有機冷凍バジル", "zh": "有机冷冻罗勒", "fa": "ریحان بیو منجمد", "hi": "जैविक फ्रोजन तुलसी", "ar": "ريحان عضوي مجمد" }
+    },
+    "tk_bio_dill_lidl_organic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lidl Bio Organic Dill", "icon": "🌿", "latin": "Anethum graveolens (Bio)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 43, "water_g": 86.0, "protein_g": 3.4, "fat_total_g": 1.1, "carbs_total_g": 7.0 },
+      "meta": { "locations": ["lidl"], "brand": "Bio Organic", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Bio", "cut": "Fine tips only" },
+      "props": ["Lidls Standard für Fischgerichte und Gurkensalate", "Behält durch die Kälte die feine, farnartige Struktur", "Extrem hoher Gehalt an ätherischen Ölen"],
+      "lang": { "de": "Bio Dill (TK)", "en": "Organic Dill (Frozen)", "es": "Eneldo bio congelado", "fr": "Aneth bio surgelé", "ru": "Био укроп замороженный", "ja": "有機冷凍ディル", "zh": "有机冷冻小茴香", "fa": "شوید بیو منجمد", "hi": "जैविक फ्रोजन डिल", "ar": "شبت عضوي مجمد" }
+    },
+    "tk_bio_cilantro_rewe_bio": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "REWE Bio Koriander (TK)", "icon": "☘️", "latin": "Coriandrum sativum (Bio)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 23, "water_g": 92.0, "protein_g": 2.1, "fat_total_g": 0.5 },
+      "meta": { "locations": ["rewe"], "brand": "REWE Bio", "vegan": true },
+      "quality_metrics": { "aroma_profile": "Intense / Fresh / Citrusy", "purity": "No stems focus" },
+      "props": ["Die Geheimwaffe für asiatische und mexikanische Gerichte", "Behält die Frische deutlich besser als konventioneller Koriander aus dem Topf", "Technologisch perfekt für die Dosierung in Currys"],
+      "lang": { "de": "Bio Koriander (TK)", "en": "Organic Cilantro (Frozen)", "es": "Cilantro bio congelado", "fr": "Coriandre bio surgelée", "ru": "Био кориандр замороженный", "ja": "有機冷凍パクチー", "zh": "有机冷冻香菜", "fa": "گشنیز بیو منجمد", "hi": "जैविक फ्रोजन धनिया", "ar": "كزبرة عضوية مجمدة" }
+    },
+
+    "--- THE_BIO_VEGGIE_SPECIALS ---": "Besondere Bio-TK-Spezialitäten",
+    "tk_bio_edamame_vitasia_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Vitasia Bio Edamame (Sojabohnen)", "icon": "🫛", "latin": "Glycine max (Bio)", "sci": ["#sci/Nutrition", "#sci/Biology"],
+      "val": { "kcal": 122, "water_g": 70.0, "protein_g": 11.0, "fat_total_g": 5.0, "carbs_total_g": 9.0, "fiber_g": 5.0, "isoflavones_mg": 40.0 },
+      "meta": { "locations": ["lidl"], "brand": "Vitasia / Bio Organic", "vegan": true },
+      "quality_metrics": { "preparation": "In shell or shelled", "protein_density": "Very High" },
+      "props": ["Der High-Protein-Snack der Zukunft", "Wird im Bio-Anbau ohne Gentechnik produziert", "Technologisch extrem nährstoffreich durch schnelles Frosten nach der Ernte"],
+      "lang": { "de": "Bio Edamame", "en": "Organic Edamame", "es": "Edamame bio", "fr": "Edamame bio", "ru": "Био эдамаме", "ja": "有機枝豆", "zh": "有机毛豆", "fa": "ادامام بیو", "hi": "जैविक एडामेम", "ar": "ادامامي عضوي" }
+    },
+    "tk_bio_corn_k_bio": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Bio Junger Zuckermais (TK)", "icon": "🌽", "latin": "Zea mays (Bio Frozen)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 95, "water_g": 75.0, "protein_g": 3.3, "fat_total_g": 1.2, "carbs_total_g": 16.0, "sugar_g": 3.5, "fiber_g": 2.8 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Bio", "vegan": true },
+      "quality_metrics": { "sweetness": "Natural (no added sugar)", "texture": "Crisp skin / Juicy core" },
+      "props": ["Kauflands Bio-Standard für Mais-Fans", "Deutlich knackiger als Mais aus der Dose", "Behält durch die Kälte die natürliche Süße der Ernte"],
+      "lang": { "de": "Bio Zuckermais (TK)", "en": "Organic Sweetcorn (Frozen)", "es": "Maíz dulce bio congelado", "fr": "Maïs doux bio surgelé", "ru": "Био кукуруза замороженная", "ja": "有機冷凍スイートコーン", "zh": "有机冷冻甜玉米", "fa": "ذرت شیرین بیو منجمد", "hi": "जैविक फ्रोजन स्वीटकॉर्न", "ar": "ذرة حلوة عضوية مجمدة" }
+    },
+	
+    "--- THE_FISH_STICK_KINGDOM ---": "Fischstäbchen (Panaden-Technologie)",
+    "tk_fish_sticks_iglo_classic": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Iglo Fischstäbchen (15er Pack)", "icon": "🐟", "latin": "Gadus morhua crustatus", "sci": ["#sci/FoodScience", "#sci/MarineBiology"],
+      "val": { "kcal": 210, "water_g": 62.0, "protein_g": 13.0, "fat_total_g": 9.0, "carbs_total_g": 18.0, "omega3_mg": 250.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": false },
+      "quality_metrics": { "fish_content": "65% Pollock (MSC)", "texture": "Crispy Breadcrumb / Juicy Core" },
+      "props": ["Der deutsche Goldstandard seit 1959", "Besteht aus 100% Filet (kein Formfleisch)", "Technologisch optimiert für die Pfanne oder den Backofen (knuspert ohne viel Öl)"],
+      "lang": { "de": "Iglo Fischstäbchen", "en": "Iglo Fish Fingers", "es": "Varitas de pescado Iglo", "fr": "Bâtonnets de poisson Iglo", "ru": "Рыбные палочки Игло", "ja": "イグロ フィッシュフィンガー", "zh": "Iglo 黄金鱼柳", "fa": "ناگت ماهی ایگلو", "hi": "इग्लो फिश फिंगर्स", "ar": "أصابع سمك إيجلو" }
+    },
+    "tk_fish_sticks_ocean_sea_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Ocean Sea Fischstäbchen (Lidl)", "icon": "🌊", "latin": "Gadus lidlianus crustatus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 205, "water_g": 63.0, "protein_g": 12.5, "fat_total_g": 8.5, "carbs_total_g": 19.0 },
+      "meta": { "locations": ["lidl"], "brand": "Ocean Sea", "vegan": false },
+      "quality_metrics": { "comparison": "Iglo Clone", "certification": "MSC Sustainable" },
+      "props": ["Lidls Antwort auf den Kapitän", "Fast identische Panaden-Rezeptur", "Preislich oft 50% günstiger als das Marken-Original"],
+      "lang": { "de": "Lidl Fischstäbchen", "en": "Lidl Fish Fingers", "es": "Varitas de pescado Lidl", "fr": "Bâtonnets de poisson Lidl", "ru": "Рыбные палочки Лидл", "ja": "Lidl フィッシュフィンガー", "zh": "Lidl 鱼柳", "fa": "ناگت ماهی لیدل", "hi": "लिडल फिश फिंगर्स", "ar": "أصابع سمك ليدل" }
+    },
+
+    "--- THE_POTATO_ALCHYMY ---": "Pommes & Kartoffel-Specials (Stärke-Physik)",
+    "tk_fries_mccain_golden_longs": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "McCain Golden Longs", "icon": "🍟", "latin": "Solanum frictum mccainium", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 160, "water_g": 65.0, "protein_g": 2.5, "fat_total_g": 5.0, "carbs_total_g": 25.0, "sugar_g": 0.5 },
+      "meta": { "locations": ["everywhere"], "brand": "McCain", "vegan": true },
+      "quality_metrics": { "cut": "Ultra-long / Thin", "preparation": "Pre-fried in Sunflower oil" },
+      "props": ["Der globale Marktführer für TK-Pommes", "Technologisch auf maximale 'Knusprigkeit bei weichem Kern' gezüchtet", "Extrem stabil im Ofen, werden nicht so schnell labbrig"],
+      "lang": { "de": "McCain Pommes", "en": "McCain French Fries", "es": "Patatas McCain", "fr": "Frites McCain", "ru": "Картофель фри Маккейн", "ja": "マッケイン フライドポテト", "zh": "麦肯薯条", "fa": "سیب‌زمینی سرخ‌کرده مک‌کین", "hi": "मैककेन फ्रेंच फ्राइज़", "ar": "بطاطس ماكين" }
+    },
+    "tk_fries_harvest_basket_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Harvest Basket Backofen-Pommes (Lidl)", "icon": "🥔", "latin": "Solanum frictum lidlianum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 155, "water_g": 67.0, "protein_g": 2.2, "fat_total_g": 4.5, "carbs_total_g": 26.0 },
+      "meta": { "locations": ["lidl"], "brand": "Harvest Basket", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Classic", "variety": "Standard Cut" },
+      "props": ["Lidls zuverlässiger Standard-Sack (oft 1kg oder 2,5kg)", "Bestehen aus ausgesuchten Kartoffelsorten mit hohem Stärkegehalt", "Ideale Basis für 'Pommes Schranke' zu Hause"],
+      "lang": { "de": "Lidl Pommes", "en": "Lidl French Fries", "es": "Patatas Lidl", "fr": "Frites Lidl", "ru": "Картофель фри Лидл", "ja": "Lidl フライドポテト", "zh": "Lidl 薯条", "fa": "سیب‌زمینی سرخ‌کرده لیدل", "hi": "लिडल फ्रेंच फ्राइज़", "ar": "بطاطس ليدل" }
+    },
+    "tk_potato_wedges_k_classic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Kartoffel-Spalten (Wedges)", "icon": "📐", "latin": "Solanum cuneatum kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 140, "water_g": 70.0, "protein_g": 2.0, "fat_total_g": 4.0, "carbs_total_g": 23.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "cut": "Wedge (mit Schale)", "spice": "Paprika/Herbs coating" },
+      "props": ["Kauflands herzhafte Alternative zur dünnen Pommes", "Durch die Schale technologisch ballaststoffreicher", "Bleiben innen sehr cremig"],
+      "lang": { "de": "Kartoffelspalten / Wedges", "en": "Potato Wedges", "es": "Gajos de patata", "fr": "Quartiers de pommes de terre", "ru": "Картофельные дольки", "ja": "ポテトウェッジ", "zh": "薯角", "fa": "سیب‌زمینی تنوری (وجیز)", "hi": "आलू वेजेस", "ar": "ودجز البطاطس" }
+    },
+	
+    "--- THE_BATTER_BENCHMARKS ---": "Backfischstäbchen (Die Backteig-Elite)",
+    "tk_backfisch_iglo_classic": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Iglo Backfisch-Stäbchen", "icon": "🥨", "latin": "Gadus morhua crustatus inflatus", "sci": ["#sci/FoodScience", "#sci/Physics"],
+      "val": { "kcal": 245, "water_g": 58.0, "protein_g": 11.0, "fat_total_g": 14.0, "carbs_total_g": 18.0, "sugar_g": 1.2 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": false },
+      "quality_metrics": { "coating": "Liquid-based Batter (Backteig)", "fish_content": "55-60% MSC Pollock" },
+      "props": ["Die luxuriöse Variante des klassischen Fischstäbchens", "Technologisch optimiert für eine luftige, gepuffte Kruste", "Schmeckt deutlich intensiver nach 'Fischimbiss' als die normale Panade"],
+      "lang": { "de": "Backfischstäbchen", "en": "Battered Fish Fingers", "es": "Varitas de pescado rebozadas", "fr": "Bâtonnets de poisson façon beignets", "ru": "Рыбные палочки в кляре", "ja": "フリッター風フィッシュフィンガー", "zh": "面糊炸鱼柳", "fa": "ناگت ماهی با روکش خمیر", "hi": "बैटर्ड फिश फिंगर्स", "ar": "أصابع سمك بالعجينة" }
+    },
+    "tk_backfisch_ocean_sea_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Ocean Sea Backfisch-Stäbchen (Lidl)", "icon": "🌊", "latin": "Gadus lidlianus inflatus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 240, "water_g": 59.0, "protein_g": 10.5, "fat_total_g": 13.5, "carbs_total_g": 19.0 },
+      "meta": { "locations": ["lidl"], "brand": "Ocean Sea", "vegan": false },
+      "quality_metrics": { "comparison": "Iglo Backfisch Clone", "price_segment": "Budget Heavyweight" },
+      "props": ["Lidls direkte Antwort auf den Iglo Backfisch", "Die Kruste ist oft etwas dicker, was für mehr Crunch sorgt", "Preislich unschlagbar für den massiven Kalorien-Kick"],
+      "lang": { "de": "Lidl Backfischstäbchen", "en": "Lidl Battered Fish", "es": "Varitas rebozadas Lidl", "fr": "Beignets de poisson Lidl", "ru": "Рыбные палочки в кляре Лидл", "ja": "Lidl フリッターフィッシュ", "zh": "Lidl 面糊鱼柳", "fa": "ناگت ماهی لیدل", "hi": "लिडल बैटर्ड फिश", "ar": "أصابع سمك بالعجينة ليدل" }
+    },
+    "tk_backfisch_k_classic_kaufland": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Classic Backfisch-Stäbchen", "icon": "⚓", "latin": "Gadus kauflandia inflatus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 242, "water_g": 58.5, "protein_g": 11.2, "fat_total_g": 13.8, "carbs_total_g": 18.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "texture": "Crisp / Puffy", "fish_type": "Alaska Pollock (MSC)" },
+      "props": ["Kauflands Standard für Fans von flüssiger Panade", "Hält die Form im Backofen extrem stabil", "Das Aroma erinnert stark an 'Fish & Chips'"],
+      "lang": { "de": "Kaufland Backfischstäbchen", "en": "Kaufland Battered Fish", "es": "Varitas rebozadas Kaufland", "fr": "Beignets de poisson Kaufland", "ru": "Рыбные палочки Кауфланд", "ja": "K-Classic バッターフィッシュ", "zh": "K-Classic 面糊鱼柳", "fa": "ناگت ماهی کا-کلاسیک", "hi": "के-क्लासिक बैटर्ड फिश", "ar": "أصابع سمك ك-كلاسيك" }
+    },
+
+    "--- THE_GOURMET_FISH_FILES ---": "Besondere Fisch-Spezialitäten (TK)",
+    "tk_schlemmerfilet_bordelaise_iglo": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Iglo Schlemmerfilet Bordelaise", "icon": "🥘", "latin": "Gadus morhua bordelaise", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 130, "water_g": 75.0, "protein_g": 12.0, "fat_total_g": 7.0, "carbs_total_g": 4.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": false },
+      "quality_metrics": { "topping": "Herbs, Breadcrumbs, Fats", "container": "Oven-ready tray" },
+      "props": ["Der Inbegriff des schnellen TK-Mittagessens", "Technologisch getrennte Schichten: Unten saftiges Filet, oben knusprige Kruste", "Die Kruste schützt den Fisch vor dem Austrocknen bei 200°C"],
+      "lang": { "de": "Schlemmerfilet Bordelaise", "en": "Gourmet Fish Filet", "es": "Filete de pescado gourmet", "fr": "Filet de poisson Bordelaise", "ru": "Рыбное филе Бордолез", "ja": "シュレンマーフィレ", "zh": "法式焗鱼排", "fa": "فیله ماهی گورمه", "hi": "पेटू मछली फ़िलेट", "ar": "فيليه سمك فاخر" }
+    },
+	
+    "--- THE_CEPHALOPOD_CHAMPIONS ---": "Calamari & Tintenfisch (Textur-Spezialisten)",
+    "tk_calamari_rings_ocean_sea_lidl": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Ocean Sea Tintenfischringe (im Backteig)", "icon": "🦑", "latin": "Illex argentinus crustatus", "sci": ["#sci/MarineBiology", "#sci/FoodScience"],
+      "val": { "kcal": 235, "water_g": 60.0, "protein_g": 10.0, "fat_total_g": 12.0, "carbs_total_g": 21.0 },
+      "meta": { "locations": ["lidl"], "brand": "Ocean Sea", "vegan": false },
+      "quality_metrics": { "coating": "Golden Batter (Backteig)", "origin": "Southwest Atlantic (MSC)" },
+      "props": ["Lidls Standard für den 'Urlaubs-Vibe' zu Hause", "Technologisch darauf optimiert, in 10-12 Minuten im Ofen knusprig zu werden", "Zarte Textur durch kontrolliertes Schockfrosten direkt nach dem Fang"],
+      "lang": { "de": "Tintenfischringe", "en": "Calamari Rings", "es": "Anillas de calamar", "fr": "Anneaux de calars", "ru": "Кольца кальмара", "ja": "イカリング", "zh": "鱿鱼圈", "fa": "حلقه‌های کالاماری", "hi": "कैलामारी रिंग्स", "ar": "حلقات كالماري" }
+    },
+
+    "--- THE_SHRIMP_SQUAD ---": "Garnelen & Shrimps (Protein-Gourmets)",
+    "tk_party_shrimps_k_classic": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "K-Classic Party-Garnelen (gekocht & geschält)", "icon": "🦐", "latin": "Penaeus monodon (Frozen)", "sci": ["#sci/MarineBiology"],
+      "val": { "kcal": 70, "water_g": 82.0, "protein_g": 15.0, "fat_total_g": 1.0, "carbs_total_g": 0.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "status": "Cooked / Glazed (Schutzglasur aus Eis)", "certification": "ASC (Sustainable Farming)" },
+      "props": ["Extrem fettarmer Protein-Booster", "Die 'Eisglasur' verhindert Gefrierbrand und schützt das Aroma", "Ideal für Salate oder schnelle Pasta-Saucen"],
+      "lang": { "de": "Party-Garnelen", "en": "Party Shrimps", "es": "Gambas peladas", "fr": "Crevettes décortiquées", "ru": "Креветки очищенные", "ja": "むきえび", "zh": "虾仁", "fa": "میگو پوست‌کنده", "hi": "झींगा", "ar": "روبيان مقشر" }
+    },
+
+    "--- THE_ASIAN_CRUNCH_MATRIX ---": "Frühlingsrollen (Vitasia-Spezial)",
+    "tk_spring_rolls_vitasia_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Vitasia Mini-Frühlingsrollen (Gemüse)", "icon": "🥢", "latin": "Mistura crustata asiatica", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 215, "water_g": 55.0, "protein_g": 3.5, "fat_total_g": 9.5, "carbs_total_g": 28.0, "sugar_g": 3.0 },
+      "meta": { "locations": ["lidl"], "brand": "Vitasia", "vegan": true },
+      "quality_metrics": { "texture": "Filo-style pastry (extremely thin)", "filling": "Cabbage, Carrots, Sprouts" },
+      "props": ["Lidls asiatischer Bestseller", "Wird im Ofen technologisch so trocken, dass die Kruste 'splittert'", "Oft direkt mit Sweet-Chili-Dip in der Packung geliefert"],
+      "lang": { "de": "Mini-Frühlingsrollen", "en": "Mini Spring Rolls", "es": "Mini rollitos de primavera", "fr": "Mini nems / rouleaux de printemps", "ru": "Мини-спринг-роллы", "ja": "ミニ春巻き", "zh": "迷你春卷", "fa": "مینی اسپرینگ رول", "hi": "मिनी स्प्रिंग रोल", "ar": "سبرينغ رولز صغيرة" }
+    },
+
+    "--- THE_POULTRY_POWER ---": "Hähnchen-Snacks (Nuggets & Co.)",
+    "tk_chicken_nuggets_iglo_classic": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Iglo Chicken Nuggets", "icon": "🍗", "latin": "Gallus gallus crustatus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 250, "water_g": 52.0, "protein_g": 14.0, "fat_total_g": 13.0, "carbs_total_g": 18.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": false },
+      "quality_metrics": { "meat": "100% Chicken Breast Filet", "coating": "Golden breadcrumbs" },
+      "props": ["Der Benchmark für Geflügel-Snacks", "Kein Formfleisch (Separatorenfleisch), sondern echtes Filet", "Technologisch optimiert für eine saftige Fleischstruktur"],
+      "lang": { "de": "Chicken Nuggets", "en": "Chicken Nuggets", "es": "Nuggets de pollo", "fr": "Nuggets de poulet", "ru": "Чикен наггетсы", "ja": "チキンナゲット", "zh": "炸鸡块", "fa": "ناگت مرغ", "hi": "चिकन नगेट्स", "ar": "ناجتس دجاج" }
+    }
+	},
+  "the_potato_fry_dynasty": {
+    "--- THE_CLASSIC_CUTS ---": "Standard & Wellenschnitt (Die Allrounder)",
+    "tk_fries_mccain_123_original": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "McCain 1-2-3 Fries (Original)", "icon": "🍟", "latin": "Solanum frictum classicum", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 175, "water_g": 64.0, "protein_g": 2.5, "fat_total_g": 6.0, "carbs_total_g": 26.0, "sugar_g": 0.5 },
+      "meta": { "locations": ["everywhere"], "brand": "McCain", "vegan": true },
+      "quality_metrics": { "cut": "Standard (9x9mm)", "coating": "Light starch for oven-crispiness" },
+      "props": ["Der deutsche Goldstandard für den Backofen", "Technologisch optimierte Garzeit (ca. 18-22 Min)", "Gleichbleibende Qualität durch selektierte Kartoffelsorten"],
+      "lang": { "de": "1-2-3 Fries", "en": "Standard Oven Fries", "es": "Patatas de horno", "fr": "Frites au four", "ru": "Картофель фри для духовки", "ja": "オーブンポテト", "zh": "烤箱用薯条", "fa": "سیب‌زمینی تنوری", "hi": "ओवन फ्राइज़", "ar": "بطاطس للفرن" }
+    },
+    "tk_fries_crinkle_cut_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Harvest Basket Wellenschnitt-Pommes (Lidl)", "icon": "〰️", "latin": "Solanum frictum undulatum", "sci": ["#sci/Geometry", "#sci/FoodScience"],
+      "val": { "kcal": 158, "water_g": 66.0, "protein_g": 2.1, "fat_total_g": 4.8, "carbs_total_g": 25.5 },
+      "meta": { "locations": ["lidl"], "brand": "Harvest Basket", "vegan": true },
+      "quality_metrics": { "cut": "Crinkle Cut (Zig-zag)", "crunch_factor": "Increased surface area" },
+      "props": ["Lidls Knusper-König durch Wellenschnitt", "Hält Saucen (Mayo/Ketchup) technologisch besser fest", "Ideal für Kinder wegen der Form"],
+      "lang": { "de": "Wellenschnitt Pommes", "en": "Crinkle Cut Fries", "es": "Patatas onduladas", "fr": "Frites ondulées", "ru": "Рифленый картофель фри", "ja": "波型ポテト", "zh": "波浪薯条", "fa": "سیب‌زمینی زیگزاگی", "hi": "क्रिंकल कट फ्राइज़", "ar": "بطاطس مموجة" }
+    },
+
+    "--- THE_STEAKHOUSE_AND_THIN_FACTION ---": "Steakhouse & Julienne (Gourmet vs. Fast Food)",
+    "tk_fries_steakhouse_k_classic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Steakhouse Pommes", "icon": "🥩", "latin": "Solanum frictum latum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 145, "water_g": 68.0, "protein_g": 2.3, "fat_total_g": 3.8, "carbs_total_g": 24.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "cut": "Wide & Thick (Flat)", "core_texture": "Mealy / Fluffy" },
+      "props": ["Kauflands 'fleischige' Pommes-Variante", "Weniger Fettanteil pro Gramm Kartoffel durch geringere Oberfläche", "Bleiben innen sehr weich und kartoffelig"],
+      "lang": { "de": "Steakhouse Pommes", "en": "Steakhouse Fries", "es": "Patatas tipo Steakhouse", "fr": "Frites Steakhouse", "ru": "Стейкхаус картофель", "ja": "ステーキハウス・ポテト", "zh": "牛排馆粗薯", "fa": "سیب‌زمینی استیک‌هاوس", "hi": "स्टीकहाउस फ्राइज़", "ar": "بطاطس ستيك هاوس" }
+    },
+
+    "--- THE_SPECIAL_SHAPES ---": "Curly Fries & Gitterkartoffeln (Textur-Champions)",
+    "tk_fries_curly_mccain_spicy": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "McCain Curly Fries (Spicy)", "icon": "🌀", "latin": "Solanum frictum spiralis", "sci": ["#sci/Phytochemistry", "#sci/Geometry"],
+      "val": { "kcal": 220, "water_g": 55.0, "protein_g": 3.0, "fat_total_g": 11.0, "carbs_total_g": 27.0, "capsaicin_level": "Low-Mid" },
+      "meta": { "locations": ["everywhere"], "brand": "McCain", "vegan": true },
+      "quality_metrics": { "shape": "Spiral", "coating": "Seasoned Flour Coating (Paprika/Onion/Garlic)" },
+      "props": ["Der technologische Endgegner für Geschmack", "Extrem knusprig durch den hohen Anteil an gewürzter Panade", "Hält die Hitze deutlich länger als normale Pommes"],
+      "lang": { "de": "Locken-Pommes / Curly Fries", "en": "Curly Fries", "es": "Patatas espirales", "fr": "Frites spirales", "ru": "Картофель фри спиральки", "ja": "カーリーフライ", "zh": "卷卷薯条", "fa": "سیب‌زمینی فنری", "hi": "कर्ली फ्राइज़", "ar": "بطاطس لولبية" }
+    },
+
+    "--- THE_MODERN_ALTERNATIVES ---": "Süßkartoffel-Pommes (The High-Fiber Choice)",
+    "tk_fries_sweet_potato_lidl": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Harvest Basket Süßkartoffel Pommes", "icon": "🍠", "latin": "Ipomoea batatas frictum", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 215, "water_g": 60.0, "protein_g": 2.0, "fat_total_g": 10.5, "carbs_total_g": 28.0, "vitamin_a_re": 600.0 },
+      "meta": { "locations": ["lidl"], "brand": "Harvest Basket", "vegan": true },
+      "quality_metrics": { "texture": "Requires starch coating for crispiness", "taste": "Sweet / Savory" },
+      "props": ["Lidls Trend-Snack für das Restaurant-Feeling", "Technologisch anspruchsvoller als Kartoffel-Pommes, da Süßkartoffeln schneller weich werden", "Reich an Beta-Carotin"],
+      "lang": { "de": "Süßkartoffel Pommes", "en": "Sweet Potato Fries", "es": "Batatas fritas", "fr": "Frites de patates douces", "ru": "Картофель фri из батата", "ja": "サツマイモポテト", "zh": "红薯薯条", "fa": "سیب‌زمینی شیرین سرخ‌کرده", "hi": "शकरकंद फ्राइज़", "ar": "بطاطا حلوة مقلية" }
+    },
+
+    "--- THE_KROKETTEN_KINGDOM ---": "Kroketten (Gepresste Kartoffel-Eleganz)",
+    "tk_kroketten_harvest_basket_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Harvest Basket Kroketten (Lidl)", "icon": "🟡", "latin": "Solanum crustatum lidlianum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 178, "water_g": 62.0, "protein_g": 2.2, "fat_total_g": 6.5, "carbs_total_g": 27.0 },
+      "meta": { "locations": ["lidl"], "brand": "Harvest Basket", "vegan": true },
+      "quality_metrics": { "texture": "Crispy shell / Fine purée core", "comparison": "McCain Kroketten Clone" },
+      "props": ["Lidls Standard für Sonntagsessen", "Technologisch darauf optimiert, im Ofen nicht aufzuplatzen", "Verwendet hochwertige Kartoffelflocken für den Kern"],
+      "lang": { "de": "Lidl Kroketten", "en": "Lidl Potato Croquettes", "es": "Croquetas de patata Lidl", "fr": "Croquettes de pommes de terre Lidl", "ru": "Картофельные крокеты Лидл", "ja": "Lidl ポテトクロケット", "zh": "Lidl 土豆可乐饼", "fa": "کروکت سیب‌زمینی لیدل", "hi": "लिडल आलू क्रोकेट्स", "ar": "كروكيت البطاطس ليدل" }
+    },
+
+    "--- THE_POCKET_MATRIX ---": "Kartoffeltaschen (Gefüllte Spezialitäten)",
+    "tk_kartoffeltaschen_frischkaese_penny": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Penny Kartoffeltaschen (Frischkäse & Kräuter)", "icon": "📁", "latin": "Solanum frictum impletum", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 195, "water_g": 60.0, "protein_g": 3.0, "fat_total_g": 8.5, "carbs_total_g": 25.0 },
+      "meta": { "locations": ["penny"], "brand": "Penny", "vegan": false },
+      "quality_metrics": { "filling_ratio": "20% Cream Cheese", "texture": "Hash-brown style crust" },
+      "props": ["Pennys legendärer Snack-König", "Die Füllung bleibt technologisch auch bei 200°C stabil (kein Auslaufen)", "Kombiniert den Crunch von Röstis mit cremiger Füllung"],
+      "lang": { "de": "Kartoffeltaschen (Penny)", "en": "Filled Potato Pockets", "es": "Bolsitas de patata rellenas", "fr": "Sachets de pommes de terre fourrés", "ru": "Картофельные кармашки с начинкой", "ja": "ポテトポケット", "zh": "夹心土豆饼", "fa": "جیب‌های سیب‌زمینی پر شده", "hi": "भरे हुए आलू पॉकेट", "ar": "جيوب البطاطس المحشوة" }
+    },
+
+    "--- THE_ROYAL_SHAPES ---": "Herzoginkartoffeln & Gitter (Form-Physik)",
+    "tk_herzoginkartoffeln_harvest_basket_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Harvest Basket Herzoginkartoffeln", "icon": "👑", "latin": "Solanum ducissae lidlianum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 185, "water_g": 61.0, "protein_g": 2.5, "fat_total_g": 7.5, "carbs_total_g": 26.0 },
+      "meta": { "locations": ["lidl"], "brand": "Harvest Basket", "vegan": false },
+      "quality_metrics": { "shape": "Swirled / Rosette", "ingredient": "Contains egg/milk for browning" },
+      "props": ["Edel-Optik zum Discounter-Preis", "Extrem hohe Maillard-Reaktion an den Zacken der Rosette", "Wird im Ofen besonders gleichmäßig goldbraun"],
+      "lang": { "de": "Herzoginkartoffeln", "en": "Duchess Potatoes", "es": "Patatas duquesa", "fr": "Pommes duchesse", "ru": "Картофель герцогиня", "ja": "ダッチェス・ポテト", "zh": "公爵夫人土豆", "fa": "سیب‌زمینی دوچس", "hi": "डचेस आलू", "ar": "بطاطس دوتشيس" }
+    },
+
+    "--- THE_GRID_AND_WAFFLE ---": "Gitterkartoffeln (Maximale Oberfläche)",
+    "tk_gitterkartoffeln_k_classic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Gitterkartoffeln (Criss-Cross)", "icon": "🏁", "latin": "Solanum cancellatum kauflandia", "sci": ["#sci/Geometry"],
+      "val": { "kcal": 210, "water_g": 58.0, "protein_g": 2.8, "fat_total_g": 10.0, "carbs_total_g": 27.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "cut": "Lattice / Criss-cut", "spicing": "Paprika-Smoke-Infusion" },
+      "props": ["Kauflands Antwort auf teures Fast-Food-Fingerfood", "Durch die Gitterstruktur technologisch der knusprigste Kartoffelsnack", "Nimmt Dips perfekt in den Zwischenräumen auf"],
+      "lang": { "de": "Gitterkartoffeln", "en": "Criss-Cross Fries / Waffle Fries", "es": "Patatas rejilla", "fr": "Gaufrettes de pommes de terre", "ru": "Картофельные решетки", "ja": "ラティスカットポテト", "zh": "格子薯饼", "fa": "سیب‌زمینی شبکه‌ای", "hi": "क्रिस-क्रॉस फ्राइज़", "ar": "بطاطس كرلس كروس" }
+    },
+	
+    "--- THE_PUFFER_PARADE ---": "Kartoffelpuffer / Reibekuchen (Der Klassiker)",
+    "tk_reibekuchen_harvest_basket_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Harvest Basket Kartoffelpuffer (Hausmacher Art)", "icon": "🥞", "latin": "Solanum frictum avitum lidlianum", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 185, "water_g": 62.0, "protein_g": 2.2, "fat_total_g": 8.0, "carbs_total_g": 24.0, "sugar_g": 0.8 },
+      "meta": { "locations": ["lidl"], "brand": "Harvest Basket", "vegan": true },
+      "quality_metrics": { "texture": "Coarse grate (Grobe Raspel)", "oil_type": "Sunflower oil" },
+      "props": ["Lidls Standard für den schnellen Freitagmittag", "Technologisch darauf optimiert, in der Pfanne eine 'splittrige' Kruste zu bilden", "Schmeckt am besten mit dem klassischen Apfelmus-Kombinat"],
+      "lang": { "de": "Kartoffelpuffer / Reibekuchen", "en": "Potato Pancakes", "es": "Tortitas de patata", "fr": "Galettes de pommes de terre", "ru": "Картофельные оладьи (драники)", "ja": "ライベクーヘン", "zh": "德式土豆饼", "fa": "کوکو سیب‌زمini آلمانی", "hi": "आलू पेनकेक्स", "ar": "فطائر البطاطس" }
+    },
+    "tk_reibekuchen_penny_omas_art": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Penny Reibekuchen (Nach Omas Art)", "icon": "👵", "latin": "Solanum frictum avitum pennia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 192, "water_g": 60.5, "protein_g": 2.0, "fat_total_g": 9.5, "carbs_total_g": 23.5 },
+      "meta": { "locations": ["penny"], "brand": "Penny", "vegan": true },
+      "quality_metrics": { "flavor": "Stronger onion note", "texture": "Slightly thicker than Lidl" },
+      "props": ["Pennys Antwort auf den hausgemachten Klassiker", "Wird oft in der 600g-Packung verkauft", "Die Zwiebel-Matrix ist hier etwas dominanter ausgeprägt"],
+      "lang": { "de": "Penny Reibekuchen", "en": "Penny Potato Pancakes", "es": "Tortitas de patata Penny", "fr": "Galettes de pommes de terre Penny", "ru": "Драники Пенни", "ja": "Penny ライベクーヘン", "zh": "Penny 土豆饼", "fa": "ریبه‌کوخن پنی", "hi": "पेनी आलू पेनकेक्स", "ar": "ريبكوخن بيني" }
+    },
+
+    "--- THE_ROESTI_REVOLUTION ---": "Rösti-Ecken & Taler (Schweizer Stil)",
+    "tk_roesti_ecken_k_classic_kaufland": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Classic Rösti-Ecken", "icon": "📐", "latin": "Solanum frictum helveticum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 165, "water_g": 65.0, "protein_g": 2.1, "fat_total_g": 7.0, "carbs_total_g": 22.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "shape": "Triangular (Ecken)", "texture": "Pre-cooked potato shreds" },
+      "props": ["Kauflands massiver Beutel für die ganze Familie", "Röstis haben technologisch keinen Teig (Mehl/Ei), sondern halten durch die eigene Stärke", "Bleiben im Ofen deutlich stabiler als Reibekuchen"],
+      "lang": { "de": "Rösti-Ecken", "en": "Rösti Triangles", "es": "Triángulos de Rösti", "fr": "Röstis en triangles", "ru": "Картофельные рости", "ja": "ロスティー・エッジ", "zh": "瑞士薯饼块", "fa": "روستی سه‌گوش", "hi": "रोस्टी ट्राएंगल्स", "ar": "مثلثات روستي" }
+    },
+    "tk_roesti_taler_alnatura_bio": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Alnatura Bio Rösti-Taler", "icon": "🌱", "latin": "Solanum helveticum bio", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 158, "water_g": 67.0, "protein_g": 2.5, "fat_total_g": 5.5, "carbs_total_g": 24.0 },
+      "meta": { "locations": ["alnatura", "rewe", "edeka"], "brand": "Alnatura", "vegan": true },
+      "quality_metrics": { "origin": "German Organic Potatoes", "processing": "No added flavors" },
+      "props": ["Die 'saubere' Alternative für dein Archiv", "Weniger Fett, da sie technologisch nicht so tief vorfrittiert werden", "Perfekt als Basis für ein gesundes Frühstück mit Avocado"],
+      "lang": { "de": "Bio Rösti-Taler", "en": "Organic Rösti Coins", "es": "Medallones de Rösti bio", "fr": "Galettes Rösti bio", "ru": "Био рости талеры", "ja": "有機ロスティ・タラー", "zh": "有机圆薯饼", "fa": "روستی سکه‌ای بیو", "hi": "जैविक रोस्टी कॉइन्स", "ar": "روستي عضوي دوائر" }
+    }
+  },
+  "the_pizza_empire_archives": {
+    "--- THE_PREMIUM_BENCHMARK ---": "Gustavo Gusto (Die 'Wie-beim-Italiener' Technologie)",
+    "tk_pizza_gustavo_gusto_margherita": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Gustavo Gusto Pizza Margherita", "icon": "🍕", "latin": "Pizza premium gigantus", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 225, "water_g": 52.0, "protein_g": 9.5, "fat_total_g": 8.0, "carbs_total_g": 28.0, "diameter_cm": 30.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "brand": "Gustavo Gusto", "vegan": false },
+      "quality_metrics": { "dough_rest": "Extra long (min. 24h)", "baking": "Stone oven / Wood fire style" },
+      "props": ["Technologisch der Benchmark: Handgeformter Teigrand", "Verwendet echten laktosefreien Mozzarella", "Deutlich größer als Standard-TK-Pizzen"],
+      "lang": { "de": "Gustavo Gusto Margherita", "en": "Gustavo Gusto Margherita", "es": "Pizza Margherita Premium", "fr": "Pizza Margherita Artisanale", "ru": "Пицца Маргарита Густаво Густо", "ja": "グスタヴォ・グスト・マルゲリータ", "zh": "古斯塔沃精制玛格丽特比萨", "fa": "پیتزا مارگریتا گوستاوو", "hi": "गुस्तावो गुस्टो मार्गेरिटा", "ar": "بيتزا مارغريتا غوستافو غوستو" }
+    },
+
+    "--- THE_CRISP_CLASSICS ---": "Dr. Oetker & Wagner (Die Marktführer)",
+    "tk_pizza_oetker_ristorante_salami": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Dr. Oetker Ristorante (Salami)", "icon": "🇮🇹", "latin": "Pizza crispa tenuissima", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 265, "water_g": 48.0, "protein_g": 10.0, "fat_total_g": 14.0, "carbs_total_g": 24.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Dr. Oetker", "vegan": false },
+      "quality_metrics": { "base": "Ultra-thin and crispy", "sauce": "Herb-infused tomato passata" },
+      "props": ["Der deutsche Standard für 'dünn und knusprig'", "Technologisch optimiert für eine extrem schnelle Backzeit (ca. 10-12 Min)", "Gleichbleibendes Industrial-Level-Flavour"],
+      "lang": { "de": "Ristorante Salami", "en": "Ristorante Salami Pizza", "es": "Pizza Ristorante Salame", "fr": "Pizza Ristorante Salami", "ru": "Ристоранте Салями", "ja": "リストランテ サラミ", "zh": "餐厅系列萨拉米比萨", "fa": "پیتزا رستورانته سالامی", "hi": "रिस्टोरैंट सलामी पिज्زا", "ar": "بيتزا ريستورانتي سلامي" }
+    },
+    "tk_pizza_wagner_steinofen_speciale": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Wagner Steinofen (Speciale)", "icon": "🔥", "latin": "Pizza petra-furnus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 238, "water_g": 50.0, "protein_g": 9.8, "fat_total_g": 11.0, "carbs_total_g": 25.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Wagner (Nestlé)", "vegan": false },
+      "quality_metrics": { "base": "Classic stone oven crust", "topping_variety": "Salami, Ham, Mushrooms" },
+      "props": ["Wagners Flaggschiff mit dem 'Steinofen-Versprechen'", "Der Teig ist etwas rustikaler und weniger 'keksig' als bei Ristorante", "Sehr hohe Marktdurchdringung"],
+      "lang": { "de": "Wagner Steinofen Speciale", "en": "Wagner Stone Oven Speciale", "es": "Wagner Especial", "fr": "Wagner Spéciale", "ru": "Вагнер Спечиале", "ja": "ワーグナー・スペシャル", "zh": "瓦格纳石烤特制比萨", "fa": "واگنر اشپزیاله", "hi": "वैगनर स्टोन ओवन स्पेशल", "ar": "واغنر ستينوفن سبيشالي" }
+    },
+
+    "--- THE_STORE_BRAND_ASSASSINS ---": "Lidl & Penny Eigenmarken (Die Klone)",
+    "tk_pizza_alfredo_deliziosa_lidl": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Trattoria Alfredo (Deliziosa) - Lidl", "icon": "🛒", "latin": "Pizza lidliana economica", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 240, "water_g": 51.0, "protein_g": 9.5, "fat_total_g": 11.5, "carbs_total_g": 26.0 },
+      "meta": { "locations": ["lidl"], "brand": "Trattoria Alfredo", "vegan": false },
+      "quality_metrics": { "price_segment": "Ultra-Budget (often in 3-packs)", "comparison": "Ristorante Clone" },
+      "props": ["Lidls legendäres 3er-Pack", "Technologisch fast identisch mit dem Dr. Oetker Standard", "Der unangefochtene Preis-Leistungs-König für Studenten und Sparfüchse"],
+      "lang": { "de": "Lidl Alfredo Pizza", "en": "Lidl Alfredo Pizza", "es": "Pizza Alfredo Lidl", "fr": "Pizza Alfredo Lidl", "ru": "Пицца Альфредо Лидл", "ja": "Lidl アルフレッド・ピザ", "zh": "Lidl 阿尔弗雷多比萨", "fa": "پیتزا آلفردو لیدل", "hi": "लिडल अल्फ्रेडो पिज्जा", "ar": "بيتزا ألفريدو ليدل" }
+    },
+    "tk_pizza_san_fabio_penny": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "San Fabio Pizza (Steinofen) - Penny", "icon": "🪙", "latin": "Pizza pennia economica", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 235, "water_g": 52.0, "protein_g": 9.2, "fat_total_g": 10.8, "carbs_total_g": 25.5 },
+      "meta": { "locations": ["penny"], "brand": "San Fabio", "vegan": false },
+      "quality_metrics": { "base": "Crispy Stone Oven", "price_segment": "Budget Single" },
+      "props": ["Pennys Antwort auf Wagner", "Oft etwas großzügiger belegt als die 3er-Packs von Lidl", "Solider Boden mit guter Bräunung"],
+      "lang": { "de": "Penny San Fabio Pizza", "en": "Penny San Fabio", "es": "Pizza San Fabio Penny", "fr": "Pizza San Fabio Penny", "ru": "Пицца Сан Фабио Пенни", "ja": "Penny サン・ファビオ", "zh": "Penny 圣法比奥比萨", "fa": "پیتزا سن فابیو پنی", "hi": "पेनी सैन फैबियो पिज्जा", "ar": "بيتزا سان فابيو بيني" }
+    }
+  },
+  "texmex_and_lidl_special_forces": {
+    "--- THE_TEXMEX_ALLIANCE ---": "Tex-Mex & Spicy Pizzen (Die Party-Matrix)",
+    "tk_pizza_tex_mex_rewe_beste_wahl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "REWE Beste Wahl Pizza Tex-Mex", "icon": "🌶️", "latin": "Pizza texana mexicana", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 235, "water_g": 54.0, "protein_g": 9.0, "fat_total_g": 10.5, "carbs_total_g": 26.0 },
+      "meta": { "locations": ["rewe"], "brand": "REWE Beste Wahl", "vegan": false },
+      "quality_metrics": { "toppings": "Corn, Kidney Beans, Spicy Beef, Onions", "spice_level": "Medium" },
+      "props": ["Der Inbegriff der Crossover-Pizza", "Technologisch ausgewogene Feuchtigkeit durch das Gemüse", "Sehr beliebt für Gaming-Abende oder Partys"],
+      "lang": { "de": "Pizza Tex-Mex", "en": "Tex-Mex Pizza", "es": "Pizza Tex-Mex", "fr": "Pizza Tex-Mex", "ru": "Пицца Текс-Мекс", "ja": "テクス・メクス・ピザ", "zh": "德州墨西哥风味比萨", "fa": "پیتزا تگزاسی-مکزیکی", "hi": "टेक्स-मेक्स पिज्जा", "ar": "بيتزا تيكس ميكس" }
+    },
+    "tk_pizza_inferno_alfredo_lidl": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Trattoria Alfredo Inferno (Lidl)", "icon": "🔥", "latin": "Pizza infernalis lidliana", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 255, "water_g": 49.0, "protein_g": 10.5, "fat_total_g": 13.0, "carbs_total_g": 23.5, "scoville_approx": 1500.0 },
+      "meta": { "locations": ["lidl"], "brand": "Trattoria Alfredo", "vegan": false },
+      "quality_metrics": { "topping": "Spicy Salami, Pepperoni, Chili-Oil", "crust": "Thin & Crispy" },
+      "props": ["Lidls Antwort auf scharfe Marken-Pizzen (wie Die Ofenfrische Peperoni-Diavolo)", "Technologisch hoher Capsaicin-Gehalt für den 'Kick'", "Wird oft im Doppelpack verkauft"],
+      "lang": { "de": "Pizza Inferno", "en": "Inferno Pizza", "es": "Pizza Inferno", "fr": "Pizza Inferno", "ru": "Пицца Инферно", "ja": "インフェルノ・ピザ", "zh": "地狱辣味比萨", "fa": "پیتزا اینفرنو", "hi": "इन्फर्नो पिज्जा", "ar": "بيتزا إنفيرنو" }
+    },
+
+    "--- THE_AMERICAN_HEAVYWEIGHTS ---": "American Style (Pan Pizza Technologie)",
+    "tk_pizza_american_supreme_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "McEnnandy American Style Supreme (Lidl)", "icon": "🇺🇸", "latin": "Pizza americana spissa", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 275, "water_g": 45.0, "protein_g": 8.5, "fat_total_g": 15.0, "carbs_total_g": 28.0 },
+      "meta": { "locations": ["lidl"], "brand": "McEnnandy / Trattoria Alfredo", "vegan": false },
+      "quality_metrics": { "base": "Thick Pan-Style (Deep Dish)", "texture": "Fluffy interior / Fried bottom" },
+      "props": ["Lidls Schwergewicht für maximalen Hunger", "Technologisch bedingt höherer Fettanteil durch den 'frittierten' Boden", "Sehr sättigend durch das hohe Teig-Volumen"],
+      "lang": { "de": "American Style Pizza", "en": "American Pan Pizza", "es": "Pizza estilo americano", "fr": "Pizza américaine", "ru": "Пицца по-американски", "ja": "アメリカンスタイル・ピザ", "zh": "美式厚底比萨", "fa": "پیتزا سبک آمریکایی", "hi": "अमेरिकन स्टाइल पिज्जा", "ar": "بيتزا على الطريقة الأمريكية" }
+    },
+
+    "--- THE_BAGUETTE_BENCHMARKS ---": "TK-Baguettes (Brot-Matrix)",
+    "tk_baguette_oetker_bistro_salami": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Dr. Oetker Bistro Baguette (Salami)", "icon": "🥖", "latin": "Panis gallicus crustatus", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 248, "water_g": 48.0, "protein_g": 9.2, "fat_total_g": 11.0, "carbs_total_g": 27.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Dr. Oetker", "vegan": false },
+      "quality_metrics": { "bread_type": "Wheat Baguette (Pre-baked)", "crunch_factor": "High (Stone oven style)" },
+      "props": ["Der deutsche Standard für TK-Baguettes", "Technologisch optimierte Krume, die Saucen aufnimmt, ohne durchzuweichen", "Ikonische Form und Kräuter-Würzung"],
+      "lang": { "de": "Bistro Baguette", "en": "Pizza Baguette", "es": "Baguette de pizza", "fr": "Baguette Bistro", "ru": "Пицца-багет", "ja": "ピザバゲット", "zh": "法式长棍比萨", "fa": "پیتزا باگت", "hi": "पिज्जा बैगूएट", "ar": "باجيت البيتزا" }
+    },
+    "tk_baguette_alfredo_lidl": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Trattoria Alfredo Baguettes (Lidl)", "icon": "🛒", "latin": "Panis gallicus lidlianus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 242, "water_g": 50.0, "protein_g": 8.8, "fat_total_g": 10.5, "carbs_total_g": 28.0 },
+      "meta": { "locations": ["lidl"], "brand": "Trattoria Alfredo", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget (6er Pack)", "comparison": "Bistro Clone" },
+      "props": ["Lidls unschlagbares Vorratspaket", "Technologisch sehr nah am Original, oft etwas weicheres Brot", "Ideal für den schnellen Hunger zwischendurch"],
+      "lang": { "de": "Lidl Baguettes", "en": "Lidl Pizza Baguettes", "es": "Baguettes Lidl", "fr": "Baguettes Lidl", "ru": "Багеты Лидл", "ja": "Lidl バゲット", "zh": "Lidl 比萨长棍", "fa": "باگت لیدل", "hi": "लिडल बैगूएट", "ar": "باجيت ليدل" }
+    },
+
+    "--- THE_MINI_PIZZA_LORDS ---": "Picolinis & Mini-Pizzen (Fingerfood-Physik)",
+    "tk_picolinis_wagner_salami": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Wagner Original Picolinis (Salami)", "icon": "🍕", "latin": "Pizza minima wagneria", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 258, "water_g": 46.0, "protein_g": 10.5, "fat_total_g": 12.0, "carbs_total_g": 26.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Wagner (Nestlé)", "vegan": false },
+      "quality_metrics": { "base": "Classic Wagner Stone Oven dough", "size": "Approx. 5-6 cm diameter" },
+      "props": ["Der Inbegriff der Mini-Pizza", "Technologisch perfektioniert für den 'One-Bite'-Verzehr", "Sehr hoher Rand-Anteil für maximalen Knusper-Effekt"],
+      "lang": { "de": "Picolinis", "en": "Picolinis / Mini Pizzas", "es": "Picolinis", "fr": "Picolinis", "ru": "Пиколини", "ja": "ピコリーニ", "zh": "小号比萨", "fa": "پیکولینی", "hi": "पिकोलीनी", "ar": "بيكوليني" }
+    },
+    "tk_mini_pizzen_san_fabio_penny": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "San Fabio Mini-Pizzen (Penny)", "icon": "🪙", "latin": "Pizza minima pennia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 252, "water_g": 47.0, "protein_g": 9.8, "fat_total_g": 11.5, "carbs_total_g": 27.0 },
+      "meta": { "locations": ["penny"], "brand": "San Fabio", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget Snack", "topping_density": "High for the size" },
+      "props": ["Pennys Antwort auf den Picolini-Hype", "Oft in Sorten wie Salami oder Margherita erhältlich", "Solide Teigbasis mit guter Saucen-Abdeckung"],
+      "lang": { "de": "Penny Mini-Pizzen", "en": "Penny Mini Pizzas", "es": "Mini pizzas Penny", "fr": "Mini pizzas Penny", "ru": "Мини-пиццы Пенни", "ja": "Penny ミニピザ", "zh": "Penny 迷你比萨", "fa": "مینی پیتزا پنی", "hi": "पेनी मिनी पिज्जा", "ar": "ميني بيتزا بيني" }
+    },
+    "tk_pizzetta_k_classic_kaufland": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Classic Pizzetta (Mini-Pizzen)", "icon": "🧱", "latin": "Pizza minima kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 255, "water_g": 46.5, "protein_g": 10.0, "fat_total_g": 11.8, "carbs_total_g": 26.8 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "variety": "Mixed packs often available", "base": "Crispy thin style" },
+      "props": ["Kauflands preiswerte Snack-Option", "Ideal für Kindergeburtstage oder als Beilage", "Technologisch auf schnelle Durcherhitzung getrimmt"],
+      "lang": { "de": "Kaufland Pizzetta", "en": "Kaufland Pizzetta", "es": "Pizzetta Kaufland", "fr": "Pizzetta Kaufland", "ru": "Пиццетта Кауфланд", "ja": "K-Classic ピゼッタ", "zh": "K-Classic 小比萨", "fa": "پیتزا لقمه‌ای کا-کلاسیک", "hi": "के-क्लासिक पिज़ेटा", "ar": "بيتزا صغيرة ك-كلاسيك" }
+    }
+  },
+  "the_frozen_skillet_and_tray_empire": {
+    "--- THE_SKILLET_GIGANTS ---": "Pfannengerichte (Beutel-Technologie)",
+    "tk_pan_frosta_paella": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Frosta Paella (Original)", "icon": "🥘", "latin": "Oryza marina frostia", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 112, "water_g": 72.0, "protein_g": 5.4, "fat_total_g": 2.8, "carbs_total_g": 15.0, "salt_g": 0.9 },
+      "meta": { "locations": ["everywhere"], "brand": "Frosta", "vegan": false },
+      "quality_metrics": { "purity": "FRoSTA Reinheitsgebot (No additives)", "seafood": "MSC Mussels & Shrimps" },
+      "props": ["Der Goldstandard für TK-Fertiggerichte", "Technologisch überlegen: Die Sauce ist als kleine 'Drops' eingefroren, die erst beim Erhitzen schmelzen", "Echte Butter statt billiger Fette"],
+      "lang": { "de": "Frosta Paella", "en": "Frosta Paella", "es": "Paella Frosta", "fr": "Paella Frosta", "ru": "Паэлья Фроста", "ja": "フロスタ・パエリア", "zh": "弗罗斯塔海鲜饭", "fa": "پایلا فروستا", "hi": "फ्रोस्टा पेला", "ar": "باييلا فروستا" }
+    },
+    "tk_pan_vitasia_nasi_goreng_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Vitasia Nasi Goreng (Lidl)", "icon": "🥢", "latin": "Oryza indonesica lidliana", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 145, "water_g": 68.0, "protein_g": 6.2, "fat_total_g": 4.5, "carbs_total_g": 19.5 },
+      "meta": { "locations": ["lidl"], "brand": "Vitasia", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget Bulk (750g)", "flavor_profile": "Spicy / Soy-based" },
+      "props": ["Lidls Antwort auf den asiatischen Hunger", "Hoher Sättigungsgrad durch Reis-Fleisch-Verhältnis", "Technologisch auf maximale Geschwindigkeit optimiert (ca. 8-10 Min Pfanne)"],
+      "lang": { "de": "Nasi Goreng (Lidl)", "en": "Lidl Nasi Goreng", "es": "Nasi Goreng Lidl", "fr": "Nasi Goreng Lidl", "ru": "Наси Горенг Лидл", "ja": "Lidl ナシゴレン", "zh": "Lidl 印尼炒饭", "fa": "ناسی گورنگ لیدل", "hi": "लिडल नासी गोरेंग", "ar": "ناسي جورينج ليدل" }
+    },
+
+    "--- THE_OVEN_TRAY_MASTERS ---": "Schalengerichte (Lasagne & Co.)",
+    "tk_lasagne_bolognese_k_classic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "K-Classic Lasagne Bolognese (400g/1kg)", "icon": "🍝", "latin": "Lasagna bovis kauflandia", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 155, "water_g": 65.0, "protein_g": 7.5, "fat_total_g": 8.5, "carbs_total_g": 12.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "meat_content": "Pork/Beef mix", "sauce": "Béchamel & Tomato layer tech" },
+      "props": ["Kauflands absoluter Preis-Leistungs-Endboss", "Technologisch stabilisierte Schichten (kein Ineinanderrutschen beim Backen)", "Der Klassiker für die Mittagspause"],
+      "lang": { "de": "Lasagne Bolognese", "en": "Lasagna Bolognese", "es": "Lasaña Boloñesa", "fr": "Lasagnes Bolognaise", "ru": "Лазанья Болоньезе", "ja": "ラザニア・ボロネーゼ", "zh": "意式肉酱千层面", "fa": "لازانیا گوشت", "hi": "लासाग्ने बोलोग्नीज़", "ar": "لازانيا بولونيز" }
+    },
+    "tk_huehnerfrikassee_iglo": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Iglo Hühnerfrikassee (mit Reis)", "icon": "🍗", "latin": "Fricassee galli iglonis", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 105, "water_g": 75.0, "protein_g": 6.0, "fat_total_g": 3.5, "carbs_total_g": 12.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Iglo", "vegan": false },
+      "quality_metrics": { "components": "Chicken, Peas, Carrots, Rice, Cream Sauce", "prep": "Microwave or Pan" },
+      "props": ["Deutscher Hausmannskost-Klassiker technologisch konserviert", "Sehr mild gewürzt, ideal für empfindliche Mägen", "Gute Verteilung von Fleisch und Gemüse"],
+      "lang": { "de": "Hühnerfrikassee", "en": "Chicken Fricassee", "es": "Fricasé de pollo", "fr": "Fricassée de poulet", "ru": "Куриное фрикасе", "ja": "チキン・フリカッセ", "zh": "白汁炖鸡肉", "fa": "فریکاسه مرغ", "hi": "चिकन फ्रिकैसी", "ar": "فريكاسيه الدجاج" }
+    }
+  },
+  "tk_bakery_and_sweet_final": {
+    "--- THE_SUNDAY_SAVIORS ---": "TK-Backstube (Brötchen & Laugengebäck)",
+    "tk_bread_oetker_goldstuecke": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Coppenrath & Wiese Goldstücke (Weizen)", "icon": "🥖", "latin": "Panis aureus coppenrathius", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 245, "water_g": 42.0, "protein_g": 8.5, "fat_total_g": 1.2, "carbs_total_g": 48.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Coppenrath & Wiese", "vegan": true },
+      "quality_metrics": { "process": "Pre-baked / Stone oven style", "crust": "Crispy thin" },
+      "props": ["Der deutsche Goldstandard für das Sonntagsfrühstück", "Technologisch perfektionierte Krume, die nicht krümelt", "Extrem kurze Aufbackzeit (ca. 8-10 Min)"],
+      "lang": { "de": "Goldstücke Weizen", "en": "Golden Wheat Rolls", "es": "Panecillos de trigo", "fr": "Petits pains dorés", "ru": "Золотистые булочки", "ja": "黄金の小麦ロールパン", "zh": "金黄色小麦卷", "fa": "نان‌های گندم طلایی", "hi": "गोल्डन गेहूं रोल्स", "ar": "خبز القمح الذهبي" }
+    },
+    "tk_bread_grafschafter_goldstuecke_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Grafschafter Goldstücke (Lidl)", "icon": "🛒", "latin": "Panis aureus lidlianus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 242, "water_g": 43.0, "protein_g": 8.2, "fat_total_g": 1.1, "carbs_total_g": 47.5 },
+      "meta": { "locations": ["lidl"], "brand": "Grafschafter", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Leader", "comparison": "C&W Clone" },
+      "props": ["Lidls Antwort auf die Marken-Brötchen", "Technologisch fast identisch, oft etwas größere Poren", "Unschlagbares Preis-Leistungs-Verhältnis im 9er-Beutel"],
+      "lang": { "de": "Lidl Goldstücke", "en": "Lidl Wheat Rolls", "es": "Panecillos Lidl", "fr": "Petits pains Lidl", "ru": "Булочки Лидл", "ja": "Lidl ロールパン", "zh": "Lidl 小麦卷", "fa": "نان‌های لیدل", "hi": "लिडल गेहूं रोल्स", "ar": "خبز ليدل الذهبي" }
+    },
+    "tk_pretzels_ditsch_classic": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Ditsch Laugenbrezeln (zum Selberbacken)", "icon": "🥨", "latin": "Circulus salis ditschius", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 285, "water_g": 35.0, "protein_g": 9.0, "fat_total_g": 4.5, "carbs_total_g": 52.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Ditsch", "vegan": true },
+      "quality_metrics": { "coating": "Sodium hydroxide solution (Lauge)", "salt": "Separate salt sachet included" },
+      "props": ["Die technologische Krönung: Laugenteig für zu Hause", "Wird erst durch den Backvorgang tiefbraun und glänzend", "Der Inbegriff des bayerischen Snack-Feelings"],
+      "lang": { "de": "Laugenbrezeln", "en": "Pretzels", "es": "Pretzels", "fr": "Bretzels", "ru": "Брецели", "ja": "プレッツェル", "zh": "普雷策尔饼干", "fa": "برتزل", "hi": "प्रेट्ज़ेल", "ar": "بريتزل" }
+    },
+
+    "--- THE_SWEET_TEMPTATIONS ---": "TK-Desserts & Torten (Zucker-Physik)",
+    "tk_cake_benjamin_bluemchen": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Benjamin Blümchen Torte (Coppenrath & Wiese)", "icon": "🐘", "latin": "Bolo benjamini blumchenis", "sci": ["#sci/FoodScience", "#sci/Psychology"],
+      "val": { "kcal": 280, "water_g": 45.0, "protein_g": 3.5, "fat_total_g": 16.0, "carbs_total_g": 30.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Coppenrath & Wiese", "vegan": false },
+      "quality_metrics": { "layers": "Strawberry cream & Chocolate sponge", "decor": "Elephant sugar figure & confetti" },
+      "props": ["Der kulturelle Endboss jeder deutschen Kindheit", "Technologisch extrem stabile Sahne-Erdbeer-Mischung", "Ikonisches Design mit hohem Nostalgie-Faktor"],
+      "lang": { "de": "Benjamin Blümchen Torte", "en": "Benjamin Elephant Cake", "es": "Tarta de elefante", "fr": "Gâteau éléphant", "ru": "Торт Бенджамин Блюмхен", "ja": "ベンジャミン・ケーキ", "zh": "本杰明大象蛋糕", "fa": "کیک فیل بنجامین", "hi": "बेंजामिन एलीफेंट केक", "ar": "كعكة الفيل بنجامين" }
+    },
+    "tk_apple_strudel_coppenrath_classic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Coppenrath & Wiese Apfelstrudel", "icon": "🥧", "latin": "Strudel pomi coppenrathius", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 195, "water_g": 55.0, "protein_g": 2.5, "fat_total_g": 8.5, "carbs_total_g": 26.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Coppenrath & Wiese", "vegan": true },
+      "quality_metrics": { "dough": "Puff pastry (Blätterteig)", "filling": "Apples, Raisins, Cinnamon" },
+      "props": ["Die technologische Rettung für den Kaffeeklatsch", "Blättert im Ofen perfekt auf, ohne durchzuweichen", "Wird oft mit warmer Vanillesauce kombiniert"],
+      "lang": { "de": "Apfelstrudel", "en": "Apple Strudel", "es": "Estrudel de manzana", "fr": "Strudel aux pommes", "ru": "Яблочный штрудель", "ja": "アップル・シュトゥルーデル", "zh": "苹果酥卷", "fa": "اشترودل سیب", "hi": "सेब स्ट्रूडल", "ar": "سترودل التفاح" }
+    },
+    "tk_cream_puffs_windbeutel_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Eridanous Mini-Windbeutel (Lidl)", "icon": "🧁", "latin": "Sphaera cremosa lidliana", "sci": ["#sci/FoodScience", "#sci/Physics"],
+      "val": { "kcal": 310, "water_g": 40.0, "protein_g": 4.5, "fat_total_g": 22.0, "carbs_total_g": 23.0 },
+      "meta": { "locations": ["lidl"], "brand": "Eridanous / Trattoria Alfredo", "vegan": false },
+      "quality_metrics": { "dough": "Choux pastry (Brandteig)", "filling": "Sweetened Whipped Cream" },
+      "props": ["Technologisches Wunderwerk: Brandteig hält die Sahne luftig", "Perfekt dosierbares Fingerfood", "Schmilzt im Mund innerhalb von Sekunden"],
+      "lang": { "de": "Mini Windbeutel", "en": "Mini Cream Puffs", "es": "Mini profiteroles", "fr": "Mini choux à la crème", "ru": "Мини-профитроли", "ja": "ミニ・クリームパフ", "zh": "迷你奶油泡芙", "fa": "مینی نان خامه‌ای", "hi": "मिनी क्रीम पफ्स", "ar": "بروفيتيرول صغير" }
+    }
+  },
+
+  "tk_k_classic_bakery_and_sweet_extension": {
+    "--- K_CLASSIC_MORNING_POWER ---": "Kaufland Backstube (Infrastruktur)",
+    "tk_bread_k_classic_weizenbroetchen": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Weizenbrötchen (zum Fertigbacken)", "icon": "🥖", "latin": "Panis kauflandia aureus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 248, "water_g": 41.5, "protein_g": 8.3, "fat_total_g": 1.3, "carbs_total_g": 49.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "quantity": "Pack of 6 or 10", "texture": "Classic fluffy crumb" },
+      "props": ["Der Preis-Leistungs-Anker im Kaufland-Sortiment", "Technologisch stabilisierte Teigführung für gleichmäßiges Aufgehen", "Sehr verlässliche Krustenbildung im Standard-Backofen"],
+      "lang": { "de": "K-Classic Brötchen", "en": "Kaufland Wheat Rolls", "es": "Panecillos Kaufland", "fr": "Petits pains Kaufland", "ru": "Булочки Кауфланд", "ja": "K-Classic ロールパン", "zh": "K-Classic 小麦卷", "fa": "نان‌های کا-کلاسیک", "hi": "के-क्लासिक रोल्स", "ar": "خبز ك-كلاسيك" }
+    },
+    "tk_pretzels_k_classic_laugen": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Classic Laugenbrezeln", "icon": "🥨", "latin": "Circulus salis kauflandia", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 282, "water_g": 36.0, "protein_g": 8.8, "fat_total_g": 4.2, "carbs_total_g": 51.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "count": "10 Pieces per pack", "glaze": "Traditional Lye (Lauge)" },
+      "props": ["Die Vorratspackung für Laugen-Fans", "Hält technologisch die Feuchtigkeit im Inneren extrem gut", "Salzbeutel liegt für individuelle Dosierung bei"],
+      "lang": { "de": "K-Classic Brezeln", "en": "Kaufland Pretzels", "es": "Pretzels Kaufland", "fr": "Bretzels Kaufland", "ru": "Брецели Кауфланд", "ja": "K-Classic プレッツェル", "zh": "K-Classic 普雷策尔", "fa": "برتزل کا-کلاسیک", "hi": "के-क्लासिक प्रेट्ज़ेल", "ar": "بريتزل ك-كلاسيك" }
+    },
+
+    "--- K_CLASSIC_SWEET_TREATS ---": "Kaufland Süßspeisen (Dessert-Reserve)",
+    "tk_windbeutel_k_classic_mini": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Mini-Windbeutel", "icon": "🧁", "latin": "Sphaera cremosa kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 315, "water_g": 39.5, "protein_g": 4.2, "fat_total_g": 23.0, "carbs_total_g": 22.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "filling": "Fresh Cream (Sahne)", "dough": "Choux Pastry (Brandteig)" },
+      "props": ["Kauflands Antwort auf den süßen Hunger", "Technologisch optimierte Sahnefüllung (bleibt beim Antauen fest)", "Oft in der 250g-Box für einfaches Portionieren"],
+      "lang": { "de": "K-Classic Windbeutel", "en": "Kaufland Cream Puffs", "es": "Profiteroles Kaufland", "fr": "Choux à la crème Kaufland", "ru": "Профитроли Кауфланд", "ja": "K-Classic シュークリーム", "zh": "K-Classic 泡芙", "fa": "نان خامه‌ای کا-کلاسیک", "hi": "के-क्लासिक क्रीम पफ्स", "ar": "بروفيتيرول ك-كلاسيك" }
+    },
+    "tk_apple_strudel_k_classic": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Classic Apfelstrudel (600g)", "icon": "🥧", "latin": "Strudel pomi kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 198, "water_g": 54.0, "protein_g": 2.4, "fat_total_g": 8.2, "carbs_total_g": 27.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "pastry": "Flaky Puff Pastry", "filling": "Sliced Apples & Spices" },
+      "props": ["Massives Back-Erlebnis für wenig Geld", "Die Teigschichten sind technologisch auf 'Blättern' getrimmt", "Behält auch nach dem Backen eine stabile Struktur"],
+      "lang": { "de": "K-Classic Apfelstrudel", "en": "Kaufland Apple Strudel", "es": "Estrudel de manzana Kaufland", "fr": "Strudel aux pommes Kaufland", "ru": "Яблочный штрудель Кауфланд", "ja": "K-Classic アップルストゥルーデル", "zh": "K-Classic 苹果卷", "fa": "اشترودل سیب کا-کلاسیک", "hi": "के-क्लासिक एप्पल स्ट्रूडल", "ar": "سترودل التفاح ك-كلاسيك" }
+    }
+  }
+}

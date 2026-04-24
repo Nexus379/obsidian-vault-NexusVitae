@@ -1,0 +1,921 @@
+{
+  "prepared_deli": {
+    "--- SAVORY_VEGETABLE_SPREADS ---": "Herzhafte Gemüsecremes & Pestos",
+    "ajvar": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Ajvar", "icon": "🫑", "latin": "Capsicum / Solanum blend", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 90, "water_g": 78.0, "protein_g": 1.5, "fat_total_g": 5.0, "carbs_total_g": 9.0, "sugar_g": 6.0, "fiber_g": 3.0 },
+      "meta": { "locations": ["kaufland", "rewe", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Chunky or Smooth (Mild/Spicy)", "process": "Roasted peppers and eggplant" },
+      "props": ["Staple condiment for grilled meats (Cevapcici)", "Rich, sweet, and smoky flavor from roasted red bell peppers", "Traditional Balkan preparation"],
+      "lang": { "de": "Ajvar", "en": "Ajvar", "es": "Ajvar", "fr": "Ajvar", "ru": "Айвар", "ja": "アイバル", "zh": "阿依瓦", "fa": "آیوار", "hi": "अजवर", "ar": "أجفار" }
+    },
+    "ganoush_baba": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Baba Ganoush (Eggplant Cream)", "icon": "🍆", "latin": "Solanum melongena blend", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 150, "water_g": 70.0, "protein_g": 2.5, "fat_total_g": 11.0, "carbs_total_g": 8.0, "sugar_g": 3.0, "fiber_g": 4.0 },
+      "meta": { "locations": ["orient_market", "rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Smoky / Roasted", "base": "Eggplant & Tahini" },
+      "props": ["Silky texture, classic Levantine mezze", "Eggplants are traditionally roasted over an open flame for smokiness", "Usually garnished with olive oil and pomegranate seeds"],
+      "lang": { "de": "Auberginencreme (Baba Ganoush)", "en": "Baba Ganoush", "es": "Baba Ganoush", "fr": "Baba Ganoush", "ru": "Бабагануш", "ja": "ババガヌーシュ", "zh": "巴巴加努什", "fa": "بابا غنوش", "hi": "बाबा गनौश", "ar": "بابا غنوج" }
+    },
+    "hummus": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Hummus", "icon": "🧆", "latin": "Cicer arietinum blend", "sci": ["#sci/Nutrition", "#sci/Culinary"],
+      "val": { "kcal": 166, "water_g": 60.0, "protein_g": 7.9, "fat_total_g": 9.6, "carbs_total_g": 14.3, "sugar_g": 0.5, "fiber_g": 6.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Smooth Emulsion", "benefit": "High Plant Protein & Fiber" },
+      "props": ["Creamy emulsion of chickpeas, tahini, lemon, and garlic", "Quality depends on the ratio of tahini to chickpeas", "Staple of Middle Eastern cuisine"],
+      "lang": { "de": "Hummus", "en": "Hummus", "es": "Hummus", "fr": "Houmous", "ru": "Хумус", "ja": "フムス", "zh": "鹰嘴豆泥", "fa": "حمص", "hi": "हम्मस", "ar": "حمص" }
+    },
+    "tapenade": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Olive Tapenade", "icon": "🫒", "latin": "Olea europaea blend", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 250, "water_g": 60.0, "protein_g": 1.5, "fat_total_g": 26.0, "carbs_total_g": 3.0, "sugar_g": 0.5, "fiber_g": 3.5, "sodium_mg": 1500.0 },
+      "meta": { "locations": ["rewe", "kaufland", "delicatessen"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Salty / Briny / Umami", "preservation": "High oil and salt content" },
+      "props": ["Provençal spread made from finely chopped olives, capers, and olive oil", "Extremely savory and salty", "Used as a dip, spread, or condiment for fish and poultry"],
+      "lang": { "de": "Olivenpaste (Tapenade)", "en": "Tapenade", "es": "Tapenade", "fr": "Tapenade", "ru": "Тапенад", "ja": "タプナード", "zh": "橄榄酱", "fa": "تاپناد", "hi": "तपेनेड", "ar": "تابيناد" }
+    },
+    "pesto_green": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pesto Genovese", "icon": "🌿", "latin": "Ocimum basilicum blend", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 450, "water_g": 35.0, "protein_g": 6.0, "fat_total_g": 46.0, "carbs_total_g": 4.0, "sugar_g": 1.0, "fiber_g": 2.0, "calcium_mg": 150.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "process": "Cold emulsification", "ingredients": "Basil, Pine nuts, Parmesan, Olive Oil" },
+      "props": ["Cold-blended sauce, traditionally never heated", "Commercial versions often substitute pine nuts with cashews and olive oil with sunflower oil", "Contains Parmesan (not strictly vegetarian/vegan due to animal rennet)"],
+      "lang": { "de": "Pesto Genovese (Grün)", "en": "Green Pesto", "es": "Pesto verde", "fr": "Pesto vert", "ru": "Песто Дженовезе", "ja": "ジェノベーゼペースト", "zh": "绿酱 (青酱)", "fa": "پستو سبز", "hi": "हरा पेस्टो", "ar": "بيستو أخضر" }
+    },
+    "pesto_red": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pesto Rosso", "icon": "🍅", "latin": "Solanum lycopersicum siccatum blend", "sci": ["#sci/Nutrition", "#sci/Culinary"],
+      "val": { "kcal": 400, "water_g": 40.0, "protein_g": 5.0, "fat_total_g": 40.0, "carbs_total_g": 9.0, "sugar_g": 4.0, "fiber_g": 3.0, "lycopene_mg": 15.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "base": "Sun-dried tomatoes", "flavor": "Sweet & Savory Umami" },
+      "props": ["Base of sun-dried tomatoes (pomodori secchi)", "Often includes garlic, olive oil, and sometimes almonds or cheese", "Richer and sweeter than green pesto"],
+      "lang": { "de": "Pesto Rosso (Rot)", "en": "Red Pesto", "es": "Pesto rojo", "fr": "Pesto rouge", "ru": "Красный песто", "ja": "赤ペースト (ペスト・ロッソ)", "zh": "红酱", "fa": "پستو قرمز", "hi": "लाल पेस्टो", "ar": "بيستو أحمر" }
+    },
+    "muhammara": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Muhammara", "icon": "🌶️", "latin": "Juglans / Capsicum blend", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 280, "water_g": 50.0, "protein_g": 5.5, "fat_total_g": 22.0, "carbs_total_g": 16.0, "sugar_g": 6.0, "fiber_g": 4.0, "omega3_ala_g": 2.0 },
+      "meta": { "locations": ["orient_market", "delicatessen"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Coarse & Nutty", "flavor": "Sweet, Smoky, Spicy" },
+      "props": ["Complex, slightly spicy dip made from red peppers and walnuts", "Often contains pomegranate molasses for tart sweetness", "Syrian origin, very popular in Levantine cuisine"],
+      "lang": { "de": "Muhammara", "en": "Muhammara", "es": "Muhammara", "fr": "Mouhammara", "ru": "Мухаммара", "ja": "ムハンマラ", "zh": "穆罕马拉", "fa": "محمره", "hi": "मुहम्मरा", "ar": "محمرة" }
+    },
+
+    "--- GOURMET_AND_EUROPEAN_SPREADS ---": "Feinkost-Cremes & Bio-Aufstriche",
+    "cream_artichoke": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Artichoke Cream", "icon": "🪷", "latin": "Cynara scolymus blend", "sci": ["#sci/Phytochemistry", "#sci/Culinary"],
+      "val": { "kcal": 210, "water_g": 65.0, "protein_g": 2.0, "fat_total_g": 20.0, "carbs_total_g": 5.0, "sugar_g": 1.0, "fiber_g": 4.5 },
+      "meta": { "locations": ["rewe", "delicatessen", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Mild, nutty, slightly bitter", "usage": "Antipasti base" },
+      "props": ["Classic Italian crostini topping (Crema di Carciofi)", "Made from pureed artichoke hearts, garlic, and oil", "Delicate, elegant flavor profile"],
+      "lang": { "de": "Artischockencreme", "en": "Artichoke Cream", "es": "Crema de alcachofa", "fr": "Crème d'artichaut", "ru": "Крем из артишоков", "ja": "アーティチョーククリーム", "zh": "洋蓟酱", "fa": "کرم کنگر فرنگی", "hi": "आर्टिचोक क्रीम", "ar": "كريمة الخرشوف" }
+    },
+    "paste_truffle": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Truffle Paste / Tartufata", "icon": "🍄", "latin": "Tuber blend with mushrooms", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 250, "water_g": 60.0, "protein_g": 3.0, "fat_total_g": 24.0, "carbs_total_g": 4.0, "sugar_g": 0.5, "fiber_g": 2.0 },
+      "meta": { "locations": ["gourmet_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "composition": "Mostly button mushrooms with truffle flavor/fragments", "aroma": "Intense earthy/garlicky" },
+      "props": ["Usually a mix of champignon mushrooms, black olives, and real truffle fragments", "Commercial versions rely heavily on synthetic truffle aroma (bis(methylthio)methane)", "Used to finish pasta dishes or as a crostini spread"],
+      "lang": { "de": "Trüffelcreme (Tartufata)", "en": "Truffle Paste", "es": "Salsa de trufa", "fr": "Pâte de truffe", "ru": "Трюфельная паста", "ja": "トリュフペースト", "zh": "松露酱", "fa": "سس ترافل", "hi": "ट्रफल पेस्ट", "ar": "معجون الكمأة" }
+    },
+    "spread_vegan_lentil": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Lentil / Bean Spread (Vegan Pate)", "icon": "🥫", "latin": "Lens culinaris blend", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 220, "water_g": 55.0, "protein_g": 6.5, "fat_total_g": 15.0, "carbs_total_g": 12.0, "sugar_g": 2.0, "fiber_g": 5.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Smooth/Pâté-like", "protein_source": "Legumes" },
+      "props": ["Typical German 'Bio-Markt' staple based on lentils", "Blended with sunflower oil, yeast extract, and various herbs/spices", "Shelf-stable until opened, highly popular vegan substitute for liverwurst"],
+      "lang": { "de": "Linsenaufstrich", "en": "Vegan Lentil Spread", "es": "Paté de lentejas vegano", "fr": "Tartinade aux lentilles", "ru": "Веганский паштет из чечевицы", "ja": "レンズ豆スプレッド", "zh": "纯素扁豆酱", "fa": "پته عدس گیاهی", "hi": "शाकाहारी मसूर स्प्रेड", "ar": "معجون العدس النباتي" }
+    }
+  },
+  "deli_salads_german_classics": {
+    "--- MAYO_BASED_MEAT_SALADS ---": "Feinkostsalate auf Mayonnaise-Basis (Fleisch)",
+    "salad_meat_homann_classic": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Homann Fleischsalat (Klassisch)", "icon": "🥣", "latin": "Salsa carnis cum mayonnaise", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 345, "water_g": 50.0, "protein_g": 5.0, "fat_total_g": 33.0, "carbs_total_g": 6.0, "sugar_g": 4.5, "fiber_g": 0.5, "sodium_mg": 700.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl", "edeka"], "brand": "Homann", "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "emulsion": "Oil-in-water (Mayonnaise)", "meat_content": "approx. 40% Meat strips" },
+      "props": ["Der deutsche Goldstandard für Aufschnitt-Salate", "Besteht aus feinen Fleischwurststreifen, Gurken und einer schweren Mayonnaise-Sauce", "Hohe Kaloriendichte durch Rapsöl-Emulsion"],
+      "lang": { "de": "Fleischsalat (Klassisch)", "en": "Meat Salad (German style)", "es": "Ensalada de embutido", "fr": "Salade de viande à la mayonnaise", "ru": "Мясной салат (немецкий)", "ja": "フライシュザラート", "zh": "德式肉 Fleischsalat", "fa": "سالاد گوشت آلمانی", "hi": "मीट सलाद", "ar": "سلطة لحم بالمايونيز" }
+    },
+    "salad_budapest_spicy": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Budapester Salat", "icon": "🌶️", "latin": "Salsa carnis pannonica", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 290, "water_g": 55.0, "protein_g": 6.0, "fat_total_g": 25.0, "carbs_total_g": 9.0, "sugar_g": 6.0, "fiber_g": 1.2 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "flavor_profile": "Piquant / Paprika-forward", "inclusions": "Bell peppers & Meat strips" },
+      "props": ["Variante des Fleischsalats mit Paprikastreifen und oft einer leicht schärferen Marinade", "Trotz des Namens eine rein deutsche Supermarkt-Erfindung", "Geringerer Fettgehalt als reiner Fleischsalat durch höheren Gemüseanteil"],
+      "lang": { "de": "Budapester Salat", "en": "Budapest Salad", "es": "Ensalada Budapest", "fr": "Salade Budapest", "ru": "Салат Будапешт", "ja": "ブダペスト・サラダ", "zh": "布达佩斯沙拉", "fa": "سالاد بوداپست", "hi": "बुडापेस्ट सलाद", "ar": "سلطة بودابست" }
+    },
+
+    "--- FISH_AND_SEAFOOD_SALADS ---": "Fisch- & Meeressalate",
+    "salad_herring_red": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Roter Heringssalat (mit Rote Bete)", "icon": "🐟", "latin": "Salsa harengi rubra", "sci": ["#sci/Microbiology", "#sci/Phytochemistry"],
+      "val": { "kcal": 220, "water_g": 62.0, "protein_g": 6.5, "fat_total_g": 17.0, "carbs_total_g": 10.0, "sugar_g": 8.0, "fiber_g": 1.5, "omega3_mg": 800.0 },
+      "meta": { "locations": ["rewe", "lidl", "kaufland", "aldi"], "season": ["winter", "all_year"], "vegan": false },
+      "quality_metrics": { "color_source": "Natural Betanin (Beetroot)", "fish_source": "Clupea harengus (Herring)" },
+      "props": ["Klassische Kombination aus gesalzenem Hering, Äpfeln, Zwiebeln und Rote Bete", "Charakteristische tiefrote Farbe durch die Bete-Säure-Reaktion", "Gute Quelle für Omega-3-Fettsäuren trotz Mayonnaise-Anteil"],
+      "lang": { "de": "Roter Heringssalat", "en": "Red Herring Salad", "es": "Ensalada de arenque roja", "fr": "Salade de hareng rouge", "ru": "Селедочный салат (красный)", "ja": "赤ニシンサラダ", "zh": "红甜菜鲱鱼沙拉", "fa": "سالاد شاه‌ماهی قرمز", "hi": "लाल हेरिंग सलाद", "ar": "سلطة الرنجة الحمراء" }
+    },
+    "salad_shrimp_cocktail": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Garnelen-Cocktail", "icon": "🦐", "latin": "Salsa palemonis", "sci": ["#sci/Nutrition", "#sci/Culinary"],
+      "val": { "kcal": 180, "water_g": 72.0, "protein_g": 12.0, "fat_total_g": 13.0, "carbs_total_g": 4.0, "sugar_g": 3.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "edeka", "gourmet_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "protein_source": "Cold-water Shrimp", "sauce_type": "Cocktail / Marie Rose" },
+      "props": ["Gekochte Garnelen in einer meist cognac- oder sherry-verfeinerten Cocktailsauce", "Klassische Vorspeise der 70er/80er Jahre, heute Standard-Deli-Produkt", "Relativ hoher Proteingehalt für einen Mayo-Salat"],
+      "lang": { "de": "Garnelen-Cocktail", "en": "Shrimp Cocktail", "es": "Cóctel de gambas", "fr": "Cocktail de crevettes", "ru": "Коктейль из креветок", "ja": "シュリンプカクテル", "zh": "鲜虾鸡尾酒", "fa": "کوکتل میگو", "hi": "झींगा कॉकटेल", "ar": "كوكتيل الروبيان" }
+    },
+
+    "--- VEGETARIAN_DELI_SALADS ---": "Vegetarische Feinkostsalate",
+    "salad_egg_classic": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Eiersalat", "icon": "🥚", "latin": "Salsa ovorum", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 280, "water_g": 60.0, "protein_g": 8.0, "fat_total_g": 25.0, "carbs_total_g": 4.5, "sugar_g": 2.0, "fiber_g": 0.2 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Chunky egg whites with creamy yolk-sauce", "benefit": "High Choline" },
+      "props": ["Hartgekochte Eier in cremiger Sauce, oft mit Senf oder Schnittlauch verfeinert", "Klassischer Brotbelag", "Enthält durch das Eigelb viel Lecithin"],
+      "lang": { "de": "Eiersalat", "en": "Egg Salad", "es": "Ensalada de huevo", "fr": "Salade aux œufs", "ru": "Яичный салат", "ja": "たまごサラダ", "zh": "鸡蛋沙拉", "fa": "سالاد تخم‌مرgh", "hi": "अंडा सलाद", "ar": "سلطة البيض" }
+    },
+
+    "--- BBQ_SIDES_SALADS ---": "Grill- & Beilagensalate (Großgebinde)",
+    "salad_potato_mayo": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Kartoffelsalat mit Mayonnaise", "icon": "🥔", "latin": "Salsa solani tuberosi", "sci": ["#sci/FoodScience", "#sci/GlycemicIndex"],
+      "val": { "kcal": 145, "water_g": 75.0, "protein_g": 1.5, "fat_total_g": 9.5, "carbs_total_g": 13.0, "sugar_g": 1.5, "fiber_g": 1.8 },
+      "meta": { "locations": ["everywhere"], "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "potato_type": "Waxy (Festkochend)", "sauce_base": "Mayonnaise" },
+      "props": ["Der deutsche Standard-Grillbegleiter im 1kg-Eimer", "Verwendet festkochende Kartoffelsorten, die durch die Säure in der Mayo stabil bleiben", "Oft mit Gurkenstücken und Zwiebeln versetzt"],
+      "lang": { "de": "Kartoffelsalat (Mayo)", "en": "Potato Salad (Mayonnaise)", "es": "Ensalada de patata con mayo", "fr": "Salade de pommes de terre", "ru": "Картофельный салат (с майонезом)", "ja": "ポテトサラダ (マヨネーズ)", "zh": "马铃薯沙拉 (蛋黄酱)", "fa": "سالاد سیب‌زمینی با ماینز", "hi": "आलू सलाद (मेयो)", "ar": "سلطة البطاطس بالمايونيز" }
+    },
+    "salad_pasta_classic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Nudelsalat (Klassisch)", "icon": "🍝", "latin": "Salsa pastae", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 210, "water_g": 65.0, "protein_g": 4.5, "fat_total_g": 12.0, "carbs_total_g": 20.0, "sugar_g": 3.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["everywhere"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "pasta_shape": "Fusilli or Penne", "sauce": "Creamy/Mayo" },
+      "props": ["Meist Fusilli-Nudeln mit Erbsen, Karotten und Fleischwurststückchen", "Die Nudeln saugen mit der Zeit die Feuchtigkeit der Sauce auf (Retrogradation)", "Unverzichtbar für Gartenpartys"],
+      "lang": { "de": "Nudelsalat", "en": "Pasta Salad", "es": "Ensalada de pasta", "fr": "Salade de pâtes", "ru": "Макаронный салат", "ja": "パスタサラダ", "zh": "意大利面沙拉", "fa": "سالاد پاستا", "hi": "पास्ता सलाद", "ar": "سلطة المكرونة" }
+    }
+  },
+  "sweet_spreads_honey_jam": {
+    "--- HONEY_VARIETIES ---": "Honig & Bienenprodukte (Naturversiegelt)",
+    "honey_blossom_liquid": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Blütenhonig (Flüssig)", "icon": "🍯", "latin": "Mel flos", "sci": ["#sci/Entomology", "#sci/Phytochemistry"],
+      "val": { "kcal": 304, "water_g": 17.0, "protein_g": 0.3, "fat_total_g": 0.0, "carbs_total_g": 82.0, "sugar_g": 82.0, "fiber_g": 0.0, "enzymes_score": "High" },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["spring", "summer"], "vegan": false },
+      "quality_metrics": { "purity": "100% Bee Honey", "texture": "Liquid (High Fructose)" },
+      "props": ["Mischung aus verschiedenen Blütenpollen", "Hoher Fructoseanteil hält ihn länger flüssig", "Natürliches Antibiotikum durch Inhibine"],
+      "lang": { "de": "Blütenhonig", "en": "Blossom Honey", "es": "Miel de flores", "fr": "Miel de fleurs", "ru": "Цветочный мёд", "ja": "百花蜜", "zh": "百花蜂蜜", "fa": "عسل گل‌ها", "hi": "फूलों का शहद", "ar": "عسل الزهور" }
+    },
+    "honey_manuka_mgo": {
+      "unit_price": 50.00,
+      "unit_type": "piece",
+      "label": "Manuka Honig (MGO 400+)", "icon": "🇳🇿", "latin": "Mel leptospermum", "sci": ["#sci/Pharmacology", "#sci/Microbiology"],
+      "val": { "kcal": 330, "water_g": 16.0, "protein_g": 0.5, "fat_total_g": 0.0, "carbs_total_g": 80.0, "sugar_g": 78.0, "fiber_g": 0.0, "mgo_mg_kg": 400.0 },
+      "meta": { "locations": ["reformhaus", "denns", "specialty_store"], "origin": "New Zealand", "vegan": false },
+      "quality_metrics": { "active_agent": "Methylglyoxal (MGO)", "benefit": "Antibacterial / Wound healing" },
+      "props": ["Gewonnen aus dem Blütennektar der Südseemyrte", "Enthält extrem hohe Konzentrationen an MGO (Methylglyoxal)", "Wird oft eher als Naturmedizin denn als Brotaufstrich genutzt"],
+      "lang": { "de": "Manuka Honig", "en": "Manuka Honey", "es": "Miel de Manuka", "fr": "Miel de Manuka", "ru": "Мёд Манука", "ja": "マヌカハニー", "zh": "麦卢卡蜂蜜", "fa": "عسل مانوکا", "hi": "मानुका शहद", "ar": "عسل المانوكا" }
+    },
+    "honey_forest_honeydew": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Waldhonig (Honigtau)", "icon": "🌲", "latin": "Mel de melle", "sci": ["#sci/Botany", "#sci/Zoology"],
+      "val": { "kcal": 300, "water_g": 18.0, "protein_g": 0.4, "fat_total_g": 0.0, "carbs_total_g": 75.0, "sugar_g": 75.0, "fiber_g": 0.0, "minerals_mg": 200.0 },
+      "meta": { "locations": ["rewe", "edeka", "farm_shop"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "source": "Honeydew (not nectar)", "flavor": "Strong / Malty" },
+      "props": ["Besteht aus Honigtau (Ausscheidungen von Pflanzenläusen)", "Dunkler, malziger und weniger süß als Blütenhonig", "Höchster Mineralstoffgehalt unter den Honigsorten"],
+      "lang": { "de": "Waldhonig", "en": "Forest Honey / Honeydew", "es": "Miel de bosque", "fr": "Miel de forêt", "ru": "Лесной мёд", "ja": "森の蜂蜜", "zh": "森林蜂蜜", "fa": "عسل جنگل", "hi": "वन शहद", "ar": "عسل الغابة" }
+    },
+	"honey_acacia_liquid": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Akazienhonig (Glasklar)", "icon": "🌳", "latin": "Mel robinia", "sci": ["#sci/Botany", "#sci/FoodScience"],
+      "val": { "kcal": 304, "water_g": 17.5, "protein_g": 0.3, "fat_total_g": 0.0, "carbs_total_g": 82.0, "sugar_g": 81.0, "fiber_g": 0.0, "fructose_glucose_ratio": 1.5 },
+      "meta": { "locations": ["rewe", "edeka", "denns"], "season": ["spring"], "vegan": false },
+      "quality_metrics": { "texture": "Permanent Liquid", "color": "Pale Amber / Transparent" },
+      "props": ["Höchster Fructose-Gehalt aller Honigsorten, bleibt daher extrem lange flüssig", "Sehr mildes, liebliches Aroma, ideal zum Süßen von Tee ohne Eigengeschmack", "Stammt eigentlich von der Scheinakazie (Robinia pseudoacacia)"],
+      "lang": { "de": "Akazienhonig", "en": "Acacia Honey", "es": "Miel de acacia", "fr": "Miel d'acacia", "ru": "Акациевый мёд", "ja": "アカシア蜂蜜", "zh": "刺槐蜂蜜", "fa": "عسل اقاقیا", "hi": "बबूल का शहद", "ar": "عسل الأكاسيا" }
+    },
+    "honey_rapeseed_creamy": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Rapshonig (Cremig/Weiß)", "icon": "🌼", "latin": "Mel brassica", "sci": ["#sci/Crystallography", "#sci/Phytochemistry"],
+      "val": { "kcal": 302, "water_g": 18.0, "protein_g": 0.4, "fat_total_g": 0.0, "carbs_total_g": 81.0, "sugar_g": 80.0, "fiber_g": 0.0, "glucose_content": "Very High" },
+      "meta": { "locations": ["lidl", "kaufland", "farm_shop"], "season": ["spring"], "vegan": false },
+      "quality_metrics": { "texture": "Finely crystallized / Spreadable", "color": "White to Light Yellow" },
+      "props": ["Kristallisiert durch den hohen Glucose-Anteil extrem schnell (oft schon in der Wabe)", "Wird durch Rühren 'feincremig' gemacht, um die typische butterartige Konsistenz zu erhalten", "Charakteristischer, milder Kohl-Blüten-Beigeschmack"],
+      "lang": { "de": "Rapshonig", "en": "Rapeseed Honey", "es": "Miel de raps", "fr": "Miel de colza", "ru": "Рапсовый мёд", "ja": "菜種蜂蜜", "zh": "油菜花蜜", "fa": "عسل کلزا", "hi": "रेपसीड शहद", "ar": "عسل الكانولا" }
+    },
+    "honey_heather_erica": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Heidehonig (Gelierend)", "icon": "🌸", "latin": "Mel calluna", "sci": ["#sci/Rheology", "#sci/Botany"],
+      "val": { "kcal": 300, "water_g": 18.5, "protein_g": 0.5, "fat_total_g": 0.0, "carbs_total_g": 78.0, "sugar_g": 77.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["denns", "reformhaus", "specialty_store"], "season": ["late_summer"], "vegan": false },
+      "quality_metrics": { "texture": "Thixotropic (Gel-like)", "aroma": "Very Strong / Spicy" },
+      "props": ["Technologische Besonderheit: Er ist thixotrop (gelartig im Glas, wird unter Bewegung kurz flüssig)", "Sehr kräftiges, fast herbes Aroma", "Einer der teuersten deutschen Honige aufgrund der aufwendigen Ernte (Stippen statt Schleudern)"],
+      "lang": { "de": "Heidehonig", "en": "Heather Honey", "es": "Miel de brezo", "fr": "Miel de bruyère", "ru": "Вересковый мёд", "ja": "ヘザーハニー", "zh": "石楠花蜂蜜", "fa": "عسل خلنگ", "hi": "हीदर शहद", "ar": "عسل الخلنج" }
+    },
+    "--- BRANDED_HONEY_REFERENCE ---": "Marken-Honig (Supermarkt-Klassiker)",
+    "honey_langnese_flotte_biene": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Langnese Flotte Biene (Blütenhonig)", "icon": "🍯", "latin": "Mel miscellaneum (Langnese)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 306, "water_g": 17.2, "protein_g": 0.3, "fat_total_g": 0.0, "carbs_total_g": 82.0, "sugar_g": 82.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Langnese", "vegan": false },
+      "quality_metrics": { "packaging": "Squeeze bottle", "consistency": "Industrial standard liquid" },
+      "props": ["Der Inbegriff des deutschen Squeeze-Flaschen-Honigs", "Mischung von Honig aus EU- und Nicht-EU-Ländern", "Durch spezielle Filtration sehr lange kristallisationsfrei"],
+      "lang": { "de": "Langnese Flotte Biene", "en": "Langnese Squeeze Honey", "es": "Miel Langnese", "fr": "Miel Langnese", "ru": "Лангнезе (мёд)", "ja": "ラングネーゼ ハニー", "zh": "朗尼斯蜂蜜", "fa": "عسل لانگنس", "hi": "लैंगनीज़ शहद", "ar": "عسل لانجنيز" }
+    },
+
+    "--- JAMS_AND_CONSERVES ---": "Fruchtige Aufstriche & Konfitüren",
+    "jam_strawberry_classic": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Erdbeerkonfitüre (Extra)", "icon": "🍓", "latin": "Fragaria conserve", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 240, "water_g": 35.0, "protein_g": 0.5, "fat_total_g": 0.1, "carbs_total_g": 58.0, "sugar_g": 56.0, "fiber_g": 1.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "fruit_content": "min. 45% (Konfitüre Extra)", "gelling_agent": "Pectin" },
+      "props": ["Der deutsche Frühstücksklassiker", "Geliert durch Pektin und Zitronensäure", "Hoher Zuckeranteil dient der natürlichen Konservierung"],
+      "lang": { "de": "Erdbeermarmelade", "en": "Strawberry Jam", "es": "Mermelada de fresa", "fr": "Confiture de fraises", "ru": "Клубничное варенье", "ja": "いちごジャム", "zh": "草莓酱", "fa": "مربای توت‌فرنگی", "hi": "स्ट्रॉबेरी जैम", "ar": "مربى الفراولة" }
+    },
+    "marmalade_bitter_orange": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Bitterorangen-Marmelade (Englisch)", "icon": "🍊", "latin": "Citrus aurantium conserve", "sci": ["#sci/Phytochemistry", "#sci/Culinary"],
+      "val": { "kcal": 250, "water_g": 33.0, "protein_g": 0.4, "fat_total_g": 0.1, "carbs_total_g": 60.0, "sugar_g": 58.0, "fiber_g": 2.0 },
+      "meta": { "locations": ["rewe", "edeka", "gourmet_market"], "origin": "UK / Spain", "vegan": true },
+      "quality_metrics": { "flavor": "Bitter / Tart", "inclusions": "Orange zest strips" },
+      "props": ["Echte 'Marmelade' (darf laut EU-Recht nur aus Zitrusfrüchten bestehen)", "Enthält feine Streifen der Orangenschale", "Hoher Anteil an ätherischen Ölen und Bitterstoffen"],
+      "lang": { "de": "Bitterorangen-Marmelade", "en": "Orange Marmalade", "es": "Mermelada de naranja amarga", "fr": "Marmelade d'oranges amères", "ru": "Апельсиновый джем", "ja": "オレンジマーマレード", "zh": "橘子果酱", "fa": "مربای نارنج", "hi": "नारंगी का मुरब्बा", "ar": "مربى البرتقال المر" }
+    },
+    "plum_butter_latwerge": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pflaumenmus (Latwerge)", "icon": "🟣", "latin": "Prunus domestica pasta", "sci": ["#sci/Culinary", "#sci/Thermodynamics"],
+      "val": { "kcal": 210, "water_g": 42.0, "protein_g": 1.0, "fat_total_g": 0.3, "carbs_total_g": 48.0, "sugar_g": 45.0, "fiber_g": 3.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "brand": "Mühlhäuser (Reference)", "vegan": true },
+      "quality_metrics": { "texture": "Thick / Dark / Smooth", "spice": "Cinnamon & Cloves" },
+      "props": ["Traditionell extrem lange eingekocht, bis es dunkel und dickflüssig wird", "Enthält oft Zimt und Nelken", "Deutlich weniger Zuckerzusatz nötig als bei Konfitüre durch Eigenkonzentration"],
+      "lang": { "de": "Pflaumenmus", "en": "Plum Butter", "es": "Crema de ciruela", "fr": "Beurre de prune", "ru": "Повидло из слив", "ja": "プラムバター", "zh": "李子酱", "fa": "رب آلو", "hi": "आलू बुखारा जैम", "ar": "مربى البرقو" }
+    },
+
+    "--- NUT_AND_CHOCO_SPREADS ---": "Nuss-Nougat & Schoko-Cremes",
+    "spread_hazelnut_nutella": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Nutella (Nuss-Nougat-Creme)", "icon": "🌰", "latin": "Corylus et cacao pasta", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 539, "water_g": 1.0, "protein_g": 6.3, "fat_total_g": 30.9, "carbs_total_g": 57.5, "sugar_g": 56.3, "fiber_g": 3.0, "sodium_mg": 42.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Ferrero", "vegan": false },
+      "quality_metrics": { "lipid_focus": "Palm Oil & Hazelnuts", "market_status": "Global Benchmark" },
+      "props": ["Die weltweit meistverkaufte Nuss-Nougat-Creme", "Besteht primär aus Zucker und Palmöl, gefolgt von Haselnüssen (13%)", "Technologisch eine extrem stabile Fett-Zucker-Emulsion"],
+      "lang": { "de": "Nuss-Nougat-Creme", "en": "Hazelnut Cocoa Spread", "es": "Crema de avellanas", "fr": "Pâte à tartiner aux noisettes", "ru": "Шоколадно-ореховая паста", "ja": "ヘーゼルナッツスプレッド", "zh": "榛子巧克力酱", "fa": "شکلات صبحانه", "hi": "हेज़लनट स्प्रेड", "ar": "كريمة البندق بالشوكولاتة" }
+    }
+  },
+  "sweet_spreads_and_deli_jams": {
+    "--- BRANDED_FRUIT_KONFITÜRE ---": "Marken-Konfitüren (Zucker- & Frucht-Matrix)",
+    "jam_strawberry_schwartau_extra": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Schwartau Extra Erdbeere", "icon": "🍓", "latin": "Fragaria conserve (Schwartau)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 232, "water_g": 38.0, "protein_g": 0.4, "fat_total_g": 0.1, "carbs_total_g": 56.0, "sugar_g": 54.0, "fiber_g": 1.2 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Schwartau", "vegan": true },
+      "quality_metrics": { "fruit_content": "50% Fruit", "gelling": "Pectin-based" },
+      "props": ["Der deutsche Marken-Benchmark", "Höherer Fruchtanteil als Standard-Konfitüre", "Sehr feine Textur ohne große Stücke"],
+      "lang": { "de": "Schwartau Extra Erdbeere", "en": "Schwartau Strawberry Jam", "es": "Mermelada Schwartau", "fr": "Confiture Schwartau", "ru": "Джем Швартау", "ja": "シュワルタウ いちごジャム", "zh": "Schwartau 草莓酱", "fa": "مربای اشتوارتو", "hi": "श्वार्टौ स्ट्रॉबेरी जैm", "ar": "مربى شوارتو" }
+    },
+    "jam_strawberry_maribel_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Maribel Erdbeer-Konfitüre (Lidl)", "icon": "🍓", "latin": "Fragaria conserve (Maribel)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 245, "water_g": 35.0, "protein_g": 0.3, "fat_total_g": 0.1, "carbs_total_g": 59.0, "sugar_g": 58.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["lidl"], "brand": "Maribel", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Champion", "sugar_focus": "High sucrose content" },
+      "props": ["Lidls Antwort auf die großen Marken", "Oft etwas süßer kalibriert als Schwartau", "Standard-Frühstücksbegleiter im Discounter"],
+      "lang": { "de": "Maribel Erdbeer-Konfitüre", "en": "Maribel Strawberry Jam", "es": "Mermelada Maribel", "fr": "Confiture Maribel", "ru": "Джем Марибель", "ja": "マリベル いちごジャム", "zh": "Maribel 草莓酱", "fa": "مربای ماریبل", "hi": "मारीबेल स्ट्रॉबेरी जैम", "ar": "مربى ماريبيل" }
+    },
+
+    "--- SPECIALTY_SENF_MARMELADE ---": "Feinkost-Senf-Saucen (Käsebegleiter)",
+    "mustard_jam_fig_tessin": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Tessiner Feigensenf-Sauce", "icon": "🍯", "latin": "Ficus et sinapis conditum", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 315, "water_g": 20.0, "protein_g": 1.5, "fat_total_g": 1.0, "carbs_total_g": 74.0, "sugar_g": 72.0, "fiber_g": 2.5 },
+      "meta": { "locations": ["rewe", "kaufland", "delicatessen"], "brand": "Tessiner", "vegan": true },
+      "quality_metrics": { "flavor_profile": "Sweet / Sharp / Fruity", "usage": "Cheese Pairing (Hard cheese)" },
+      "props": ["Klassische 'Senf-Marmelade'", "Kombiniert kandierte Feigen mit scharfem Senföl", "Essentiell für Parmesan, Gruyère oder Ziegenkäse"],
+      "lang": { "de": "Feigensenf", "en": "Fig Mustard Sauce", "es": "Mostaza de higos", "fr": "Moutarde aux figues", "ru": "Инжирная горчица", "ja": "フィグマスタード", "zh": "无花果芥末酱", "fa": "سس خردل انجیر", "hi": "अंजीर सरसों सॉस", "ar": "صلصة خردل التين" }
+    },
+
+    "--- CARAMEL_AND_COOKIE_SPREADS ---": "Karamell- & Gebäck-Cremes",
+    "spread_lotus_biscoff": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Lotus Biscoff Gebäckcreme", "icon": "🍪", "latin": "Bisctoctum pasta (Lotus)", "sci": ["#sci/Lipidology", "#sci/FoodScience"],
+      "val": { "kcal": 584, "water_g": 1.0, "protein_g": 2.8, "fat_total_g": 38.1, "carbs_total_g": 57.0, "sugar_g": 36.8, "fiber_g": 0.8 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl", "edeka"], "brand": "Lotus", "vegan": true },
+      "quality_metrics": { "texture": "Smooth / Creamy", "flavor": "Caramelized / Cinnamon" },
+      "props": ["Basiert auf gemahlenen Lotus-Keksen", "Einzige große vegane Alternative im 'Süß-Sündigen' Regal", "Extrem hoher Fett- und Zuckergehalt durch Pflanzenöle"],
+      "lang": { "de": "Lotus Biscoff Creme", "en": "Biscoff Cookie Butter", "es": "Crema Lotus", "fr": "Pâte à tartiner Lotus", "ru": "Паста Лотус", "ja": "ロータス ビスコフ スプレッド", "zh": "Lotus 焦糖饼干酱", "fa": "کرم بیسکویت لوتوس", "hi": "लोटस बिस्कोफ़ स्प्रेड", "ar": "كريمة لوتس بسكويت" }
+    },
+
+    "--- PEANUT_BUTTER_MATRIX ---": "Erdnussbutter (Lidl vs. USA-Standard)",
+    "peanut_butter_barneys_kaufland": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Barney's Best Peanut Butter (Creamy)", "icon": "🥜", "latin": "Arachis hypogaea pasta", "sci": ["#sci/Nutrition", "#sci/Lipidology"],
+      "val": { "kcal": 630, "water_g": 2.0, "protein_g": 23.0, "fat_total_g": 51.0, "carbs_total_g": 15.0, "sugar_g": 8.0, "fiber_g": 6.0 },
+      "meta": { "locations": ["kaufland"], "brand": "Barney's Best", "vegan": true },
+      "quality_metrics": { "peanut_content": "approx. 90%", "texture": "Ultra-Smooth" },
+      "props": ["Amerikanischer Stil mit zugesetztem Zucker und Salz", "Stabilisiert durch gehärtete Fette (verhindert Ölabsetzung)", "Extrem proteinreich"],
+      "lang": { "de": "Erdnussbutter (Cremig)", "en": "Peanut Butter (Creamy)", "es": "Mantequilla de cacahuete", "fr": "Beurre de cacahuètes", "ru": "Арахисовое масло", "ja": "ピーナッツバター", "zh": "花生酱", "fa": "کره بادام زمینی", "hi": "मूंगफली का मक्खन", "ar": "زبدة الفول السوداني" }
+    },
+    "peanut_butter_vita_dor_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Vita D'Or Erdnussbutter (Lidl)", "icon": "🥜", "latin": "Arachis pasta (Lidl)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 625, "water_g": 1.8, "protein_g": 24.5, "fat_total_g": 50.0, "carbs_total_g": 16.0, "sugar_g": 9.5, "fiber_g": 5.8 },
+      "meta": { "locations": ["lidl"], "brand": "Vita D'Or", "vegan": true },
+      "quality_metrics": { "protein_focus": "Higher protein ratio", "texture": "Available in Crunchy/Creamy" },
+      "props": ["Lidls Eigenmarken-Benchmark", "Etwas höherer Proteingehalt als Barney's", "Sehr günstiger Preis bei fast identischer Rezeptur"],
+      "lang": { "de": "Lidl Erdnussbutter", "en": "Lidl Peanut Butter", "es": "Mantequilla de cacahuete Lidl", "fr": "Beurre de cacahuètes Lidl", "ru": "Арахисовое масло Лидл", "ja": "Lidl ピーナッツバター", "zh": "Lidl 花生酱", "fa": "کره بادام زمینی لیدل", "hi": "लिडल मूंगफली मक्खन", "ar": "زبدة فول سوداني ليدل" }
+    }
+	},
+  "sweet_spreads_brand_battles": {
+    "--- THE_CHOCO_HAZELNUT_WARS ---": "Nuss-Nougat-Cremes (Marken-Vergleich)",
+    "spread_nuspli_zentis": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Nuspli (Zentis)", "icon": "🌰", "latin": "Corylus pasta (Zentis)", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 533, "water_g": 1.5, "protein_g": 3.4, "fat_total_g": 30.0, "carbs_total_g": 61.0, "sugar_g": 58.0, "fiber_g": 2.5, "sodium_mg": 40.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Zentis", "vegan": false },
+      "quality_metrics": { "hazelnut_content": "13%", "texture": "Softer than Nutella" },
+      "props": ["Der größte deutsche Konkurrent zu Nutella", "Verwendet eine andere Fett-Zucker-Matrix, die bei Zimmertemperatur deutlich weicher bleibt", "Besonderer Fokus auf das Röstaroma der Haselnüsse"],
+      "lang": { "de": "Nuspli", "en": "Nuspli Hazelnut Spread", "es": "Crema Nuspli", "fr": "Pâte Nuspli", "ru": "Нуспли (паста)", "ja": "ヌスプリ", "zh": "Nuspli 榛子酱", "fa": "نوسپلی", "hi": "नुसप्ली स्प्रेड", "ar": "نوسبلي" }
+    },
+    "spread_nudossi_classic": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Nudossi (Das Original mit 36% Nuss)", "icon": "🐿️", "latin": "Corylus maxima pasta", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 569, "water_g": 1.0, "protein_g": 7.5, "fat_total_g": 40.0, "carbs_total_g": 43.0, "sugar_g": 40.0, "fiber_g": 4.5 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Nudossi", "vegan": false },
+      "quality_metrics": { "hazelnut_content": "36% (Premium)", "status": "East German Heritage" },
+      "props": ["Der 'Haselnuss-König' unter den Aufstrichen", "Fast dreimal so hoher Nussanteil wie Nutella oder Nuspli", "Extrem nussiger Geschmack, weniger Fokus auf Kakao-Süße"],
+      "lang": { "de": "Nudossi", "en": "Nudossi (36% Hazelnuts)", "es": "Nudossi", "fr": "Nudossi", "ru": "Нудосси", "ja": "ヌドッシ", "zh": "Nudossi 榛子酱", "fa": "نودوسی", "hi": "नुडोसी", "ar": "نودوسي" }
+    },
+    "spread_choco_nussa_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Choco Nussa (Lidl)", "icon": "🌰", "latin": "Corylus pasta (Lidl)", "sci": ["#sci/Lipidology"],
+      "val": { "kcal": 542, "water_g": 1.2, "protein_g": 6.2, "fat_total_g": 32.0, "carbs_total_g": 56.0, "sugar_g": 54.0, "fiber_g": 3.2 },
+      "meta": { "locations": ["lidl"], "brand": "Choco Nussa", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget Leader", "hazelnut_content": "13%" },
+      "props": ["Lidls Eigenmarke, die technologisch extrem nah an Nutella kalibriert ist", "Regelmäßiger Testsieger in Preis-Leistungs-Vergleichen", "Verwendet UTZ-zertifizierten Kakao"],
+      "lang": { "de": "Choco Nussa (Lidl)", "en": "Choco Nussa", "es": "Choco Nussa", "fr": "Choco Nussa", "ru": "Чоко Нусса", "ja": "チョコヌッサ", "zh": "Lidl 榛子巧克力酱", "fa": "چوکو نوسا", "hi": "चोको नुसा", "ar": "تشوكو نوسا" }
+    },
+
+    "--- SCHWARTAU_ELITE_FRUIT ---": "Schwartau Spezialitäten (Sortenrein)",
+    "jam_raspberry_schwartau_extra": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Schwartau Extra Himbeere", "icon": "🍇", "latin": "Rubus idaeus conserve", "sci": ["#sci/FoodScience", "#sci/Botany"],
+      "val": { "kcal": 235, "water_g": 38.0, "protein_g": 0.5, "fat_total_g": 0.1, "carbs_total_g": 55.0, "sugar_g": 53.0, "fiber_g": 2.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Schwartau", "vegan": true },
+      "quality_metrics": { "fruit_content": "50% Fruit", "seeds": "Contains seeds (natural texture)" },
+      "props": ["Intensives Aroma durch sorgfältig ausgewählte Himbeersorten", "Geliert perfekt mit dem fruchteigenen Pektin", "Klassische rötlich-violette Färbung ohne künstliche Farbstoffe"],
+      "lang": { "de": "Schwartau Himbeere", "en": "Schwartau Raspberry", "es": "Mermelada de frambuesa Schwartau", "fr": "Confiture de framboise Schwartau", "ru": "Малиновый джем Schwartau", "ja": "シュワルタウ ラズベリー", "zh": "Schwartau 覆盆子酱", "fa": "مربای تمشک اشتوارتو", "hi": "श्वार्टौ रास्पबेरी जैम", "ar": "مربى شوارتو توت علّيق" }
+    },
+    "plum_butter_muehlhaeuser": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Mühlhäuser Pflaumenmus", "icon": "🟣", "latin": "Prunus domestica pasta (Thuringia)", "sci": ["#sci/Thermodynamics", "#sci/Culinary"],
+      "val": { "kcal": 217, "water_g": 40.0, "protein_g": 0.9, "fat_total_g": 0.3, "carbs_total_g": 50.0, "sugar_g": 47.0, "fiber_g": 3.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "edeka"], "brand": "Mühlhäuser", "vegan": true },
+      "quality_metrics": { "recipe": "Traditional Thuringian", "spice": "Natural spices only" },
+      "props": ["Deutschlands meistverkauftes Pflaumenmus", "Wird nach altem Thüringer Rezept im Vakuumkessel schonend eingekocht", "Unverwechselbare Würzung durch eine geheime Gewürzmischung"],
+      "lang": { "de": "Mühlhäuser Pflaumenmus", "en": "Mühlhäuser Plum Butter", "es": "Puré de ciruela Mühlhäuser", "fr": "Beurre de prune Mühlhäuser", "ru": "Повидло Мюльхойзер", "ja": "ミュールホイザー プラムバター", "zh": "Mühlhäuser 李子酱", "fa": "رب آلو مولوایزر", "hi": "म्यूल्हाउज़र प्लम बटर", "ar": "مربى برقوق مولهويزر" }
+    },
+    "plum_butter_aachen_schwartau": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Aachener Pflaumenmus (Schwartau)", "icon": "🥨", "latin": "Prunus pasta (Aquisgranum)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 225, "water_g": 39.0, "protein_g": 0.8, "fat_total_g": 0.2, "carbs_total_g": 53.0, "sugar_g": 51.0, "fiber_g": 2.8 },
+      "meta": { "locations": ["rewe", "edeka"], "brand": "Schwartau / Aachener", "vegan": true },
+      "quality_metrics": { "flavor_profile": "Heavily spiced (Gingerbread-like)", "origin": "Aachen tradition" },
+      "props": ["Spezialität nach Aachener Art, oft würziger als das Mühlhäuser Pendant", "Enthält Nuancen von Nelken, Zimt und teilweise Anis", "Dunklere, fast schwarze Farbe"],
+      "lang": { "de": "Aachener Pflaumenmus", "en": "Aachen Style Plum Butter", "es": "Puré de ciruela estilo Aquisgrán", "fr": "Beurre de prune d'Aix-la-Chapelle", "ru": "Ахенское повидло", "ja": "アーヘン風プラムバター", "zh": "亚琛风味李子酱", "fa": "رب آلو آخن", "hi": "आचेन शैली प्लम बटर", "ar": "مربى برقوق على طريقة آخن" }
+    }
+  },
+  "condiments_master": {
+    "--- KETCHUP_BENCHMARKS ---": "Ketchup & Tomaten-Saucen (Zucker & Lycopin)",
+    "ketchup_heinz_classic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Heinz Tomato Ketchup", "icon": "🍅", "latin": "Solanum lycopersicum conditum", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 102, "water_g": 68.0, "protein_g": 1.2, "fat_total_g": 0.1, "carbs_total_g": 23.2, "sugar_g": 22.8, "fiber_g": 0.0, "lycopene_mg": 15.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Heinz", "vegan": true },
+      "quality_metrics": { "viscosity": "Yield Stress Leader (Non-Newtonian)", "tomato_content": "High (148g per 100g)" },
+      "props": ["The global benchmark for non-Newtonian fluids", "High concentration of heat-processed lycopene", "Strict ratio of vinegar, sugar, and spices"],
+      "lang": { "de": "Heinz Tomaten Ketchup", "en": "Heinz Tomato Ketchup", "es": "Kétchup Heinz", "fr": "Ketchup Heinz", "ru": "Кетчуп Хайнц", "ja": "ハインツ ケチャップ", "zh": "亨氏番茄酱", "fa": "سس کچاپ هاینز", "hi": "हाइन्ज़ केचप", "ar": "كاتشب هاينز" }
+    },
+    "ketchup_hela_curry_delikat": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Hela Curry Gewürzketchup (Delikat)", "icon": "❤️", "latin": "Solanum et curcuma (Hela)", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 138, "water_g": 62.0, "protein_g": 0.8, "fat_total_g": 0.4, "carbs_total_g": 31.2, "sugar_g": 29.3, "fiber_g": 0.5 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl", "edeka"], "brand": "Hela", "vegan": true },
+      "quality_metrics": { "flavor": "Sweet-Spicy Hybrid", "status": "German Cult Object" },
+      "props": ["Unique spice blend with high essential oil content", "Significantly higher sugar content than standard ketchup", "The 'Red Cap' is a cultural staple of German grill culture"],
+      "lang": { "de": "Hela Curry Gewürzketchup", "en": "Hela Curry Ketchup", "es": "Kétchup al curry Hela", "fr": "Ketchup au curry Hela", "ru": "Карри-кетчуп Хела", "ja": "ヘラ カリーケチャップ", "zh": "Hela 咖喱番茄酱", "fa": "کچاپ کاری هلا", "hi": "हेला करी केचप", "ar": "كاتشب كاري هيلا" }
+    },
+    "ketchup_kania_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Kania Tomaten Ketchup (Lidl)", "icon": "🍅", "latin": "Solanum conditum (Lidl)", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 100, "water_g": 69.0, "protein_g": 1.1, "fat_total_g": 0.1, "carbs_total_g": 22.5, "sugar_g": 22.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget King", "tomato_ratio": "Comparable to brand leaders" },
+      "props": ["Lidl's high-volume private label", "Consistently wins blind tests against more expensive brands", "Matches the 'Heinz' profile in acidity and sweetness"],
+      "lang": { "de": "Kania Ketchup (Lidl)", "en": "Kania Ketchup", "es": "Kétchup Kania", "fr": "Ketchup Kania", "ru": "Кетчуп Каниа", "ja": "カニア ケチャップ", "zh": "Kania 番茄酱", "fa": "کچاپ کانیا", "hi": "कानिया केचप", "ar": "كاتشب كانيا" }
+    },
+
+    "--- MAYONNAISE_AND_CREAMS ---": "Mayonnaise & Salatcremes (Die weiße Fraktion)",
+    "mayo_thomy_delikatess": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Thomy Delikatess Mayonnaise", "icon": "🧴", "latin": "Emulsio ovi (Thomy)", "sci": ["#sci/Lipidology", "#sci/FoodScience"],
+      "val": { "kcal": 716, "water_g": 14.0, "protein_g": 1.1, "fat_total_g": 79.5, "carbs_total_g": 0.9, "sugar_g": 0.9, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Thomy", "vegan": false },
+      "quality_metrics": { "fat_content": "80% (High Fat)", "emulsifier": "Fresh Egg Yolk" },
+      "props": ["Pure oil-in-water emulsion with highest legal fat content for Mayo", "Classic aluminum tube prevents oxidation of sensitive oils", "No starch fillers allowed in this quality tier"],
+      "lang": { "de": "Thomy Delikatess Mayonnaise", "en": "Thomy Delicacy Mayo", "es": "Mayonesa Thomy", "fr": "Mayonnaise Thomy", "ru": "Майонез Томи", "ja": "トミー マヨネーズ", "zh": "Thomy 美乃滋", "fa": "مایونز تومی", "hi": "थॉमी मेयोनेज़", "ar": "مايونيز ثومي" }
+    },
+    "salad_cream_miracle_whip": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Miracle Whip (Classic)", "icon": "🥣", "latin": "Lactis emulsio (Miracle)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 240, "water_g": 60.0, "protein_g": 0.7, "fat_total_g": 21.0, "carbs_total_g": 12.0, "sugar_g": 8.5, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Miracle Whip", "vegan": false },
+      "quality_metrics": { "lipid_focus": "Reduced Fat (Salad Cream)", "texture": "Whupped / Aerated" },
+      "props": ["Technically a 'Salatcreme', not a Mayonnaise due to lower fat", "High vinegar and sugar content for 'tangy' profile", "Aerated during production for unique fluffy texture"],
+      "lang": { "de": "Miracle Whip", "en": "Miracle Whip", "es": "Miracle Whip", "fr": "Miracle Whip", "ru": "Миракл Вип", "ja": "ミラクルホイップ", "zh": "奇妙酱", "fa": "میراکل ویپ", "hi": "मिरेकल व्हिप", "ar": "ميراكل ويب" }
+    },
+    "mayo_pommes_sauce_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Vita D'Or Pommes Sauce (Lidl)", "icon": "🍟", "latin": "Emulsio frictis (Lidl)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 315, "water_g": 55.0, "protein_g": 0.8, "fat_total_g": 30.0, "carbs_total_g": 9.5, "sugar_g": 6.5, "fiber_g": 0.2 },
+      "meta": { "locations": ["lidl"], "brand": "Vita D'Or", "vegan": false },
+      "quality_metrics": { "usage": "Optimized for Hot Fries", "texture": "Creamy / Non-melting" },
+      "props": ["Hybrid between Mayo and Salad Cream", "Specifically engineered to stay thick on hot fries", "Sweet-tangy profile popular in German Imbiss culture"],
+      "lang": { "de": "Pommes-Sauce", "en": "Fries Sauce", "es": "Salsa para patatas fritas", "fr": "Sauce frites", "ru": "Соус для картофеля фри", "ja": "フライドポテト用ソース", "zh": "薯条酱", "fa": "سس سیب‌زمینی", "hi": "फ्राइज़ सॉस", "ar": "صوص البطاطس" }
+    },
+
+    "--- MUSTARD_TYPES ---": "Senf-Varietäten (Sinigrin & Schärfe)",
+    "mustard_bautzner_medium": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Bautz'ner Senf Mittelscharf", "icon": "🟡", "latin": "Sinapis alba (Bautzner)", "sci": ["#sci/Phytochemistry", "#sci/Culinary"],
+      "val": { "kcal": 105, "water_g": 72.0, "protein_g": 6.5, "fat_total_g": 6.5, "carbs_total_g": 5.2, "sugar_g": 4.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Bautz'ner", "vegan": true },
+      "quality_metrics": { "active_agent": "Sinigrin (Mustard oil)", "status": "East German Cult Item" },
+      "props": ["The absolute standard for German Bratwurst", "Finely ground, no added oils", "Mild heat that doesn't linger too long"],
+      "lang": { "de": "Bautz'ner Senf (Mittelscharf)", "en": "Bautzner Mustard", "es": "Mostaza Bautzner", "fr": "Moutarde Bautzner", "ru": "Баутцнер горчица", "ja": "バウツナー マスタード", "zh": "包岑粉莫斯塔德 (中辣)", "fa": "خردل باوتزنر", "hi": "बाउत्ज़नर सरसों", "ar": "خردل باوتزنر" }
+    },
+    "mustard_k_classic_extra_hot": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Senf (Scharf/Extra)", "icon": "🔥", "latin": "Brassica nigra (Kaufland)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 115, "water_g": 68.0, "protein_g": 7.0, "fat_total_g": 7.5, "carbs_total_g": 4.5, "sugar_g": 2.0, "fiber_g": 3.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "heat_level": "High (Black Mustard source)", "price": "Extreme Budget" },
+      "props": ["High proportion of black mustard seeds for stinging heat", "Classic yellow tube or jar for high-volume consumption", "Aggressive sinus-clearing effect"],
+      "lang": { "de": "K-Classic Senf (Scharf)", "en": "K-Classic Hot Mustard", "es": "Mostaza picante K-Classic", "fr": "Moutarde forte K-Classic", "ru": "Горчица острая K-Classic", "ja": "K-Classic 辛口マスタード", "zh": "K-Classic 特辣芥末", "fa": "خردل تند کا-کلاسیک", "hi": "के-क्लासिक तीखी सरसों", "ar": "خردل حار ك-كلاسيك" }
+    }
+  },
+  "salad_creams_and_whips": {
+    "--- SALAD_CREAM_BENCHMARKS ---": "Salatcremes & Whips (Der Miracle-Standard)",
+    "salad_cream_miracle_whip_classic": {
+      "label": "Miracle Whip (Classic)", "icon": "🥣", "latin": "Lactis emulsio (Miracle)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 243, "water_g": 61.0, "protein_g": 0.8, "fat_total_g": 21.0, "carbs_total_g": 12.0, "sugar_g": 8.8, "fiber_g": 0.0, "sodium_mg": 780.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "everywhere"], "brand": "Miracle Whip", "vegan": false },
+      "quality_metrics": { "texture": "Aerated / Fluffy", "fat_content": "Reduced Fat (compared to Mayo)" },
+      "props": ["The global pioneer of whipped salad creams", "Contains significantly more vinegar and sugar than mayonnaise for its signature 'tangy' taste", "Aerated with nitrogen during emulsification for the unique light mouthfeel"],
+      "lang": { "de": "Miracle Whip (Klassik)", "en": "Miracle Whip Classic", "es": "Miracle Whip", "fr": "Miracle Whip", "ru": "Миракл Вип", "ja": "ミラクルホイップ", "zh": "奇妙酱", "fa": "میراکل ویپ", "hi": "मिरेकल व्हिप", "ar": "ميراكل ويب" }
+    },
+    "salad_cream_kania_lidl": {
+      "label": "Kania Salatcreme (Lidl)", "icon": "🧴", "latin": "Emulsio hortensis (Lidl)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 235, "water_g": 62.5, "protein_g": 0.7, "fat_total_g": 20.0, "carbs_total_g": 13.0, "sugar_g": 9.5, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget Benchmark", "texture": "Creamy / Non-whipped" },
+      "props": ["Lidl's value alternative for salad dressings and sandwiches", "Matches the acidity profile of national brands but often has a slightly higher sugar-to-fat ratio", "Very stable emulsion, does not separate even in heavy potato salads"],
+      "lang": { "de": "Kania Salatcreme (Lidl)", "en": "Kania Salad Cream", "es": "Crema para ensaladas Kania", "fr": "Crème salade Kania", "ru": "Салатный крем Каниа", "ja": "カニア サラダクリーム", "zh": "Kania 沙拉酱", "fa": "سس سالاد کانیا", "hi": "कानिया सलाद क्रीम", "ar": "كريمة سلطة كانيا" }
+    },
+    "--- SPECIALTY_SANDWICH_SPREADS ---": "Spezialisierte Sandwich-Aufstriche",
+    "sandwich_cream_kania_remoulade": {
+      "label": "Kania Remoulade (Lidl)", "icon": "🌿", "latin": "Emulsio cum herbis (Lidl)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 610, "water_g": 25.0, "protein_g": 1.2, "fat_total_g": 65.0, "carbs_total_g": 4.5, "sugar_g": 3.0, "fiber_g": 0.5 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": false },
+      "quality_metrics": { "inclusions": "Herbs & Chopped pickles", "fat_content": "High (Standard Remoulade)" },
+      "props": ["Mayonnaise-based spread with finely chopped herbs and capers or pickles", "Essential for 'Fischbrötchen' or roast beef sandwiches", "Significantly higher fat content than salad creams"],
+      "lang": { "de": "Kania Remoulade", "en": "Kania Remoulade", "es": "Remoulade Kania", "fr": "Rémoulade Kania", "ru": "Ремулад Каниа", "ja": "カニア レムラード", "zh": "Kania 鞑靼酱", "fa": "رمولاد کانیا", "hi": "कानिया रेमोलाडे", "ar": "ريمولاد كانيا" }
+    },
+    "--- MEXIKANER_ESSENTIALS ---": "Die Seele des Mexikaners (Schärfe & Basis)",
+    "mixer_sangrita_classic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Sangrita Classico / Picante", "icon": "🍅", "latin": "Succus lycopersici conditus", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 45, "water_g": 88.0, "protein_g": 1.0, "fat_total_g": 0.2, "carbs_total_g": 9.0, "sugar_g": 8.5, "fiber_g": 1.2, "sodium_mg": 800.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "usage": "Mexikaner Shot base", "vegan": true },
+      "quality_metrics": { "base": "Tomato, Orange & Lemon juice mix", "flavor": "Savory / Acidic / Spicy" },
+      "props": ["The essential non-alcoholic mixer for the 'Mexikaner' shot", "Complex blend of tomato juice with citrus and chili", "High salt and acid content balances the vodka/korn spirits"],
+      "lang": { "de": "Sangrita", "en": "Sangrita (Tomato Mixer)", "es": "Sangrita", "fr": "Sangrita", "ru": "Сангрита", "ja": "サングリータ", "zh": "桑格里塔", "fa": "سانگریتا", "hi": "सांग्रिटा", "ar": "سانجريتا" }
+    },
+    "sauce_tabasco_original": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Tabasco Original Red Pepper Sauce", "icon": "🔥", "latin": "Capsicum frutescens emulsio", "sci": ["#sci/Pharmacology", "#sci/Microbiology"],
+      "val": { "kcal": 12, "water_g": 95.0, "protein_g": 0.6, "fat_total_g": 0.5, "carbs_total_g": 0.8, "sugar_g": 0.0, "fiber_g": 0.5, "capsaicin_scoville": 3500.0 },
+      "meta": { "locations": ["everywhere"], "brand": "McIlhenny Co.", "vegan": true },
+      "quality_metrics": { "fermentation": "3 years in oak barrels", "acidity": "High distilled vinegar" },
+      "props": ["Fermented tabasco peppers with salt and vinegar", "Essential heat source for Mexikaner shots and Bloody Marys", "Extreme shelf stability due to high fermentation and acidity"],
+      "lang": { "de": "Tabasco Sauce", "en": "Tabasco Sauce", "es": "Salsa Tabasco", "fr": "Sauce Tabasco", "ru": "Табаско", "ja": "タバスコソース", "zh": "塔巴斯科辣酱", "fa": "سس تاباسکو", "hi": "तबास्को सॉस", "ar": "صلصة تاباسكو" }
+    },
+
+    "--- INTENSE_TOMATO_KETCHUPS ---": "Fruchtbetonte Ketchups (Hoher Tomatenanteil)",
+    "ketchup_werder_premium": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Werder Tomaten Ketchup (Klassik)", "icon": "🍅", "latin": "Solanum conditum (Werder)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 112, "water_g": 66.0, "protein_g": 1.4, "fat_total_g": 0.1, "carbs_total_g": 25.5, "sugar_g": 24.0, "fiber_g": 0.8 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Werder", "vegan": true },
+      "quality_metrics": { "tomato_intensity": "Fruitier / Less Vinegar", "origin": "Brandenburg, Germany" },
+      "props": ["The cult ketchup of East Germany", "Known for a much milder acidity and a more pronounced natural tomato flavor than Heinz", "Uses a specific spice blend that highlights fruitiness over tanginess"],
+      "lang": { "de": "Werder Tomaten Ketchup", "en": "Werder Tomato Ketchup", "es": "Kétchup Werder", "fr": "Ketchup Werder", "ru": "Кетчуп Вердер", "ja": "ヴェルダー ケチャップ", "zh": "Werder 番茄酱", "fa": "کچاپ وردر", "hi": "वरदेर केचप", "ar": "كاتشب فيردر" }
+    },
+    "ketchup_k_classic_bio": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Classic Bio Tomaten Ketchup", "icon": "🌿", "latin": "Solanum conditum organicum", "sci": ["#sci/Nutrition", "#sci/Agriculture"],
+      "val": { "kcal": 105, "water_g": 68.0, "protein_g": 1.3, "fat_total_g": 0.1, "carbs_total_g": 23.0, "sugar_g": 22.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic Bio", "vegan": true },
+      "quality_metrics": { "tomato_content": "High (min. 200g tomatoes per 100g ketchup)", "purity": "Organic (Naturland/EU-Bio)" },
+      "props": ["Extreme price-performance winner in the organic segment", "Higher dry matter content of tomatoes compared to the standard line", "Uses organic beet sugar instead of corn syrup"],
+      "lang": { "de": "K-Classic Bio Ketchup", "en": "K-Classic Organic Ketchup", "es": "Kétchup ecológico K-Classic", "fr": "Ketchup bio K-Classic", "ru": "Био-кетчуп K-Classic", "ja": "K-Classic オーガニックケチャップ", "zh": "K-Classic 有机番茄酱", "fa": "کچاپ ارگانیک کا-کلاسیک", "hi": "के-क्लासिक जैविक केचप", "ar": "كاتشب عضوي ك-كلاسيك" }
+    },
+    "ketchup_kania_premium_lidl": {
+      "label": "Kania Premium Tomaten Ketchup (Lidl)", "icon": "🍅", "latin": "Solanum conditum (Lidl Premium)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 108, "water_g": 67.0, "protein_g": 1.5, "fat_total_g": 0.2, "carbs_total_g": 24.0, "sugar_g": 23.5, "fiber_g": 1.1 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": true },
+      "quality_metrics": { "tomato_ratio": "Extra high paste concentration", "flavor": "Deep Umami" },
+      "props": ["Lidl's answer to high-end tomato intensity", "Thicker consistency due to a higher Brix level (sugar/solid ratio) of the tomato paste used", "Often features less thickening agent (starch) than the budget version"],
+      "lang": { "de": "Kania Premium Ketchup", "en": "Kania Premium Ketchup", "es": "Kétchup Premium Kania", "fr": "Ketchup Kania Premium", "ru": "Кетчуп Каниа Премиум", "ja": "カニア プレミアムケチャップ", "zh": "Kania 优质番茄酱", "fa": "کچاپ پریمیوم کانیا", "hi": "कानिया प्रीमियम केचप", "ar": "كاتشب كانيا بريميوم" }
+    },
+
+    "--- MUSTARD_ELITE ---": "Senf-Spezialitäten (Schärfegrade & Tradition)",
+    "mustard_loewensenf_extra_hot": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Löwensenf Extra (Scharf)", "icon": "🔥", "latin": "Sinapis nigra (Loewen)", "sci": ["#sci/Phytochemistry", "#sci/Culinary"],
+      "val": { "kcal": 98, "water_g": 65.0, "protein_g": 7.0, "fat_total_g": 6.8, "carbs_total_g": 1.5, "sugar_g": 1.0, "fiber_g": 4.5, "sodium_mg": 950.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Löwensenf", "vegan": true },
+      "quality_metrics": { "heat_level": "Extremely High (Nasal heat)", "process": "Dijon method (No vinegar focus)" },
+      "props": ["Germany's most famous hot mustard", "Pure heat based on brown/black mustard seeds", "Naturally preserved by mustard oils, no additives needed"],
+      "lang": { "de": "Löwensenf Extra", "en": "Extra Hot Mustard", "es": "Mostaza extra fuerte", "fr": "Moutarde extra forte", "ru": "Острая горчица (Loewensenf)", "ja": "激辛マスタード", "zh": "特辣芥末", "fa": "خردل بسیار تند", "hi": "अत्यधिक तीखी सरसों", "ar": "خردل حار جداً" }
+    },
+    "mustard_haendlmaier_sweet": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Händlmaier Hausmacher Senf (Süß)", "icon": "🥨", "latin": "Sinapis alba (Dulcis)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 225, "water_g": 45.0, "protein_g": 4.5, "fat_total_g": 3.5, "carbs_total_g": 42.0, "sugar_g": 41.5, "fiber_g": 2.5 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Händlmaier", "vegan": true },
+      "quality_metrics": { "flavor": "Sweet / Caramel / Coarse", "status": "Weisswurst essential" },
+      "props": ["Bavarian tradition: Coarsely ground seeds with caramel sugar", "High sugar content provides a completely different texture to savory mustard", "The undisputed benchmark for sweet mustard in Germany"],
+      "lang": { "de": "Süßer Senf (Händlmaier)", "en": "Sweet Mustard", "es": "Mostaza dulce", "fr": "Moutarde douce", "ru": "Сладкая горчица", "ja": "甘口マスタード", "zh": "甜芥末酱", "fa": "خردل شیرین", "hi": "मीठी सरसों", "ar": "خردل حلو" }
+    },
+
+    "--- BURGER_AND_DELI_CREAMS ---": "Burger- & Sandwich-Saucen (Lidl/Benchmark)",
+    "sauce_hamburger_heinz": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Heinz American Style Burger Sauce", "icon": "🍔", "latin": "Emulsio americana (Heinz)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 365, "water_g": 52.0, "protein_g": 1.2, "fat_total_g": 35.0, "carbs_total_g": 11.5, "sugar_g": 8.5, "fiber_g": 0.5 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Heinz", "vegan": false },
+      "quality_metrics": { "inclusions": "Dill & Onions", "base": "Tomato-Mayo Hybrid" },
+      "props": ["Classic pinkish burger sauce with a heavy dill note", "Emulates the flavor of famous fast-food chains", "High viscosity to prevent soaking into the bun"],
+      "lang": { "de": "Hamburger Sauce", "en": "Burger Sauce", "es": "Salsa para hamburguesas", "fr": "Sauce hamburger", "ru": "Соус для гамбургеров", "ja": "ハンバーガーソース", "zh": "汉堡酱", "fa": "سس همبرگر", "hi": "बर्गर सॉस", "ar": "صوص الهمبرغر" }
+    },
+    "remoulade_kania_classic_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Kania Remoulade (Lidl)", "icon": "🌿", "latin": "Emulsio cum herbis (Lidl)", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 615, "water_g": 24.0, "protein_g": 1.1, "fat_total_g": 66.0, "carbs_total_g": 3.8, "sugar_g": 2.5, "fiber_g": 0.3 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": false },
+      "quality_metrics": { "fat_content": "65% (Heavy Deli)", "inclusions": "Herbs / Capers / Pickles" },
+      "props": ["Lidl's high-fat deli classic", "Essential for cold roast beef or breaded fish (Backfisch)", "Differentiated from mayo by the addition of acid-stable herb bits"],
+      "lang": { "de": "Remoulade", "en": "Remoulade", "es": "Remolada", "fr": "Rémoulade", "ru": "Ремулад", "ja": "レムラードソース", "zh": "鞑靼酱 (利多)", "fa": "رمولاد", "hi": "रेमोलाडे", "ar": "ريمولاد" }
+    },
+
+    "--- ASIAN_UMAMI_POWER ---": "Asiatische Würzsaucen (Fermentation)",
+    "sauce_fish_tiparos": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Tiparos Fish Sauce (Thai)", "icon": "🐟", "latin": "Liquamen (Tiparos)", "sci": ["#sci/Microbiology", "#sci/Phytochemistry"],
+      "val": { "kcal": 55, "water_g": 65.0, "protein_g": 12.0, "fat_total_g": 0.1, "carbs_total_g": 1.5, "sugar_g": 1.0, "fiber_g": 0.0, "sodium_mg": 7500.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "brand": "Tiparos / Squid Brand", "vegan": false },
+      "quality_metrics": { "process": "Fermented Anchovies (12+ months)", "purity": "First press quality" },
+      "props": ["Pure Umami liquid made from salted and fermented anchovies", "Extreme sodium content, used as a salt substitute", "The fundamental building block of Thai and Vietnamese cuisine"],
+      "lang": { "de": "Fischsauce", "en": "Fish Sauce", "es": "Salsa de pescado", "fr": "Sauce de poisson (Nuoc mam)", "ru": "Рыбный соус", "ja": "ナンプラー", "zh": "鱼露", "fa": "سس ماهی", "hi": "फिश सॉस", "ar": "صلصة السمك" }
+    },
+    "sauce_soy_kikkoman": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Kikkoman Sojasauce (Natürlich gebraut)", "icon": "🥢", "latin": "Soia liquida (Kikkoman)", "sci": ["#sci/Microbiology", "#sci/FoodScience"],
+      "val": { "kcal": 77, "water_g": 68.0, "protein_g": 10.0, "fat_total_g": 0.0, "carbs_total_g": 3.2, "sugar_g": 0.6, "fiber_g": 0.8, "sodium_mg": 5900.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Kikkoman", "vegan": true },
+      "quality_metrics": { "process": "Naturally Brewed (Honjozo method)", "fermentation": "6 months minimum" },
+      "props": ["Consists of only 4 ingredients: Soybeans, Wheat, Water, Salt", "Contains over 280 different aroma components formed during brewing", "The global gold standard for Japanese soy sauce"],
+      "lang": { "de": "Sojasauce", "en": "Soy Sauce", "es": "Salsa de soja", "fr": "Sauce soja", "ru": "Соевый соус", "ja": "醤油 (しょうゆ)", "zh": "酱油", "fa": "سوس سویا", "hi": "सोया सॉस", "ar": "صلصة الصويا" }
+    },
+    "sauce_oyster_lee_kum_kee": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Lee Kum Kee Oyster Sauce (Panda)", "icon": "🐼", "latin": "Ostrea extractum salsa", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 145, "water_g": 60.0, "protein_g": 1.2, "fat_total_g": 0.1, "carbs_total_g": 35.0, "sugar_g": 32.0, "fiber_g": 0.0, "sodium_mg": 4500.0 },
+      "meta": { "locations": ["asia_market", "rewe", "edeka"], "brand": "Lee Kum Kee", "vegan": false },
+      "quality_metrics": { "texture": "Syrupy / Glaze", "flavor": "Sweet-Savory-Marine" },
+      "props": ["Made from concentrated oyster extracts", "Used as an umami-booster for stir-fries (Wok)", "Provides the characteristic glossy sheen to Chinese restaurant dishes"],
+      "lang": { "de": "Austernsauce", "en": "Oyster Sauce", "es": "Salsa de ostras", "fr": "Sauce d'huître", "ru": "Устричный соус", "ja": "オイスターソース", "zh": "蚝油", "fa": "سس صدف", "hi": "ऑयस्टर सॉस", "ar": "صلصة المحار" }
+    },
+    "sauce_worcestershire_lea_perrins": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Lea & Perrins Worcestershire Sauce", "icon": "🇬🇧", "latin": "Liquamen Vigorniense", "sci": ["#sci/Microbiology", "#sci/Culinary"],
+      "val": { "kcal": 96, "water_g": 75.0, "protein_g": 0.8, "fat_total_g": 0.9, "carbs_total_g": 21.0, "sugar_g": 18.0, "fiber_g": 0.0, "sodium_mg": 950.0 },
+      "meta": { "locations": ["rewe", "edeka", "gourmet_market"], "brand": "Lea & Perrins", "vegan": false },
+      "quality_metrics": { "process": "Fermented for 18 months", "key_ingredient": "Tamarind & Anchovies" },
+      "props": ["A complex fermented liquid involving malt vinegar, molasses, and anchovies", "Essential for 'Würzfleisch', Bloody Mary, and Caesar Salad", "Highly acidic and thin (non-viscous) consistency"],
+      "lang": { "de": "Worcestersauce", "en": "Worcestershire Sauce", "es": "Salsa Worcestershire", "fr": "Sauce Worcestershire", "ru": "Вустерширский соус", "ja": "ウスターソース", "zh": "辣酱油 / 伍斯特酱", "fa": "سس ورچسترشایر", "hi": "वॉस्टरशायर सॉस", "ar": "صلصة ورشسترشاير" }
+    },
+	
+    "--- GLOBAL_SWEET_SOUR_BENCHMARKS ---": "Süß-Sauer Standards (Frucht & Säure)",
+    "sauce_sweet_sour_bens_original": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Ben's Original Süß-Sauer (Klassisch)", "icon": "🥫", "latin": "Salsa dulcamara (Ben)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 95, "water_g": 72.0, "protein_g": 0.5, "fat_total_g": 0.2, "carbs_total_g": 22.0, "sugar_g": 19.5, "fiber_g": 0.8 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Ben's Original", "vegan": true },
+      "quality_metrics": { "inclusions": "Pineapple, Bamboo shoots, Peppers", "base": "Tomato & Pineapple juice" },
+      "props": ["Der deutsche Supermarkt-Standard für Wok-Gerichte", "Perfekte Balance aus Essigsäure und Ananassüße", "Hoher Stärkeanteil sorgt für den typischen Glanz beim Erhitzen"],
+      "lang": { "de": "Süß-Sauer Sauce", "en": "Sweet and Sour Sauce", "es": "Salsa agridulce", "fr": "Sauce aigre-douce", "ru": "Кисло-сладкий соус", "ja": "甘酢ソース", "zh": "糖醋酱", "fa": "سس ترش و شیرین", "hi": "खट्टा मीठा सॉस", "ar": "صلصة حلوة وحامضة" }
+    },
+    "sauce_sweet_sour_mcdonalds": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "McDonald's Süßsauer Sauce (Dip)", "icon": "🍟", "latin": "Emulsio dulcamara (McD)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 180, "water_g": 55.0, "protein_g": 0.5, "fat_total_g": 0.2, "carbs_total_g": 43.0, "sugar_g": 38.0, "fiber_g": 1.0, "sodium_mg": 450.0 },
+      "meta": { "locations": ["mcdonalds", "online_import"], "brand": "McDonald's", "vegan": true },
+      "quality_metrics": { "flavor_base": "Apricot / Peach puree", "texture": "Highly viscous / Jam-like" },
+      "props": ["Der ikonische Dip für Chicken McNuggets", "Basiert technologisch eher auf Aprikosenmark als auf Tomaten", "Extrem hoher Zuckergehalt für maximale Geschmackshaftung am Produkt"],
+      "lang": { "de": "McDonald's Süßsauer Sauce", "en": "McDonald's Sweet 'N Sour", "es": "Salsa agridulce de McDonald's", "fr": "Sauce Chinoise McDonald's", "ru": "Кисло-сладкий соус Макдоналдс", "ja": "マクドナルド スイートサワーソース", "zh": "麦当劳糖醋酱", "fa": "سس ترش و شیرین مک‌دونالد", "hi": "मैकडोनल्ड्स खट्टा-मीठा सॉस", "ar": "صلصة ماكدونالدز الحلوة والحامضة" }
+    },
+    "sauce_sweet_sour_vitasia_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Vitasia Süß-Sauer (Lidl)", "icon": "🥢", "latin": "Salsa dulcamara (Lidl)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 90, "water_g": 74.0, "protein_g": 0.4, "fat_total_g": 0.1, "carbs_total_g": 21.0, "sugar_g": 18.5, "fiber_g": 0.7 },
+      "meta": { "locations": ["lidl"], "brand": "Vitasia", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Champion", "texture": "Slightly thinner than Ben's" },
+      "props": ["Lidls Antwort auf die großen Marken während der Asien-Wochen", "Oft etwas flüssiger, aber mit markanten Paprikastücken", "Sehr stabiler Bestseller im Eigenmarken-Sortiment"],
+      "lang": { "de": "Vitasia Süß-Sauer Sauce", "en": "Vitasia Sweet and Sour", "es": "Salsa agridulce Vitasia", "fr": "Sauce aigre-douce Vitasia", "ru": "Кисло-сладкий соус Vitasia", "ja": "ヴィタシア 甘酢ソース", "zh": "Vitasia 糖醋酱", "fa": "سس ترش و شیرین ویتاسیا", "hi": "विटासिया खट्टा-मीठा सॉस", "ar": "صلصة فيتاسيا حلو وحامض" }
+    },
+
+    "--- SMOKY_AND_SWEET_SPECIALS ---": "Grill- & Rauchsaucen (BBQ)",
+    "sauce_bbq_bulls_eye_original": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Bull's-Eye BBQ Sauce (Original)", "icon": "🔥", "latin": "Salsa fumigata (Bull)", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 175, "water_g": 52.0, "protein_g": 1.0, "fat_total_g": 0.5, "carbs_total_g": 40.0, "sugar_g": 36.0, "fiber_g": 1.5, "sodium_mg": 900.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Bull's-Eye", "vegan": true },
+      "quality_metrics": { "smoke_source": "Hickory Liquid Smoke", "texture": "Thick / Molasses-like" },
+      "props": ["Authentic American style BBQ sauce", "Heavy focus on smoke aroma and molasses sweetness", "Perfect for marinating ribs or as a burger topping"],
+      "lang": { "de": "BBQ Sauce (Bulls-Eye)", "en": "BBQ Sauce", "es": "Salsa barbacoa", "fr": "Sauce barbecue", "ru": "Соус барбекю", "ja": "バーベキューソース", "zh": "烧烤酱", "fa": "سس باربیکیو", "hi": "बारबेक्यू सॉस", "ar": "صلصة باربيكيو" }
+    },
+    "sauce_hoisin_lee_kum_kee": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Hoisin Sauce (Peking-Ente Sauce)", "icon": "🦆", "latin": "Salsa soia condita", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 225, "water_g": 40.0, "protein_g": 2.5, "fat_total_g": 1.5, "carbs_total_g": 48.0, "sugar_g": 42.0, "fiber_g": 2.0 },
+      "meta": { "locations": ["asia_market", "rewe", "edeka"], "brand": "Lee Kum Kee", "vegan": true },
+      "quality_metrics": { "base": "Fermented soybean paste", "flavor": "Sweet / Savory / Spicy (5-Spice)" },
+      "props": ["The 'Chinese BBQ Sauce'", "Thick, dark, and fragrant with star anise and garlic", "Essential for Peking Duck and as a glaze for stir-fries"],
+      "lang": { "de": "Hoisin Sauce", "en": "Hoisin Sauce", "es": "Salsa Hoisin", "fr": "Sauce Hoisin", "ru": "Соус Хойсин", "ja": "海鮮醤 (ホイシンソース)", "zh": "海鲜酱", "fa": "سس هویسین", "hi": "होइसिन सॉस", "ar": "صلصة الهويسين" }
+    },
+
+    "--- PIRI_PIRI_AND_AFRICAN_HEAT ---": "Piri Piri & Afro-Portugiesische Schärfe",
+    "sauce_piri_piri_nandos_medium": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Nando's Peri-Peri Sauce (Medium)", "icon": "🔥", "latin": "Capsicum chinense (Nandos)", "sci": ["#sci/Phytochemistry", "#sci/Culinary"],
+      "val": { "kcal": 45, "water_g": 85.0, "protein_g": 0.7, "fat_total_g": 3.5, "carbs_total_g": 1.2, "sugar_g": 1.0, "fiber_g": 0.8, "scoville_units": 15000.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Nando's", "vegan": true },
+      "quality_metrics": { "base": "African Bird's Eye Chili", "acidity": "Lemon & Vinegar blend" },
+      "props": ["The global benchmark for Peri-Peri flavor", "Traditional blend of chili, lemon, garlic, and onion", "Legendary marinade for 'Frango Assado' (Flame-grilled chicken)"],
+      "lang": { "de": "Piri Piri Sauce", "en": "Peri-Peri Sauce", "es": "Salsa Piri Piri", "fr": "Sauce Piri Piri", "ru": "Соус Пири-пиri", "ja": "ピリピリソース", "zh": "霹雳辣酱", "fa": "سس پیری پیری", "hi": "पिरी पिरी सॉस", "ar": "صلصة بيري بيري" }
+    },
+    "sauce_piri_piri_kania_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Kania Piri Piri Sauce (Lidl)", "icon": "🧴", "latin": "Capsicum emulsio (Lidl)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 55, "water_g": 82.0, "protein_g": 0.5, "fat_total_g": 4.5, "carbs_total_g": 2.5, "sugar_g": 2.0, "fiber_g": 0.6 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Piquant", "texture": "Oil-Vinegar emulsion" },
+      "props": ["Lidl's affordable version of the Portuguese classic", "Stronger focus on vinegar preservation for shelf stability", "Excellent as a table sauce for pizza or grilled vegetables"],
+      "lang": { "de": "Kania Piri Piri (Lidl)", "en": "Kania Piri Piri", "es": "Piri Piri Kania", "fr": "Piri Piri Kania", "ru": "Пири-пири Каниа", "ja": "カニア ピリピリ", "zh": "Kania 霹雳酱", "fa": "پیری پیری کانیا", "hi": "कानिया पिरी पिरी", "ar": "بيري بيري كانيا" }
+    },
+
+    "--- GLOBAL_CHILI_CHAMPIONS ---": "Weitere globale Schärfe-Spezialisten",
+    "sauce_sriracha_flying_goose": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Sriracha Chili Sauce (Flying Goose)", "icon": "🦢", "latin": "Capsicum annuum conditum", "sci": ["#sci/Microbiology", "#sci/FoodScience"],
+      "val": { "kcal": 139, "water_g": 60.0, "protein_g": 2.1, "fat_total_g": 1.2, "carbs_total_g": 28.0, "sugar_g": 22.0, "fiber_g": 1.5, "scoville_units": 3000.0 },
+      "meta": { "locations": ["asia_market", "lidl", "kaufland"], "brand": "Flying Goose", "vegan": true },
+      "quality_metrics": { "process": "Fermented Chili paste", "flavor": "Garlicky / Sweet / Spicy" },
+      "props": ["The most iconic Thai-style chili sauce", "Distinctive green cap (original) or red cap", "High garlic and sugar content creates a thick, paste-like consistency"],
+      "lang": { "de": "Sriracha Sauce", "en": "Sriracha", "es": "Salsa Sriracha", "fr": "Sauce Sriracha", "ru": "Соус Шрирача", "ja": "シラチャソース", "zh": "是拉差香辣椒酱", "fa": "سس سریراچا", "hi": "श्रीराचा सॉस", "ar": "صلصة سيراتشا" }
+    },
+    "paste_harissa_le_phare": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Harissa (Tunesische Chili-Paste)", "icon": "🌶️", "latin": "Capsicum maghrebiana", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 120, "water_g": 65.0, "protein_g": 2.5, "fat_total_g": 7.0, "carbs_total_g": 9.5, "sugar_g": 3.0, "fiber_g": 5.0 },
+      "meta": { "locations": ["orient_market", "rewe", "kaufland"], "brand": "Le Phare du Cap Bon", "vegan": true },
+      "quality_metrics": { "purity": "High oil content / No fillers", "spice_profile": "Cumin / Coriander / Caraway" },
+      "props": ["North African hot chili pepper paste", "Complex aroma due to roasted peppers and dried spices", "Traditionally used in couscous, stews, and as a bread dip"],
+      "lang": { "de": "Harissa", "en": "Harissa", "es": "Harissa", "fr": "Harissa", "ru": "Харисса", "ja": "ハリッサ", "zh": "哈里萨辣酱", "fa": "هریسه", "hi": "हरीसा", "ar": "هريسة" }
+    }
+  },
+  "TOMATO_BASICS": { 
+    "sauce_passata_mutti": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mutti Passata", "icon": "🍅", "latin": "Solanum lycopersicum (Passata)", "sci": ["#sci/FoodScience", "#sci/Antioxidants"],
+      "val": { "kcal": 36, "water_g": 89.0, "protein_g": 1.6, "fat_total_g": 0.2, "carbs_total_g": 5.1, "sugar_g": 4.5, "fiber_g": 1.8, "lycopene_mg": 15.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "brix": "High (Natural sweetness)", "viscosity": "Thick / Creamy" },
+      "props": ["Der italienische Goldstandard", "Enthält Lycopin, ein starkes Antioxidans, das durch das Erhitzen noch besser verfügbar wird", "Ohne künstliche Konservierungsstoffe"],
+      "lang": { "de": "Mutti Passierte Tomaten", "en": "Mutti Tomato Passata", "it": "Mutti Passata di Pomodoro" }
+    },
+    "sauce_tomato_chunks_bio": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Bio Stückige Tomaten", "icon": "🥫", "latin": "Solanum lycopersicum (Concasse)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 22, "water_g": 92.0, "protein_g": 1.1, "fat_total_g": 0.1, "carbs_total_g": 3.5, "sugar_g": 3.0, "fiber_g": 1.2 },
+      "meta": { "locations": ["dm", "alnatura", "rewe_bio"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Chunky / Rustic", "acidity": "Moderate" },
+      "props": ["Ideal für rustikale Saucen oder Eintöpfe", "Ganze Tomatenstücke sorgen für Textur im Mund", "Meist nur mit etwas Tomatensaft und Citronensäure versetzt"],
+      "lang": { "de": "Stückige Tomaten (Bio)", "en": "Chopped Tomatoes (Organic)", "it": "Pomodori a pezzi" }
+    },
+	"sauce_tomato_paste": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Tomatenmark (2-fach/3-fach konzentriert)", "icon": "🧪", "latin": "Solanum lycopersicum (Concentratum)", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 82, "water_g": 70.0, "protein_g": 4.3, "fat_total_g": 0.5, "carbs_total_g": 15.0, "sugar_g": 12.0, "fiber_g": 3.0, "lycopene_mg": 45.0 },
+      "meta": { "locations": ["lidl", "rewe", "edeka", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "concentration": "Double or Triple", "umami_index": "High" },
+      "props": ["Extrem hohe Lycopin-Dichte durch starke Reduktion", "Hält sich geöffnet im Kühlschrank sehr lange", "Sollte kurz mit angeröstet werden, um die volle Süße zu entfalten"],
+      "lang": { "de": "Tomatenmark", "en": "Tomato Paste", "it": "Concentrato di Pomodoro" }
+    }
+   },
+  "bakery_savory": {
+    "togo_puten_omlett_broetchen": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Puten-Omlett Brötchen (Backhus Style)", "icon": "🍳",
+      "val": { "kcal": 480, "protein_g": 22.0, "fat_total_g": 18.0, "carbs_total_g": 55.0 },
+      "meta": { "locations": ["backhus", "bakery"], "togo": true },
+      "props": ["Proteinreich durch Ei und Pute", "Sättigt langanhaltend"]
+    },
+    "togo_laugenstange_pur": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Laugenstange (Pur)", "icon": "🥨",
+      "val": { "kcal": 280, "protein_g": 8.5, "fat_total_g": 3.0, "carbs_total_g": 54.0 },
+      "meta": { "locations": ["lidl_backtheke", "kaufland", "bakery"], "togo": true }
+    },
+    "togo_kaesebroetchen": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Käsebrötchen (Überbacken)", "icon": "🧀",
+      "val": { "kcal": 380, "protein_g": 16.0, "fat_total_g": 14.0, "carbs_total_g": 48.0 },
+      "meta": { "locations": ["backhus", "lidl_backtheke", "rewe"], "togo": true }
+    },
+    "togo_pizza_zunge": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pizza-Zunge / Snack-Pizza", "icon": "🍕",
+      "val": { "kcal": 550, "protein_g": 18.0, "fat_total_g": 22.0, "carbs_total_g": 68.0 },
+      "meta": { "locations": ["kaufland", "rewe", "bakery"], "togo": true }
+    },
+    "togo_frikadellenbroetchen": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Frikadellenbrötchen mit Senf", "icon": "🍔",
+      "val": { "kcal": 520, "protein_g": 24.0, "fat_total_g": 28.0, "carbs_total_g": 42.0 },
+      "meta": { "locations": ["bakery", "lidl_backtheke"], "togo": true }
+    }
+  },
+  "bakery_sweet": {
+    "togo_franzbroetchen_classic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Franzbrötchen (Classic)", "icon": "🐌",
+      "val": { "kcal": 420, "protein_g": 5.0, "fat_total_g": 24.0, "carbs_total_g": 46.0 },
+      "meta": { "locations": ["backhus", "bakery"], "togo": true }
+    },
+    "togo_croissant_pur": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Butter-Croissant", "icon": "🥐",
+      "val": { "kcal": 310, "protein_g": 6.0, "fat_total_g": 18.0, "carbs_total_g": 32.0 },
+      "meta": { "locations": ["lidl_backtheke", "bakery"], "togo": true }
+    },
+    "togo_quarkbaellchen": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Quarkbällchen (1 Stück)", "icon": "⚪",
+      "val": { "kcal": 95, "protein_g": 2.0, "fat_total_g": 5.0, "carbs_total_g": 10.0 },
+      "meta": { "locations": ["backhus", "bakery"], "togo": true }
+    },
+    "togo_apfeltasche": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Apfeltasche (Blätterteig)", "icon": "🍎",
+      "val": { "kcal": 360, "protein_g": 4.0, "fat_total_g": 20.0, "carbs_total_g": 40.0 },
+      "meta": { "locations": ["lidl_backtheke", "bakery"], "togo": true }
+    }
+  },
+  "fast_food_classics": {
+    "togo_doener_standard": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Döner Kebab (Kalb/Hähnchen)", "icon": "🥙",
+      "val": { "kcal": 650, "protein_g": 35.0, "fat_total_g": 25.0, "carbs_total_g": 65.0 },
+      "meta": { "locations": ["imbiss"], "togo": true },
+      "props": ["Vollständige Mahlzeit", "Protein-Carb-Balance"]
+    },
+    "togo_falafel_wrap": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Falafel Wrap / Dürüm", "icon": "🌯",
+      "val": { "kcal": 580, "protein_g": 18.0, "fat_total_g": 22.0, "carbs_total_g": 75.0 },
+      "meta": { "locations": ["imbiss"], "togo": true, "vegan": true }
+    }
+  },
+  "togo_beverages": {
+    "togo_cappuccino_large": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Cappuccino (Groß, Vollmilch)", "icon": "☕",
+      "val": { "kcal": 120, "protein_g": 7.0, "fat_total_g": 7.0, "carbs_total_g": 10.0 },
+      "meta": { "locations": ["backhus", "cafe"], "togo": true }
+    },
+    "togo_latte_macchiato": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Latte Macchiato (Vollmilch)", "icon": "🥛",
+      "val": { "kcal": 180, "protein_g": 9.0, "fat_total_g": 9.0, "carbs_total_g": 14.0 },
+      "meta": { "locations": ["cafe", "bakery"], "togo": true }
+    }
+  }
+}

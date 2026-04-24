@@ -1,0 +1,862 @@
+{
+  "meat_and_organ_meat": {
+    "--- RED_MEAT_BOVINE_AND_OVINE ---": "Rotes Fleisch (Rind, Lamm, Ziege)",
+    "beef": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Beef (Lean Steak)", "icon": "🥩", "latin": "Bos taurus (Musculus)", "sci": ["#sci/Nutrition", "#sci/Hematology"],
+      "val": { "kcal": 250, "protein_g": 26.0, "fat_total_g": 15.0, "vit_b12_mcg": 2.6, "iron_heme_mg": 2.7, "zinc_mg": 4.1 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Heme-Iron & B12", "protein_quality": "High Bioavailability" },
+      "props": ["Primary source of highly bioavailable heme-iron", "Contains Creatine and Carnosine", "Grass-fed varieties have better Omega-3 ratios"],
+      "lang": { "de": "Rindfleisch (Mager)", "en": "Beef (Lean)", "es": "Carne de vaca", "fr": "Bœuf", "ru": "Говядина", "ja": "牛肉", "zh": "牛肉", "fa": "گوشت گاو", "hi": "गोमांस", "ar": "لحم بقر" }
+    },
+    "lamb": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Lamb / Mutton", "icon": "🐑", "latin": "Ovis aries", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 294, "protein_g": 25.0, "fat_total_g": 21.0, "conjugated_linoleic_acid_mg": 100.0 },
+      "meta": { "locations": ["rewe", "orient_market", "butcher"], "season": ["spring", "all_year"], "vegan": false },
+      "quality_metrics": { "lipid_profile": "High in CLA (Conjugated Linoleic Acid)" },
+      "props": ["Rich in CLA (potentially metabolic supporting fats)", "Distinctive flavor from branched-chain fatty acids", "Higher iron content than many other meats"],
+      "lang": { "de": "Lammfleisch", "en": "Lamb", "es": "Cordero", "fr": "Agneau", "ru": "Баранина", "ja": "羊肉 (ラム)", "zh": "羊肉", "fa": "گوشت بره", "hi": "भेड़ का बच्चा", "ar": "لحم ضأن" }
+    },
+	"--- BEEF_CUTS_AND_PREMIUM_GRADES ---": "Rindfleisch-Cuts & Qualitätsstufen",
+    "wagyu_kobe_beef": {
+      "unit_price": 30.00,
+      "unit_type": "100g",
+      "label": "Wagyu / Kobe Beef (A5)", "icon": "🥩", "latin": "Bos taurus (Japanese Black)", "sci": ["#sci/Lipidology"],
+      "val": { "kcal": 450, "protein_g": 14.0, "fat_total_g": 40.0, "mufa_g": 22.0 },
+      "meta": { "locations": ["gourmet_market", "specialty_butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "marbling": "BMS 10-12 (Extreme Intramuscular Fat)", "lipid_profile": "High Oleic Acid content" },
+      "props": ["Highest marbling of any beef in the world", "Fat has a lower melting point than human body temperature", "Rich in monounsaturated fats (MUFAs) compared to regular beef"],
+      "lang": { "de": "Wagyu / Kobe Rind", "en": "Wagyu / Kobe Beef", "es": "Buey de Kobe", "fr": "Bœuf de Kobe", "ru": "Вагю / Кобе", "ja": "和牛 / 神戸牛", "zh": "和牛 / 神户牛肉", "fa": "گوشت واگیو", "hi": "कोबे बीफ", "ar": "لحم واغيو" }
+    },
+    "lean_ground_beef": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Ground Beef (Lean <5% Fat)", "icon": "🥩", "latin": "Bos taurus (minced)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 130, "protein_g": 21.0, "fat_total_g": 5.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "purity": "Pure muscle meat", "safety": "High surface area (Cook thoroughly)" },
+      "props": ["Leanest version of minced meat", "High protein density", "Standard for fitness-focused 'Meal Prep'"],
+      "lang": { "de": "Rinderhackfleisch (Mager)", "en": "Lean Ground Beef", "es": "Carne picada de vacuno", "fr": "Bœuf haché maigre", "ru": "Говяжий фарш (постный)", "ja": "牛ひき肉 (赤身)", "zh": "牛绞肉", "fa": "گوشت چرخ‌کرده", "hi": "कीमा", "ar": "لحم مفروم" }
+    },
+    "standard_ground_beef": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Ground Beef (Standard ~20% Fat)", "icon": "🥩", "latin": "Bos taurus (minced)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 250, "protein_g": 18.0, "fat_total_g": 20.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "Perfect for Burgers & Bolognese" },
+      "props": ["Ideal fat-to-protein ratio for flavor and juiciness", "Fat provides the necessary 'mouthfeel' and aroma transport", "Significantly more calories than lean version"],
+      "lang": { "de": "Rinderhackfleisch (Standard)", "en": "Standard Ground Beef", "es": "Carne picada", "fr": "Bœuf haché", "ru": "Говяжий фарш", "ja": "牛ひき肉", "zh": "牛绞肉", "fa": "گوشت چرخ‌کرده", "hi": "कीमा", "ar": "لحم مفروم" }
+    },
+    "rib_eye_steak": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Rib-Eye / Entrecôte", "icon": "🥩", "latin": "Bos taurus (Rib cut)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 290, "protein_g": 24.0, "fat_total_g": 22.0 },
+      "meta": { "locations": ["lidl", "rewe", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Tender with central fat eye" },
+      "props": ["Contains the 'Spinalis Dorsi' (the most flavorful muscle)", "High intramuscular fat", "Classic steak-house cut"],
+      "lang": { "de": "Entrecôte / Rib-Eye", "en": "Rib-Eye Steak", "es": "Chuletón / Entrecot", "fr": "Entrecôte", "ru": "Рибай", "ja": "リブロース", "zh": "肋眼牛排", "fa": "استیک ریب‌آی", "hi": "रिब-आई", "ar": "ريب آي" }
+    },
+    "beef_fillet": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Beef Fillet / Tenderloin", "icon": "🥩", "latin": "Bos taurus (Psoas major)", "sci": ["#sci/Anatomy"],
+      "val": { "kcal": 160, "protein_g": 26.0, "fat_total_g": 6.0 },
+      "meta": { "locations": ["lidl", "rewe", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "tenderness": "Highest (Non-working muscle)" },
+      "props": ["The leanest and most tender steak cut", "Derived from the Psoas major muscle", "Low in connective tissue"],
+      "lang": { "de": "Rinderfilet", "en": "Beef Fillet", "es": "Solomillo de ternera", "fr": "Filet de bœuf", "ru": "Говяжья вырезка", "ja": "牛フィレ", "zh": "牛里脊", "fa": "فیله گاو", "hi": "फिलेट", "ar": "فيليه بقر" }
+    },
+
+    "--- POULTRY_AND_AVIAN ---": "Geflügel (Mageres Protein)",
+    "chicken_breast": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Chicken Breast", "icon": "🍗", "latin": "Gallus gallus domesticus", "sci": ["#sci/Nutrition", "#sci/SportsMedicine"],
+      "val": { "kcal": 165, "protein_g": 31.0, "fat_total_g": 3.6, "selenium_mcg": 27.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "Bodybuilding Standard (Lean Protein)" },
+      "props": ["Lowest fat-to-protein ratio in the meat category", "Mild flavor, highly versatile", "Main source of lean protein globally"],
+      "lang": { "de": "Hähnchenbrust", "en": "Chicken Breast", "es": "Pechuga de pollo", "fr": "Blanc de poulet", "ru": "Куриная грудка", "ja": "鶏胸肉", "zh": "鸡胸肉", "fa": "سینه مرغ", "hi": "चिकन ब्रेस्ट", "ar": "صدر دجاج" }
+    },
+    "turkey_breast": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Turkey Breast", "icon": "🦃", "latin": "Meleagris gallopavo", "sci": ["#sci/Neuroscience"],
+      "val": { "kcal": 135, "protein_g": 30.0, "fat_total_g": 1.5, "tryptophan_mg": 350.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["autumn", "all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "High Tryptophan (Serotonin precursor)" },
+      "props": ["Even leaner than chicken breast", "High tryptophan content may support sleep/mood", "Very sensitive to overcooking (dries out)"],
+      "lang": { "de": "Putenbrust / Truthahn", "en": "Turkey Breast", "es": "Pechuga de pavo", "fr": "Blanc de dinde", "ru": "Грудка индейки", "ja": "七面鳥", "zh": "火鸡肉", "fa": "سینه بوقلمون", "hi": "तुर्की", "ar": "ديك رومي" }
+    },
+    "duck_breast": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Duck Breast", "icon": "🦆", "latin": "Anas platyrhynchos", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 190, "protein_g": 19.0, "fat_total_g": 12.0, "iron_heme_mg": 2.4 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "butcher"], "season": ["autumn", "winter", "all_year"], "vegan": false },
+      "quality_metrics": { "flavor": "Rich & Fatty", "benefit": "Higher iron than chicken" },
+      "props": ["Red muscle fibers (unlike chicken breast)", "Very high fat content in the skin", "Distinctive, gamey flavor profile"],
+      "lang": { "de": "Entenbrust", "en": "Duck Breast", "es": "Pechuga de pato", "fr": "Magret de canard", "ru": "Утиная грудка", "ja": "鴨胸肉", "zh": "鸭胸", "fa": "سینه اردک", "hi": "बत्तख का सीना", "ar": "صدر بط" }
+    },
+    "goose": {
+      "unit_price": 10.00,
+      "unit_type": "100g",
+      "label": "Goose", "icon": "🪿", "latin": "Anser anser", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 300, "protein_g": 16.0, "fat_total_g": 26.0 },
+      "meta": { "locations": ["butcher", "rewe"], "season": ["winter"], "vegan": false },
+      "props": ["Traditional Christmas roast", "Extremely high fat content, used to make goose fat (Schmalz)", "Meaty and flavorful"],
+      "lang": { "de": "Gans", "en": "Goose", "es": "Ganso", "fr": "Oie", "ru": "Гусь", "ja": "ガチョウ", "zh": "鹅肉", "fa": "غاز", "hi": "हंस", "ar": "وزة" }
+    },
+    "chicken_thigh": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Chicken Thigh (with Skin)", "icon": "🍗", "latin": "Gallus gallus (Femur)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 210, "protein_g": 18.0, "fat_total_g": 15.0, "collagen_mg": 1200.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Juicy & Dark Meat", "benefit": "Higher Glycine/Collagen than breast" },
+      "props": ["Contains more iron and zinc than white meat", "Skin provides significant monounsaturated fats", "Stays tender even when overcooked"],
+      "lang": { "de": "Hähnchenschenkel (mit Haut)", "en": "Chicken Thigh", "es": "Muslo de pollo", "fr": "Cuisse de poulet", "ru": "Куриное бедро", "ja": "鶏もも肉", "zh": "鸡腿", "fa": "ران مرgh", "hi": "चिकन जांघ", "ar": "فخذ دجاج" }
+    },
+    "turkey_drumstick": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Turkey Drumstick", "icon": "🍗", "latin": "Meleagris gallopavo (Crus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 160, "protein_g": 20.0, "fat_total_g": 8.0 },
+      "meta": { "locations": ["rewe", "kaufland", "butcher"], "season": ["autumn", "all_year"], "vegan": false },
+      "props": ["Leaner than chicken thighs but richer than turkey breast", "High in connective tissue, ideal for slow roasting", "Rich in selenium and B-vitamins"],
+      "lang": { "de": "Putenoberkeule / Truthahnbein", "en": "Turkey Drumstick", "es": "Muslo de pavo", "fr": "Cuisse de dinde", "ru": "Голень индейки", "ja": "七面鳥の脚", "zh": "火鸡腿", "fa": "ران بوقلمون", "hi": "तुर्की ड्रमस्टिक", "ar": "ساق ديك رومي" }
+    },
+    "pulled_turkey": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Pulled Turkey", "icon": "🥪", "latin": "Meleagris gallopavo (Dark meat)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 160, "protein_g": 24.0, "fat_total_g": 6.0 },
+      "meta": { "locations": ["rewe", "edeka"], "season": ["all_year"], "vegan": false },
+      "props": ["Leaner alternative to pulled pork", "Typically made from thigh meat to prevent dryness", "High satiety due to high protein content"],
+      "lang": { "de": "Pulled Turkey / Pute", "en": "Pulled Turkey", "es": "Pavo desmenuzado", "fr": "Dinde effilochée", "ru": "Рваная индейка", "ja": "プルドターキー", "zh": "手撕火鸡肉", "fa": "بوقلمون ریش‌ریش", "hi": "पुल्ड तुर्की", "ar": "ديك رومي مسحب" }
+    },
+	
+	"--- POULTRY_OFFAL ---": "Geflügel-Innereien (Nährstoff-Bomben)",
+    "chicken_liver": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Chicken Liver", "icon": "🩸", "latin": "Gallus gallus (Hepar)", "sci": ["#sci/Nutrition", "#sci/Hematology"],
+      "val": { "kcal": 167, "protein_g": 24.5, "vit_a_mcg": 11000.0, "vit_b12_mcg": 20.0, "folate_mcg": 588.0, "iron_heme_mg": 9.0 },
+      "meta": { "locations": ["butcher", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "superfood": "Folate & Vitamin A King" },
+      "props": ["Milder taste than beef liver", "Highest source of dietary folate (B9)", "Must be cooked carefully to remain creamy"],
+      "lang": { "de": "Hühnerleber", "en": "Chicken Liver", "es": "Hígado de pollo", "fr": "Foie de volaille", "ru": "Куриная печень", "ja": "鶏レバー", "zh": "鸡肝", "fa": "جگر مرغ", "hi": "मुर्ग़ी का जिगर", "ar": "كبد دجاج" }
+    },
+    "chicken_heart": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Chicken Heart", "icon": "❤️", "latin": "Gallus gallus (Muscle-Organ)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 153, "protein_g": 15.6, "fat_total_g": 9.3, "zinc_mg": 6.6, "iron_heme_mg": 6.0 },
+      "meta": { "locations": ["butcher", "asia_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "Zinc & Iron dense" },
+      "props": ["Pure muscle tissue with zero waste", "Firm, slightly bouncy texture", "Often used in Brazilian BBQ (Coração de Frango)"],
+      "lang": { "de": "Hühnerherz", "en": "Chicken Heart", "es": "Corazón de pollo", "fr": "Cœur de poulet", "ru": "Куриные сердечки", "ja": "鶏ハツ", "zh": "鸡心", "fa": "دل مرغ", "hi": "मुर्ग़ी का दिल", "ar": "قلب دجاج" }
+    },
+    "chicken_gizzard": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Chicken Gizzard", "icon": "🥣", "latin": "Gallus gallus (Ventriculus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 94, "protein_g": 17.7, "fat_total_g": 2.1, "selenium_mcg": 25.0 },
+      "meta": { "locations": ["butcher", "asia_market"], "season": ["all_year"], "vegan": false },
+      "props": ["Extremely tough muscle used for grinding grain", "Requires long braising time", "Almost 100% lean protein"],
+      "lang": { "de": "Hühnermagen", "en": "Chicken Gizzard", "es": "Molleja de pollo", "fr": "Gésier de poulet", "ru": "Куриные желудки", "ja": "砂肝", "zh": "鸡胗", "fa": "سنگدان مرغ", "hi": "मुर्ग़ी की पथरी", "ar": "قانصة دجاج" }
+    },
+
+    "--- PORK_AND_SUINE ---": "Schweinefleisch",
+    "pork": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Pork (Lean Loin)", "icon": "🐖", "latin": "Sus scrofa domesticus", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 242, "protein_g": 27.0, "fat_total_g": 14.0, "thiamin_mg": 0.9 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Vitamin B1 (Thiamin) Powerhouse" },
+      "props": ["Highest Thiamin (B1) source among all meats", "Versatile textures from lean loin to fatty belly", "Cultural staple in Central Europe and Asia"],
+      "lang": { "de": "Schweinefleisch (Mager)", "en": "Pork (Lean)", "es": "Cerdo", "fr": "Porc", "ru": "Свинина", "ja": "豚肉", "zh": "猪肉", "fa": "گوشت خوک", "hi": "सूअर का मांस", "ar": "لحم خنزير" }
+    },
+    "pork_spareribs": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Pork Spareribs", "icon": "🍖", "latin": "Sus scrofa (Ribs)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 350, "protein_g": 16.0, "fat_total_g": 30.0 },
+      "meta": { "locations": ["lidl", "rewe", "butcher"], "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "flavor": "Extreme Umami / Fat-rich" },
+      "props": ["High bone-to-meat ratio", "Very high fat content", "Requires long cooking to break down collagen"],
+      "lang": { "de": "Schwein-Spareribs", "en": "Pork Spareribs", "es": "Costillas de cerdo", "fr": "Travers de porc", "ru": "Свиные ребрышки", "ja": "スペアリブ", "zh": "猪排骨", "fa": "دنده خوک", "hi": "सूअर की पसलियां", "ar": "أضلاع خنزير" }
+    },
+    "pulled_pork": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Pulled Pork (Shoulder)", "icon": "🥪", "latin": "Sus scrofa (Pork Butt)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 240, "protein_g": 22.0, "fat_total_g": 16.0 },
+      "meta": { "locations": ["rewe", "kaufland", "food_truck"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Shredded / High Collagen Conversion" },
+      "props": ["Made from pork shoulder (Boston Butt)", "Collagen turns into gelatin during 10-15h cook time", "Often contains added sugars from BBQ rubs/sauces"],
+      "lang": { "de": "Pulled Pork", "en": "Pulled Pork", "es": "Cerdo desmenuzado", "fr": "Porc effiloché", "ru": "Рваная свинина", "ja": "プルドポーク", "zh": "手撕猪肉", "fa": "گوشت خوک ریش‌ریش", "hi": "पुल्ड पोर्क", "ar": "خنزير مسحب" }
+    },
+
+    "--- GAME_AND_VENISON ---": "Wildfleisch (Naturrein & Mager)",
+    "venison": {
+      "unit_price": 4.00,
+      "unit_type": "100g",
+      "label": "Venison (Deer)", "icon": "🦌", "latin": "Cervus elaphus", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 158, "protein_g": 30.0, "fat_total_g": 3.0, "iron_heme_mg": 4.5 },
+      "meta": { "locations": ["butcher", "weekly_market", "denns"], "season": ["autumn", "winter"], "vegan": false },
+      "quality_metrics": { "purity": "Wild-foraged, Hormone-free" },
+      "props": ["Higher iron and less fat than beef", "Completely free of antibiotics and industrial feed", "Intense, gamy flavor profile"],
+      "lang": { "de": "Wildfleisch / Hirsch", "en": "Venison", "es": "Venado", "fr": "Cerf", "ru": "Оленина", "ja": "鹿肉", "zh": "鹿肉", "fa": "گوشت آهو", "hi": "हिरन का मांस", "ar": "لحم الغزال" }
+    },
+
+    "--- ORGAN_MEATS_NUTRITIONAL_TITANS ---": "Innereien (Die wahren Superfoods)",
+    "beef_liver": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Beef Liver", "icon": "🩸", "latin": "Bos taurus (Hepar)", "sci": ["#sci/Toxicology", "#sci/Nutrition"],
+      "val": { "kcal": 135, "protein_g": 20.0, "vit_a_mcg": 4968.0, "vit_b12_mcg": 59.0, "copper_mg": 9.8, "folate_mcg": 290.0 },
+      "meta": { "locations": ["butcher", "rewe", "denns"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "safety": "Limit consumption (Vitamin A / Copper toxicity if daily)" },
+      "props": ["Nature's Multivitamin", "Densely packed with Retinol (Pre-formed Vit A)", "Unrivaled B12 and Copper source"],
+      "lang": { "de": "Rinderleber", "en": "Beef Liver", "es": "Hígado de ternera", "fr": "Foie de bœuf", "ru": "Говяжья печень", "ja": "牛レバー", "zh": "牛肝", "fa": "جگر گاو", "hi": "गोमांस यकृत", "ar": "كبد البقر" }
+    },
+    "beef_heart": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Beef Heart", "icon": "❤️", "latin": "Bos taurus (Cor)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 112, "protein_g": 17.7, "fat_total_g": 3.9, "coq10_mg": 11.3 },
+      "meta": { "locations": ["butcher", "weekly_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "Highest source of Coenzyme Q10" },
+      "props": ["A working muscle, tastes like very lean beef", "Extremely rich in CoQ10 for cardiac health", "Very affordable high-nutrient meat"],
+      "lang": { "de": "Rinderherz", "en": "Beef Heart", "es": "Corazón de ternera", "fr": "Cœur de bœuf", "ru": "Говяжье сердце", "ja": "牛ハツ", "zh": "牛心", "fa": "قلب گاو", "hi": "गोमांस हृदय", "ar": "قلب البقر" }
+    },
+    "pork_kidney": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Pork Kidney", "icon": "🥣", "latin": "Sus scrofa (Organ)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 100, "protein_g": 17.0, "selenium_mcg": 190.0, "vit_b12_mcg": 25.0 },
+      "meta": { "locations": ["butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Extreme Selenium" },
+      "props": ["Incredibly high in selenium", "Requires careful cleaning to remove urea scent", "Traditional in British and French cuisine"],
+      "lang": { "de": "Schweineniere", "en": "Pork Kidney", "es": "Riñones de cerdo", "fr": "Rognon de porc", "ru": "Свиные почки", "ja": "豚の腎臓", "zh": "猪肾", "fa": "قلوه خوک", "hi": "सूअर का गुर्दा", "ar": "كلى الخنزير" }
+    },
+    "beef_tongue": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Beef Tongue", "icon": "👅", "latin": "Bos taurus (Lingua)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 284, "protein_g": 15.0, "fat_total_g": 22.0, "zinc_mg": 3.5 },
+      "meta": { "locations": ["butcher", "kaufland"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Melt-in-mouth when braised" },
+      "props": ["High-fat muscle meat", "Incredibly tender texture once the outer skin is removed", "Traditional delicacy in many cultures"],
+      "lang": { "de": "Rinderzunge", "en": "Beef Tongue", "es": "Lengua de vaca", "fr": "Langue de bœuf", "ru": "Говяжий язык", "ja": "牛タン", "zh": "牛舌", "fa": "زبان گاو", "hi": "गाय की जीभ", "ar": "لسان بقر" }
+    },
+    "bone_marrow": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Bone Marrow", "icon": "🦴", "latin": "Bos taurus (Medulla ossium)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 786, "fat_total_g": 84.0, "protein_g": 7.0, "adiponectin_mg": 2.0 },
+      "meta": { "locations": ["butcher", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "lipid_profile": "Pure Healthy Fats / Stem Cell focus" },
+      "props": ["'Butter of the gods'", "Contains adiponectin (hormone for insulin sensitivity)", "Basis for gourmet stocks and sauces"],
+      "lang": { "de": "Knochenmark", "en": "Bone Marrow", "es": "Tuétano", "fr": "Moelle osseuse", "ru": "Костный мозг", "ja": "骨髄", "zh": "骨髓", "fa": "مغز استخوان", "hi": "हड्डी की मज्जा", "ar": "نخاع العظم" }
+    }
+  },
+  
+  "fish_and_seafood": {
+    "--- FATTY_SEA_FISH_OMEGA3 ---": "Fetter Seefisch (Omega-3-Kraftpakete)",
+    "wild_salmon": {
+      "unit_price": 5.00,
+      "unit_type": "100g",
+      "label": "Wild Salmon", "icon": "🐟", "latin": "Salmo salar", "sci": ["#sci/Nutrition", "#sci/Cardiology"],
+      "val": { "kcal": 208, "protein_g": 20.0, "fat_total_g": 13.0, "omega3_epa_dha_mg": 2500.0, "vit_d_mcg": 12.0, "astaxanthin_mg": 0.5 },
+      "meta": { "locations": ["rewe", "edeka", "denns", "fish_market"], "season": ["summer", "autumn"], "vegan": false },
+      "quality_metrics": { "benefit": "Brain & Heart Health (DHA/EPA)", "visual": "Natural pink from Astaxanthin" },
+      "props": ["Rich in astaxanthin (powerful antioxidant)", "Highest natural Vitamin D source", "Wild-caught has superior fatty acid profile to farmed"],
+      "lang": { "de": "Wildlachs", "en": "Wild Salmon", "es": "Salmón salvaje", "fr": "Saumon sauvage", "ru": "Дикий лосось", "ja": "天然サケ", "zh": "野生三文鱼", "fa": "ماهی آزاد وحشی", "hi": "जंगली सैल्मन", "ar": "سلمون بري" }
+    },
+    "mackerel": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Mackerel", "icon": "🐟", "latin": "Scomber scombrus", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 262, "protein_g": 18.6, "fat_total_g": 20.5, "omega3_epa_dha_mg": 4500.0, "selenium_mcg": 44.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year_canned", "autumn"], "vegan": false },
+      "quality_metrics": { "lipid_profile": "Omega-3 Overload" },
+      "props": ["Extremely high fat content, mostly healthy unsaturated fats", "Strong, distinctive flavor", "Excellent source of B12 and Selenium"],
+      "lang": { "de": "Makrele", "en": "Mackerel", "es": "Caballa", "fr": "Maquereau", "ru": "Скумбрия", "ja": "サバ", "zh": "鲭鱼", "fa": "ماهی خال‌خالی", "hi": "मैकेरल", "ar": "ماكريل" }
+    },
+    "herring": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Herring", "icon": "🐟", "latin": "Clupea harengus", "sci": ["#sci/History", "#sci/Nutrition"],
+      "val": { "kcal": 158, "protein_g": 18.0, "fat_total_g": 9.0, "vit_d_mcg": 7.8, "iodine_mcg": 30.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["spring", "all_year"], "vegan": false },
+      "props": ["North Sea staple", "Often eaten pickled (Matjes)", "High in Vitamin D and iodine"],
+      "lang": { "de": "Hering", "en": "Herring", "es": "Arenque", "fr": "Hareng", "ru": "Сельдь", "ja": "ニシン", "zh": "鲱鱼", "fa": "شگ‌ماهی", "hi": "हेरिंग", "ar": "رنجة" }
+    },
+    "sardines": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Sardines", "icon": "🥫", "latin": "Sardina pilchardus", "sci": ["#sci/Toxicology", "#sci/Nutrition"],
+      "val": { "kcal": 208, "protein_g": 24.6, "fat_total_g": 11.5, "calcium_mg": 382.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "dm"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "safety": "Low Mercury (Bottom of food chain)", "benefit": "Bone health (edible bones)" },
+      "props": ["Small fish = very low heavy metal accumulation", "Calcium powerhouse when eaten with soft bones", "Sustainable seafood choice"],
+      "lang": { "de": "Sardinen", "en": "Sardines", "es": "Sardinas", "fr": "Sardines", "ru": "Сардины", "ja": "イワシ", "zh": "沙丁鱼", "fa": "ساردین", "hi": "सार्डिन", "ar": "سردين" }
+    },
+	"caviar": {
+      "unit_price": 50.00,
+      "unit_type": "piece",
+      "label": "Sturgeon Caviar", "icon": "🖤", "latin": "Acipenseridae (Roe)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 264, "protein_g": 24.6, "fat_total_g": 17.9, "omega3_epa_dha_mg": 6500.0, "vit_b12_mcg": 20.0 },
+      "meta": { "locations": ["gourmet_market", "specialty_store"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Pure Nutrient Concentrate" },
+      "props": ["Salt-cured sturgeon eggs", "Extremely dense in Omega-3 and B12", "Traditional luxury item with high sodium content"],
+      "lang": { "de": "Kaviar (Stör)", "en": "Caviar", "es": "Caviar", "fr": "Caviar", "ru": "Икра", "ja": "キャビア", "zh": "鱼子酱", "fa": "خاویار", "hi": "कैवियार", "ar": "كافيار" }
+    },
+    "gilt_head_bream": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Gilt-head Bream (Dorade)", "icon": "🐟", "latin": "Sparus aurata", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 115, "protein_g": 19.0, "fat_total_g": 4.5 },
+      "meta": { "locations": ["rewe", "kaufland", "weekly_market"], "season": ["summer", "all_year"], "vegan": false },
+      "props": ["Popular Mediterranean white fish", "Firm flesh, ideal for grilling whole", "Good source of lean protein"],
+      "lang": { "de": "Dorade / Goldbrasse", "en": "Gilt-head Bream", "es": "Dorada", "fr": "Daurade", "ru": "Дорада", "ja": "クロダイ (Kurodai)", "zh": "金头鲷", "fa": "سرخ‌باله", "hi": "डोरेड", "ar": "دنيس" }
+    },
+
+    "--- LEAN_WHITE_FISH ---": "Magerer Weißfisch (Reines Protein)",
+    "cod": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Cod / Skrei", "icon": "🐟", "latin": "Gadus morhua", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 82, "protein_g": 18.0, "fat_total_g": 0.7, "iodine_mcg": 120.0 },
+      "meta": { "locations": ["kaufland", "rewe", "fish_market"], "season": ["winter", "all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Pure Protein & High Iodine" },
+      "props": ["Extremely low fat, perfect for calorie-controlled diets", "Flaky, mild white flesh", "Liver is the source of Cod Liver Oil"],
+      "lang": { "de": "Kabeljau / Dorsch", "en": "Cod", "es": "Bacalao", "fr": "Cabillaud", "ru": "Треска", "ja": "タラ", "zh": "鳕鱼", "fa": "ماهی روغن", "hi": "कॉड", "ar": "قد" }
+    },
+    "tuna": {
+      "unit_price": 4.00,
+      "unit_type": "100g",
+      "label": "Tuna (Yellowfin/Lean)", "icon": "🍣", "latin": "Thunnus albacares", "sci": ["#sci/Toxicology", "#sci/SportsMedicine"],
+      "val": { "kcal": 108, "protein_g": 24.0, "fat_total_g": 0.9, "selenium_mcg": 90.0, "mercury_risk": "Moderate/High" },
+      "meta": { "locations": ["rewe", "kaufland", "fish_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "safety": "Limit consumption due to Mercury" },
+      "props": ["High-protein staple for athletes", "Meaty texture, often eaten as steaks", "Rich in selenium to counteract mercury toxicity"],
+      "lang": { "de": "Thunfisch", "en": "Tuna", "es": "Atún", "fr": "Thon", "ru": "Тунец", "ja": "マグロ", "zh": "金枪鱼", "fa": "ماهی تن", "hi": "टूना", "ar": "تونة" }
+    },
+    "sea_bass": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "European Sea Bass (Wolfsbarsch)", "icon": "🐟", "latin": "Dicentrarchus labrax", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 97, "protein_g": 18.4, "fat_total_g": 2.5 },
+      "meta": { "locations": ["fish_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "props": ["The 'Loup de Mer' of French cuisine", "Fine-textured, mild-flavored white fish", "Very low in scales, making it ideal for grilling whole"],
+      "lang": { "de": "Wolfsbarsch / Loup de Mer", "en": "Sea Bass", "es": "Lubina", "fr": "Bar commun", "ru": "Сибас", "ja": "スズキ", "zh": "欧洲鲈鱼", "fa": "خارماهی", "hi": "सी बास", "ar": "قاروص" }
+    },
+    "turbot": {
+      "unit_price": 15.00,
+      "unit_type": "100g",
+      "label": "Turbot (Steinbutt)", "icon": "🐟", "latin": "Scophthalmus maximus", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 95, "protein_g": 16.0, "fat_total_g": 3.0, "collagen_mg": 2500.0 },
+      "meta": { "locations": ["fish_market", "gourmet_market"], "season": ["autumn", "winter"], "vegan": false },
+      "quality_metrics": { "texture": "Firm & Gelatinous", "status": "King of Flatfish" },
+      "props": ["Prized for its firm, white flesh and rich gelatinous texture near the fins", "High collagen content among fish", "The most expensive and noble flatfish"],
+      "lang": { "de": "Steinbutt", "en": "Turbot", "es": "Rodaballo", "fr": "Turbot", "ru": "Тюрбо", "ja": "イシビラメ", "zh": "大菱鲆", "fa": "طبق‌ماهی", "hi": "टरबोट", "ar": "تربوت" }
+    },
+    "common_sole": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Common Sole (Seeunge)", "icon": "🐟", "latin": "Solea solea", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 91, "protein_g": 18.8, "fat_total_g": 1.4 },
+      "meta": { "locations": ["fish_market", "rewe"], "season": ["winter", "spring"], "vegan": false },
+      "props": ["Unparalleled delicate and sweet flavor", "Maintains its shape perfectly when pan-fried (Sole Meunière)", "Extremely lean protein source"],
+      "lang": { "de": "Seezunge", "en": "Common Sole", "es": "Lenguado", "fr": "Sole commune", "ru": "Морской язык (настоящий)", "ja": "シタビラメ", "zh": "鳎目鱼", "fa": "کفشک‌ماهی", "hi": "सोल", "ar": "سمک موسی" }
+    },
+
+    "--- FRESHWATER_FISH ---": "Süßwasserfisch",
+    "rainbow_trout": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Rainbow Trout", "icon": "🐟", "latin": "Oncorhynchus mykiss", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 141, "protein_g": 20.0, "fat_total_g": 6.0, "phosphorus_mg": 245.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "local_pond"], "season": ["all_year"], "vegan": false },
+      "props": ["Mild, nutty flavor", "Good source of Omega-3 for a non-sea fish", "Very popular in European inland cuisine"],
+      "lang": { "de": "Regenbogenforelle", "en": "Rainbow Trout", "es": "Trucha arcoíris", "fr": "Truite arc-en-ciel", "ru": "Радужная форель", "ja": "ニジマス", "zh": "虹鳟", "fa": "قزل‌آلای رنگین‌کمان", "hi": "ट्राउट", "ar": "تروتة قوس قزح" }
+    },
+
+    "--- SHELLFISH_AND_CRUSTACEANS ---": "Meeresfrüchte & Krustentiere",
+    "shrimp_prawns": {
+      "unit_price": 4.00,
+      "unit_type": "100g",
+      "label": "Shrimp / Prawns", "icon": "🦐", "latin": "Litopenaeus vannamei", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 99, "protein_g": 21.0, "fat_total_g": 1.0, "cholesterol_mg": 189.0, "astaxanthin_mg": 0.1 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "lipid_profile": "High Cholesterol but Low Saturated Fat" },
+      "props": ["Extremely high protein density", "Contains astaxanthin", "Quick-cooking and versatile"],
+      "lang": { "de": "Garnelen", "en": "Shrimp / Prawns", "es": "Gambas / Camarones", "fr": "Crevettes", "ru": "Креветки", "ja": "エビ", "zh": "虾", "fa": "میگو", "hi": "झींगा", "ar": "روبيان" }
+    },
+    "mussels": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Mussels", "icon": "🐚", "latin": "Mytilus edulis", "sci": ["#sci/Nutrition", "#sci/EnvironmentalScience"],
+      "val": { "kcal": 86, "protein_g": 11.9, "iron_heme_mg": 6.7, "vit_b12_mcg": 24.0, "zinc_mg": 2.7 },
+      "meta": { "locations": ["rewe", "kaufland", "fish_market"], "season": ["winter", "autumn"], "vegan": false },
+      "quality_metrics": { "superfood": "Iron & B12 Bomb" },
+      "props": ["Unbelievably high B12 and iron content", "Filter feeders (highly sustainable)", "Rich in manganese and selenium"],
+      "lang": { "de": "Miesmuscheln", "en": "Mussels", "es": "Mejillones", "fr": "Moules", "ru": "Мидии", "ja": "ムール貝", "zh": "贻贝", "fa": "صدف سیاه", "hi": "मसल", "ar": "بلح البحر" }
+    },
+    "octopus": {
+      "unit_price": 5.00,
+      "unit_type": "100g",
+      "label": "Octopus", "icon": "🐙", "latin": "Octopus vulgaris", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 82, "protein_g": 15.0, "fat_total_g": 1.0, "selenium_mcg": 44.0, "vit_b12_mcg": 20.0 },
+      "meta": { "locations": ["rewe", "kaufland", "fish_market"], "season": ["all_year"], "vegan": false },
+      "props": ["Excellent source of B12 and iron", "Low calorie, high satiety", "Unique rubbery-tender texture when cooked correctly"],
+      "lang": { "de": "Oktopus / Krake", "en": "Octopus", "es": "Pulpo", "fr": "Poulpe", "ru": "Осьминог", "ja": "タコ", "zh": "章鱼", "fa": "هشت‌پا", "hi": "ऑक्टोपस", "ar": "أخطبوط" }
+    },
+    "squid_calamari": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Squid / Calamari", "icon": "🦑", "latin": "Loligo vulgaris", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 92, "protein_g": 15.6, "fat_total_g": 1.4, "copper_mg": 1.9, "selenium_mcg": 44.0 },
+      "meta": { "locations": ["rewe", "kaufland", "fish_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "High Copper & Selenium" },
+      "props": ["High in copper for red blood cell formation", "Extremely versatile (fried, grilled, or stewed)", "Tubes and tentacles are both edible"],
+      "lang": { "de": "Tintenfisch / Kalmar", "en": "Squid / Calamari", "es": "Calamar", "fr": "Calmar / Encornet", "ru": "Кальмар", "ja": "イカ (Ika)", "zh": "鱿鱼", "fa": "کالاماری", "hi": "स्क्विड", "ar": "حبار" }
+    },
+    "king_scallop": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "King Scallop", "icon": "🐚", "latin": "Pecten maximus", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 88, "protein_g": 17.0, "fat_total_g": 0.8, "magnesium_mg": 37.0, "vit_b12_mcg": 2.1 },
+      "meta": { "locations": ["fish_market", "rewe", "gourmet_market"], "season": ["winter"], "vegan": false },
+      "quality_metrics": { "texture": "Sweet & Buttery", "benefit": "Low Calorie High Protein" },
+      "props": ["Prized for their delicate, sweet flavor", "Rich in magnesium and potassium", "The 'adductor muscle' is the part primarily consumed"],
+      "lang": { "de": "Jakobsmuschel", "en": "King Scallop", "es": "Vieira", "fr": "Noix de Saint-Jacques", "ru": "Морской гребешок", "ja": "ホタテ (Hotate)", "zh": "扇贝", "fa": "صدف اسکالوپ", "hi": "स्कैलोप", "ar": "مشطيات" }
+    },
+    "oyster": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Oyster", "icon": "🦪", "latin": "Ostrea edulis", "sci": ["#sci/Nutrition", "#sci/Endocrinology"],
+      "val": { "kcal": 68, "protein_g": 7.0, "fat_total_g": 2.0, "zinc_mg": 61.0, "vit_b12_mcg": 16.0 },
+      "meta": { "locations": ["fish_market", "gourmet_market"], "season": ["winter", "autumn"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Zinc Champion of the World" },
+      "props": ["Highest natural source of Zinc (essential for testosterone and immunity)", "Often eaten alive/raw with lemon", "Filter-feeders that concentrate ocean minerals"],
+      "lang": { "de": "Auster", "en": "Oyster", "es": "Ostra", "fr": "Huître", "ru": "Устрица", "ja": "牡蠣 (Kaki)", "zh": "牡蛎 / 生蚝", "fa": "صدف خوراکی", "hi": "कस्तूरी", "ar": "محار" }
+    },
+	"--- SMOKED_AND_CURED_SEA_TREASURES ---": "Räucherfisch & Veredeltes",
+    "smoked_eel": {
+      "unit_price": 8.00,
+      "unit_type": "100g",
+      "label": "Smoked Eel", "icon": "🐍", "latin": "Anguilla anguilla", "sci": ["#sci/Lipidology"],
+      "val": { "kcal": 330, "protein_g": 18.0, "fat_total_g": 28.0, "vit_a_mcg": 900.0, "vit_d_mcg": 20.0 },
+      "meta": { "locations": ["fish_market", "rewe", "weekly_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "lipid_profile": "Extreme fat-soluble Vitamin source" },
+      "props": ["Incredibly rich in Vitamin A and D", "High fat content provides an intense smoky flavor", "Considered a delicacy but status is endangered"],
+      "lang": { "de": "Räucheraal", "en": "Smoked Eel", "es": "Anguila ahumada", "fr": "Anguille fumée", "ru": "Копченый угорь", "ja": "鰻の燻製", "zh": "熏鳗鱼", "fa": "مارماهی دودی", "hi": "स्मोक्ड ईल", "ar": "أنقليس مدخن" }
+    },
+	"lobster": {
+      "unit_price": 30.00,
+      "unit_type": "piece",
+      "label": "Lobster", "icon": "🦞", "latin": "Homarus americanus", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 89, "protein_g": 19.0, "fat_total_g": 0.9, "selenium_mcg": 68.0, "copper_mg": 1.5 },
+      "meta": { "locations": ["fish_market", "gourmet_market"], "season": ["all_year"], "vegan": false },
+      "props": ["High in selenium for thyroid support", "Meat is incredibly lean despite its 'rich' reputation (often served with butter)", "Rich in copper and B12"],
+      "lang": { "de": "Hummer", "en": "Lobster", "es": "Langosta", "fr": "Homard", "ru": "Лобстер / Омар", "ja": "ロブスター", "zh": "龙虾", "fa": "لابستر", "hi": "झींगा मछली", "ar": "كركند" }
+    },
+     "--- SMOKED_AND_CURED_SALMON ---": "Räucherlachs & Graved Lachs",
+    "smoked_salmon": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Räucherlachs (Kaltgeräuchert)", "icon": "🐟", "latin": "Salmo salar (Fumigata)", "sci": ["#sci/Nutrition", "#sci/Lipidology"],
+      "val": { "kcal": 117, "water_g": 65.0, "protein_g": 18.0, "fat_total_g": 4.3, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sodium_mg": 600.0, "omega3_epa_dha_mg": 1000.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl", "aldi"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "process": "Cold-smoked (< 30°C)", "benefit": "Preserved Omega-3" },
+      "props": ["Raw salmon cured with salt and cold-smoked to preserve a silky texture", "Rich in EPA and DHA Omega-3 fatty acids", "Classic breakfast luxury on bagels or black bread"],
+      "lang": { "de": "Räucherlachs", "en": "Smoked Salmon", "es": "Salmón ahumado", "fr": "Saumon fumé", "ru": "Копченый лосось", "ja": "スモークサーモン", "zh": "烟熏三文鱼", "fa": "سالمون دودی", "hi": "स्मोक्ड सैल्मन", "ar": "سلمون مدخن" }
+    },
+    "graved_salmon": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Graved Lachs (Gravlax)", "icon": "🌿", "latin": "Salmo salar (Curata)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 150, "water_g": 60.0, "protein_g": 18.0, "fat_total_g": 6.0, "carbs_total_g": 3.0, "sugar_g": 2.0, "fiber_g": 0.0, "sodium_mg": 800.0 },
+      "meta": { "locations": ["rewe", "kaufland", "delicatessen"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "process": "Dry-cured, NOT smoked", "flavor": "Sweet/Salty Dill" },
+      "props": ["Nordic dish of salmon cured in salt, sugar, and fresh dill", "Is never smoked, resulting in a cleaner, less woody taste than smoked salmon", "Traditionally served with a sweet mustard-dill sauce (Hovmästarsås)"],
+      "lang": { "de": "Graved Lachs", "en": "Gravlax (Cured Salmon)", "es": "Salmón marinado (Gravlax)", "fr": "Saumon gravlax", "ru": "Гравлакс", "ja": "グラブラックス", "zh": "腌三文鱼 (Gravlax)", "fa": "گراولاکس", "hi": "ग्रेवलैक्स", "ar": "جرافلاكس" }
+    }
+  },
+
+    "sausages":{
+    "sausage_gutfried_poultry_thick": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Gutfried Geflügel-Fleischwurst (Die Dicke)", "icon": "🌭", "latin": "Aves farcimen (Gutfried)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 192, "water_g": 65.0, "protein_g": 12.0, "fat_total_g": 15.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 850.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Gutfried", "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "processing": "Emulsified cooked sausage (Brühwurst)", "fat_source": "Poultry skin/fat" },
+      "props": ["The market leader for thick poultry sausages in Germany", "Significantly lower fat than pork Fleischwurst (~15% vs ~25%)", "Classic Brotzeit staple, extremely smooth texture"],
+      "lang": { "de": "Geflügel-Fleischwurst", "en": "Poultry Sausage (Bologna style)", "es": "Salchicha de ave", "fr": "Saucisse de volaille", "ru": "Птичья колбаса", "ja": "家禽のソーセージ", "zh": "禽肉香肠", "fa": "سوسیس مرغ", "hi": "पोल्ट्री सॉसेज", "ar": "نقانق دواجن" }
+    },
+    "sausage_dulano_poultry_thick": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Dulano Geflügel-Fleischwurst (Lidl)", "icon": "🌭", "latin": "Aves farcimen (Lidl)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 204, "water_g": 63.5, "protein_g": 11.5, "fat_total_g": 16.5, "carbs_total_g": 1.5, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 900.0 },
+      "meta": { "locations": ["lidl"], "brand": "Dulano", "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "price_segment": "Budget Discounter Clone", "texture": "Fine emulsion" },
+      "props": ["Lidl's high-volume private label answer to Gutfried", "Very similar nutritional profile, slightly higher fat content", "Often sold in twin-packs"],
+      "lang": { "de": "Dulano Geflügel-Fleischwurst", "en": "Dulano Poultry Sausage", "es": "Salchicha de ave Dulano", "fr": "Saucisse de volaille Dulano", "ru": "Колбаса из птицы Dulano", "ja": "デュラノ 家禽ソーセージ", "zh": "Dulano 禽肉香肠", "fa": "سوسیس مرغ دولانو", "hi": "डुलानो पोल्ट्री सॉसेज", "ar": "نقانق دواجن دولانو" }
+    },
+    "cold_cut_dulano_chicken_breast": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Dulano Hähnchenbrust-Aufschnitt (Scheiben)", "icon": "🍗", "latin": "Gallus gallus (Pectus dissectum)", "sci": ["#sci/Nutrition", "#sci/SportsMedicine"],
+      "val": { "kcal": 105, "water_g": 73.0, "protein_g": 21.0, "fat_total_g": 1.5, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 800.0 },
+      "meta": { "locations": ["lidl"], "brand": "Dulano", "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "leanness": "Ultra-lean (<2% fat)", "preparation": "Oven-baked / Cooked" },
+      "props": ["Standard fitness and diet cold cut", "Extremely high protein-to-calorie ratio", "Often reformed from breast meat pieces with added water/binders"],
+      "lang": { "de": "Hähnchenbrust-Aufschnitt", "en": "Sliced Chicken Breast", "es": "Pechuga de pollo en lonchas", "fr": "Tranches de blanc de poulet", "ru": "Нарезка куриной грудки", "ja": "スライス鶏胸肉", "zh": "鸡胸肉切片", "fa": "سینه مرغ ورقه‌ای", "hi": "कटा हुआ चिकन ब्रेस्ट", "ar": "شرائح صدر الدجاج" }
+    },
+    "cold_cut_dulano_cooked_ham": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Dulano Delikatess Kochschinken", "icon": "🥓", "latin": "Sus scrofa (Perna cocta)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 110, "water_g": 72.0, "protein_g": 20.0, "fat_total_g": 3.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 850.0 },
+      "meta": { "locations": ["lidl"], "brand": "Dulano", "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "process": "Brine-injected & Cooked", "fat_content": "Trimmed edge" },
+      "props": ["Classic German cooked ham slices", "Low fat due to trimmed rind/fat cap", "Contains nitrites for pink color preservation"],
+      "lang": { "de": "Kochschinken", "en": "Cooked Ham Slices", "es": "Jamón cocido", "fr": "Jambon blanc", "ru": "Вареная ветчина", "ja": "ボンレスハム", "zh": "煮火腿", "fa": "ژامبون پخته", "hi": "पका हुआ हैम", "ar": "لحم خنزير مطبوخ" }
+    },
+    "cold_cut_black_forest_ham": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Schwarzwälder Schinken (Rohschinken)", "icon": "🥓", "latin": "Sus scrofa (Perna fumigata)", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 230, "water_g": 45.0, "protein_g": 25.0, "fat_total_g": 14.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 2100.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "curing": "Cold-smoked over pine wood", "status": "PGI Protected" },
+      "props": ["Dry-cured and smoked raw ham", "Intense smoky flavor and high salt content", "Leaves a distinctive white fat cap"],
+      "lang": { "de": "Schwarzwälder Schinken", "en": "Black Forest Ham", "es": "Jamón de la Selva Negra", "fr": "Jambon de la Forêt-Noire", "ru": "Шварцвальдская ветчина", "ja": "黒い森のハム", "zh": "黑森林火腿", "fa": "ژامبون جنگل سیاه", "hi": "ब्लैक फॉरेस्ट हैम", "ar": "هام الغابة السوداء" }
+    },
+    "cold_cut_dulano_salami": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Dulano Salami in Scheiben", "icon": "🍕", "latin": "Salumen siccum (Lidl)", "sci": ["#sci/Microbiology", "#sci/FoodScience"],
+      "val": { "kcal": 380, "water_g": 30.0, "protein_g": 20.0, "fat_total_g": 33.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 1600.0 },
+      "meta": { "locations": ["lidl"], "brand": "Dulano", "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "curing": "Air-dried & Fermented", "meat_mix": "Pork base" },
+      "props": ["High calorie, high fat fermented sausage", "Low moisture content ensures long shelf life", "Lidl's standard breakfast and sandwich salami"],
+      "lang": { "de": "Salami (Scheiben)", "en": "Sliced Salami", "es": "Salami en lonchas", "fr": "Salami en tranches", "ru": "Салями нарезка", "ja": "スライスサラミ", "zh": "切片萨拉米", "fa": "سالامی ورقه‌ای", "hi": "कटा हुआ सलामी", "ar": "شرائح سلامي" }
+    },
+    "cold_cut_dulano_lyoner": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Dulano Lyoner / Mortadella (Scheiben)", "icon": "🥪", "latin": "Farcimen coctum", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 275, "water_g": 60.0, "protein_g": 11.0, "fat_total_g": 25.0, "carbs_total_g": 1.5, "sugar_g": 1.0, "fiber_g": 0.0, "sodium_mg": 950.0 },
+      "meta": { "locations": ["lidl"], "brand": "Dulano", "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "emulsion": "Brühwurst (Scalded sausage)", "fat_content": "High" },
+      "props": ["Classic German finely emulsified pork sausage", "Often features added pistachios or bell peppers (Paprikalyoner)", "Soft texture, high fat content"],
+      "lang": { "de": "Lyoner / Mortadella", "en": "Bologna / Lyoner Slices", "es": "Mortadela en lonchas", "fr": "Mortadelle en tranches", "ru": "Лионская колбаса / Мортаделла", "ja": "ボロニアソーセージ", "zh": "里昂香肠", "fa": "مورتادلا ورقه‌ای", "hi": "बोलोग्ना स्लाइस", "ar": "شرائح مورتاديلا" }
+    },
+    "cold_cut_mortadella_bologna_igp": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Mortadella Bologna IGP (Original Italienisch)", "icon": "🥩", "latin": "Sus scrofa (Farcimen Bononiense)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 288, "water_g": 52.0, "protein_g": 15.7, "fat_total_g": 25.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sodium_mg": 900.0 },
+      "meta": { "locations": ["rewe", "edeka", "delicatessen"], "season": ["all_year"], "vegan": false, "origin": "Bologna, Italy" },
+      "quality_metrics": { "texture": "Silky with solid fat cubes (lardons)", "inclusion": "Pistachios & Black Pepper" },
+      "props": ["Authentic Italian cold cut with visible cubes of throat fat (lardons)", "Protected Geographical Indication (IGP) ensures high quality standards", "Silky texture achieved by extensive emulsification (traditionally in a mortaio)"],
+      "lang": { "de": "Mortadella Bologna IGP", "en": "Mortadella Bologna", "es": "Mortadela de Bolonia", "fr": "Mortadelle de Bologne", "ru": "Мортаделла (Болонья)", "ja": "モルタデッラ (ボローニャ)", "zh": "意式肉肚 (博洛尼亚)", "fa": "مورتادلا بولونیا", "hi": "मोर्टाडेला बोलोग्ना", "ar": "مرتديلا بولونيا" }
+    },
+    "cold_cut_german_mortadella": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Deutsche Mortadella (Schinkenwurst mit Pistazien)", "icon": "🥪", "latin": "Farcimen germanicum (Pistacia)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 260, "water_g": 55.0, "protein_g": 12.0, "fat_total_g": 22.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.5, "sodium_mg": 850.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Firm Brühwurst", "comparison": "No large fat cubes unlike Italian original" },
+      "props": ["German adaptation of the Italian classic", "Usually a base of fine Schinkenwurst or Lyoner mixed with pistachios", "Standard staple in German discount bakeries and supermarkets"],
+      "lang": { "de": "Deutsche Mortadella (mit Pistazien)", "en": "German Mortadella", "es": "Mortadela Alemana", "fr": "Mortadelle Allemande", "ru": "Немецкая Мортаделла", "ja": "ドイツ風モルタデッラ", "zh": "德式肉肚 (带开心果)", "fa": "مورتادلا آلمانی", "hi": "जर्मन मोर्टाडेला", "ar": "مرتديلا ألمانية" }
+    },
+    "--- HALAL_AND_POULTRY_SALAMI ---": "Rind- & Geflügelsalami (Supermarkt & Orient-Markt)",
+    "sausage_beef_salami": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Rindersalami (Halal)", "icon": "🥩", "latin": "Salumen siccum (Bos taurus)", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 350, "water_g": 35.0, "protein_g": 22.0, "fat_total_g": 28.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 1500.0 },
+      "meta": { "locations": ["orient_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "meat_source": "100% Beef", "curing": "Air-dried and fermented" },
+      "props": ["Standard in oriental supermarkets and halal sections", "Stronger, darker, and slightly more robust flavor than pork salami", "Often smoked over beechwood"],
+      "lang": { "de": "Rindersalami", "en": "Beef Salami", "es": "Salami de ternera", "fr": "Salami de bœuf", "ru": "Говяжья салями", "ja": "ビーフサラミ", "zh": "牛肉萨拉米", "fa": "سالامی گاو", "hi": "बीफ सलामी", "ar": "سلامي بقري" }
+    },
+    "sausage_poultry_salami": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Geflügelsalami", "icon": "🍗", "latin": "Salumen siccum (Aves)", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 280, "water_g": 40.0, "protein_g": 24.0, "fat_total_g": 20.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 1400.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl", "aldi"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "fat_content": "Lower fat than pork/beef salami", "dietary_focus": "Lighter alternative" },
+      "props": ["Made primarily from turkey or chicken (sometimes mixed with plant oils for texture)", "Significantly lower in calories and fat than classic pork salami", "Softer texture due to lower saturated fat content"],
+      "lang": { "de": "Geflügelsalami", "en": "Poultry Salami", "es": "Salami de ave", "fr": "Salami de volaille", "ru": "Птичья салями", "ja": "家禽サラミ", "zh": "禽肉萨拉米", "fa": "سالامی طیور", "hi": "पोल्ट्री सलामी", "ar": "سلامي دواجن" }
+    },
+    "sausage_sucuk": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Sucuk (Knoblauchwurst)", "icon": "🧄", "latin": "Farcimen allium (Bos/Ovis)", "sci": ["#sci/Culinary", "#sci/Microbiology"],
+      "val": { "kcal": 330, "water_g": 40.0, "protein_g": 16.0, "fat_total_g": 29.0, "carbs_total_g": 2.0, "sugar_g": 1.0, "fiber_g": 0.5, "sodium_mg": 1800.0 },
+      "meta": { "locations": ["orient_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "flavor_profile": "Intense Garlic & Cumin", "preparation": "Usually fried before eating" },
+      "props": ["Traditional dry, spicy and fermented sausage from the Balkans and Middle East", "Heavily spiced with cumin, sumac, and garlic", "Releases its own flavorful red oil when pan-fried"],
+      "lang": { "de": "Sucuk (Knoblauchwurst)", "en": "Sucuk (Turkish Garlic Sausage)", "es": "Sucuk", "fr": "Soudjouk", "ru": "Суджук", "ja": "スジュク", "zh": "苏竹 (土耳其香肠)", "fa": "سوجوک", "hi": "सजुक", "ar": "سجق" }
+    },
+
+    "--- CLASSIC_GERMAN_DELI ---": "Traditioneller deutscher Aufschnitt",
+    "cold_cut_bierschinken": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Bierschinken", "icon": "🥓", "latin": "Farcimen perna", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 160, "water_g": 68.0, "protein_g": 15.0, "fat_total_g": 10.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 900.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Emulsion with solid ham chunks", "fat_content": "Medium-Low" },
+      "props": ["Fine sausage emulsion (Brät) embedded with large, lean chunks of cured pork or beef", "Does not actually contain beer (named because it was traditionally eaten with beer)", "High protein and lower fat compared to Salami or Mortadella"],
+      "lang": { "de": "Bierschinken", "en": "Bierschinken (Ham Sausage)", "es": "Bierschinken", "fr": "Bierschinken", "ru": "Биршинкен (Ветчинная колбаса)", "ja": "ビアシンケン", "zh": "啤酒火腿", "fa": "بیرشینکن", "hi": "बीयरशिंकन", "ar": "بيرشينكن" }
+    },
+    "cold_cut_leberkaese": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Leberkäse / Fleischkäse", "icon": "🍞", "latin": "Farcimen coctum bavaricum", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 290, "water_g": 55.0, "protein_g": 12.0, "fat_total_g": 26.0, "carbs_total_g": 1.5, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 900.0 },
+      "meta": { "locations": ["rewe", "kaufland", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "preparation": "Baked in a loaf pan", "texture": "Dense & Spongy" },
+      "props": ["A Southern German specialty (Bavarian Leberkäse contains NO liver or cheese)", "Finely ground corned beef, pork, and bacon baked until a brown crust forms", "Often eaten hot in a bread roll (Leberkäsesemmel)"],
+      "lang": { "de": "Leberkäse / Fleischkäse", "en": "Meatloaf (Bavarian Leberkäse)", "es": "Pastel de carne bávaro", "fr": "Pain de viande bavarois", "ru": "Леберкезе", "ja": "レバーケーゼ", "zh": "肉糕 (巴伐利亚)", "fa": "پنیر جگر (لبرکزه)", "hi": "लेबरकेस", "ar": "ليبركيز" }
+    },
+
+    "--- GERMAN_BBQ_CLASSICS ---": "Grillwürste & Rote (Das deutsche BBQ-Fundament)",
+    "sausage_bratwurst_pork": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Grobe Bratwurst (Schwein)", "icon": "🌭", "latin": "Farcimen assum (Sus scrofa)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 300, "water_g": 52.0, "protein_g": 14.0, "fat_total_g": 26.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 850.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "butcher"], "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Coarse (Grob)", "casing": "Natural pork casing (Naturdarm)" },
+      "props": ["The absolute standard German BBQ sausage", "High fat content ensures juiciness over open charcoal", "Seasoned primarily with pepper, salt, mace, and nutmeg"],
+      "lang": { "de": "Grobe Bratwurst", "en": "Bratwurst (Coarse Pork)", "es": "Bratwurst gruesa", "fr": "Saucisse à griller (Bratwurst)", "ru": "Братвурст (крупной рубки)", "ja": "ブラートヴルスト", "zh": "德式煎香肠", "fa": "سوسیس برات‌ورست", "hi": "ब्रैटवर्स्ट", "ar": "براتورست" }
+    },
+    "sausage_nuernberger": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Nürnberger Rostbratwurst", "icon": "🌭", "latin": "Farcimen norimbergense", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 330, "water_g": 48.0, "protein_g": 14.5, "fat_total_g": 30.0, "carbs_total_g": 0.5, "sugar_g": 0.2, "fiber_g": 0.0, "marjoram_extract_mg": 5.0 },
+      "meta": { "locations": ["rewe", "lidl", "kaufland"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "status": "PGI Protected (IGP)", "flavor_profile": "Heavy Marjoram" },
+      "props": ["Strictly protected geographical indication (must be produced in Nuremberg)", "Small size (7-9 cm) and intense marjoram flavor", "Traditionally served in threes in a bun (Drei im Weggla)"],
+      "lang": { "de": "Nürnberger Rostbratwurst", "en": "Nuremberg Sausage", "es": "Salchicha de Núremberg", "fr": "Saucisse de Nuremberg", "ru": "Нюрнбергские колбаски", "ja": "ニュルンベルガーソーセージ", "zh": "纽伦堡香肠", "fa": "سوسیس نورنبرگ", "hi": "नूर्नबर्ग सॉसेज", "ar": "سجق نورمبرغ" }
+    },
+    "sausage_kaesekrainer": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Käsekrainer", "icon": "🧀", "latin": "Farcimen caseosum", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 340, "water_g": 45.0, "protein_g": 16.0, "fat_total_g": 30.0, "carbs_total_g": 1.5, "sugar_g": 0.5, "fiber_g": 0.0, "calcium_mg": 120.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "inclusion": "10-20% Emmentaler Cheese", "smoke": "Lightly smoked before grilling" },
+      "props": ["Austrian invention that conquered German BBQ", "Contains small cubes of hard cheese that melt during grilling", "Must be grilled carefully to prevent the cheese from burning/leaking completely"],
+      "lang": { "de": "Käsekrainer", "en": "Cheese-filled Sausage", "es": "Salchicha con queso", "fr": "Saucisse au fromage", "ru": "Сырная сосиска (Кезекрайнер)", "ja": "チーズ入りソーセージ", "zh": "芝士香肠", "fa": "سوسیس پنیری", "hi": "चीज़ सॉसेज", "ar": "نقانق بالجبن" }
+    },
+    "sausage_krakauer": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Krakauer / Rote Wurst", "icon": "🌭", "latin": "Farcimen rubrum", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 280, "water_g": 52.0, "protein_g": 15.0, "fat_total_g": 24.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 950.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "process": "Cured and smoked", "texture": "Coarse meat chunks in fine emulsion" },
+      "props": ["Cured with nitrite salt giving it the signature red color", "Spicier and smokier than a standard Bratwurst", "Usually contains garlic and coriander"],
+      "lang": { "de": "Krakauer (Rote Wurst)", "en": "Krakauer / Red Sausage", "es": "Salchicha roja", "fr": "Saucisse rouge (Krakauer)", "ru": "Краковская колбаска (для гриля)", "ja": "クラカウアーソーセージ", "zh": "克拉科夫香肠", "fa": "سوسیس کراکوف", "hi": "क्राकाउर सॉसेज", "ar": "نقانق كراكوف" }
+    },
+    "sausage_poultry_bratwurst": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Geflügel-Bratwurst", "icon": "🍗", "latin": "Farcimen assum (Aves)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 220, "water_g": 60.0, "protein_g": 15.0, "fat_total_g": 17.0, "carbs_total_g": 1.5, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 850.0 },
+      "meta": { "locations": ["lidl", "aldi", "kaufland", "rewe"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "dietary_focus": "Lower Fat Alternative", "casing": "Sheep or collagen casing" },
+      "props": ["Lighter alternative to pork, fast cooking time", "Often a very fine emulsion (Brät) compared to coarse pork sausages", "Dries out faster on the grill due to lower fat content"],
+      "lang": { "de": "Geflügel-Bratwurst", "en": "Poultry Bratwurst", "es": "Bratwurst de ave", "fr": "Bratwurst de volaille", "ru": "Птичий братвурст", "ja": "家禽ブラートヴルスト", "zh": "禽肉煎香肠", "fa": "برات‌ورست طیور", "hi": "पोल्ट्री ब्रैटवर्स्ट", "ar": "براتورست دواجن" }
+    },
+    "sausage_merguez": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Merguez", "icon": "🌶️", "latin": "Farcimen picante (Ovis/Bos)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 290, "water_g": 50.0, "protein_g": 16.0, "fat_total_g": 25.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 900.0 },
+      "meta": { "locations": ["rewe", "orient_market", "butcher"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "meat_source": "Beef & Lamb (No Pork)", "flavor_profile": "Spicy Harissa/Cumin" },
+      "props": ["Maghrebi origin, heavily spiced with harissa, cumin, and fennel", "Strictly made from beef and/or lamb (Halal compatible)", "Thin casing, cooks extremely fast, releases red chili oil"],
+      "lang": { "de": "Merguez", "en": "Merguez", "es": "Merguez", "fr": "Merguez", "ru": "Мергез", "ja": "メルゲーズ", "zh": "梅尔盖兹香肠", "fa": "مرگز", "hi": "मर्गेज़", "ar": "مرقاز" }
+    }, 
+
+    "sausage_meica_bratmaxe": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Meica Bratmaxe", "icon": "🌭", "latin": "Farcimen assum (Meica)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 282, "water_g": 54.0, "protein_g": 12.5, "fat_total_g": 25.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 920.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "brand": "Meica", "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "casing": "Zarter Saitling (Sheep casing)", "texture": "High Snap (Knackig)" },
+      "props": ["Eine der bekanntesten Marken-Bratwürste Deutschlands", "Feines Brät, extrem knackiger Biss durch speziellen Saitling", "Vorgebrüht für sehr schnelles Grillen"],
+      "lang": { "de": "Meica Bratmaxe", "en": "Meica Bratmaxe", "es": "Salchicha Bratmaxe", "fr": "Saucisse Bratmaxe", "ru": "Братмаксе (Meica)", "ja": "マイカ ブラートマクセ", "zh": "Meica 煎香肠", "fa": "سوسیس برات‌ماکسه", "hi": "माइका ब्रैटमैक्स", "ar": "نقانق براتماكس" }
+    },
+    "sausage_wiesenhof_bruzzzler": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Wiesenhof Bruzzzler (Geflügel)", "icon": "🍗", "latin": "Farcimen assum aves (Wiesenhof)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 218, "water_g": 60.0, "protein_g": 14.0, "fat_total_g": 17.0, "carbs_total_g": 1.5, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 880.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Wiesenhof", "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "dietary_focus": "Pork-free / Poultry base", "casing": "Collagen or Sheep" },
+      "props": ["Die dominierende Marken-Geflügelbratwurst in Deutschland", "Fettreduziert im Vergleich zur Schweinebratwurst", "Sehr feine Textur, stark gewürzt, um das magere Fleisch auszugleichen"],
+      "lang": { "de": "Wiesenhof Bruzzzler", "en": "Bruzzzler Poultry Sausage", "es": "Salchicha de ave Bruzzzler", "fr": "Saucisse de volaille Bruzzzler", "ru": "Птичья колбаса Bruzzzler", "ja": "ヴィーゼンホフ ブルッツラー", "zh": "Wiesenhof 禽肉烤肠", "fa": "سوسیس مرغ بروزلر", "hi": "ब्रूज़लर पोल्ट्री सॉसेज", "ar": "نقانق دواجن بروزلر" }
+    },
+    "sausage_egetuerk_soelen": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Egetürk Şölen (Grill-Sucuk)", "icon": "🧄", "latin": "Farcimen allium craticula (Egetürk)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 345, "water_g": 40.0, "protein_g": 15.0, "fat_total_g": 30.0, "carbs_total_g": 2.0, "sugar_g": 1.0, "fiber_g": 0.0, "sodium_mg": 1850.0 },
+      "meta": { "locations": ["orient_market", "kaufland", "rewe"], "brand": "Egetürk", "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "meat_source": "100% Halal Beef/Veal", "preparation": "Formulated for grill stability" },
+      "props": ["Deutschlands bekannteste Sucuk-Marke", "Die 'Şölen'-Variante ist speziell für den Grill gemacht (läuft weniger aus)", "Intensives Knoblauch- und Kreuzkümmel-Aroma"],
+      "lang": { "de": "Egetürk Grill-Sucuk", "en": "Egetürk Grilled Sucuk", "es": "Sucuk para parrilla Egetürk", "fr": "Sucuk à griller Egetürk", "ru": "Суджук для гриля Egetürk", "ja": "エゲテュルク グリルスジュク", "zh": "Egetürk 烤苏竹", "fa": "سوجوک کبابی اگه‌ترک", "hi": "एगेटर्क ग्रिल सजुक", "ar": "سجق شواء ايجيتورك" }
+    },
+    "bbq_cevapcici_beef": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Cevapcici (Rind / Lamm)", "icon": "🥩", "latin": "Carnis concisae cylindrus", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 255, "water_g": 55.0, "protein_g": 16.0, "fat_total_g": 20.0, "carbs_total_g": 1.5, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 1100.0 },
+      "meta": { "locations": ["orient_market", "kaufland", "rewe"], "brand": "Yayla / Destan / Private Label", "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "casing": "None (Skinless minced roll)", "texture": "Bouncy/Firm due to baking soda (Natron)" },
+      "props": ["Klassische Hackfleischröllchen aus dem Balkan, stark vertreten im Orient-Markt", "Komplett ohne Darm", "Oft mit etwas Natron (Baking Soda) versetzt für eine luftigere, federnde Textur beim Grillen"],
+      "lang": { "de": "Cevapcici", "en": "Cevapi / Cevapcici", "es": "Cevapcici", "fr": "Cevapcici", "ru": "Чевавчичи", "ja": "チェヴァプチチ", "zh": "切瓦普奇奇 (肉卷)", "fa": "چواپچیچی", "hi": "सेवपसीसी", "ar": "تشيفابتشيتشي" }
+    },
+    "bbq_adana_kebab_skewer": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Adana Kebab (Grillspieß)", "icon": "🍢", "latin": "Carnis concisae veru (Adana)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 265, "water_g": 52.0, "protein_g": 15.0, "fat_total_g": 21.0, "carbs_total_g": 2.0, "sugar_g": 0.5, "fiber_g": 0.5, "sodium_mg": 1200.0 },
+      "meta": { "locations": ["orient_market", "specialty_butcher"], "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "fat_source": "Often contains lamb tail fat (Kuyruk yağı)", "spice_level": "Spicy (Chili flakes)" },
+      "props": ["Breiter, flacher Hackfleischspieß (oft Rind/Lamm-Mix)", "Erhält seine Saftigkeit durch gehacktes Lamm-Schwanzfett", "Scharf gewürzt mit Pul Biber (Chiliflocken) und Paprika"],
+      "lang": { "de": "Adana Kebab (Spieß)", "en": "Adana Kebab Skewer", "es": "Brocheta Adana Kebab", "fr": "Brochette Adana Kebab", "ru": "Адана Кебаб", "ja": "アダナケバブ串", "zh": "阿达纳烤肉串", "fa": "آدانا کباب", "hi": "अडाना कबाब", "ar": "كباب أضنة" }
+    },
+
+    "--- PORK_BELLY_AND_RIBS ---": "Das Lidl-Bauchfleisch- & Rippchen-Regal",
+    "bbq_grillfackeln": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Grillfackeln (Schweinebauch am Spieß)", "icon": "🥓", "latin": "Sus scrofa (Venter marinatus)", "sci": ["#sci/Thermodynamics", "#sci/Culinary"],
+      "val": { "kcal": 360, "water_g": 48.0, "protein_g": 14.0, "fat_total_g": 32.0, "carbs_total_g": 2.0, "sugar_g": 1.5, "fiber_g": 0.5, "sodium_mg": 950.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "fat_content": "Extremely High", "marinade": "Intense Paprika/Salt" },
+      "props": ["Hauchdünne Schweinebauchscheiben, die eng um einen Holzspieß gewickelt werden", "Extremer Fettbrand auf dem Grill durch herabtropfendes Fett (Thermodynamik-Hölle)", "Der absolute Inbegriff des deutschen Discounter-BBQs"],
+      "lang": { "de": "Grillfackeln", "en": "Grill Torches (Pork Belly Skewers)", "es": "Brochetas de panceta", "fr": "Brochettes de poitrine de porc", "ru": "Шашлычки из свиной грудинки", "ja": "豚バラ串 (グリルファッケルン)", "zh": "五花肉烤串", "fa": "سیخ شکم خوک", "hi": "पोर्क बेली स्क्युअर्स", "ar": "أسياخ بطن الخنزير" }
+    },
+    "bbq_pork_belly_slices": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Schweinebauchscheiben (Kräuter/Paprika)", "icon": "🥩", "latin": "Sus scrofa (Venter)", "sci": ["#sci/Lipidology", "#sci/FoodScience"],
+      "val": { "kcal": 380, "water_g": 45.0, "protein_g": 13.0, "fat_total_g": 35.0, "carbs_total_g": 1.5, "sugar_g": 1.0, "fiber_g": 0.5, "sodium_mg": 850.0 },
+      "meta": { "locations": ["lidl", "kaufland", "aldi", "rewe"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "texture": "Crispy fat & cartilage", "price_segment": "Budget Meat" },
+      "props": ["Dicke, marinierte Scheiben aus dem Schweinebauch", "Oft mit Knorpelstückchen durchsetzt, die beim Grillen knusprig werden", "Höchste Kaloriendichte im gesamten Fleischregal"],
+      "lang": { "de": "Schweinebauchscheiben", "en": "Pork Belly Slices", "es": "Panceta de cerdo (Filetes)", "fr": "Tranches de poitrine de porc", "ru": "Свиная грудинка (ломтики)", "ja": "豚バラスライス", "zh": "五花肉切片", "fa": "برش‌های شکم خوک", "hi": "पोर्क बेली स्लाइस", "ar": "شرائح بطن الخنزير" }
+    },
+    "bbq_spareribs_marinated": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Spareribs / Schälrippchen (Mariniert & Vorgegart)", "icon": "🍖", "latin": "Sus scrofa (Costae marinatae coctae)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 260, "water_g": 55.0, "protein_g": 18.0, "fat_total_g": 19.0, "carbs_total_g": 4.0, "sugar_g": 3.5, "fiber_g": 0.5, "sodium_mg": 1100.0 },
+      "meta": { "locations": ["lidl", "kaufland", "aldi"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "preparation": "Sous-vide / Pre-cooked", "convenience": "Ready to Grill" },
+      "props": ["Meist industriell vorgegart (sous-vide) und in dicker BBQ-Marinade eingeschweißt", "Garantieren 'Fall-off-the-bone'-Zartheit ohne stundenlanges Smoken", "Enthalten durch die süße Barbecue-Glasur deutlich mehr Zucker als pure Steaks"],
+      "lang": { "de": "Spareribs (Mariniert)", "en": "Marinated Spareribs", "es": "Costillas marinadas", "fr": "Travers de porc marinés", "ru": "Маринованные ребрышки", "ja": "味付けスペアリブ", "zh": "秘制烤排骨", "fa": "دنده طعم‌دار شده", "hi": "मैरिनेटेड स्पेयररिब्स", "ar": "أضلاع متبلة" }
+    },
+
+    "--- THE_SPECIALTY_SAUSAGES ---": "Spezial-Grillwürste (Käse, Speck & Form)",
+    "sausage_berner_wuerstel": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Berner Würstel (Käsefüllung & Speckmantel)", "icon": "🥓", "latin": "Farcimen caseosum lardumque", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 350, "water_g": 45.0, "protein_g": 14.0, "fat_total_g": 32.0, "carbs_total_g": 1.5, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 1200.0 },
+      "meta": { "locations": ["lidl", "rewe", "kaufland"], "season": ["summer", "winter"], "vegan": false },
+      "quality_metrics": { "composition": "Frankfurter + Cheese + Bacon", "origin": "Austria" },
+      "props": ["Der absolute Endgegner: Ein Käsewürstchen, das komplett in geräucherten Bacon eingewickelt ist", "Erfunden in Österreich (Zell am See), heute ein Lidl-Standard", "Bacon wird beim Grillen knusprig, während der Käse im Inneren schmilzt"],
+      "lang": { "de": "Berner Würstel", "en": "Bacon-wrapped Cheese Sausage", "es": "Salchicha con queso y bacon", "fr": "Saucisse au fromage lardée", "ru": "Бернские сосиски (с сыром и беконом)", "ja": "ベルナー・ヴュルステル (ベーコン巻きチーズ入り)", "zh": "培根芝士香肠", "fa": "سوسیس پنیری با بیکن", "hi": "बेकन-रैप्ड चीज़ सॉसेज", "ar": "نقانق بالجبن ملفوفة بلحم مقدد" }
+    },
+    "sausage_bratwurst_schnecke": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Bratwurstschnecke", "icon": "🌀", "latin": "Farcimen assum spirale", "sci": ["#sci/Culinary", "#sci/Geometry"],
+      "val": { "kcal": 290, "water_g": 54.0, "protein_g": 13.0, "fat_total_g": 25.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 850.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "format": "Spiral wound with skewer", "texture": "Coarse or Fine" },
+      "props": ["Eine extrem lange, dünne Bratwurst, die zu einer Spirale gewickelt und mit einem Holzspieß fixiert wird", "Optischer Hingucker, backt durch die große Oberfläche sehr knusprig", "Gleiches Brät wie eine Standard-Bratwurst, reines Format-Gimmick"],
+      "lang": { "de": "Bratwurstschnecke", "en": "Sausage Snail / Spiral Sausage", "es": "Espiral de salchicha", "fr": "Saucisse en spirale", "ru": "Колбаска-улитка", "ja": "ぐるぐるソーセージ", "zh": "螺旋烤肠", "fa": "سوسیس حلزونی", "hi": "सर्पिल सॉसेज", "ar": "نقانق حلزونية" }
+    },
+    "sausage_schinkenkrakauer": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Schinkenkrakauer (Grillwurst)", "icon": "🌭", "latin": "Farcimen perna rubrum", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 260, "water_g": 54.0, "protein_g": 14.0, "fat_total_g": 22.0, "carbs_total_g": 1.5, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 1050.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "texture": "Coarse ham inclusions", "flavor": "Smoky & Garlicky" },
+      "props": ["Eine Variante der roten Krakauer, die mit großen mageren Schinkenstücken durchsetzt ist", "Fest im Biss, extrem saftig", "Die Standard-Alternative für alle, denen eine normale Bratwurst zu langweilig ist"],
+      "lang": { "de": "Schinkenkrakauer", "en": "Ham Krakauer Sausage", "es": "Salchicha Krakauer con jamón", "fr": "Saucisse Krakauer au jambon", "ru": "Ветчинная краковская", "ja": "ハム・クラカウアー", "zh": "火腿克拉科夫香肠", "fa": "سوسیس کراکوف ژامبون", "hi": "हैम क्राकाउर", "ar": "نقانق كراكوف بلحم الخنزير" }
+    },
+	
+    "--- BBQ_POULTRY_CLASSICS ---": "Geflügel vom Grill (Wings, Keulen & Spieße)",
+    "bbq_chicken_wings_marinated": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Hähnchenflügel / Chicken Wings (Mariniert)", "icon": "🍗", "latin": "Gallus gallus (Ala marinata)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 215, "water_g": 62.0, "protein_g": 18.0, "fat_total_g": 15.0, "carbs_total_g": 2.0, "sugar_g": 1.5, "fiber_g": 0.5, "sodium_mg": 800.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "aldi"], "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "skin_to_meat_ratio": "High (Crispy skin)", "marinade": "BBQ/Paprika or Buffalo" },
+      "props": ["High skin-to-meat ratio makes them incredibly crispy on the open grill", "Often sold in split 'flats' and 'drumettes'", "The absolute standard finger food for BBQs"],
+      "lang": { "de": "Hähnchenflügel (Mariniert)", "en": "Marinated Chicken Wings", "es": "Alitas de pollo marinadas", "fr": "Ailes de poulet marinées", "ru": "Маринованные куриные крылышки", "ja": "味付け手羽先", "zh": "腌制鸡翅", "fa": "بال مرغ مزه‌دار شده", "hi": "मैरिनेटेड चिकन विंग्स", "ar": "أجنحة دجاج متبلة" }
+    },
+    "bbq_chicken_drumsticks": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Hähnchenunterschenkel / Drumsticks (Mariniert)", "icon": "🍗", "latin": "Gallus gallus (Crus marinatum)", "sci": ["#sci/Nutrition", "#sci/Thermodynamics"],
+      "val": { "kcal": 185, "water_g": 65.0, "protein_g": 19.0, "fat_total_g": 11.0, "carbs_total_g": 1.5, "sugar_g": 1.0, "fiber_g": 0.0, "sodium_mg": 600.0 },
+      "meta": { "locations": ["lidl", "kaufland", "aldi", "rewe"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "cooking_time": "Long (Bone-in)", "texture": "Juicy dark meat" },
+      "props": ["Bone-in dark meat, stays extremely juicy on the grill without drying out", "Takes significantly longer to cook through than breast meat", "Lidl and Aldi often sell them in massive 1kg+ BBQ family packs"],
+      "lang": { "de": "Hähnchenunterschenkel (Mariniert)", "en": "Marinated Chicken Drumsticks", "es": "Muslitos de pollo marinados", "fr": "Pilons de poulet marinés", "ru": "Маринованные куриные голени", "ja": "味付け鶏ドラムスティック", "zh": "腌制鸡小腿", "fa": "ران مرغ مزه‌دار شده", "hi": "मैरिनेटेड चिकन ड्रमस्टिक्स", "ar": "أفخاذ دجاج متبلة" }
+    },
+    "bbq_chicken_skewers_paprika": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Hähnchenspieße (Paprika-Marinade)", "icon": "🍢", "latin": "Gallus gallus (Veru marinatum)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 140, "water_g": 68.0, "protein_g": 21.0, "fat_total_g": 5.0, "carbs_total_g": 2.5, "sugar_g": 2.0, "fiber_g": 0.5, "sodium_mg": 650.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer"], "vegan": false },
+      "quality_metrics": { "meat_source": "Breast or inner fillet", "convenience": "Ready-to-grill" },
+      "props": ["Lean breast meat threaded onto wooden skewers", "Prone to drying out quickly on a hot grill if unattended", "Sweet and smoky paprika marinade adds a caramelized crust"],
+      "lang": { "de": "Hähnchenspieße (Paprika)", "en": "Chicken Skewers (Paprika)", "es": "Brochetas de pollo (Pimentón)", "fr": "Brochettes de poulet (Paprika)", "ru": "Куриные шашлычки (с паприкой)", "ja": "焼き鳥串 (パプリカ味)", "zh": "红椒鸡肉串", "fa": "سیخ جوجه کباب پاپریکا", "hi": "चिकन स्क्युअर्स", "ar": "أسياخ دجاج بالبابريكا" }
+    },
+    "bbq_chicken_inner_fillet": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Hähnchen-Innenfilets / Tenders (Natur/Mariniert)", "icon": "🥩", "latin": "Gallus gallus (Pectus minor)", "sci": ["#sci/Anatomy", "#sci/Nutrition"],
+      "val": { "kcal": 115, "water_g": 73.0, "protein_g": 23.0, "fat_total_g": 2.0, "carbs_total_g": 1.0, "sugar_g": 0.5, "fiber_g": 0.0, "sodium_mg": 500.0 },
+      "meta": { "locations": ["lidl", "kaufland", "aldi"], "season": ["summer", "all_year"], "vegan": false },
+      "quality_metrics": { "tenderness": "Highest of the chicken", "leanness": "Ultra-lean" },
+      "props": ["The 'Pectus minor' muscle, loosely attached to the underside of the breast", "The absolute most tender part of the chicken", "Cooks in under 5 minutes on a hot grill"],
+      "lang": { "de": "Hähnchen-Innenfilets", "en": "Chicken Inner Fillets / Tenders", "es": "Solomillo de pollo", "fr": "Aiguillettes de poulet", "ru": "Куриное внутреннее филе", "ja": "鶏ささみ", "zh": "鸡里脊肉", "fa": "فیله داخلی مرغ", "hi": "चिकन इनर फिलेट", "ar": "فيليه دجاج داخلي" }
+    }
+  }
+}

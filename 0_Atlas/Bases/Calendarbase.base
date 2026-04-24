@@ -1,0 +1,45 @@
+filters:
+  and:
+    - arch == ["#0cal"]
+formulas:
+  Fitnessum: |+
+    `$= (dv.current()["fitness-am"] || 0) + (dv.current()["fitness-pm"] || 0)`
+
+properties:
+  formula.Fitnessum:
+    displayName: fitness-sum
+views:
+  - type: table
+    name: Table
+    groupBy:
+      property: archtype
+      direction: ASC
+    order:
+      - file.name
+      - focus
+      - aim1
+      - aim2
+      - aim3
+      - maintask1
+      - maintask2
+      - maintask3
+      - maintask4
+      - maintask5
+      - selfcare-am
+      - selfcare-pm
+      - fitness-am
+      - fitness-pm
+      - journal-am
+      - journal-pm
+    sort: []
+    columnSize:
+      file.name: 183
+      note.focus: 86
+      note.aim1: 73
+      note.aim2: 76
+      note.selfcare-am: 47
+      note.selfcare-pm: 57
+      note.fitness-am: 55
+      note.fitness-pm: 51
+      note.journal-am: 66
+      note.journal-pm: 62

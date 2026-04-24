@@ -1,0 +1,797 @@
+{
+  "oils_fats": {
+    "--- PLANT_OILS_AND_FATS ---": "Pflanzliche Fette (MUFA & PUFA Fokus)",
+    "olive_oil": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Extra Virgin Olive Oil", "icon": "🫒", "latin": "Olea europaea", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 14.0, "mufa_g": 73.0, "pufa_g": 11.0, "vit_e_mg": 14.0, "polyphenols_mg": 50.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "lipid_profile": "High Oleic Acid (MUFA)", "health_focus": "Mediterranean Diet Staple" },
+      "props": ["Rich in anti-inflammatory oleocanthal", "Best used cold or at low/medium heat", "Cold-pressed retains maximum antioxidants"],
+      "lang": { "de": "Olivenöl (Nativ Extra)", "en": "Olive Oil", "es": "Aceite de oliva", "fr": "Huile d'olive", "ru": "Оливковое масло", "ja": "オリーブオイル", "zh": "橄榄油", "fa": "روغن زیتون", "hi": "जैतून का तेल", "ar": "زيت الزيتون" }
+    },
+    "rapeseed_oil": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Rapeseed Oil (Canola)", "icon": "🌼", "latin": "Brassica napus", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 7.0, "mufa_g": 63.0, "pufa_g": 28.0, "omega3_ala_g": 9.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "lipid_profile": "Excellent Omega-3 to Omega-6 ratio", "usage": "All-purpose" },
+      "props": ["Very versatile all-purpose cooking oil", "Refined version has a high smoke point", "Cold-pressed version has a distinct nutty/mustard flavor"],
+      "lang": { "de": "Rapsöl", "en": "Rapeseed Oil", "es": "Aceite de colza", "fr": "Huile de colza", "ru": "Рапсовое масло", "ja": "菜種油", "zh": "菜籽油", "fa": "روغن کلزا", "hi": "कैनोला तेल", "ar": "زيت الكانولا" }
+    },
+    "coconut_oil": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Coconut Oil", "icon": "🥥", "latin": "Cocos nucifera", "sci": ["#sci/FoodScience", "#sci/Keto"],
+      "val": { "kcal": 862, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 82.0, "mufa_g": 6.0, "pufa_g": 2.0, "mct_g": 54.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "lipid_profile": "Extreme Saturated Fat (High MCT)", "melting_point": "~24°C" },
+      "props": ["Solid at room temperature (melts at ~24°C)", "Rich in lauric acid (Medium-Chain Triglycerides)", "Very heat stable for frying and baking"],
+      "lang": { "de": "Kokosöl / Kokosfett", "en": "Coconut Oil", "es": "Aceite de coco", "fr": "Huile de coco", "ru": "Кокосовое масло", "ja": "ココナッツオイル", "zh": "椰子油", "fa": "روغن نارگیل", "hi": "नारियल का तेल", "ar": "زيت جوز الهند" }
+    },
+    "margarine": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Margarine (Plant-Based)", "icon": "🧈", "latin": "Mixed Plant Oils", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 717, "water_g": 16.0, "protein_g": 0.0, "fat_total_g": 80.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 25.0, "mufa_g": 35.0, "pufa_g": 20.0, "vit_a_mcg": 800.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Emulsion of water and plant oils", "trans_fat": "Zero" },
+      "props": ["Modern margarines are free of trans fats", "Often fortified with Vitamins A, D, and E", "Direct vegan alternative to butter for baking"],
+      "lang": { "de": "Margarine", "en": "Margarine", "es": "Margarina", "fr": "Margarine", "ru": "Маргарин", "ja": "マーガリン", "zh": "人造黄油", "fa": "مارگارین", "hi": "मार्जरीन", "ar": "سمن نباتي" }
+    },
+    "cocoa_butter": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Cocoa Butter (Pure)", "icon": "🍫", "latin": "Theobroma cacao (Oleum)", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 60.0, "mufa_g": 33.0, "pufa_g": 3.0 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "polymorphism": "Requires tempering (Form V crystals)", "melting_point": "Body Temperature (~34-38°C)" },
+      "props": ["The pure fat extracted from cocoa beans", "Responsible for the 'snap' and melt-in-the-mouth texture of chocolate", "Essential for making homemade vegan chocolate or pralines"],
+      "lang": { "de": "Kakaobutter", "en": "Cocoa Butter", "es": "Manteca de cacao", "fr": "Beurre de cacao", "ru": "Какао-масло", "ja": "ココアバター", "zh": "可可脂", "fa": "کره کاکائو", "hi": "कोकोआ बटर", "ar": "زبدة الكاكاو" }
+    },
+    "--- ESSENTIAL_SEED_OILS ---": "Klassische Saaten- & Bratöle",
+    "sunflower_oil": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Sunflower Oil", "icon": "🌻", "latin": "Helianthus annuus", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 10.0, "mufa_g": 20.0, "pufa_g": 66.0, "vit_e_mg": 41.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "lipid_profile": "High Linoleic (Omega-6)", "smoke_point": "High (if refined)" },
+      "props": ["Standard high-heat cooking oil (if refined)", "Massive Vitamin E content", "Cold-pressed version has a distinct sunny, nutty flavor"],
+      "lang": { "de": "Sonnenblumenöl", "en": "Sunflower Oil", "es": "Aceite de girasol", "fr": "Huile de tournesol", "ru": "Подсолнечное масло", "ja": "ひまわり油", "zh": "葵花籽油", "fa": "روغن آفتابگردان", "hi": "सूरजमुखी का तेल", "ar": "زيت عباد الشمس" }
+    },
+    "safflower_oil": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Safflower Oil", "icon": "🌼", "latin": "Carthamus tinctorius", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 6.0, "mufa_g": 14.0, "pufa_g": 75.0, "vit_e_mg": 34.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "lipid_profile": "Highest PUFA content of common oils", "flavor": "Neutral" },
+      "props": ["Extremely neutral flavor", "Often used in cosmetics and for high-heat frying (if High-Oleic)", "Very high in Omega-6 linoleic acid"],
+      "lang": { "de": "Distelöl", "en": "Safflower Oil", "es": "Aceite de cártamo", "fr": "Huile de carthame", "ru": "Сафлоровое масло", "ja": "サフラワー油", "zh": "红花油", "fa": "روغن گلرنگ", "hi": "कुसुम का तेल", "ar": "زيت العصفر" }
+    },
+    "peanut_oil": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Peanut Oil", "icon": "🥜", "latin": "Arachis hypogaea", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 17.0, "mufa_g": 46.0, "pufa_g": 32.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "The Wok Master", "smoke_point": "Extremely High (230°C)" },
+      "props": ["Extremely high smoke point (230°C)", "The absolute standard for Asian stir-fry and deep-frying", "Refined versions are often safe for peanut allergy sufferers (but check labels)"],
+      "lang": { "de": "Erdnussöl", "en": "Peanut Oil", "es": "Aceite de cacahuete", "fr": "Huile d'arachide", "ru": "Арахисовое масло", "ja": "ピーナッツオイル", "zh": "花生油", "fa": "روغن بادام زمینی", "hi": "मूंगफली का तेल", "ar": "زيت الفول السوداني" }
+    },
+    "--- OMEGA_AND_GOURMET_OILS ---": "Kaltgepresste Medizin- & Gourmet-Öle",
+    "flaxseed_oil": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Flaxseed Oil (Linseed)", "icon": "🤎", "latin": "Linum usitatissimum", "sci": ["#sci/Nutrition", "#sci/VascularHealth"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 9.0, "mufa_g": 18.0, "pufa_g": 68.0, "omega3_ala_g": 53.0 },
+      "meta": { "locations": ["denns", "alnatura", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "lipid_profile": "The Omega-3 King (>50% ALA)", "storage": "Refrigerate immediately" },
+      "props": ["Must NEVER be heated", "Extremely perishable, must be stored in the fridge and consumed quickly", "Classic pairing with quark/cottage cheese in Germany"],
+      "lang": { "de": "Leinöl", "en": "Flaxseed Oil", "es": "Aceite de lino", "fr": "Huile de lin", "ru": "Льняное масло", "ja": "亜麻仁油", "zh": "亚麻籽油", "fa": "روغن بذر کتان", "hi": "अलसी का तेल", "ar": "زيت بذور الكتان" }
+    },
+    "toasted_sesame_oil": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Sesame Oil (Toasted)", "icon": "🌾", "latin": "Sesamum indicum", "sci": ["#sci/Phytochemistry", "#sci/Culinary"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 14.0, "mufa_g": 40.0, "pufa_g": 42.0, "sesamin_mg": 500.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Intense Roasted Aroma", "usage": "Finishing Oil" },
+      "props": ["Used as a finishing oil, not for frying", "Contains unique antioxidants (sesamol and sesamin) that prevent spoilage", "The signature flavor of Korean and Japanese cuisine"],
+      "lang": { "de": "Sesamöl (Geröstet)", "en": "Toasted Sesame Oil", "es": "Aceite de sésamo", "fr": "Huile de sésame", "ru": "Кунжутное масло", "ja": "ごま油", "zh": "芝麻油", "fa": "روغن کنجد", "hi": "तिल का तेल", "ar": "زيت السمسم" }
+    },
+    "pumpkin_seed_oil": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Pumpkin Seed Oil", "icon": "🎃", "latin": "Cucurbita pepo", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 16.0, "mufa_g": 36.0, "pufa_g": 43.0, "vit_e_mg": 29.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "visual": "Dichromatic (Green/Red)", "flavor": "Intense nutty" },
+      "props": ["Styrian specialty ('Green Gold')", "Intense nutty, roasted flavor", "Perfect for salads or drizzled over vanilla ice cream"],
+      "lang": { "de": "Kürbiskernöl", "en": "Pumpkin Seed Oil", "es": "Aceite de semilla de calabaza", "fr": "Huile de pépins de courge", "ru": "Тыквенное масло", "ja": "パンプキンシードオイル", "zh": "南瓜籽油", "fa": "روغن تخم کدو", "hi": "कद्दू के बीज का तेल", "ar": "زيت بذور اليقطين" }
+    },
+    "hemp_oil": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Hemp Seed Oil", "icon": "🌿", "latin": "Cannabis sativa", "sci": ["#sci/Dermatology", "#sci/Nutrition"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 10.0, "mufa_g": 12.0, "pufa_g": 76.0, "omega3_ala_g": 17.0, "gla_g": 3.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "lipid_profile": "Perfect 3:1 Omega 6 to 3 ratio", "thc_cbd": "Zero" },
+      "props": ["Contains rare Gamma-Linolenic Acid (GLA) great for skin health", "Deep green color, earthy/grassy taste", "Zero THC or CBD (pressed from seeds)"],
+      "lang": { "de": "Hanföl", "en": "Hemp Oil", "es": "Aceite de cáñamo", "fr": "Huile de chanvre", "ru": "Конопляное масло", "ja": "ヘンプシードオイル", "zh": "大麻籽油", "fa": "روغن شاهدانه", "hi": "भांग के बीज का तेल", "ar": "زيت القنب" }
+    },
+    "avocado_oil": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Avocado Oil", "icon": "🥑", "latin": "Persea americana", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 12.0, "mufa_g": 71.0, "pufa_g": 13.0, "lutein_mg": 2.5 },
+      "meta": { "locations": ["denns", "rewe", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "The High-Heat Health Oil", "smoke_point": "Up to 270°C" },
+      "props": ["Incredibly high smoke point (up to 270°C if refined)", "Lipid profile almost identical to olive oil (high Oleic acid)", "Neutral flavor compared to EVOO"],
+      "lang": { "de": "Avocadoöl", "en": "Avocado Oil", "es": "Aceite de aguacate", "fr": "Huile d'avocat", "ru": "Масло авокадо", "ja": "アボカドオイル", "zh": "牛油果油", "fa": "روغن آووکادو", "hi": "एवोकैडो तेल", "ar": "زيت الأفوكادو" }
+    },
+    "walnut_oil": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Walnut Oil", "icon": "🧠", "latin": "Juglans regia", "sci": ["#sci/Nutrition", "#sci/Culinary"],
+      "val": { "kcal": 884, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 9.0, "mufa_g": 23.0, "pufa_g": 63.0, "omega3_ala_g": 10.4 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Astringent / Nutty", "heat_stability": "Low" },
+      "props": ["Excellent Omega-3 source for a nut oil", "Delicate finishing oil for salads and French cuisine", "Turns bitter if heated"],
+      "lang": { "de": "Walnussöl", "en": "Walnut Oil", "es": "Aceite de nuez", "fr": "Huile de noix", "ru": "Ореховое масло", "ja": "くるみ油", "zh": "核桃油", "fa": "روغن گردو", "hi": "अखरोट का तेल", "ar": "زيت الجوز" }
+    },
+    "--- ANIMAL_FATS ---": "Tierische Fette (Gesättigte Fettsäuren & Vitamine)",
+    "butter": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Butter", "icon": "🧈", "latin": "Bos taurus (Milk Fat)", "sci": ["#sci/Nutrition", "#sci/Culinary"],
+      "val": { "kcal": 717, "water_g": 16.0, "protein_g": 0.8, "fat_total_g": 81.0, "carbs_total_g": 0.6, "sugar_g": 0.6, "fiber_g": 0.0, "sfa_g": 51.0, "mufa_g": 21.0, "pufa_g": 3.0, "vit_a_mcg": 684.0, "butyrate_g": 3.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "weekly_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Contains Butyric Acid & Fat-soluble vitamins", "dairy": "Contains Milk Solids" },
+      "props": ["Excellent flavor carrier", "Contains butyrate (supports gut health)", "Burns at high temperatures due to milk proteins"],
+      "lang": { "de": "Butter", "en": "Butter", "es": "Mantequilla", "fr": "Beurre", "ru": "Сливочное масло", "ja": "バター", "zh": "黄油", "fa": "کره", "hi": "मक्खन", "ar": "زبدة" }
+    },
+    "lard": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lard (Pork Fat)", "icon": "🥓", "latin": "Sus scrofa domesticus", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 902, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 39.0, "mufa_g": 45.0, "pufa_g": 11.0, "vit_d_mcg": 2.5 },
+      "meta": { "locations": ["kaufland", "rewe", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "Traditional frying and baking", "texture": "Solid" },
+      "props": ["Yields extremely flaky pastry crusts", "High smoke point, excellent for frying", "Good natural source of Vitamin D if pasture-raised"],
+      "lang": { "de": "Schweineschmalz", "en": "Lard", "es": "Manteca de cerdo", "fr": "Saindoux", "ru": "Смалец", "ja": "ラード", "zh": "猪油", "fa": "چربی خوک", "hi": "सूअर की चर्बी", "ar": "شحم الخنزير" }
+    },
+    "fish_oil": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Fish Oil", "icon": "🐟", "latin": "Pisces (Mixed Marine Oil)", "sci": ["#sci/Pharmacology", "#sci/Nutrition"],
+      "val": { "kcal": 902, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 21.0, "mufa_g": 29.0, "omega3_epa_dha_g": 30.0, "vit_d_mcg": 25.0 },
+      "meta": { "locations": ["dm", "rossmann", "pharmacy"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "Direct EPA & DHA Source", "perishability": "Extremely high" },
+      "props": ["Primarily consumed as a dietary supplement, not a cooking oil", "Provides highly bioavailable Omega-3 (EPA and DHA) for heart/brain health", "Very prone to oxidation (must be stored cool and dark)"],
+      "lang": { "de": "Fischöl", "en": "Fish Oil", "es": "Aceite de pescado", "fr": "Huile de poisson", "ru": "Рыбий жир", "ja": "魚油", "zh": "鱼油", "fa": "روغن ماهی", "hi": "मछली का तेल", "ar": "زيت السمك" }
+    },
+    "goose_fat": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Goose Fat", "icon": "🦢", "latin": "Anser anser domesticus", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 900, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 27.7, "mufa_g": 56.7, "pufa_g": 11.0, "vit_e_mg": 2.7 },
+      "meta": { "locations": ["kaufland", "rewe", "butcher", "gourmet_market"], "season": ["winter"], "vegan": false },
+      "quality_metrics": { "lipid_profile": "Surprisingly high in MUFA (Oleic Acid)", "melting_point": "Low (~25°C)" },
+      "props": ["Essential for traditional German red cabbage (Rotkohl) and roasted potatoes", "Melts at a very low temperature (approx. 25°C) but handles roasting heat perfectly", "Rich, savory flavor without being heavy"],
+      "lang": { "de": "Gänseschmalz", "en": "Goose Fat", "es": "Grasa de ganso", "fr": "Graisse d'oie", "ru": "Гусиный жир", "ja": "ガチョウの脂", "zh": "鹅油", "fa": "چربی غاز", "hi": "हंस की चर्बी", "ar": "دهن الإوز" }
+    },
+    "duck_fat": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Duck Fat", "icon": "🦆", "latin": "Anas platyrhynchos domesticus", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 900, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 100.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sfa_g": 33.0, "mufa_g": 49.0, "pufa_g": 13.0, "choline_mg": 12.0 },
+      "meta": { "locations": ["gourmet_market", "butcher", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "The French Confit Standard", "flavor": "Umami-rich" },
+      "props": ["The secret to the crispiest French Fries and roasted vegetables", "Foundation of traditional French Confit de Canard", "Golden color and deep, umami-rich flavor"],
+      "lang": { "de": "Entenschmalz", "en": "Duck Fat", "es": "Grasa de pato", "fr": "Graisse de canard", "ru": "Утиный жир", "ja": "鴨脂", "zh": "鸭油", "fa": "چربی اردک", "hi": "बतख की चर्बी", "ar": "دهن البط" }
+    }
+  },
+  "sweeteners": {
+    "--- REFINED_AND_ALTERNATIVE_SUGARS ---": "Kristallzucker & Kokosblüten",
+    "white_sugar": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "White Sugar (Sucrose)", "icon": "🧂", "latin": "Saccharum officinarum", "sci": ["#sci/FoodScience", "#sci/Metabolism"],
+      "val": { "kcal": 387, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 100.0, "sugar_g": 100.0, "fiber_g": 0.0, "glycemic_index": 65.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "nutrient_focus": "Empty Calories", "molecule": "Disaccharide (Glucose+Fructose)" },
+      "props": ["Highly refined disaccharide (50% glucose, 50% fructose)", "Provides rapid energy spike and crash", "Standard benchmark for sweetness (1.0)"],
+      "lang": { "de": "Weißer Zucker", "en": "White Sugar", "es": "Azúcar blanco", "fr": "Sucre blanc", "ru": "Белый сахар", "ja": "白砂糖", "zh": "白糖", "fa": "شکر سفید", "hi": "सफेद चीनी", "ar": "سكر أبيض" }
+    },
+    "brown_cane_sugar": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Brown Cane Sugar", "icon": "🟤", "latin": "Saccharum officinarum", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 380, "water_g": 1.5, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 98.0, "sugar_g": 97.0, "fiber_g": 0.0, "calcium_mg": 83.0, "iron_plant_mg": 0.7, "glycemic_index": 65.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Caramel / Molasses notes", "refinement": "Partial" },
+      "props": ["Contains residual molasses giving it color and moisture", "Nutritionally almost identical to white sugar", "Essential for chewy textures in cookies"],
+      "lang": { "de": "Brauner Rohrzucker", "en": "Brown Cane Sugar", "es": "Azúcar moreno", "fr": "Sucre roux", "ru": "Коричневый сахар", "ja": "黒砂糖", "zh": "红糖", "fa": "شکر قهوه‌ای", "hi": "भूरी चीनी", "ar": "سكر بني" }
+    },
+    "coconut_sugar": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Coconut Blossom Sugar", "icon": "🥥", "latin": "Cocos nucifera", "sci": ["#sci/Nutrition", "#sci/Endocrinology"],
+      "val": { "kcal": 383, "water_g": 1.0, "protein_g": 1.0, "fat_total_g": 0.4, "carbs_total_g": 95.0, "sugar_g": 85.0, "fiber_g": 3.0, "potassium_mg": 900.0, "glycemic_index": 54.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Lower Glycemic Index", "fiber": "Contains Inulin" },
+      "props": ["Made from the sap of coconut flower buds", "Retains trace minerals and the prebiotic fiber inulin", "Rich, earthy caramel flavor"],
+      "lang": { "de": "Kokosblütenzucker", "en": "Coconut Sugar", "es": "Azúcar de coco", "fr": "Sucre de fleur de coco", "ru": "Кокосовый сахар", "ja": "ココナッツシュガー", "zh": "椰子糖", "fa": "شکر نارگیل", "hi": "नारियल की चीनी", "ar": "سكر جوز الهند" }
+    },
+    "--- NATURAL_LIQUID_SYRUPS ---": "Flüssige Natur-Süßen (Honig & Sirup)",
+    "raw_honey": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Honey (Raw)", "icon": "🍯", "latin": "Apis mellifera (Producer)", "sci": ["#sci/Microbiology", "#sci/Phytochemistry"],
+      "val": { "kcal": 304, "water_g": 17.1, "protein_g": 0.3, "fat_total_g": 0.0, "carbs_total_g": 82.4, "sugar_g": 82.1, "fiber_g": 0.2, "antioxidants_mg": 15.0, "glycemic_index": 58.0 },
+      "meta": { "locations": ["rewe", "weekly_market", "denns"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "Antibacterial / Enzymatic", "composition": "High Fructose ratio" },
+      "props": ["Raw honey contains natural enzymes and pollen", "Potent antimicrobial properties (especially Manuka)", "Soothes sore throats naturally"],
+      "lang": { "de": "Honig (Roh)", "en": "Raw Honey", "es": "Miel cruda", "fr": "Miel cru", "ru": "Мёд", "ja": "蜂蜜", "zh": "蜂蜜", "fa": "عسل طبیعی", "hi": "शहद", "ar": "عسل طبيعي" }
+    },
+    "maple_syrup": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Maple Syrup", "icon": "🍁", "latin": "Acer saccharum", "sci": ["#sci/Phytochemistry", "#sci/Nutrition"],
+      "val": { "kcal": 260, "water_g": 32.0, "protein_g": 0.0, "fat_total_g": 0.1, "carbs_total_g": 67.0, "sugar_g": 60.5, "fiber_g": 0.0, "manganese_mg": 2.9, "zinc_mg": 1.5, "glycemic_index": 54.0 },
+      "meta": { "locations": ["kaufland", "rewe", "denns", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "nutrient_focus": "High in Manganese", "flavor_profile": "Darker = Stronger" },
+      "props": ["Boiled sap of the sugar maple tree", "Contains over 24 different antioxidants (quebecol)", "Grade A Dark offers the most robust flavor"],
+      "lang": { "de": "Ahornsirup", "en": "Maple Syrup", "es": "Sirope de arce", "fr": "Sirop d'érable", "ru": "Кленовый сироп", "ja": "メープルシロップ", "zh": "枫糖浆", "fa": "شربت افرا", "hi": "मेपल सिरप", "ar": "شراب القيقب" }
+    },
+    "agave_nectar": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Agave Nectar", "icon": "🌵", "latin": "Agave tequilana", "sci": ["#sci/Metabolism", "#sci/FoodScience"],
+      "val": { "kcal": 310, "water_g": 23.0, "protein_g": 0.1, "fat_total_g": 0.5, "carbs_total_g": 76.0, "sugar_g": 68.0, "fiber_g": 0.2, "glycemic_index": 15.0 },
+      "meta": { "locations": ["dm", "rossmann", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "lipid_profile": "WARNING: Extreme Fructose Load", "sweetness": "1.5x Sugar" },
+      "props": ["Very low glycemic index, but processed via the liver due to high fructose", "1.5x sweeter than normal sugar", "Dissolves easily in cold beverages"],
+      "lang": { "de": "Agavendicksaft", "en": "Agave Nectar", "es": "Sirope de agave", "fr": "Sirop d'agave", "ru": "Сироп агавы", "ja": "アガベシロップ", "zh": "龙舌兰糖浆", "fa": "شربت آگاوه", "hi": "एगेव नेक्टर", "ar": "شراب الأغاف" }
+    },
+    "date_syrup": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Date Syrup", "icon": "🌴", "latin": "Phoenix dactylifera", "sci": ["#sci/Nutrition", "#sci/Culinary"],
+      "val": { "kcal": 271, "water_g": 25.0, "protein_g": 1.5, "fat_total_g": 0.1, "carbs_total_g": 68.0, "sugar_g": 64.0, "fiber_g": 2.0, "potassium_mg": 400.0, "glycemic_index": 47.0 },
+      "meta": { "locations": ["denns", "orient_market", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Whole Fruit Sweetener", "minerals": "Retains Potassium" },
+      "props": ["Made from pureed and strained dates", "Retains significant amounts of potassium and magnesium", "Excellent caramel-like binder for vegan baking"],
+      "lang": { "de": "Dattelsirup", "en": "Date Syrup", "es": "Sirope de dátil", "fr": "Sirop de datte", "ru": "Финиковый сироп", "ja": "デーツシロップ", "zh": "椰枣糖浆", "fa": "شیره خرما", "hi": "खजूर का सिरप", "ar": "دبس التمر" }
+    },
+    "--- BEVERAGE_AND_COCKTAIL_SYRUPS ---": "Bar- & Barista-Sirupe",
+    "simple_syrup": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Simple Syrup (Läuterzucker)", "icon": "🍸", "latin": "Syrupus simplex", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 260, "water_g": 35.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 65.0, "sugar_g": 65.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "liquor_store"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "The Cocktail Baseline (1:1 Ratio)", "crystallization": "Prone if super-saturated" },
+      "props": ["Standard 1:1 mixture of sugar and water", "Dissolves instantly in ice-cold beverages", "Essential for Daiquiris, Mojitos, and Sours"],
+      "lang": { "de": "Zuckersirup (Einfach)", "en": "Simple Syrup", "es": "Almíbar simple", "fr": "Sirop de sucre de canne", "ru": "Сахарный сироп", "ja": "ガムシロップ", "zh": "糖浆", "fa": "شربت ساده", "hi": "सिंपल सिरप", "ar": "شراب السكر" }
+    },
+    "grenadine": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Grenadine", "icon": "🍹", "latin": "Punica granatum (Historically)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 268, "water_g": 33.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 67.0, "sugar_g": 67.0, "fiber_g": 0.0, "vit_c_mg": 2.0 },
+      "meta": { "locations": ["rewe", "kaufland", "liquor_store"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Tart & Sweet Red Berry/Pomegranate", "authenticity": "Often artificial corn syrup" },
+      "props": ["Historically made from pomegranate juice and sugar", "Provides the signature red color in a Tequila Sunrise", "Modern commercial versions are often just flavored corn syrup"],
+      "lang": { "de": "Grenadine", "en": "Grenadine", "es": "Granadina", "fr": "Sirop de grenadine", "ru": "Гренадин", "ja": "グレナデン・シロップ", "zh": "红石榴糖浆", "fa": "سیروپ انار", "hi": "ग्रेनेडाइन", "ar": "غرينادين" }
+    },
+    "orgeat": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Orgeat (Almond Syrup)", "icon": "🌰", "latin": "Prunus dulcis extract", "sci": ["#sci/Phytochemistry", "#sci/Culinary"],
+      "val": { "kcal": 280, "water_g": 30.0, "protein_g": 0.5, "fat_total_g": 1.5, "carbs_total_g": 68.0, "sugar_g": 65.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["liquor_store", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Tiki Cocktail Foundation", "flavor": "Almond/Marzipan/Orange Blossom" },
+      "props": ["Milky, sweet almond syrup often containing orange flower water", "The absolute backbone of the classic Mai Tai", "Rich, marzipan-like flavor profile"],
+      "lang": { "de": "Orgeat (Mandelsirup)", "en": "Orgeat", "es": "Horchata de almendra / Orgeat", "fr": "Orgeat", "ru": "Оршад", "ja": "オルジェーシロップ", "zh": "杏仁糖浆", "fa": "سیروپ ارژات", "hi": "ऑर्गीट सिरप", "ar": "أورجيت" }
+    },
+    "gomme_syrup": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Gomme Syrup", "icon": "🥃", "latin": "Acacia senegal (Gum Arabic)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 270, "water_g": 31.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 67.0, "sugar_g": 65.0, "fiber_g": 2.0 },
+      "meta": { "locations": ["online_specialty", "liquor_store"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Silky Mouthfeel", "agent": "Gum Arabic prevents crystallization" },
+      "props": ["Simple syrup infused with Gum Arabic", "Prevents sugar crystallization in high-concentration syrups", "Gives classic cocktails (like the Old Fashioned) a velvety, thick mouthfeel"],
+      "lang": { "de": "Gomme-Sirup", "en": "Gomme Syrup", "es": "Sirope Gomme", "fr": "Sirop de gomme", "ru": "Сироп Гам", "ja": "ガムシロップ (本物)", "zh": "阿拉伯胶糖浆", "fa": "سیروپ گام", "hi": "गोम सिरप", "ar": "شراب الصمغ" }
+    },
+    "vanilla_syrup": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Vanilla Syrup", "icon": "☕", "latin": "Vanilla planifolia infused", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 255, "water_g": 36.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 64.0, "sugar_g": 64.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "coffee_shop"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Barista Staple", "flavor": "Sweet Vanilla" },
+      "props": ["The most popular coffee syrup worldwide", "Base is usually simple syrup infused with vanilla extract or pods", "High sugar content drives up the calorie count of standard lattes"],
+      "lang": { "de": "Vanillesirup", "en": "Vanilla Syrup", "es": "Sirope de vainilla", "fr": "Sirop de vanille", "ru": "Ванильный сироп", "ja": "バニラシロップ", "zh": "香草糖浆", "fa": "سیروپ وانیل", "hi": "वैनिला सिरप", "ar": "شراب الفانيليا" }
+    },
+    "caramel_syrup": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Caramel Syrup", "icon": "🍮", "latin": "Saccharum caramelised", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 310, "water_g": 23.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 77.0, "sugar_g": 77.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "coffee_shop"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Coffee & Frappé Classic", "process": "Maillard/Caramelization" },
+      "props": ["Made from caramelized sugar", "Deep, rich roasted notes", "The absolute standard for Caramel Macchiatos"],
+      "lang": { "de": "Karamellsirup", "en": "Caramel Syrup", "es": "Sirope de caramelo", "fr": "Sirop de caramel", "ru": "Карамельный сироп", "ja": "キャラメルシロップ", "zh": "焦糖糖浆", "fa": "سیروپ کارامل", "hi": "कैरामेल सिरप", "ar": "شراب الكراميل" }
+    },
+    "hazelnut_syrup": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Hazelnut Syrup", "icon": "🌰", "latin": "Corylus avellana infused", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 315, "water_g": 22.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 78.0, "sugar_g": 78.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "coffee_shop", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Sweet & Nutty", "authenticity": "Usually artificial flavoring" },
+      "props": ["One of the 'Big Three' coffee syrups alongside vanilla and caramel", "Pairs perfectly with chocolate-based drinks", "Usually artificially flavored in commercial brands"],
+      "lang": { "de": "Haselnusssirup", "en": "Hazelnut Syrup", "es": "Sirope de avellana", "fr": "Sirop de noisette", "ru": "Ореховый сироп", "ja": "ヘーゼルナッツシロップ", "zh": "榛果糖浆", "fa": "سیروپ فندق", "hi": "हेज़लनट सिरप", "ar": "شراب البندق" }
+    },
+    "coconut_syrup": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Coconut Syrup (Bar)", "icon": "🥥", "latin": "Cocos nucifera infused", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 320, "water_g": 20.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 80.0, "sugar_g": 80.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "liquor_store", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Piña Colada Essential", "density": "High sugar load" },
+      "props": ["Intense, sweet coconut flavor", "Often used as a dairy-free or shelf-stable alternative to Cream of Coconut in some bars", "Extremely high sugar content"],
+      "lang": { "de": "Kokossirup", "en": "Coconut Syrup", "es": "Sirope de coco", "fr": "Sirop de noix de coco", "ru": "Кокосовый сироп", "ja": "ココナッツシロップ", "zh": "椰子糖浆", "fa": "سیروپ نارگیل", "hi": "नारियल का सिरप", "ar": "شراب جوز الهند" }
+    },
+    "passion_fruit_syrup": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Passion Fruit Syrup", "icon": "🥭", "latin": "Passiflora edulis extract", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 330, "water_g": 19.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 81.0, "sugar_g": 81.0, "fiber_g": 0.0, "vit_c_mg": 5.0 },
+      "meta": { "locations": ["liquor_store", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Tropical Tartness", "acidity": "Medium" },
+      "props": ["Core ingredient for the Hurricane and Pornstar Martini", "Brings intense tropical acidity and sweetness", "Often vividly orange/yellow"],
+      "lang": { "de": "Maracujasirup", "en": "Passion Fruit Syrup", "es": "Sirope de maracuyá", "fr": "Sirop de fruit de la passion", "ru": "Сироп маракуйи", "ja": "パッションフルーツシロップ", "zh": "百香果糖浆", "fa": "سیروپ پشن فروت", "hi": "पैशन फ्रूट सिरप", "ar": "شراب باشن فروت" }
+    },
+    "falernum_syrup": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Falernum (Syrup)", "icon": "🍹", "latin": "Zingiber / Citrus / Syzygium blend", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 280, "water_g": 30.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 70.0, "sugar_g": 70.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["liquor_store", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Tiki Magic Component", "flavor": "Spiced & Complex" },
+      "props": ["Complex blend of ginger, lime, almond, and cloves", "Can be alcoholic (liqueur) or non-alcoholic (syrup)", "Absolutely essential for the Zombie and Corn 'n' Oil cocktails"],
+      "lang": { "de": "Falernum Sirup", "en": "Falernum Syrup", "es": "Sirope Falernum", "fr": "Sirop Falernum", "ru": "Фалернум (сироп)", "ja": "ファレルナム", "zh": "法勒南糖浆", "fa": "سیروپ فالرنوم", "hi": "फलेर्नम सिरप", "ar": "شراب فاليرنوم" }
+    },
+    "elderflower_syrup": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Elderflower Syrup", "icon": "🌼", "latin": "Sambucus nigra extract", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 285, "water_g": 29.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 71.0, "sugar_g": 71.0, "fiber_g": 0.0, "vit_c_mg": 2.0 },
+      "meta": { "locations": ["rewe", "kaufland", "dm", "liquor_store"], "season": ["spring", "summer"], "vegan": true },
+      "quality_metrics": { "usage": "The Hugo Foundation", "aroma": "Floral/Musky" },
+      "props": ["Floral, sweet, and slightly musky aroma", "Absolute necessity for the famous 'Hugo' spritz", "Made by macerating fresh elderberry flowers in sugar syrup"],
+      "lang": { "de": "Holunderblütensirup", "en": "Elderflower Syrup", "es": "Sirope de flor de saúco", "fr": "Sirop de fleur de sureau", "ru": "Сироп из бузины", "ja": "エルダーフラワーシロップ", "zh": "接骨木花糖浆", "fa": "سیروپ گل آقطی", "hi": "एल्डरफ्लावर सिरप", "ar": "شراب زهرة البيلسان" }
+    },
+    "woodruff_syrup": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Woodruff Syrup", "icon": "🌿", "latin": "Galium odoratum extract", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 275, "water_g": 32.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 68.0, "sugar_g": 68.0, "fiber_g": 0.0, "coumarin_mg": 2.5 },
+      "meta": { "locations": ["rewe", "kaufland", "liquor_store"], "season": ["spring"], "vegan": true },
+      "quality_metrics": { "flavor": "Sweet Hay & Vanilla (Coumarin)", "color": "Intense Green" },
+      "props": ["Intense, unique green color", "The classic addition to 'Berliner Weiße mit Schuss'", "Contains coumarin, which gives it its signature aroma"],
+      "lang": { "de": "Waldmeistersirup", "en": "Woodruff Syrup", "es": "Sirope de aspérula", "fr": "Sirop d'aspérule", "ru": "Сироп ясменника", "ja": "ウッドラフシロップ", "zh": "车叶草糖浆", "fa": "سیروپ وودراف", "hi": "वुडरफ सिरप", "ar": "شراب وودروف" }
+    },
+    "--- ZERO_CALORIE_AND_SUGAR_ALCOHOLS ---": "Zuckeralkohole & Keto-Süßen",
+    "erythritol": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Erythritol", "icon": "❄️", "latin": "Erythritol (Fermented)", "sci": ["#sci/Keto", "#sci/FoodScience"],
+      "val": { "kcal": 20, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 100.0, "sugar_g": 0.0, "fiber_g": 0.0, "net_carbs_g": 0.0, "glycemic_index": 0.0 },
+      "meta": { "locations": ["dm", "rossmann", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Zero-Impact Sweetener", "mouthfeel": "Cooling" },
+      "props": ["Sugar alcohol that is not metabolized (excreted in urine)", "Has a distinct 'cooling' effect on the tongue", "Zero impact on blood sugar or insulin"],
+      "lang": { "de": "Erythrit", "en": "Erythritol", "es": "Eritritol", "fr": "Érythritol", "ru": "Эритрит", "ja": "エリスリトール", "zh": "赤藓糖醇", "fa": "اریتریتول", "hi": "एरिथ्रिटोल", "ar": "إريثريتول" }
+    },
+    "xylitol": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Xylitol (Birch Sugar)", "icon": "🌳", "latin": "Xylitol", "sci": ["#sci/Dentistry", "#sci/Toxicology"],
+      "val": { "kcal": 240, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 100.0, "sugar_g": 0.0, "fiber_g": 0.0, "net_carbs_g": 0.0, "glycemic_index": 7.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Dental Health (Anti-caries)", "warning": "Toxic to dogs" },
+      "props": ["Actively prevents tooth decay by starving Streptococcus mutans", "Looks and tastes almost exactly like real sugar (1:1 ratio)", "WARNING: Extremely toxic/lethal to dogs"],
+      "lang": { "de": "Xylit (Birkenzucker)", "en": "Xylitol", "es": "Xilitol", "fr": "Xylitol", "ru": "Ксилит", "ja": "キシリトール", "zh": "木糖醇", "fa": "زایلیتول", "hi": "जाइलिटोल", "ar": "إكسيليتول" }
+    },
+    "monk_fruit_extract": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Monk Fruit Extract", "icon": "🍈", "latin": "Siraitia grosvenorii", "sci": ["#sci/Phytochemistry", "#sci/FoodScience"],
+      "val": { "kcal": 0, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "mogrosides_mg": 250.0, "glycemic_index": 0.0 },
+      "meta": { "locations": ["online_specialty", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "sweetness": "150-200x sweeter than sugar", "active_agent": "Mogrosides" },
+      "props": ["Sweetness comes from antioxidants called mogrosides", "Zero calories and zero glycemic impact", "Often blended with erythritol for bulk in baking"],
+      "lang": { "de": "Mönchsfrucht-Extrakt", "en": "Monk Fruit Extract", "es": "Extracto de fruta del monje", "fr": "Extrait de fruit de la passion", "ru": "Экстракт архата", "ja": "羅漢果エキス", "zh": "罗汉果提取物", "fa": "عصاره میوه راهب", "hi": "मोंक फ्रूट एक्सट्रैक्ट", "ar": "مستخلص فاكهة الراهب" }
+    },
+    "stevia_extract": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Stevia Extract (Powder/Liquid)", "icon": "🍃", "latin": "Stevia rebaudiana", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 0, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "steviol_glycosides_mg": 300.0, "glycemic_index": 0.0 },
+      "meta": { "locations": ["dm", "rossmann", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Can have a bitter licorice aftertaste", "heat_stability": "High" },
+      "props": ["200-300x sweeter than table sugar", "Completely stable at high baking temperatures", "Zero calories and tooth-friendly"],
+      "lang": { "de": "Stevia-Extrakt", "en": "Stevia Extract", "es": "Extracto de estevia", "fr": "Extrait de stévia", "ru": "Экстракт стевии", "ja": "ステビアエキス", "zh": "甜菊糖苷", "fa": "عصاره استویا", "hi": "स्टेविया एक्सट्रैक्ट", "ar": "مستخلص ستيفيا" }
+    }
+  },
+  "pantry_pastes": {
+    "--- NUT_AND_SEED_BUTTERS ---": "Reines Nuss- & Samenmus (100% Natur)",
+    "smooth_peanut_butter": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Peanut Butter (Smooth)", "icon": "🥜", "latin": "Arachis hypogaea paste", "sci": ["#sci/Nutrition", "#sci/Culinary"],
+      "val": { "kcal": 588, "water_g": 1.0, "protein_g": 25.0, "fat_total_g": 50.0, "carbs_total_g": 20.0, "sugar_g": 4.0, "fiber_g": 6.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "purity": "100% Peanuts (No added oil/sugar)", "texture": "Smooth/Creamy" },
+      "props": ["Standard staple for sandwiches and Asian peanut sauces", "High satiety factor", "Rich in niacin and Vitamin E"],
+      "lang": { "de": "Erdnussmus (Fein)", "en": "Smooth Peanut Butter", "es": "Crema de cacahuete suave", "fr": "Beurre de cacahuète lisse", "ru": "Арахисовая паста (однородная)", "ja": "ピーナッツバター（スムース）", "zh": "柔滑花生酱", "fa": "کره بادام زمینی نرم", "hi": "चिकना पीनट बटर", "ar": "زبدة الفول السوداني الناعمة" }
+    },
+    "crunchy_peanut_butter": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Peanut Butter (Crunchy)", "icon": "🥜", "latin": "Arachis hypogaea paste", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 588, "water_g": 1.0, "protein_g": 25.0, "fat_total_g": 50.0, "carbs_total_g": 20.0, "sugar_g": 4.0, "fiber_g": 6.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Contains roasted peanut pieces", "purity": "100% Peanuts" },
+      "props": ["Provides mechanical texture contrast in recipes", "Often preferred for baking cookies", "Nutritionally identical to smooth, just different milling process"],
+      "lang": { "de": "Erdnussmus (Crunchy)", "en": "Crunchy Peanut Butter", "es": "Crema de cacahuete crujiente", "fr": "Beurre de cacahuète croquant", "ru": "Арахисовая паста (хрустящая)", "ja": "ピーナッツバター（クランチ）", "zh": "颗粒花生酱", "fa": "کره بادام زمینی ترد", "hi": "क्रंची पीनट बटर", "ar": "زبدة الفول السوداني المقرمشة" }
+    },
+    "white_almond_butter": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Almond Butter (White/Blanched)", "icon": "🍯", "latin": "Prunus dulcis paste", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 614, "water_g": 1.5, "protein_g": 21.0, "fat_total_g": 55.5, "carbs_total_g": 18.0, "sugar_g": 4.5, "fiber_g": 10.0, "calcium_mg": 268.0, "vit_e_mg": 24.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Mild, sweet, marzipan-like", "process": "Blanched (No skins)" },
+      "props": ["Made from blanched (skinless) almonds", "Extremely smooth, light color", "Perfect neutral base for vegan cream sauces or frostings"],
+      "lang": { "de": "Mandelmus (Weiß)", "en": "White Almond Butter", "es": "Crema de almendras blanca", "fr": "Purée d'amande blanche", "ru": "Миндальная паста (белая)", "ja": "アーモンドバター（白）", "zh": "白杏仁酱", "fa": "کره بادام سفید", "hi": "सफेद बादाम का मक्खन", "ar": "زبدة اللوز البيضاء" }
+    },
+    "brown_almond_butter": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Almond Butter (Brown/Roasted)", "icon": "🌰", "latin": "Prunus dulcis paste", "sci": ["#sci/Phytochemistry", "#sci/Nutrition"],
+      "val": { "kcal": 614, "water_g": 1.5, "protein_g": 21.0, "fat_total_g": 55.5, "carbs_total_g": 18.0, "sugar_g": 4.5, "fiber_g": 12.0, "antioxidants_orac": 4500.0 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Higher fiber and antioxidants from skins", "flavor": "Robust roasted" },
+      "props": ["Made from whole, unpeeled, roasted almonds", "Stronger, more robust roasted flavor", "Great for oatmeal and baking"],
+      "lang": { "de": "Mandelmus (Braun)", "en": "Brown Almond Butter", "es": "Crema de almendras tostadas", "fr": "Purée d'amande complète", "ru": "Миндальная паста (коричневая)", "ja": "アーモンドバター（茶）", "zh": "黑杏仁酱", "fa": "کره بادام قهوه‌ای", "hi": "ब्राउन बादाम का मक्खन", "ar": "زبدة اللوز البنية" }
+    },
+    "cashew_butter": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Cashew Butter", "icon": "🌙", "latin": "Anacardium occidentale paste", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 587, "water_g": 2.0, "protein_g": 18.2, "fat_total_g": 49.3, "carbs_total_g": 27.6, "sugar_g": 6.0, "fiber_g": 3.3, "copper_mg": 2.2 },
+      "meta": { "locations": ["dm", "denns", "alnatura", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Naturally the creamiest nut butter", "flavor": "Sweet/Mild" },
+      "props": ["Naturally sweeter than peanut or almond butter", "Blends perfectly into vegan cheese sauces", "High copper content for immune support"],
+      "lang": { "de": "Cashewmus", "en": "Cashew Butter", "es": "Crema de anacardo", "fr": "Purée de noix de cajou", "ru": "Паста из кешью", "ja": "カシューナッツバター", "zh": "腰果酱", "fa": "کره بادام هندی", "hi": "काजू का मक्खन", "ar": "زبدة الكاجو" }
+    },
+    "light_tahini": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Tahini (White/Hulled)", "icon": "🌾", "latin": "Sesamum indicum paste", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 595, "water_g": 1.0, "protein_g": 17.0, "fat_total_g": 53.0, "carbs_total_g": 21.0, "sugar_g": 0.5, "fiber_g": 9.3, "calcium_mg": 420.0, "iron_plant_mg": 8.9 },
+      "meta": { "locations": ["orient_market", "rewe", "dm", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "The Hummus Foundation", "process": "Hulled seeds" },
+      "props": ["Made from hulled, lightly roasted sesame seeds", "Milder and less bitter than dark tahini", "Absolute essential for Hummus and Baba Ganoush"],
+      "lang": { "de": "Tahini (Weiß/Geschält)", "en": "Tahini (Light)", "es": "Tahini blanco", "fr": "Tahini blanc", "ru": "Тахини (светлая)", "ja": "白練りごま", "zh": "白芝麻酱", "fa": "ارده سفید", "hi": "सफेद ताहिनी", "ar": "طحينة بيضاء" }
+    },
+    "dark_tahini": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Tahini (Dark/Unhulled)", "icon": "⬛", "latin": "Sesamum indicum paste", "sci": ["#sci/Phytochemistry", "#sci/Nutrition"],
+      "val": { "kcal": 595, "water_g": 1.0, "protein_g": 17.0, "fat_total_g": 53.0, "carbs_total_g": 21.0, "sugar_g": 0.5, "fiber_g": 12.0, "calcium_mg": 975.0 },
+      "meta": { "locations": ["orient_market", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Massive Plant Calcium", "process": "Unhulled seeds" },
+      "props": ["Made from whole, unhulled sesame seeds", "More than double the calcium of white tahini", "Stronger, earthier, and slightly more bitter flavor"],
+      "lang": { "de": "Tahini (Dunkel/Ungeschält)", "en": "Tahini (Dark)", "es": "Tahini oscuro", "fr": "Tahini complet", "ru": "Тахини (тёмная)", "ja": "黒練りごま", "zh": "黑芝麻酱", "fa": "ارده تیره", "hi": "डार्क ताहिनी", "ar": "طحينة سمراء" }
+    },
+    "hazelnut_butter": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Hazelnut Butter", "icon": "🌰", "latin": "Corylus avellana paste", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 628, "water_g": 1.5, "protein_g": 15.0, "fat_total_g": 61.0, "carbs_total_g": 17.0, "sugar_g": 4.5, "fiber_g": 9.7, "vit_e_mg": 15.0 },
+      "meta": { "locations": ["dm", "denns", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Vegan Nougat Base", "purity": "No added sugar" },
+      "props": ["Pure roasted hazelnuts, no added sugar/cocoa", "Intense nougat aroma", "Perfect for making healthy, homemade Nutella alternatives"],
+      "lang": { "de": "Haselnussmus", "en": "Hazelnut Butter", "es": "Crema de avellana", "fr": "Purée de noisette", "ru": "Фундучная паста", "ja": "ヘーゼルナッツバター", "zh": "榛子酱", "fa": "کره فندق", "hi": "हेज़लनट बटर", "ar": "زبدة البندق" }
+    },
+    "pistachio_butter": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Pistachio Cream/Butter", "icon": "🟢", "latin": "Pistacia vera paste", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 562, "water_g": 2.0, "protein_g": 20.0, "fat_total_g": 45.0, "carbs_total_g": 28.0, "sugar_g": 7.0, "fiber_g": 10.0, "lutein_zeaxanthin_mcg": 2900.0 },
+      "meta": { "locations": ["gourmet_market", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "visual": "Vibrant natural green", "price_segment": "Luxury" },
+      "props": ["Luxury nut butter, extremely expensive", "Staple in Italian pastry making (Cannoli fillings, Gelato)", "Incredible natural green color and unique flavor"],
+      "lang": { "de": "Pistazienmus", "en": "Pistachio Butter", "es": "Crema de pistacho", "fr": "Purée de pistache", "ru": "Фисташковая паста", "ja": "ピスタチオバター", "zh": "开心果酱", "fa": "کره پسته", "hi": "पिस्ता बटर", "ar": "زبدة الفستق" }
+    },
+    "sunflower_seed_butter": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Sunflower Seed Butter", "icon": "🌻", "latin": "Helianthus annuus paste", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 617, "water_g": 1.0, "protein_g": 19.5, "fat_total_g": 52.0, "carbs_total_g": 20.0, "sugar_g": 3.0, "fiber_g": 9.0, "vit_e_mg": 30.0, "copper_mg": 1.8 },
+      "meta": { "locations": ["dm", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "allergy_friendly": "The ultimate nut-free substitute", "flavor": "Savory/Earthy" },
+      "props": ["Looks and spreads like peanut butter, but is 100% nut-free", "Safe for peanut-free schools/facilities", "Can turn baked goods green due to a reaction between chlorogenic acid and baking soda"],
+      "lang": { "de": "Sonnenblumenkernmus", "en": "Sunflower Seed Butter", "es": "Crema de semillas de girasol", "fr": "Beurre de graines de tournesol", "ru": "Паста из семян подсолнечника", "ja": "ひまわりの種バター", "zh": "葵花籽酱", "fa": "کره تخمه آفتابگردان", "hi": "सूरजमुखी के बीज का मक्खन", "ar": "زبدة بذور عباد الشمس" }
+    },
+
+    "--- FERMENTED_UMAMI_PASTES ---": "Fermentierte Würz-Pasten (Probiotisch & Salzig)",
+    "white_miso": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Shiro Miso (White Miso)", "icon": "🥣", "latin": "Fermented Glycine max & Oryza sativa", "sci": ["#sci/Microbiology", "#sci/Culinary"],
+      "val": { "kcal": 200, "water_g": 40.0, "protein_g": 11.0, "fat_total_g": 6.0, "carbs_total_g": 25.0, "sugar_g": 15.0, "fiber_g": 4.0, "sodium_mg": 2500.0 },
+      "meta": { "locations": ["asia_market", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "fermentation": "Short time (Weeks/Months), High Rice ratio", "flavor": "Sweet/Mild" },
+      "props": ["Sweetest, mildest, and least salty miso", "Perfect for light soups, salad dressings, and sweet glazes", "Contains live probiotics (do not boil violently)"],
+      "lang": { "de": "Shiro Miso (Weiß)", "en": "White Miso", "es": "Miso blanco", "fr": "Miso blanc", "ru": "Белая мисо-паста", "ja": "白味噌", "zh": "白味噌", "fa": "میسو سفید", "hi": "सफेद मिसो", "ar": "ميسو أبيض" }
+    },
+    "red_miso": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Aka Miso (Red Miso)", "icon": "🟫", "latin": "Fermented Glycine max", "sci": ["#sci/Microbiology", "#sci/FoodScience"],
+      "val": { "kcal": 210, "water_g": 38.0, "protein_g": 13.0, "fat_total_g": 7.0, "carbs_total_g": 20.0, "sugar_g": 10.0, "fiber_g": 5.0, "sodium_mg": 3800.0 },
+      "meta": { "locations": ["asia_market", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "fermentation": "Long time (1-3 years), High Soybean ratio", "flavor": "Salty/Robust" },
+      "props": ["Darker, saltier, and more pungent than white miso", "Undergoes Maillard reaction during long fermentation", "Great for hearty stews, braises, and robust broths"],
+      "lang": { "de": "Aka Miso (Rot)", "en": "Red Miso", "es": "Miso rojo", "fr": "Miso rouge", "ru": "Красная мисо-паста", "ja": "赤味噌", "zh": "赤味噌", "fa": "میسو قرمز", "hi": "लाल मिसो", "ar": "ميسو أحمر" }
+    },
+    "hatcho_miso": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Hatcho Miso (100% Soy)", "icon": "⬛", "latin": "Fermented Glycine max (No Grain)", "sci": ["#sci/Culinary", "#sci/Microbiology"],
+      "val": { "kcal": 230, "water_g": 35.0, "protein_g": 18.0, "fat_total_g": 10.0, "carbs_total_g": 15.0, "sugar_g": 5.0, "fiber_g": 6.0, "sodium_mg": 4000.0 },
+      "meta": { "locations": ["asia_market", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "purity": "No rice or barley added", "fermentation": "Extremely long" },
+      "props": ["The emperor of miso, fermented for up to 3 years", "Intensely savory, almost chocolate-like earthy depth", "Significantly higher protein content"],
+      "lang": { "de": "Hatcho Miso", "en": "Hatcho Miso", "es": "Miso Hatcho", "fr": "Miso Hatcho", "ru": "Хатчо мисо", "ja": "八丁味噌", "zh": "八丁味噌", "fa": "میسو هاچو", "hi": "हचो मिसो", "ar": "ميسو هاتشو" }
+    },
+    "gochujang": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Gochujang (Korean Chili Paste)", "icon": "🌶️", "latin": "Fermented Capsicum & Oryza", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 210, "water_g": 40.0, "protein_g": 4.0, "fat_total_g": 1.0, "carbs_total_g": 45.0, "sugar_g": 20.0, "fiber_g": 3.0, "sodium_mg": 2800.0 },
+      "meta": { "locations": ["asia_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Spicy, sweet, fermented umami", "texture": "Thick sticky paste" },
+      "props": ["Thick crimson paste made from chili powder, glutinous rice, and fermented soybeans", "The backbone of Korean cooking (Bibimbap, Tteokbokki)", "Uniquely sweet and spicy at the same time"],
+      "lang": { "de": "Gochujang", "en": "Gochujang", "es": "Gochujang", "fr": "Gochujang", "ru": "Кочуджан", "ja": "コチュジャン", "zh": "苦椒酱 (韩式辣酱)", "fa": "گوچوجانگ", "hi": "गोचुजैंग", "ar": "غوتشوجانغ" }
+    },
+    "doenjang": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Doenjang (Korean Soybean Paste)", "icon": "🍲", "latin": "Fermented Glycine max", "sci": ["#sci/Microbiology", "#sci/FoodScience"],
+      "val": { "kcal": 180, "water_g": 45.0, "protein_g": 14.0, "fat_total_g": 5.0, "carbs_total_g": 18.0, "sugar_g": 5.0, "fiber_g": 4.0, "sodium_mg": 3500.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Earthy and pungent", "texture": "Coarse" },
+      "props": ["Korean equivalent to Japanese Miso, but generally coarser and more pungent", "Fermented without grain (unlike most miso)", "Essential for Korean stews (Jjigae)"],
+      "lang": { "de": "Doenjang", "en": "Doenjang", "es": "Doenjang", "fr": "Doenjang", "ru": "Твенджан", "ja": "テンジャン", "zh": "大酱", "fa": "دوینجانگ", "hi": "डोएनजैंग", "ar": "دوينجانغ" }
+    },
+    "yeast_extract": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Yeast Extract (Marmite/Vegemite)", "icon": "🍞", "latin": "Saccharomyces cerevisiae", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 260, "water_g": 20.0, "protein_g": 34.0, "fat_total_g": 0.5, "carbs_total_g": 30.0, "sugar_g": 2.0, "fiber_g": 0.0, "sodium_mg": 4300.0, "vit_b12_mcg": 24.0, "folate_mcg": 1250.0 },
+      "meta": { "locations": ["kaufland", "online_specialty", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Massive B-Vitamin Complex", "flavor": "Intense Salty Umami" },
+      "props": ["By-product of beer brewing", "Extreme umami, salty, malty flavor ('Love it or hate it')", "Heavily fortified with B-vitamins, including B12 for vegans"],
+      "lang": { "de": "Hefeextrakt (Marmite)", "en": "Yeast Extract", "es": "Extracto de levadura", "fr": "Extrait de levure", "ru": "Дрожжевой экстракт", "ja": "酵母エキス (マーマイト)", "zh": "酵母提取物 (马麦酱)", "fa": "عصاره مخمر", "hi": "खमीर का अर्क", "ar": "خلاصة الخميرة" }
+    },
+
+    "--- CULINARY_BASES_AND_SPICE_PASTES ---": "Würz-Basen (Curry, Tomate, Chili)",
+    "tomato_paste": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Tomato Paste (Triple Concentrated)", "icon": "🍅", "latin": "Solanum lycopersicum", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 82, "water_g": 65.0, "protein_g": 4.3, "fat_total_g": 0.5, "carbs_total_g": 19.0, "sugar_g": 14.0, "fiber_g": 3.0, "lycopene_mg": 45.0, "potassium_mg": 1000.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "concentration": "Triple (3-fach)", "flavor": "Sweet/Acidic Umami" },
+      "props": ["Must be fried in oil ('pincé') to release full flavor and reduce raw acidity", "Extreme concentration of umami (glutamates)", "Rich source of bioavailable lycopene"],
+      "lang": { "de": "Tomatenmark (3-fach konzentriert)", "en": "Tomato Paste", "es": "Pasta de tomate", "fr": "Concentré de tomate", "ru": "Томатная паста", "ja": "トマトペースト", "zh": "番茄膏", "fa": "رب گوجه فرنگی", "hi": "टमाटर का पेस्ट", "ar": "معجون طماطم" }
+    },
+    "tamarind_paste": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Tamarind Paste", "icon": "🟤", "latin": "Tamarindus indica", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 239, "water_g": 31.0, "protein_g": 2.8, "fat_total_g": 0.6, "carbs_total_g": 62.5, "sugar_g": 57.0, "fiber_g": 5.1, "tartaric_acid_g": 12.0 },
+      "meta": { "locations": ["asia_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Intensely Sour & Tart", "active_agent": "Tartaric Acid" },
+      "props": ["Essential sour note in Pad Thai and Indian curries", "Made from the fibrous fruit of the tamarind pod", "Acts as a natural meat tenderizer due to its acidity"],
+      "lang": { "de": "Tamarindenpaste", "en": "Tamarind Paste", "es": "Pasta de tamarindo", "fr": "Pâte de tamarin", "ru": "Тамариндовая паста", "ja": "タマリンドペースト", "zh": "罗望子酱", "fa": "رب تمر هندی", "hi": "इमली का पेस्ट", "ar": "معجون التمر هندي" }
+    },
+    "harissa": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Harissa Paste", "icon": "🌶️", "latin": "Capsicum / Cuminum blend", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 150, "water_g": 65.0, "protein_g": 3.0, "fat_total_g": 10.0, "carbs_total_g": 12.0, "sugar_g": 6.0, "fiber_g": 4.0, "capsaicin_mg": 15.0 },
+      "meta": { "locations": ["orient_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Spicy, garlicky, cumin-forward", "heat_level": "Medium to High" },
+      "props": ["Maghrebi hot chili pepper paste", "Blend of roasted red peppers, serrano peppers, spices, and olive oil", "Perfect as a marinade for roasting or to spice up couscous"],
+      "lang": { "de": "Harissa Paste", "en": "Harissa", "es": "Pasta Harissa", "fr": "Harissa", "ru": "Харисса", "ja": "ハリッサ", "zh": "哈里萨辣酱", "fa": "هریسه", "hi": "हरीसा", "ar": "هريسة" }
+    },
+    "green_curry_paste": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Green Curry Paste", "icon": "🟢", "latin": "Capsicum / Cymbopogon blend", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 120, "water_g": 60.0, "protein_g": 4.0, "fat_total_g": 4.0, "carbs_total_g": 15.0, "sugar_g": 8.0, "fiber_g": 5.0, "sodium_mg": 3000.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "heat_level": "Usually the spiciest of Thai curries", "color_source": "Fresh green chilies" },
+      "props": ["Must be fried in coconut cream or oil before adding liquid to release essential oils", "Color comes from fresh green chilies, cilantro, and kaffir lime leaf", "Extremely aromatic and fiery"],
+      "lang": { "de": "Grüne Currypaste", "en": "Green Curry Paste", "es": "Pasta de curry verde", "fr": "Pâte de curry vert", "ru": "Зеленая паста карри", "ja": "グリーンカレーペースト", "zh": "绿咖喱酱", "fa": "خمیر کاری سبز", "hi": "ग्रीन करी पेस्ट", "ar": "معجون الكاري الأخضر" }
+    },
+    "red_curry_paste": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Red Curry Paste", "icon": "🔴", "latin": "Capsicum blend", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 110, "water_g": 62.0, "protein_g": 3.0, "fat_total_g": 3.5, "carbs_total_g": 14.0, "sugar_g": 7.0, "fiber_g": 4.0, "sodium_mg": 3200.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "heat_level": "Medium", "color_source": "Dried red chilies" },
+      "props": ["Extremely versatile, used as a marinade or soup base", "Made with dried red chilies (which makes it slightly milder than green curry)", "A foundational ingredient in Thai cuisine"],
+      "lang": { "de": "Rote Currypaste", "en": "Red Curry Paste", "es": "Pasta de curry rojo", "fr": "Pâte de curry rouge", "ru": "Красная паста карри", "ja": "レッドカレーペースト", "zh": "红咖喱酱", "fa": "خمیر کاری قرمز", "hi": "रेड करी पेस्ट", "ar": "معجون الكاري الأحمر" }
+    },
+    "umeboshi_paste": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Umeboshi Paste", "icon": "🌸", "latin": "Prunus mume", "sci": ["#sci/Microbiology", "#sci/Culinary"],
+      "val": { "kcal": 35, "water_g": 70.0, "protein_g": 1.0, "fat_total_g": 0.5, "carbs_total_g": 8.0, "sugar_g": 2.0, "fiber_g": 2.0, "sodium_mg": 8500.0, "citric_acid_g": 4.0 },
+      "meta": { "locations": ["asia_market", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Intensely Salty & Sour", "benefit": "Alkalizing effect" },
+      "props": ["Pureed pickled Japanese ume plums", "Intensely salty and sour, used in micro-doses", "Excellent vegan alternative for adding fish-sauce-like depth"],
+      "lang": { "de": "Umeboshi-Paste", "en": "Umeboshi Paste", "es": "Pasta de umeboshi", "fr": "Pâte d'umeboshi", "ru": "Паста умэбоси", "ja": "梅肉ペースト", "zh": "梅子酱", "fa": "رب اومه‌بوشی", "hi": "उमेबोशी पेस्ट", "ar": "معجون الأوميبوشي" }
+    },
+    "anchovy_paste": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Anchovy Paste", "icon": "🐟", "latin": "Engraulidae siccatum", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 180, "water_g": 60.0, "protein_g": 18.0, "fat_total_g": 12.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sodium_mg": 4500.0 },
+      "meta": { "locations": ["rewe", "kaufland", "delicatessen"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "flavor": "Salty/Fishy Umami", "usage": "Flavor enhancer" },
+      "props": ["The secret backbone of Caesar Salad dressing", "Dissolves instantly into warm olive oil to create a savory base", "Extremely salty, use sparingly"],
+      "lang": { "de": "Sardellenpaste", "en": "Anchovy Paste", "es": "Pasta de anchoas", "fr": "Pâte d'anchois", "ru": "Анчоусная паста", "ja": "アンチョビペースト", "zh": "凤尾鱼酱", "fa": "خمیر آنچوی", "hi": "एंकोवी पेस्ट", "ar": "معجون الأنشوجة" }
+    },
+    "garlic_paste": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Garlic Paste", "icon": "🧄", "latin": "Allium sativum blend", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 140, "water_g": 65.0, "protein_g": 3.0, "fat_total_g": 10.0, "carbs_total_g": 12.0, "sugar_g": 2.0, "fiber_g": 2.0 },
+      "meta": { "locations": ["asia_market", "orient_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Convenience Aromatic", "preservation": "Usually preserved in oil" },
+      "props": ["Time-saving foundational aromatic", "Often blended with ginger (Ginger-Garlic Paste) in Indian cooking", "Milder than freshly crushed garlic"],
+      "lang": { "de": "Knoblauchpaste", "en": "Garlic Paste", "es": "Pasta de ajo", "fr": "Pâte d'ail", "ru": "Чесночная паста", "ja": "ガーリックペースト", "zh": "蒜蓉酱", "fa": "خمیر سیر", "hi": "लहसुन का पेस्ट", "ar": "معجون الثوم" }
+    },
+
+    "--- ASIAN_FERMENTED_BEAN_PASTES ---": "Asiatische Bohnen- & Chili-Pasten",
+    "doubanjiang": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Doubanjiang (Chili Bean Paste)", "icon": "🌶️", "latin": "Fermented Vicia faba", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 120, "water_g": 50.0, "protein_g": 4.5, "fat_total_g": 6.0, "carbs_total_g": 10.0, "sugar_g": 2.0, "fiber_g": 3.0, "sodium_mg": 4800.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Salty, Spicy, Earthy Umami", "base": "Broad Beans (Fava)" },
+      "props": ["Absolutely non-negotiable ingredient for authentic Mapo Tofu", "Known as the 'Soul of Sichuan Cuisine'", "Made from fermented broad beans, not soybeans"],
+      "lang": { "de": "Doubanjiang", "en": "Doubanjiang", "es": "Doubanjiang", "fr": "Doubanjiang", "ru": "Доубаньцзян", "ja": "豆板醤 (トウバンジャン)", "zh": "豆瓣酱", "fa": "دوبان‌جیانگ", "hi": "दोबानजियांग", "ar": "دوبانجيانغ" }
+    },
+    "chunjang": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Chunjang (Black Bean Paste)", "icon": "🫘", "latin": "Fermented Glycine max", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 250, "water_g": 40.0, "protein_g": 8.0, "fat_total_g": 5.0, "carbs_total_g": 40.0, "sugar_g": 15.0, "fiber_g": 4.0, "sodium_mg": 2200.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Must be fried in oil", "flavor": "Slightly bitter/sweet before frying" },
+      "props": ["Must be fried in oil before use to remove bitterness and release savory notes", "The foundation of the famous Korean dish Jajangmyeon", "Thick, jet-black paste"],
+      "lang": { "de": "Chunjang", "en": "Chunjang", "es": "Chunjang", "fr": "Chunjang", "ru": "Чхунджан", "ja": "チュンジャン", "zh": "春酱", "fa": "چونجانگ", "hi": "चुनजैंग", "ar": "تشونجانغ" }
+    },
+
+    "--- LIQUID_UMAMI_AND_FERMENTED_SAUCES ---": "Flüssige Umami-Bomben & Fermentiertes",
+    "soy_sauce": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Soy Sauce (Shoyu)", "icon": "🏺", "latin": "Fermented Glycine max & Triticum", "sci": ["#sci/Microbiology", "#sci/Culinary"],
+      "val": { "kcal": 53, "water_g": 70.0, "protein_g": 8.0, "fat_total_g": 0.1, "carbs_total_g": 4.9, "sugar_g": 0.4, "fiber_g": 0.8, "sodium_mg": 5500.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Naturally brewed (Long-term fermentation)", "allergen": "Contains Wheat" },
+      "props": ["The backbone of Japanese seasoning", "Contains wheat (not gluten-free)", "Rich in natural glutamates for intense umami"],
+      "lang": { "de": "Sojasauce (Shoyu)", "en": "Soy Sauce", "es": "Salsa de soja", "fr": "Sauce soja", "ru": "Соевый соус", "ja": "醤油 (Shoyu)", "zh": "酱油", "fa": "سس سویا", "hi": "सोया सॉस", "ar": "صلصة الصويا" }
+    },
+    "tamari": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Tamari (Gluten-Free Soy Sauce)", "icon": "🏺", "latin": "Fermented Glycine max (No Wheat)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 60, "water_g": 68.0, "protein_g": 10.0, "fat_total_g": 0.1, "carbs_total_g": 5.0, "sugar_g": 0.5, "fiber_g": 0.9, "sodium_mg": 5600.0 },
+      "meta": { "locations": ["denns", "alnatura", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "gluten_status": "100% Gluten-Free", "flavor": "Richer/Darker than Shoyu" },
+      "props": ["By-product of miso production", "Darker and richer flavor than Shoyu", "No wheat added, safe for celiacs"],
+      "lang": { "de": "Tamari (Glutenfreie Sojasauce)", "en": "Tamari", "es": "Tamari", "fr": "Tamari", "ru": "Тамари", "ja": "溜まり醤油 (Tamari)", "zh": "浓口酱油", "fa": "تاماری", "hi": "तामरी", "ar": "تاماري" }
+    },
+    "fish_sauce": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Fish Sauce (Nam Pla / Nuoc Mam)", "icon": "🐟", "latin": "Fermented Anchovies & Salt", "sci": ["#sci/Microbiology", "#sci/Culinary"],
+      "val": { "kcal": 35, "water_g": 75.0, "protein_g": 5.0, "fat_total_g": 0.0, "carbs_total_g": 3.0, "sugar_g": 2.5, "fiber_g": 0.0, "sodium_mg": 7800.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "purity": "Anchovies + Salt (No added MSG/Sugar)", "fermentation": "Aged 1-2 years" },
+      "props": ["The 'Salt of South East Asia'", "Adds deep savory complexity without tasting 'fishy' after cooking", "Fermented for up to 2 years"],
+      "lang": { "de": "Fischsauce", "en": "Fish Sauce", "es": "Salsa de pescado", "fr": "Sauce poisson", "ru": "Рыбный соус", "ja": "ナンプラー / ニョクマム", "zh": "鱼露", "fa": "سس ماهی", "hi": "फिश सॉस", "ar": "صلصة السمك" }
+    },
+    "oyster_sauce": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Oyster Sauce", "icon": "🦪", "latin": "Crassostrea extract blend", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 51, "water_g": 72.0, "protein_g": 1.4, "fat_total_g": 0.2, "carbs_total_g": 11.0, "sugar_g": 8.0, "fiber_g": 0.0, "sodium_mg": 2700.0 },
+      "meta": { "locations": ["asia_market", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Syrupy and thick", "usage": "Cantonese Stir-fry" },
+      "props": ["Made from oyster extracts, sugar, and salt thickened with cornstarch", "Essential for Cantonese stir-fries (Broccoli with Beef)", "Adds a glossy sheen to dishes"],
+      "lang": { "de": "Austernsauce", "en": "Oyster Sauce", "es": "Salsa de ostras", "fr": "Sauce d'huître", "ru": "Устричный соус", "ja": "オイスターソース", "zh": "蚝油", "fa": "سس صدف", "hi": "ऑयस्टर सॉस", "ar": "صلصة المحار" }
+    },
+    "worcestershire_sauce": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Worcestershire Sauce", "icon": "🇬🇧", "latin": "Vinegar / Molasses / Anchovy blend", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 78, "water_g": 80.0, "protein_g": 0.8, "fat_total_g": 0.0, "carbs_total_g": 19.0, "sugar_g": 10.0, "fiber_g": 0.0, "sodium_mg": 980.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "fermentation": "Aged in barrels", "flavor": "Tangy/Savory/Sweet" },
+      "props": ["Complex fermented liquid condiment", "Essential for Bloody Marys and Caesar Salad", "Invented by Lea & Perrins"],
+      "lang": { "de": "Worcestershiresauce", "en": "Worcestershire Sauce", "es": "Salsa Worcestershire", "fr": "Sauce Worcestershire", "ru": "Вустерширский соус", "ja": "ウスターソース", "zh": "辣酱油 (伍斯特酱)", "fa": "سس ووسترشر", "hi": "वॉर्सेस्टरशायर सॉस", "ar": "صلصة وسترشير" }
+    },
+
+    "--- VINEGARS_AND_ACIDIFIERS ---": "Essige & Säure-Basen",
+    "balsamic_vinegar": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Balsamic Vinegar of Modena (Aceto Balsamico)", "icon": "🍷", "latin": "Vitis vinifera (Must)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 88, "water_g": 76.0, "protein_g": 0.5, "fat_total_g": 0.0, "carbs_total_g": 17.0, "sugar_g": 15.0, "fiber_g": 0.0, "acetic_acid_g": 6.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "purity": "Look for 'Aceto Balsamico di Modena IGP'", "flavor": "Sweet & Tart" },
+      "props": ["Made from grape must and wine vinegar", "Sweet and tart flavor profile", "Aged in wooden casks"],
+      "lang": { "de": "Aceto Balsamico", "en": "Balsamic Vinegar", "es": "Vinagre balsámico", "fr": "Vinaigre balsamique", "ru": "Бальзамический уксус", "ja": "バルサミコ酢", "zh": "香醋 (巴萨米克醋)", "fa": "سرکه بالزامیک", "hi": "बाल्सामिक सिरका", "ar": "خل بلسمي" }
+    },
+    "apple_cider_vinegar": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Apple Cider Vinegar (Raw/With Mother)", "icon": "🍎", "latin": "Malus domestica ferment", "sci": ["#sci/Microbiology", "#sci/Nutrition"],
+      "val": { "kcal": 21, "water_g": 94.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.9, "sugar_g": 0.4, "fiber_g": 0.0, "acetic_acid_g": 5.0, "potassium_mg": 73.0 },
+      "meta": { "locations": ["dm", "rewe", "denns", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Contains 'The Mother' (Probiotics)", "process": "Unpasteurized" },
+      "props": ["Unfiltered and unpasteurized is best for health", "Supports blood sugar regulation", "Versatile for dressings and health tonics"],
+      "lang": { "de": "Apfelessig (Naturtrüb)", "en": "Apple Cider Vinegar", "es": "Vinagre de manzana", "fr": "Vinaigre de cidre", "ru": "Яблочный уксус", "ja": "リンゴ酢", "zh": "苹果醋", "fa": "سرکه سیب", "hi": "सेब का सिरका", "ar": "خل التفاح" }
+    },
+    "rice_vinegar": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Rice Vinegar", "icon": "🍚", "latin": "Oryza sativa ferment", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 18, "water_g": 95.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "acetic_acid_g": 4.5 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Mildest acidity of all vinegars", "acidity": "Low (~4.5%)" },
+      "props": ["Essential for Sushi rice (Sumeshi)", "Much less aggressive than wine vinegar", "Perfect for Asian pickles"],
+      "lang": { "de": "Reisessig", "en": "Rice Vinegar", "es": "Vinagre de arroz", "fr": "Vinaigre de riz", "ru": "Рисовый уксус", "ja": "米酢 (Komezu)", "zh": "米醋", "fa": "سرکه برنج", "hi": "चावल का सिरका", "ar": "خل الأرز" }
+    },
+    "lemon_juice": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Lemon Juice Concentrate", "icon": "🍋", "latin": "Citrus limon", "sci": ["#sci/Phytochemistry", "#sci/FoodScience"],
+      "val": { "kcal": 22, "water_g": 92.0, "protein_g": 0.4, "fat_total_g": 0.2, "carbs_total_g": 6.9, "sugar_g": 2.5, "fiber_g": 0.3, "vit_c_mg": 38.0, "citric_acid_g": 5.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Convenience Acidifier", "preservation": "Usually contains sulfites" },
+      "props": ["Shelf-stable alternative to fresh lemons", "Pure citric acid source", "Prevents oxidation (browning) of fruits"],
+      "lang": { "de": "Zitronensaftkonzentrat", "en": "Lemon Juice", "es": "Zumo de limón", "fr": "Jus de citron", "ru": "Лимонный сок", "ja": "レモン汁", "zh": "柠檬汁", "fa": "آبلیمو", "hi": "नींबू का रस", "ar": "عصير ليمون" }
+    }
+  }
+}

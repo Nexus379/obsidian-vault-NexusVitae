@@ -1,0 +1,28 @@
+filters:
+  and:
+    - arch.contains("#6resou")
+views:
+  - type: table
+    name: Resources
+    groupBy:
+      property: archtype
+      direction: ASC
+    order:
+      - cover
+      - file.name
+      - archtype
+      - status
+      - rating
+      - creator
+      - discipline
+      - science
+      - file.path
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      cover: 90
+      file.name: 220
+      note.archtype: 140
+      note.status: 90
+      note.creator: 140

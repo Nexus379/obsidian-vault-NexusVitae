@@ -1,0 +1,998 @@
+{
+  "chocolate_mega_list_v1": {
+    "--- KINDER_FERRERO_COMPLETE_GALAXY ---": "Kinder-Produkte (Fokus: Milch, Nuss & Wafer)",
+    "kinder_schokolade_bar": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Kinder Schokolade", "icon": "🍫", "latin": "Socolata infantium", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 566, "water_g": 1.5, "protein_g": 8.7, "fat_total_g": 35.0, "carbs_total_g": 53.5, "sugar_g": 53.3, "fiber_g": 0.9, "calcium_mg": 240.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Kinder", "vegan": false },
+      "quality_metrics": { "milk_dry_matter": "33%", "cocoa_solids": "13% min." },
+      "props": ["Der globale Standard für Kinder-Milchschokolade", "Einzeln portionierte Riegel zur Konsumkontrolle", "Optimierte Schmelztemperatur für schnellen Geschmackstransfer"],
+      "lang": { "de": "Kinder Schokolade", "en": "Kinder Chocolate", "es": "Kinder Chocolate", "fr": "Chocolat Kinder", "ru": "Шоколад Киндер", "ja": "キンダーチョコレート", "zh": "健达巧克力", "fa": "شکلات کیندر", "hi": "किंडर चॉकलेट", "ar": "شوكولاتة كيندر" }
+    },
+    "kinder_bueno_classic": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Kinder Bueno", "icon": "🥨", "latin": "Crustum coryli bueno", "sci": ["#sci/Rheology", "#sci/FoodScience"],
+      "val": { "kcal": 572, "water_g": 1.0, "protein_g": 8.6, "fat_total_g": 37.3, "carbs_total_g": 49.5, "sugar_g": 41.2, "fiber_g": 2.0, "sodium_mg": 107.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Kinder", "vegan": false },
+      "quality_metrics": { "hazelnut_purity": "10.5% hazelnuts in cream", "wafer_crispness": "High" },
+      "props": ["Zarte Waffel mit Haselnussmilchcremefüllung", "Überzogen mit Milchschokolade", "Technologisches Vorbild für Textur-Kontraste (Knusprig vs. Cremig)"],
+      "lang": { "de": "Kinder Bueno", "en": "Kinder Bueno", "es": "Kinder Bueno", "fr": "Kinder Bueno", "ru": "Киндер Буэно", "ja": "キンダーブエノ", "zh": "健达缤纷乐", "fa": "کیندر بوئنو", "hi": "किंडर बुएनो", "ar": "كيندر بوينو" }
+    },
+    "kinder_schoko_bons": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Kinder Schoko-Bons", "icon": "🍬", "latin": "Globuli lactei socolata", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 576, "water_g": 1.2, "protein_g": 8.3, "fat_total_g": 36.6, "carbs_total_g": 52.5, "sugar_g": 52.2, "fiber_g": 1.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Kinder", "vegan": false },
+      "quality_metrics": { "inclusions": "Crunchy hazelnut bits", "coating": "Polished milk chocolate" },
+      "props": ["Kleine Schokoladeneier mit Milchfüllung und Haselnussstückchen", "Einzeln gewickelt, ideal für Sharing-Konzepte", "Hoher Suchtfaktor durch kleine Portionsgröße"],
+      "lang": { "de": "Kinder Schoko-Bons", "en": "Kinder Schoko-Bons", "es": "Kinder Schoko-Bons", "fr": "Kinder Schoko-Bons", "ru": "Киндер Шоко-Бонс", "ja": "キンダーチョコボン", "zh": "健达中蛋", "fa": "کیندر شوکو-بانز", "hi": "किंडर शोको-बोन", "ar": "كيندر شوكو بونز" }
+    },
+    "kinder_happy_hippo_cacao": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Kinder Happy Hippo (Cacao)", "icon": "🦛", "latin": "Hippopotamus crustum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 593, "water_g": 0.9, "protein_g": 6.7, "fat_total_g": 38.6, "carbs_total_g": 53.6, "sugar_g": 45.1, "fiber_g": 1.3 },
+      "meta": { "locations": ["everywhere"], "brand": "Kinder", "vegan": false },
+      "quality_metrics": { "wafer_shape": "3D Hippo Form", "bottom": "Meringue/Cocoa sprinkles" },
+      "props": ["Knusper-Waffel-Spezialität mit Milch- und Kakaocremefüllung", "Gehört technologisch zu den aufwendigsten Waffelformen", "Besonders beliebt im Exportmarkt (UK/USA)"],
+      "lang": { "de": "Kinder Happy Hippo", "en": "Kinder Happy Hippo", "es": "Kinder Happy Hippo", "fr": "Kinder Happy Hippo", "ru": "Киндер Хэппи Хиппо", "ja": "キンダーハッピーヒッポ", "zh": "健达快乐河马", "fa": "کیندر هپی هیپو", "hi": "किंडर हैप्पी हिप्पो", "ar": "كيندر هابي هيبو" }
+    },
+    "kinder_milch_schnitte": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Kinder Milch-Schnitte", "icon": "🥪", "latin": "Lactis segmentum", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 422, "water_g": 25.0, "protein_g": 7.0, "fat_total_g": 27.9, "carbs_total_g": 34.0, "sugar_g": 29.5, "fiber_g": 1.2 },
+      "meta": { "locations": ["fridge_section"], "brand": "Kinder", "vegan": false },
+      "quality_metrics": { "storage": "Must be chilled (Cooling chain)", "honey_content": "Contains honey" },
+      "props": ["Die erste Zwischenmahlzeit aus dem Kühlregal", "Besteht aus zwei dünnen Kakaobiskuit-Schichten und einer Milchcreme-Füllung", "Keine Konservierungsstoffe, daher kurze Haltbarkeit"],
+      "lang": { "de": "Milch-Schnitte", "en": "Milk Slice", "es": "Kinder Delice / Leche", "fr": "Kinder Tranche au Lait", "ru": "Милок-Ломтик", "ja": "ミルク・スライス", "zh": "牛奶切片", "fa": "میلح شنیتّه", "hi": "मिल्क स्लाइस", "ar": "ميلك سلايس" }
+    },
+    "kinder_pingui_classic": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Kinder Pingui", "icon": "🐧", "latin": "Spheniscidae socolata", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 450, "water_g": 28.0, "protein_g": 7.0, "fat_total_g": 29.7, "carbs_total_g": 37.8, "sugar_g": 33.1 },
+      "meta": { "locations": ["fridge_section"], "brand": "Kinder", "vegan": false },
+      "quality_metrics": { "structure": "Triple layer (Cocoa, Milk, Chocolate)", "coating": "Darker cocoa glaze" },
+      "props": ["Gekühlter Snack mit einer dünnen Schokoladenhülle", "In der Mitte befindet sich eine Schicht aus knackiger Schokolade zwischen der Milchcreme", "Erfordert lückenlose Kühlung bei max. 7°C"],
+      "lang": { "de": "Kinder Pingui", "en": "Kinder Pingui", "es": "Kinder Pinguí", "fr": "Kinder Pingui", "ru": "Киндер Пингви", "ja": "キンダー・ピングイ", "zh": "健达企鹅杯", "fa": "کیندر پینگویی", "hi": "किंडर पिंगुई", "ar": "كيندر بينجوي" }
+    },
+    "kinder_maxi_king": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Kinder Maxi King", "icon": "👑", "latin": "Rex maximus lacteus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 521, "water_g": 18.0, "protein_g": 6.7, "fat_total_g": 37.5, "carbs_total_g": 38.2, "sugar_g": 30.6 },
+      "meta": { "locations": ["fridge_section"], "brand": "Kinder", "vegan": false },
+      "quality_metrics": { "core": "Liquid Caramel Center", "coating": "Hazelnut and Chocolate" },
+      "props": ["Der 'König' der Kühlschrank-Snacks", "Kombiniert Waffel, Milchcreme, flüssiges Karamell und Erdnüsse/Haselnüsse", "Extrem hohe Kaloriendichte pro Portion"],
+      "lang": { "de": "Kinder Maxi King", "en": "Kinder Maxi King", "es": "Kinder Maxi King", "fr": "Kinder Maxi King", "ru": "Киндер Макси Кинг", "ja": "キンダーマキシキング", "zh": "健达麦斯国王", "fa": "کیندر ماکسی کینگ", "hi": "किंडर मैक्सी किंग", "ar": "كيندر ماكسي كينج" }
+    },
+
+    "--- MONDELEZ_MILKA_COMPLETE_GALAXY ---": "Milka (Mondelez) – Alpenmilch & Kollaborationen",
+    "milka_alpenmilch_classic": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Milka Alpenmilch", "icon": "💜", "latin": "Lactis alpina pura", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 530, "water_g": 1.2, "protein_g": 6.3, "fat_total_g": 29.0, "carbs_total_g": 59.0, "sugar_g": 58.0, "fiber_g": 1.8 },
+      "meta": { "locations": ["everywhere"], "brand": "Milka", "vegan": false },
+      "quality_metrics": { "standard": "100% Alpine Milk", "cocoa": "Cocoa Life Program" },
+      "props": ["Das lila Original seit 1901", "Bekannt für den extrem zarten Schmelz", "Verwendet Magermilchpulver und Alpenmilchpulver"],
+      "lang": { "de": "Milka Alpenmilch", "en": "Milka Alpine Milk", "es": "Milka Leche Alpina", "fr": "Milka Lait Alpin", "ru": "Милка Альпийское молоко", "ja": "ミルカ アルペンミルク", "zh": "妙卡牛奶巧克力", "fa": "میلکا آلپن‌میلح", "hi": "मिल्का अल्पाइन मिल्क", "ar": "ميلكا حليب جبال الألب" }
+    },
+    "milka_noisette_creamy": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Milka Noisette", "icon": "🌰", "latin": "Socolata coryli pasta", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 548, "water_g": 1.1, "protein_g": 7.1, "fat_total_g": 33.0, "carbs_total_g": 54.0, "sugar_g": 53.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Milka", "vegan": false },
+      "quality_metrics": { "hazelnut_pulp": "High concentration (Fine paste)", "texture": "Ultra-soft melt" },
+      "props": ["Sehr weiche Schokolade mit fein vermahlener Haselnusspaste", "Schmilzt deutlich schneller als die Alpenmilch-Variante", "Inbegriff der nussigen Cremigkeit"],
+      "lang": { "de": "Milka Noisette", "en": "Milka Noisette", "es": "Milka Noisette", "fr": "Milka Noisette", "ru": "Милка Нуазет", "ja": "ミルカ ノアゼット", "zh": "妙卡榛子泥巧克力", "fa": "میلکا نویزت", "hi": "मिल्का नोइसेट", "ar": "ميلكا نويزيت" }
+    },
+    "milka_ganze_haselnuesse": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Milka Ganze Haselnüsse", "icon": "🐿️", "latin": "Lactis alpina cum corylis integris", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 551, "water_g": 1.2, "protein_g": 8.0, "fat_total_g": 36.0, "carbs_total_g": 47.0, "sugar_g": 46.0, "fiber_g": 3.7 },
+      "meta": { "locations": ["everywhere"], "brand": "Milka", "vegan": false },
+      "quality_metrics": { "nut_quality": "Whole roasted hazelnuts", "crunch": "High" },
+      "props": ["Kombination aus Alpenmilchschokolade und ganzen, gerösteten Haselnüssen", "Guter Ballaststofflieferant durch die Nüsse", "Klassiker für Liebhaber von Texturkontrasten"],
+      "lang": { "de": "Milka Ganze Haselnüsse", "en": "Milka Whole Hazelnuts", "es": "Milka Avellanas enteras", "fr": "Milka Noisettes entières", "ru": "Милка Цельный фундук", "ja": "ミルカ まるごとヘーゼルナッツ", "zh": "妙卡全榛子巧克力", "fa": "میلکا فندق درسته", "hi": "मिल्का होल हेज़लनट", "ar": "ميلكا بالبندق الكامل" }
+    },
+    "milka_lu_biscuit": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Milka & LU Kekse", "icon": "🍪", "latin": "Lactis alpina et bisctoctum LU", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 518, "water_g": 1.5, "protein_g": 6.4, "fat_total_g": 27.0, "carbs_total_g": 62.0, "sugar_g": 49.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "brand": "Milka / LU", "vegan": false },
+      "quality_metrics": { "structure": "Biscuits embedded in chocolate squares", "crunch": "Classic butter biscuit" },
+      "props": ["Kollaboration zwischen Milka und der französischen Keksmarke LU", "Vier kleine Butterkekse thronen auf der Schokolade", "Perfekte Mischung aus Keks-Biss und Schokoschmelz"],
+      "lang": { "de": "Milka & LU", "en": "Milka & LU", "es": "Milka y LU", "fr": "Milka & LU", "ru": "Милка и LU", "ja": "ミルカ & LU", "zh": "妙卡与LU", "fa": "میلکا و ال-یو", "hi": "मिल्का और एलयू", "ar": "ميلكا و ال يو" }
+    },
+    "milka_tuc_cracker": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Milka & TUC Cracker", "icon": "🥨", "latin": "Lactis alpina et crustum salis TUC", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 523, "water_g": 1.4, "protein_g": 6.3, "fat_total_g": 28.0, "carbs_total_g": 60.0, "sugar_g": 50.0, "sodium_mg": 380.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "brand": "Milka / TUC", "vegan": false },
+      "quality_metrics": { "flavor_balance": "Sweet & Salty", "texture": "Crispy salted cracker" },
+      "props": ["Kollaboration zwischen Milka und TUC Cracker", "Einer der bekanntesten 'Sweet & Salty' Snacks im Supermarkt", "Das Salz im Cracker verstärkt technologisch das Aroma der Schokolade"],
+      "lang": { "de": "Milka & TUC", "en": "Milka & TUC", "es": "Milka y TUC", "fr": "Milka & TUC", "ru": "Милка и TUC", "ja": "ミルカ & TUC", "zh": "妙卡与TUC", "fa": "میلکا و تاک", "hi": "मिल्का और टीयूसी", "ar": "ميلكا و توك" }
+    },
+    "milka_kuhflecken": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Milka Kuhflecken", "icon": "🐄", "latin": "Lactis alpina variegata", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 535, "water_g": 1.0, "protein_g": 6.2, "fat_total_g": 30.0, "carbs_total_g": 59.0, "sugar_g": 58.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Milka", "vegan": false },
+      "quality_metrics": { "blend": "Alpine Milk & White Chocolate", "visual": "Cow-spot pattern" },
+      "props": ["Mischung aus Alpenmilchschokolade und weißer Schokolade", "Optisch der Milka-Kuh nachempfunden", "Klassische Schicht-Schokolade ohne zusätzliche Füllungen"],
+      "lang": { "de": "Milka Kuhflecken", "en": "Milka Cow Spots", "es": "Milka de manchas", "fr": "Milka Marbré", "ru": "Милка Пятнистая", "ja": "ミルカ 牛模様", "zh": "妙卡奶牛斑点", "fa": "میلکا لکه‌گاوی", "hi": "मिल्का काउ स्पॉट्स", "ar": "ميلكا بقع البقر" }
+    },
+    "milka_strawberry_yoghurt": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Milka Erdbeer-Joghurt", "icon": "🍓", "latin": "Lactis alpina fragaria coagulata", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 554, "water_g": 1.8, "protein_g": 5.0, "fat_total_g": 35.0, "carbs_total_g": 54.0, "sugar_g": 53.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Milka", "vegan": false },
+      "quality_metrics": { "filling": "Strawberry-Yoghurt cream", "acidity": "Light lactic tang" },
+      "props": ["Alpenmilchschokolade mit einer Füllung aus Erdbeer-Magermilchjoghurt-Creme", "Besonders beliebt im Frühjahr und Sommer", "Fettreichere Füllung als bei der reinen Alpenmilch-Tafel"],
+      "lang": { "de": "Milka Erdbeer-Joghurt", "en": "Milka Strawberry Yoghurt", "es": "Milka Fresa y Yogur", "fr": "Milka Fraise-Yaourt", "ru": "Милка Клубника и Йогурт", "ja": "ミルカ いちごヨーグルト", "zh": "妙卡草莓酸奶巧克力", "fa": "میلکا توت‌فرنگی یوگورت", "hi": "मिल्का स्ट्रॉबेरी दही", "ar": "ميلكا زبادي فراولة" }
+    }
+  },
+  "private_label_sweets_lidl_kaufland": {
+    "--- LIDL_SWEET_EMPIRE ---": "Lidl Eigenmarken (Fin Carré & Mister Choc)",
+    "chocolate_fin_carre_alpenvollmilch": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Fin Carré Alpenvollmilch (Lidl)", "icon": "🍫", "latin": "Socolata alpina lidliana", "sci": ["#sci/FoodScience", "#sci/Economy"],
+      "val": { "kcal": 551, "water_g": 1.1, "protein_g": 7.4, "fat_total_g": 34.0, "carbs_total_g": 52.8, "sugar_g": 52.0, "fiber_g": 1.8 },
+      "meta": { "locations": ["lidl"], "brand": "Fin Carré", "vegan": false },
+      "quality_metrics": { "standard": "UTZ / Rainforest Alliance Certified", "comparison": "Direct Milka Rival" },
+      "props": ["Lidls Kernprodukt im Schokoladenregal", "Technologisch auf maximale Massenkompatibilität und Schmelz optimiert", "Hervorragendes Preis-Leistungs-Verhältnis bei stabilen Inhaltsstoffen"],
+      "lang": { "de": "Fin Carré Alpenvollmilch", "en": "Fin Carré Alpine Milk", "es": "Fin Carré Leche Alpina", "fr": "Fin Carré Lait Alpin", "ru": "Фин Карре Альпийское молоко", "ja": "フィン・カレ アルペンミルク", "zh": "Fin Carré 阿尔卑斯牛奶巧克力", "fa": "فین کاره آلپن‌میلح", "hi": "फिन कैरे अल्पाइन मिल्क", "ar": "فين كاري حليب جبال الألب" }
+    },
+    "chocolate_mister_choc_milk_sticks": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mister Choc Milk & Choc (Riegel)", "icon": "🥛", "latin": "Bacilli lactei (Lidl)", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 562, "water_g": 1.4, "protein_g": 8.5, "fat_total_g": 34.8, "carbs_total_g": 53.0, "sugar_g": 52.8, "calcium_mg": 220.0 },
+      "meta": { "locations": ["lidl"], "brand": "Mister Choc", "vegan": false },
+      "quality_metrics": { "comparison": "Kinder Schokolade Clone", "milk_content": "High milk powder ratio" },
+      "props": ["Der direkte Gegenspieler zur Kinder Schokolade", "Einzeln verpackte Riegel mit Milchcremefüllung", "Fast identische Nährwertmatrix wie das Ferrero-Original"],
+      "lang": { "de": "Mister Choc Milch-Riegel", "en": "Mister Choc Milk Sticks", "es": "Barritas de leche Mister Choc", "fr": "Bâtonnets au lait Mister Choc", "ru": "Молочные палочки Мистер Чок", "ja": "ミスターチョコ ミルクスティック", "zh": "Mister Choc 牛奶条", "fa": "میستر چوک میلک استیکس", "hi": "मिस्टर चोक मिल्क स्टिक्स", "ar": "مستر تشوك أصابع الحليب" }
+    },
+    "chocolate_mister_choc_bellona": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mister Choc Bellona (Haselnuss)", "icon": "🥨", "latin": "Crustum coryli lidlianum", "sci": ["#sci/Rheology"],
+      "val": { "kcal": 558, "water_g": 1.1, "protein_g": 8.0, "fat_total_g": 35.5, "carbs_total_g": 51.0, "sugar_g": 42.0 },
+      "meta": { "locations": ["lidl"], "brand": "Mister Choc", "vegan": false },
+      "quality_metrics": { "comparison": "Kinder Bueno Clone", "texture": "Crispy wafer / Smooth cream" },
+      "props": ["Knusperwaffel mit Haselnusscremefüllung", "In der Form und Textur extrem nah am Kinder Bueno kalibriert", "Bietet den typischen 'Crunch-Melt-Effekt'"],
+      "lang": { "de": "Mister Choc Bellona", "en": "Mister Choc Bellona", "es": "Bellona Mister Choc", "fr": "Bellona Mister Choc", "ru": "Беллона Мистер Чок", "ja": "ミスターチョコ ベローナ", "zh": "Mister Choc 贝洛娜", "fa": "بلونا میستر چوک", "hi": "मिस्टर चोक बेलोना", "ar": "مستر تشوك بيلونا" }
+    },
+    "chocolate_mister_choc_choco_bites": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Mister Choc Choco Bites", "icon": "🍬", "latin": "Globuli lactei lidliani", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 570, "water_g": 1.3, "protein_g": 8.1, "fat_total_g": 36.2, "carbs_total_g": 52.8, "sugar_g": 52.5 },
+      "meta": { "locations": ["lidl"], "brand": "Mister Choc", "vegan": false },
+      "quality_metrics": { "comparison": "Kinder Schoko-Bons Clone", "inclusions": "Chopped hazelnuts" },
+      "props": ["Einzeln gewickelte Schokoladenkugeln mit Milchfüllung", "Die Antwort von Lidl auf die Schoko-Bons von Ferrero", "Hohe Prozessqualität bei der Haselnuss-Röstung"],
+      "lang": { "de": "Mister Choc Choco Bites", "en": "Mister Choc Choco Bites", "es": "Choco Bites Mister Choc", "fr": "Choco Bites Mister Choc", "ru": "Чоко Байтс Мистер Чок", "ja": "ミスターチョコ チョコバイツ", "zh": "Mister Choc 巧克力球", "fa": "چوکو بایتس میستر چوک", "hi": "मिस्टर चोक चोको बाइट्स", "ar": "مستر تشوك تشوكو بايتس" }
+    },
+
+    "--- KAUFLAND_K_CLASSIC_GALAXY ---": "Kaufland Eigenmarke (K-Classic)",
+    "chocolate_k_classic_alpenvollmilch": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Alpenvollmilch", "icon": "🍫", "latin": "Socolata alpina kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 535, "water_g": 1.2, "protein_g": 6.8, "fat_total_g": 30.5, "carbs_total_g": 57.5, "sugar_g": 56.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "standard": "Fairtrade Cocoa Program", "packaging": "Recyclable foil" },
+      "props": ["Kauflands Basis-Schokolade für den täglichen Bedarf", "Ausgewogener Schmelz, etwas süßer im Abgang als Milka", "Technologisch stabilisierte Emulsion"],
+      "lang": { "de": "K-Classic Alpenvollmilch", "en": "K-Classic Alpine Milk", "es": "K-Classic Leche Alpina", "fr": "K-Classic Lait Alpin", "ru": "К-Классик Альпийское молоко", "ja": "K-Classic アルペンミルク", "zh": "K-Classic 阿尔卑斯牛奶巧克力", "fa": "کا-کلاسیک آلپن‌میلح", "hi": "के-क्लासिक अल्पाइन मिल्क", "ar": "ك-كلاسيك حليب جبال الألب" }
+    },
+    "chocolate_k_classic_milk_sticks": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Milch-Riegel", "icon": "🥛", "latin": "Bacilli lactei kauflandii", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 565, "water_g": 1.4, "protein_g": 8.8, "fat_total_g": 35.0, "carbs_total_g": 53.5, "sugar_g": 53.2 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "comparison": "Kinder Schokolade Clone", "milk_fat": "High" },
+      "props": ["Die Kaufland-Alternative im Riegelformat", "Gute Löslichkeit im Mund, keine sandige Textur", "Beliebte Vorratspackung für Familien"],
+      "lang": { "de": "K-Classic Milch-Riegel", "en": "K-Classic Milk Bars", "es": "Barritas de leche K-Classic", "fr": "Bâtonnets au lait K-Classic", "ru": "К-Классик Молочные палочки", "ja": "K-Classic ミルクバー", "zh": "K-Classic 牛奶巧克力条", "fa": "کا-کلاسیک میلک بارز", "hi": "के-क्लासिक मिल्क बार्स", "ar": "ك-كلاسيك أصابع الحليب" }
+    },
+    "chocolate_k_classic_cookies_milk": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "K-Classic Cookies & Milk", "icon": "🍪", "latin": "Socolata crustulum kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 558, "water_g": 0.9, "protein_g": 5.2, "fat_total_g": 34.5, "carbs_total_g": 55.0, "sugar_g": 48.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "comparison": "Milka Oreo Clone", "inclusions": "Cocoa cookie bits" },
+      "props": ["Schokolade mit Milchcremefüllung und Kakaokeksstückchen", "Kauflands technologische Antwort auf Milka Oreo", "Knackiger Biss durch hohe Keks-Dichte"],
+      "lang": { "de": "K-Classic Cookies & Milk", "en": "K-Classic Cookies & Milk", "es": "K-Classic Cookies & Milk", "fr": "K-Classic Cookies & Milk", "ru": "К-Классик Печенье и молоко", "ja": "K-Classic クッキー&ミルク", "zh": "K-Classic 曲奇牛奶巧克力", "fa": "کا-کلاسیک کوکیز اند میلک", "hi": "के-क्लासिक कुकीज़ और मिल्क", "ar": "ك-كلاسيك كوكيز و حليب" }
+    },
+
+    "--- ALDI_CHOCEUR_LEGENDS ---": "Aldi Eigenmarke (Choceur)",
+    "chocolate_choceur_alpenvollmilch": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Choceur Alpenvollmilch (Aldi)", "icon": "🍫", "latin": "Socolata alpina aldiana", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 548, "water_g": 1.2, "protein_g": 7.5, "fat_total_g": 33.5, "carbs_total_g": 52.0, "sugar_g": 51.5 },
+      "meta": { "locations": ["aldi"], "brand": "Choceur", "vegan": false },
+      "quality_metrics": { "standard": "Rainforest Alliance Certified", "packaging": "Classic paper/foil combo" },
+      "props": ["Die legendäre 'Aldi-Schokolade'", "Seit Jahrzehnten einer der stabilsten Benchmarks für Discounter-Schokolade", "Rezeptur ist auf einen kräftigen Milchgeschmack optimiert"],
+      "lang": { "de": "Choceur Alpenvollmilch", "en": "Choceur Alpine Milk", "es": "Choceur Leche Alpina", "fr": "Choceur Lait Alpin", "ru": "Шозер Альпийское молоко", "ja": "ショズール アルペンミルク", "zh": "Choceur 阿尔卑斯牛奶巧克力", "fa": "شوزور آلپن‌میلح", "hi": "शोज़ूर अल्पाइन मिल्क", "ar": "شوزير حليب جبال الألب" }
+    }
+  },
+  "premium_sweets_ferrero_feodora": {
+    "--- FERRERO_GOLD_SPECIALS ---": "Ferrero Spezialitäten (Kult & Knusper)",
+    "ferrero_rocher": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Ferrero Rocher", "icon": "🟡", "latin": "Socolata aurata (Rocher)", "sci": ["#sci/FoodScience", "#sci/MaterialsScience"],
+      "val": { "kcal": 603, "water_g": 1.0, "protein_g": 8.2, "fat_total_g": 42.7, "carbs_total_g": 44.4, "sugar_g": 39.9, "fiber_g": 4.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Ferrero", "vegan": false },
+      "quality_metrics": { "structure": "Multi-layer (Nut, Cream, Wafer, Choco-Nut-Shell)", "packaging": "Gold foil (Oxygen barrier)" },
+      "props": ["Ganze Haselnuss in feiner Haselnuss-Creme", "Umhüllt von einer knusprigen Waffel und Milchschokolade mit gehackten Haselnüssen", "Der Inbegriff des 'Geschenkartikels' im Supermarkt"],
+      "lang": { "de": "Ferrero Rocher", "en": "Ferrero Rocher", "es": "Ferrero Rocher", "fr": "Ferrero Rocher", "ru": "Ферреро Роше", "ja": "フェレロ ロシェ", "zh": "费列罗榛果威化巧克力", "fa": "فررو روشه", "hi": "फेरेरो रोचर", "ar": "فيريرو روشيه" }
+    },
+    "ferrero_raffaello": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Ferrero Raffaello", "icon": "⚪", "latin": "Cocos socolata (Raffaello)", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 628, "water_g": 1.2, "protein_g": 7.2, "fat_total_g": 48.6, "carbs_total_g": 38.3, "sugar_g": 33.3, "fiber_g": 4.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Ferrero", "vegan": false },
+      "quality_metrics": { "base": "White milk cream & Coconut", "core": "Whole blanched almond" },
+      "props": ["Spezialität ohne Schokolade (weiße Fett-Zucker-Matrix)", "Ganze Mandel umhüllt von feiner Milchcreme und Kokosraspeln", "Extrem hoher Fettanteil durch Kokos- und Pflanzenfette"],
+      "lang": { "de": "Raffaello", "en": "Raffaello", "es": "Raffaello", "fr": "Raffaello", "ru": "Раффаэлло", "ja": "ラファエロ", "zh": "拉斐尔 (雪莎)", "fa": "رافائلو", "hi": "राफेलो", "ar": "رافايللو" }
+    },
+    "ferrero_giotto": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Giotto", "icon": "🌰", "latin": "Globuli coryli (Giotto)", "sci": ["#sci/Rheology", "#sci/FoodScience"],
+      "val": { "kcal": 632, "water_g": 0.8, "protein_g": 10.1, "fat_total_g": 48.0, "carbs_total_g": 38.4, "sugar_g": 32.3 },
+      "meta": { "locations": ["everywhere"], "brand": "Ferrero", "vegan": false },
+      "quality_metrics": { "format": "Miniature spheres", "hazelnut_content": "Extremely high in coating" },
+      "props": ["Gefüllte Gebäckspezialität mit Haselnusscreme", "Außen mit gehackten, gerösteten Haselnüssen umhüllt", "Technologisch optimiert auf den 'One-Bite-Melt' Effekt"],
+      "lang": { "de": "Giotto", "en": "Giotto", "es": "Giotto", "fr": "Giotto", "ru": "Джотто", "ja": "ジョット", "zh": "吉欧特榛果球", "fa": "جیوتو", "hi": "गियोटो", "ar": "جيوتو" }
+    },
+
+    "--- FEODORA_PREMIUM_TABLETS ---": "Feodora Edel-Schokoladen (Tradition & Qualität)",
+    "feodora_edel_bitter_80": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Feodora Edel-Bitter (80% Kakao)", "icon": "⬛", "latin": "Socolata amara (Feodora)", "sci": ["#sci/Phytochemistry", "#sci/Nutrition"],
+      "val": { "kcal": 589, "water_g": 1.0, "protein_g": 9.5, "fat_total_g": 48.0, "carbs_total_g": 19.0, "sugar_g": 14.0, "fiber_g": 15.0, "polyphenols_mg": 800.0 },
+      "meta": { "locations": ["kaufland", "edeka", "rewe"], "brand": "Feodora", "vegan": true },
+      "quality_metrics": { "cocoa_solid": "80% min.", "refinement": "Long conching process" },
+      "props": ["Hochwertige Zartbitterschokolade mit sehr geringem Zuckeranteil", "Reich an Antioxidantien (Polyphenole)", "Sehr hartes Bruchgeräusch (Knack) durch hohen Kakaobutter-Anteil"],
+      "lang": { "de": "Feodora Edel-Bitter 80%", "en": "Feodora Dark 80%", "es": "Feodora Negro 80%", "fr": "Feodora Noir 80%", "ru": "Феодора Горький 80%", "ja": "フェオドラ ビター80%", "zh": "Feodora 80% 黑巧克力", "fa": "شکلات تلخ فئودورا ۸۰٪", "hi": "फियोडोरा डार्क 80%", "ar": "فيودورا داكنة 80%" }
+    },
+    "feodora_edel_vollmilch": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Feodora Edel-Vollmilch (Hochfein)", "icon": "🍫", "latin": "Socolata lactea (Feodora)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 575, "water_g": 1.2, "protein_g": 7.0, "fat_total_g": 38.0, "carbs_total_g": 50.0, "sugar_g": 49.0 },
+      "meta": { "locations": ["kaufland", "edeka", "rewe"], "brand": "Feodora", "vegan": false },
+      "quality_metrics": { "cocoa_solid": "37% min.", "milk_type": "Premium milk powder" },
+      "props": ["Klassische Hochfein-Milchschokolade", "Deutlich weniger süß als Milka oder Kinder Schokolade", "Sanfter, langanhaltender Schmelz durch lange Conchierzeit"],
+      "lang": { "de": "Feodora Edel-Vollmilch", "en": "Feodora Milk Chocolate", "es": "Feodora Leche", "fr": "Feodora Lait", "ru": "Феодора Молочный", "ja": "フェオドラ ミルク", "zh": "Feodora 牛奶巧克力", "fa": "شکلات شیری فئودورا", "hi": "फियोडोरा मिल्क चॉकलेट", "ar": "فيودورا بالحليب" }
+    },
+
+    "--- NUT_AND_WHITE_CLASSICS ---": "Massive Nuss- & Weiß-Varianten",
+    "ritter_sport_ganze_haselnuss": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Ritter Sport Ganze Haselnuss", "icon": "🟦", "latin": "Socolata cum corylis integris", "sci": ["#sci/Nutrition", "#sci/Economy"],
+      "val": { "kcal": 559, "water_g": 1.5, "protein_g": 8.9, "fat_total_g": 38.0, "carbs_total_g": 43.0, "sugar_g": 41.0, "fiber_g": 4.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Ritter Sport", "vegan": false },
+      "quality_metrics": { "inclusion_ratio": "25% whole hazelnuts", "format": "Square (Quadratisch. Praktisch. Gut.)" },
+      "props": ["Der deutsche Benchmark für Nussschokolade", "Handverlesene, goldbraun geröstete ganze Haselnüsse", "Optimiertes Verhältnis von Knackigkeit und Schmelz"],
+      "lang": { "de": "Ritter Sport Ganze Haselnuss", "en": "Ritter Sport Whole Hazelnut", "es": "Ritter Sport Avellanas Enteras", "fr": "Ritter Sport Noisettes Entières", "ru": "Риттер Спорт Цельный фундук", "ja": "リッタースポーツ まるごとヘーゼルナッツ", "zh": "力特律动全榛子巧克力", "fa": "ریتر اسپورت فندق درسته", "hi": "रिट्टर स्पोर्ट होल हेज़लनट", "ar": "ريتر سبورت بالبندق الكامل" }
+    },
+    "milka_weisse_schokolade": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Milka Weiße Schokolade", "icon": "⬜", "latin": "Socolata alba alpina", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 539, "water_g": 1.0, "protein_g": 4.4, "fat_total_g": 30.0, "carbs_total_g": 63.0, "sugar_g": 63.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Milka", "vegan": false },
+      "quality_metrics": { "base": "Cocoa butter, sugar, milk", "cocoa_solids": "0% (only butter)" },
+      "props": ["Besteht rein aus Kakaobutter, Milchpulver und Zucker", "Sehr hoher Zuckergehalt, liefert sofortige Energie", "Extrem cremiges Mundgefühl, typischer Alpenmilch-Touch"],
+      "lang": { "de": "Milka Weiße Schokolade", "en": "Milka White Chocolate", "es": "Milka Blanco", "fr": "Milka Blanc", "ru": "Милка Белый шоколаad", "ja": "ミルカ ホワイトチョコ", "zh": "妙卡白巧克力", "fa": "شکلات سفید میلکا", "hi": "मिल्का व्हाइट चॉकलेट", "ar": "ميلكا شوكولاتة بيضاء" }
+    },
+	"chocolate_ritter_marzipan": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Ritter Sport Marzipan", "icon": "🟥", "latin": "Socolata cum amygdalis pasta", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 497, "water_g": 8.0, "protein_g": 6.7, "fat_total_g": 28.0, "carbs_total_g": 52.0, "sugar_g": 51.0, "fiber_g": 3.9 },
+      "meta": { "locations": ["everywhere"], "brand": "Ritter Sport", "vegan": true },
+      "quality_metrics": { "filling": "36% Edel-Marzipan", "cocoa_content": "50% Dark Chocolate" },
+      "props": ["Kombination aus halbbitterer Schokolade und feinstem Edel-Marzipan", "Eine der wenigen klassischen Sorten, die von Natur aus vegan sind", "Hoher Mandelanteil sorgt für wertvolle Magnesiumquellen"],
+      "lang": { "de": "Ritter Sport Marzipan", "en": "Ritter Sport Marzipan", "es": "Ritter Sport Marzipán", "fr": "Ritter Sport Massepain", "ru": "Риттер Спорт Марципан", "ja": "リッタースポーツ マジパン", "zh": "力特律动马zipan巧克力", "fa": "ریتر اسپورت مارزیپان", "hi": "रिट्टर स्पोर्ट मार्जिपन", "ar": "ريتر سبورت مارزيپان" }
+    },
+    "chocolate_ritter_knusperkeks": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Ritter Sport Knusperkeks", "icon": "🟫", "latin": "Socolata cum bisctoctum", "sci": ["#sci/Rheology", "#sci/FoodScience"],
+      "val": { "kcal": 555, "water_g": 1.2, "protein_g": 6.5, "fat_total_g": 34.0, "carbs_total_g": 54.0, "sugar_g": 48.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Ritter Sport", "vegan": false },
+      "quality_metrics": { "inclusion": "Square butter biscuit", "texture": "Crispy / Snap" },
+      "props": ["Ein quadratischer Butterkeks, der exakt in die Schokoladenhülle passt", "Technologisch optimiert, um auch bei unterschiedlichen Temperaturen knusprig zu bleiben", "Klassische Alpenmilchschokolade als Basis"],
+      "lang": { "de": "Ritter Sport Knusperkeks", "en": "Ritter Sport Butter Biscuit", "es": "Ritter Sport Galleta", "fr": "Ritter Sport Biscuits", "ru": "Риттер Спорт Печенье", "ja": "リッタースポーツ ビスケット", "zh": "力特律动酥脆饼干巧克力", "fa": "ریتر اسپورت بیسکویتی", "hi": "रिट्टर स्पोर्ट बटर बिस्किट", "ar": "ريتر سبورت بالبسكويت" }
+    }
+  },
+  "GUMMY_BEAR": {
+    "gummy_haribo_goldbaeren": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Haribo Goldbären", "icon": "🐻", "latin": "Ursuli gelati (Haribo)", "sci": ["#sci/FoodScience", "#sci/PolymerScience"],
+      "val": { "kcal": 343, "water_g": 15.0, "protein_g": 6.9, "fat_total_g": 0.5, "carbs_total_g": 77.0, "sugar_g": 46.0, "fiber_g": 0.1 },
+      "meta": { "locations": ["everywhere"], "brand": "Haribo", "vegan": false },
+      "quality_metrics": { "texture": "Elastic / Chewy", "glazing": "Beeswax / Carnauba wax" },
+      "props": ["Das Original seit 1922", "Basiert auf Schweinegelatine für den charakteristischen Biss", "Farben werden ausschließlich aus Frucht- und Pflanzenkonzentraten gewonnen"],
+      "lang": { "de": "Haribo Goldbären", "en": "Haribo Goldbears", "es": "Ositos de Oro Haribo", "fr": "Ours d'Or Haribo", "ru": "Золотые мишки Харибо", "ja": "ハリボー ゴールドベア", "zh": "哈瑞宝金熊", "fa": "هاریبو خرس طلایی", "hi": "हारिबो गोल्डबियर्स", "ar": "هاريبو الدببة الذهبية" }
+    },
+    "gummy_sugarland_bears_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Sugarland Fruchtgummibären (Lidl)", "icon": "🧸", "latin": "Ursuli gelati lidliani", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 338, "water_g": 16.0, "protein_g": 6.0, "fat_total_g": 0.2, "carbs_total_g": 78.0, "sugar_g": 50.0 },
+      "meta": { "locations": ["lidl"], "brand": "Sugarland", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget Hero", "flavor": "High fruit acid profile" },
+      "props": ["Lidls Antwort auf den Goldbären-Standard", "Oft etwas weicher in der Konsistenz als das Original", "Verwendet eine ähnliche Gelatine-Matrix bei geringerem Preis"],
+      "lang": { "de": "Sugarland Gummibären", "en": "Sugarland Gummy Bears", "es": "Ositos de goma Sugarland", "fr": "Oursons gélifiés Sugarland", "ru": "Мишки Шугарленд", "ja": "シュガーランド グミベア", "zh": "Sugarland 软糖熊", "fa": "پاستیل خرسی شوگرلند", "hi": "शुगरलैंड गमी बियर्स", "ar": "شوغر لاند دببة هلامية" }
+    },
+    "gummy_haribo_color_rado": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Haribo Color-Rado", "icon": "🌈", "latin": "Varietas gelata (Haribo)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 342, "water_g": 14.0, "protein_g": 2.8, "fat_total_g": 1.2, "carbs_total_g": 80.0, "sugar_g": 52.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Haribo", "vegan": false },
+      "quality_metrics": { "diversity": "Mix of fruit gum, licorice, and foam", "complexity": "Multi-texture production" },
+      "props": ["Die beliebteste Mischung Deutschlands", "Enthält Schaumzucker-Elemente und Lakritz-Kombinationen", "Technologisch anspruchsvoll durch die Mischung verschiedener Produktionslinien"],
+      "lang": { "de": "Haribo Color-Rado", "en": "Haribo Color-Rado", "es": "Haribo Color-Rado", "fr": "Haribo Color-Rado", "ru": "Харибо Колор-Радо", "ja": "ハリボー コロラド", "zh": "哈瑞宝 Color-Rado", "fa": "هاریبو کالر-رادو", "hi": "हारिबो कलर-राडो", "ar": "هاريبو كولور رادو" }
+    },
+    "gummy_k_classic_phantasia_kaufland": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Fruchtgummi Mix (Kaufland)", "icon": "🐲", "latin": "Varietas gelata kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 335, "water_g": 15.5, "protein_g": 5.5, "fat_total_g": 0.1, "carbs_total_g": 79.0, "sugar_g": 51.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "comparison": "Haribo Phantasia Clone", "sensory": "High aroma intensity" },
+      "props": ["Kauflands große Mischung mit verschiedenen Tierformen und Schaumzucker", "Technologisch auf die 'Phantasia'-Rezeptur kalibriert", "Bietet eine breite Palette an künstlichen und natürlichen Aromen"],
+      "lang": { "de": "K-Classic Fruchtgummi-Mix", "en": "K-Classic Gummy Mix", "es": "Mezcla de gominolas K-Classic", "fr": "Mélange gélifié K-Classic", "ru": "Фруктовый микс K-Classic", "ja": "K-Classic グミミックス", "zh": "K-Classic 软糖混合装", "fa": "میکس پاستیل کا-کلاسیک", "hi": "के-क्लासिक गमी मिक्स", "ar": "ك-كلاسيك مزيج هلامي" }
+    },
+
+    "gummy_haribo_gluehwuermchen": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Haribo Saure Glühwürmchen", "icon": "🐛", "latin": "Lumbricus acidus (Haribo)", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 337, "water_g": 15.0, "protein_g": 5.0, "fat_total_g": 0.5, "carbs_total_g": 77.0, "sugar_g": 45.0, "acid_type": "Citric / Malic" },
+      "meta": { "locations": ["everywhere"], "brand": "Haribo", "vegan": false },
+      "quality_metrics": { "texture": "Soft-Chew", "coating": "Acidic Sugar" },
+      "props": ["Zweifarbige Fruchtgummi-Würmer mit saurer Kandierung", "Kombiniert verschiedene Fruchtaromen in einem Stück", "Technologisch optimierte Säurefreisetzung für den 'Kick'-Effekt"],
+      "lang": { "de": "Saure Glühwürmchen", "en": "Sour Glowworms", "es": "Gusanos Ácidos", "fr": "Vers Luisants Acidulés", "ru": "Кислые светлячки", "ja": "サワー・グローワーム", "zh": "酸味萤火虫软糖", "fa": "کرم‌های شب‌تاب ترش", "hi": "खट्टा ग्लोवर्म्स", "ar": "ديدان مضيئة حامضة" }
+    },
+    "gummy_sugarland_sour_worms_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Sugarland Saure Würmer (Lidl)", "icon": "🪱", "latin": "Lumbricus lidlianus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 332, "water_g": 16.5, "protein_g": 4.8, "fat_total_g": 0.1, "carbs_total_g": 78.0, "sugar_g": 48.0 },
+      "meta": { "locations": ["lidl"], "brand": "Sugarland", "vegan": false },
+      "quality_metrics": { "comparison": "Glühwürmchen Clone", "acidity": "Aggressive Malic focus" },
+      "props": ["Lidls direkte Antwort auf die Glühwürmchen", "Oft etwas 'bissfester' als das Original", "Verwendet künstliche Aromen zur Kostenoptimierung"],
+      "lang": { "de": "Sugarland Saure Würmer", "en": "Sugarland Sour Worms", "es": "Gusanos ácidos Lidl", "fr": "Vers acidulés Lidl", "ru": "Кислые червячки Лидл", "ja": "Lidl サワーワーム", "zh": "Lidl 酸味软糖虫", "fa": "کرم‌های ترش لیدل", "hi": "लिडल खट्टा कीड़े", "ar": "ديدان حامضة ليدل" }
+    },
+
+    "--- THE_CONFECTION_LEGENDS ---": "Konfekt & Spezialformen (Pico-Balla)",
+    "gummy_haribo_pico_balla": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Haribo Pico-Balla", "icon": "⚽", "latin": "Globuli multicolor (Haribo)", "sci": ["#sci/FoodScience", "#sci/MaterialsScience"],
+      "val": { "kcal": 371, "water_g": 10.0, "protein_g": 2.2, "fat_total_g": 3.4, "carbs_total_g": 82.0, "sugar_g": 61.0, "fiber_g": 0.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Haribo", "vegan": false },
+      "quality_metrics": { "structure": "Triple-layer Konfekt", "texture": "Soft-Foam / Jelly hybrid" },
+      "props": ["Kleines, buntes Konfekt mit Fruchtgummi- und Schaumzucker-Elementen", "Technologisch extrem aufwendige Extrusion", "Höherer Kalorienwert durch den Konfekt-Anteil im Vergleich zu Goldbären"],
+      "lang": { "de": "Pico-Balla", "en": "Pico-Balla", "es": "Pico-Balla", "fr": "Pico-Balla", "ru": "Пико-Балла", "ja": "ピコ・バラ", "zh": "比克巴拉软糖", "fa": "پیکو-بالا", "hi": "पिको-बाला", "ar": "بيكو بالا" }
+    },
+    "gummy_sugarland_mini_rolls_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Sugarland Mini-Rollen (Lidl)", "icon": "🍥", "latin": "Globuli lidliani", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 365, "water_g": 11.0, "protein_g": 2.0, "fat_total_g": 3.0, "carbs_total_g": 81.0, "sugar_g": 59.0 },
+      "meta": { "locations": ["lidl"], "brand": "Sugarland", "vegan": false },
+      "quality_metrics": { "comparison": "Pico-Balla Clone", "flavor": "High intensity fruit blend" },
+      "props": ["Der Pico-Balla Klon vom Discounter", "Gleiche zylindrische Form mit farbigem Kern", "Oft in größeren Vorteilspackungen erhältlich"],
+      "lang": { "de": "Mini-Rollen", "en": "Mini Rolls", "es": "Mini Rollos", "fr": "Mini Rouleaux", "ru": "Мини-роллы", "ja": "ミニロール", "zh": "迷你卷软糖", "fa": "مینی رولز", "hi": "मिनी रोल्स", "ar": "ميني رولز" }
+    },
+
+    "--- TROPICAL_AND_SOFT_GUMMIES ---": "Tropische & weiche Texturen (Tropifrutti)",
+    "gummy_haribo_tropifrutti": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Haribo Tropifrutti", "icon": "🌴", "latin": "Fructus tropici gelati", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 349, "water_g": 13.0, "protein_g": 4.5, "fat_total_g": 0.5, "carbs_total_g": 82.0, "sugar_g": 54.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Haribo", "vegan": false },
+      "quality_metrics": { "texture": "Soft core / Hard shell", "flavors": ["Passionfruit", "Pineapple", "Banana", "Mango"] },
+      "props": ["Einzigartige Konsistenz: Außen fest, innen weich", "Verwendet tropische Fruchtaromen", "Erhöhte Stärkemenge für die charakteristische Textur"],
+      "lang": { "de": "Tropifrutti", "en": "Tropifrutti", "es": "Tropifrutti", "fr": "Tropifrutti", "ru": "Тропифрутти", "ja": "トロピフルッティ", "zh": "热带水果软糖", "fa": "تروپی‌فروتی", "hi": "ट्रॉपीफ्रूटी", "ar": "تروبي فروتي" }
+    },
+    "gummy_haribo_pharsich_ringe": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Haribo Pfirsiche", "icon": "🍑", "latin": "Persica gelata", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 349, "water_g": 14.0, "protein_g": 4.5, "fat_total_g": 0.5, "carbs_total_g": 82.0, "sugar_g": 63.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Haribo", "vegan": false },
+      "quality_metrics": { "texture": "Extra-Soft", "coating": "Fine sugar dusting" },
+      "props": ["Sehr weiches Fruchtgummi mit intensivem Pfirsicharoma", "Einer der Klassiker im Bereich der gezuckerten Fruchtgummis", "Hoher Zuckergehalt durch die äußere Schicht"],
+      "lang": { "de": "Pfirsiche", "en": "Peaches", "es": "Melocotones", "fr": "Pêches", "ru": "Персики", "ja": "ピーチ", "zh": "桃子软糖", "fa": "هلو", "hi": "आड़ू", "ar": "خوخ" }
+    },
+
+    "--- CHEWY_POWER ---": "Kaubonbons (Maoam)",
+    "chewy_maoam_bloxx": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Maoam Bloxx", "icon": "🍬", "latin": "Masticabile (Maoam)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 394, "water_g": 5.0, "protein_g": 1.0, "fat_total_g": 6.4, "carbs_total_g": 84.0, "sugar_g": 60.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Maoam / Haribo", "vegan": false },
+      "quality_metrics": { "texture": "Long-lasting chew", "fat_type": "Vegetable fat (Palm)" },
+      "props": ["Der deutsche Standard für Kaubonbons", "Basiert auf einer Fett-Zucker-Matrix mit Gelatine für den Kau-Widerstand", "Ikonische 5er-Würfel-Verpackung"],
+      "lang": { "de": "Maoam Bloxx", "en": "Maoam Bloxx", "es": "Maoam Bloxx", "fr": "Maoam Bloxx", "ru": "Маоам Блокс", "ja": "マオアム", "zh": "毛安 Kaubonbon", "fa": "ماوام", "hi": "माओअम", "ar": "ماوام" }
+    },
+    "marshmallow_haribo_chamallows": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Haribo Chamallows (Pink & White)", "icon": "☁️", "latin": "Althaea gelata (Haribo)", "sci": ["#sci/FoodScience", "#sci/PolymerScience"],
+      "val": { "kcal": 333, "water_g": 16.0, "protein_g": 3.5, "fat_total_g": 0.5, "carbs_total_g": 80.0, "sugar_g": 68.0, "fiber_g": 0.1 },
+      "meta": { "locations": ["everywhere"], "brand": "Haribo", "vegan": false },
+      "quality_metrics": { "texture": "Elastic / Spongy", "melting_point": "Low (Caramelizes on fire)" },
+      "props": ["Der Klassiker für Lagerfeuer und Kakao-Toppings", "Besteht primär aus aufgeschlagenem Zucker und Gelatine", "Die Vanille-Aromen sind auf maximale Harmonie mit Heißgetränken kalibriert"],
+      "lang": { "de": "Marshmallows / Chamallows", "en": "Marshmallows", "es": "Malvaviscos", "fr": "Guimauves", "ru": "Маршмэллоу", "ja": "マシュマロ", "zh": "棉花糖", "fa": "مارشمالو", "hi": "मार्शमैलो", "ar": "مارشميلو" }
+    },
+    "marshmallow_sugarland_bbq_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Sugarland BBQ Marshmallows (Lidl)", "icon": "🔥", "latin": "Althaea gigas lidliana", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 330, "water_g": 17.0, "protein_g": 3.0, "fat_total_g": 0.1, "carbs_total_g": 81.0, "sugar_g": 70.0 },
+      "meta": { "locations": ["lidl"], "brand": "Sugarland", "vegan": false },
+      "quality_metrics": { "size": "Extra Large (Giant)", "usage": "Optimized for Grilling" },
+      "props": ["Lidls Riesen-Variante für den Grillspieß", "Durch die Größe karamellisiert die Außenhülle, während der Kern flüssig wird", "Identische Nährwertmatrix wie Markenprodukte bei höherem Volumen"],
+      "lang": { "de": "BBQ Marshmallows", "en": "BBQ Marshmallows", "es": "Malvaviscos para barbacoa", "fr": "Guimauves BBQ", "ru": "Зефир для гриля", "ja": "バーベキューマシュマロ", "zh": "烧烤棉花糖", "fa": "مارشمالو کبابی", "hi": "बीबीक्यू मार्शमैलो", "ar": "مارشميلو للشواء" }
+    }
+  },
+  "salty_snack_universe": {
+    "--- POTATO_CHIP_BENCHMARKS ---": "Kartoffelchips (Paprika, Salzig, Chakalaka)",
+    "chips_funny_frisch_paprika": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "funny-frisch Chipsfrisch (Ungarisch)", "icon": "🍟", "latin": "Solanum crispum hungaricum", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 540, "water_g": 2.0, "protein_g": 6.0, "fat_total_g": 34.0, "carbs_total_g": 49.0, "sugar_g": 2.5, "sodium_mg": 600.0 },
+      "meta": { "locations": ["everywhere"], "brand": "funny-frisch", "vegan": true },
+      "quality_metrics": { "flavor_focus": "Bell pepper & Chili", "cut": "Ultra-thin slice" },
+      "props": ["Der unangefochtene Marktführer in Deutschland", "Ikonische Gewürzmischung mit Fokus auf Umami", "Verwendet Sonnenblumenöl für ein reines Geschmacksprofil"],
+      "lang": { "de": "funny-frisch Ungarisch", "en": "funny-frisch Hungarian Style", "es": "Patatas fritas húngaras", "fr": "Chips à la hongroise", "ru": "Чипсы по-венгерски", "ja": "フニフリ パプリカ味", "zh": "芬尼弗里施匈牙利风味薯片", "fa": "چیپس مجارستانی", "hi": "हंगेरियन स्टाइल चिप्स", "ar": "شيبس على الطريقة المجرية" }
+    },
+    "chips_funny_frisch_chakalaka": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "funny-frisch Chakalaka", "icon": "🇿🇦", "latin": "Solanum crispum africanum", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 535, "water_g": 1.8, "protein_g": 5.8, "fat_total_g": 33.0, "carbs_total_g": 51.0, "sugar_g": 3.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "funny-frisch", "vegan": true },
+      "quality_metrics": { "spice_profile": "South African inspired / Ginger / Garlic / Chili" },
+      "props": ["Scharf-würziges Aroma basierend auf dem südafrikanischen Relish", "Etablierte Sondersorte mit hohem Suchtfaktor", "Komplexere Gewürzmatrix als klassisches Paprika"],
+      "lang": { "de": "funny-frisch Chakalaka", "en": "funny-frisch Chakalaka", "es": "Chips Chakalaka", "fr": "Chips Chakalaka", "ru": "Чипсы Чакалака", "ja": "チャカラカ チップス", "zh": "Chakalaka 薯片", "fa": "چیپس چاکالاکا", "hi": "चकालाका चिप्स", "ar": "شيبس شاكالاكا" }
+    },
+    "chips_crusti_croc_paprika_lidl": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Crusti Croc Paprika (Lidl)", "icon": "🥔", "latin": "Solanum crispum lidlianum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 532, "water_g": 2.2, "protein_g": 5.5, "fat_total_g": 33.0, "carbs_total_g": 52.0, "sugar_g": 1.5 },
+      "meta": { "locations": ["lidl"], "brand": "Crusti Croc", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget King", "texture": "Classic thin cut" },
+      "props": ["Lidls Antwort auf funny-frisch", "Oft etwas salzlastiger kalibriert", "Bietet fast identische Nährwerte zum halben Preis"],
+      "lang": { "de": "Crusti Croc Paprika", "en": "Lidl Paprika Chips", "es": "Patatas Lidl Paprika", "fr": "Chips Paprika Lidl", "ru": "Чипсы Лидл Паприка", "ja": "Lidl パプリカチップス", "zh": "Lidl 辣椒味薯片", "fa": "چیپس پاپریکا لیدل", "hi": "लिडल पाप्रीका चिप्स", "ar": "شيبس بابريكا ليدل" }
+    },
+
+    "--- EXTRUDED_SPECIALS ---": "Extruder-Snacks (Bacon & Zwiebel)",
+    "snack_bacon_chips_k_classic": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "K-Classic Bacon Snacks", "icon": "🥓", "latin": "Triticum crustum fumosum", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 490, "water_g": 4.0, "protein_g": 5.0, "fat_total_g": 24.0, "carbs_total_g": 62.0, "sugar_g": 3.0 },
+      "meta": { "locations": ["kaufland", "rewe"], "brand": "K-Classic / funny-frisch", "vegan": true },
+      "quality_metrics": { "texture": "Corn/Wheat-based extrusion", "flavor": "Smoke & Savory" },
+      "props": ["Mais-Weizen-Snack mit intensivem Raucharoma", "Trotz des Namens meistens vegan (Raucharoma statt Fleisch)", "Ikonische Form, die an Speckstreifen erinnert"],
+      "lang": { "de": "Bacon Chips", "en": "Bacon Snacks", "es": "Aperitivos de bacon", "fr": "Snacks saveur bacon", "ru": "Чипсы со вкусом бекона", "ja": "ベーコンチップス", "zh": "培根味薯片", "fa": "چیپس با طعم بیکن", "hi": "बेकन चिप्स", "ar": "شيبس بنكهة الباكون" }
+    },
+    "snack_onion_rings_penny": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Penny Zwiebelringe", "icon": "🧅", "latin": "Allium cepa crustum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 510, "water_g": 3.0, "protein_g": 4.5, "fat_total_g": 28.0, "carbs_total_g": 58.0, "sugar_g": 4.0 },
+      "meta": { "locations": ["penny"], "brand": "Penny (Best Moments / Mike Mitchell's)", "vegan": true },
+      "quality_metrics": { "texture": "Airy / Light", "flavor": "Sweet Onion" },
+      "props": ["Kult-Snack von Penny", "Extrem leicht im Biss durch hohen Luftanteil in der Matrix", "Starker Fokus auf Zwiebelpulver und leichte Süße"],
+      "lang": { "de": "Zwiebelringe", "en": "Onion Rings (Snack)", "es": "Aros de cebolla", "fr": "Rondelles d'oignon", "ru": "Луковые кольца (закуска)", "ja": "オニオンリングスナック", "zh": "洋葱圈零食", "fa": "پیاز سوخاری (اسنک)", "hi": "प्याज के छल्ले", "ar": "حلقات البصل (سناك)" }
+    },
+
+    "--- TORTILLA_AND_NACHO_MATRIX ---": "Tortilla-Chips & Dips (Mais-Fokus)",
+    "tortilla_doritos_nacho_cheese": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Doritos Nacho Cheese", "icon": "📐", "latin": "Zea mays socolata (Doritos)", "sci": ["#sci/FoodScience", "#sci/Neurobiology"],
+      "val": { "kcal": 505, "water_g": 1.5, "protein_g": 7.5, "fat_total_g": 26.0, "carbs_total_g": 58.0, "sugar_g": 2.5, "msg_intensity": "High" },
+      "meta": { "locations": ["everywhere"], "brand": "Doritos (PepsiCo)", "vegan": false },
+      "quality_metrics": { "texture": "Hard crunch (Masa flour)", "coating": "Intense cheese powder" },
+      "props": ["Der globale Standard für Tortilla-Chips", "Extrem hoher MSG-Anteil (Geschmacksverstärker) für den 'Crave'-Effekt", "Dickere Mais-Matrix als bei europäischen Tortillas"],
+      "lang": { "de": "Doritos Nacho Cheese", "en": "Doritos Nacho Cheese", "es": "Doritos Queso", "fr": "Doritos Fromage", "ru": "Доритос Сыр", "ja": "ドリトス ナチョチーズ", "zh": "多力多姿芝士味", "fa": "دوریتوس پنیر ناچو", "hi": "डोरिटोस नाचो चीज़", "ar": "دوريتوس جبنة الناتشو" }
+    },
+    "tortilla_chio_salted": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Chio Tortilla Chips (Salted)", "icon": "🌽", "latin": "Zea mays salsa", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 480, "water_g": 2.0, "protein_g": 6.5, "fat_total_g": 22.0, "carbs_total_g": 63.0, "sugar_g": 0.8 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Chio", "vegan": true },
+      "quality_metrics": { "purity": "Classic Corn & Salt", "texture": "Crispy thin" },
+      "props": ["Die ideale Basis für Dips", "Weniger Eigengeschmack als Doritos, Fokus auf die Mais-Note", "Geringerer Fettanteil als klassische Kartoffelchips"],
+      "lang": { "de": "Chio Tortilla Gesalzen", "en": "Chio Salted Tortilla", "es": "Tortilla Chio Salada", "fr": "Chio Tortilla Salée", "ru": "Чио Тортилья Соленая", "ja": "Chio トルティーヤソルト", "zh": "Chio 原味玉米片", "fa": "چیپس ذرت چیو", "hi": "चियो साल्टेड टॉर्टिला", "ar": "تشيو تورتيلا مملحة" }
+    },
+
+    "--- NACHO_DIP_COUNCIL ---": "Nacho-Saucen (Käse, Salsa, Guacamole)",
+    "dip_chio_cheese": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Chio Dip! Cheese", "icon": "🧀", "latin": "Emulsio casei (Chio)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 155, "water_g": 75.0, "protein_g": 3.0, "fat_total_g": 12.0, "carbs_total_g": 8.0, "sugar_g": 4.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Chio", "vegan": false },
+      "quality_metrics": { "heat_stability": "High (can be warmed)", "viscosity": "Thick" },
+      "props": ["Der Kino-Klassiker für zu Hause", "Cremige Käse-Emulsion mit leichter Jalapeño-Schärfe", "Technologisch stabilisiert, um auch bei Zimmertemperatur nicht fest zu werden"],
+      "lang": { "de": "Chio Käse-Dip", "en": "Chio Cheese Dip", "es": "Salsa de queso Chio", "fr": "Sauce fromage Chio", "ru": "Сырный соус Чио", "ja": "Chio チーズディップ", "zh": "Chio 芝士蘸酱", "fa": "دیپ پنیر چیو", "hi": "चियो चीज़ डिप", "ar": "تشيو صوص الجبن" }
+    },
+    "dip_k_classic_salsa_hot": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Salsa Dip (Scharf)", "icon": "🌶️", "latin": "Salsa lycopersici acris", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 75, "water_g": 85.0, "protein_g": 1.2, "fat_total_g": 0.2, "carbs_total_g": 15.0, "sugar_g": 11.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "vegetable_content": "High (Tomatoes, Onions, Peppers)", "fat": "Near zero" },
+      "props": ["Kauflands scharfe Salsa-Alternative", "Basiert auf Tomatenstücken und Chilischoten", "Deutlich kalorienärmer als Käse-Dips"],
+      "lang": { "de": "K-Classic Salsa scharf", "en": "K-Classic Hot Salsa", "es": "Salsa picante K-Classic", "fr": "Salsa piquante K-Classic", "ru": "Острая сальса K-Classic", "ja": "K-Classic サルサホット", "zh": "K-Classic 特辣莎莎酱", "fa": "دیپ سالسا تند کا-کلاسیک", "hi": "के-क्लासिक हॉट सालसा", "ar": "ك-كلاسيك صلصة سالسا حارة" }
+    },
+
+    "--- KANIA_BBQ_AND_GRILL ---": "Kania Grill-Saucen (Lidls Antwort auf Knorr/Heinz)",
+    "sauce_knoblauch_kania_lidl": {
+      "label": "Kania Knoblauch Sauce", "icon": "🧄", "latin": "Allium sativum emulsio", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 385, "water_g": 48.0, "protein_g": 1.2, "fat_total_g": 38.0, "carbs_total_g": 9.5, "sugar_g": 6.5, "sodium_mg": 750.0 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": false },
+      "quality_metrics": { "base": "Rapeseed oil & Yogurt-style", "garlic_intensity": "Medium-High" },
+      "props": ["Lidls Standard-Sauce für Grillfleisch und Baguette", "Hoher Fettanteil sorgt für stabilen Geschmackstransfer", "Technologisch optimiert, um auch bei Hitze am Fleisch zu haften"],
+      "lang": { "de": "Kania Knoblauch Sauce", "en": "Kania Garlic Sauce", "es": "Salsa de ajo Kania", "fr": "Sauce à l'ail Kania", "ru": "Чесночный соус Каниа", "ja": "カニア ガーリックソース", "zh": "Kania 大蒜酱", "fa": "سس سیر کانیا", "hi": "कानिया लहसुन सॉस", "ar": "صوص الثوم كانيا" }
+    },
+    "sauce_steak_kania_lidl": {
+      "label": "Kania Steak Sauce", "icon": "🥩", "latin": "Salsa carnis kaniensis", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 115, "water_g": 65.0, "protein_g": 1.0, "fat_total_g": 0.2, "carbs_total_g": 26.0, "sugar_g": 22.0 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": true },
+      "quality_metrics": { "base": "Tomato & Spices", "flavor": "Smoky / Peppery" },
+      "props": ["Würzige Sauce auf Tomatenbasis mit leichter Rauchnote", "Weniger Fett als weiße Saucen, dafür fokus auf Essig und Gewürze", "Ideal für Rindfleisch und Burger"],
+      "lang": { "de": "Kania Steak Sauce", "en": "Kania Steak Sauce", "es": "Salsa para carne Kania", "fr": "Sauce steak Kania", "ru": "Стейк-соус Каниа", "ja": "カニア ステーキソース", "zh": "Kania 牛排酱", "fa": "سس استیک کانیا", "hi": "कानिया स्टेक सॉस", "ar": "صوص الستيك كانيا" }
+    },
+    "sauce_cocktail_kania_lidl": {
+      "label": "Kania Cocktail Sauce", "icon": "🍹", "latin": "Emulsio rosa kaniensis", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 412, "water_g": 42.0, "protein_g": 1.1, "fat_total_g": 41.0, "carbs_total_g": 10.5, "sugar_g": 8.0 },
+      "meta": { "locations": ["lidl"], "brand": "Kania", "vegan": false },
+      "quality_metrics": { "base": "Mayo & Tomato paste mix", "flavor": "Sweet / Brandy note" },
+      "props": ["Klassische rosa Sauce für Meeresfrüchte oder Sandwiches", "Sehr cremige Textur mit feiner Säure-Balance", "Technologisch stabilisierte Fett-Matrix"],
+      "lang": { "de": "Kania Cocktail Sauce", "en": "Kania Cocktail Sauce", "es": "Salsa cóctel Kania", "fr": "Sauce cocktail Kania", "ru": "Коктейльный соус Каниа", "ja": "カニア カクテルソース", "zh": "Kania 鸡尾酒酱", "fa": "سس کوکتل کانیا", "hi": "कानिया कॉकटेल सॉस", "ar": "صوص كوكتيل كانيا" }
+    },
+
+    "--- VITASIA_ASIAN_SELECTION ---": "Vitasia (Lidls Asien-Marke)",
+    "sauce_sweet_chili_vitasia": {
+      "label": "Vitasia Sweet Chili Sauce", "icon": "🌶️", "latin": "Salsa dulcis acris vitasia", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 185, "water_g": 52.0, "protein_g": 0.5, "fat_total_g": 0.1, "carbs_total_g": 45.0, "sugar_g": 42.0, "sodium_mg": 900.0 },
+      "meta": { "locations": ["lidl"], "brand": "Vitasia", "vegan": true },
+      "quality_metrics": { "base": "Sugar, Water, Chili, Garlic", "viscosity": "Syrupy" },
+      "props": ["Der absolute Bestseller der Asien-Wochen", "Ganzstückige Chiliflocken in einer süßen Stärkematrix", "Universaldip für Frühlingsrollen und Geflügel"],
+      "lang": { "de": "Sweet Chili Sauce", "en": "Sweet Chili Sauce", "es": "Salsa de chile dulce", "fr": "Sauce chili douce", "ru": "Сладкий соус чили", "ja": "スイートチリソース", "zh": "甜辣酱", "fa": "سس چیلی شیرین", "hi": "स्वीट चिली सॉस", "ar": "صلصة الفلفل الحلو" }
+    },
+    "sauce_teriyaki_vitasia": {
+      "label": "Vitasia Teriyaki Sauce / Marinade", "icon": "🥢", "latin": "Soia condita vitasia", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 160, "water_g": 58.0, "protein_g": 4.5, "fat_total_g": 0.1, "carbs_total_g": 35.0, "sugar_g": 30.0 },
+      "meta": { "locations": ["lidl"], "brand": "Vitasia", "vegan": true },
+      "quality_metrics": { "base": "Soy sauce, Ginger, Garlic", "usage": "Glazing / Marinade" },
+      "props": ["Dickflüssige Würzsauce für Wok-Gerichte", "Hoher Zuckergehalt ermöglicht perfektes Karamellisieren (Glazing) am Fleisch", "Intensives Umami-Profil"],
+      "lang": { "de": "Teriyaki Sauce", "en": "Teriyaki Sauce", "es": "Salsa Teriyaki", "fr": "Sauce Teriyaki", "ru": "Соус Терияки", "ja": "テリヤキソース", "zh": "照烧酱", "fa": "سس تریاکی", "hi": "तेरियाकी सॉस", "ar": "صلصة ترياكي" }
+    },
+    "sauce_peanut_vitasia": {
+      "label": "Vitasia Erdnuss Sauce (Satay)", "icon": "🥜", "latin": "Arachis emulsio vitasia", "sci": ["#sci/Lipidology", "#sci/FoodScience"],
+      "val": { "kcal": 280, "water_g": 55.0, "protein_g": 6.5, "fat_total_g": 18.0, "carbs_total_g": 22.0, "sugar_g": 18.0 },
+      "meta": { "locations": ["lidl"], "brand": "Vitasia", "vegan": true },
+      "quality_metrics": { "base": "Peanuts & Coconut milk", "texture": "Creamy with nut bits" },
+      "props": ["Würzige Sauce für Fleischspieße (Satay)", "Kombiniert Fett aus Erdnüssen mit der Süße von Kokosmilch", "Technologisch anspruchsvolle Emulsion (Nussfett + Wasserphase)"],
+      "lang": { "de": "Erdnuss Sauce", "en": "Peanut Sauce", "es": "Salsa de cacahuete", "fr": "Sauce cacahuète", "ru": "Арахисовый соус", "ja": "ピーナッツソース", "zh": "花生酱 (沙爹)", "fa": "سس بادام زمینی", "hi": "मूंगफली की चटनी", "ar": "صلصة الفول السوداني" }
+    },
+
+    "--- LIDL_SPECIAL_HITS ---": "Besondere Lidl-Saucen (Sriracha & Co.)",
+    "sauce_sriracha_vitasia_lidl": {
+      "label": "Vitasia Sriracha Hot Chili Sauce", "icon": "🔥", "latin": "Capsicum acris vitasia", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 142, "water_g": 60.0, "protein_g": 1.8, "fat_total_g": 1.0, "carbs_total_g": 30.0, "sugar_g": 24.0 },
+      "meta": { "locations": ["lidl"], "brand": "Vitasia", "vegan": true },
+      "quality_metrics": { "heat_level": "High", "garlic_ratio": "Significant" },
+      "props": ["Lidls Antwort auf den Flying Goose Standard", "Sehr scharf mit markanter Knoblauchnote", "Preis-Leistungs-Sieger im Chili-Regal"],
+      "lang": { "de": "Vitasia Sriracha", "en": "Vitasia Sriracha", "es": "Sriracha Vitasia", "fr": "Sriracha Vitasia", "ru": "Шрирача Витазия", "ja": "ヴィタシア シラチャ", "zh": "Vitasia 是拉差", "fa": "سریراچا ویتاسیا", "hi": "विटासिया श्रीराचा", "ar": "سيراتشا فيتاسيا" }
+    }
+  },
+  "chips": {
+    "--- THE_RING_COUNCIL ---": "Ring-Snacks (Extrudierte Kartoffelringe)",
+    "snack_funny_frisch_ringli": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "funny-frisch Ringli", "icon": "💍", "latin": "Anulus crispus (funny)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 515, "water_g": 1.5, "protein_g": 3.4, "fat_total_g": 30.0, "carbs_total_g": 56.0, "sugar_g": 0.5, "sodium_mg": 850.0 },
+      "meta": { "locations": ["everywhere"], "brand": "funny-frisch", "vegan": true },
+      "quality_metrics": { "texture": "Hard Crunch / Rigid", "flavor": "Spicy Paprika" },
+      "props": ["Der deutsche Benchmark für Ring-Snacks", "Besonders harter Crunch durch spezifische Extrusionstechnik", "Ikonische Ringform ermöglicht 'Finger-Snacking'"],
+      "lang": { "de": "funny-frisch Ringli", "en": "Ringli (Potato Rings)", "es": "Aros de patata", "fr": "Anneaux de pomme de terre", "ru": "Картофельные кольца", "ja": "ポテトリング", "zh": "薯圈", "fa": "حلقه‌های سیب‌زمینی", "hi": "आलू के छल्ले", "ar": "حلقات البطاطس" }
+    },
+    "snack_crusti_croc_rings_lidl": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Crusti Croc Kartoffelringe (Lidl)", "icon": "⭕", "latin": "Anulus crispus lidlianus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 510, "water_g": 1.8, "protein_g": 3.2, "fat_total_g": 29.0, "carbs_total_g": 58.0, "sugar_g": 0.8 },
+      "meta": { "locations": ["lidl"], "brand": "Crusti Croc", "vegan": true },
+      "quality_metrics": { "comparison": "Ringli Clone", "flavor": "Paprika Intensity High" },
+      "props": ["Lidls Antwort auf Ringli", "Etwas dünnwandiger als das Original, dadurch 'leichter' im Biss", "Preis-Leistungs-Sieger für Partys"],
+      "lang": { "de": "Lidl Kartoffelringe", "en": "Lidl Potato Rings", "es": "Aros de patata Lidl", "fr": "Anneaux de pomme de terre Lidl", "ru": "Кольца Лидл", "ja": "Lidl ポテトリング", "zh": "Lidl 薯圈", "fa": "حلقه‌های سیب‌زمینی لیدل", "hi": "लिडल आलू के छल्ले", "ar": "حلقات بطاطس ليدل" }
+    },
+
+    "--- THE_STICK_AND_FRIES_FACTION ---": "Pommes-Snacks & Sticks (Stäbchen-Matrix)",
+    "snack_funny_frisch_pommels": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "funny-frisch Pommels (Original)", "icon": "🍟", "latin": "Solanum spongiosum", "sci": ["#sci/FoodScience", "#sci/Physics"],
+      "val": { "kcal": 525, "water_g": 2.0, "protein_g": 3.5, "fat_total_g": 31.0, "carbs_total_g": 57.0, "sugar_g": 1.5 },
+      "meta": { "locations": ["everywhere"], "brand": "funny-frisch", "vegan": true },
+      "quality_metrics": { "texture": "Light / Airy / Melts on tongue" },
+      "props": ["Waffelartig aufgeschäumter Kartoffelsnack", "Extrem geringe Dichte (viel Luftanteil)", "Die 'sanfte' Alternative zu harten Chips"],
+      "lang": { "de": "funny-frisch Pommels", "en": "Pommels (Airy Sticks)", "es": "Pommels", "fr": "Pommels", "ru": "Поммельс", "ja": "ポメルス", "zh": "波美滋气泡薯条", "fa": "پوملز", "hi": "पोमेल्स", "ar": "بوملز" }
+    },
+    "snack_lorenz_pomsticks_salted": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lorenz Pomsticks (Gesalzen)", "icon": "🥢", "latin": "Bacilli solani (Lorenz)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 535, "water_g": 1.2, "protein_g": 6.0, "fat_total_g": 33.0, "carbs_total_g": 51.0, "sugar_g": 0.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Lorenz", "vegan": true },
+      "quality_metrics": { "cut": "Real potato sticks (not extruded)", "crunch": "Very High" },
+      "props": ["Aus ganzen Kartoffeln geschnittene Stifte", "Deutlich fettiger und salziger als extrudierte Pommes-Snacks", "Der technologische Standard für 'Kartoffelsticks'"],
+      "lang": { "de": "Pomsticks (Gesalzen)", "en": "Potato Sticks", "es": "Palitos de patata", "fr": "Bâtonnets de pomme de terre", "ru": "Картофельная соломка", "ja": "ポテトスティック", "zh": "薯条干", "fa": "سیب‌زمینی خلالی (اسنک)", "hi": "आलू स्टिक्स", "ar": "اصابع البطاطس" }
+    },
+    "snack_crusti_croc_pomm_frit_lidl": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Crusti Croc Pomm-Frit (Lidl)", "icon": "🍟", "latin": "Frictis bacilli lidliani", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 515, "water_g": 2.5, "protein_g": 4.0, "fat_total_g": 28.0, "carbs_total_g": 60.0, "sugar_g": 2.0 },
+      "meta": { "locations": ["lidl"], "brand": "Crusti Croc", "vegan": true },
+      "quality_metrics": { "comparison": "Pom-Bär / Pommels Hybrid", "flavor": "Ketchup & Mayo (Schranke) style available" },
+      "props": ["Extrudierter Snack in Pommes-Form", "Sehr beliebt in der Geschmacksrichtung 'Paprika' oder 'Salz & Essig'", "Weniger 'ölig' als echte Kartoffelsticks"],
+      "lang": { "de": "Pomm-Frit (Lidl)", "en": "Lidl Potato Fries Snack", "es": "Snack de patatas fritas Lidl", "fr": "Snack frites Lidl", "ru": "Снэк картофель-фри Лидл", "ja": "Lidl ポテトフライスナック", "zh": "Lidl 薯条风味零食", "fa": "اسنک سیب‌زمینی سرخ‌کرده لیدل", "hi": "लिडल आलू फ्राइज़ स्नैक", "ar": "سناك بطاطس مقلية ليدل" }
+    },
+
+    "--- THE_CONE_AND_CUP_GANG ---": "Hütchen- & Schalen-Snacks (Dip-Optimiert)",
+    "snack_lays_bugles_paprika": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lay's Bugles (Paprika)", "icon": "🎺", "latin": "Cornu zea mays (Lays)", "sci": ["#sci/FoodScience", "#sci/Geometry"],
+      "val": { "kcal": 545, "water_g": 1.0, "protein_g": 5.5, "fat_total_g": 33.0, "carbs_total_g": 55.0, "sugar_g": 4.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Lay's", "vegan": true },
+      "quality_metrics": { "shape": "Cone (Ideal for filling with dip)", "base": "Corn (Mais)" },
+      "props": ["Hörnerförmiger Maissnack", "Technologisch darauf ausgelegt, Dips 'aufzuschaufeln'", "Sehr intensives Röstaroma durch den Maisanteil"],
+      "lang": { "de": "Bugles / Hütchen", "en": "Bugles", "es": "Cornets", "fr": "Bugles", "ru": "Бюглес (рожки)", "ja": "ビューグルス", "zh": "妙脆角", "fa": "بیوگلز", "hi": "ब्यूगल्स", "ar": "بيوجلز" }
+    },
+    "snack_chili_cheese_nuggets_k_classic": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "K-Classic Chili Cheese Nuggets (Snack)", "icon": "🌶️", "latin": "Globuli casei kauflandii", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 520, "water_g": 2.0, "protein_g": 6.5, "fat_total_g": 30.0, "carbs_total_g": 54.0, "sugar_g": 3.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": false },
+      "quality_metrics": { "flavor": "Spicy Cheese focus", "texture": "Crunchy ball" },
+      "props": ["Extrudierter Mais-Snack mit Käse-Chili-Füllung oder -Aroma", "Kauflands Antwort auf den Fast-Food-Trend", "Sehr hohe Umami-Dichte"],
+      "lang": { "de": "Chili Cheese Nuggets (Snack)", "en": "Chili Cheese Nuggets Snack", "es": "Nuggets de queso y chili", "fr": "Nuggets chili-fromage", "ru": "Чили-чиз наггетсы (закуска)", "ja": "チリチーズナゲットスナック", "zh": "辣椒芝士味干脆块", "fa": "ناگت پنیر چیلی (اسنک)", "hi": "मिर्च पनीर नगेट्स स्नैक", "ar": "ناجتس الجبن بالفلفل (سناك)" }
+    },
+
+    "--- THE_PEANUT_ENDBOSS ---": "Nuss-Snacks (NicNacs & Co.)",
+    "snack_lorenz_nicnacs": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Lorenz NicNacs (The Double-Crunch)", "icon": "🥜", "latin": "Arachis tegmentum (Lorenz)", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 558, "water_g": 1.5, "protein_g": 14.0, "fat_total_g": 37.0, "carbs_total_g": 40.0, "sugar_g": 6.0, "fiber_g": 4.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Lorenz", "vegan": false },
+      "quality_metrics": { "core": "Whole roasted peanut", "coating": "Spicy wheat-dough shell" },
+      "props": ["Die ultimative Kombination aus Nuss und Chips-Hülle", "Technologisch anspruchsvolles 'Coating'-Verfahren", "Extrem hoher Proteingehalt durch die Erdnuss"],
+      "lang": { "de": "NicNacs", "en": "NicNacs (Coated Peanuts)", "es": "Cacahuetes recubiertos", "fr": "Cacahuètes enrobées", "ru": "Арахис в глазури", "ja": "ニックナック", "zh": "脆皮花生", "fa": "نیک‌نکس (بادام زمینی روکش‌دار)", "hi": "लेपित मूंगफली", "ar": "فول سوداني مغطى" }
+    }
+  },
+  "pretzel_and_stick_matrix": {
+    "--- THE_STICK_BENCHMARKS ---": "Salzstangen (Laugenstangen-Matrix)",
+    "sticks_lorenz_saltletts": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lorenz Saltletts (Original)", "icon": "🥨", "latin": "Bacilli salis (Lorenz)", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 386, "water_g": 3.0, "protein_g": 10.0, "fat_total_g": 6.0, "carbs_total_g": 70.0, "sugar_g": 1.5, "sodium_mg": 2100.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Lorenz", "vegan": true },
+      "quality_metrics": { "texture": "Snap-Crunch", "surface": "Lye-coated with sea salt" },
+      "props": ["Der deutsche Standard für Salzstangen seit 1935", "Meisterhaft kontrollierte Bräunung durch Natronlauge", "Klassischer 'Magen-Darm-Helfer' in Kombination mit Cola"],
+      "lang": { "de": "Salzstangen", "en": "Salt Sticks / Pretzel Sticks", "es": "Palitos de sal", "fr": "Bâtonnets salés", "ru": "Соленая соломка", "ja": "プレッツェルスティック", "zh": "百奇盐味饼干棒", "fa": "چوب‌شور", "hi": "नमक की छड़ें", "ar": "أصابع مملحة" }
+    },
+    "sticks_crusti_croc_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Crusti Croc Salzstangen (Lidl)", "icon": "🥢", "latin": "Bacilli salis lidliani", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 380, "water_g": 3.5, "protein_g": 10.5, "fat_total_g": 5.5, "carbs_total_g": 71.0, "sugar_g": 2.0 },
+      "meta": { "locations": ["lidl"], "brand": "Crusti Croc", "vegan": true },
+      "quality_metrics": { "price_segment": "Budget Hero", "salt_density": "High" },
+      "props": ["Lidls Antwort auf den Saltletts-Klassiker", "Oft in der 250g-Vorteilspackung", "Technologisch identisch im Laugenverfahren hergestellt"],
+      "lang": { "de": "Lidl Salzstangen", "en": "Lidl Salt Sticks", "es": "Palitos de sal Lidl", "fr": "Bâtonnets salés Lidl", "ru": "Соленая соломка Лидл", "ja": "Lidl プレッツェルスティック", "zh": "Lidl 盐味饼干棒", "fa": "چوب‌شور لیدل", "hi": "लिडल नमक की छड़ें", "ar": "أصابع مملحة ليدل" }
+    },
+
+    "--- THE_PRETZEL_ELITE ---": "Dauerbrezeln (Knoten-Matrix)",
+    "pretzel_huober_schwaebische": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Huober Schwäbische Knusperbrezel", "icon": "🥨", "latin": "Anulus lixivius (Huober)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 388, "water_g": 2.5, "protein_g": 11.0, "fat_total_g": 5.0, "carbs_total_g": 72.0, "sugar_g": 1.0, "fiber_g": 4.5 },
+      "meta": { "locations": ["rewe", "edeka", "denns", "kaufland"], "brand": "Huober", "vegan": true },
+      "quality_metrics": { "standard": "Organic (Bioland/EU-Bio)", "texture": "Ultra-Crisp / Traditional Knot" },
+      "props": ["Die 'Königin' der Dauerbrezeln aus dem Schwarzwald", "Verwendet ausschließlich Bio-Mehl und verzichtet auf künstliche Aromen", "Höherer Ballaststoffanteil als Discounter-Ware"],
+      "lang": { "de": "Knusperbrezel", "en": "Mini Pretzels", "es": "Pretzels crujientes", "fr": "Bretzels croustillants", "ru": "Крендельки (претцели)", "ja": "プレッツェル", "zh": "蝴蝶酥 (盐味)", "fa": "چوب‌شور گره‌ای", "hi": "प्रेट्ज़ेल", "ar": "بريتزل" }
+    },
+    "pretzel_elephant_flat_salt": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Elephant Pretzel Chips (Gesalzen)", "icon": "🐘", "latin": "Anulus planus (Elephant)", "sci": ["#sci/FoodScience", "#sci/Geometry"],
+      "val": { "kcal": 420, "water_g": 1.5, "protein_g": 9.5, "fat_total_g": 8.0, "carbs_total_g": 75.0, "sugar_g": 3.5 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Elephant / Alka", "vegan": true },
+      "quality_metrics": { "shape": "Flat-Pressed", "crunch": "High Surface-Area Crunch" },
+      "props": ["Moderne Interpretation: Die Brezel, die flach gedrückt wurde", "Ideal zum Dippen, da mehr Fläche vorhanden ist", "Leicht höherer Fettanteil für die mürbe Textur"],
+      "lang": { "de": "Pretzel Chips", "en": "Flat Pretzels", "es": "Pretzels planos", "fr": "Bretzels plats", "ru": "Плоские претцели", "ja": "フラットプレッツェル", "zh": "扁平普雷策饼干", "fa": "چوب‌شور پهن", "hi": "फ्लैट प्रेट्ज़ेल", "ar": "بريتزل مسطح" }
+    },
+
+    "--- THE_PARTY_MIX_UNIVERSE ---": "Gebäck-Mischungen",
+    "mix_lorenz_party_world": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Lorenz Party World (Mischung)", "icon": "🎉", "latin": "Varietas salis (Lorenz)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 415, "water_g": 2.5, "protein_g": 9.0, "fat_total_g": 12.0, "carbs_total_g": 65.0, "sugar_g": 3.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Lorenz", "vegan": false },
+      "quality_metrics": { "diversity": "Sticks, Pretzels, Crackers, Rounds" },
+      "props": ["Bunte Mischung aus verschiedenen Laugen- und Mürbegebäckformen", "Enthält teilweise Käse- oder Sesam-Elemente", "Der Allrounder für jede Gästerunde"],
+      "lang": { "de": "Knabber-Mix", "en": "Party Mix / Savory Mix", "es": "Mezcla de aperitivos", "fr": "Mélange apéritif", "ru": "Снэк-микс", "ja": "スナックミックス", "zh": "聚会零食拼盘", "fa": "میکس تنقلات", "hi": "नमकीन मिक्स", "ar": "مزيج سناك" }
+    },
+    "mix_crusti_croc_party_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Crusti Croc Party Mix (Lidl)", "icon": "🎊", "latin": "Varietas salis lidliana", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 410, "water_g": 3.0, "protein_g": 8.5, "fat_total_g": 11.5, "carbs_total_g": 66.0, "sugar_g": 4.0 },
+      "meta": { "locations": ["lidl"], "brand": "Crusti Croc", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget Volume", "composition": "Focus on pretzels and crackers" },
+      "props": ["Lidls preiswerte Party-Packung", "Oft in der 300g- bis 500g-Tüte für maximale Reichweite", "Geschmacklich sehr nah am Marken-Mix"],
+      "lang": { "de": "Lidl Party-Mix", "en": "Lidl Party Mix", "es": "Mezcla de snacks Lidl", "fr": "Mélange apéritif Lidl", "ru": "Микс Лидл", "ja": "Lidl スナックミックス", "zh": "Lidl 聚会零食包", "fa": "میکس تنقلات لیدل", "hi": "लिडल पार्टी मिक्स", "ar": "مزيج حفلات ليدل" }
+    }
+  },
+  "nut_specialists_honey_and_spice": {
+    "--- THE_HONEY_SALT_MATRIX ---": "Honig-Salz-Nüsse (Süß-Salziges High-End)",
+    "nuts_ultje_honey_salt_peanuts": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "ültje Erdnüsse (Honig & Salz)", "icon": "🍯", "latin": "Arachis melle salita (Ultje)", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 587, "water_g": 1.5, "protein_g": 21.0, "fat_total_g": 44.0, "carbs_total_g": 24.0, "sugar_g": 21.0, "fiber_g": 6.5, "sodium_mg": 450.0 },
+      "meta": { "locations": ["everywhere"], "brand": "ültje", "vegan": false },
+      "quality_metrics": { "coating": "Real Honey & Sugar crust", "roast": "Golden brown" },
+      "props": ["Der deutsche Goldstandard für Honig-Salz-Nüsse", "Perfekte Balance zwischen klebriger Süße und grobem Salz", "Hoher Suchtfaktor durch die Maillard-Reaktion beim Rösten"],
+      "lang": { "de": "Erdnüsse Honig & Salz", "en": "Honey & Salt Peanuts", "es": "Cacahuetes miel y sal", "fr": "Cacahuètes miel et sel", "ru": "Арахис в меду и соли", "ja": "ハニーソルト・ピーナッツ", "zh": "蜂蜜盐焗花生", "fa": "بادام زمینی عسل و نمک", "hi": "शहद और नमक वाली मूंगफली", "ar": "فول سوداني بالعسل والملح" }
+    },
+    "nuts_alesto_honey_salt_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alesto Honey & Salt Peanuts (Lidl)", "icon": "🥜", "latin": "Arachis melle lidliana", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 592, "water_g": 1.8, "protein_g": 20.0, "fat_total_g": 45.0, "carbs_total_g": 22.0, "sugar_g": 20.0 },
+      "meta": { "locations": ["lidl"], "brand": "Alesto", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget King", "coating": "Consistent sugar-honey layer" },
+      "props": ["Lidls Antwort auf ültje", "Oft etwas 'fettiger' im Mundgefühl bei identischer Knusprigkeit", "Preislich meistens bei der Hälfte des Markenprodukts"],
+      "lang": { "de": "Lidl Honig & Salz Erdnüsse", "en": "Lidl Honey & Salt Peanuts", "es": "Cacahuetes miel y sal Lidl", "fr": "Cacahuètes miel et sel Lidl", "ru": "Арахис Лидл в меду", "ja": "Lidl ハニーソルトピーナッツ", "zh": "Lidl 蜂蜜盐焗花生", "fa": "بادام زمینی عسل و نمک لیدل", "hi": "लिडल शहद और नमक वाली मूंगफली", "ar": "فول سوداني بالعسل والملح ليدل" }
+    },
+
+    "--- SPICY_AND_COATED_NUTS ---": "Gewürzte & umhüllte Nüsse (Wasabi & Chili)",
+    "nuts_wasabi_peanuts_k_classic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Wasabi Erdnüsse", "icon": "🟢", "latin": "Arachis eustrema japonica", "sci": ["#sci/Phytochemistry", "#sci/FoodScience"],
+      "val": { "kcal": 495, "water_g": 3.0, "protein_g": 13.0, "fat_total_g": 26.0, "carbs_total_g": 48.0, "sugar_g": 8.5 },
+      "meta": { "locations": ["kaufland", "rewe"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "heat_source": "Horseradish / Mustard oil", "coating": "Extruded wheat/rice flour" },
+      "props": ["Intensive Nasen-Schärfe durch Senföle", "Der Teigmantel sorgt für einen harten 'Crack'-Effekt beim Kauen", "Vorsicht: Suchtfaktor durch die Kombination aus Fett und Schärfe"],
+      "lang": { "de": "Wasabi Erdnüsse", "en": "Wasabi Peanuts", "es": "Cacahuetes Wasabi", "fr": "Cacahuètes Wasabi", "ru": "Арахис в васаби", "ja": "わさびピーナッツ", "zh": "芥末花生", "fa": "بادام زمینی با طعم واسابی", "hi": "वासाबी मूंगफली", "ar": "فول سوداني بالواسابي" }
+    },
+    "nuts_cashews_honey_salt_alesto": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Alesto Cashews (Honig & Salz)", "icon": "🍯", "latin": "Anacardium melle salita", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 575, "water_g": 2.0, "protein_g": 16.5, "fat_total_g": 41.0, "carbs_total_g": 32.0, "sugar_g": 24.0 },
+      "meta": { "locations": ["lidl"], "brand": "Alesto", "vegan": false },
+      "quality_metrics": { "nut_type": "Premium Cashew kernels", "texture": "Softer than peanuts" },
+      "props": ["Die edlere Alternative zur Erdnuss", "Cashews haben von Natur aus eine cremigere Textur, die perfekt mit der Honigkruste harmoniert", "Höherer Magnesiumgehalt als Erdnüsse"],
+      "lang": { "de": "Cashews Honig & Salz", "en": "Honey & Salt Cashews", "es": "Anacardos miel y sal", "fr": "Noix de cajou miel et sel", "ru": "Кешью в меду и соли", "ja": "ハニーソルト・カシューナッツ", "zh": "蜂蜜盐焗腰果", "fa": "کاجو عسل و نمک", "hi": "शहद और नमक वाले काजू", "ar": "كاجو بالعسل والملح" }
+    },
+
+    "--- THE_PURE_AND_SALTED_LORDS ---": "Klassische gesalzene Nüsse",
+    "nuts_pistachios_roasted_salted": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Pistazien (Geröstet & Gesalzen)", "icon": "🟢", "latin": "Pistacia vera salita", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 615, "water_g": 2.5, "protein_g": 20.0, "fat_total_g": 52.0, "carbs_total_g": 12.0, "sugar_g": 7.5, "fiber_g": 10.5, "potassium_mg": 1020.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Alesto / Clarky's", "vegan": true },
+      "quality_metrics": { "processing": "In-shell roasting", "color": "Green chlorophyll indicator" },
+      "props": ["Natürlicher Snack-Klassiker", "Hoher Kalium- und Ballaststoffgehalt", "Das Öffnen der Schalen bremst die Verzehrgeschwindigkeit (psychologischer Sättigungseffekt)"],
+      "lang": { "de": "Pistazien", "en": "Pistachios", "es": "Pistachos", "fr": "Pistaches", "ru": "Фисташки", "ja": "ピスタチオ", "zh": "开心果", "fa": "پسته", "hi": "पिस्ता", "ar": "فستق" }
+    }
+  },
+  "the_last_sweets_standing": {
+    "--- THE_BAR_WARS ---": "Schokoriegel-Matrix (Marken vs. Lidl Clones)",
+    "bar_snickers_original": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Snickers (Mars)", "icon": "🥜", "latin": "Socolata arachidis (Mars)", "sci": ["#sci/FoodScience", "#sci/Lipidology"],
+      "val": { "kcal": 483, "water_g": 5.0, "protein_g": 8.6, "fat_total_g": 23.0, "carbs_total_g": 60.2, "sugar_g": 51.8 },
+      "meta": { "locations": ["everywhere"], "brand": "Mars", "vegan": false },
+      "quality_metrics": { "structure": "Peanuts, Caramel, Candy-Cream", "satiety_index": "High" },
+      "props": ["Der meistverkaufte Schokoriegel der Welt", "Technologisch perfektionierte Balance aus zähem Karamell und knackigen Erdnüssen", "Benchmark für die 'Hunger-löschen' Kampagne"],
+      "lang": { "de": "Snickers", "en": "Snickers", "es": "Snickers", "fr": "Snickers", "ru": "Сникерс", "ja": "スニッカーズ", "zh": "士力架", "fa": "اسنیکرز", "hi": "स्निकर्स", "ar": "سنيكرز" }
+    },
+    "bar_choco_peanuts_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Mister Choc Choco & Peanuts (Lidl)", "icon": "🍫", "latin": "Socolata arachidis lidliana", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 485, "water_g": 4.8, "protein_g": 8.4, "fat_total_g": 23.5, "carbs_total_g": 59.5, "sugar_g": 51.0 },
+      "meta": { "locations": ["lidl"], "brand": "Mister Choc", "vegan": false },
+      "quality_metrics": { "comparison": "Snickers Clone", "price_segment": "Budget" },
+      "props": ["Lidls präzise Antwort auf Snickers", "Fast identische Textur der Candy-Creme", "Verwendet oft UTZ-zertifizierten Kakao"],
+      "lang": { "de": "Mister Choc Choco & Peanuts", "en": "Choco & Peanuts Bar", "es": "Barrita de cacahuete Lidl", "fr": "Barre cacahuète Lidl", "ru": "Батончик с арахисом Лидл", "ja": "Lidl チョコ&ピーナッツ", "zh": "Lidl 巧克力花生条", "fa": "چوکو اند پینات لیدل", "hi": "लिडल चोको और मूंगफली", "ar": "تشوكو آند بينات ليدل" }
+    },
+    "bar_twix_original": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Twix (Left & Right)", "icon": "🥨", "latin": "Bisctoctum caramelisatum (Twix)", "sci": ["#sci/Rheology"],
+      "val": { "kcal": 495, "water_g": 3.0, "protein_g": 4.4, "fat_total_g": 24.0, "carbs_total_g": 65.0, "sugar_g": 49.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Mars", "vegan": false },
+      "quality_metrics": { "structure": "Biscuit, Caramel, Milk Chocolate", "crunch": "High" },
+      "props": ["Früher 'Raider' genannt", "Zwei Riegel pro Packung ermöglichen Portionierung", "Keks-Kern sorgt für hohe mechanische Stabilität"],
+      "lang": { "de": "Twix", "en": "Twix", "es": "Twix", "fr": "Twix", "ru": "Твикс", "ja": "ツイックス", "zh": "特趣", "fa": "تویکس", "hi": "ट्विक्स", "ar": "تويكس" }
+    },
+    "bar_choco_biscuit_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Mister Choc Choco & Biscuit (Lidl)", "icon": "🍪", "latin": "Bisctoctum socolatum lidlianum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 492, "water_g": 3.2, "protein_g": 4.5, "fat_total_g": 23.8, "carbs_total_g": 64.5, "sugar_g": 48.5 },
+      "meta": { "locations": ["lidl"], "brand": "Mister Choc", "vegan": false },
+      "quality_metrics": { "comparison": "Twix Clone", "biscuit_type": "Shortbread style" },
+      "props": ["Lidls Twix-Alternative", "Bietet den typischen 'Crunch-Melt' Effekt", "Wird oft in 10er Vorratspackungen verkauft"],
+      "lang": { "de": "Mister Choc Choco & Biscuit", "en": "Choco & Biscuit Bar", "es": "Barrita de galleta Lidl", "fr": "Barre biscuit Lidl", "ru": "Батончик с печеньем Лидл", "ja": "Lidl チョコ&ビスケット", "zh": "Lidl 巧克力饼干条", "fa": "چوکو اند بیسکویت لیدل", "hi": "लिडल चोको और बिस्किट", "ar": "تشوكو آند بسكويت ليدل" }
+    },
+
+    "--- THE_COOKIE_EMPIRE ---": "Keks- & Gebäck-Matrix (Oreo & Co.)",
+    "cookie_oreo_original": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Oreo (Classic)", "icon": "🍪", "latin": "Bisctoctum nigrum lacteum", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 476, "water_g": 2.0, "protein_g": 4.8, "fat_total_g": 20.0, "carbs_total_g": 68.0, "sugar_g": 38.0, "fiber_g": 2.7 },
+      "meta": { "locations": ["everywhere"], "brand": "Mondelez", "vegan": true },
+      "quality_metrics": { "alkalization": "Heavy (Dutch process cocoa)", "ritual": "Twist, Lick, Dunk" },
+      "props": ["Der weltweit meistverkaufte Keks", "Extrem dunkler Teig durch stark alkalisierten Kakao", "Technologisch faszinierend: Trotz Milchcreme-Füllung oft vegan"],
+      "lang": { "de": "Oreo Keks", "en": "Oreo Cookie", "es": "Galleta Oreo", "fr": "Biscuit Oreo", "ru": "Печенье Орео", "ja": "オレオ", "zh": "奥利奥", "fa": "بیسکویت اوریو", "hi": "ओरियो कुकी", "ar": "بسكويت أوريو" }
+    },
+    "cookie_neo_lidl": {
+      "unit_price": 1.50,
+      "unit_type": "piece",
+      "label": "Sondey Neo (Lidl)", "icon": "🌑", "latin": "Bisctoctum lidlianum nigrum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 482, "water_g": 2.5, "protein_g": 5.0, "fat_total_g": 21.0, "carbs_total_g": 67.0, "sugar_g": 37.0 },
+      "meta": { "locations": ["lidl"], "brand": "Sondey", "vegan": true },
+      "quality_metrics": { "comparison": "Oreo Clone", "sweetness_profile": "Slightly sweeter cream" },
+      "props": ["Lidls direkter Gegenspieler zu Oreo", "Fast identisches Design der Keks-Prägung", "In Blindtests oft kaum vom Original zu unterscheiden"],
+      "lang": { "de": "Neo Keks (Lidl)", "en": "Neo Cookie", "es": "Galleta Neo", "fr": "Biscuit Neo", "ru": "Печенье Нео", "ja": "Neo クッキー", "zh": "Neo 饼干", "fa": "بیسکویت نئو", "hi": "नियो कुकी", "ar": "بسكويت نيو" }
+    },
+    "cookie_prinzen_rolle": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Prinzen Rolle", "icon": "🤴", "latin": "Bisctoctum nobile (DeBeukelaer)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 490, "water_g": 3.0, "protein_g": 6.0, "fat_total_g": 22.0, "carbs_total_g": 66.0, "sugar_g": 34.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Griesson-de Beukelaer", "vegan": false },
+      "quality_metrics": { "structure": "Double biscuit with cocoa cream", "heritage": "German Tradition since 1955" },
+      "props": ["Der deutsche Inbegriff des Doppelkekses", "Ikonische Rollen-Verpackung", "Haselnuss-Note in der Kakaocreme"],
+      "lang": { "de": "Prinzen Rolle", "en": "Prince Polo / Prince Cookie", "es": "Príncipe de Beukelaer", "fr": "Prince de LU (Equivalent)", "ru": "Принцен Ролле", "ja": "プリンツェン・ロレ", "zh": "王子饼干", "fa": "پرینزن روله", "hi": "प्रिंस कुकी", "ar": "برينزن رول" }
+    },
+
+    "--- FRESHNESS_AND_GUMS ---": "Atemfrische & Kaugummi (Funktionale Süße)",
+    "gum_airwaves_menthol": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Airwaves Menthol & Eukalyptus", "icon": "🌀", "latin": "Masticabile mentholatum", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 145, "water_g": 1.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 60.0, "sugar_g": 0.0, "sorbitol_g": 58.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Wrigley's / Mars", "vegan": true },
+      "quality_metrics": { "active_agent": "Menthol & Eucalyptus oil", "sugar_free": "Yes (Xylitol/Sorbitol)" },
+      "props": ["Extremer Frische-Kick für die Atemwege", "Nutzt ätherische Öle zur nasalen Befreiung", "Langanhaltende Geschmacksfreisetzung"],
+      "lang": { "de": "Airwaves Kaugummi", "en": "Airwaves Gum", "es": "Chicle Airwaves", "fr": "Chewing-gum Airwaves", "ru": "Жвачка Эйрвейвс", "ja": "エアウェーブス ガム", "zh": "激浪口香糖", "fa": "آدامس ایرویز", "hi": "एयरवेव्स च्युइंग गम", "ar": "علكة إيرويفز" }
+    },
+    "gum_jetgum_menthol_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Jetgum Menthol (Lidl)", "icon": "❄️", "latin": "Masticabile lidlianum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 140, "water_g": 1.2, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 59.0, "sugar_g": 0.0 },
+      "meta": { "locations": ["lidl"], "brand": "Jetgum", "vegan": true },
+      "quality_metrics": { "comparison": "Airwaves Clone", "packaging": "Dose / Bottle" },
+      "props": ["Lidls preiswerte Kaugummi-Marke", "Bietet ähnliche Schärfe wie Airwaves", "Verwendet Xylit zur Zahnpflege-Unterstützung"],
+      "lang": { "de": "Jetgum (Lidl)", "en": "Jetgum", "es": "Chicle Jetgum", "fr": "Chewing-gum Jetgum", "ru": "Жвачка Джетгам", "ja": "Lidl ジェットガム", "zh": "Lidl 捷特口香糖", "fa": "آدامس جت‌گام", "hi": "लिडल जेटगम", "ar": "علكة جيت غام" }
+    }
+  },
+  "the_final_sugar_and_protein_crunch": {
+    "--- THE_COLORFUL_BUTTON_WARS ---": "Schokolinsen (M&M's vs. Smarties vs. Lidl)",
+    "choco_m_and_ms_peanut": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "M&M's Peanut", "icon": "🥜", "latin": "Arachis socolata (Mars)", "sci": ["#sci/FoodScience", "#sci/MaterialsScience"],
+      "val": { "kcal": 511, "water_g": 1.5, "protein_g": 9.7, "fat_total_g": 25.3, "carbs_total_g": 58.7, "sugar_g": 53.3 },
+      "meta": { "locations": ["everywhere"], "brand": "Mars", "vegan": false },
+      "quality_metrics": { "coating": "Hard sugar shell (High melting resistance)", "core": "Whole roasted peanut" },
+      "props": ["Der globale Standard für Schokolinsen mit Nuss", "Technologisch optimiert, um 'in der Hand nicht zu schmelzen'", "Ikonische Farbmischung (Gelb, Rot, Blau, Braun, Orange, Grün)"],
+      "lang": { "de": "M&M's Erdnuss", "en": "M&M's Peanut", "es": "M&M's Cacahuete", "fr": "M&M's Cacahuète", "ru": "M&M's с арахисом", "ja": "M&M's ピーナッツ", "zh": "M&M's 花生巧克力豆", "fa": "ام‌اندامز بادام زمینی", "hi": "एम एंड एम मूंगफली", "ar": "إم آند إمز بالفول السوداني" }
+    },
+    "choco_mister_choc_peanuts_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mister Choc Choco-Linsen (Erdnuss)", "icon": "🍭", "latin": "Arachis lidliana socolata", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 515, "water_g": 1.4, "protein_g": 9.5, "fat_total_g": 26.0, "carbs_total_g": 58.0, "sugar_g": 52.5 },
+      "meta": { "locations": ["lidl"], "brand": "Mister Choc", "vegan": false },
+      "quality_metrics": { "comparison": "M&M's Peanut Clone", "color_source": "Plant concentrates" },
+      "props": ["Lidls Antwort auf M&M's", "Oft in der 250g- oder 400g-Tüte", "Technologisch fast identische Glasur-Härte"],
+      "lang": { "de": "Lidl Schoko-Erdnüsse", "en": "Lidl Choco Peanuts", "es": "Cacahuetes de chocolate Lidl", "fr": "Cacahuètes chocolatées Lidl", "ru": "Шоколадный арахис Лидл", "ja": "Lidl チョコピーナッツ", "zh": "Lidl 巧克力花生豆", "fa": "دراژه بادام زمینی لیدل", "hi": "लिडल चोको मूंगफली", "ar": "فول سوداني بالشوكولاتة ليدل" }
+    },
+    "choco_smarties_classic": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Smarties", "icon": "🔴", "latin": "Globuli socolata (Nestle)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 471, "water_g": 2.0, "protein_g": 4.1, "fat_total_g": 18.8, "carbs_total_g": 70.7, "sugar_g": 64.7 },
+      "meta": { "locations": ["everywhere"], "brand": "Nestlé", "vegan": false },
+      "quality_metrics": { "colors": "Natural only since 2006", "packaging": "Recyclable paper tube" },
+      "props": ["Der Klassiker für reine Schokolinsen", "Dünnere Glasur als M&M's, dadurch schnellerer Schmelz", "Ikonisches 'Rassel'-Geräusch in der Rolle"],
+      "lang": { "de": "Smarties", "en": "Smarties", "es": "Smarties", "fr": "Smarties", "ru": "Смартис", "ja": "スマーティーズ", "zh": "聪少豆", "fa": "اسمارتیز", "hi": "स्मार्टीज", "ar": "سمارتيز" }
+    },
+
+    "--- THE_MODERN_PROTEIN_SNACKS ---": "Protein-Riegel (2026 Fitness-Standard)",
+    "bar_protein_lidl_high_50": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lidl High Protein Bar (50%)", "icon": "💪", "latin": "Bacillus proteinus lidlianus", "sci": ["#sci/Nutrition", "#sci/FoodScience"],
+      "val": { "kcal": 360, "water_g": 10.0, "protein_g": 50.0, "fat_total_g": 8.5, "carbs_total_g": 18.0, "sugar_g": 1.5, "polyols_g": 15.0 },
+      "meta": { "locations": ["lidl"], "brand": "Enery / High Protein", "vegan": false },
+      "quality_metrics": { "protein_source": "Milk Protein / Collagen", "sugar": "Low Sugar / Aspartame free" },
+      "props": ["Der Preis-Leistungs-Killer im Fitness-Sektor", "Extrem hoher Proteingehalt (22,5g pro 45g Riegel)", "Technologisch optimierte Textur, die nicht 'sandig' schmeckt"],
+      "lang": { "de": "Lidl Protein Riegel", "en": "Lidl Protein Bar", "es": "Barrita de proteínas Lidl", "fr": "Barre protéinée Lidl", "ru": "Протеиновый батончик Лидл", "ja": "Lidl プロテインバー", "zh": "Lidl 蛋白棒", "fa": "پروتئین بار لیدل", "hi": "लिडल प्रोटीन बार", "ar": "لوح بروتين ليدل" }
+    },
+
+    "--- THE_FRUIT_CHEW_LEGENDS ---": "Fruchtige Kaubonbons (Skittles & Co.)",
+    "chew_skittles_original": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Skittles (Original)", "icon": "🌈", "latin": "Globuli fructosi (Mars)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 404, "water_g": 5.0, "protein_g": 0.0, "fat_total_g": 4.2, "carbs_total_g": 90.7, "sugar_g": 89.8 },
+      "meta": { "locations": ["everywhere"], "brand": "Mars", "vegan": true },
+      "quality_metrics": { "texture": "Hard shell / Chewy core", "flavors": ["Orange", "Lemon", "Lime", "Grape", "Strawberry"] },
+      "props": ["'Taste the Rainbow'", "Eines der wenigen Kaubonbons ohne Gelatine (vegan)", "Extrem hohe Zuckerkonzentration für sofortige Energie"],
+      "lang": { "de": "Skittles", "en": "Skittles", "es": "Skittles", "fr": "Skittles", "ru": "Скитлс", "ja": "スキットルズ", "zh": "彩虹糖", "fa": "اسکیتلز", "hi": "स्किटल्स", "ar": "سكيتلز" }
+    }
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "devMode": false,
+  "ignoreCodeBlockRestrictions": false,
+  "preferredDateFormat": "YYYY-MM-DD",
+  "firstWeekday": {
+    "index": 0,
+    "name": "Sunday",
+    "shortName": "Su"
+  },
+  "syncInterval": 200,
+  "enableJs": true,
+  "viewFieldDisplayNullAsEmpty": false,
+  "enableSyntaxHighlighting": true,
+  "enableEditorRightClickMenu": true,
+  "inputFieldTemplates": [],
+  "buttonTemplates": [
+    {
+      "label": "➕ add Discpline",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-disc-pkm",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-disc-pkm.md"
+        }
+      ]
+    },
+    {
+      "label": "📦 Archive",
+      "icon": "",
+      "style": "default",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "archive",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/2scripts/archiveall.md"
+        }
+      ]
+    },
+    {
+      "label": "🚀 SpaceUpdate",
+      "icon": "",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "spaced",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-spaced-rep.md"
+        }
+      ]
+    },
+    {
+      "label": "❄️ Freezer",
+      "icon": "",
+      "style": "destructive",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "freezer",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/NexusFreezer.md"
+        }
+      ]
+    },
+    {
+      "label": "✨",
+      "style": "default",
+      "action": {
+        "type": "templaterCreateNote",
+        "templateFile": "zData/1tmpl/routertemp.md",
+        "folderPath": "0_Inbox",
+        "fileName": "stars-"
+      },
+      "id": "stars-btn"
+    },
+    {
+      "label": "💠",
+      "style": "default",
+      "action": {
+        "type": "templaterCreateNote",
+        "templateFile": "zData/1tmpl/routertemp.md",
+        "folderPath": "0_Inbox",
+        "fileName": "a-"
+      },
+      "id": "a-btn"
+    },
+    {
+      "label": "🚧",
+      "style": "default",
+      "action": {
+        "type": "templaterCreateNote",
+        "templateFile": "zData/1tmpl/routertemp.md",
+        "folderPath": "0_Inbox",
+        "fileName": "p-"
+      },
+      "id": "p-btn"
+    },
+    {
+      "label": "🛠️",
+      "style": "default",
+      "action": {
+        "type": "templaterCreateNote",
+        "templateFile": "zData/1tmpl/routertemp.md",
+        "folderPath": "0_Inbox",
+        "fileName": "t-"
+      },
+      "id": "t-btn"
+    },
+    {
+      "label": "✏️",
+      "style": "default",
+      "action": {
+        "type": "templaterCreateNote",
+        "templateFile": "zData/1tmpl/routertemp.md",
+        "folderPath": "0_Inbox",
+        "fileName": "n-"
+      },
+      "id": "n-btn"
+    },
+    {
+      "label": "🔖",
+      "style": "default",
+      "action": {
+        "type": "templaterCreateNote",
+        "templateFile": "zData/1tmpl/routertemp.md",
+        "folderPath": "0_Inbox",
+        "fileName": "r-"
+      },
+      "id": "r-btn"
+    },
+    {
+      "label": "reset",
+      "icon": "rotate-ccw",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "reset-focus",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/resetMonthlyFocus.md"
+        }
+      ]
+    },
+    {
+      "label": "➕ add Atom/Recipe",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-recipe-ingre",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-recipe-ingre.md"
+        }
+      ]
+    },
+    {
+      "label": "➕ add Tool",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-cook-tool",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-cook-tool.md"
+        }
+      ]
+    },
+    {
+      "label": "➕ add Method",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-cook-method",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-cook-method.md"
+        }
+      ]
+    },
+    {
+      "label": "➕ add Meal Time",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-meal-time",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-meal-time.md"
+        }
+      ]
+    },
+    {
+      "label": "➕ add Meal Type",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-meal-type",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-meal-type.md"
+        }
+      ]
+    },
+    {
+      "label": "➕ alchemy",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "tooltip": "",
+      "id": "add-remove-alchemy",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-remove-alchemy.md"
+        }
+      ]
+    },
+    {
+      "id": "add-remove-meal",
+      "label": "Add Meal",
+      "icon": "utensils",
+      "style": "plain",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-remove-meal.md"
+        }
+      ]
+    },
+    {
+      "label": "scale",
+      "icon": "radar",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "change-portion-recipe",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/change-portion-recipe.md"
+        }
+      ]
+    },
+    {
+      "label": "reset Meal",
+      "icon": "clock",
+      "style": "default",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "reset-nutri",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/resetNutrition.md"
+        }
+      ]
+    },
+    {
+      "label": "entropy",
+      "icon": "smile",
+      "style": "primary",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-entropy",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-entropy.md"
+        }
+      ]
+    },
+    {
+      "label": "🗑️ Clear Household Extras",
+      "icon": "trash-2",
+      "style": "destructive",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/resetHouseholdExtras.md"
+        }
+      ],
+      "id": "reset-household"
+    }
+  ],
+  "excludedFolders": []
+}

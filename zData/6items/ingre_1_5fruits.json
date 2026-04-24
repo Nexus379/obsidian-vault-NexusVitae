@@ -1,0 +1,667 @@
+{
+  "fruits": {
+    "--- POME_FRUITS ---": "Kernobst (Pektin & Flavonoide)",
+    "apple": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Apple", "icon": "🍎", "latin": "Malus domestica (Fructus recens)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 52, "water_g": 86.0, "fiber_g": 2.4, "vit_c_mg": 4.6, "quercetin_mg": 4.0, "pectin_g": 1.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns", "weekly_market"], "season": ["autumn", "all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "gut_health": "High Pectin (Prebiotic)" },
+      "props": ["Most nutrients (quercetin) are in the skin", "Pectin feeds the gut microbiome", "Ethylene producer"],
+      "lang": { "de": "Apfel", "en": "Apple", "es": "Manzana", "fr": "Pomme", "ru": "Яблоko", "ja": "りんご", "zh": "苹果", "fa": "سیب", "hi": "सेब", "ar": "تفاحة" }
+    },
+    "pear": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Pear", "icon": "🍐", "latin": "Pyrus communis (Fructus recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 57, "water_g": 84.0, "fiber_g": 3.1, "vit_c_mg": 4.3, "potassium_mg": 116.0, "sorbitol_g": 2.1 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestibility": "High Sorbitol content" },
+      "props": ["Contains sorbitol (mild laxative effect)", "Extremely hypoallergenic fruit", "Soft, grainy texture from stone cells"],
+      "lang": { "de": "Birne", "en": "Pear", "es": "Pera", "fr": "Poire", "ru": "Груша", "ja": "洋梨", "zh": "梨", "fa": "گلابی", "hi": "नाशपाती", "ar": "كمثرى" }
+    },
+    "quince": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Quince", "icon": "🍐", "latin": "Cydonia oblonga (Fructus recens)", "sci": ["#sci/Phytochemistry", "#sci/Botany"],
+      "val": { "kcal": 57, "water_g": 83.8, "fiber_g": 1.9, "vit_c_mg": 15.0, "pectin_g": 1.5, "potassium_mg": 197.0 },
+      "meta": { "locations": ["weekly_market", "orient_market", "denns"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Must be cooked (high tannins)" },
+      "props": ["Extreme pectin content", "Intensely aromatic when ripe", "Too hard to eat raw"],
+      "lang": { "de": "Quitte", "en": "Quince", "es": "Membrillo", "fr": "Coing", "ru": "Айва", "ja": "マルメロ", "zh": "榅桲", "fa": "به", "hi": "श्रीफल", "ar": "سفرجل" }
+    },
+    "asian_pear": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Asian Pear (Nashi)", "icon": "🍏", "latin": "Pyrus pyrifolia (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 42, "water_g": 88.3, "fiber_g": 3.6, "vit_c_mg": 3.8, "potassium_mg": 121.0 },
+      "meta": { "locations": ["asia_market", "kaufland", "rewe"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Crisp like an apple, juicy like a pear" },
+      "props": ["Does not soften after picking", "Very high water content (hydrating)", "Round shape, speckled skin"],
+      "lang": { "de": "Nashi-Birne, Asiatische Birne", "en": "Asian Pear", "es": "Pera Nashi", "fr": "Poire Nashi", "ru": "Китайская груша", "ja": "梨 (Nashi)", "zh": "沙梨", "fa": "گلابی آسیایی", "hi": "नाशी नाशपाती", "ar": "كمثرى آسيوي" }
+    },
+    "medlar": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Medlar", "icon": "🍂", "latin": "Mespilus germanica (Fructus recens)", "sci": ["#sci/Ethnobotany"],
+      "val": { "kcal": 47, "carbs_g": 10.6, "fiber_g": 3.0, "vit_c_mg": 2.0, "tannins_mg": 150.0 },
+      "meta": { "locations": ["weekly_market", "wild_foraging"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "preparation": "Requires 'Bletting'" },
+      "props": ["Ancient medieval fruit", "Must undergo frost to become edible", "Tastes like spiced apple butter or caramel"],
+      "lang": { "de": "Mispel", "en": "Medlar", "es": "Níspero", "fr": "Nèfle", "ru": "Мушмула германская", "ja": "セイヨウイリン", "zh": "欧楂", "fa": "ازگیل", "hi": "मेडलर", "ar": "زعرور ألماني" }
+    },
+    "loquat": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Loquat", "icon": "🟡", "latin": "Eriobotrya japonica (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 47, "water_g": 86.7, "fiber_g": 1.7, "vit_a_mcg": 76.0, "potassium_mg": 266.0, "vit_c_mg": 1.0 },
+      "meta": { "locations": ["orient_market", "asia_market"], "season": ["spring"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Sweet, tart, citrus-peach blend" },
+      "props": ["Yellow, plum-sized fruit", "High in Vitamin A (carotenoids)", "Used in TCM respiratory syrups"],
+      "lang": { "de": "Japanische Wollmispel, Loquat", "en": "Loquat", "es": "Níspero japonés", "fr": "Nèfle du Japon", "ru": "Мушмула японская", "ja": "ビワ", "zh": "枇杷", "fa": "ازگیل ژاپنی", "hi": "लोक्वाट", "ar": "أكي دنيا" }
+    },
+    "--- STONE_FRUITS ---": "Steinobst (Polyphenole & Melatonin)",
+    "sweet_cherry": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Sweet Cherry", "icon": "🍒", "latin": "Prunus avium (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 63, "water_g": 82.0, "sugar_total_g": 12.8, "vit_c_mg": 7.0, "anthocyanins_mg": 30.0 },
+      "meta": { "locations": ["lidl", "kaufland", "weekly_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Uric acid reduction" },
+      "props": ["High in anthocyanins", "Natural anti-inflammatory", "High natural sugar content"],
+      "lang": { "de": "Süßkirsche", "en": "Sweet Cherry", "es": "Cereza", "fr": "Cerise", "ru": "Черешня", "ja": "さくらんぼ", "zh": "樱桃", "fa": "گیلاس", "hi": "चेरी", "ar": "كرز" }
+    },
+    "tart_cherry": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Tart Cherry (Sour Cherry)", "icon": "🍒", "latin": "Prunus cerasus (Fructus recens)", "sci": ["#sci/Neuroscience", "#sci/SportsMedicine"],
+      "val": { "kcal": 50, "sugar_total_g": 8.0, "vit_c_mg": 10.0, "melatonin_mcg": 13.5, "anthocyanins_mg": 60.0 },
+      "meta": { "locations": ["weekly_market", "rewe", "denns"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Sleep & Muscle recovery" },
+      "props": ["Elite athletic recovery food", "Significant natural melatonin", "Higher antioxidants than sweet cherries"],
+      "lang": { "de": "Sauerkirsche", "en": "Tart Cherry", "es": "Cereza ácida", "fr": "Griottier", "ru": "Вишня", "ja": "サワーチェリー", "zh": "酸樱桃", "fa": "آلبالو", "hi": "खट्टी चेरी", "ar": "كرز حامض" }
+    },
+    "peach": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Peach", "icon": "🍑", "latin": "Prunus persica (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 39, "water_g": 89.0, "sugar_total_g": 8.4, "vit_c_mg": 6.6, "potassium_mg": 190.0, "vit_a_mcg": 16.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "weekly_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Juicy, fuzzy skin" },
+      "props": ["Fuzz protects against water loss", "Susceptible to chilling injury", "High in chlorogenic acid"],
+      "lang": { "de": "Pfirsich", "en": "Peach", "es": "Melocotón", "fr": "Pêche", "ru": "Персик", "ja": "桃", "zh": "桃子", "fa": "هلو", "hi": "आड़ू", "ar": "خوخ" }
+    },
+    "nectarine": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Nectarine", "icon": "🍑", "latin": "Prunus persica var. nucipersica (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 44, "water_g": 87.6, "sugar_total_g": 7.9, "vit_c_mg": 5.4, "vit_a_mcg": 17.0, "potassium_mg": 201.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "genetic": "Recessive gene mutation" },
+      "props": ["Peach without fuzz", "Firm and more aromatic", "Skin is rich in flavonoids"],
+      "lang": { "de": "Nektarine", "en": "Nectarine", "es": "Nectarina", "fr": "Nectarine", "ru": "Нектарин", "ja": "ネクタリン", "zh": "油桃", "fa": "شلیل", "hi": "अमृत", "ar": "زليقة" }
+    },
+    "apricot": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Apricot", "icon": "🟠", "latin": "Prunus armeniaca (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 48, "water_g": 86.3, "fiber_g": 2.0, "beta_carotene_mcg": 1094.0, "potassium_mg": 259.0, "catechins_mg": 4.0 },
+      "meta": { "locations": ["lidl", "kaufland", "denns", "orient_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Massive Provitamin A" },
+      "props": ["High in beta-carotene", "Seed pit used for persipan", "Treated with sulfur when dried"],
+      "lang": { "de": "Aprikose, Marille", "en": "Apricot", "es": "Albaricoque", "fr": "Abricot", "ru": "Абрикос", "ja": "アプリコット", "zh": "杏", "fa": "زردآلو", "hi": "खुبانی", "ar": "مشمش" }
+    },
+    "plum": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Plum", "icon": "🟣", "latin": "Prunus domestica (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 46, "water_g": 87.0, "sugar_total_g": 9.9, "fiber_g": 1.4, "sorbitol_g": 1.5, "vit_k_mcg": 6.4 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestive_focus": "Sorbitol & Fiber" },
+      "props": ["Round and juicy", "Excellent for digestion", "Skin is high in anthocyanins"],
+      "lang": { "de": "Pflaume", "en": "Plum", "es": "Ciruela", "fr": "Prune", "ru": "Слива", "ja": "プラム", "zh": "李子", "fa": "آلو", "hi": "बेر", "ar": "برقوق" }
+    },
+    "damson": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Damson Plum (Zwetschge)", "icon": "🫐", "latin": "Prunus domestica subsp. domestica (Fructus recens)", "sci": ["#sci/Botany", "#sci/Culinary"],
+      "val": { "kcal": 46, "water_g": 83.0, "sugar_total_g": 10.5, "fiber_g": 1.5, "potassium_mg": 220.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "weekly_market"], "season": ["late_summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Baking champion" },
+      "props": ["Elongated shape, firmer flesh", "Freestone (pit separates easily)", "Maintains shape during baking"],
+      "lang": { "de": "Zwetschge", "en": "Damson", "es": "Ciruela damascena", "fr": "Quetsche", "ru": "Венгерка (слива)", "ja": "ダムソンプラム", "zh": "西洋李子", "fa": "آلو دمشقی", "hi": "दमासन", "ar": "برقوق دمشقي" }
+    },
+    "mirabelle_plum": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Mirabelle Plum", "icon": "🟡", "latin": "Prunus domestica subsp. syriaca (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 65, "water_g": 82.0, "sugar_total_g": 14.0, "fiber_g": 1.5, "vit_c_mg": 6.0 },
+      "meta": { "locations": ["weekly_market", "rewe"], "season": ["late_summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Extremely sweet / Honey-like" },
+      "props": ["Small, round, yellow fruit", "Very high sugar content", "Famous in French Lorraine"],
+      "lang": { "de": "Mirabelle", "en": "Mirabelle Plum", "es": "Mirabel", "fr": "Mirabelle", "ru": "Мирабель", "ja": "ミラベル", "zh": "黄香李", "fa": "آلو قطره‌طلا", "hi": "मिराबेल प्लम", "ar": "خوخ ميرابيل" }
+    },
+    "greengage": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Greengage (Reneklode)", "icon": "🍏", "latin": "Prunus domestica subsp. italica (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 41, "water_g": 85.0, "sugar_total_g": 11.0, "fiber_g": 1.5, "potassium_mg": 210.0 },
+      "meta": { "locations": ["weekly_market", "rewe"], "season": ["late_summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "The sweetest plum variety" },
+      "props": ["Noble green plum (Reine Claude)", "Stays green even when ripe", "Honey-like sweetness"],
+      "lang": { "de": "Reneklode, Ringlotte", "en": "Greengage", "es": "Ciruela claudia", "fr": "Reine-Claude", "ru": "Ренклод", "ja": "グリーンゲージ", "zh": "青梅", "fa": "آلو سبز", "hi": "ग्रीनगेज", "ar": "برقوق أخضر" }
+    },
+    "sloe": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Sloe (Blackthorn)", "icon": "🫐", "latin": "Prunus spinosa (Fructus recens)", "sci": ["#sci/Phytochemistry", "#sci/Toxicology"],
+      "val": { "kcal": 44, "water_g": 82.0, "tannins_mg": 250.0, "vit_c_mg": 15.0, "anthocyanins_mg": 100.0 },
+      "meta": { "locations": ["wild_foraging", "weekly_market"], "season": ["late_autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "preparation": "Requires frost" },
+      "props": ["Wild ancestor of plum", "Astringent when raw", "Used for Sloe Gin or syrups"],
+      "lang": { "de": "Schlehe, Schwarzdorn", "en": "Sloe", "es": "Endrina", "fr": "Prunelle", "ru": "Тёрн", "ja": "スローベリー", "zh": "黑刺李", "fa": "آلوچه وحشی", "hi": "स्लो", "ar": "برقوق سياج" }
+    },
+    "pluot": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Pluot (Plum-Apricot Hybrid)", "icon": "🍑", "latin": "Prunus salicina × armeniaca (Fructus recens)", "sci": ["#sci/Genetics"],
+      "val": { "kcal": 46, "sugar_total_g": 11.5, "vit_a_mcg": 200.0, "vit_c_mg": 10.0, "fiber_g": 1.6 },
+      "meta": { "locations": ["kaufland", "rewe", "lidl"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "botany": "Complex hybrid (mostly plum)" },
+      "props": ["Designer fruit: 75% plum, 25% apricot", "Intense sweetness", "Extremely juicy"],
+      "lang": { "de": "Pluot, Aprikyra", "en": "Pluot", "es": "Pluot", "fr": "Pluot", "ru": "Плуот", "ja": "プルオット", "zh": "恐龙蛋 (杏李)", "fa": "پلوت", "hi": "प्लुओट", "ar": "بلوت" }
+    },
+    "cornelian_cherry": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Cornelian Cherry", "icon": "🍒", "latin": "Cornus mas (Fructus recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 49, "vit_c_mg": 60.0, "anthocyanins_mg": 150.0, "pectin_g": 1.8 },
+      "meta": { "locations": ["wild_foraging", "weekly_market"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "botany": "Dogwood family" },
+      "props": ["Culinarily a stone fruit", "Tart, cranberry-like flavor", "Rich in medicinal anthocyanins"],
+      "lang": { "de": "Kornelkirsche, Dirndl", "en": "Cornelian Cherry", "es": "Cornejo macho", "fr": "Cornouille", "ru": "Кизил", "ja": "サンシュユ", "zh": "山茱萸", "fa": "زغال‌اخته", "hi": "कॉर्निलियन चेरी", "ar": "قرانيا" }
+    },
+    "fresh_jujube": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Fresh Jujube", "icon": "🫒", "latin": "Ziziphus jujuba (Fructus recens)", "sci": ["#sci/Pharmacognosy"],
+      "val": { "kcal": 79, "water_g": 77.8, "vit_c_mg": 69.0, "potassium_mg": 250.0, "saponins_mg": 10.0 },
+      "meta": { "locations": ["asia_market", "orient_market"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "TCM remedy" },
+      "props": ["Chinese Date", "Crisp texture like dry apple", "Used in TCM to calm the mind"],
+      "lang": { "de": "Chinesische Brustbeere", "en": "Fresh Jujube", "es": "Azufaifo", "fr": "Jujube", "ru": "Зизифус (Унаби)", "ja": "ナツメ", "zh": "鲜枣", "fa": "عناب", "hi": "बेर (Jujube)", "ar": "عناب" }
+    },
+
+"--- CITRUS_FRUITS ---": "Zitrusfrüchte (Vitamin C, Flavonoide & Limonen)",
+    "orange": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Orange", "icon": "🍊", "latin": "Citrus sinensis (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 47, "water_g": 86.7, "vit_c_mg": 53.2, "folate_mcg": 30.0, "hesperidin_mg": 30.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["winter", "spring"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "immunity": "Vitamin C + Hesperidin" },
+      "props": ["Flavonoid hesperidin supports vascular health", "White pith (albedo) is highly nutritious", "Winter fruit despite tropical image"],
+      "lang": { "de": "Orange, Apfelsine", "en": "Orange", "es": "Naranja", "fr": "Orange", "ru": "Апельсин", "ja": "オレンジ", "zh": "橙子", "fa": "پرتقال", "hi": "संतरा", "ar": "برتقال" }
+    },
+    "lemon": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Lemon", "icon": "🍋", "latin": "Citrus limon (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 29, "water_g": 88.9, "vit_c_mg": 53.0, "citric_acid_g": 5.0, "limonene_mg": 65.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestive_focus": "Alkalizing effect" },
+      "props": ["Highly acidic outside, highly alkalizing inside the body", "Peel contains powerful d-limonene (liver detox)", "Enhances iron absorption"],
+      "lang": { "de": "Zitrone", "en": "Lemon", "es": "Limón", "fr": "Citron", "ru": "Лимон", "ja": "レモン", "zh": "柠檬", "fa": "لیمو ترش", "hi": "नींबू", "ar": "ليمون" }
+    },
+    "grapefruit": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Grapefruit", "icon": "🍊", "latin": "Citrus × paradisi (Fructus recens)", "sci": ["#sci/Pharmacology", "#sci/Toxicology"],
+      "val": { "kcal": 32, "water_g": 90.5, "vit_c_mg": 31.2, "naringin_mg": 45.0, "lycopene_mcg": 1419.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["winter", "spring"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "safety": "CYP3A4 Enzyme Inhibition" },
+      "props": ["Contains naringenin (bitter principle)", "WARNING: Interferes heavily with many medications", "Pink varieties contain heart-healthy lycopene"],
+      "lang": { "de": "Grapefruit", "en": "Grapefruit", "es": "Pomelo", "fr": "Pamplemousse", "ru": "Грейпфрут", "ja": "グレープフルーツ", "zh": "葡萄柚", "fa": "گریپ‌فروت", "hi": "चकोतरा", "ar": "جريب فروت" }
+    },
+    "lime": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Lime", "icon": "🟢", "latin": "Citrus × aurantiifolia (Fructus recens)", "sci": ["#sci/Nutrition", "#sci/History"],
+      "val": { "kcal": 30, "water_g": 88.3, "vit_c_mg": 29.1, "citric_acid_g": 6.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Sharper, more floral acidity than lemon" },
+      "props": ["Historical scurvy prevention", "Picked green, turns yellow if fully ripe", "Essential for Thai cuisine"],
+      "lang": { "de": "Limette", "en": "Lime", "es": "Lima", "fr": "Citron vert", "ru": "Лайм", "ja": "ライム", "zh": "青柠", "fa": "لیمو ترش سبز", "hi": "नींबू (हरा)", "ar": "ليمون حامض" }
+    },
+    "mandarin": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Mandarin / Tangerine", "icon": "🍊", "latin": "Citrus reticulata (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 53, "water_g": 85.2, "sugar_total_g": 10.6, "vit_c_mg": 26.7, "synephrine_mg": 2.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usability": "Easy-peel 'zipper skin'" },
+      "props": ["True ancestor species", "Contains synephrine (mild metabolic stimulant)", "Sweeter and less acidic than oranges"],
+      "lang": { "de": "Mandarine", "en": "Mandarin", "es": "Mandarina", "fr": "Mandarine", "ru": "Мандарин", "ja": "みかん", "zh": "橘子", "fa": "نارنگی", "hi": "कीनू", "ar": "يوسفي" }
+    },
+    "pomelo": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pomelo", "icon": "🍈", "latin": "Citrus maxima (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 38, "water_g": 89.1, "vit_c_mg": 61.0, "potassium_mg": 216.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["kaufland", "rewe", "asia_market"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "size": "Largest citrus fruit" },
+      "props": ["Non-hybrid original species", "Extremely thick spongy rind", "Sweet, mild flavor without intense bitterness"],
+      "lang": { "de": "Pomelo, Pampelmuse", "en": "Pomelo", "es": "Pampelmusa", "fr": "Pamplemoussier", "ru": "Помело", "ja": "文旦 (ポメロ)", "zh": "柚子", "fa": "پومیلو", "hi": "पोमेलो", "ar": "بوملي" }
+    },
+    "blood_orange": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Blood Orange", "icon": "🩸", "latin": "Citrus sinensis var. sanguinea (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 45, "water_g": 86.0, "vit_c_mg": 50.0, "anthocyanins_mg": 45.0, "folate_mcg": 30.0 },
+      "meta": { "locations": ["kaufland", "rewe", "denns"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "Anthocyanin rich" },
+      "props": ["Requires cold nights to develop red pigments", "Distinctive raspberry-like flavor", "Higher antioxidant capacity"],
+      "lang": { "de": "Blutorange", "en": "Blood Orange", "es": "Naranja sanguina", "fr": "Orange sanguine", "ru": "Кровавый апельсин", "ja": "ブラッドオレンジ", "zh": "血橙", "fa": "پرتقال خونی", "hi": "رक्त संतरा", "ar": "برتقال دم الزغلول" }
+    },
+    "kumquat": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Kumquat", "icon": "🥚", "latin": "Citrus japonica (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 71, "water_g": 80.8, "fiber_g": 6.5, "sugar_total_g": 9.4, "vit_c_mg": 43.9 },
+      "meta": { "locations": ["rewe", "denns", "asia_market"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Eaten whole (skin included)" },
+      "props": ["Peel is sweet, flesh is sour", "Massive fiber content because skin is eaten", "Grape-sized and oval"],
+      "lang": { "de": "Kumquat, Zwergorange", "en": "Kumquat", "es": "Kumquat", "fr": "Kumquat", "ru": "Кумкват", "ja": "金柑", "zh": "金桔", "fa": "کامکوات", "hi": "कुमक्वाट", "ar": "كمكوات" }
+    },
+    "yuzu": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Yuzu", "icon": "🟡", "latin": "Citrus junos (Fructus recens)", "sci": ["#sci/Aromachology"],
+      "val": { "kcal": 53, "vit_c_mg": 90.0, "citric_acid_g": 4.5, "yuzunone_mg": 2.5 },
+      "meta": { "locations": ["asia_market", "gourmet_market"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Ultimate floral/tart profile" },
+      "props": ["Complex aroma (lemon/mandarin/grapefruit blend)", "Prized for its zest", "Highly cold-hardy"],
+      "lang": { "de": "Yuzu", "en": "Yuzu", "es": "Yuzu", "fr": "Yuzu", "ru": "Юдзу", "ja": "柚子", "zh": "柚子 (Yuzu)", "fa": "یوزو", "hi": "युज़ू", "ar": "يوزو" }
+    },
+    "buddhas_hand": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Buddha's Hand", "icon": "🖐️", "latin": "Citrus medica var. sarcodactylis (Fructus recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 20, "fiber_g": 4.0, "limonene_mg": 85.0, "vit_c_mg": 30.0 },
+      "meta": { "locations": ["asia_market", "gourmet_market"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "anatomy": "No juice, 100% rind and pith" },
+      "props": ["Shaped like a multi-fingered hand", "Contains zero juice or pulp", "Used for powerful lemon blossom aroma"],
+      "lang": { "de": "Buddhas Hand", "en": "Buddha's Hand", "es": "Mano de Buda", "fr": "Main de Bouddha", "ru": "Рука Будды", "ja": "仏手柑", "zh": "佛手柑", "fa": "دست بودا", "hi": "बुद्ध का हाथ", "ar": "يد بوذا" }
+    },
+    "--- BERRIES ---": "Beeren (Die Antioxidantien- & Polyphenol-Könige)",
+    "wild_blueberry": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Wild Blueberry (Bilberry)", "icon": "🫐", "latin": "Vaccinium myrtillus (Fructus recens)", "sci": ["#sci/Neuroscience", "#sci/Phytochemistry"],
+      "val": { "kcal": 43, "fiber_g": 4.9, "vit_c_mg": 44.0, "anthocyanins_mg": 300.0, "manganese_mg": 3.3 },
+      "meta": { "locations": ["denns", "rewe", "weekly_market", "forest"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Extreme Brain Health" },
+      "props": ["Flesh is deep purple", "Massive cognitive and memory benefits", "Highest antioxidant levels"],
+      "lang": { "de": "Wilde Blaubeere, Heidelbeere", "en": "Wild Blueberry", "es": "Arándano silvestre", "fr": "Myrtille sauvage", "ru": "Черника", "ja": "ビルベリー", "zh": "野生蓝莓", "fa": "بلوبری وحشی", "hi": "जंगली ब्लूबेरी", "ar": "توت بري" }
+    },
+    "cultivated_blueberry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cultivated Blueberry", "icon": "🫐", "latin": "Vaccinium corymbosum (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 57, "water_g": 84.0, "fiber_g": 2.4, "vit_c_mg": 9.7, "vit_k_mcg": 19.3, "anthocyanins_mg": 160.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer", "all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usability": "Longer shelf life, plumper" },
+      "props": ["White flesh inside", "Larger and sweeter than wild blueberries", "Lower antioxidant capacity"],
+      "lang": { "de": "Kulturheidelbeere", "en": "Cultivated Blueberry", "es": "Arándano azul", "fr": "Bleuet", "ru": "Голубика", "ja": "ブルーベリー", "zh": "蓝莓", "fa": "بلوبری", "hi": "ब्लूबेरी", "ar": "عنبية" }
+    },
+    "strawberry": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Strawberry", "icon": "🍓", "latin": "Fragaria × ananassa (Fructus recens)", "sci": ["#sci/Nutrition", "#sci/Botany"],
+      "val": { "kcal": 32, "water_g": 91.0, "vit_c_mg": 58.8, "manganese_mg": 0.4, "ellagic_acid_mg": 5.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "weekly_market"], "season": ["spring", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "compound": "Rich in Ellagic Acid" },
+      "props": ["Aggregate accessory fruit", "More Vitamin C per 100g than an orange", "Seeds are on the outside"],
+      "lang": { "de": "Erdbeere", "en": "Strawberry", "es": "Fresa", "fr": "Fraise", "ru": "Клубника", "ja": "いちご", "zh": "草莓", "fa": "توت‌فرنگی", "hi": "स्ट्रॉबेरी", "ar": "فراولة" }
+    },
+    "raspberry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Raspberry", "icon": "🩷", "latin": "Rubus idaeus (Fructus recens)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 52, "water_g": 85.7, "fiber_g": 6.5, "vit_c_mg": 26.2, "ketones_mg": 4.0, "ellagitannins_mg": 30.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "weekly_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "macro_focus": "Extremely high fiber-to-carb ratio" },
+      "props": ["Hollow core when picked", "Contains raspberry ketones", "Incredible fiber density"],
+      "lang": { "de": "Himbeere", "en": "Raspberry", "es": "Frambuesa", "fr": "Framboise", "ru": "Малина", "ja": "ラズベリー", "zh": "覆盆子", "fa": "تمشک", "hi": "रसभरी", "ar": "توت العليق" }
+    },
+    "blackberry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Blackberry", "icon": "🍇", "latin": "Rubus fruticosus (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 43, "water_g": 88.1, "fiber_g": 5.3, "vit_c_mg": 21.0, "vit_k_mcg": 19.8, "anthocyanins_mg": 150.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "wild_foraging"], "season": ["late_summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Oral health & Astringent" },
+      "props": ["Core stays inside the fruit", "High in tannins", "Massive polyphenol load"],
+      "lang": { "de": "Brombeere", "en": "Blackberry", "es": "Zarzamora", "fr": "Mûre", "ru": "Ежевика", "ja": "ブラックベリー", "zh": "黑莓", "fa": "شاه‌توت", "hi": "ब्लैकबेरी", "ar": "توت أسود" }
+    },
+    "blackcurrant": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Blackcurrant", "icon": "⚫", "latin": "Ribes nigrum (Fructus recens)", "sci": ["#sci/Pharmacology", "#sci/SportsMedicine"],
+      "val": { "kcal": 63, "fiber_g": 6.8, "vit_c_mg": 181.0, "potassium_mg": 322.0, "anthocyanins_mg": 250.0 },
+      "meta": { "locations": ["weekly_market", "rewe"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Vitamin C Titan" },
+      "props": ["Massive Vitamin C content", "Supports blood flow (vasodilation)", "Intense tart flavor"],
+      "lang": { "de": "Schwarze Johannisbeere", "en": "Blackcurrant", "es": "Grosella negra", "fr": "Cassis", "ru": "Черная смородина", "ja": "カシス", "zh": "黑加仑", "fa": "انگور فرنگی سیاه", "hi": "काले करंट", "ar": "كشمش أسود" }
+    },
+    "redcurrant": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Redcurrant", "icon": "🔴", "latin": "Ribes rubrum (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 56, "fiber_g": 4.3, "vit_c_mg": 41.0, "potassium_mg": 275.0, "pectin_g": 1.2 },
+      "meta": { "locations": ["weekly_market", "rewe"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Highly tart and refreshing" },
+      "props": ["Translucent, bright red berries", "High natural pectin", "Sharp acidity"],
+      "lang": { "de": "Rote Johannisbeere, Ribisel", "en": "Redcurrant", "es": "Grosella roja", "fr": "Groseille", "ru": "Красная смородина", "ja": "赤スグリ", "zh": "红加仑", "fa": "انگور فرنگی سرخ", "hi": "लाल करंट", "ar": "كشمش أحمر" }
+    },
+    "gooseberry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Gooseberry", "icon": "🟢", "latin": "Ribes uva-crispa (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 44, "fiber_g": 4.3, "vit_c_mg": 27.7, "silica_mg": 3.0 },
+      "meta": { "locations": ["weekly_market", "wild_foraging"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Firm, crisp, veined skin" },
+      "props": ["Berries can be hairy or smooth", "Very tart when green", "Rich in silica for hair/nails"],
+      "lang": { "de": "Stachelbeere", "en": "Gooseberry", "es": "Uva espina", "fr": "Groseille à maquereau", "ru": "Крыжовник", "ja": "グーズベリー", "zh": "鹅莓", "fa": "انگور فرنگی", "hi": "करौंदा", "ar": "عنب الثعلب" }
+    },
+    "cranberry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cranberry", "icon": "🔴", "latin": "Vaccinium macrocarpon (Fructus recens)", "sci": ["#sci/Microbiology", "#sci/Phytochemistry"],
+      "val": { "kcal": 46, "fiber_g": 3.6, "vit_c_mg": 14.0, "proanthocyanidins_mg": 41.0 },
+      "meta": { "locations": ["kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "UTI Prevention (A-type PACs)" },
+      "props": ["Stops bacteria adhering to bladder walls", "Too tart to eat raw", "Harvested in flooded bogs"],
+      "lang": { "de": "Cranberry, Moosbeere", "en": "Cranberry", "es": "Arándano rojo", "fr": "Canneberge", "ru": "Клюква", "ja": "クランベリー", "zh": "蔓越莓", "fa": "کرنبری", "hi": "क्रैनबेरी", "ar": "توت بري أحمر" }
+    },
+    "lingonberry": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Lingonberry (Cowberry)", "icon": "🔴", "latin": "Vaccinium vitis-idaea (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 53, "fiber_g": 3.0, "vit_c_mg": 11.0, "benzoic_acid_mg": 50.0 },
+      "meta": { "locations": ["weekly_market", "ikea", "scandinavian_specialty"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "storage": "Natural preservatives" },
+      "props": ["High levels of natural benzoic acid", "Preserves itself without sugar", "Nordic cuisine staple"],
+      "lang": { "de": "Preiselbeere", "en": "Lingonberry", "es": "Arándano rojo escandinavo", "fr": "Airelle rouge", "ru": "Брусника", "ja": "リンゴンベリー", "zh": "越橘", "fa": "لینگون‌بری", "hi": "लिंगनबेरी", "ar": "توت الحجل" }
+    },
+    "sea_buckthorn": {
+      "unit_price": 4.00,
+      "unit_type": "100g",
+      "label": "Sea Buckthorn", "icon": "🟠", "latin": "Hippophae rhamnoides (Fructus recens)", "sci": ["#sci/Phytochemistry", "#sci/Dermatology"],
+      "val": { "kcal": 82, "fat_total_g": 5.0, "omega7_g": 1.5, "vit_c_mg": 400.0, "vit_b12_mcg": 0.1 },
+      "meta": { "locations": ["reformhaus", "denns"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Omega-7 & Extreme Vit C" },
+      "props": ["Plant source of Omega-7", "Vitamin C up to 10x an orange", "Traces of bioavailable B12"],
+      "lang": { "de": "Sanddorn", "en": "Sea Buckthorn", "es": "Espino amarillo", "fr": "Argousier", "ru": "Облепиха", "ja": "サジー", "zh": "沙棘", "fa": "سنجد تلخ", "hi": "सी बकथॉर्न", "ar": "نبق البحر" }
+    },
+    "elderberry": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Elderberry", "icon": "🌑", "latin": "Sambucus nigra (Fructus recens)", "sci": ["#sci/Toxicology", "#sci/Pharmacology"],
+      "val": { "kcal": 73, "fiber_g": 7.0, "vit_c_mg": 36.0, "anthocyanins_mg": 1375.0, "sambunigrin_mg": 20.0 },
+      "meta": { "locations": ["wild_foraging", "reformhaus"], "season": ["late_summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "safety": "MUST BE COOKED (Sambunigrin)" },
+      "props": ["WARNING: Raw berries contain toxins", "Cooking destroys sambunigrin", "Potent antiviral properties"],
+      "lang": { "de": "Schwarzer Holunder", "en": "Elderberry", "es": "Saúco", "fr": "Sureau", "ru": "Бузина", "ja": "接骨木", "zh": "接骨木莓", "fa": "آقطی سیاه", "hi": "एल्डरबेरी", "ar": "خمان أسود" }
+    },
+    "goji_berry": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Goji Berry (Wolfberry)", "icon": "🏮", "latin": "Lycium barbarum (Fructus siccus)", "sci": ["#sci/Pharmacognosy", "#sci/Nutrition"],
+      "val": { "kcal": 349, "protein_g": 14.3, "fiber_g": 13.0, "vit_a_mcg": 1341.0, "zeaxanthin_mg": 16.0 },
+      "meta": { "locations": ["denns", "dm", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Eye health (Zeaxanthin)" },
+      "props": ["Usually consumed dried", "Complete protein source", "Protects the retina"],
+      "lang": { "de": "Goji-Beere, Bocksdorn", "en": "Goji Berry", "es": "Baya de Goji", "fr": "Baie de Goji", "ru": "Годжи", "ja": "クコの実", "zh": "枸杞", "fa": "گوجی بری", "hi": "गोजी बेरी", "ar": "غوجي" }
+    },
+    "chokeberry": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Aronia (Chokeberry)", "icon": "🟣", "latin": "Aronia melanocarpa (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 47, "fiber_g": 5.3, "vit_c_mg": 21.0, "anthocyanins_mg": 1480.0, "antioxidants_orac": 16062.0 },
+      "meta": { "locations": ["reformhaus", "denns", "dm"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Unmatched ORAC value" },
+      "props": ["Extremely astringent raw", "High polyphenol load", "Higher antioxidant capacity than wild blueberry"],
+      "lang": { "de": "Aroniabeere, Apfelbeere", "en": "Chokeberry", "es": "Aronia", "fr": "Aronia", "ru": "Черноплодная рябина", "ja": "アロニア", "zh": "野樱莓", "fa": "آرونیا", "hi": "चोकबेरी", "ar": "أرونيا" }
+    },
+    "mulberry": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Mulberry (Dried)", "icon": "🍇", "latin": "Morus alba (Fructus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 340, "protein_g": 9.0, "fiber_g": 14.0, "iron_plant_mg": 9.7, "vit_c_mg": 36.4, "resveratrol_mg": 5.0 },
+      "meta": { "locations": ["denns", "dm", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Plant Iron Champion" },
+      "props": ["Extremely high iron content", "Naturally honey-sweet", "Crunchy when dried"],
+      "lang": { "de": "Maulbeere (getrocknet)", "en": "Mulberry", "es": "Mora blanca", "fr": "Mûre blanche", "ru": "Шелковица", "ja": "マルベリー", "zh": "桑葚", "fa": "توت سفید", "hi": "शहतूत", "ar": "توت أبيض" }
+    },
+    "acai_berry": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Açaí Berry", "icon": "🌴", "latin": "Euterpe oleracea (Fructus recens gelidus)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 70, "fat_total_g": 5.0, "carbs_g": 4.0, "sugar_total_g": 0.0, "anthocyanins_mg": 320.0 },
+      "meta": { "locations": ["rewe", "denns", "kaufland"], "season": ["all_year_frozen"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "lipid_profile": "High fat, zero sugar" },
+      "props": ["Amazonian palm fruit", "Exported only frozen or powder", "Contains healthy fats (Oleic acid)"],
+      "lang": { "de": "Açaí-Beere", "en": "Açaí Berry", "es": "Baya de Açaí", "fr": "Baie d'Açaí", "ru": "Асаи", "ja": "アサイー", "zh": "阿萨伊浆果", "fa": "آسای", "hi": "अकाई बेरी", "ar": "أساي" }
+    },
+
+"--- EXOTIC_FRUITS ---": "Exoten (Energie, Enzyme & Tropen-Power)",
+    "banana": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Banana", "icon": "🍌", "latin": "Musa acuminata (Fructus recens)", "sci": ["#sci/Nutrition", "#sci/SportsMedicine"],
+      "val": { "kcal": 89, "water_g": 74.9, "carbs_g": 22.8, "potassium_mg": 358.0, "vit_b6_mg": 0.4, "resistant_starch_g": 4.7 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "energy": "Rapid glycogen replenishment" },
+      "props": ["Botanically a berry", "Green bananas contain prebiotic resistant starch", "Ripe bananas are quick energy"],
+      "lang": { "de": "Banane", "en": "Banana", "es": "Plátano", "fr": "Banane", "ru": "Банан", "ja": "バナナ", "zh": "香蕉", "fa": "موز", "hi": "केला", "ar": "موز" }
+    },
+    "mango": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Mango", "icon": "🥭", "latin": "Mangifera indica (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 60, "water_g": 83.5, "sugar_total_g": 13.7, "vit_a_mcg": 54.0, "vit_c_mg": 36.4, "mangiferin_mg": 2.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["summer", "all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Vitamin A & Mangiferin" },
+      "props": ["The King of Fruits in India", "Contains unique mangiferin", "Buttery texture"],
+      "lang": { "de": "Mango", "en": "Mango", "es": "Mango", "fr": "Mangue", "ru": "Манго", "ja": "マンゴー", "zh": "芒果", "fa": "انبه", "hi": "आम", "ar": "مانجو" }
+    },
+    "pineapple": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Pineapple", "icon": "🍍", "latin": "Ananas comosus (Fructus recens)", "sci": ["#sci/Pharmacognosy", "#sci/Nutrition"],
+      "val": { "kcal": 50, "water_g": 86.0, "vit_c_mg": 47.8, "manganese_mg": 0.9, "bromelain_mg": 15.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "enzyme_focus": "Bromelain source" },
+      "props": ["Contains Bromelain (digests protein)", "Core contains highest enzyme level", "Botanically a multiple fruit"],
+      "lang": { "de": "Ananas", "en": "Pineapple", "es": "Piña", "fr": "Ananas", "ru": "Ананас", "ja": "パイナップル", "zh": "菠萝", "fa": "آناناس", "hi": "अनानास", "ar": "أناناس" }
+    },
+    "papaya": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Papaya", "icon": "🍈", "latin": "Carica papaya (Fructus recens)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 43, "water_g": 88.0, "vit_c_mg": 62.0, "vit_a_mcg": 47.0, "papain_mg": 10.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestive_aid": "Contains Papain" },
+      "props": ["Contains Papain enzyme", "Black seeds are edible and peppery", "Green papaya used in Som Tum"],
+      "lang": { "de": "Papaya", "en": "Papaya", "es": "Papaya", "fr": "Papaye", "ru": "Папайя", "ja": "パパイヤ", "zh": "木瓜", "fa": "پاپایا", "hi": "पपीता", "ar": "بابايا" }
+    },
+    "kiwi": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Kiwi (Green)", "icon": "🥝", "latin": "Actinidia deliciosa (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 61, "water_g": 83.0, "vit_c_mg": 92.7, "fiber_g": 3.0, "actinidin_mg": 5.0, "vit_k_mcg": 40.3 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Sleep aid & Digestion" },
+      "props": ["Skin is edible", "Contains Actinidin enzyme", "Shown to improve sleep quality"],
+      "lang": { "de": "Kiwi", "en": "Kiwi", "es": "Kiwi", "fr": "Kiwi", "ru": "Киви", "ja": "キウイ", "zh": "猕猴桃", "fa": "کیوی", "hi": "कीवी", "ar": "كيوي" }
+    },
+    "pomegranate": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Pomegranate", "icon": "🔴", "latin": "Punica granatum (Fructus recens)", "sci": ["#sci/Pharmacology", "#sci/Nutrition"],
+      "val": { "kcal": 83, "fiber_g": 4.0, "vit_c_mg": 10.2, "punicalagins_mg": 30.0, "potassium_mg": 236.0 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Punicalagins" },
+      "props": ["Only arils are eaten", "Massive cardiovascular benefits", "High antioxidant activity"],
+      "lang": { "de": "Granatapfel", "en": "Pomegranate", "es": "Granada", "fr": "Grenade", "ru": "Гранат", "ja": "ザクロ", "zh": "石榴", "fa": "انار", "hi": "अनार", "ar": "رمان" }
+    },
+    "passion_fruit": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Passion Fruit (Maracuja)", "icon": "🟣", "latin": "Passiflora edulis (Fructus recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 97, "fiber_g": 10.4, "vit_c_mg": 30.0, "vit_a_mcg": 64.0, "piceatannol_mg": 2.0 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "macro_focus": "High Fiber" },
+      "props": ["Seeds provide crunchy fiber", "Wrinkled skin means ripe", "Intensely tart"],
+      "lang": { "de": "Passionsfrucht", "en": "Passion Fruit", "es": "Maracuyá", "fr": "Fruit de la passion", "ru": "Маракуйя", "ja": "パッションフルーツ", "zh": "百香果", "fa": "پشن فروت", "hi": "पैशन फ्रूट", "ar": "فاكهة العاطفة" }
+    },
+    "dragon_fruit": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Dragon Fruit (Pitaya)", "icon": "🐉", "latin": "Selenicereus undatus (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 60, "water_g": 87.0, "magnesium_mg": 40.0, "iron_plant_mg": 0.6, "fiber_g": 3.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "visual": "Neon appearance" },
+      "props": ["Night-blooming cactus fruit", "Subtly sweet taste", "High in prebiotic oligosaccharides"],
+      "lang": { "de": "Drachenfrucht", "en": "Dragon Fruit", "es": "Pitahaya", "fr": "Fruit du dragon", "ru": "Питахайя", "ja": "ドラゴンフルーツ", "zh": "火龙果", "fa": "دراگون فروت", "hi": "ड्रैगन फ्रूट", "ar": "فاكهة التنين" }
+    },
+    "persimmon": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Persimmon (Kaki)", "icon": "🟠", "latin": "Diospyros kaki (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 70, "water_g": 80.3, "fiber_g": 3.6, "vit_a_mcg": 81.0, "manganese_mg": 0.4 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "orient_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Jelly-like when ripe" },
+      "props": ["Astringent types must be soft", "Honey-cinnamon flavor", "National fruit of Japan"],
+      "lang": { "de": "Kaki, Persimone", "en": "Persimmon", "es": "Caqui", "fr": "Kaki", "ru": "Хурма", "ja": "柿", "zh": "柿子", "fa": "خرمالو", "hi": "ख़ुरما", "ar": "كاكا" }
+    },
+    "guava": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Guava", "icon": "🍐", "latin": "Psidium guajava (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 68, "water_g": 80.8, "fiber_g": 5.4, "vit_c_mg": 228.3, "potassium_mg": 417.0, "lycopene_mcg": 5204.0 },
+      "meta": { "locations": ["asia_market", "afro_market"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Extreme Vit C" },
+      "props": ["Contains 4x Vit C of orange", "Pink varieties rich in lycopene", "Edible rind"],
+      "lang": { "de": "Guave", "en": "Guava", "es": "Guayaba", "fr": "Goyave", "ru": "Гуава", "ja": "グァバ", "zh": "番石榴", "fa": "گواوا", "hi": "अमरूद", "ar": "جوافة" }
+    },
+    "fig": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Fig (Fresh)", "icon": "🟤", "latin": "Ficus carica (Fructus recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 74, "water_g": 79.1, "fiber_g": 2.9, "calcium_mg": 35.0, "potassium_mg": 232.0 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market"], "season": ["late_summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "Debated (fig wasp)", "benefit": "Calcium & Digestion" },
+      "props": ["Inverted flower", "Delicate, spoils quickly", "High calcium for fruit"],
+      "lang": { "de": "Feige (frisch)", "en": "Fig", "es": "Higo", "fr": "Figue", "ru": "Инжир", "ja": "イチジク", "zh": "无花果", "fa": "انجیر", "hi": "अंजीर", "ar": "تين" }
+    },
+    "lychee": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Lychee", "icon": "🟤", "latin": "Litchi chinensis (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 66, "water_g": 81.7, "sugar_total_g": 15.2, "vit_c_mg": 71.5 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Floral sweetness" },
+      "props": ["Rough red shell", "High in Vitamin C", "Best eaten fresh"],
+      "lang": { "de": "Litschi", "en": "Lychee", "es": "Lichi", "fr": "Litchi", "ru": "Личи", "ja": "ライチ", "zh": "荔枝", "fa": "سرخالو", "hi": "लीची", "ar": "ليتشي" }
+    },
+    "mangosteen": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mangosteen", "icon": "🟣", "latin": "Garcinia mangostana (Fructus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 73, "water_g": 80.9, "vit_c_mg": 2.9, "xanthones_mg": 10.0 },
+      "meta": { "locations": ["asia_market", "gourmet_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "title": "Queen of Fruits" },
+      "props": ["Purple rind, white segments", "Rare xanthone antioxidants", "Delicate sweet-tart flavor"],
+      "lang": { "de": "Mangostane", "en": "Mangosteen", "es": "Mangostán", "fr": "Mangoustan", "ru": "Мангостин", "ja": "マンゴスチン", "zh": "山竹", "fa": "ترنجبین", "hi": "मैंगोस्टीन", "ar": "جوز جندم" }
+    },
+    "durian": {
+      "unit_price": 30.00,
+      "unit_type": "piece",
+      "label": "Durian", "icon": "🦔", "latin": "Durio zibethinus (Fructus recens)", "sci": ["#sci/Aromachology", "#sci/Nutrition"],
+      "val": { "kcal": 147, "fat_total_g": 5.3, "carbs_g": 27.1, "potassium_mg": 436.0 },
+      "meta": { "locations": ["asia_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "title": "King of Fruits" },
+      "props": ["Strong sulfurous odor", "Custard texture", "Energy dense"],
+      "lang": { "de": "Durian", "en": "Durian", "es": "Durián", "fr": "Durian", "ru": "Дуриан", "ja": "ドリアン", "zh": "榴莲", "fa": "دوریان", "hi": "डूरियन", "ar": "دوريان" }
+    },
+    "jackfruit": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Jackfruit", "icon": "🍈", "latin": "Artocarpus heterophyllus (Fructus recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 95, "water_g": 73.5, "fiber_g": 1.5, "protein_g": 1.7 },
+      "meta": { "locations": ["asia_market", "rewe"], "season": ["summer"], "vegan": true },
+      "props": ["World's largest tree fruit", "Unripe used as meat sub", "Ripe tastes like tropical gum"],
+      "lang": { "de": "Jackfrucht", "en": "Jackfruit", "es": "Yaca", "fr": "Jacquier", "ru": "Джекфروт", "ja": "ジャックフルーツ", "zh": "菠萝蜜", "fa": "جک‌فروت", "hi": "कटहल", "ar": "كاكايا" }
+    },
+    "starfruit": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Starfruit (Carambola)", "icon": "⭐", "latin": "Averrhoa carambola (Fructus recens)", "sci": ["#sci/Toxicology", "#sci/Botany"],
+      "val": { "kcal": 31, "water_g": 91.4, "vit_c_mg": 34.4, "oxalic_acid_mg": 500.0 },
+      "meta": { "locations": ["kaufland", "rewe", "asia_market"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "safety": "Kidney warning" },
+      "props": ["Star-shaped slices", "Crisp tart texture", "High oxalic acid"],
+      "lang": { "de": "Sternfrucht", "en": "Starfruit", "es": "Carambola", "fr": "Carambole", "ru": "Карамбола", "ja": "スターフルーツ", "zh": "杨桃", "fa": "میوه ستاره‌ای", "hi": "कमरख", "ar": "فاكهة النجمة" }
+    },
+    "cherimoya": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Cherimoya", "icon": "🍏", "latin": "Annona cherimola (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 75, "water_g": 79.4, "vit_c_mg": 12.6, "potassium_mg": 287.0 },
+      "meta": { "locations": ["gourmet_market", "orient_market"], "season": ["winter", "spring"], "vegan": true },
+      "props": ["Custard Apple", "Banana-papaya-vanilla flavor", "Toxic seeds"],
+      "lang": { "de": "Cherimoya", "en": "Cherimoya", "es": "Chirimoya", "fr": "Chérimole", "ru": "Черимойя", "ja": "チェリモヤ", "zh": "秘鲁番荔枝", "fa": "چریمویا", "hi": "चेरिमोया", "ar": "شيريمويا" }
+    },
+    "--- MELONS ---": "Melonen (Hydratation & Elektrolyte)",
+    "watermelon": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Watermelon", "icon": "🍉", "latin": "Citrullus lanatus (Fructus recens)", "sci": ["#sci/Nutrition", "#sci/SportsMedicine"],
+      "val": { "kcal": 30, "water_g": 91.4, "citulline_mg": 150.0, "lycopene_mcg": 4532.0, "potassium_mg": 112.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "benefit": "Nitric Oxide booster" },
+      "props": ["Contains L-citrulline", "Highest lycopene in raw fruit", "Edible rind and seeds"],
+      "lang": { "de": "Wassermelone", "en": "Watermelon", "es": "Sandía", "fr": "Pastèque", "ru": "Арбуз", "ja": "スイカ", "zh": "西瓜", "fa": "هندوانه", "hi": "तरबूज", "ar": "بطيخ" }
+    },
+    "cantaloupe": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cantaloupe Melon", "icon": "🍈", "latin": "Cucumis melo var. cantalupensis (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 34, "vit_a_mcg": 169.0, "vit_c_mg": 36.7, "potassium_mg": 267.0 },
+      "meta": { "locations": ["rewe", "kaufland"], "season": ["summer"], "vegan": true },
+      "props": ["High Beta-Carotene", "Musky aroma", "Netted skin"],
+      "lang": { "de": "Canteloupe-Melone", "en": "Cantaloupe", "es": "Cantalupo", "fr": "Cantaloup", "ru": "Канталупа", "ja": "カンタロープ", "zh": "哈密瓜", "fa": "طالبی", "hi": "खरबूजा", "ar": "شمام" }
+    },
+    "honeydew_melon": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Honeydew Melon", "icon": "🍈", "latin": "Cucumis melo var. inodorus (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 36, "sugar_total_g": 8.0, "potassium_mg": 228.0, "vit_c_mg": 18.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["summer", "autumn"], "vegan": true },
+      "props": ["Sweetest melon", "Longer shelf life", "Hydrating"],
+      "lang": { "de": "Honigmelone", "en": "Honeydew Melon", "es": "Melón de miel", "fr": "Melon miel", "ru": "Медовая дыня", "ja": "ハネデューメロン", "zh": "白兰瓜", "fa": "خربزه عسلی", "hi": "हनीड्यू तरबूज", "ar": "شمام عسلي" }
+    },
+    "galia_melon": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Galia Melon", "icon": "🍈", "latin": "Cucumis melo var. reticulatus (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 26, "sugar_total_g": 6.0, "potassium_mg": 200.0 },
+      "meta": { "locations": ["lidl", "rewe", "kaufland"], "season": ["summer"], "vegan": true },
+      "props": ["Hybrid melon", "Very sweet scent", "Perfect for salads"],
+      "lang": { "de": "Galia-Melone", "en": "Galia Melon", "es": "Melón Galia", "fr": "Melon Galia", "ru": "Галия (дыня)", "ja": "ガリアメロン", "zh": "加利亚哈密瓜", "fa": "خربزه گالیا", "hi": "गालिया खरबूजा", "ar": "شمام غالبا" }
+    }
+  }
+}

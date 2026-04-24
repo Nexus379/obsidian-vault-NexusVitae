@@ -1,0 +1,584 @@
+{
+  "legumes": {
+    "--- FRESH_PODS ---": "Frische Schoten & Bohnen",
+    "beans_green": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Green Beans", "icon": "🌿", "latin": "Phaseolus vulgaris (Legumen viride)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 31, "protein_g": 1.8, "fiber_g": 3.4, "vit_c_mg": 12.0, "vit_k_mcg": 43.0, "silica_mg": 2.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "weekly_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "safety": "Must be cooked (Phasin)" },
+      "props": ["High in silicon for connective tissue", "Low-calorie filling vegetable", "Rich in chlorophyll"],
+      "lang": { "de": "Grüne Bohnen", "en": "Green Beans", "es": "Judías verdes", "fr": "Haricots verts", "ru": "Стручковая фасоль", "ja": "インゲン", "zh": "四季豆", "fa": "لوبیا سبز", "hi": "हरी फली", "ar": "فاصوليا خضراء" }
+    },
+    "peas_snow": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Snow Peas", "icon": "🌱", "latin": "Pisum sativum var. macrocarpon (Legumen recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 42, "protein_g": 2.8, "carbs_g": 7.5, "fiber_g": 2.6, "vit_c_mg": 60.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland", "denns"], "season": ["spring", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Sweet & crunchy" },
+      "props": ["Edible pods", "Higher Vitamin C than mature peas", "Great for rapid stir-frying"],
+      "lang": { "de": "Zuckerschoten", "en": "Snow Peas", "es": "Guisantes dulces", "fr": "Pois gourmands", "ru": "Снежный горошек", "ja": "サヤエンドウ", "zh": "荷兰豆", "fa": "نخود فرنگی برفی", "hi": "चीनी मटर", "ar": "بسلة السكر" }
+    },
+    "edamame": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Edamame", "icon": "🫛", "latin": "Glycine max (Semen immaturum in legumine)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 121, "protein_g": 11.9, "fiber_g": 5.2, "folate_mcg": 311.0, "vit_k_mcg": 26.8 },
+      "meta": { "locations": ["asia_market", "rewe", "denns", "kaufland"], "season": ["summer", "all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "protein_quality": "Complete amino acid profile" },
+      "props": ["Immature soybeans in the pod", "Excellent plant-based protein snack", "Rich in isoflavones"],
+      "lang": { "de": "Edamame", "en": "Edamame", "es": "Edamame", "fr": "Edamame", "ru": "Эдамаме", "ja": "枝豆", "zh": "毛豆", "fa": "ادامامه", "hi": "एडामेम", "ar": "إدامامي" }
+    },
+    "peas_garden": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Garden Peas (Fresh)", "icon": "🟢", "latin": "Pisum sativum (Semen recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 81, "protein_g": 5.4, "fiber_g": 5.1, "vit_c_mg": 40.0, "thiamin_mg": 0.3 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "weekly_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High plant protein for a fresh vegetable" },
+      "props": ["Shelled before eating (unlike snow peas)", "High starch and sugar content when fresh", "Excellent source of Vitamin B1"],
+      "lang": { "de": "Gartenerbsen, Grüne Erbsen", "en": "Garden Peas", "es": "Guisantes", "fr": "Petits pois", "ru": "Зеленый горошек", "ja": "グリーンピース", "zh": "豌豆", "fa": "نخود فرنگی", "hi": "हरी मटर", "ar": "بازلاء خضراء" }
+    },
+    "beans_fava": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Fava Beans (Broad Beans)", "icon": "🫘", "latin": "Vicia faba (Semen recens)", "sci": ["#sci/Pharmacology", "#sci/Botany"],
+      "val": { "kcal": 72, "protein_g": 5.6, "fiber_g": 4.2, "folate_mcg": 148.0, "l_dopa_mg": 50.0 },
+      "meta": { "locations": ["weekly_market", "orient_market", "rewe"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "compound": "Natural L-Dopa source" },
+      "props": ["Thick velvety pods (double-podded)", "Contains L-Dopa (dopamine precursor)", "Ancient European staple"],
+      "lang": { "de": "Dicke Bohnen, Ackerbohnen", "en": "Fava Beans", "es": "Habas", "fr": "Fèves", "ru": "Бобы", "ja": "そら豆", "zh": "蚕豆", "fa": "باقلا", "hi": "बाकला", "ar": "فول" }
+    },
+    "yardlong_bean": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Yardlong Bean", "icon": "🐍", "latin": "Vigna unguiculata subsp. sesquipedalis (Legumen recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 47, "protein_g": 2.8, "fiber_g": 3.3, "vit_c_mg": 18.0, "magnesium_mg": 44.0 },
+      "meta": { "locations": ["asia_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Crunchy even when cooked" },
+      "props": ["Can grow up to a meter long", "Essential for Thai Som Tum", "More porous texture"],
+      "lang": { "de": "Schlangenbohne, Spargelbohne", "en": "Yardlong Bean", "es": "Judía kilométrica", "fr": "Haricot kilomètre", "ru": "Спаржевая фасоль вигна", "ja": "ささげ", "zh": "豇豆", "fa": "لوبیا مارچوبه‌ای", "hi": "बरबटी", "ar": "لوبيا ظفرية" }
+    },
+    "beans_wax": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Wax Beans (Yellow)", "icon": "🟡", "latin": "Phaseolus vulgaris (Legumen recens flavum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 31, "protein_g": 1.8, "fiber_g": 3.4, "vit_c_mg": 16.0, "calcium_mg": 37.0 },
+      "meta": { "locations": ["rewe", "weekly_market", "kaufland"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Milder than green beans" },
+      "props": ["Lacks chlorophyll", "Slightly sweeter and more tender", "Must be cooked"],
+      "lang": { "de": "Wachsbohnen, Gelbe Bohnen", "en": "Wax Beans", "es": "Judías amarillas", "fr": "Haricots beurre", "ru": "Желтая стручковая фасоль", "ja": "ワックスビーン", "zh": "黄玉豆", "fa": "لوبیا زرد", "hi": "पीली बीन्स", "ar": "فاصوليا صفراء" }
+    },
+    "beans_runner": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Runner Beans", "icon": "🌺", "latin": "Phaseolus coccineus (Legumen recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 34, "protein_g": 2.2, "fiber_g": 3.0, "potassium_mg": 280.0 },
+      "meta": { "locations": ["weekly_market", "denns"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "visual": "Large, flat, rough pods" },
+      "props": ["Grown for beautiful red flowers", "Rougher skin than green beans", "Meaty texture"],
+      "lang": { "de": "Feuerbohnen, Prunkbohnen", "en": "Runner Beans", "es": "Judías escarlata", "fr": "Haricots d'Espagne", "ru": "Фасоль многоцветковая", "ja": "ベニバナインゲン", "zh": "红花菜豆", "fa": "لوبیا قرمز رونده", "hi": "रنر बीन्स", "ar": "فاصوليا قرمزية" }
+    },
+
+"--- DRIED_LEGUMES_LENTILS ---": "Linsen-Vielfalt (Protein & Eisen)",
+"lentils_beluga": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Beluga Lentils", "icon": "⚫", "latin": "Lens culinaris (Semen siccum)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 352, "protein_g": 24.0, "fiber_g": 11.0, "iron_plant_mg": 7.5, "anthocyanins_mg": 15.0 },
+      "meta": { "locations": ["rewe", "denns", "dm", "lidl"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High Protein & Antioxidants" },
+      "props": ["Caviar of lentils", "Maintains shape after cooking", "Black skin rich in antioxidants"],
+      "lang": { "de": "Beluga-Linsen", "en": "Beluga Lentils", "es": "Lentejas beluga", "fr": "Lentilles beluga", "ru": "Чечевица beluga", "ja": "ベルーガレンズ豆", "zh": "黑扁豆", "fa": "عدس بلگا", "hi": "बेलुگا मसूर", "ar": "عدس بيلوجا" }
+    },
+    "lentils_red": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Red Lentils", "icon": "🔴", "latin": "Lens culinaris (Semen decorticatum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 358, "protein_g": 25.0, "fiber_g": 9.0, "folate_mcg": 479.0, "iron_plant_mg": 7.4 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestibility": "Fast cooking / Easy to digest" },
+      "props": ["Hulled lentils (skin removed)", "Dissolve when cooked (perfect for Dal/Soups)", "Highest folate content among common lentils"],
+      "lang": { "de": "Rote Linsen", "en": "Red Lentils", "es": "Lentejas rojas", "fr": "Lentilles corail", "ru": "Красная чечевица", "ja": "赤レンズ豆", "zh": "红扁豆", "fa": "دال عدس", "hi": "लाल मसूर", "ar": "عدس أحمر" }
+    },
+    "lentils_puy": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Puy Lentils", "icon": "🟢", "latin": "Lens culinaris esculenta (Semen siccum)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 353, "protein_g": 25.0, "magnesium_mg": 120.0, "potassium_mg": 955.0 },
+      "meta": { "locations": ["denns", "weekly_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "label": "AOC / Gourmet Standard" },
+      "props": ["Grown in volcanic soil", "Peppery, earthy flavor", "Firm texture ideal for salads"],
+      "lang": { "de": "Puy-Linsen / Grüne Linsen", "en": "Puy Lentils", "es": "Lentejas de Puy", "fr": "Lentilles vertes du Puy", "ru": "Чечевица Пюи", "ja": "ピュイレンズ豆", "zh": "普伊扁豆", "fa": "عدس پوی", "hi": "पुय मसूर", "ar": "عدس بوي" }
+    },
+    "lentils_brown": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Brown Lentils (Tellerlinsen)", "icon": "🟤", "latin": "Lens culinaris (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 352, "protein_g": 23.5, "fiber_g": 10.5, "iron_plant_mg": 7.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Classic Stews" },
+      "props": ["Larger and flatter than other lentils", "Earthy flavor", "Basis for traditional German lentil stew"],
+      "lang": { "de": "Tellerlinsen, Braune Linsen", "en": "Brown Lentils", "es": "Lentejas pardinas", "fr": "Lentilles brunes", "ru": "Коричневая чечевица", "ja": "茶レンズ豆", "zh": "褐扁豆", "fa": "عدس قهوه‌ای", "hi": "भूरी मसूर", "ar": "عدس بني" }
+    },
+	
+	"--- ORIENT_AND_DAL_SPECIALISTS ---": "Orient-Markt & Dal-Giganten",
+    "lentils_yellow": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Yellow Lentils", "icon": "🟡", "latin": "Lens culinaris (Semen decorticatum flavum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 358, "protein_g": 24.5, "fiber_g": 10.5, "iron_plant_mg": 7.0, "molybdenum_mg": 1.4 },
+      "meta": { "locations": ["orient_market", "asia_market", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestibility": "Extremely high" },
+      "props": ["Hulled and split (like red lentils, but sweeter)", "Staple for Turkish soups", "Breaks down quickly"],
+      "lang": { "de": "Gelbe Linsen", "en": "Yellow Lentils", "es": "Lentejas amarillas", "fr": "Lentilles jaunes", "ru": "Желтая чечевица", "ja": "黄レンズ豆", "zh": "黄扁豆", "fa": "عدس زرد", "hi": "पीली मसूर", "ar": "عدس أصفر" }
+    },
+    "lentils_large_green": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Large Green Lentils", "icon": "🟢", "latin": "Lens culinaris (Semen siccum)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 353, "protein_g": 24.0, "fiber_g": 11.0, "potassium_mg": 900.0 },
+      "meta": { "locations": ["orient_market", "lidl", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Robust and meaty" },
+      "props": ["Much larger than French Puy lentils", "Staple for Middle Eastern Mujadara", "Retains shape perfectly"],
+      "lang": { "de": "Große grüne Linsen", "en": "Large Green Lentils", "es": "Lenteja verdina", "fr": "Grandes lentilles vertes", "ru": "Крупная зеленая чечевица", "ja": "大粒緑レンズ豆", "zh": "大绿扁豆", "fa": "عدس سبز", "hi": "बड़ी हरी मसूर", "ar": "عدس أخضر كبير" }
+    },
+    "black_gram": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Black Gram (Urad Dal)", "icon": "⬛", "latin": "Vigna mungo (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 341, "protein_g": 25.2, "fiber_g": 18.3, "iron_plant_mg": 7.5, "calcium_mg": 138.0 },
+      "meta": { "locations": ["asia_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Ayurvedic strength builder" },
+      "props": ["Botanically a bean, used like a lentil", "Essential for authentic Dal Makhani", "Slightly mucilaginous texture"],
+      "lang": { "de": "Urdbohne / Urad Dal", "en": "Black Gram", "es": "Frijol negro indio", "fr": "Haricot urd", "ru": "Урд", "ja": "ケツルアズキ", "zh": "黑明豆", "fa": "ماش سیاه", "hi": "उड़د दाल", "ar": "لوبيا سوداء هندية" }
+    },
+    "pigeon_peas": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pigeon Peas (Toor Dal)", "icon": "💛", "latin": "Cajanus cajan (Semen siccum)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 343, "protein_g": 21.7, "fiber_g": 15.0, "magnesium_mg": 115.0 },
+      "meta": { "locations": ["asia_market", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Indian household staple" },
+      "props": ["Most consumed yellow Dal in India", "Deep, earthy, slightly sweet flavor"],
+      "lang": { "de": "Straucherbse / Toor Dal", "en": "Pigeon Peas", "es": "Gandules", "fr": "Pois d'Angole", "ru": "Голубиный горох", "ja": "キマメ", "zh": "木豆", "fa": "نخود کفتری", "hi": "तूर दाल", "ar": "بصلة كاجان" }
+    },
+    "split_peas": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Split Peas (Yellow/Green)", "icon": "🟡", "latin": "Pisum sativum (Semen decorticatum et fissum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 341, "protein_g": 24.5, "fiber_g": 25.5, "potassium_mg": 981.0 },
+      "meta": { "locations": ["rewe", "orient_market", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Extreme fiber density" },
+      "props": ["Dried and peeled peas", "Thickens soups naturally (German Erbsensuppe)"],
+      "lang": { "de": "Schälerbsen (Gelb/Grün)", "en": "Split Peas", "es": "Guisantes partidos", "fr": "Pois cassés", "ru": "Колотый горох", "ja": "スプリットピー", "zh": "去皮豌豆", "fa": "لپه", "hi": "सूखी मटर", "ar": "بازلاء مجروشة" }
+    },
+
+    "--- DRIED_LEGUMES_BEANS_CHICKPEAS ---": "Trockenbohnen & Kichererbsen",
+    "chickpeas": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Chickpeas (Garbanzo)", "icon": "⚪", "latin": "Cicer arietinum (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 364, "protein_g": 19.0, "fiber_g": 17.0, "lysine_mg": 1300.0, "manganese_mg": 2.0 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Lysine source for muscle" },
+      "props": ["High in resistant starch", "Foundation for Hummus and Falafel"],
+      "lang": { "de": "Kichererbsen", "en": "Chickpeas", "es": "Garbanzos", "fr": "Pois chiches", "ru": "Нут", "ja": "ひよこ豆", "zh": "鹰嘴豆", "fa": "نخود", "hi": "चना", "ar": "حمص" }
+    },
+    "chickpeas_black": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Black Chickpeas (Kala Chana)", "icon": "⚫", "latin": "Cicer arietinum (Semen siccum nigrum)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 360, "protein_g": 20.0, "fiber_g": 18.0, "iron_plant_mg": 6.0 },
+      "meta": { "locations": ["asia_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Low Glycemic Index" },
+      "props": ["Ancient Indian variety", "Thicker skin than beige chickpeas", "Vibrant nutty flavor"],
+      "lang": { "de": "Schwarze Kichererbsen / Kala Chana", "en": "Black Chickpeas", "es": "Garbanzos negros", "fr": "Pois chiches noirs", "ru": "Черный нут", "ja": "黒ひよこ豆", "zh": "黑鹰嘴豆", "fa": "نخود سیاه", "hi": "काला चना", "ar": "حمص أسود" }
+    },
+    "beans_kidney": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Kidney Beans", "icon": "🫘", "latin": "Phaseolus vulgaris (Semen siccum)", "sci": ["#sci/Toxicology", "#sci/Nutrition"],
+      "val": { "kcal": 333, "protein_g": 23.6, "fiber_g": 15.2, "potassium_mg": 1406.0, "iron_plant_mg": 8.2 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "safety": "Must boil 10+ mins" },
+      "props": ["Meaty texture, holds shape well", "Excellent for chili"],
+      "lang": { "de": "Kidneybohnen", "en": "Kidney Beans", "es": "Alubias rojas", "fr": "Haricots rouges", "ru": "Красная фасоль", "ja": "キドニービーンズ", "zh": "红芸豆", "fa": "لوبیا قرمز", "hi": "राजमा", "ar": "فاصوليا حمراء" }
+    },
+    "beans_black": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Black Beans (Turtle Beans)", "icon": "⬛", "latin": "Phaseolus vulgaris (Semen siccum nigrum)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 341, "protein_g": 21.6, "fiber_g": 15.5, "anthocyanins_mg": 45.0, "magnesium_mg": 171.0 },
+      "meta": { "locations": ["kaufland", "rewe", "denns", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "Anthocyanin rich" },
+      "props": ["Staple in Latin American cuisine", "High antioxidant capacity for a bean"],
+      "lang": { "de": "Schwarze Bohnen", "en": "Black Beans", "es": "Frijoles negros", "fr": "Haricots noirs", "ru": "Черная фасоль", "ja": "黒インゲン豆", "zh": "黑豆", "fa": "لوبیا سیاه", "hi": "کالی بینس", "ar": "فاصوليا سوداء" }
+    },
+    "beans_white": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Cannellini Beans (White Beans)", "icon": "🤍", "latin": "Phaseolus vulgaris (Semen siccum album)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 333, "protein_g": 23.4, "fiber_g": 15.2, "calcium_mg": 240.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Creamy and smooth" },
+      "props": ["Italian staple (Minestrone)", "Very creamy interior", "Mild flavor"],
+      "lang": { "de": "Weiße Bohnen / Cannellini", "en": "White Beans", "es": "Alubias blancas", "fr": "Haricots blancs", "ru": "Белая фасоль", "ja": "白インゲン豆", "zh": "白芸豆", "fa": "لوبیا سفید", "hi": "سفید بینز", "ar": "فاصوليا بيضاء" }
+    },
+    "soybeans": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Soybeans (Dried)", "icon": "🟡", "latin": "Glycine max (Semen siccum)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 446, "protein_g": 36.5, "fat_total_g": 19.9, "fiber_g": 9.3, "isoflavones_mg": 150.0 },
+      "meta": { "locations": ["asia_market", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "protein_quality": "Complete Amino Acid Profile" },
+      "props": ["Highest protein content of all beans", "Base for Tofu and Tempeh", "Rich in phytoestrogens"],
+      "lang": { "de": "Sojabohnen", "en": "Soybeans", "es": "Soja", "fr": "Soja", "ru": "Соевые бобы", "ja": "大豆", "zh": "黄豆", "fa": "سویا", "hi": "सोयाबीन", "ar": "فول الصويا" }
+    },
+    "sweet_lupin_seeds": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Sweet Lupin Seeds", "icon": "🌼", "latin": "Lupinus albus (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 371, "protein_g": 36.2, "fiber_g": 18.9, "carbs_g": 40.0, "purines_mg": 0.0 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "protein_status": "Regional soy alternative" },
+      "props": ["Extremely high protein", "Alkalizing and highly sustainable"],
+      "lang": { "de": "Süßlupinenkerne", "en": "Sweet Lupin Seeds", "es": "Altramuces dulces", "fr": "Graines de lupin doux", "ru": "Сладкий люпин", "ja": "甘味ルーピン", "zh": "甜羽扇豆", "fa": "دانه ترمس", "hi": "ल्यूपिन बीज", "ar": "بذور الترمس الحلو" }
+    },
+    "beans_mung": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Mung Beans", "icon": "🟢", "latin": "Vigna radiata (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 347, "protein_g": 23.9, "fiber_g": 16.3, "folate_mcg": 625.0 },
+      "meta": { "locations": ["asia_market", "denns", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Sprouting Champion" },
+      "props": ["Extremely easy to sprout", "High digestibility in Ayurveda"],
+      "lang": { "de": "Mungbohnen", "en": "Mung Beans", "es": "Judía mungo", "fr": "Haricots mungo", "ru": "Маш", "ja": "緑豆", "zh": "绿豆", "fa": "ماش", "hi": "मूंग दाल", "ar": "بقلة الماش" }
+    },
+    "beans_pinto": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Pinto Beans", "icon": "🫘", "latin": "Phaseolus vulgaris (Semen siccum variegatum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 347, "protein_g": 21.4, "fiber_g": 15.5, "folate_mcg": 525.0, "potassium_mg": 1393.0 },
+      "meta": { "locations": ["kaufland", "rewe", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Mexican staple" },
+      "props": ["Mottled skin", "Extremely creamy texture", "Highest folate content among beans"],
+      "lang": { "de": "Wachtelbohnen, Pintobohnen", "en": "Pinto Beans", "es": "Frijoles pintos", "fr": "Haricots pinto", "ru": "Фасоль пинто", "ja": "うずら豆", "zh": "斑豆", "fa": "لوبیا چیتی", "hi": "पिंटो बीन्स", "ar": "فاصوليا بينتو" }
+    },
+    "beans_lima": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Lima Beans (Butter Beans)", "icon": "🤍", "latin": "Phaseolus lunatus (Semen siccum)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 338, "protein_g": 21.5, "fiber_g": 19.0, "potassium_mg": 1724.0, "iron_plant_mg": 7.5 },
+      "meta": { "locations": ["orient_market", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Melt-in-your-mouth buttery" },
+      "props": ["Giant white beans (Gigantes)", "Massive potassium levels"],
+      "lang": { "de": "Limabohnen, Riesenbohnen, Butterbohnen", "en": "Lima Beans", "es": "Judías lima", "fr": "Haricots de Lima", "ru": "Лимская фасоль", "ja": "ライマメ", "zh": "利马豆", "fa": "لوبیا لیما", "hi": "लीमा बीन्स", "ar": "فاصوليا ليما" }
+    },
+    "black_eyed_peas": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Black-Eyed Peas", "icon": "👁️", "latin": "Vigna unguiculata (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 336, "protein_g": 23.5, "fiber_g": 10.6, "folate_mcg": 633.0, "magnesium_mg": 184.0 },
+      "meta": { "locations": ["afro_market", "orient_market", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestibility": "Easier to digest than kidney beans" },
+      "props": ["Distinctive black eye", "Staple for Soul Food"],
+      "lang": { "de": "Schwarzaugenbohnen", "en": "Black-Eyed Peas", "es": "Frijoles carita", "fr": "Cornilles", "ru": "Коровий горох", "ja": "ササゲ", "zh": "黑眼豆", "fa": "لوبیا چشم‌بلبلی", "hi": "लोबिया", "ar": "لوبيا ذات عين سوداء" }
+    },
+	"--- SPROUTS_AND_GERMINATED ---": "Sprossen & Keimlinge (Lebendige Nahrung)",
+    "mung_bean_sprouts": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Mung Bean Sprouts", "icon": "🌱", "latin": "Vigna radiata (Germinatus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 30, "protein_g": 3.0, "vit_c_mg": 13.0, "fiber_g": 1.8 },
+      "meta": { "locations": ["lidl", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "props": ["Most common 'bean sprout' in supermarkets", "Very high water content, crunchy texture", "Vitamin C increases significantly during sprouting"],
+      "lang": { "de": "Mungbohnensprossen", "en": "Mung Bean Sprouts", "es": "Brotes de soja mungo", "fr": "Pousses de haricot mungo", "ru": "Проростки маша", "ja": "もやし", "zh": "绿豆芽", "fa": "جوانه ماش", "hi": "मूंग के अंकुर", "ar": "نبتة الماش" }
+    },
+    "sprouts_alfalfa": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Alfalfa Sprouts", "icon": "🌿", "latin": "Medicago sativa (Germinatus)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 23, "protein_g": 4.0, "vit_k_mcg": 30.5, "phytoestrogens_mg": 5.0 },
+      "meta": { "locations": ["denns", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "props": ["Member of the legume family (Lucerne)", "Rich in saponins and chlorophyll", "Classic topping for healthy sandwiches"],
+      "lang": { "de": "Alfalfa-Sprossen (Luzerne)", "en": "Alfalfa Sprouts", "es": "Brotes de alfalfa", "fr": "Graines germées d'alfalfa", "ru": "Проростки люцерны", "ja": "アルファルファ", "zh": "苜蓿芽", "fa": "جوانه یونجه", "hi": "अल्फला अंकुर", "ar": "نبتة البرسيم" }
+    }
+  },
+"mushrooms": {
+    "--- EVERYDAY_FUNGI ---": "Standard-Pilze & Vitamin D",
+    "mushroom_button": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "White Button Mushroom", "icon": "🍄", "latin": "Agaricus bisporus (Carpoforum recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 22, "protein_g": 3.1, "vit_d2_mcg": 0.2, "selenium_mcg": 9.3, "potassium_mg": 318.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "benefit": "B-Vitamins & Selenium" },
+      "props": ["Most commonly consumed mushroom", "Can synthesize Vitamin D when exposed to UV light", "Mild earthy flavor"],
+      "lang": { "de": "Champignon (Weiß)", "en": "Button Mushroom", "es": "Champiñón", "fr": "Champignon de Paris", "ru": "Шампиньон", "ja": "マッシュルーム", "zh": "双孢蘑菇", "fa": "قارچ دکمه‌ای", "hi": "बटन मशरूम", "ar": "فطر أبيض" }
+    },
+    "mushroom_cremini": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Cremini Mushroom", "icon": "🟤", "latin": "Agaricus bisporus (Carpoforum recens fuscum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 22, "protein_g": 3.1, "fiber_g": 1.5, "potassium_mg": 318.0, "phosphorus_mg": 86.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "flavor": "Deeper, earthier than white" },
+      "props": ["Same species as white button, just a different strain", "Firmer texture, less water", "Mature version is the Portobello"],
+      "lang": { "de": "Steinchampignon, Brauner Champignon", "en": "Cremini Mushroom", "es": "Champiñón Portobello pequeño", "fr": "Champignon brun", "ru": "Королевский шампиньон", "ja": "ブラウンマッシュルーム", "zh": "褐菇", "fa": "قارچ کرمینی", "hi": "क्रेमिनी मशरूम", "ar": "فطر كريميني" }
+    },
+    "mushroom_pink_yellow_oyster": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Pink/Yellow Oyster Mushrooms", "icon": "🍄", "latin": "Pleurotus spp. (Carpoforum recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 33, "protein_g": 3.0, "vit_d_mcg": 0.5 },
+      "meta": { "locations": ["weekly_market", "gourmet_market"], "season": ["all_year"], "vegan": true },
+      "props": ["Visual highlight in gourmet cooking", "Thin caps become very crispy when fried", "Slightly more floral aroma than the standard grey oyster mushroom"],
+      "lang": { "de": "Limitierter Austernpilz (Rosa/Gelb)", "en": "Pink/Yellow Oyster Mushroom" }
+    },
+    "chicken_of_the_woods": {
+      "unit_price": 4.00,
+      "unit_type": "100g",
+      "label": "Chicken of the Woods", "icon": "🐔", "latin": "Laetiporus sulphureus (Carpoforum recens)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 33, "protein_g": 3.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["weekly_market", "wild_foraged"], "season": ["summer", "autumn"], "vegan": true },
+      "props": ["Wild mushroom that tastes and feels remarkably like chicken breast", "Must be harvested young", "Must be cooked thoroughly"],
+      "lang": { "de": "Schwefelporling", "en": "Chicken of the Woods", "es": "Pollo de los bosques", "fr": "Polypore soufré", "ru": "Трутовик серно-желтый", "ja": "マスタケ", "zh": "硫磺菌", "fa": "قارچ مرغ چوب", "hi": "चिकन ऑफ द वुड्स", "ar": "فطر دجاج الغابة" }
+    },
+    "shiitake": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Shiitake", "icon": "🍄", "latin": "Lentinula edodes (Carpoforum recens)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 34, "protein_g": 2.2, "fiber_g": 2.5, "lentinan_mg": 15.0, "ergothioneine_mg": 2.0 },
+      "meta": { "locations": ["asia_market", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "benefit": "Immune support (Lentinan)" },
+      "props": ["Intense Umami flavor", "Stems are tough (used for broth)", "Contains beta-glucans for immune modulation"],
+      "lang": { "de": "Shiitake", "en": "Shiitake", "es": "Shiitake", "fr": "Shiitaké", "ru": "Шиитаке", "ja": "椎茸", "zh": "香菇", "fa": "قارچ شیتاکه", "hi": "शिटेक मशरूम", "ar": "فطر شيتاكي" }
+    },
+    "mushroom_king_oyster": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "King Oyster Mushroom", "icon": "🍄", "latin": "Pleurotus eryngii (Carpoforum recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 33, "protein_g": 3.3, "fiber_g": 2.3, "ergothioneine_mg": 3.5 },
+      "meta": { "locations": ["kaufland", "rewe", "denns", "asia_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "texture": "Meat substitute (Scallop texture)" },
+      "props": ["Thick, meaty stem", "Absorbs flavors excellently", "High in powerful antioxidant L-ergothioneine"],
+      "lang": { "de": "Kräuterseitling", "en": "King Oyster Mushroom", "es": "Seta de cardo", "fr": "Pleurote du panicaut", "ru": "Степной вешенка", "ja": "エリンギ", "zh": "杏鲍菇", "fa": "قارچ صدفی شاه", "hi": "किंग ओएस्टर मशरूम", "ar": "فطر المحار الملكي" }
+    },
+    "mushroom_oyster": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Oyster Mushroom", "icon": "🦪", "latin": "Pleurotus ostreatus (Carpoforum recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 33, "protein_g": 3.3, "fiber_g": 2.3, "lovastatin_mg": 2.5, "iron_mg": 1.3 },
+      "meta": { "locations": ["rewe", "kaufland", "asia_market", "weekly_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "benefit": "Natural statins (Cholesterol)" },
+      "props": ["Delicate, velvety texture", "Contains natural lovastatin", "Grows on dead wood"],
+      "lang": { "de": "Austernpilz", "en": "Oyster Mushroom", "es": "Gírgola", "fr": "Pleurote en huître", "ru": "Вешенка обыкновенная", "ja": "ヒラタケ", "zh": "平菇", "fa": "قارچ صدفی", "hi": "ओएस्टर मशरूम", "ar": "فطر المحار" }
+    },
+    "enoki": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Enoki Mushroom", "icon": "🥢", "latin": "Flammulina filiformis (Carpoforum recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 37, "protein_g": 2.7, "fiber_g": 2.7, "niacin_mg": 7.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "usage": "Hot Pot & Soups" },
+      "props": ["Long, thin stems with tiny caps", "Crunchy, noodle-like texture", "Very high in B-vitamins"],
+      "lang": { "de": "Enoki", "en": "Enoki", "es": "Enoki", "fr": "Enoki", "ru": "Эноки", "ja": "エノキタケ", "zh": "金针菇", "fa": "قارچ انوکی", "hi": "एनोکی", "ar": "إينوكي" }
+    },
+    "shimeji": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Shimeji Mushroom", "icon": "🍄", "latin": "Hypsizygus tessellatus (Carpoforum recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 34, "protein_g": 2.5, "potassium_mg": 350.0, "fiber_g": 3.0 },
+      "meta": { "locations": ["asia_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "preparation": "Must be cooked" },
+      "props": ["Grows in clusters", "Rich, nutty flavor when cooked", "Retains a firm, crunchy texture"],
+      "lang": { "de": "Shimeji, Buchenpilz", "en": "Shimeji", "es": "Shimeji", "fr": "Shimeji", "ru": "Шимеджи", "ja": "ブナシメジ", "zh": "蟹味菇", "fa": "شیمجی", "hi": "शिमेजी", "ar": "شيميجي" }
+    },
+    "chanterelle": {
+      "unit_price": 4.00,
+      "unit_type": "100g",
+      "label": "Chanterelle", "icon": "🍄", "latin": "Cantharellus cibarius (Carpoforum recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 38, "protein_g": 1.5, "vit_d2_mcg": 5.3, "iron_mg": 3.5, "potassium_mg": 506.0 },
+      "meta": { "locations": ["weekly_market", "rewe", "kaufland"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "benefit": "Natural Vitamin D source" },
+      "props": ["Wild harvested", "Fruity, peppery aroma", "High natural Vitamin D levels"],
+      "lang": { "de": "Pfifferling", "en": "Chanterelle", "es": "Rebozuelo", "fr": "Girolle", "ru": "Лисичка", "ja": "アンズタケ", "zh": "鸡油菌", "fa": "قارچ قیفی", "hi": "चैंटरेल मशरूम", "ar": "فطر الشانتريل" }
+    },
+    "porcini": {
+      "unit_price": 6.00,
+      "unit_type": "100g",
+      "label": "Porcini (King Bolete)", "icon": "🌲", "latin": "Boletus edulis (Carpoforum recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 82, "protein_g": 7.4, "fiber_g": 6.0, "ergothioneine_mg": 7.0, "selenium_mcg": 18.0 },
+      "meta": { "locations": ["weekly_market", "denns", "orient_market"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "flavor": "Ultimate Forest Umami" },
+      "props": ["King of the wild mushrooms", "Incredible depth of flavor", "Exceptionally high protein"],
+      "lang": { "de": "Steinpilz", "en": "Porcini", "es": "Boletus", "fr": "Cèpe de Bordeaux", "ru": "Белый гриб", "ja": "ポルチーニ", "zh": "牛肝菌", "fa": "پورچینی", "hi": "पोर्सिनी", "ar": "بورسيني" }
+    },
+    "portobello": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Portobello Mushroom", "icon": "🛸", "latin": "Agaricus bisporus (Carpoforum recens maturus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 22, "protein_g": 2.1, "potassium_mg": 364.0, "phosphorus_mg": 108.0, "vit_d2_mcg": 0.3 },
+      "meta": { "locations": ["kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "texture": "Dense & Meaty" },
+      "props": ["Fully mature version of the brown Cremini", "Giant cap, perfect burger substitute", "Gills are exposed and flavorful"],
+      "lang": { "de": "Riesenchampignon, Portobello", "en": "Portobello", "es": "Champiñón Portobello", "fr": "Champignon Portobello", "ru": "Портобелло", "ja": "ポルトベッロ", "zh": "波特贝罗大褐菇", "fa": "قارچ پورتوبلو", "hi": "पोर्टोबेलो", "ar": "بورتوبيللو" }
+    },
+    "lions_mane": {
+      "unit_price": 5.00,
+      "unit_type": "100g",
+      "label": "Lion's Mane", "icon": "🦁", "latin": "Hericium erinaceus (Carpoforum recens)", "sci": ["#sci/Neuroscience", "#sci/Pharmacology"],
+      "val": { "kcal": 35, "protein_g": 2.4, "hericenones_mg": 15.0, "beta_glucans_g": 2.2 },
+      "meta": { "locations": ["asia_market", "denns", "weekly_market"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "benefit": "NGF stimulation" },
+      "props": ["Looks like a white pom-pom", "Tastes like crab or lobster when seared", "Studied for cognitive enhancement"],
+      "lang": { "de": "Igelstachelbart, Affenkopfpilz", "en": "Lion's Mane", "es": "Melena de león", "fr": "Hydne hérisson", "ru": "Ежевик гребенчатый", "ja": "ヤマブシタケ", "zh": "猴头菇", "fa": "یال شیر", "hi": "लायंस मेन", "ar": "عرف الأسد" }
+    },
+    "maitake": {
+      "unit_price": 4.00,
+      "unit_type": "100g",
+      "label": "Maitake (Hen of the Woods)", "icon": "🪶", "latin": "Grifola frondosa (Carpoforum recens)", "sci": ["#sci/Pharmacognosy"],
+      "val": { "kcal": 31, "protein_g": 1.9, "vit_d2_mcg": 28.1, "niacin_mg": 6.6 },
+      "meta": { "locations": ["asia_market", "weekly_market"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "benefit": "Vitamin D & Immune Support" },
+      "props": ["Grows in feather-like clusters", "Deep earthy flavor", "Contains the D-Fraction"],
+      "lang": { "de": "Gemeiner Klapperschwamm, Maitake", "en": "Maitake", "es": "Maitake", "fr": "Poule des bois", "ru": "Майтаке", "ja": "マイタケ", "zh": "灰树花", "fa": "مایتاکه", "hi": "मैटेक", "ar": "مايتاكي" }
+    },
+    "wood_ear": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Wood Ear Mushroom", "icon": "👂", "latin": "Auricularia auricula-judae (Carpoforum recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 25, "fiber_g": 5.0, "iron_mg": 1.7, "calcium_mg": 20.0, "polysaccharides_g": 1.5 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "texture": "Crunchy / Gelatinous" },
+      "props": ["Almost zero flavor, but great texture", "Staple in hot and sour soup", "Supports blood circulation (TCM)"],
+      "lang": { "de": "Mu-Err, Judasohr", "en": "Wood Ear", "es": "Oreja de Judas", "fr": "Oreille de Judas", "ru": "Иудино ухо", "ja": "キクラゲ", "zh": "黑木耳", "fa": "گوش چوبی", "hi": "वुड इयर", "ar": "أذن الخشب" }
+    },
+    "snow_fungus": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Snow Fungus", "icon": "❄️", "latin": "Tremella fuciformis (Carpoforum recens)", "sci": ["#sci/Phytochemistry", "#sci/Dermatology"],
+      "val": { "kcal": 20, "fiber_g": 4.5, "polysaccharides_g": 2.5, "hyaluronic_acid_mimetic_mg": 50.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "benefit": "Skin hydration" },
+      "props": ["Looks like a translucent sponge", "Holds 500x its weight in water", "Used in sweet dessert soups"],
+      "lang": { "de": "Silberohr, Schneepilz", "en": "Snow Fungus", "es": "Hongo blanco", "fr": "Trémelle en fuseau", "ru": "Ледяной гриб", "ja": "シロキクラゲ", "zh": "银耳", "fa": "قارچ برفی", "hi": "स्نو فنگس", "ar": "الفطر الثلجي" }
+    },
+    "black_truffle": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Black Truffle", "icon": "🪨", "latin": "Tuber melanosporum (Carpoforum recens)", "sci": ["#sci/Aromachology"],
+      "val": { "kcal": 60, "protein_g": 6.0, "fiber_g": 8.0, "anandamide_mcg": 0.5, "volatile_compounds_mg": 20.0 },
+      "meta": { "locations": ["gourmet_market", "rewe"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Fungi", "usage": "High-end finishing garnish" },
+      "props": ["Grows underground", "Intense aroma (anandamide)", "Used raw or gently warmed"],
+      "lang": { "de": "Schwarzer Trüffel, Périgord-Trüffel", "en": "Black Truffle", "es": "Trufa negra", "fr": "Truffe noire", "ru": "Черный трюфель", "ja": "黒トリュフ", "zh": "黑松露", "fa": "ترافل سیاه", "hi": "काला ट्रफल", "ar": "كمأة سوداء" }
+    }
+  },
+"sea_vegetables": {
+    "--- SEAWEED_AND_KELP ---": "Die Jod- & Umami-Meister",
+    "nori": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Nori", "icon": "🍙", "latin": "Porphyra umbilicalis (Thallus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 35, "protein_g": 5.8, "fiber_g": 3.4, "iodine_mcg": 1200.0, "vit_b12_pseudo_mcg": 2.9 },
+      "meta": { "locations": ["asia_market", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "safety": "Contains inactive B12 analogues" },
+      "props": ["The classic sushi wrapper", "Highest protein content among seaweeds", "Tastes mildly sweet and salty"],
+      "lang": { "de": "Nori", "en": "Nori", "es": "Nori", "fr": "Nori", "ru": "Нори", "ja": "海苔 (Nori)", "zh": "海苔", "fa": "نوری", "hi": "नोरी", "ar": "نوري" }
+    },
+    "wakame": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Wakame", "icon": "🥗", "latin": "Undaria pinnatifida (Thallus siccus)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 45, "calcium_mg": 150.0, "magnesium_mg": 107.0, "iodine_mcg": 4200.0, "fucoxanthin_mg": 10.0 },
+      "meta": { "locations": ["asia_market", "denns", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "benefit": "Fat metabolism (Fucoxanthin)" },
+      "props": ["Staple for Miso soup", "Silky, tender texture", "Rich in fat-burning fucoxanthin"],
+      "lang": { "de": "Wakame", "en": "Wakame", "es": "Wakame", "fr": "Wakame", "ru": "Вакамэ", "ja": "ワカメ", "zh": "裙带菜", "fa": "واکامه", "hi": "वाकामे", "ar": "واكامي" }
+    },
+    "kombu_kelp": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Kombu (Kelp)", "icon": "🌊", "latin": "Laminaria digitata (Thallus siccus)", "sci": ["#sci/Toxicology", "#sci/Culinary"],
+      "val": { "kcal": 43, "glutamic_acid_mg": 1300.0, "iodine_mcg": 298400.0, "calcium_mg": 168.0 },
+      "meta": { "locations": ["asia_market", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "safety": "WARNING: Extreme Iodine Content" },
+      "props": ["Foundational for Dashi broth", "Massive natural MSG source", "Cook with caution due to iodine"],
+      "lang": { "de": "Kombu, Kelp", "en": "Kombu / Kelp", "es": "Kombu", "fr": "Kombu", "ru": "Комбу", "ja": "昆布 (Kombu)", "zh": "昆布 / 海带", "fa": "کامبو", "hi": "कोम्बु", "ar": "كومبو" }
+    },
+    "dulse": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Dulse", "icon": "🔴", "latin": "Palmaria palmata (Thallus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 45, "protein_g": 3.0, "iron_plant_mg": 5.5, "potassium_mg": 1100.0, "iodine_mcg": 6000.0 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "flavor": "Vegan Bacon Alternative" },
+      "props": ["Reddish-purple algae", "Fried in oil it tastes like bacon", "Extremely high iron density"],
+      "lang": { "de": "Dulse, Lappentang", "en": "Dulse", "es": "Dulse", "fr": "Dulse", "ru": "Дулсе", "ja": "ダルス", "zh": "红皮藻", "fa": "دالس", "hi": "डल्स", "ar": "دلسي" }
+    },
+    "irish_moss": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Irish Moss (Sea Moss)", "icon": "🧽", "latin": "Chondrus crispus (Thallus siccus)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 49, "carrageenan_g": 15.0, "iron_plant_mg": 8.9, "magnesium_mg": 144.0 },
+      "meta": { "locations": ["afro_market", "reformhaus", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "usage": "Natural thickener" },
+      "props": ["Source of carrageenan", "Blended into smoothies as mineral gel", "Survival food history"],
+      "lang": { "de": "Irisch Moos, Knorpeltang", "en": "Irish Moss", "es": "Musgo de Irlanda", "fr": "Mousse d'Irlande", "ru": "Ирландский мох", "ja": "アイリッシュモス", "zh": "角叉菜", "fa": "خزه ایرلندی", "hi": "आयरिश मॉس", "ar": "طحلب أيرلندي" }
+    },
+    "sea_spaghetti": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Sea Spaghetti", "icon": "🍝", "latin": "Himanthalia elongata (Thallus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 38, "fiber_g": 5.0, "vit_c_mg": 25.0, "calcium_mg": 120.0, "iodine_mcg": 3500.0 },
+      "meta": { "locations": ["denns", "weekly_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "texture": "Pasta-like" },
+      "props": ["Grows in long strands", "Low-carb pasta alternative", "Mild nutty sea flavor"],
+      "lang": { "de": "Meeresspaghetti", "en": "Sea Spaghetti", "es": "Espagueti de mar", "fr": "Haricot de mer", "ru": "Морские спагетти", "ja": "シースパゲッティ", "zh": "海面条", "fa": "اسپاگتی دریایی", "hi": "समुद्री स्पेगेटी", "ar": "سباغيتي البحر" }
+    },
+    "hijiki": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Hijiki", "icon": "🖤", "latin": "Sargassum fusiforme (Thallus siccus)", "sci": ["#sci/Toxicology"],
+      "val": { "kcal": 34, "fiber_g": 9.3, "calcium_mg": 1400.0, "iron_plant_mg": 29.0, "inorganic_arsenic_mcg": 3000.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "safety": "WARNING: High inorganic arsenic" },
+      "props": ["Looks like black tea leaves", "Extremely rich in minerals", "Consume in moderation"],
+      "lang": { "de": "Hijiki", "en": "Hijiki", "es": "Hijiki", "fr": "Hijiki", "ru": "Хидзики", "ja": "ヒジキ", "zh": "鹿尾菜", "fa": "هیجیکی", "hi": "हिजिकी", "ar": "هيجيكي" }
+    },
+    "arame": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Arame", "icon": "🤎", "latin": "Eisenia bicyclis (Thallus siccus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 41, "calcium_mg": 830.0, "potassium_mg": 3800.0, "iodine_mcg": 3000.0, "lignans_mg": 15.0 },
+      "meta": { "locations": ["asia_market", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "flavor": "Mild and semi-sweet" },
+      "props": ["Sweet, mild flavor", "Dark brown wiry strands", "Macrobiotic diet staple"],
+      "lang": { "de": "Arame", "en": "Arame", "es": "Arame", "fr": "Arame", "ru": "Араме", "ja": "アラメ", "zh": "荒布", "fa": "آرامه", "hi": "आराمه", "ar": "أرامي" }
+    },
+    "sea_grapes": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Sea Grapes (Umibudo)", "icon": "🍇", "latin": "Caulerpa lentillifera (Thallus recens)", "sci": ["#sci/Botany", "#sci/Culinary"],
+      "val": { "kcal": 15, "water_g": 95.0, "hyaluronic_acid_mg": 20.0, "magnesium_mg": 50.0, "calcium_mg": 35.0 },
+      "meta": { "locations": ["asia_market", "gourmet_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "texture": "Green Caviar (Pops in mouth)" },
+      "props": ["Known as 'Green Caviar'", "Bubbles pop releasing sea flavor", "Highly perishable, eaten raw"],
+      "lang": { "de": "Meerestraube", "en": "Sea Grapes", "es": "Uvas de mar", "fr": "Raisins de mer", "ru": "Морской виноград", "ja": "海ぶどう (Umibudo)", "zh": "海葡萄", "fa": "انگور دریایی", "hi": "समुद्री अंगूर", "ar": "عنب البحر" }
+    },
+    "ogonori": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Ogonori (Agar Seaweed)", "icon": "🥢", "latin": "Gracilaria spp. (Thallus siccus)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 25, "fiber_g": 6.0, "agar_g": 12.0, "calcium_mg": 180.0 },
+      "meta": { "locations": ["asia_market", "poke_shops"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Algae", "usage": "Crunchy Poke-Bowl star" },
+      "props": ["Crunchy red/green seaweed", "Raw material for Agar-Agar", "Must be prepared properly"],
+      "lang": { "de": "Ogonori, Gracilaria", "en": "Ogonori", "es": "Ogonori", "fr": "Ogonori", "ru": "Огонори", "ja": "オゴノリ", "zh": "江蓠", "fa": "اوگونوری", "hi": "ओगोनوری", "ar": "أوغونوري" }
+    }
+  }
+}

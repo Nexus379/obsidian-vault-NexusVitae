@@ -1,0 +1,699 @@
+{
+  "root_vegetables": {
+    "parsnip": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Parsnip", "icon": "🥕", "latin": "Pastinaca sativa (Radix recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 75, "fiber_g": 4.9, "potassium_mg": 375.0, "vit_c_mg": 17.0, "folate_mcg": 67.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns", "weekly_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High fiber for digestion" },
+      "props": ["Sweet nutty flavor", "Complex carbs for long energy", "Best after first frost"],
+      "lang": { "de": "Pastinake", "en": "Parsnip", "es": "Chirivía", "fr": "Panais", "ru": "Пастернак", "ja": "パースニップ", "zh": "欧防风", "fa": "زردک", "hi": "पार्स्निप", "ar": "جزر أبيض" }
+    },
+    "jerusalem_artichoke": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Jerusalem Artichoke", "icon": "🥔", "latin": "Helianthus tuberosus (Tuber recens)", "sci": ["#sci/Microbiology", "#sci/Nutrition"],
+      "val": { "kcal": 73, "inulin_g": 15.0, "iron_plant_mg": 3.4, "potassium_mg": 429.0, "vit_b1_mg": 0.2 },
+      "meta": { "locations": ["denns", "alnatura", "weekly_market", "rewe"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Prebiotic powerhouse (Inulin)" },
+      "props": ["Rich in Inulin (feeds good gut bacteria)", "Can cause flatulence (Topinambur-Effekt)", "Nutty artichoke-like taste"],
+      "lang": { "de": "Topinambur", "en": "Jerusalem Artichoke", "es": "Tupinambo", "fr": "Topinambour", "ru": "Топинамбур", "ja": "菊芋", "zh": "菊芋", "fa": "سیب‌زمینی ترش", "hi": "हाथी चक", "ar": "دووار الشمس الدرني" }
+    },
+    "salsify_black": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Black Salsify", "icon": "🦯", "latin": "Scorzonera hispanica (Radix recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 73, "fiber_g": 3.3, "inulin_g": 5.0, "potassium_mg": 320.0, "vit_e_mg": 6.0 },
+      "meta": { "locations": ["denns", "weekly_market", "rewe", "kaufland"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "label": "Winter Asparagus" },
+      "props": ["Contains milky sap (wear gloves when peeling)", "Rich in Inulin and Vitamin E", "Very delicate creamy flavor"],
+      "lang": { "de": "Schwarzwurzel", "en": "Black Salsify", "es": "Escorzonera", "fr": "Scorsonère", "ru": "Скорцонера", "ja": "キクゴボウ", "zh": "鸦葱", "fa": "شنگ", "hi": "ब्लैक साल्सीफी", "ar": "دبح" }
+    },
+    "cassava": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Cassava (Manioc)", "icon": "🪵", "latin": "Manihot esculenta (Radix recens)", "sci": ["#sci/Nutrition", "#sci/Toxicology"],
+      "val": { "kcal": 160, "carbs_g": 38.0, "vit_c_mg": 20.6, "potassium_mg": 271.0, "calcium_mg": 16.0 },
+      "meta": { "locations": ["afro_market", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "safety": "Must be cooked (removes cyanide)" },
+      "props": ["Starch-dense staple food", "Gluten-free flour base (Tapioca)", "High energy density"],
+      "lang": { "de": "Maniok, Kassave", "en": "Cassava", "es": "Yuca", "fr": "Manioc", "ru": "Маниок", "ja": "キャッサバ", "zh": "木薯", "fa": "مانیوک", "hi": "कसावा", "ar": "مانييوك" }
+    },
+    "yam": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Yam", "icon": "🥔", "latin": "Dioscorea spp. (Tuber recens)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 118, "potassium_mg": 816.0, "vit_c_mg": 17.0, "fiber_g": 4.1, "diosgenin_mg": 10.0 },
+      "meta": { "locations": ["afro_market", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Hormonal balance support" },
+      "props": ["Contains Diosgenin (natural steroid precursor)", "Very high potassium", "Not the same as Sweet Potato"],
+      "lang": { "de": "Yamswurzel", "en": "Yam", "es": "Ñame", "fr": "Igname", "ru": "Ямс", "ja": "ヤムイモ", "zh": "山药", "fa": "سیب‌زمینی هندی", "hi": "रतालू", "ar": "يام" }
+    },
+    "taro": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Taro", "icon": "🥔", "latin": "Colocasia esculenta (Cormus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 112, "potassium_mg": 591.0, "magnesium_mg": 33.0, "fiber_g": 4.1 },
+      "meta": { "locations": ["asia_market", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Low Glycemic Index" },
+      "props": ["Nutty/Vanilla-like flavor when cooked", "Rich in resistant starch", "Must not be eaten raw (oxalates)"],
+      "lang": { "de": "Taro, Wasserbrotwurzel", "en": "Taro", "es": "Taro", "fr": "Taro", "ru": "Таро", "ja": "里芋", "zh": "芋头", "fa": "تارو", "hi": "अरबी", "ar": "قلقاس" }
+    },
+    "carrot": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Orange Carrot", "icon": "🥕", "latin": "Daucus carota subsp. sativus (Radix recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 41, "carbs_g": 9.6, "fiber_g": 2.8, "beta_carotene_mcg": 8300.0, "vit_a_rae_mcg": 835.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Eye health (Vitamin A precursor)" },
+      "props": ["Highest beta-carotene source", "Bioavailability increases with slight fat and heat", "Natural sweetness"],
+      "lang": { "de": "Karotte (Orange)", "en": "Carrot", "es": "Zanahoria", "fr": "Carotte", "ru": "Морковь", "ja": "人参", "zh": "胡萝卜", "fa": "هویج", "hi": "गाजर", "ar": "جزر" }
+    },
+    "carrot_purple": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Purple Carrot", "icon": "🥕", "latin": "Daucus carota (Radix recens anthocyanidiana)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 41, "anthocyanins_mg": 40.0, "beta_carotene_mcg": 5000.0, "potassium_mg": 320.0 },
+      "meta": { "locations": ["denns", "alnatura", "weekly_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "High Anthocyanins" },
+      "props": ["Ancient variety", "Core is often orange or yellow", "Powerful anti-inflammatory pigments"],
+      "lang": { "de": "Lila Urkarotte", "en": "Purple Carrot", "es": "Zanahoria morada", "fr": "Carotte violette", "ru": "Фиолетовая морковь", "ja": "紫人参", "zh": "紫胡萝卜", "fa": "هویج بنفش", "hi": "काली गाजर", "ar": "جزر بنفسجي" }
+    },
+    "beetroot": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Beetroot", "icon": "🟣", "latin": "Beta vulgaris subsp. vulgaris (Radix recens)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 43, "nitrate_mg": 250.0, "betalains_mg": 120.0, "folate_mcg": 109.0, "iron_plant_mg": 0.8 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "performance": "Nitrate for blood flow (VO2 max)" },
+      "props": ["Boosts nitric oxide production", "High folate for cell repair", "Earthy flavor due to geosmin"],
+      "lang": { "de": "Rote Bete", "en": "Beetroot", "es": "Remolacha", "fr": "Betterave", "ru": "Свекла", "ja": "ビーツ", "zh": "甜菜根", "fa": "چغندر", "hi": "चुकंदर", "ar": "شمندر" }
+    },
+    "beet_golden": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Golden Beet", "icon": "🟡", "latin": "Beta vulgaris (Radix recens aurea)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 43, "betaxanthins_mg": 50.0, "potassium_mg": 300.0, "vit_c_mg": 5.0 },
+      "meta": { "locations": ["denns", "weekly_market"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Sweeter/Less earthy than red" },
+      "props": ["Contains yellow betaxanthins", "Does not stain like red beet", "High mineral density"],
+      "lang": { "de": "Gelbe Bete", "en": "Golden Beet", "es": "Remolacha amarilla", "fr": "Betterave jaune", "ru": "Желтая свекла", "ja": "ゴールデンビーツ", "zh": "黄甜菜", "fa": "چغندر طلایی", "hi": "सुनहरा चुकंदर", "ar": "شمندر أصفر" }
+    },
+    "radish": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Radish", "icon": "🔴", "latin": "Raphanus sativus (Radix recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 16, "water_g": 95.0, "mustard_oils_mg": 15.0, "vit_c_mg": 15.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["spring", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Antimicrobial mustard oils" },
+      "props": ["Rapid growth cycle", "Sharp taste due to glucosinolates", "Low calorie density"],
+      "lang": { "de": "Radieschen", "en": "Radish", "es": "Rábano", "fr": "Radis", "ru": "Редис", "ja": "ラディッシュ", "zh": "小萝卜", "fa": "تربچه", "hi": "मूली", "ar": "فجل" }
+    },
+    "daikon": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Daikon Radish", "icon": "🥢", "latin": "Raphanus sativus var. longipinnatus (Radix recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 18, "water_g": 94.6, "vit_c_mg": 22.0, "potassium_mg": 227.0, "diastase_enzyme": true },
+      "meta": { "locations": ["asia_market", "lidl", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Digestive enzyme (Diastase)" },
+      "props": ["Huge white root", "Helps digest heavy starches", "Mildest of all radishes"],
+      "lang": { "de": "Daikon-Rettich, Weißer Rettich", "en": "Daikon", "es": "Nabo daikon", "fr": "Radis blanc", "ru": "Дайкон", "ja": "大根", "zh": "白萝卜", "fa": "ترب سفید", "hi": "सफेद मूली", "ar": "فجل أبيض" }
+    },
+    "radish_black": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Black Radish", "icon": "🌑", "latin": "Raphanus sativus var. niger (Radix recens)", "sci": ["#sci/Pharmacognosy"],
+      "val": { "kcal": 29, "potassium_mg": 300.0, "vit_c_mg": 10.0, "vit_b9_mcg": 17.0, "mustard_oils_mg": 30.0 },
+      "meta": { "locations": ["weekly_market", "denns", "rewe"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Bile flow / Liver detox" },
+      "props": ["Rough black skin", "Very sharp flavor", "Strongest antimicrobial effect"],
+      "lang": { "de": "Schwarzer Winterrettich", "en": "Black Radish", "es": "Rábano negro", "fr": "Radis noir", "ru": "Черная редька", "ja": "黒大根", "zh": "黑萝卜", "fa": "ترب سیاه", "hi": "काली मूली", "ar": "فجل أسود" }
+    },
+    "horseradish": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Horseradish", "icon": "🧪", "latin": "Armoracia rusticana (Radix recens)", "sci": ["#sci/Microbiology", "#sci/Phytochemistry"],
+      "val": { "kcal": 48, "vit_c_mg": 25.0, "potassium_mg": 246.0, "sinigrin_mg": 150.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Natural antibiotic (Sinigrin)" },
+      "props": ["Extremely pungent", "Clears sinuses instantly", "Powerful antibacterial properties"],
+      "lang": { "de": "Meerrettich", "en": "Horseradish", "es": "Rábano picante", "fr": "Raifort", "ru": "Хрен", "ja": "西洋わさび", "zh": "辣根", "fa": "ترب کوهی", "hi": "सहजन", "ar": "فجل الخيل" }
+    },
+    "celeriac": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Celeriac", "icon": "🥔", "latin": "Apium graveolens var. rapaceum (Radix recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 42, "potassium_mg": 500.0, "fiber_g": 4.5, "vit_k_mcg": 41.0, "sodium_mg": 100.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Aromatic Umami" },
+      "props": ["High in Vitamin K", "Excellent potato substitute (low carb)", "Natural source of organic sodium"],
+      "lang": { "de": "Knollensellerie", "en": "Celeriac", "es": "Apio nabo", "fr": "Céleri-rave", "ru": "Сельдерей корневой", "ja": "セロリアック", "zh": "根芹菜", "fa": "کرفس ریشه‌ای", "hi": "अजवाइन की जड़", "ar": "كرفس لفتي" }
+    },
+    "kohlrabi": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Kohlrabi", "icon": "🟢", "latin": "Brassica oleracea var. gongylodes (Caulis recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 27, "vit_c_mg": 62.0, "fiber_g": 3.6, "potassium_mg": 350.0, "magnesium_mg": 19.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["spring", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Extreme Vit C density" },
+      "props": ["Technically a stem, but sold as root", "Mild cabbage-turnip flavor", "High bioavailability of nutrients"],
+      "lang": { "de": "Kohlrabi", "en": "Kohlrabi", "es": "Colirrábano", "fr": "Chou-rave", "ru": "Кольраби", "ja": "コールラビ", "zh": "苤蓝", "fa": "کلم‌قمی", "hi": "गांठ गोभी", "ar": "كرنب ساقي" }
+    },
+    "lotus_root": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Lotus Root", "icon": "🎡", "latin": "Nelumbo nucifera (Rhizoma recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 74, "fiber_g": 5.0, "vit_c_mg": 44.0, "potassium_mg": 556.0, "copper_mg": 0.25 },
+      "meta": { "locations": ["asia_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "structure": "Beautiful hole-pattern" },
+      "props": ["Very high Vitamin C", "Unique crunchy texture even when cooked", "Supports respiratory health (TCM)"],
+      "lang": { "de": "Lotuswurzel", "en": "Lotus Root", "es": "Raíz de loto", "fr": "Racine de lotus", "ru": "Корень лотоса", "ja": "蓮根", "zh": "莲藕", "fa": "ریشه لوتوس", "hi": "कमल ककड़ी", "ar": "جذر اللوتس" }
+    },
+    "burdock_root": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Burdock Root", "icon": "🦯", "latin": "Arctium lappa (Radix recens)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 72, "inulin_g": 18.0, "fiber_g": 3.3, "potassium_mg": 308.0, "magnesium_mg": 38.0 },
+      "meta": { "locations": ["asia_market", "wild_foraging", "denns"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Blood purification / Skin health" },
+      "props": ["Insanely high Inulin content", "Known as 'Gobo' in Japan", "Earthly, deep flavor"],
+      "lang": { "de": "Klettenwurzel", "en": "Burdock Root", "es": "Bardaña", "fr": "Bardane", "ru": "Корень лопуха", "ja": "大浦牛蒡", "zh": "牛蒡", "fa": "ریشه باباآدم", "hi": "कुथ", "ar": "جذر الأرقطيون" }
+    },
+    "jicama": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Jicama", "icon": "🥔", "latin": "Pachyrhizus erosus (Radix recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 38, "fiber_g": 5.0, "vit_c_mg": 20.0, "potassium_mg": 150.0, "water_g": 90.0 },
+      "meta": { "locations": ["asia_market", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Crunchy like apple" },
+      "props": ["Excellent raw snack", "Very low glycemic index", "High prebiotic fiber content"],
+      "lang": { "de": "Jicama, Mexikanische Yam-Bohne", "en": "Jicama", "es": "Jícama", "fr": "Pois patate", "ru": "Хикама", "ja": "ヒカマ", "zh": "豆薯", "fa": "جیکاما", "hi": "जीकामा", "ar": "جيكاما" }
+    },
+    "potato": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Yellow Potato", "icon": "🥔", "latin": "Solanum tuberosum (Tuber recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 77, "carbs_g": 17.5, "potassium_mg": 421.0, "vit_c_mg": 19.0, "resistant_starch_g": 1.2 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High potassium for heart" },
+      "props": ["Staple energy source", "Resistant starch increases when cooled", "Rich in Vitamin B6"],
+      "lang": { "de": "Kartoffel (Gelb/Festkochend)", "en": "Potato", "es": "Patata", "fr": "Pomme de terre", "ru": "Картофель", "ja": "ジャガイモ", "zh": "马铃薯", "fa": "سیب‌زمینی", "hi": "आलू", "ar": "بطاطس" }
+    },
+    "potato_blue": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Blue/Purple Potato", "icon": "🟣", "latin": "Solanum tuberosum (Tuber recens anthocyanidiana)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 82, "anthocyanins_mg": 20.0, "potassium_mg": 450.0, "vit_c_mg": 15.0 },
+      "meta": { "locations": ["denns", "weekly_market", "rewe"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "Anthocyanin rich" },
+      "props": ["Deep purple flesh", "Lower glycemic response than white potatoes", "Ancient nutritional profile"],
+      "lang": { "de": "Blaue Annerose / Vitelotte", "en": "Blue Potato", "es": "Patata morada", "fr": "Pomme de terre vitelotte", "ru": "Синий картофель", "ja": "紫ジャガイモ", "zh": "紫马铃薯", "fa": "سیب‌زمینی بنفش", "hi": "नीला आलू", "ar": "بطاطس زرقاء" }
+    },
+    "potato_sweet": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Sweet Potato", "icon": "🍠", "latin": "Ipomoea batatas (Radix recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 86, "beta_carotene_mcg": 8500.0, "fiber_g": 3.0, "vit_c_mg": 2.4, "potassium_mg": 337.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Mega-dose Vitamin A" },
+      "props": ["Technically a storage root, not a tuber", "Low Glycemic Index", "Massive Beta-Carotene content"],
+      "lang": { "de": "Süßkartoffel", "en": "Sweet Potato", "es": "Batata / Camote", "fr": "Patate douce", "ru": "Batat", "ja": "サツマイモ", "zh": "甘薯", "fa": "سیب‌زمینی شیرین", "hi": "शकरकंद", "ar": "بطاطا حلوة" }
+    },
+    "turnip": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Turnip", "icon": "🧶", "latin": "Brassica rapa subsp. rapa (Radix recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 28, "vit_c_mg": 21.0, "potassium_mg": 191.0, "fiber_g": 1.8 },
+      "meta": { "locations": ["lidl", "rewe", "weekly_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "history": "Ancient staple before potatoes" },
+      "props": ["Mild peppery flavor", "Fast growing winter vegetable", "Low calorie density"],
+      "lang": { "de": "Mairübe / Navette", "en": "Turnip", "es": "Nabo", "fr": "Navet", "ru": "Репа", "ja": "カブ", "zh": "芜菁", "fa": "شلغم", "hi": "शलगम", "ar": "لفت" }
+    },
+    "radish_watermelon": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Watermelon Radish", "icon": "🍉", "latin": "Raphanus sativus (Radix recens incarnata)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 18, "anthocyanins_mg": 15.0, "vit_c_mg": 20.0, "mustard_oils_mg": 10.0 },
+      "meta": { "locations": ["denns", "weekly_market", "asia_market"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "visual": "Pink center, green skin" },
+      "props": ["Beautiful visual for salads", "Mild nutty-spicy flavor", "Rich in phytochemicals"],
+      "lang": { "de": "Wassermelonen-Rettich", "en": "Watermelon Radish", "es": "Rábano sandía", "fr": "Radis Red Meat", "ru": "Арбузный редис", "ja": "紅芯大根", "zh": "心里美", "fa": "ترب هندوانه‌ای", "hi": "तरबूज मूली", "ar": "فجل البطيخ" }
+    },
+    "ginger": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Ginger", "icon": "🫚", "latin": "Zingiber officinale (Rhizoma recens)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 80, "potassium_mg": 415.0, "magnesium_mg": 43.0, "gingerol_mg": 250.0, "shogaol_mg": 50.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Anti-emetic / Anti-inflammatory" },
+      "props": ["Contains Gingerol (pungent compound)", "Stimulates thermal receptors", "Powerful digestive aid"],
+      "lang": { "de": "Ingwer", "en": "Ginger", "es": "Jengibre", "fr": "Gingembre", "ru": "Имбирь", "ja": "生姜", "zh": "姜", "fa": "زنجبیل", "hi": "अदरक", "ar": "زنجبيل" }
+    },
+    "turmeric": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Turmeric", "icon": "🟠", "latin": "Curcuma longa (Rhizoma recens)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 354, "curcumin_mg": 3000.0, "iron_plant_mg": 41.0, "manganese_mg": 7.8 },
+      "meta": { "locations": ["denns", "rewe", "asia_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Powerful antioxidant (Curcumin)" },
+      "props": ["Bioavailability increases 2000% with black pepper (piperine)", "Strong natural dye", "Liver protective properties"],
+      "lang": { "de": "Kurkuma, Gelbwurz", "en": "Turmeric", "es": "Cúrcuma", "fr": "Curcuma", "ru": "Куркума", "ja": "ウコン", "zh": "姜黄", "fa": "زردچوبه", "hi": "हल्दी", "ar": "كركم" }
+    },
+    "galangal": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Galangal", "icon": "🫚", "latin": "Alpinia galanga (Rhizoma recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 71, "iron_plant_mg": 0.4, "vit_c_mg": 5.8 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Pine-like / Citrusy sharp" },
+      "props": ["Essential for Thai soups (Tom Kha)", "Harder texture than ginger", "Used in respiratory medicine"],
+      "lang": { "de": "Galgant", "en": "Galangal", "es": "Galgante", "fr": "Galingale", "ru": "Галангал", "ja": "ガランガル", "zh": "高良姜", "fa": "خلنجان", "hi": "कुलंजन", "ar": "خولنجان" }
+    },
+    "salsify": {
+      "label": "Purple Salsify", "icon": "🦯", "latin": "Tragopogon porrifolius (Radix recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 82, "fiber_g": 3.3, "potassium_mg": 380.0, "vit_c_mg": 8.0, "inulin_g": 4.0 },
+      "meta": { "locations": ["weekly_market", "denns"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Oyster-like" },
+      "props": ["Also known as Oyster Plant", "High prebiotic potential", "Delicate floral-nutty taste"],
+      "lang": { "de": "Haferwurzel", "en": "Salsify", "es": "Salsifí blanco", "fr": "Salsifis cultivé", "ru": "Овсяный корень", "ja": "バラモンジン", "zh": "婆罗门参", "fa": "شنگ", "hi": "साल्सीफी", "ar": "دبح" }
+    },
+    "rutabaga": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Rutabaga / Swede", "icon": "🍠", "latin": "Brassica napus var. napobrassica (Radix recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 37, "vit_c_mg": 25.0, "potassium_mg": 305.0, "fiber_g": 2.3, "magnesium_mg": 20.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Immune support / Low calorie" },
+      "props": ["Hybrid of cabbage and turnip", "High Vitamin C for winter", "Hearty stew base"],
+      "lang": { "de": "Steckrübe, Kohlrübe", "en": "Rutabaga", "es": "Rutabaga", "fr": "Rutabaga", "ru": "Брюква", "ja": "ルタバガ", "zh": "芜菁甘蓝", "fa": "شلغم زرد", "hi": "रुतबागा", "ar": "لفت سويدي" }
+    },
+    "parsley_root": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Parsley Root", "icon": "🥕", "latin": "Petroselinum crispum var. tuberosum (Radix recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 51, "vit_c_mg": 41.0, "iron_plant_mg": 0.8, "potassium_mg": 550.0, "apiol_mg": 5.0 },
+      "meta": { "locations": ["rewe", "denns", "weekly_market", "kaufland"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Diuretic / High Vitamin C" },
+      "props": ["Concentrated parsley flavor", "High essential oil content", "Supports kidney function"],
+      "lang": { "de": "Petersilienwurzel", "en": "Parsley Root", "es": "Raíz de perejil", "fr": "Persil tubéreux", "ru": "Корень петрушки", "ja": "根パセリ", "zh": "根用欧芹", "fa": "ریشه جعفری", "hi": "अजमोद की जड़", "ar": "جذر البقدونس" }
+    },
+    "potato_sweet_purple": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Purple Sweet Potato", "icon": "🍠", "latin": "Ipomoea batatas (Radix recens anthocyanidiana)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 86, "anthocyanins_mg": 500.0, "fiber_g": 3.3, "vit_a_mcg": 10.0, "potassium_mg": 470.0 },
+      "meta": { "locations": ["asia_market", "denns", "weekly_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "Ultra-high Anthocyanins" },
+      "props": ["Deep purple core", "Highest antioxidant capacity of sweet potatoes", "Starchy and less sweet"],
+      "lang": { "de": "Lila Süßkartoffel", "en": "Purple Sweet Potato", "es": "Batata morada", "fr": "Patate douce violette", "ru": "Пурпурный батат", "ja": "紫芋", "zh": "紫薯", "fa": "سیب‌زمینی شیرین بنفش", "hi": "बैंगनी शकरकंद", "ar": "بطاطا حلوة بنفسجية" }
+    },
+    "bamboo_shoots": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Bamboo Shoots (Fresh)", "icon": "🎋", "latin": "Bambusoideae (Gemma recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 27, "protein_g": 2.6, "fiber_g": 2.2, "potassium_mg": 533.0, "vit_b6_mg": 0.2 },
+      "meta": { "locations": ["asia_market"], "season": ["spring"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High potassium / Low carb" },
+      "props": ["Technically a grass shoot", "Excellent source of silica", "Crunchy texture and mild flavor"],
+      "lang": { "de": "Bambussprossen (Frisch)", "en": "Bamboo Shoots", "es": "Brotes de bambú", "fr": "Pousses de bambou", "ru": "Побеги бамбука", "ja": "竹の子", "zh": "竹笋", "fa": "جوانه خیزران", "hi": "बांस के अंकुर", "ar": "براعم الخيزran" }
+    },
+	"jicama_update": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Jicama (Update)", "icon": "🥔", "latin": "Pachyrhizus erosus (Radix recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 38, "fiber_g": 4.9, "vit_c_mg": 20.0, "potassium_mg": 150.0, "inulin_g": 2.0 },
+      "meta": { "locations": ["asia_market", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Prebiotic crunch" },
+      "props": ["Water-chestnut like texture", "Rich in oligofructose (Inulin-type)", "Low calorie density for volume eating"],
+      "lang": { "de": "Jicama, Bengkuang", "en": "Jicama", "es": "Jícama", "fr": "Pois patate", "ru": "Хикама", "ja": "ヒカマ", "zh": "豆薯", "fa": "جیکاما", "hi": "जीकामा", "ar": "جيكاما" }
+    }
+  },
+"brassica_vegetables": {
+    "broccoli": {
+      "label": "Broccoli", "icon": "🥦", "latin": "Brassica oleracea var. italica (Inflorescentia recens)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 34, "protein_g": 2.8, "vit_c_mg": 89.0, "vit_k_mcg": 101.0, "sulforaphane_mg": 40.0, "calcium_mg": 47.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Sulforaphane champion" },
+      "props": ["High bioavailability of Vitamin C", "Contains Indole-3-carbinol", "Stems are edible and nutrient-dense"],
+      "lang": { "de": "Brokkoli", "en": "Broccoli", "es": "Brócoli", "fr": "Brocoli", "ru": "Брокколи", "ja": "ブロッコリー", "zh": "西兰花", "fa": "کلم بروکلی", "hi": "ब्रोकोली", "ar": "بروكلي" }
+    },
+    "cauliflower": {
+      "label": "Cauliflower", "icon": "🥬", "latin": "Brassica oleracea var. botrytis (Inflorescentia recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 25, "vit_c_mg": 48.0, "potassium_mg": 299.0, "folate_mcg": 57.0, "choline_mg": 45.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["all_year", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Brain health (Choline)" },
+      "props": ["Rich in Choline for neurotransmitters", "Highly versatile (Rice/Pizza substitute)", "Mildest sulfur flavor"],
+      "lang": { "de": "Blumenkohl", "en": "Cauliflower", "es": "Coliflor", "fr": "Chou-fleur", "ru": "Цветная капуста", "ja": "カリフラワー", "zh": "花椰菜", "fa": "گل کلم", "hi": "फूलगोभी", "ar": "قرنبيط" }
+    },
+    "romanesco": {
+      "label": "Romanesco", "icon": "🥦", "latin": "Brassica oleracea var. botrytis (Inflorescentia Romanesco)", "sci": ["#sci/Botany", "#sci/Mathematics"],
+      "val": { "kcal": 25, "vit_c_mg": 88.0, "vit_k_mcg": 140.0, "fiber_g": 3.0 },
+      "meta": { "locations": ["denns", "weekly_market", "rewe"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "structure": "Fractal geometry" },
+      "props": ["Higher Vitamin C than regular cauliflower", "Perfect fractal pattern (Fibonacci)", "Nutty flavor profile"],
+      "lang": { "de": "Romanesco", "en": "Romanesco", "es": "Romanesco", "fr": "Chou romanesco", "ru": "Романеско", "ja": "ロマネスコ", "zh": "罗马花椰菜", "fa": "رومانسکو", "hi": "रोमनेस्को", "ar": "رومانسكو" }
+    },
+    "cabbage_red": {
+      "label": "Red Cabbage", "icon": "🟣", "latin": "Brassica oleracea var. capitata f. rubra (Herba recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 31, "anthocyanins_mg": 190.0, "vit_c_mg": 57.0, "vit_k_mcg": 38.0, "potassium_mg": 243.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "Anthocyanin power" },
+      "props": ["Massive antioxidant load", "Natural pH indicator (color changes)", "Excellent for fermentation (Blaukraut)"],
+      "lang": { "de": "Rotkohl, Blaukraut", "en": "Red Cabbage", "es": "Lombarda", "fr": "Chou rouge", "ru": "Красная капуста", "ja": "赤キャベツ", "zh": "紫甘蓝", "fa": "کلم قرمز", "hi": "लाल पत्ता गोभी", "ar": "كرنب أحمر" }
+    },
+    "brussels_sprouts": {
+      "label": "Brussels Sprouts", "icon": "🟢", "latin": "Brassica oleracea var. gemmifera (Gemmae recens)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 43, "protein_g": 3.4, "vit_c_mg": 85.0, "vit_k_mcg": 177.0, "glucosinolates_mg": 110.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "DNA protection" },
+      "props": ["Highest protein content in cabbage family", "Concentrated sulfur compounds", "Supports liver detox"],
+      "lang": { "de": "Rosenkohl", "en": "Brussels Sprouts", "es": "Coles de Bruselas", "fr": "Choux de Bruxelles", "ru": "Брюссельская капуста", "ja": "芽キャベツ", "zh": "抱子甘蓝", "fa": "کلم بروکسل", "hi": "ब्रसेल्स स्प्राउट्स", "ar": "كرنب بروكسل" }
+    },
+    "kale": {
+      "label": "Kale", "icon": "🥬", "latin": "Brassica oleracea var. sabellica (Folia recens)", "sci": ["#sci/Phytochemistry", "#sci/Nutrition"],
+      "val": { "kcal": 49, "protein_g": 4.3, "vit_k_mcg": 705.0, "vit_a_rae_mcg": 500.0, "vit_c_mg": 120.0, "calcium_mg": 150.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Vitamin K & Calcium Monster" },
+      "props": ["Highest Vitamin K content", "Bioavailable calcium source", "Anti-inflammatory flavonoids"],
+      "lang": { "de": "Grünkohl", "en": "Kale", "es": "Col rizada", "fr": "Chou frisé", "ru": "Кале", "ja": "ケール", "zh": "羽衣甘蓝", "fa": "کلم کالی", "hi": "केल", "ar": "كرنب مجعد" }
+    },
+    "savoy_cabbage": {
+      "label": "Savoy Cabbage", "icon": "🥬", "latin": "Brassica oleracea var. sabauda (Folia recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 27, "vit_k_mcg": 69.0, "vit_c_mg": 31.0, "potassium_mg": 230.0, "magnesium_mg": 28.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Crinkled leaves" },
+      "props": ["Strong chlorophyll source", "Better digestibility than white cabbage", "Rich in folic acid"],
+      "lang": { "de": "Wirsing", "en": "Savoy Cabbage", "es": "Col de Saboya", "fr": "Chou de Milan", "ru": "Савойская капуста", "ja": "サボイキャベツ", "zh": "皱叶甘蓝", "fa": "کلم پیچ", "hi": "सेवॉय गोभी", "ar": "كرنب سافوي" }
+    },
+    "cabbage_white": {
+      "label": "White Cabbage", "icon": "⚪", "latin": "Brassica oleracea var. capitata f. alba (Herba recens)", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 25, "vit_c_mg": 36.0, "vit_u_mg": 10.0, "fiber_g": 2.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Gastrointestinal healing (Vit U)" },
+      "props": ["Contains Vitamin U (S-Methylmethionine) for stomach lining", "Foundation for Sauerkraut", "Extremely long shelf life"],
+      "lang": { "de": "Weißkohl", "en": "White Cabbage", "es": "Repollo blanco", "fr": "Chou blanc", "ru": "Белокочанная капуста", "ja": "白キャベツ", "zh": "圆白菜", "fa": "کلم सफेद", "hi": "सफेद पत्ता गोभी", "ar": "كرنب أبيض" }
+    },
+    "cabbage_pointed": {
+      "label": "Pointed Cabbage", "icon": "🥬", "latin": "Brassica oleracea var. capitata f. alba (Folia Spitz)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 24, "vit_c_mg": 50.0, "fiber_g": 2.0, "potassium_mg": 210.0 },
+      "meta": { "locations": ["lidl", "rewe", "weekly_market"], "season": ["spring", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Sweet & delicate" },
+      "props": ["Fast cooking time", "Mildest head cabbage", "High Vitamin C for spring"],
+      "lang": { "de": "Spitzkohl", "en": "Pointed Cabbage", "es": "Col picuda", "fr": "Chou pointu", "ru": "Остроконечная капуsta", "ja": "とんがりキャベツ", "zh": "牛心菜", "fa": "کلم نوک‌تیز", "hi": "नुकीली गोभी", "ar": "كرنب مدبب" }
+    },
+    "bok_choy": {
+      "label": "Pak Choi", "icon": "🥬", "latin": "Brassica rapa subsp. chinensis (Herba recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 13, "water_g": 95.0, "vit_c_mg": 45.0, "vit_a_mcg": 243.0, "calcium_mg": 105.0 },
+      "meta": { "locations": ["asia_market", "rewe", "lidl", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Low-oxalate calcium" },
+      "props": ["High mineral bioavailability", "Crunchy stems and tender leaves", "Essential for stir-fries"],
+      "lang": { "de": "Pak Choi", "en": "Bok Choy", "es": "Bok choy", "fr": "Bok choy", "ru": "Пак-чой", "ja": "チンゲン菜", "zh": "小白菜", "fa": "پاک چوی", "hi": "पाक चोय", "ar": "باك تشوي" }
+    },
+    "cabbage_napa": {
+      "label": "Napa Cabbage", "icon": "🥬", "latin": "Brassica rapa subsp. pekinensis (Herba recens)", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 13, "vit_c_mg": 27.0, "folate_mcg": 79.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["asia_market", "lidl", "kaufland", "rewe"], "season": ["all_year", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Kimchi fermentation base" },
+      "props": ["Highest folate in cabbage family", "Extremely easy to digest", "Neutral flavor profile"],
+      "lang": { "de": "Chinakohl", "en": "Napa Cabbage", "es": "Col china", "fr": "Chou chinois", "ru": "Пекинская капуста", "ja": "白菜", "zh": "大白菜", "fa": "کلم چینی", "hi": "चीनी गोभी", "ar": "كرنب صيني" }
+    },
+    "gai_lan": {
+      "label": "Gai Lan (Chinese Broccoli)", "icon": "🥦", "latin": "Brassica oleracea var. alboglabra (Caulis et Folia)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 22, "vit_a_mcg": 150.0, "vit_c_mg": 41.0, "vit_k_mcg": 85.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Slightly bitter / Nutty" },
+      "props": ["Higher leaf-to-stem ratio than broccoli", "Rich in lutein and zeaxanthin", "Traditional Cantonese vegetable"],
+      "lang": { "de": "Kai-lan / Chinesischer Brokkoli", "en": "Gai Lan", "es": "Brócoli chino", "fr": "Brocoli chinois", "ru": "Кай-лань", "ja": "カイラン", "zh": "芥兰", "fa": "کلم بروکلی چینی", "hi": "चीनी ब्रोकोली", "ar": "بروكلي صيني" }
+    },
+    "kale_lacinato": {
+      "label": "Black Kale (Cavolo Nero)", "icon": "🥬", "latin": "Brassica oleracea var. palmifolia (Folia recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 49, "anthocyanins_mg": 30.0, "vit_k_mcg": 600.0, "calcium_mg": 140.0 },
+      "meta": { "locations": ["denns", "weekly_market", "rewe"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Eye health (Lutein)" },
+      "props": ["Dinosaur-skin texture", "Sweeter and more tender than curly kale", "Rich in iron and magnesium"],
+      "lang": { "de": "Schwarzkohl, Palmkohl", "en": "Lacinato Kale", "es": "Col negra", "fr": "Chou palmier", "ru": "Черная капуста", "ja": "黒キャベツ", "zh": "羽衣甘蓝 (黑)", "fa": "کلم سیاه", "hi": "काला केल", "ar": "كرنب أسود" }
+    },
+    "cauliflower_colored": {
+      "label": "Purple/Orange Cauliflower", "icon": "🟣", "latin": "Brassica oleracea var. botrytis (Inflorescentia colorata)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 25, "anthocyanins_mg": 45.0, "beta_carotene_mcg": 300.0, "vit_c_mg": 50.0 },
+      "meta": { "locations": ["denns", "weekly_market"], "season": ["autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "visual": "Vibrant purple or orange" },
+      "props": ["Orange contains 25x more Vit A than white", "Purple contains red wine-type antioxidants", "Maintains color during light steaming"],
+      "lang": { "de": "Bunter Blumenkohl (Lila/Orange)", "en": "Colored Cauliflower", "es": "Coliflor de colores", "fr": "Chou-fleur coloré", "ru": "Цветная цветная капуста", "ja": "カラフルカリフラワー", "zh": "彩色彩花椰菜", "fa": "گل کلم رنگی", "hi": "रंगीन फूलगोभी", "ar": "قرنبيط ملون" }
+    },
+    "sprout_flower": {
+      "label": "Flower Sprout (Kalettes)", "icon": "🥦", "latin": "Brassica oleracea (Gemmae hybrida)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 45, "vit_c_mg": 80.0, "vit_k_mcg": 150.0, "antioxidants_orac": 2500.0 },
+      "meta": { "locations": ["rewe", "denns", "weekly_market"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "innovation": "Hybrid of Kale & Brussels Sprouts" },
+      "props": ["Combines nutty flavor of sprouts with kale nutrients", "Double the amount of Vitamin C than standard sprouts", "Very high anthocyanin levels"],
+      "lang": { "de": "Flower Sprout, Kalettes", "en": "Flower Sprout", "es": "Kalettes", "fr": "Chou kale-fleur", "ru": "Цветочная капуста", "ja": "プチヴェール", "zh": "孢子羽衣甘蓝", "fa": "کلم کالتیس", "hi": "फ्लावर स्प्राउट", "ar": "برعم الورد" }
+    },
+    "mustard_greens": {
+      "label": "Mustard Greens", "icon": "🌿", "latin": "Brassica juncea (Folia recens)", "sci": ["#sci/Phytochemistry", "#sci/Pharmacology"],
+      "val": { "kcal": 27, "vit_a_mcg": 500.0, "vit_k_mcg": 250.0, "allyl_isothiocyanate_mg": 40.0 },
+      "meta": { "locations": ["asia_market", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Strong detoxifier" },
+      "props": ["Pungent mustard flavor", "Highest concentration of Sinigrin", "Supports liver phase II detox"],
+      "lang": { "de": "Senfgrün, Blattsenf", "en": "Mustard Greens", "es": "Mostaza parda", "fr": "Moutarde brune", "ru": "Зелень горчицы", "ja": "からし菜", "zh": "芥菜", "fa": "برگ خردل", "hi": "सरसों का साग", "ar": "خردل ورقي" }
+    },
+    "komatsuna": {
+      "label": "Komatsuna (Japanese Mustard Spinach)", "icon": "🥬", "latin": "Brassica rapa var. perviridis (Herba recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 14, "calcium_mg": 210.0, "vit_c_mg": 39.0, "iron_plant_mg": 1.5 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Calcium champion" },
+      "props": ["More calcium than milk or spinach", "Very mild, slightly peppery flavor", "Staple in Japanese longevity diets"],
+      "lang": { "de": "Komatsuna, Japanischer Senfspinat", "en": "Komatsuna", "es": "Komatsuna", "fr": "Komatsuna", "ru": "Комацуна", "ja": "小松菜", "zh": "小松菜", "fa": "کوماتسونا", "hi": "कोमात्सुना", "ar": "كوماتسونا" }
+    }
+  },
+  "allium_vegetables": {
+    "garlic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Garlic", "icon": "🧄", "latin": "Allium sativum (Bulbus recens)", "sci": ["#sci/Pharmacology", "#sci/Microbiology"],
+      "val": { "kcal": 149, "allicin_mg": 4.5, "selenium_mcg": 14.2, "vit_b6_mg": 1.2 },
+      "meta": { "locations": ["lidl", "kaufland", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Cardiovascular health / Allicin" },
+      "props": ["Antibacterial and anti-thrombotic", "Crush and wait 10 min to activate Allicin", "Rich in organic sulfur"],
+      "lang": { "de": "Knoblauch", "en": "Garlic", "es": "Ajo", "fr": "Ail", "ru": "Чеснок", "ja": "にんにく", "zh": "大蒜", "fa": "سیر", "hi": "لहसुन", "ar": "ثوم" }
+    },
+    "onion_yellow": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Yellow Onion", "icon": "🧅", "latin": "Allium cepa (Bulbus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 40, "quercetin_mg": 20.0, "fiber_g": 1.7, "potassium_mg": 146.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High Quercetin source" },
+      "props": ["Prebiotic fiber (Inulin)", "Strong antioxidant effect in the outer layers", "Staple for base flavor (Umami)"],
+      "lang": { "de": "Gelbe Zwiebel", "en": "Yellow Onion", "es": "Cebolla", "fr": "Oignon", "ru": "Лук", "ja": "玉ねぎ", "zh": "洋葱", "fa": "پیاز", "hi": "प्याज", "ar": "بصل" }
+    },
+    "leek": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Leek", "icon": "🥬", "latin": "Allium ampeloprasum (Caulis et Folia)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 61, "vit_k_mcg": 47.0, "iron_mg": 2.1, "manganese_mg": 0.5 },
+      "meta": { "locations": ["lidl", "kaufland", "denns"], "season": ["winter", "autumn"], "vegan": true },
+      "props": ["Rich in kaempferol", "Supports bone health", "High iron for a vegetable"],
+      "lang": { "de": "Lauch, Porree", "en": "Leek", "es": "Puerro", "fr": "Poireau", "ru": "Лук-порей", "ja": "リーキ", "zh": "韭葱", "fa": "تره فرنگی", "hi": "लीक", "ar": "كراث" }
+    },
+    "shallot": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Shallot", "icon": "🧅", "latin": "Allium ascalonicum (Bulbus recens)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 72, "quercetin_mg": 25.0, "potassium_mg": 334.0, "vit_b6_mg": 0.3 },
+      "meta": { "locations": ["rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Refined / Less pungent" },
+      "props": ["Higher antioxidant concentration than common onions", "Denser nutrient profile", "Perfect for raw vinegarettes"],
+      "lang": { "de": "Schalotte", "en": "Shallot", "es": "Chalote", "fr": "Échalote", "ru": "Лук-шалот", "ja": "エシャロット", "zh": "分葱", "fa": "موسیر", "hi": "शालोट", "ar": "بصل شالوت" }
+    },
+    "onion_spring": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Spring Onion", "icon": "🌱", "latin": "Allium fistulosum (Herba recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 32, "vit_c_mg": 18.0, "vit_k_mcg": 207.0, "folate_mcg": 64.0 },
+      "meta": { "locations": ["lidl", "kaufland", "asia_market"], "season": ["spring", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Fresh enzymes" },
+      "props": ["Rich in chlorophyll in the green parts", "High Vitamin K", "Low FODMAP (if only green parts used)"],
+      "lang": { "de": "Frühlingszwiebel, Lauchzwiebel", "en": "Spring Onion", "es": "Cebolleta", "fr": "Oignon de printemps", "ru": "Зеленый лук", "ja": "長ねぎ", "zh": "小葱", "fa": "پیازچه", "hi": "हरा प्याज", "ar": "بصل أخضر" }
+    },
+    "onion_red": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Red Onion", "icon": "🧅", "latin": "Allium cepa (Bulbus recens rubrus)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 40, "anthocyanins_mg": 40.0, "quercetin_mg": 22.0, "fiber_g": 1.7 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "Anthocyanins + Quercetin" },
+      "props": ["Double the antioxidants of white onions", "Colors indicate high flavonoid content", "Best eaten raw for heart health"],
+      "lang": { "de": "Rote Zwiebel", "en": "Red Onion", "es": "Cebolla roja", "fr": "Oignon rouge", "ru": "Красный лук", "ja": "赤玉ねぎ", "zh": "红洋葱", "fa": "پیاز قرمز", "hi": "लाल प्याज", "ar": "بصل أحمر" }
+    },
+    "garlic_chives": {
+      "label": "Garlic Chives", "icon": "🌿", "latin": "Allium tuberosum (Folia recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 30, "vit_c_mg": 18.0, "potassium_mg": 300.0, "allicin_mg": 50.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Sulfur powerhouse" },
+      "props": ["Flat leaves, mild garlic flavor", "Staple in Asian dumplings", "Supports digestion and blood flow"],
+      "lang": { "de": "Schnittknoblauch", "en": "Garlic Chives", "es": "Cebollino chino", "fr": "Ciboulette chinoise", "ru": "Джусай", "ja": "ニラ", "zh": "韭菜", "fa": "تره سیر", "hi": "चीनी चाइव्स", "ar": "ثوم معمر صيني" }
+    },
+    "wild_garlic": {
+      "label": "Wild Garlic", "icon": "🌿", "latin": "Allium ursinum (Folia recens)", "sci": ["#sci/Pharmacology"],
+      "val": { "kcal": 34, "vit_c_mg": 150.0, "iron_mg": 2.9, "allicin_mg": 100.0 },
+      "meta": { "locations": ["weekly_market", "forest", "denns"], "season": ["spring"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Spring Detox" },
+      "props": ["Natural antibiotic effect", "Strongest spring blood purifier", "High bioavailable Vitamin C"],
+      "lang": { "de": "Bärlauch", "en": "Wild Garlic", "es": "Ajo de oso", "fr": "Ail des ours", "ru": "Череmша", "ja": "ギョウジャニンニク", "zh": "熊葱", "fa": "والک", "hi": "जंगली लहसुन", "ar": "ثوم بري" }
+    },
+    "garlic_solo": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Solo Garlic", "icon": "⚪", "latin": "Allium sativum (Bulbus unilocularis)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 149, "allicin_mg": 5.0, "selenium_mcg": 15.0 },
+      "meta": { "locations": ["lidl", "kaufland", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High convenience" },
+      "props": ["Single clove garlic", "Easier to peel", "Slightly milder and sweeter than multi-clove garlic"],
+      "lang": { "de": "Solo-Knoblauch, Einzehenknoblauch", "en": "Solo Garlic", "es": "Ajo solo", "fr": "Ail solo", "ru": "Чеснок соло", "ja": "プチにんにく", "zh": "独头蒜", "fa": "سیر تک حبه", "hi": "सोलो लहसुन", "ar": "ثوم وحيد القرن" }
+    },
+    "banana_shallot": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Banana Shallot (Eschalion)", "icon": "🧅", "latin": "Allium cepa var. aggregatum (Bulbus longus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 72, "quercetin_mg": 28.0, "potassium_mg": 334.0, "vit_b6_mg": 0.3 },
+      "meta": { "locations": ["rewe", "kaufland", "denns", "weekly_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Gourmet standard" },
+      "props": ["Hybrid of onion and shallot", "Easier to peel than small shallots", "Exceptional sweetness when caramelized"],
+      "lang": { "de": "Bananenschalotte, Eschalotte", "en": "Banana Shallot", "es": "Chalota larga", "fr": "Échalote cuisse de poulet", "ru": "Лук-шалот Банановый", "ja": "バナナエシャロット", "zh": "芭娜娜分葱", "fa": "موسیر موزی", "hi": "केला शालोट", "ar": "كراث أندلسي موزي" }
+    },
+    "onion_white": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "White Onion", "icon": "⚪", "latin": "Allium cepa (Bulbus recens albus)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 42, "water_g": 89.0, "vit_c_mg": 7.4, "quercetin_mg": 10.0 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Crisp & Clean" },
+      "props": ["Standard in Mexican cuisine", "Milder aftertaste than yellow onions", "Highest water content in the onion family"],
+      "lang": { "de": "Weiße Zwiebel", "en": "White Onion", "es": "Cebolla blanca", "fr": "Oignon blanc", "ru": "Белый лук", "ja": "白玉ねぎ", "zh": "白洋葱", "fa": "پیاز سفید", "hi": "سफेद प्याज", "ar": "بصل أبيض" }
+    },
+    "black_garlic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Black Garlic (Fermented)", "icon": "🧄", "latin": "Allium sativum (Bulbus fermentatus)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 149, "sac_mg": 1.2, "antioxidants_orac": 12000.0, "allicin_mg": 0.0 },
+      "meta": { "locations": ["denns", "rewe", "asia_market", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "S-Allyl-Cysteine (SAC) powerhouse" },
+      "props": ["Heat-aged white garlic", "No garlic breath", "Sweet balsamic-like flavor", "10x higher antioxidant capacity than raw garlic"],
+      "lang": { "de": "Schwarzer Knoblauch", "en": "Black Garlic", "es": "Ajo negro", "fr": "Ail noir", "ru": "Черный чеснок", "ja": "黒にんにく", "zh": "黑蒜", "fa": "سیر سیاه", "hi": "काला लहसुन", "ar": "ثوم أسود" }
+    },
+    "onion_pearl": {
+      "label": "Pearl Onion", "icon": "⚪", "latin": "Allium ampeloprasum var. sectivum (Bulbulus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 32, "vit_c_mg": 6.0, "fiber_g": 1.5 },
+      "meta": { "locations": ["rewe", "kaufland", "weekly_market"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Sweet / Mild" },
+      "props": ["Small, marble-sized bulbs", "Often used for pickling (Silberzwiebeln)", "Denser texture"],
+      "lang": { "de": "Perlzwiebel, Silberzwiebel", "en": "Pearl Onion", "es": "Cebollitas", "fr": "Oignon grelot", "ru": "Лук жемчужный", "ja": "ペコロス", "zh": "珍珠洋葱", "fa": "پیاز مرواریدی", "hi": "मोती प्याज", "ar": "بصل لؤلؤي" }
+    }
+  },
+  "mammut_nutrition_power_matrix": {
+    "--- THE_MASSIVE_PROTEIN_SUPPLY ---": "Mammut Protein-Lösungen (Masse & Erhalt)",
+    "protein_mammut_formel_90": {
+      "unit_price": 30.00,
+      "unit_type": "piece",
+      "label": "Mammut Formel 90 (Protein-Mix)", "icon": "🦍", "latin": "Multi-componentum proteinum (Mammut)", "sci": ["#sci/Nutrition", "#sci/Biology"],
+      "val": { "kcal": 375, "protein_g": 77.0, "fat_total_g": 2.5, "carbs_total_g": 8.5, "leucine_mg": 6800.0 },
+      "meta": { "locations": ["kaufland", "amazon", "fitness_stores"], "brand": "Mammut Nutrition", "vegan": false },
+      "quality_metrics": { "components": "Soy, Milk, Whey", "bioavailability": "High (Timed-release)" },
+      "props": ["Der Preis-Leistungs-König unter den Mehrkomponenten-Proteinen", "Sorgt durch den Mix für eine schnelle und langanhaltende Aminosäure-Versorgung", "Ideal für den täglichen Bedarf bei hohem Trainingsvolumen"],
+      "lang": { "de": "Mammut Formel 90", "en": "Mammut Formula 90", "es": "Mammut Fórmula 90", "fr": "Mammut Formule 90", "ru": "Маммут Формула 90", "ja": "マンモス フォーミュラ 90", "zh": "Mammut 90号配方蛋白粉", "fa": "ماموت فرمول ۹۰", "hi": "मैमथ फॉर्मूला 90", "ar": "ماموت فورمولا 90" }
+    },
+    "protein_mammut_whey_classic": {
+      "unit_price": 25.00,
+      "unit_type": "piece",
+      "label": "Mammut Whey Protein", "icon": "🥤", "latin": "Serum proteinum mammutium", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 395, "protein_g": 70.0, "fat_total_g": 6.5, "carbs_total_g": 12.0 },
+      "meta": { "locations": ["kaufland", "fitness_stores"], "brand": "Mammut Nutrition", "vegan": false },
+      "quality_metrics": { "type": "Concentrate", "solubility": "Good" },
+      "props": ["Konzentriert sich auf das Wesentliche ohne unnötigen Schnickschnack", "Perfekt als Post-Workout-Shake für schnelle Resorption", "Wird oft in der vorteilhaften 1000g-Dose geliefert"],
+      "lang": { "de": "Mammut Whey Protein", "en": "Mammut Whey", "es": "Proteína de suero Mammut", "fr": "Protéine de lactosérum Mammut", "ru": "Сывороточный протеин Маммут", "ja": "マンモス ホエイ", "zh": "Mammut 乳清蛋白", "fa": "پروتئین وی ماموت", "hi": "मैमथ व्हे प्रोटीन", "ar": "بروتين مصل اللبن ماموت" }
+    },
+
+    "--- STRENGTH_AND_WEIGHT_BOOST ---": "Kraft & Masse (Creatin & Gainer)",
+    "supp_mammut_creatin_monohydrate": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Mammut Creatin Monohydrat", "icon": "⚡", "latin": "Creatinum purum (Mammut)", "sci": ["#sci/Pharmacology", "#sci/Biology"],
+      "val": { "kcal": 0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "creatine_per_serving_mg": 3000.0 },
+      "meta": { "locations": ["everywhere_online", "kaufland"], "brand": "Mammut Nutrition", "vegan": true },
+      "quality_metrics": { "purity": "Ultra-fine Powder", "mesh_grade": "200 MESH" },
+      "props": ["Erhöht die körperliche Leistung bei Schnellkrafttraining", "Geschmacksneutral und perfekt mischbar in Shakes", "Eines der günstigsten reinen Monohydrate am Markt"],
+      "lang": { "de": "Mammut Creatin", "en": "Mammut Creatine", "es": "Creatina Mammut", "fr": "Créatine Mammut", "ru": "Креатин Маммут", "ja": "マンモス クレアチン", "zh": "Mammut 肌酸", "fa": "کراتین ماموت", "hi": "मैमथ क्रिएटिन", "ar": "كرياتين ماموت" }
+    },
+    "gainer_mammut_weight_gainer_crash": {
+      "unit_price": 35.00,
+      "unit_type": "piece",
+      "label": "Mammut Weight Gainer Crash 5000", "icon": "🏗️", "latin": "Hypercaloricum mammutium", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 375, "water_g": 5.0, "protein_g": 15.0, "fat_total_g": 2.5, "carbs_total_g": 72.0, "sugar_g": 15.0 },
+      "meta": { "locations": ["kaufland", "fitness_stores"], "brand": "Mammut Nutrition", "vegan": false },
+      "quality_metrics": { "carb_source": "Maltodextrin / Dextrose / Oat flour", "vitamin_added": "Yes" },
+      "props": ["Die Geheimwaffe für Hardgainer (Menschen, die schwer zunehmen)", "Massive Kohlenhydrat-Matrix für den Kalorienüberschuss", "Schmeckt besonders gut in Vollmilch für maximale Kalorien"],
+      "lang": { "de": "Mammut Weight Gainer", "en": "Mammut Weight Gainer", "es": "Ganador de peso Mammut", "fr": "Mammut Weight Gainer", "ru": "Гейнер Маммут", "ja": "マンモス ウェイトゲイナー", "zh": "Mammut 增重粉", "fa": "گینر ماموت", "hi": "मैमथ वेट गेनर", "ar": "ماموت وايت جينر" }
+    },
+    "--- THE_CEREAL_POWER ---": "Haferriegel & Flapjacks (Langzeit-Energie)",
+    "bar_oat_alnatura_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Alnatura Haferriegel (Natur/Bio)", "icon": "🌾", "latin": "Avena sativa crustum (Alnatura)", "sci": ["#sci/Nutrition", "#sci/Botany"],
+      "val": { "kcal": 435, "water_g": 8.0, "protein_g": 7.5, "fat_total_g": 18.0, "carbs_total_g": 58.0, "sugar_g": 22.0, "fiber_g": 6.5 },
+      "meta": { "locations": ["alnatura", "rewe", "edeka", "dm"], "brand": "Alnatura", "vegan": true },
+      "quality_metrics": { "base": "Whole grain oats", "sweetener": "Honey or Agave syrup" },
+      "props": ["Der Bio-Standard für langanhaltende Sättigung", "Hoher Ballaststoffanteil für stabilen Blutzuckerspiegel", "Ideal als Wandersnack oder Pre-Workout-Fuel"],
+      "lang": { "de": "Alnatura Haferriegel", "en": "Alnatura Oat Bar", "es": "Barrita de avena Alnatura", "fr": "Barre d'avoine Alnatura", "ru": "Овсяный батончик Альнатура", "ja": "アルナチュラ オートバー", "zh": "Alnatura 燕麦棒", "fa": "اوکت بار آلناتورا", "hi": "अल्नातुरा ओट बार", "ar": "لوح شوفان اليناتورا" }
+    },
+
+    "--- THE_RAW_ENERGY_SPHERES ---": "Energy Balls (Dattel-Frucht-Power)",
+    "energy_balls_rossmann_cocoa": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "EnerBiO Kakao Energy Balls (Rossmann)", "icon": "⚽", "latin": "Globuli fructosi cacao", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 380, "water_g": 15.0, "protein_g": 6.0, "fat_total_g": 14.0, "carbs_total_g": 52.0, "sugar_g": 44.0, "fiber_g": 9.0 },
+      "meta": { "locations": ["rossmann"], "brand": "EnerBiO", "vegan": true },
+      "quality_metrics": { "base": "Dates (Datteln)", "process": "Raw / Cold pressed" },
+      "props": ["Natürlicher Energiekick ohne Zusatz von Industriezucker", "Die Süße kommt zu 100% aus der Fruchtmatrix", "Kombiniert Antioxidantien aus Kakao mit schnellen Carbs"],
+      "lang": { "de": "Rossmann Energy Balls", "en": "Rossmann Energy Balls", "es": "Bolas de energía Rossmann", "fr": "Bouchées d'énergie Rossmann", "ru": "Энергетические шарики Россманн", "ja": "ロスマン エナジーボール", "zh": "罗斯曼能量球", "fa": "انرژی بالز راسمانی", "hi": "रॉसमैन एनर्जी बॉल्स", "ar": "كرات الطاقة روسمان" }
+    },
+
+    "--- THE_PROTEIN_POWDER_MATRIX ---": "Proteinpulver (Whey & Isolat)",
+    "protein_whey_esn_designer": {
+      "unit_price": 35.00,
+      "unit_type": "piece",
+      "label": "ESN Designer Whey (Reference)", "icon": "🥤", "latin": "Serum proteinum lacteum", "sci": ["#sci/Nutrition", "#sci/Biology"],
+      "val": { "kcal": 390, "protein_g": 75.0, "fat_total_g": 5.0, "carbs_total_g": 6.0, "leucine_mg": 8500.0, "bcaa_g": 17.5 },
+      "meta": { "locations": ["online", "rewe", "edeka"], "brand": "ESN", "vegan": false },
+      "quality_metrics": { "type": "Whey Concentrate & Isolate blend", "solubility": "Ultra-High" },
+      "props": ["Deutscher Marktführer im Premium-Segment", "Optimiertes Aminosäureprofil für maximalen Muskelaufbau", "Enthält Laktase zur besseren Verdauung"],
+      "lang": { "de": "ESN Proteinpulver", "en": "ESN Whey Protein", "es": "Proteína de suero ESN", "fr": "Protéine de lactosérum ESN", "ru": "Протеин ESN", "ja": "ESN ホエイプロテイン", "zh": "ESN 乳清蛋白粉", "fa": "پروتئین وی ای‌اس‌ان", "hi": "ESN व्हे प्रोटीन", "ar": "بروتين مصل اللبن ESN" }
+    },
+    "protein_whey_rossmann_wellmix": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "WellMix Sport Whey Protein (Rossmann)", "icon": "🏋️", "latin": "Serum proteinum rossmannium", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 385, "protein_g": 72.0, "fat_total_g": 6.0, "carbs_total_g": 7.5 },
+      "meta": { "locations": ["rossmann"], "brand": "WellMix", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget Muscle", "sweetener": "Sucralose / Stevia" },
+      "props": ["Rossmanns Antwort auf teure Fitnessmarken", "Solides Basis-Whey für Hobby-Athleten", "Gute Verfügbarkeit im Drogeriemarkt"],
+      "lang": { "de": "WellMix Protein", "en": "WellMix Whey", "es": "Proteína WellMix", "fr": "Protéine WellMix", "ru": "Протеин ВеллМикс", "ja": "WellMix プロテイン", "zh": "WellMix 蛋白粉", "fa": "پروتئین ولمیکس", "hi": "वेलमिक्स प्रोटीन", "ar": "بروتين ويلميكس" }
+    },
+
+    "--- THE_PROTEIN_BAR_ELITE ---": "Moderne High-Protein Riegel",
+    "bar_protein_lidl_white_choco": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Lidl High Protein Bar (White Choco)", "icon": "🦾", "latin": "Bacillus proteinus lidlianus alba", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 185, "protein_g": 22.5, "fat_total_g": 6.5, "carbs_total_g": 13.0, "sugar_g": 1.2 },
+      "meta": { "locations": ["lidl"], "brand": "High Protein (Lidl)", "vegan": false },
+      "quality_metrics": { "protein_to_carb_ratio": "Excellent", "texture": "Non-sticky / Soft" },
+      "props": ["Der technologische Preis-Leistungs-König", "Nutzt Maltit als Zuckeraustauschstoff", "Beliebt wegen des 'echten' Schokoladengeschmacks"],
+      "lang": { "de": "Lidl Proteinriegel Weiß", "en": "Lidl White Choco Protein", "es": "Barrita proteína blanca Lidl", "fr": "Barre protéinée blanche Lidl", "ru": "Белый протеиновый батончик Лидл", "ja": "Lidl ホワイトチョコプロテイン", "zh": "Lidl 白巧克力蛋白棒", "fa": "پروتئین بار سفید لیدل", "hi": "लिडल व्हाइट चोको प्रोटीन", "ar": "لوح بروتين أبيض ليدل" }
+    }
+  }
+}
+
+

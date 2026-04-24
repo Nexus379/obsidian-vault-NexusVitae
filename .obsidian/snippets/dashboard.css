@@ -1,0 +1,10 @@
+/* Entfernt den Rand und den Hintergrund bei Embeds in Dashboards */
+.dashboard-no-border .markdown-embed {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard-no-border .markdown-embed-title {
+    display: none !important; /* Versteckt den Dateinamen oben am Rand */
+}

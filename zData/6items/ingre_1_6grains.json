@@ -1,0 +1,580 @@
+{
+  "grains_pseudocereals": {
+    "--- GLUTEN_GRAINS ---": "Glutenhaltige Getreide (Energie & Struktur)",
+    "wheat": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Wheat (Whole Grain)", "icon": "🌾", "latin": "Triticum aestivum (Caryopsis sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 339, "protein_g": 13.2, "fiber_g": 12.2, "carbs_g": 71.0, "magnesium_mg": 126.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "gluten": "High Gluten content" },
+      "props": ["Most widely cultivated cereal", "Gluten provides the elastic structure for bread", "Whole grain contains the germ and bran"],
+      "lang": { "de": "Weizen (Vollkorn)", "en": "Wheat", "es": "Trigo", "fr": "Blé", "ru": "Пшеница", "ja": "小麦", "zh": "小麦", "fa": "گندم", "hi": "गेहूँ", "ar": "قمح" }
+    },
+    "oats": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Oats", "icon": "🥣", "latin": "Avena sativa (Caryopsis sicca)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 389, "protein_g": 16.9, "fiber_g": 10.6, "beta_glucan_g": 4.5, "fat_total_g": 6.9 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Cholesterol-lowering (Beta-Glucan)" },
+      "props": ["Rich in soluble fiber (beta-glucan)", "Highest fat content among cereals", "Lowers blood sugar response and cholesterol"],
+      "lang": { "de": "Hafer", "en": "Oats", "es": "Avena", "fr": "Avoine", "ru": "Овёс", "ja": "オート麦", "zh": "燕麦", "fa": "جو دوسر", "hi": "जई", "ar": "شوفان" }
+    },
+    "spelt": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Spelt (Dinkel)", "icon": "🌾", "latin": "Triticum spelta (Caryopsis sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 338, "protein_g": 14.6, "fiber_g": 10.7, "iron_plant_mg": 4.4, "magnesium_mg": 136.0 },
+      "meta": { "locations": ["dm", "rewe", "lidl", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Higher protein/minerals than wheat" },
+      "props": ["Ancient wheat relative", "More water-soluble gluten than modern wheat", "Hard husk protects the grain from pollutants"],
+      "lang": { "de": "Dinkel", "en": "Spelt", "es": "Espelta", "fr": "Épeautre", "ru": "Спельта", "ja": "スペルト小麦", "zh": "斯佩耳特小麦", "fa": "اسپلت", "hi": "स्पेल्ट", "ar": "حنطة" }
+    },
+    "rye": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Rye", "icon": "🍞", "latin": "Secale cereale (Caryopsis sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 338, "protein_g": 10.3, "fiber_g": 15.1, "lignans_mg": 5.0, "folate_mcg": 60.0 },
+      "meta": { "locations": ["kaufland", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "gut_health": "Extremely high fiber" },
+      "props": ["Rich in non-cellulose polysaccharides (Pentosans)", "Key for sourdough bread", "Provides longer satiety than wheat"],
+      "lang": { "de": "Roggen", "en": "Rye", "es": "Centeno", "fr": "Seigle", "ru": "Рожь", "ja": "ライ麦", "zh": "黑麦", "fa": "چاودار", "hi": "राई", "ar": "چاول" }
+    },
+    "barley": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Barley (Pearled)", "icon": "🍺", "latin": "Hordeum vulgare (Caryopsis decorticata)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 352, "protein_g": 9.9, "fiber_g": 15.6, "beta_glucan_g": 4.8 },
+      "meta": { "locations": ["kaufland", "rewe", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Blood sugar regulation (Beta-Glucan)" },
+      "props": ["One of the oldest cultivated grains", "Very high soluble fiber content", "Pearling removes the outer bran but improves digestibility"],
+      "lang": { "de": "Gerste (Graupen)", "en": "Barley", "es": "Cebada", "fr": "Orge", "ru": "Ячмень", "ja": "大麦", "zh": "大麦", "fa": "جو", "hi": "जौ", "ar": "شعير" }
+    },
+    "--- ANCIENT_GLUTEN_GRAINS ---": "Urgetreide & Spezialsorten",
+    "emmer": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Emmer (Farro)", "icon": "🌾", "latin": "Triticum dicoccum (Caryopsis sicca)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 335, "protein_g": 14.0, "magnesium_mg": 130.0, "zinc_mg": 4.0, "iron_plant_mg": 4.5 },
+      "meta": { "locations": ["denns", "alnatura", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High Zinc & Magnesium" },
+      "props": ["One of the oldest cultivated grains (Ancient Egypt)", "Strong, nutty flavor", "Harder grain than wheat, rich in carotenoids"],
+      "lang": { "de": "Emmer, Zweikorn", "en": "Emmer", "es": "Emmer", "fr": "Emmer", "ru": "Полба", "ja": "エンマー小麦", "zh": "二粒小麦", "fa": "اِمر", "hi": "एम्मर", "ar": "علق" }
+    },
+    "einkorn": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Einkorn", "icon": "🌾", "latin": "Triticum monococcum (Caryopsis sicca)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 341, "protein_g": 15.8, "lutein_mg": 0.8, "vit_e_mg": 0.5, "fiber_g": 9.0 },
+      "meta": { "locations": ["denns", "reformhaus", "biomarkt"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Eye health (Lutein champion)" },
+      "props": ["The most ancient form of wheat (10,000+ years old)", "High concentration of lutein (yellowish tint)", "Very simple chromosomal structure, often better tolerated"],
+      "lang": { "de": "Einkorn", "en": "Einkorn", "es": "Escanda", "fr": "Engrain", "ru": "Однозернянка", "ja": "一粒小麦", "zh": "一粒小麦", "fa": "تک‌دانه", "hi": "ऐनकोrn", "ar": "قمح وحيد الحبة" }
+    },
+    "kamut": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Kamut (Khorasan Wheat)", "icon": "🌾", "latin": "Triticum turgidum turanicum (Caryopsis sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 337, "protein_g": 14.5, "selenium_mcg": 38.0, "magnesium_mg": 153.0, "zinc_mg": 4.3 },
+      "meta": { "locations": ["denns", "alnatura", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High Selenium antioxidant support" },
+      "props": ["Ancient grain from the Khorasan region", "Grains are twice the size of modern wheat", "Buttery flavor and high mineral density"],
+      "lang": { "de": "Kamut, Khorasan-Weizen", "en": "Kamut", "es": "Kamut", "fr": "Kamut", "ru": "Камут", "ja": "カムット小麦", "zh": "卡姆小麦", "fa": "کاموت", "hi": "कामूत", "ar": "قمح خراسان" }
+    },
+    "grunkern": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Grünkern (Unripe Spelt)", "icon": "🟢", "latin": "Triticum spelta (Caryopsis immatura siccata)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 324, "protein_g": 11.6, "fiber_g": 8.8, "magnesium_mg": 130.0 },
+      "meta": { "locations": ["rewe", "denns", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Smoky / Savory" },
+      "props": ["Spelt harvested while still green and then kiln-dried over fire", "Distinctive smoky aroma", "Excellent for savory patties and soups"],
+      "lang": { "de": "Grünkern", "en": "Grünkern", "es": "Grünkern", "fr": "Grünkern", "ru": "Грюнкерн", "ja": "グリューンケルン", "zh": "青麦", "fa": "گرونکن", "hi": "ग्रीनकोर्न", "ar": "حبوب خضراء" }
+    },
+
+    "--- GLUTEN_FREE_GRAINS ---": "Glutenfreie echte Getreide",
+    "basmati_rice": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Basmati Rice", "icon": "🍚", "latin": "Oryza sativa (Caryopsis sicca)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 365, "protein_g": 7.1, "carbs_g": 79.0, "arsenic_mcg": 2.0 },
+      "meta": { "locations": ["orient_market", "lidl", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Aromatic / Nutty" },
+      "props": ["Known as the 'Queen of Fragrance'", "Lower glycemic index than short-grain rice", "Lowest arsenic levels among rice varieties"],
+      "lang": { "de": "Basmati Reis", "en": "Basmati Rice", "es": "Arroz basmati", "fr": "Riz basmati", "ru": "Рис басмати", "ja": "バスティマライス", "zh": "巴斯马蒂大米", "fa": "برنج باسماتی", "hi": "बासमती चावल", "ar": "أرز بسمتي" }
+    },
+    "millet": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Millet", "icon": "🌾", "latin": "Panicum miliaceum (Caryopsis sicca)", "sci": ["#sci/Nutrition", "#sci/Dermatology"],
+      "val": { "kcal": 378, "protein_g": 11.0, "fiber_g": 8.5, "silica_mg": 5.0, "iron_plant_mg": 3.0 },
+      "meta": { "locations": ["dm", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Skin, Hair & Nails (Silica)" },
+      "props": ["Naturally gluten-free small-seeded grass", "Rich in silica (silicon dioxide)", "Highly alkalizing"],
+      "lang": { "de": "Hirse", "en": "Millet", "es": "Mijo", "fr": "Millet", "ru": "Просо", "ja": "キビ", "zh": "小米", "fa": "ارزن", "hi": "बाजरा", "ar": "دخن" }
+    },
+    "maize_corn": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Corn (Maize Kernel)", "icon": "🌽", "latin": "Zea mays (Caryopsis sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 365, "protein_g": 9.4, "fat_total_g": 4.7, "fiber_g": 7.3, "lutein_mg": 0.6 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Eye health (Carotenoids)" },
+      "props": ["Botanically a grain, but high in zeaxanthin", "Naturally gluten-free", "Foundation for Polenta and Arepas"],
+      "lang": { "de": "Mais (Korn)", "en": "Corn / Maize", "es": "Maíz", "fr": "Maïs", "ru": "Кукуруза", "ja": "トウモロコシ", "zh": "玉米", "fa": "ذرت", "hi": "मक्का", "ar": "ذرة" }
+    },
+    "wild_rice": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Wild Rice", "icon": "🌾", "latin": "Zizania palustris (Caryopsis sicca)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 357, "protein_g": 14.7, "fiber_g": 6.2, "lysine_mg": 600.0, "magnesium_mg": 177.0 },
+      "meta": { "locations": ["denns", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "protein_status": "High Lysine grain" },
+      "props": ["North American aquatic grass", "Much higher protein than white rice", "Nutty, smoky flavor and chewy texture"],
+      "lang": { "de": "Wildreis", "en": "Wild Rice", "es": "Arroz salvaje", "fr": "Riz sauvage", "ru": "Дикий рис", "ja": "ワイルドライス", "zh": "菰米", "fa": "برنج وحشی", "hi": "जंगली चावल", "ar": "أرز بري" }
+    },
+    "black_rice": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Black Rice", "icon": "⬛", "latin": "Oryza sativa (Caryopsis sicca nigra)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 356, "protein_g": 8.9, "fiber_g": 4.9, "anthocyanins_mg": 200.0, "iron_plant_mg": 3.5 },
+      "meta": { "locations": ["asia_market", "denns", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Anthocyanin Bomb" },
+      "props": ["Known as 'Forbidden Rice' in ancient China", "Deep purple color when cooked", "Extremely high antioxidant capacity"],
+      "lang": { "de": "Schwarzer Reis", "en": "Black Rice", "es": "Arroz negro", "fr": "Riz noir", "ru": "Черный рис", "ja": "黒米", "zh": "黑米", "fa": "برنج سیاه", "hi": "काला चावल", "ar": "أرز أسود" }
+    },
+    "teff": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Teff", "icon": "🌾", "latin": "Eragrostis tef (Caryopsis sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 367, "protein_g": 13.3, "fiber_g": 8.0, "calcium_mg": 180.0, "iron_plant_mg": 7.6 },
+      "meta": { "locations": ["afro_market", "reformhaus", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Iron & Calcium Powerhouse" },
+      "props": ["World's smallest grain", "Ethiopian staple (Injera bread)", "Massive iron and calcium levels for a cereal"],
+      "lang": { "de": "Teff, Zwerghirse", "en": "Teff", "es": "Teff", "fr": "Teff", "ru": "Тефф", "ja": "テフ", "zh": "苔麸", "fa": "تف", "hi": "टेफ", "ar": "تيف" }
+    },
+    "sorghum": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Sorghum (Milo)", "icon": "🌾", "latin": "Sorghum bicolor (Caryopsis sicca)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 339, "protein_g": 11.3, "fiber_g": 6.3, "iron_plant_mg": 4.4, "antioxidants_mg": 50.0 },
+      "meta": { "locations": ["afro_market", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High in Phenolic acids" },
+      "props": ["Fifth most important cereal crop", "Extremely drought-resistant", "Antioxidants may inhibit starch digestion"],
+      "lang": { "de": "Sorghum, Mohrenhirse", "en": "Sorghum", "es": "Sorgo", "fr": "Sorgho", "ru": "Сорго", "ja": "ソルガム", "zh": "高粱", "fa": "سورگوم", "hi": "ज्वار", "ar": "ذرة بيضاء" }
+    },
+    "red_rice": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Red Rice (Camargue)", "icon": "🔴", "latin": "Oryza sativa (Caryopsis sicca rubra)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 355, "protein_g": 7.5, "fiber_g": 3.4, "anthocyanins_mg": 15.0, "magnesium_mg": 140.0 },
+      "meta": { "locations": ["rewe", "denns", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "visual": "Unpolished red bran" },
+      "props": ["Pigment from proanthocyanidins", "Nutty flavor and chewy texture", "Often from Camargue, France"],
+      "lang": { "de": "Roter Reis", "en": "Red Rice", "es": "Arroz rojo", "fr": "Riz rouge", "ru": "Красный рис", "ja": "赤米", "zh": "红米", "fa": "برنج قرمز", "hi": "लाल चावल", "ar": "أرز أحمر" }
+    },
+    "foxtail_millet": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Foxtail Millet", "icon": "🌾", "latin": "Setaria italica (Caryopsis sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 351, "protein_g": 12.3, "carbs_total_g": 60.0, "calcium_mg": 31.0, "iron_plant_mg": 2.8 },
+      "meta": { "locations": ["asia_market", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Low Glycemic Index" },
+      "props": ["Ancient staple in China and India", "Higher protein than common millet", "Strengthens the digestive system"],
+      "lang": { "de": "Kolbenhirse", "en": "Foxtail Millet", "es": "Mijo de cola de zorra", "fr": "Millet des oiseaux", "ru": "Чумиза", "ja": "アワ (Awa)", "zh": "小米 (Setaria)", "fa": "ارزن خوشه‌ای", "hi": "कंगनी", "ar": "دخن إيطالي" }
+    },
+    "sticky_rice": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Sticky Rice", "icon": "🍚", "latin": "Oryza sativa var. glutinosa (Caryopsis sicca)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 348, "protein_g": 6.5, "amylopectin_percent": 98.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "label": "Gluten-free despite its name" },
+      "props": ["Nearly 100% amylopectin starch", "Essential for Mango Sticky Rice and Mochi", "Highest glycemic response among rice types"],
+      "lang": { "de": "Klebreis", "en": "Sticky Rice", "es": "Arroz glutinoso", "fr": "Riz gluant", "ru": "Клейкий рис", "ja": "もち米", "zh": "糯米", "fa": "برنج چسبناک", "hi": "चिपचिपा चावल", "ar": "أرز دبق" }
+    },
+    "oats_gf": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Gluten-Free Oats (Certified)", "icon": "🥣", "latin": "Avena sativa (Caryopsis sicca)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 389, "protein_g": 16.9, "fiber_g": 10.6, "beta_glucan_g": 4.5 },
+      "meta": { "locations": ["dm", "rossmann", "denns", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "gluten": "Certified <20ppm" },
+      "props": ["Strictly separated during processing", "Safe for most Celiacs", "Maintains all oat health benefits"],
+      "lang": { "de": "Glutenfreie Haferflocken", "en": "GF Oats", "es": "Avena sin gluten", "fr": "Avoine sans gluten", "ru": "Овсянка без глютена", "ja": "グルテンフリーオートミール", "zh": "无麸质燕麦", "fa": "جو دوسر بدون گلوتن", "hi": "ग्लूटेन मुक्त जई", "ar": "شوفان خالي من الغلوتين" }
+    },
+
+"--- PSEUDOCEREALS ---": "Pseudogetreide (Protein-Helden)",
+    "quinoa": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Quinoa", "icon": "🥣", "latin": "Chenopodium quinoa (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 368, "protein_g": 14.1, "fiber_g": 7.0, "magnesium_mg": 197.0, "iron_mg": 4.6 },
+      "meta": { "locations": ["dm", "lidl", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "protein_quality": "Complete Amino Acid Profile" },
+      "props": ["Technically a seed (spinach relative)", "Contains all 9 essential amino acids", "Must be rinsed to remove bitter saponins"],
+      "lang": { "de": "Quinoa", "en": "Quinoa", "es": "Quinua", "fr": "Quinoa", "ru": "Киноа", "ja": "キヌア", "zh": "藜麦", "fa": "کینوا", "hi": "क्विनोआ", "ar": "كينوا" }
+    },
+    "quinoa_tricolor": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Quinoa (Tricolor)", "icon": "🥣", "latin": "Chenopodium quinoa (Semen siccum variegatum)", "sci": ["#sci/Nutrition", "#sci/Botany"],
+      "val": { "kcal": 368, "protein_g": 14.1, "fiber_g": 7.0, "magnesium_mg": 197.0, "lysine_mg": 700.0, "iron_plant_mg": 4.6 },
+      "meta": { "locations": ["dm", "lidl", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "protein_status": "Complete Protein Source" },
+      "props": ["Contains all 9 essential amino acids", "Inca called it 'Chisaya Mama'", "Coated in protective saponins"],
+      "lang": { "de": "Quinoa (Bunt)", "en": "Quinoa", "es": "Quinua", "fr": "Quinoa", "ru": "Киноа", "ja": "キヌア", "zh": "藜麦", "fa": "کینوا", "hi": "क्विनोआ", "ar": "كينوا" }
+    },
+    "amaranth": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Amaranth", "icon": "🌋", "latin": "Amaranthus caudatus (Semen siccum)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 371, "protein_g": 13.6, "fiber_g": 6.7, "calcium_mg": 159.0, "iron_plant_mg": 7.6, "squalene_mg": 300.0 },
+      "meta": { "locations": ["dm", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High Calcium & Squalene" },
+      "props": ["Sacred grain of the Aztecs", "Contains Squalene (skin/immunity antioxidant)", "One of the highest calcium contents among grain-like seeds"],
+      "lang": { "de": "Amaranth", "en": "Amaranth", "es": "Amaranto", "fr": "Amarante", "ru": "Амарант", "ja": "アマランサス", "zh": "苋菜籽", "fa": "تاج‌خروس", "hi": "राजगिरा", "ar": "قطيفة" }
+    },
+    "buckwheat": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Buckwheat", "icon": "📐", "latin": "Fagopyrum esculentum (Semen siccum)", "sci": ["#sci/Phytochemistry", "#sci/VascularHealth"],
+      "val": { "kcal": 343, "protein_g": 13.3, "fiber_g": 10.0, "rutin_mg": 30.0, "magnesium_mg": 231.0 },
+      "meta": { "locations": ["rewe", "denns", "dm", "rossmann"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Vascular protection (Rutin)" },
+      "props": ["Related to rhubarb, not wheat", "High in Rutin (strengthens vessels)", "Distinctive earthy, nutty flavor"],
+      "lang": { "de": "Buchweizen", "en": "Buckwheat", "es": "Trigo sarraceno", "fr": "Sarrasin", "ru": "Гречиха", "ja": "そば", "zh": "荞麦", "fa": "گندم سیاه", "hi": "कुट्टू", "ar": "حنطة سوداء" }
+    },
+    "canihua": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Canihua (Baby Quinoa)", "icon": "🤎", "latin": "Chenopodium pallidicaule (Semen siccum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 345, "protein_g": 15.2, "fiber_g": 9.5, "iron_plant_mg": 12.0, "antioxidants_mg": 40.0 },
+      "meta": { "locations": ["reformhaus", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "superfood": "Iron Champion" },
+      "props": ["Smaller than Quinoa, no bitter saponins", "Significantly higher iron and fiber than Quinoa", "Grown in high Andes"],
+      "lang": { "de": "Canihua, Baby-Quinoa", "en": "Canihua", "es": "Cañihua", "fr": "Canihua", "ru": "Канива", "ja": "カニワ", "zh": "小藜麦", "fa": "کانیوا", "hi": "कनिवा", "ar": "كانيوا" }
+    },
+    "fonio": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Fonio (Acha)", "icon": "🌾", "latin": "Digitaria exilis (Caryopsis sicca minima)", "sci": ["#sci/Nutrition", "#sci/Botany"],
+      "val": { "kcal": 367, "protein_g": 11.0, "methionine_mg": 450.0, "cystine_mg": 250.0, "iron_plant_mg": 8.0 },
+      "meta": { "locations": ["afro_market", "denns", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High Sulfur Amino Acids" },
+      "props": ["World's fastest-growing cereal", "Ancient West African super-grain", "Rich in methionine and cystine"],
+      "lang": { "de": "Fonio Hirse", "en": "Fonio", "es": "Fonio", "fr": "Fonio", "ru": "Фонио", "ja": "フォニオ", "zh": "福尼奥米", "fa": "فونیو", "hi": "फोनियो", "ar": "فونيو" }
+    },
+    "jobs_tears": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Job's Tears (Hatomugi)", "icon": "💧", "latin": "Coix lacryma-jobi (Semen siccum)", "sci": ["#sci/Pharmacognosy"],
+      "val": { "kcal": 380, "protein_g": 14.1, "fat_total_g": 5.0, "fiber_g": 3.0, "coixol_mg": 10.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "TCM Skin Health" },
+      "props": ["Large teardrop seeds", "Used in TCM to drain dampness", "Often called Chinese Pearl Barley"],
+      "lang": { "de": "Hiobsträne", "en": "Job's Tears", "es": "Lágrima de Job", "fr": "Larme-de-Job", "ru": "Иовлевы слёзы", "ja": "ハトムギ", "zh": "薏苡 (薏米)", "fa": "اشک ایوب", "hi": "जॉब्स टियर्स", "ar": "دموع أيوب" }
+    },
+    "triticale": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Triticale", "icon": "🌾", "latin": "× Triticosecale (Caryopsis sicca)", "sci": ["#sci/Genetics"],
+      "val": { "kcal": 336, "protein_g": 12.8, "fiber_g": 14.0, "folate_mcg": 73.0, "magnesium_mg": 130.0 },
+      "meta": { "locations": ["reformhaus", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "botany": "Man-made Hybrid (Wheat x Rye)" },
+      "props": ["Combines wheat protein with rye hardiness", "Very high fiber content", "Mainly used in specialized whole-grain baking"],
+      "lang": { "de": "Triticale", "en": "Triticale", "es": "Triticale", "fr": "Triticale", "ru": "Тритикале", "ja": "トリティケール", "zh": "小黑麦", "fa": "تریتیکاله", "hi": "क्रिटिकेले", "ar": "ترتيكال" }
+    },
+    "red_sorghum": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Red Sorghum (Kaoliang)", "icon": "🏮", "latin": "Sorghum bicolor (Caryopsis sicca rubra)", "sci": ["#sci/Phytochemistry"],
+      "val": { "kcal": 339, "protein_g": 11.3, "fiber_g": 6.3, "anthocyanins_mg": 40.0, "tannins_mg": 20.0 },
+      "meta": { "locations": ["asia_market", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Higher antioxidants than white sorghum" },
+      "props": ["Rich in pigmented anthocyanins", "Hearty, slightly astringent flavor", "Traditional crop in East Asia"],
+      "lang": { "de": "Rote Mohrenhirse, Kaoliang", "en": "Red Sorghum", "es": "Sorgo rojo", "fr": "Sorgho rouge", "ru": "Красное сорго", "ja": "高粱 (Koryo)", "zh": "高粱 (红)", "fa": "سورگوم قرمز", "hi": "लाल ज्वार", "ar": "ذرة حمراء" }
+    },
+    "--- PROCESSED_GRAIN_PRODUCTS ---": "Verarbeitete Getreideprodukte (Schnellküche)",
+    "bulgur": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Bulgur", "icon": "🥣", "latin": "Triticum aestivum (Caryopsis parboiled et fracta)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 342, "protein_g": 12.3, "fiber_g": 18.3, "magnesium_mg": 164.0, "glycemic_index": 48.0 },
+      "meta": { "locations": ["orient_market", "rewe", "lidl"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Parboiled, dried and cracked wheat" },
+      "props": ["Traditional Middle Eastern staple", "Higher fiber than white rice", "Very fast to prepare"],
+      "lang": { "de": "Bulgur", "en": "Bulgur", "es": "Burgol", "fr": "Boulghour", "ru": "Булгур", "ja": "ブルグル", "zh": "布格麦", "fa": "بلغور", "hi": "दलिया (बल्गुर)", "ar": "برغل" }
+    },
+    "couscous": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Couscous (Semolina)", "icon": "🍲", "latin": "Triticum durum (Granula semolinae)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 376, "protein_g": 12.8, "fiber_g": 5.0, "selenium_mcg": 27.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Steamed and granulated durum wheat semolina" },
+      "props": ["North African national dish", "Extremely fast preparation", "Lower fiber than Bulgur"],
+      "lang": { "de": "Couscous", "en": "Couscous", "es": "Cuscús", "fr": "Couscous", "ru": "Кус-кус", "ja": "クスクス", "zh": "古斯米", "fa": "کوسکوس", "hi": "कुसकुस", "ar": "كسكس" }
+    },
+    "durum_semolina": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Durum Wheat Semolina (Hartweizengrieß)", "icon": "🌾", "latin": "Triticum durum (Semolina sicca)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 360, "protein_g": 12.7, "fiber_g": 3.9, "iron_plant_mg": 1.2 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Pasta & Gnocchi base" },
+      "props": ["Hard wheat with high gluten strength", "Provides 'al dente' bite", "Traditional porridge base"],
+      "lang": { "de": "Hartweizengrieß", "en": "Durum Semolina", "es": "Sémola de trigo duro", "fr": "Semoule de blé dur", "ru": "Манная крупа (твердая)", "ja": "セモリナ", "zh": "粗粒小麦粉", "fa": "آرد سمولینا", "hi": "सूजी", "ar": "سميد" }
+    },
+    "polenta": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Polenta (Corn Grits)", "icon": "🌽", "latin": "Zea mays (Granula sicca)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 362, "protein_g": 8.1, "fiber_g": 7.3, "lutein_mg": 0.5 },
+      "meta": { "locations": ["lidl", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "gluten": "Naturally Gluten-Free" },
+      "props": ["Coarsely ground yellow corn", "Classic Northern Italian staple", "Rich in carotenoids"],
+      "lang": { "de": "Polenta (Maisgrieß)", "en": "Polenta", "es": "Polenta", "fr": "Polenta", "ru": "Полента", "ja": "ポレンタ", "zh": "玉米糊", "fa": "پولنتا", "hi": "पोलेंटा", "ar": "بولينا" }
+    },
+    "--- ASIAN_AND_DESSERT_RICE ---": "Spezialisierte Reissorten",
+    "jasmine_rice": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Jasmine Rice (Thai Fragrant)", "icon": "🍚", "latin": "Oryza sativa (Jasmimum aromaticum)", "sci": ["#sci/Botany", "#sci/FoodScience"],
+      "val": { "kcal": 355, "water_g": 12.0, "protein_g": 7.0, "fat_total_g": 0.5, "carbs_total_g": 78.0, "sugar_g": 0.0, "fiber_g": 1.0, "glycemic_index": 70.0 },
+      "meta": { "locations": ["asia_market", "lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "aroma": "Natural 2-Acetyl-1-pyrroline (Pandan-like)", "texture": "Slightly sticky" },
+      "props": ["Long-grain rice with a flowery aroma", "High amylopectin content makes it stickier than Basmati", "Standard for Southeast Asian stir-fry and curries"],
+      "lang": { "de": "Jasminreis", "en": "Jasmine Rice", "es": "Arroz jazmín", "fr": "Riz jasmin", "ru": "Рис жасмин", "ja": "ジャスミンライス", "zh": "茉莉花米", "fa": "برنج یاسمن", "hi": "चमेली चावल", "ar": "أرز الياسمين" }
+    },
+    "sushi_rice": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Sushi Rice (Short Grain)", "icon": "🍣", "latin": "Oryza sativa japonica", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 350, "water_g": 13.0, "protein_g": 6.5, "fat_total_g": 0.6, "carbs_total_g": 77.0, "sugar_g": 0.1, "fiber_g": 1.0 },
+      "meta": { "locations": ["asia_market", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "amylopectin": "High (provides stickiness)", "grain_shape": "Round/Short" },
+      "props": ["Specially cultivated for its ability to cling together", "Must be washed thoroughly to control surface starch", "Technologically identical to Italian Risotto rice varieties like Arborio"],
+      "lang": { "de": "Sushireis", "en": "Sushi Rice", "es": "Arroz para sushi", "fr": "Riz à sushi", "ru": "Рис для суши", "ja": "寿司米", "zh": "寿司米", "fa": "برنج سوشی", "hi": "सुशी चावल", "ar": "أرز السوشي" }
+    },
+
+    "--- ANCIENT_AND_SMOKED_GRAINS ---": "Traditionelle Verarbeitung & Grützen",
+    "buckwheat_kasha": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Kasha (Roasted Buckwheat)", "icon": "🥣", "latin": "Fagopyrum esculentum (torrefactum)", "sci": ["#sci/Phytochemistry", "#sci/Nutrition"],
+      "val": { "kcal": 343, "water_g": 10.0, "protein_g": 13.3, "fat_total_g": 3.4, "carbs_total_g": 71.5, "sugar_g": 0.0, "fiber_g": 10.0, "magnesium_mg": 230.0 },
+      "meta": { "locations": ["orient_market", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Intense Nutty / Toasted", "benefit": "Gluten-Free Pseudocereal" },
+      "props": ["Roasted buckwheat kernels, an Eastern European staple", "Toasting process shortens cooking time and intensifies flavor", "High in magnesium and rutin"],
+      "lang": { "de": "Kasha / Buchweizengrütze", "en": "Kasha / Roasted Buckwheat", "es": "Kasha / Alforfón tostado", "fr": "Kasha / Sarrasin grillé", "ru": "Гречневая каша (Каша)", "ja": "カシャ (焙煎そばの実)", "zh": "烤荞麦 (Kasha)", "fa": "کاشا", "hi": "काशा", "ar": "كاشا" }
+    },
+
+    "--- STARCH_PEARLS ---": "Reine Stärkeperlen",
+    "tapioca_pearls": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Tapioca Pearls (Sago substitute)", "icon": "🧋", "latin": "Manihot esculenta (Granula)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 358, "water_g": 10.0, "protein_g": 0.2, "fat_total_g": 0.0, "carbs_total_g": 88.0, "sugar_g": 3.0, "fiber_g": 0.9 },
+      "meta": { "locations": ["asia_market", "rewe", "online_specialty"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Thickener / Bubble Tea", "source": "Cassava Starch" },
+      "props": ["Spheres made from cassava starch", "Turn translucent and chewy when boiled", "Contains almost no protein or fat, purely for texture"],
+      "lang": { "de": "Tapiokaperlen", "en": "Tapioca Pearls", "es": "Perlas de tapioca", "fr": "Perles de tapioca", "ru": "Шарики тапиоки", "ja": "タピオカパール", "zh": "西米 / 木薯珍珠", "fa": "مروارید تاپیوکا", "hi": "साबूदाना", "ar": "لؤلؤ التابيوكا" }
+    },
+
+    "--- PREMIUM_SELLA_AND_PARBOILED ---": "Sella & Goldener Reis (Die Robusten)",
+    "rice_basmati_sella_golden": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Basmati Sella (Golden / Parboiled)", "icon": "🌾", "latin": "Oryza sativa (Sella)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 355, "water_g": 11.5, "protein_g": 8.0, "fat_total_g": 0.7, "carbs_total_g": 77.5, "sugar_g": 0.0, "fiber_g": 1.5, "glycemic_index": 50.0 },
+      "meta": { "locations": ["orient_market", "asia_market"], "brand": "Mahmood, Royal, Shahrzad", "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "process": "Parboiled in husk (Sella process)", "texture": "Hard grain / Non-stick" },
+      "props": ["Der Standard für Kabuli Pulao und Biryani", "Durch das Dämpfen in der Schale werden Vitamine ins Innere gepresst und die Stärke modifiziert", "Bleibt auch nach langem Warmhalten extrem körnig und fest"],
+      "lang": { "de": "Sella Basmati (Golden)", "en": "Sella Rice", "es": "Arroz Sella", "fr": "Riz Sella", "ru": "Рис Селла", "ja": "セーラライス", "zh": "塞拉香米", "fa": "برنج سیلا", "hi": "सेला चावल", "ar": "أرز سيلا" }
+    },
+    "--- PERSIAN_AND_AFGHAN_LONG_GRAIN ---": "Lang- & Extralangkorn (Die Duftenden)",
+    "rice_basmati_super_kernel": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Super Kernel Basmati (Extra Long Grain)", "icon": "🍚", "latin": "Oryza sativa (Longissima)", "sci": ["#sci/Botany", "#sci/Aromachology"],
+      "val": { "kcal": 350, "water_g": 12.0, "protein_g": 7.5, "fat_total_g": 0.5, "carbs_total_g": 78.0, "sugar_g": 0.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["orient_market", "specialty_store"], "brand": "Aahu Barah, Tilda", "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "grain_length": "> 8.0 mm (uncooked)", "aroma": "High 2-Acetyl-1-pyrroline" },
+      "props": ["Die Königsklasse des Reises, oft 'Alt' (aged) verkauft, um Feuchtigkeit zu verlieren", "Körner verlängern sich beim Kochen massiv ohne breiter zu werden", "Ideal für die persische 'Tahdig'-Kruste"],
+      "lang": { "de": "Super Kernel Basmati", "en": "Super Kernel Basmati", "es": "Basmati de grano extra largo", "fr": "Riz Basmati extra long", "ru": "Басмати Супер Кернел", "ja": "スーパーカーネルバスティマ", "zh": "特长粒香米", "fa": "برنج باسماتی اعلا", "hi": "सुपर कर्नल बासमती", "ar": "أرز بسمتي سوبر كيرنل" }
+    },
+    "--- TURKISH_AND_EGYPTIAN_ROUND_GRAIN ---": "Rundkorn- & Mittelkornreis (Für Pilav)",
+    "rice_osmancik": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Osmancık Reis (Türkischer Standard)", "icon": "🥣", "latin": "Oryza sativa (Osmancik)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 355, "water_g": 12.5, "protein_g": 7.0, "fat_total_g": 0.6, "carbs_total_g": 78.0, "sugar_g": 0.2, "fiber_g": 1.0 },
+      "meta": { "locations": ["orient_market", "rewe", "kaufland"], "brand": "Yayla, Reis, Baktat", "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "grain_shape": "Medium / Round", "absorbency": "High liquid uptake" },
+      "props": ["Der meistgenutzte Reis für türkischen Pilav", "Nimmt Butter und Fleischbrühe exzellent auf ohne zu zerfallen", "Wurde speziell für das Klima in der Türkei (Edirne) gezüchtet"],
+      "lang": { "de": "Osmancik Reis", "en": "Osmancik Rice", "es": "Arroz Osmancik", "fr": "Riz Osmancik", "ru": "Рис Османчик", "ja": "オスマヌチックライス", "zh": "奥斯曼哲克大米", "fa": "برنج عثمانی", "hi": "ओस्मानिक चावल", "ar": "أرز عثمانجيك" }
+    },
+    "rice_baldo": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Baldo Reis (Premium Mittelkorn)", "icon": "🍚", "latin": "Oryza sativa (Baldo)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 350, "water_g": 13.0, "protein_g": 6.8, "fat_total_g": 0.8, "carbs_total_g": 77.0, "sugar_g": 0.1, "fiber_g": 1.2 },
+      "meta": { "locations": ["orient_market", "gourmet_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "amylopectin": "High (Creamy texture)", "grain_size": "Large/Plump" },
+      "props": ["Technologisch verwandt mit dem italienischen Arborio/Risotto-Reis", "Das größte Reiskorn unter den türkischen Sorten", "Wird beim Kochen sehr cremig und bleibt im Kern fest, ideal für Luxus-Pilav"],
+      "lang": { "de": "Baldo Reis", "en": "Baldo Rice", "es": "Arroz Baldo", "fr": "Riz Baldo", "ru": "Рис Балдо", "ja": "バルドライス", "zh": "巴尔多大米", "fa": "برنج بالدو", "hi": "बाल्डो चावल", "ar": "أرز بالدو" }
+    },
+    "--- SMOKED_AND_SPECIALTY ---": "Geräucherte & Spezielle Sorten",
+    "rice_basmati_smoked": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Geräucherter Basmati (Doodh Moong)", "icon": "💨", "latin": "Oryza sativa (Fumigata)", "sci": ["#sci/Culinary", "#sci/Phytochemistry"],
+      "val": { "kcal": 350, "water_g": 12.0, "protein_g": 7.5, "fat_total_g": 0.6, "carbs_total_g": 78.0, "sugar_g": 0.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["orient_market"], "brand": "Doodh Moong", "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "aroma": "Cold-smoked with beech/oak", "uniqueness": "Smoky Umami" },
+      "props": ["Wird nach der Ernte über Holzfeuer geräuchert", "Verleiht Gerichten ohne Fleischzugabe ein tiefes, herzhaftes Aroma", "Besonders beliebt im Iran und Irak"],
+      "lang": { "de": "Geräucherter Basmati", "en": "Smoked Basmati", "es": "Basmati ahumado", "fr": "Basmati fumé", "ru": "Копченый басмати", "ja": "スモークバスティマ", "zh": "烟熏香米", "fa": "برنج دودی", "hi": "स्मोक्ड बासमती", "ar": "أرز بسمتي مدخن" }
+    }
+  },
+  "wraps_and_lye_fusion_matrix": {
+    "--- THE_FLATBREAD_FLEX ---": "Tortilla-Varianten (Weizen & Vollkorn)",
+    "bread_tortilla_wheat_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "McEnnandy Wheat Tortillas (Lidl)", "icon": "🫓", "latin": "Panis planus triticeus", "sci": ["#sci/FoodScience", "#sci/MaterialsScience"],
+      "val": { "kcal": 310, "water_g": 32.0, "protein_g": 8.5, "fat_total_g": 7.5, "carbs_total_g": 51.0, "fiber_g": 2.5 },
+      "meta": { "locations": ["lidl"], "brand": "McEnnandy", "vegan": true },
+      "quality_metrics": { "flexibility": "High (Foldable without breaking)", "shelf_life": "Modified Atmosphere Packaging" },
+      "props": ["Der technologische Standard für Burritos und Wraps", "Hoher Anteil an Glycerin oder Ölen für die Elastizität", "Wird durch kurzes Erhitzen in der Pfanne aromatisch aktiviert"],
+      "lang": { "de": "Weizen Tortillas", "en": "Wheat Tortillas", "es": "Tortillas de trigo", "fr": "Tortillas de blé", "ru": "Пшеничные тортильи", "ja": "小麦トルティーヤ", "zh": "小麦面饼", "fa": "تورتیلا گندم", "hi": "गेहूं टॉर्टिला", "ar": "تورتيلا القمح" }
+    },
+    "bread_tortilla_whole_wheat_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Bio Organic Vollkorn Tortilla (Lidl)", "icon": "🌾", "latin": "Panis planus triticeus completus", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 295, "water_g": 35.0, "protein_g": 9.0, "fat_total_g": 6.8, "carbs_total_g": 46.0, "fiber_g": 7.5 },
+      "meta": { "locations": ["lidl"], "brand": "Bio Organic", "vegan": true },
+      "quality_metrics": { "texture": "Slightly coarser / grainy", "fiber_density": "High" },
+      "props": ["Die ballaststoffreiche Alternative für bewusste Ernährung", "Technologisch etwas spröder als die Weizen-Variante", "Sättigt deutlich länger durch den Vollkornanteil"],
+      "lang": { "de": "Vollkorn Tortilla", "en": "Whole Wheat Tortilla", "es": "Tortilla de trigo integral", "fr": "Tortilla au blé complet", "ru": "Цельнозерновая тортилья", "ja": "全粒粉トルティーヤ", "zh": "全麦面饼", "fa": "تورتیلا سبوس‌دار", "hi": "होल व्हीट टॉर्टिला", "ar": "تورتيلا القمح الكامل" }
+    },
+    "--- LIDL_MCENNANDY_POWER ---": "McEnnandy Tortillas (Lidl Standard)",
+    "bread_tortilla_lidl_mcennandy_wheat": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "McEnnandy Wheat Tortillas (Standard 25cm)", "icon": "🫓", "latin": "Panis planus lidlianus", "sci": ["#sci/FoodScience", "#sci/MaterialsScience"],
+      "val": { "kcal": 310, "water_g": 32.0, "protein_g": 8.5, "fat_total_g": 7.5, "carbs_total_g": 51.0, "fiber_g": 2.4 },
+      "meta": { "locations": ["lidl"], "brand": "McEnnandy", "vegan": true },
+      "quality_metrics": { "flexibility": "Extreme (Roll-tested)", "diameter": "25cm / 8 pieces" },
+      "props": ["Lidls Preis-Leistungs-König für Burritos", "Hält technologisch auch schwere Füllungen ohne zu reißen", "Ideal zum Toasten in der Pfanne für die Maillard-Reaktion"],
+      "lang": { "de": "Lidl Weizen Tortillas", "en": "Lidl Wheat Wraps", "es": "Tortillas de trigo Lidl", "fr": "Tortillas de blé Lidl", "ru": "Пшеничные тортильи Лидл", "ja": "Lidl 小麦トルティーヤ", "zh": "Lidl 小麦面饼", "fa": "تورتیلا گندم لیدل", "hi": "लिडल गेहूं टॉर्टिला", "ar": "تورتيلا القمح ليدل" }
+    },
+    "bread_tortilla_lidl_mcennandy_whole_wheat": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "McEnnandy Whole Wheat Tortillas", "icon": "🌾", "latin": "Panis planus lidlianus completus", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 298, "water_g": 34.0, "protein_g": 9.2, "fat_total_g": 6.5, "carbs_total_g": 46.5, "fiber_g": 7.2 },
+      "meta": { "locations": ["lidl"], "brand": "McEnnandy", "vegan": true },
+      "quality_metrics": { "texture": "Rustic / Coarse", "fiber_source": "Whole grain wheat flour" },
+      "props": ["Die 'gesunde' Variante für langanhaltende Sättigung", "Technologisch etwas dunkler und fester im Biss", "Perfekt für kalte Wraps (Meal-Prep)"],
+      "lang": { "de": "Lidl Vollkorn Tortillas", "en": "Lidl Whole Wheat Wraps", "es": "Tortillas integrales Lidl", "fr": "Tortillas complètes Lidl", "ru": "Цельнозерновые тортильи Лидл", "ja": "Lidl 全粒粉トルティーヤ", "zh": "Lidl 全麦面饼", "fa": "تورتیلا سبوس‌دار لیدل", "hi": "लिडल होल व्हीट टॉर्टिला", "ar": "تورتيلا القمح الكامل ليدل" }
+    },
+
+    "--- KAUFLAND_K_CLASSIC_GIGANTS ---": "K-Classic Tortillas (Kaufland Bulk)",
+    "bread_tortilla_kaufland_k_classic_wheat": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Weizen-Tortillas", "icon": "🧱", "latin": "Panis planus kauflandia", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 315, "water_g": 31.0, "protein_g": 8.0, "fat_total_g": 8.0, "carbs_total_g": 52.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "value": "Big Pack (sometimes 12 pieces)", "base": "Standardized Wheat Matrix" },
+      "props": ["Kauflands Allzweckwaffe für Tex-Mex-Abende", "Technologisch extrem lagerstabil (auch nach Anbruch im Kühlschrank)", "Gleichmäßig rund geschnitten für perfekte Stapelung"],
+      "lang": { "de": "Kaufland Weizen Tortillas", "en": "Kaufland Wheat Wraps", "es": "Tortillas K-Classic", "fr": "Tortillas K-Classic", "ru": "Тортильи Кауфланд", "ja": "K-Classic トルティーヤ", "zh": "K-Classic 面饼", "fa": "تورتیلا کا-کلاسیک", "hi": "के-क्लासिक टॉर्टिला", "ar": "تورتيلا ك-كلاسیک" }
+    },
+
+    "--- SPECIAL_EDITIONS ---": "Mais & Diverses (Die Nischen-Player)",
+    "bread_tortilla_k_classic_corn_mix": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Tortilla-Wraps Mais (Mix)", "icon": "🌽", "latin": "Panis planus kauflandia maizium", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 280, "water_g": 38.0, "protein_g": 6.5, "fat_total_g": 5.5, "carbs_total_g": 48.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "composition": "Wheat flour mixed with Corn flour", "color": "Yellow / Golden" },
+      "props": ["Kombiniert die Flexibilität von Weizen mit dem Geschmack von Mais", "Technologisch stabiler als reine Mais-Tortillas", "Sehr dekorativ durch die gelbe Farbe"],
+      "lang": { "de": "Kaufland Mais Tortillas", "en": "Kaufland Corn Wraps", "es": "Tortillas de maíz Lidl", "fr": "Tortillas de maïs Lidl", "ru": "Кукурузные тортильи Кауфланд", "ja": "K-Classic トウモロコシトルティーヤ", "zh": "K-Classic 玉米面饼", "fa": "تورتیلا ذرت کا-کلاسیک", "hi": "के-क्लासिक मक्का टॉर्टिला", "ar": "تورتيلا الذرة ك-كلاسيك" }
+    },
+
+    "--- THE_CORN_HERITAGE ---": "Mais-Tortillas (Mexiko-Technologie)",
+    "bread_tortilla_corn_old_el_paso": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Old El Paso Corn Tortillas", "icon": "🌽", "latin": "Panis planus maizium", "sci": ["#sci/FoodScience", "#sci/History"],
+      "val": { "kcal": 220, "water_g": 40.0, "protein_g": 5.0, "fat_total_g": 3.5, "carbs_total_g": 42.0, "fiber_g": 4.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "brand": "Old El Paso", "vegan": true },
+      "quality_metrics": { "process": "Nixtamalization (Traditional)", "gluten_status": "Naturally gluten-free (check pack)" },
+      "props": ["Authentischer Geschmack durch die chemische Vorbehandlung des Maises", "Deutlich kleiner und fester als Weizen-Wraps", "Ideal für Tacos und Enchiladas"],
+      "lang": { "de": "Mais Tortilla", "en": "Corn Tortilla", "es": "Tortilla de maíz", "fr": "Tortilla de maïs", "ru": "Кукурузная тортилья", "ja": "トウモロコシトルティーヤ", "zh": "玉米面饼", "fa": "تورتیلا ذرت", "hi": "मक्का टॉर्टिला", "ar": "تورتيلا الذرة" }
+    },
+
+    "--- THE_LYE_FAT_FUSION ---": "Laugen-Brioche (Premium-Snack-Buns)",
+    "bread_laugen_brioche_buns_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Laugen-Brioche Burger Buns (Lidl)", "icon": "🍔", "latin": "Panis briochius lixivius", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 340, "water_g": 28.0, "protein_g": 9.5, "fat_total_g": 12.0, "carbs_total_g": 48.0, "sugar_g": 8.0 },
+      "meta": { "locations": ["lidl"], "brand": "McEnnandy / Trattoria Alfredo", "vegan": false },
+      "quality_metrics": { "glaze": "Lye (Sodium hydroxide) surface", "dough": "Enriched with eggs and butter" },
+      "props": ["Die technologische Krönung für Gourmet-Burger", "Kombiniert die Süße von Brioche mit der herzhaften Kruste von Laugengebäck", "Extrem stabil gegenüber Saucen (weicht nicht so schnell durch)"],
+      "lang": { "de": "Laugen-Brioche Buns", "en": "Pretzel Brioche Buns", "es": "Panecillos Brioche tipo Pretzel", "fr": "Pains Brioche Bretzel", "ru": "Булочки Бриошь Лауген", "ja": "ラウゲン・ブリオッシュ・バンズ", "zh": "碱水布里欧修面包", "fa": "نان بریوش لایو", "hi": "प्रेट्ज़ेल ब्रियोच बन्स", "ar": "خبز بريوش لوي" }
+    }
+  },
+  "the_crusty_roll_dynasty": {
+    "--- THE_CRUNCH_ELITE ---": "Rosenbrötchen (Die Oberflächen-Könige)",
+    "bread_roll_rose_lidl_grafschafter": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Grafschafter Rosenbrötchen (Lidl)", "icon": "🌹", "latin": "Panis rosaceus lidlianus", "sci": ["#sci/FoodScience", "#sci/Geometry"],
+      "val": { "kcal": 255, "water_g": 40.0, "protein_g": 8.5, "fat_total_g": 1.5, "carbs_total_g": 50.0 },
+      "meta": { "locations": ["lidl"], "brand": "Grafschafter", "vegan": true },
+      "quality_metrics": { "crust_ratio": "Very High", "crumb_texture": "Fluffy / Soft" },
+      "props": ["Technologisch optimiert für maximale Splitter-Kruste", "Durch die unregelmäßige Oberfläche entstehen viele kleine Röst-Aromen", "Der Klassiker für Fans von 'viel Kruste, wenig Teig'"],
+      "lang": { "de": "Rosenbrötchen", "en": "Rose Rolls", "es": "Panecillos de rosa", "fr": "Petits pains en forme de rose", "ru": "Булочки-розочки", "ja": "ローズ・ロールパン", "zh": "玫瑰花形面包", "fa": "نان‌های رز", "hi": "गुलाब रोल्स", "ar": "خبز الورد" }
+    },
+
+    "--- THE_MULTIGRAIN_HEAVYWEIGHTS ---": "Weltmeister & Körnerbrötchen (Die Sattmacher)",
+    "bread_roll_world_champ_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Weltmeisterbrötchen", "icon": "🏆", "latin": "Panis victor mundi", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 285, "water_g": 38.0, "protein_g": 10.5, "fat_total_g": 6.5, "carbs_total_g": 42.0, "fiber_g": 6.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic", "vegan": true },
+      "quality_metrics": { "seed_mix": "Sesame, Poppy, Linseed, Sunflower", "density": "Heavy" },
+      "props": ["Technologische Fusion aus Weizen-, Roggen- und Malzmehl", "Die Unterseite ist meistens massiv mit Mohn belegt", "Bietet durch die Ölsaaten wertvolle ungesättigte Fettsäuren"],
+      "lang": { "de": "Weltmeisterbrötchen", "en": "World Champion Rolls", "es": "Panecillos multicereales", "fr": "Petits pains champion du monde", "ru": "Многозерновые булочки", "ja": "マルチグレイン・ロールパン", "zh": "多谷物面包", "fa": "نان‌های قهرمان جهان", "hi": "विश्व चैंपियन रोल्स", "ar": "خبز بطل العالم" }
+    },
+    "bread_roll_pumpkin_seed_rewe_beste_wahl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "REWE Beste Wahl Kürbiskernbrötchen", "icon": "🎃", "latin": "Panis cucurbitae", "sci": ["#sci/Botany"],
+      "val": { "kcal": 290, "water_g": 36.0, "protein_g": 11.0, "fat_total_g": 8.0, "carbs_total_g": 41.0 },
+      "meta": { "locations": ["rewe"], "brand": "REWE Beste Wahl", "vegan": true },
+      "quality_metrics": { "topping": "Roasted pumpkin seeds", "crust": "Firm / Rustic" },
+      "props": ["Nussiges Aroma durch geröstete Kürbiskerne", "Technologisch reich an Magnesium und Zink", "Hält durch den Fettgehalt der Kerne länger frisch"],
+      "lang": { "de": "Kürbiskernbrötchen", "en": "Pumpkin Seed Rolls", "es": "Panecillos de pipas de calabaza", "fr": "Petits pains aux graines de courge", "ru": "Булочки с тыквенными семечками", "ja": "カボチャの種入りパン", "zh": "南瓜籽面包", "fa": "نان تخمه کدو", "hi": "कद्दू के बीज वाले रोल्स", "ar": "خبز بذور اليقطين" }
+    },
+
+    "--- THE_CLASSIC_FOUNDATION ---": "Kaisersemmeln (Der Allrounder)",
+    "bread_roll_kaiser_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Grafschafter Kaisersemmeln", "icon": "👑", "latin": "Panis imperialis", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 245, "water_g": 42.0, "protein_g": 8.0, "fat_total_g": 1.0, "carbs_total_g": 51.0 },
+      "meta": { "locations": ["lidl", "everywhere"], "brand": "Grafschafter", "vegan": true },
+      "quality_metrics": { "pattern": "Star-shaped incision", "crumb": "Fine-pored / Soft" },
+      "props": ["Der absolute Brot-Standard Deutschlands", "Technologisch auf maximale Fluffigkeit getrimmt", "Perfekt für den täglichen Bedarf ohne Schnickschnack"],
+      "lang": { "de": "Kaisersemmeln", "en": "Kaiser Rolls", "es": "Panecillos Kaiser", "fr": "Petits pains Kaiser", "ru": "Кайзеровские булочки", "ja": "カイザーロール", "zh": "凯撒面包", "fa": "نان قیصر", "hi": "कैसर रोल्स", "ar": "خبز القيصر" }
+    }
+  }
+}

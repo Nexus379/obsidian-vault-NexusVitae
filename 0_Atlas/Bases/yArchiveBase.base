@@ -1,0 +1,14 @@
+filters:
+  and:
+    - status.containsAny("archived", "archive")
+views:
+  - type: table
+    name: Table
+    groupBy:
+      property: arch
+      direction: ASC
+    order:
+      - file.name
+      - file.path
+    columnSize:
+      file.name: 172

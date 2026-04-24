@@ -1,0 +1,704 @@
+{
+  "baking_essentials": {
+    "--- BAKING_LEAVENING_AGENTS ---": "Triebmittel (Die CO2-Architektur)",
+    "baking_powder_dr_oetker": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Dr. Oetker Original Backin", "icon": "🍰", "latin": "Pulvis fermentans (Oetkerus)", "sci": ["#sci/Chemistry", "#sci/FoodScience"],
+      "val": { "kcal": 97, "water_g": 0.1, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 24.0, "sugar_g": 0.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Dr. Oetker", "vegan": true },
+      "quality_metrics": { "reaction_type": "Double-Acting", "standard_dosage": "1 sachet per 500g flour" },
+      "props": ["The 1891 benchmark for chemical leavening", "Combination of sodium bicarbonate and acidifying agents", "Ensures even pore structure in sponge cakes"],
+      "lang": { "de": "Dr. Oetker Backin", "en": "Dr. Oetker Baking Powder", "es": "Levadura en polvo Dr. Oetker", "fr": "Levure chimique Dr. Oetker", "ru": "Разрыхлитель Dr. Oetker", "ja": "ベーキングパウダー", "zh": "发酵粉", "fa": "بکینگ پودر", "hi": "बेकिंग पाउडर", "ar": "بكينج باودر" }
+    },
+    "baking_powder_ja": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "ja! Backpulver (REWE)", "icon": "🍞", "latin": "Pulvis fermentans (ja!)", "sci": ["#sci/Chemistry", "#sci/FoodScience"],
+      "val": { "kcal": 97, "water_g": 0.1, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 23.5, "sugar_g": 0.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "penny"], "brand": "ja!", "vegan": true },
+      "quality_metrics": { "reaction": "Standard chemical leavening", "price_segment": "Budget" },
+      "props": ["Budget alternative for daily baking", "Phosphate-based raising agent", "Reliable volume for simple doughs"],
+      "lang": { "de": "ja! Backpulver", "en": "ja! Baking Powder", "es": "Levadura en polvo ja!", "fr": "Levure chimique ja!", "ru": "Разрыхлитель ja!", "ja": "ベーキングパウダー ja!", "zh": "ja! 发酵粉", "fa": "بکینگ پودر یا!", "hi": "जा! बेकिंग पाउडर", "ar": "يا! بكينج باودر" }
+    },
+    "yeast_fresh": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Frische Hefe (Würfel)", "icon": "🍞", "latin": "Saccharomyces cerevisiae (vivus)", "sci": ["#sci/Microbiology", "#sci/Fermentation"],
+      "val": { "kcal": 105, "water_g": 69.0, "protein_g": 11.0, "fat_total_g": 1.9, "carbs_total_g": 1.1, "sugar_g": 0.5, "fiber_g": 8.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland", "lidl"], "storage": "Refrigerated", "vegan": true },
+      "quality_metrics": { "activity": "High (Live fungal cells)", "fermentation_gas": "Ethanol + CO2" },
+      "props": ["Traditional fresh yeast cube for heavy doughs", "Strong enzymatic activity compared to dry variants", "Requires 'activation' in lukewarm liquid"],
+      "lang": { "de": "Frischhefe", "en": "Fresh Yeast", "es": "Levadura fresca", "fr": "Levure boulangère fraîche", "ru": "Свежие дрожжи", "ja": "生イースト", "zh": "新鲜酵母", "fa": "خمیرمایه تازه", "hi": "ताज़ा खमीर", "ar": "خميرة طازجة" }
+    },
+    "yeast_dry": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Trockenbackhefe", "icon": "🥨", "latin": "Saccharomyces cerevisiae (siccus)", "sci": ["#sci/Microbiology", "#sci/FoodScience"],
+      "val": { "kcal": 355, "water_g": 5.0, "protein_g": 43.0, "fat_total_g": 6.0, "carbs_total_g": 40.0, "sugar_g": 0.0, "fiber_g": 27.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "shelf_life": "Long (Inactive until hydrated)", "format": "Dehydrated granules" },
+      "props": ["Active dry yeast, no pre-dissolving needed", "Long shelf life compared to fresh yeast", "One sachet replaces half a cube of fresh yeast"],
+      "lang": { "de": "Trockenhefe", "en": "Dry Yeast", "es": "Levadura seca", "fr": "Levure sèche", "ru": "Сухие дрожжи", "ja": "ドライイースト", "zh": "干酵母", "fa": "خمیرمایه خشک", "hi": "सूखा खमीर", "ar": "خميرة جافة" }
+    },
+
+    "--- THE_VANILLA_TRINITY ---": "Die gesetzliche Vanille-Trinität",
+    "vanilla_sugar_bourbon": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Bourbon-Vanillezucker (Gemahlene Schote)", "icon": "🌼", "latin": "Saccharum vanillatum (Bourbon)", "sci": ["#sci/Botanics", "#sci/Phytochemistry"],
+      "val": { "kcal": 395, "water_g": 0.5, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 98.0, "sugar_g": 97.0, "fiber_g": 0.5 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "source": "Vanilla planifolia from Indian Ocean islands", "visual": "Visible ground black pod specks" },
+      "props": ["The highest quality tier under German food law", "Must come from the 'Bourbon' islands (Madagascar, Comoros, Réunion)", "Complex aroma profile with over 200 natural compounds"],
+      "lang": { "de": "Bourbon-Vanillezucker", "en": "Bourbon Vanilla Sugar", "es": "Azúcar de vainilla Bourbon", "fr": "Sucre vanillé Bourbon", "ru": "Ванильный сахар Бурбон", "ja": "ブルボンバニラシュガー", "zh": "波旁香草糖", "fa": "شکر وانیل بوربون", "hi": "बोर्बोन वेनिला शुगर", "ar": "سكر فانيليا بوربون" }
+    },
+    "vanilla_sugar_natural_extract": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Vanillezucker (Natürlicher Extrakt)", "icon": "🍯", "latin": "Saccharum vanillatum (Extractum)", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 396, "water_g": 0.2, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 99.0, "sugar_g": 99.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "vegan": true },
+      "quality_metrics": { "source": "Real vanilla extract", "distinction": "No synthetic additives, but no pod pieces required" },
+      "props": ["Legally must contain flavoring extracted directly from real vanilla pods", "Does not have to be from the 'Bourbon' region", "Aromatic but visually clean (no black specks)"],
+      "lang": { "de": "Vanillezucker (Natürliches Aroma)", "en": "Vanilla Extract Sugar", "es": "Azúcar con extracto de vainilla", "fr": "Sucre à l'extrait de vanille", "ru": "Сахар с экстрактом ванили", "ja": "バニラエキストラクトシュガー", "zh": "香草提取物糖", "fa": "شکر عصاره وانیل", "hi": "वेनिला अर्क चीनी", "ar": "سكر بخلاصة الفانيليا" }
+    },
+    "vanillin_sugar_synthetic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Vanillin-Zucker (Synthetisch)", "icon": "🍬", "latin": "Saccharum vanillinum (syntheticum)", "sci": ["#sci/OrganicChemistry", "#sci/SyntheticBiology"],
+      "val": { "kcal": 398, "water_g": 0.1, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 99.5, "sugar_g": 99.5, "fiber_g": 0.0 },
+      "meta": { "locations": ["lidl", "aldi", "penny", "everywhere"], "vegan": true },
+      "quality_metrics": { "molecule": "Synthetic 4-hydroxy-3-methoxybenzaldehyde", "price_segment": "Budget" },
+      "props": ["Contains exactly zero actual vanilla", "Flavor molecule derived industrially from lignin (wood) or guaiacol", "Extremely cheap, one-dimensional strong vanilla smell"],
+      "lang": { "de": "Vanillin-Zucker", "en": "Vanillin Sugar", "es": "Azúcar vainillado", "fr": "Sucre vanillé", "ru": "Ванильный сахар", "ja": "バニリンシュガー", "zh": "香兰素糖", "fa": "شکر وانیلین", "hi": "वैनिलिन शुगर", "ar": "سكر فانيلين" }
+    },
+
+    "--- BAKING_STABILIZERS ---": "Hilfsmittel (Struktur & Optik)",
+    "sahnesteif_dr_oetker": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Dr. Oetker Sahnesteif", "icon": "🍦", "latin": "Stabilisator lactis (Oetker)", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 373, "water_g": 1.0, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 92.0, "sugar_g": 15.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Dr. Oetker", "vegan": true },
+      "quality_metrics": { "base": "Modified starch + Glucose syrup", "usage": "Whipping cream stabilizer" },
+      "props": ["Prevents syneresis in whipped cream", "Maintains structure of toppings", "Flavor-neutral stabilizer"],
+      "lang": { "de": "Sahnesteif", "en": "Cream Stiffener", "es": "Estabilizante para nata", "fr": "Fixe-chantilly", "ru": "Закрепитель сливок", "ja": "生クリーム固定剤", "zh": "奶油稳定剂", "fa": "تثبیت‌کننده خامه", "hi": "क्रीम स्टिफनर", "ar": "مثبت الكريمة" }
+    }
+	},
+  "baking_specialties_and_chemicals": {
+    "--- TRADITIONAL_CHEMICAL_LEAVENING ---": "Spezifische Triebmittel & Säuren",
+    "baking_soda_kaiser": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Kaiser Natron (Natriumhydrogencarbonat)", "icon": "🧂", "latin": "Natrii hydrogenocarbonas", "sci": ["#sci/Chemistry", "#sci/FoodScience"],
+      "val": { "kcal": 0, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "sodium_mg": 27360.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Kaiser", "vegan": true },
+      "quality_metrics": { "purity": "100% Pure Sodium Bicarbonate", "reaction_type": "Requires external acid" },
+      "props": ["Reines basisches Pulver, benötigt eine Säurekomponente (Zitronensaft, Buttermilch) im Teig zur Reaktion", "Neutralisiert überschüssige Säuren", "Essenziell für die Lauge bei Brezeln (in kochendem Wasser) und original amerikanische Cookies"],
+      "lang": { "de": "Kaiser Natron / Speisesoda", "en": "Baking Soda", "es": "Bicarbonato de sodio", "fr": "Bicarbonate de soude", "ru": "Пищевая сода", "ja": "重曹", "zh": "小苏打", "fa": "جوش شیرین", "hi": "बेकिंग सोडा", "ar": "بيكربونات الصوديوم" }
+    },
+    "baking_powder_cream_of_tartar_gf": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Weinstein-Backpulver (Glutenfrei)", "icon": "🧁", "latin": "Pulvis fermentans (Potassii bitartras)", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 235, "water_g": 2.0, "protein_g": 0.1, "fat_total_g": 0.1, "carbs_total_g": 44.0, "sugar_g": 0.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["denns", "dm", "rewe", "alnatura"], "vegan": true, "gluten_free": true },
+      "quality_metrics": { "acid_source": "Natural Cream of Tartar (Weinsteinsäure)", "starch_base": "Corn or Tapioca Starch (GF)" },
+      "props": ["Phosphate-free alternative to standard baking powder", "Leaves no 'blunt' or metallic aftertaste on the teeth", "Uses gluten-free starch as a separating agent"],
+      "lang": { "de": "Weinstein-Backpulver (GF)", "en": "Cream of Tartar Baking Powder (GF)", "es": "Levadura en polvo sin gluten", "fr": "Poudre à lever sans gluten", "ru": "Безглютеновый разрыхлитель", "ja": "ベーキングパウダー (グルテンフリー)", "zh": "无麸质发酵粉", "fa": "بکینگ پودر بدون گلوتن", "hi": "ग्लूटेन-फ्री बेकिंग पाउडर", "ar": "مسحوق خبز خالي من الجلوتين" }
+    },
+    "ammonium_bicarbonate": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Hirschhornsalz (Ammoniumhydrogencarbonat)", "icon": "🦌", "latin": "Ammonii hydrogenocarbonas", "sci": ["#sci/Chemistry", "#sci/Toxicology"],
+      "val": { "kcal": 0, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "usage": "Flat pastry leavening", "warning": "Releases ammonia gas" },
+      "props": ["Traditionelles Triebmittel für flaches Gebäck (Lebkuchen, Spekulatius, Amerikaner)", "Zersetzt sich bei Hitze in Ammoniak, CO2 und Wasser (darf nicht in hohen Kuchen verwendet werden, da das Gas entweichen muss)", "Erzeugt eine extrem poröse, knusprige Struktur"],
+      "lang": { "de": "Hirschhornsalz", "en": "Ammonium Bicarbonate / Baker's Ammonia", "es": "Bicarbonato de amonio", "fr": "Bicarbonate d'ammonium", "ru": "Гидрокарбонат аммония", "ja": "炭酸水素アンモニウム", "zh": "碳酸氢铵", "fa": "بی‌کربنات آمونیوم", "hi": "अमोनियम बाइकार्बोनेट", "ar": "بيكربونات الأمونيوم" }
+    },
+    "potassium_carbonate": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Pottasche (Kaliumcarbonat)", "icon": "🍯", "latin": "Kalii carbonas", "sci": ["#sci/Chemistry", "#sci/FoodScience"],
+      "val": { "kcal": 0, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0, "potassium_mg": 56500.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "reaction_type": "Slow leavening", "solubility": "Must be dissolved in liquid" },
+      "props": ["Treiber für schwere, zucker- und honigreiche Teige (Printen, Lebkuchen)", "Treibt den Teig eher in die Breite als in die Höhe", "Oft in Kombination mit Hirschhornsalz verwendet"],
+      "lang": { "de": "Pottasche", "en": "Potassium Carbonate / Pearlash", "es": "Carbonato de potasio", "fr": "Carbonate de potassium", "ru": "Поташ", "ja": "炭酸カリウム", "zh": "碳酸钾", "fa": "پتاسیم کربنات", "hi": "पोटेशियम कार्बोनेट", "ar": "كربونات البوتاسيوم" }
+    },
+    "citric_acid_powder": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Zitronensäure (Lebensmittelqualität / E 330)", "icon": "🍋", "latin": "Acidum citricum", "sci": ["#sci/Chemistry", "#sci/Preservation"],
+      "val": { "kcal": 247, "water_g": 8.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["dm", "rossmann", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "function": "Acidifier & Antioxidant", "purity": "Food Grade (E330)" },
+      "props": ["Hochkonzentrierte Säure in Pulverform", "Verhindert das Braunwerden von Obst beim Backen", "Erhöht die Gelierfähigkeit von Pektin bei der Marmeladenherstellung"],
+      "lang": { "de": "Zitronensäure (Pulver)", "en": "Citric Acid Powder", "es": "Ácido cítrico en polvo", "fr": "Acide citrique en poudre", "ru": "Лимонная кислота", "ja": "クエン酸パウダー", "zh": "柠檬酸粉", "fa": "پودر اسید سیتریک", "hi": "साइट्रिक एसिड पाउडर", "ar": "مسحوق حمض الستريك" }
+    },
+
+    "--- BREAD_BAKING_ESSENTIALS ---": "Brotback-Hilfsmittel",
+    "sourdough_extract_dry": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Sauerteig-Extrakt (Getrocknet)", "icon": "🍞", "latin": "Fermentum siccum", "sci": ["#sci/Microbiology", "#sci/Fermentation"],
+      "val": { "kcal": 350, "water_g": 9.0, "protein_g": 11.0, "fat_total_g": 2.0, "carbs_total_g": 65.0, "sugar_g": 3.0, "fiber_g": 8.0 },
+      "meta": { "locations": ["dm", "rewe", "kaufland", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "activity": "Usually inactive (requires yeast)", "benefit": "Flavor & Dough elasticity" },
+      "props": ["Sorgt für die typische Säuerung und den Geschmack von Roggenbrot", "Die meisten Supermarkt-Extrakte enthalten keine lebenden Kulturen mehr und benötigen Trockenhefe als Triebmittel", "Macht Roggenmehl backfähig"],
+      "lang": { "de": "Sauerteig-Extrakt", "en": "Dried Sourdough Extract", "es": "Masa madre deshidratada", "fr": "Levain déshydraté", "ru": "Сухая закваска", "ja": "乾燥サワー種", "zh": "干燥酸面团提取物", "fa": "عصاره خمیر ترش خشک", "hi": "सूखा खट्टा आटा (सॉरडो)", "ar": "خميرة العجين المجففة" }
+    },
+    "baking_malt_active": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Backmalz (Gerstenmalzextrakt)", "icon": "🌾", "latin": "Extractum malti", "sci": ["#sci/Enzymology", "#sci/FoodScience"],
+      "val": { "kcal": 365, "water_g": 5.0, "protein_g": 10.5, "fat_total_g": 1.5, "carbs_total_g": 75.0, "sugar_g": 40.0, "fiber_g": 5.0 },
+      "meta": { "locations": ["denns", "online_specialty", "reformhaus"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "enzyme_status": "Active (Diastatic) vs. Inactive", "function": "Crust browning & Yeast food" },
+      "props": ["Gekeimte, getrocknete und gemahlene Gerste", "Bietet der Hefe schnell verfügbaren Zucker (Maltose)", "Das Geheimnis für extrem knusprige, braune Brötchenkrusten"],
+      "lang": { "de": "Backmalz", "en": "Baking Malt (Diastatic)", "es": "Malta para hornear", "fr": "Malt de boulangerie", "ru": "Пекарский солод", "ja": "ベーキングモルト", "zh": "烘焙麦芽粉", "fa": "عصاره مالت پخت", "hi": "बेकिंग माल्ट", "ar": "مالت الخبز" }
+    },
+
+    "--- PASTRY_AND_CAKE_ADDITIVES ---": "Kuchen- & Gebäck-Zutaten",
+    "marzipan_raw": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Marzipanrohmasse", "icon": "🌰", "latin": "Pasta amygdalae", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 460, "water_g": 14.0, "protein_g": 11.0, "fat_total_g": 28.0, "carbs_total_g": 39.0, "sugar_g": 38.0, "fiber_g": 5.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "purity": "High almond ratio (Unlike Persipan)", "sugar_content": "Lower than modeling marzipan" },
+      "props": ["Das reine Ausgangsprodukt (Verhältnis Mandeln zu Zucker ist ca. 2:1)", "Persipan ist das billigere Äquivalent aus Aprikosenkernen", "Essenziell für Stollen, Dominosteine und als Kuchenfüllung"],
+      "lang": { "de": "Marzipanrohmasse", "en": "Raw Marzipan Paste", "es": "Mazapán crudo", "fr": "Pâte de massepain", "ru": "Сырой марципан", "ja": "マジパンローマッセ", "zh": "纯杏仁膏", "fa": "خمیر مارزیپان خام", "hi": "कच्चा मारजिपन", "ar": "عجينة المرزبان الخام" }
+    },
+    "candied_lemon_peel": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Zitronat (Sukkade)", "icon": "🍋", "latin": "Citrus medica (Cortex saccharatus)", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 300, "water_g": 18.0, "protein_g": 0.2, "fat_total_g": 0.1, "carbs_total_g": 70.0, "sugar_g": 65.0, "fiber_g": 3.5 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "season": ["winter", "all_year"], "vegan": true },
+      "quality_metrics": { "source": "Citron (Zitronatzitrone)", "preservation": "High sugar crystallization" },
+      "props": ["Kandierte Schale der dickschaligen Cedrat-Zitrone", "Klassische Backzutat für Christstollen und Früchtebrot", "Intensives, leicht harzig-zitroniges Aroma"],
+      "lang": { "de": "Zitronat (Sukkade)", "en": "Candied Lemon Peel", "es": "Limón confitado", "fr": "Écorce de citron confite", "ru": "Цукаты из лимона", "ja": "レモンピール砂糖漬け", "zh": "糖渍柠檬皮", "fa": "پوست لیمو شیرین شده", "hi": "कैंडीड नींबू का छिलका", "ar": "قشر ليمون مسكر" }
+    },
+    "candied_orange_peel": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Orangeat", "icon": "🍊", "latin": "Citrus aurantium (Cortex saccharatus)", "sci": ["#sci/FoodScience", "#sci/Phytochemistry"],
+      "val": { "kcal": 305, "water_g": 17.5, "protein_g": 0.2, "fat_total_g": 0.1, "carbs_total_g": 72.0, "sugar_g": 67.0, "fiber_g": 3.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "season": ["winter", "all_year"], "vegan": true },
+      "quality_metrics": { "source": "Bitter Orange (Pomeranze)", "preservation": "High sugar crystallization" },
+      "props": ["Kandierte Schale der Bitterorange (Pomeranze)", "Herber, intensiver als normale Orangenschale", "Wird oft in Kombination mit Zitronat verwendet"],
+      "lang": { "de": "Orangeat", "en": "Candied Orange Peel", "es": "Naranja confitada", "fr": "Écorce d'orange confite", "ru": "Цукаты из апельсина", "ja": "オレンジピール砂糖漬け", "zh": "糖渍橙皮", "fa": "پوست پرتقال شیرین شده", "hi": "कैंडीड संतरे का छिलका", "ar": "قشر برتقال مسكر" }
+    },
+    "powdered_sugar": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Puderzucker (Staubzucker)", "icon": "❄️", "latin": "Saccharum officinarum (Pulvis)", "sci": ["#sci/FoodScience", "#sci/Physics"],
+      "val": { "kcal": 389, "water_g": 0.2, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 99.8, "sugar_g": 99.8, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "vegan": true },
+      "quality_metrics": { "texture": "Ultra-fine crystalline", "anti_caking": "Often contains trace amounts of starch" },
+      "props": ["Feinst vermahlener weißer Zucker", "Löst sich sofort ohne Hitze auf (ideal für Glasuren und Buttercreme)", "Enthält industriell oft ca. 3% Maisstärke, um Verklumpen zu verhindern"],
+      "lang": { "de": "Puderzucker", "en": "Powdered Sugar / Icing Sugar", "es": "Azúcar glas", "fr": "Sucre glace", "ru": "Сахарная пудра", "ja": "粉砂糖", "zh": "糖粉", "fa": "پودر قند", "hi": "पिसी हुई चीनी", "ar": "سكر بودرة" }
+    },
+    "pearl_sugar": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Hagelzucker", "icon": "💎", "latin": "Saccharum officinarum (Granula)", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 400, "water_g": 0.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 100.0, "sugar_g": 100.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland"], "vegan": true },
+      "quality_metrics": { "heat_stability": "High", "texture": "Hard, crunchy pearls" },
+      "props": ["Gepresste, grobe Zuckerkristalle", "Schmilzt bei normalen Backtemperaturen nicht vollständig", "Essenziell als knuspriges Topping für Hefezöpfe und belgische Waffeln"],
+      "lang": { "de": "Hagelzucker", "en": "Pearl Sugar / Nib Sugar", "es": "Azúcar perlado", "fr": "Sucre perlé", "ru": "Жемчужный сахар", "ja": "パールシュガー", "zh": "珍珠糖", "fa": "شکر مرواریدی", "hi": "पर्ल शुगर", "ar": "سكر لؤلؤي" }
+    },
+    "clear_cake_glaze": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Klarer Tortenguss", "icon": "🍰", "latin": "Gelatina clara", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 340, "water_g": 10.0, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 85.0, "sugar_g": 5.0, "fiber_g": 4.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "brand": "Dr. Oetker, Ruf", "vegan": true },
+      "quality_metrics": { "base": "Carrageenan and/or Tapioca starch", "setting_time": "Fast (Room temp)" },
+      "props": ["Verleiht Obstkuchen einen spiegelnden Glanz und schützt das Obst vor dem Austrocknen", "Basiert technologisch meist auf Carrageen (aus Rotalgen) und Stärke", "Muss zwingend aufgekocht werden, geliert dann beim Abkühlen rasant"],
+      "lang": { "de": "Klarer Tortenguss", "en": "Clear Cake Glaze", "es": "Brillo para tartas", "fr": "Nappage pour tarte clair", "ru": "Прозрачное желе для торта", "ja": "ケーキグレーズ (クリア)", "zh": "透明蛋糕凝胶", "fa": "ژله شفاف کیک", "hi": "क्लियर केक ग्लेज़", "ar": "جيلي كيك شفاف" }
+    }
+  },
+  "baking_desserts_and_decorations": {
+    "--- CAKE_DECORATION_AND_GLAZES ---": "Dekoration, Fondant & Glasuren",
+    "rolled_fondant": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Rollfondant (Weiß)", "icon": "🎂", "latin": "Pasta saccharina", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 373, "water_g": 5.0, "protein_g": 0.0, "fat_total_g": 4.0, "carbs_total_g": 85.0, "sugar_g": 80.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka", "baking_specialist"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Elastic / Clay-like", "base": "Sugar, Glucose Syrup, Glycerin" },
+      "props": ["Extrem formbare Zuckermasse zum Eindecken von Motivtorten", "Trocknet an der Luft aus und bildet eine feste Hülle", "Technologisch ein nicht-Newtonsches Fluid, das durch Kneten weich wird"],
+      "lang": { "de": "Rollfondant", "en": "Rolled Fondant", "es": "Fondant extendido", "fr": "Pâte à sucre", "ru": "Мастика сахарная", "ja": "ロールフォンダン", "zh": "翻糖", "fa": "فوندانت", "hi": "रोल्ड फोंडेंट", "ar": "عجينة الفوندان" }
+    },
+    "sugar_sprinkles": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Zuckerstreusel / Liebesperlen", "icon": "🎊", "latin": "Granula saccharina colorata", "sci": ["#sci/FoodScience", "#sci/MaterialsScience"],
+      "val": { "kcal": 410, "water_g": 1.0, "protein_g": 0.0, "fat_total_g": 3.5, "carbs_total_g": 94.0, "sugar_g": 75.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "coating": "Carnauba wax for shine", "heat_stability": "Melts in batter" },
+      "props": ["Reine Zuckermasse mit Stärke und Farbstoffen", "Oft mit Carnaubawachs überzogen, um Feuchtigkeit abzuweisen", "Färbt beim Einbacken in den Teig ab (Funfetti-Effekt)"],
+      "lang": { "de": "Zuckerstreusel", "en": "Sugar Sprinkles", "es": "Fideos de azúcar", "fr": "Vermicelles en sucre", "ru": "Сахарная посыпка", "ja": "スプリンクル", "zh": "彩色糖粒", "fa": "ترافل رنگی", "hi": "शुगर स्प्रिंकल्स", "ar": "حبيبات السكر الملونة" }
+    },
+    "chocolate_fat_glaze": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Kakaohaltige Fettglasur", "icon": "🍩", "latin": "Tegumentum cacaoticum", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 570, "water_g": 1.0, "protein_g": 3.0, "fat_total_g": 40.0, "carbs_total_g": 48.0, "sugar_g": 46.0, "fiber_g": 4.0 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl", "aldi"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "fat_source": "Palm or Coconut fat (NOT Cocoa Butter)", "tempering": "Not required" },
+      "props": ["Die günstige, stressfreie Alternative zur echten Kuvertüre", "Muss nicht temperiert werden, da die Kakaobutter durch billigere Pflanzenfette ersetzt wurde", "Trocknet schnell, hat aber keinen hochwertigen 'Knack' wie echte Schokolade"],
+      "lang": { "de": "Kakaohaltige Fettglasur", "en": "Chocolate Compound / Cake Glaze", "es": "Sucedáneo de chocolate", "fr": "Pâte à glacer", "ru": "Кондитерская глазурь", "ja": "コーティングチョコレート", "zh": "代可可脂巧克力涂层", "fa": "روکش شکلاتی", "hi": "चॉकलेट ग्लेज़", "ar": "جليز الشوكولاتة" }
+    },
+
+    "--- DESSERT_POWDERS_AND_JELLIES ---": "Pudding, Cremes & Wackelpudding",
+    "pudding_powder_vanilla": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Puddingpulver Vanille-Geschmack", "icon": "🍮", "latin": "Pulvis amyli (Vanilla)", "sci": ["#sci/Rheology", "#sci/FoodScience"],
+      "val": { "kcal": 345, "water_g": 12.0, "protein_g": 0.5, "fat_total_g": 0.1, "carbs_total_g": 85.0, "sugar_g": 1.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Dr. Oetker, Ruf", "vegan": true },
+      "quality_metrics": { "base": "Pure Cornstarch (Maisstärke)", "sweetness": "Unsweetened (Requires sugar)" },
+      "props": ["Technologisch fast reine Maisstärke mit Farbstoff (Beta-Carotin) und Aroma", "Benötigt kochende Milch, um die Stärkekörner aufquellen zu lassen (Verkleisterung)", "Klassiker der deutschen Vorratskammer seit 1894"],
+      "lang": { "de": "Puddingpulver Vanille", "en": "Vanilla Pudding Powder", "es": "Preparado para flan de vainilla", "fr": "Préparation pour pudding vanille", "ru": "Пудинг ванильный (порошок)", "ja": "バニラプリンパウダー", "zh": "香草布丁粉", "fa": "پودر پودینگ وانیلی", "hi": "वैनिला पुडिंग पाउडर", "ar": "مسحوق بودينج الفانيليا" }
+    },
+    "pudding_powder_chocolate": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Puddingpulver Schokolade", "icon": "🍫", "latin": "Pulvis amyli (Cacao)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 355, "water_g": 8.0, "protein_g": 5.0, "fat_total_g": 3.5, "carbs_total_g": 75.0, "sugar_g": 1.5, "fiber_g": 7.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Dr. Oetker, Ruf", "vegan": true },
+      "quality_metrics": { "base": "Cornstarch + Low-fat Cocoa Powder", "sweetness": "Unsweetened" },
+      "props": ["Enthält echten, stark entölten Kakao", "Dickt etwas stärker an als die Vanille-Variante, da Kakao selbst stärkeähnliche Eigenschaften hat", "Muss mit Zucker und Milch aufgekocht werden"],
+      "lang": { "de": "Puddingpulver Schokolade", "en": "Chocolate Pudding Powder", "es": "Preparado para flan de chocolate", "fr": "Préparation pour pudding chocolat", "ru": "Пудинг шоколадный (порошок)", "ja": "チョコレートプリンパウダー", "zh": "巧克力布丁粉", "fa": "پودر پودینگ شکلاتی", "hi": "चॉकलेट पुडिंग पाउडर", "ar": "مسحوق بودينج الشوكولاتة" }
+    },
+    "instant_dessert_cream": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Paradiescreme / Instant-Dessert", "icon": "☁️", "latin": "Spuma dulcis instantanea", "sci": ["#sci/PhysicalChemistry", "#sci/FoodScience"],
+      "val": { "kcal": 450, "water_g": 2.0, "protein_g": 2.0, "fat_total_g": 15.0, "carbs_total_g": 75.0, "sugar_g": 60.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Dr. Oetker", "vegan": false },
+      "quality_metrics": { "base": "Pre-gelatinized starch & emulsifiers", "preparation": "Cold milk only (No cooking)" },
+      "props": ["Muss nicht gekocht werden; enthält kaltquellende modifizierte Stärke", "Schlägt sich in 3 Minuten zu einer extrem luftigen Creme auf", "Technologisches Meisterwerk der Emulgatoren (enthält meist aufschlagbare Pflanzenfette)"],
+      "lang": { "de": "Paradiescreme (Instant)", "en": "Instant Dessert Cream", "es": "Crema postre instantánea", "fr": "Crème dessert instantanée", "ru": "Инстант-крем для десерта", "ja": "インスタントデザートクリーム", "zh": "即溶甜点奶油粉", "fa": "کرم دسر فوری", "hi": "इंस्टेंट डेजर्ट क्रीम", "ar": "كريمة حلى سريعة التحضير" }
+    },
+    "jello_powder_woodruff": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Götterspeise / Wackelpudding (Waldmeister)", "icon": "🟢", "latin": "Gelatina viridis (Galium odoratum)", "sci": ["#sci/PolymerChemistry", "#sci/FoodScience"],
+      "val": { "kcal": 340, "water_g": 5.0, "protein_g": 75.0, "fat_total_g": 0.0, "carbs_total_g": 10.0, "sugar_g": 0.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Dr. Oetker", "vegan": false },
+      "quality_metrics": { "base": "Pure Animal Gelatin + Acid", "texture": "Elastic Gel" },
+      "props": ["Die Basis ist hochkonzentrierte tierische Gelatine (daher der extreme Proteingehalt im Rohpulver)", "Wird mit Zucker und Wasser gekocht, erzeugt das klassische Waldmeister-Grün", "Benötigt mehrere Stunden im Kühlschrank, um das Polymernetzwerk aufzubauen"],
+      "lang": { "de": "Götterspeise (Waldmeister)", "en": "Jello Powder (Woodruff)", "es": "Gelatina de aspa", "fr": "Gelée à l'aspérule", "ru": "Желе (Ясменник)", "ja": "ゼリーパウダー (ウッドラフ)", "zh": "车叶草果冻粉", "fa": "پودر ژله (وودراف)", "hi": "जेली पाउडर (वुडरफ)", "ar": "جيلي وودروف" }
+    },
+
+    "--- LIQUID_BAKING_FLAVORS_AND_PODS ---": "Backaromen & Rohe Vanille",
+    "bitter_almond_flavor": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Bittermandel-Aroma (Fläschchen)", "icon": "🧪", "latin": "Benzaldehydum emulsionem", "sci": ["#sci/OrganicChemistry", "#sci/Aromachology"],
+      "val": { "kcal": 300, "water_g": 60.0, "protein_g": 0.0, "fat_total_g": 35.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 0.0 },
+      "meta": { "locations": ["everywhere"], "season": ["all_year", "winter"], "vegan": true },
+      "quality_metrics": { "active_agent": "Benzaldehyde", "dosage": "Drops (Extreme concentration)" },
+      "props": ["Hochkonzentrierte Öl/Wasser-Emulsion", "Basiert technologisch fast immer auf künstlichem Benzaldehyd, nicht auf echten Bittermandeln (frei von Blausäure)", "Verleiht Gebäck den typischen, intensiven Marzipangeschmack"],
+      "lang": { "de": "Bittermandel-Aroma", "en": "Bitter Almond Extract/Flavor", "es": "Aroma de almendra amarga", "fr": "Arôme d'amande amère", "ru": "Ароматизатор горький миндаль", "ja": "ビターアーモンドエッセンス", "zh": "苦杏仁香精", "fa": "اسانس بادام تلخ", "hi": "कड़वा बादाम अर्क", "ar": "نكهة اللوز المر" }
+    },
+    "whole_vanilla_bean": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Vanilleschote (Ganz)", "icon": "🌱", "latin": "Vanilla planifolia (Fructus integer)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 288, "water_g": 20.0, "protein_g": 1.2, "fat_total_g": 11.0, "carbs_total_g": 45.0, "sugar_g": 15.0, "fiber_g": 25.0 },
+      "meta": { "locations": ["rewe", "edeka", "denns", "gourmet_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "flavor": "Complex, deep, floral", "purity": "The absolute raw source" },
+      "props": ["Muss längs aufgeschnitten und ausgekratzt werden (das 'Mark')", "Die leere Schote kann in Zucker eingelegt werden, um echten Vanillezucker selbst herzustellen", "Technologisch und preislich die absolute Königsklasse der Aromen"],
+      "lang": { "de": "Vanilleschote", "en": "Whole Vanilla Bean", "es": "Vaina de vainilla", "fr": "Gousse de vanille", "ru": "Стручок ванили", "ja": "バニラビーンズ", "zh": "香草荚", "fa": "غلاف وانیل", "hi": "वेनिला फली", "ar": "قرن الفانيليا" }
+    }
+  },
+  "pasta_and_noodles": {
+    "--- DURUM_WHEAT_CLASSICS ---": "Traditionelle Hartweizengrieß-Pasta (Vegan)",
+    "pasta_spaghetti_durum": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Spaghetti (Hartweizengrieß)", "icon": "🍝", "latin": "Triticum durum (Fila)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0, "iron_plant_mg": 1.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "extrusion": "Al Bronzo (Rough surface)", "cooking": "Al Dente retention" },
+      "props": ["Der absolute globale Standard", "Hochwertige Pasta wird durch Bronzeformen gepresst ('al bronzo'), was die Oberfläche anraut und Saucen besser bindet", "Besteht nur aus Hartweizengrieß und Wasser"],
+      "lang": { "de": "Spaghetti", "en": "Spaghetti", "es": "Espaguetis", "fr": "Spaghettis", "ru": "Спагетти", "ja": "スパゲッティ", "zh": "意大利面", "fa": "اسپاگتی", "hi": "स्पेगेटी", "ar": "سباغيتي" }
+    },
+    "pasta_spaghetti_wholegrain": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Vollkorn Spaghetti", "icon": "🍝", "latin": "Triticum aestivum (Integralis)", "sci": ["#sci/Nutrition", "#sci/Metabolism"],
+      "val": { "kcal": 348, "water_g": 10.5, "protein_g": 14.5, "fat_total_g": 2.5, "carbs_total_g": 64.0, "sugar_g": 2.0, "fiber_g": 9.0, "magnesium_mg": 140.0, "iron_plant_mg": 3.8 },
+      "meta": { "locations": ["lidl", "dm", "rewe", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Firm / Nutty", "glycemic_index": "Low to Medium" },
+      "props": ["Hergestellt aus dem ganzen Korn inklusive Keim und Schale", "Bietet fast die dreifache Menge an Ballaststoffen im Vergleich zu heller Pasta", "Sättigt deutlich länger und hat einen nussigen Eigengeschmack"],
+      "lang": { "de": "Vollkorn Spaghetti", "en": "Whole Grain Spaghetti", "es": "Espaguetis integrales", "fr": "Spaghettis complets", "ru": "Цельнозерновые спагетти" }
+    },
+    "pasta_dinkel_fusilli": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Dinkel Spirelli (Type 630/Vollkorn)", "icon": "🌪️", "latin": "Triticum spelta", "sci": ["#sci/FoodScience", "#sci/Botany"],
+      "val": { "kcal": 355, "water_g": 11.0, "protein_g": 15.0, "fat_total_g": 2.0, "carbs_total_g": 68.0, "sugar_g": 1.5, "fiber_g": 4.5 },
+      "meta": { "locations": ["dm", "rewe", "edeka", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "digestibility": "Higher than modern wheat", "protein_structure": "Water-soluble glutens" },
+      "props": ["Dinkel ist ein Urkorn und oft verträglicher als hochgezüchteter moderner Weizen", "Reich an Kieselsäure (gut für Haut/Haare)", "Gart etwas schneller als Hartweizen-Pasta"],
+      "lang": { "de": "Dinkel Nudeln", "en": "Spelt Pasta", "es": "Pasta de espelta", "fr": "Pâtes d'épeautre", "ru": "Макароны из полбы" }
+    },
+    "pasta_penne_rigate": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Penne Rigate", "icon": "🍝", "latin": "Triticum durum (Tubuli striati)", "sci": ["#sci/FoodScience", "#sci/Geometry"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Rigate (Geriffelt)", "usage": "Heavy sauces / Baked dishes" },
+      "props": ["Hohle, schräg geschnittene Röhren", "'Rigate' bedeutet geriffelt, was bedeutet, dass dicke, stückige Saucen (z.B. Arrabbiata) perfekt haften", "Gleicher Teig wie Spaghetti, völlig andere Mundhaptik"],
+      "lang": { "de": "Penne Rigate", "en": "Penne Rigate", "es": "Penne Rigate", "fr": "Penne Rigate", "ru": "Пенне Ригате", "ja": "ペンネ・リガーテ", "zh": "斜管面", "fa": "پنه ریگاته", "hi": "पेने रिगेट", "ar": "بيني ريجاتي" }
+    },
+    "pasta_fusilli": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fusilli (Spirelli)", "icon": "🌪️", "latin": "Triticum durum (Spirae)", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Pesto & Cold Pasta Salads", "shape": "Helical" },
+      "props": ["Spiralnudeln, die extrem viel Sauce in ihren Rillen einfangen", "Der Standard für klassische deutsche Nudelsalate", "Bleiben auch kalt formstabil"],
+      "lang": { "de": "Fusilli / Spirelli", "en": "Fusilli", "es": "Espirales (Fusilli)", "fr": "Fusilli", "ru": "Фузилли (Спиральки)", "ja": "フジッリ", "zh": "螺旋面", "fa": "فوسیلی (پیچی)", "hi": "फ्यूसिली", "ar": "فوسيلي" }
+    },
+	
+    "--- DURUM_SHAPES_EXPANDED ---": "Formate & Spezialnudeln (Hartweizen)",
+    "pasta_farfalle": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Farfalle (Schmetterlingsnudeln)", "icon": "🦋", "latin": "Triticum durum (Papiliones)", "sci": ["#sci/Geometry", "#sci/FoodScience"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Varying thickness", "usage": "Cold salads & Cream sauces" },
+      "props": ["In der Mitte dicker geklemmt, an den Rändern dünn, was für zwei unterschiedliche Garstufen (Bissfestigkeiten) in einer Nudel sorgt", "Klassiker für kalte Nudelsalate, da sie optisch extrem ansprechend bleiben", "Fangen durch die Klemmung dicke Saucen gut ein"],
+      "lang": { "de": "Farfalle / Schmetterlingsnudeln", "en": "Farfalle / Bow-tie Pasta", "es": "Farfalle / Lacitos", "fr": "Farfalle", "ru": "Фарфалле (Бабочки)", "ja": "ファルファッレ", "zh": "蝴蝶面", "fa": "پاستا پروانه‌ای", "hi": "फरफले (बटरफ्लाई पास्ता)", "ar": "فارفالي (مكرونة فراشة)" }
+    },
+    "pasta_maccheroni": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Maccheroni (Makkaroni)", "icon": "🍝", "latin": "Triticum durum (Tubuli longi)", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "geometry": "Long hollow tubes", "usage": "Baked Mac & Cheese" },
+      "props": ["Lange, röhrenförmige Nudeln (in Deutschland oft in Stücke gebrochen verkauft)", "Durch den Hohlraum kochen sie relativ schnell und füllen sich im Ofen perfekt mit Käsesauce", "Absolute Basis für Mac & Cheese oder Makkaroniauflauf"],
+      "lang": { "de": "Makkaroni", "en": "Macaroni", "es": "Macarrones", "fr": "Macaronis", "ru": "Макароны", "ja": "マカロニ", "zh": "通心粉", "fa": "ماکارونی", "hi": "मैकरोनी", "ar": "معكرونة" }
+    },
+    "pasta_rigatoni": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Rigatoni", "icon": "🍝", "latin": "Triticum durum (Tubuli magni striati)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Thick ridges (Rigate)", "volume": "Large diameter" },
+      "props": ["Breiter und gerader geschnitten als Penne, mit stark ausgeprägten Rillen", "Die großen Röhren kollabieren beim Kochen nicht und fangen stückige Fleischsaucen (Ragù) und Gemüse massiv auf", "Königsklasse für schwere Aufläufe (Pasta al Forno)"],
+      "lang": { "de": "Rigatoni", "en": "Rigatoni", "es": "Rigatoni", "fr": "Rigatoni", "ru": "Ригатони", "ja": "リガトーニ", "zh": "粗管面", "fa": "ریگاتونی", "hi": "रिगाटोनी", "ar": "ريجاتوني" }
+    },
+    "pasta_linguine": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Linguine / Bavette", "icon": "🍝", "latin": "Triticum durum (Fila plana)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "geometry": "Flattened spaghetti", "usage": "Seafood & Oil-based sauces" },
+      "props": ["Elliptisch/flach gepresste Spaghetti", "Die flache Form bietet Pesto und öl-basierten Meeresfrüchte-Saucen (Vongole, Scampi) eine perfekte Haftfläche", "Kocht etwas schneller als dicke Spaghetti, verklebt aber auch leichter"],
+      "lang": { "de": "Linguine / Bavette", "en": "Linguine", "es": "Linguine", "fr": "Linguines", "ru": "Лингвини", "ja": "リングイネ", "zh": "扁意面", "fa": "لینگویینی", "hi": "लिंग्विनी", "ar": "لينجويني" }
+    },
+    "pasta_lasagne_sheets": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Lasagneplatten (Trocken)", "icon": "🔲", "latin": "Triticum durum (Laminas)", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "Oven-baked layering", "preparation": "No pre-boiling required (usually)" },
+      "props": ["Flache Teigplatten für Schichtaufläufe", "Moderne Supermarkt-Varianten benötigen kein Vorkochen mehr, solange genug Béchamel/Tomatensauce im Auflauf ist", "Bauen das strukturelle Fundament für den Ofen auf"],
+      "lang": { "de": "Lasagneplatten", "en": "Lasagna Sheets", "es": "Placas de lasaña", "fr": "Feuilles de lasagnes", "ru": "Листы для лазаньи", "ja": "ラザニアシート", "zh": "千层面皮", "fa": "ورقه‌های لازانیا", "hi": "लसग्ना शीट्स", "ar": "شرائح لازانيا" }
+    },
+    "pasta_cannelloni": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cannelloni (Trockenröhren)", "icon": "🧻", "latin": "Triticum durum (Tubuli maximi)", "sci": ["#sci/Culinary", "#sci/Geometry"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "geometry": "Extremely large tubes", "usage": "Stuffed & Baked" },
+      "props": ["Gigantische, hohle Nudelröhren (ca. 7-10 cm lang)", "Werden roh mit Ricotta, Spinat oder Hackfleisch gefüllt", "Garen vollständig in der umgebenden Auflaufsauce im Ofen"],
+      "lang": { "de": "Cannelloni", "en": "Cannelloni Tubes", "es": "Canelones", "fr": "Cannellonis", "ru": "Каннеллони", "ja": "カネロニ", "zh": "加乃隆 (大管面)", "fa": "کانلونی", "hi": "कैनेलोनी", "ar": "كانيلوني" }
+    },
+    "pasta_orecchiette": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Orecchiette (Öhrchennudeln)", "icon": "👂", "latin": "Triticum durum (Auriculae)", "sci": ["#sci/Culinary", "#sci/Rheology"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["rewe", "edeka", "italian_deli"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Thick edges, thin center", "origin": "Apulia, Italy" },
+      "props": ["Kleine, hütchenförmige Nudeln ('Kleine Ohren') aus Apulien", "Die raue Innenwölbung ist ein perfektes Reservoir für Gemüsesaucen (z.B. Cime di Rapa)", "Sehr bissfest (al dente) am dicken Rand"],
+      "lang": { "de": "Orecchiette (Öhrchennudeln)", "en": "Orecchiette", "es": "Orecchiette", "fr": "Orecchiette", "ru": "Орекьетте (Ушки)", "ja": "オレキエッテ", "zh": "猫耳朵面", "fa": "اورکیته", "hi": "ओरेकिएट", "ar": "أوريكييت" }
+    },
+    "pasta_orzo_kritharaki": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Orzo / Kritharaki (Nudelreis)", "icon": "🌾", "latin": "Triticum durum (Granula)", "sci": ["#sci/FoodScience", "#sci/Culinary"],
+      "val": { "kcal": 359, "water_g": 11.0, "protein_g": 13.0, "fat_total_g": 1.5, "carbs_total_g": 72.0, "sugar_g": 2.5, "fiber_g": 3.0 },
+      "meta": { "locations": ["lidl", "kaufland", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "shape": "Rice-shaped pasta", "usage": "Soups & Pilafs" },
+      "props": ["Hartweizenpasta in Reiskorn-Optik", "Absolute Basis für griechisches Giouvetsi oder italienische Minestrone", "Gart extrem schnell und dickt Saucen/Brühen durch starke Stärkeabgabe massiv an"],
+      "lang": { "de": "Kritharaki / Orzo / Risoni", "en": "Orzo Pasta", "es": "Orzo / Risoni", "fr": "Orgelet / Langues d'oiseau", "ru": "Орзо", "ja": "オルゾ / リゾーニ", "zh": "米粒面", "fa": "ارزو", "hi": "ओर्ज़ो", "ar": "لسان العصفور" }
+    },
+
+    "--- EGG_AND_FRESH_PASTA ---": "Eiernudeln & Schwäbische Tradition",
+    "pasta_tagliatelle_egg": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Tagliatelle / Bandnudeln (Mit Ei)", "icon": "🎀", "latin": "Triticum durum et ovum", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 365, "water_g": 10.0, "protein_g": 14.5, "fat_total_g": 4.0, "carbs_total_g": 67.0, "sugar_g": 2.0, "fiber_g": 3.0, "cholesterol_mg": 70.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "ingredient": "High Egg Ratio (e.g., 4 eggs per kg)", "texture": "Rich & Tender" },
+      "props": ["Klassische Bandnudeln, oft in Nestern getrocknet", "Der Eigehalt sorgt für einen elastischen, weicheren Biss und eine goldgelbe Farbe", "Der wahre Begleiter für original Ragu alla Bolognese"],
+      "lang": { "de": "Tagliatelle / Bandnudeln (Ei)", "en": "Egg Tagliatelle", "es": "Tallarines al huevo", "fr": "Tagliatelles aux œufs", "ru": "Тальятелле яичные", "ja": "卵入りタリアテッレ", "zh": "鸡蛋宽面", "fa": "تالیاتله تخم‌مرغی", "hi": "एग टैगलीटेल", "ar": "تاجلياتيل بالبيض" }
+    },
+    "pasta_spaetzle": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Spätzle (Schwäbische Eiernudeln)", "icon": "🍲", "latin": "Triticum et ovum (Spätzle)", "sci": ["#sci/Culinary", "#sci/Rheology"],
+      "val": { "kcal": 370, "water_g": 10.0, "protein_g": 14.0, "fat_total_g": 3.5, "carbs_total_g": 69.0, "sugar_g": 2.0, "fiber_g": 3.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "aldi"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "status": "PGI Protected (Schwäbische Spätzle)", "process": "Scraped/Pressed directly into boiling water" },
+      "props": ["Süddeutscher Klassiker mit extrem hohem Eigehalt", "Flüssiger Teig wird geschabt oder gepresst, was die unregelmäßige Form erzeugt", "Unverzichtbar für Käsespätzle oder Rinderbraten"],
+      "lang": { "de": "Spätzle", "en": "Spätzle (German Egg Noodles)", "es": "Spätzle", "fr": "Spätzle", "ru": "Шпецле", "ja": "シュペッツレ", "zh": "德国面疙瘩", "fa": "اشپتزله", "hi": "स्पाएत्ज़ल", "ar": "شباتسلي" }
+    },
+    "pasta_tortellini_dry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Tortellini (Trocken / Fleisch- oder Käsefüllung)", "icon": "🥟", "latin": "Triticum, ovum et farcimen", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 380, "water_g": 8.0, "protein_g": 15.0, "fat_total_g": 9.0, "carbs_total_g": 58.0, "sugar_g": 2.5, "fiber_g": 2.5 },
+      "meta": { "locations": ["lidl", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "shelf_life": "Dehydrated filling for long storage", "usage": "Broth or heavy cream sauces" },
+      "props": ["Getrocknete, gefüllte Teigringe", "Füllung meist aus stark getrocknetem Fleisch (Mortadella/Prosciutto) oder Käse (Parmigiano)", "Kochen deutlich länger als frische Tortellini aus dem Kühlregal"],
+      "lang": { "de": "Tortellini (Trocken)", "en": "Dried Tortellini", "es": "Tortellini secos", "fr": "Tortellinis secs", "ru": "Тортеллини (сухие)", "ja": "乾燥トルテッリーニ", "zh": "干燥意大利饺", "fa": "تورتلینی خشک", "hi": "सूखे टोर्टेलिनी", "ar": "تورتيليني مجفف" }
+    },
+
+    "--- ASIAN_WHEAT_AND_EGG_NOODLES ---": "Asiatische Weizen- & Eiernudeln",
+    "noodles_udon_dry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Udon Nudeln (Trocken)", "icon": "🍜", "latin": "Triticum aestivum (Udon)", "sci": ["#sci/Rheology", "#sci/Culinary"],
+      "val": { "kcal": 340, "water_g": 12.0, "protein_g": 9.0, "fat_total_g": 1.0, "carbs_total_g": 73.0, "sugar_g": 2.0, "fiber_g": 2.5, "sodium_mg": 1200.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Thick & Chewy", "salt_content": "High (Added to dough)" },
+      "props": ["Dicke, japanische Weizennudeln", "Der Teig wird oft mit den Füßen geknetet (traditionell), um maximale Elastizität aufzubauen", "Salz ist elementarer Bestandteil des Teigs"],
+      "lang": { "de": "Udon Nudeln", "en": "Udon Noodles", "es": "Fideos Udon", "fr": "Nouilles Udon", "ru": "Лапша Удон", "ja": "うどん (乾麺)", "zh": "乌冬面", "fa": "نودل اودون", "hi": "उदोन नूडल्स", "ar": "نودلز أودون" }
+    },
+    "noodles_ramen_dry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Ramen Nudeln (Getrocknet / Kansui)", "icon": "🍜", "latin": "Triticum aestivum (Ramen alkaline)", "sci": ["#sci/FoodScience", "#sci/Chemistry"],
+      "val": { "kcal": 360, "water_g": 9.0, "protein_g": 10.5, "fat_total_g": 2.0, "carbs_total_g": 72.0, "sugar_g": 1.0, "fiber_g": 2.0, "sodium_mg": 800.0 },
+      "meta": { "locations": ["asia_market", "rewe", "dm"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "chemistry": "Alkaline Dough (Kansui)", "texture": "Firm / Bouncy" },
+      "props": ["Das Geheimnis von Ramen ist 'Kansui' (alkalisches Wasser mit Kalium-/Natriumcarbonat)", "Lauge sorgt für die gelbliche Farbe (ganze ohne Ei) und die bissfeste Struktur in heißer Brühe", "Werden nicht matschig in Suppe"],
+      "lang": { "de": "Ramen Nudeln", "en": "Ramen Noodles", "es": "Fideos Ramen", "fr": "Nouilles Ramen", "ru": "Лапша Рамен", "ja": "ラーメン (乾麺)", "zh": "拉面", "fa": "نودل رامن", "hi": "रामेन नूडल्स", "ar": "نودلز رامين" }
+    },
+    "noodles_soba_dry": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Soba Nudeln (Buchweizen)", "icon": "🥢", "latin": "Fagopyrum esculentum (Soba)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 348, "water_g": 10.0, "protein_g": 14.0, "fat_total_g": 2.5, "carbs_total_g": 65.0, "sugar_g": 1.5, "fiber_g": 6.0, "rutin_mg": 15.0 },
+      "meta": { "locations": ["asia_market", "denns", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "composition": "Look for 100% Buckwheat (Ju-wari) for GF", "flavor": "Nutty/Earthy" },
+      "props": ["Traditionelle japanische Nudeln aus Buchweizenmehl (oft mit Weizen gemischt für bessere Bindung)", "Reich an Rutin (Antioxidans)", "Werden im Sommer oft eiskalt (Zaru Soba) gegessen"],
+      "lang": { "de": "Soba Nudeln (Buchweizen)", "en": "Soba Noodles", "es": "Fideos Soba", "fr": "Nouilles Soba", "ru": "Гречневая лапша Соба", "ja": "蕎麦 (乾麺)", "zh": "荞麦面", "fa": "نودل سوبا", "hi": "सोबा नूडल्स", "ar": "نودلز سوبا" }
+    },
+    "noodles_mie_egg": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Mie Nudeln (Eiernudeln, Asiatisch)", "icon": "🥡", "latin": "Triticum et ovum (Mie)", "sci": ["#sci/Culinary", "#sci/FoodScience"],
+      "val": { "kcal": 365, "water_g": 9.0, "protein_g": 13.0, "fat_total_g": 3.0, "carbs_total_g": 70.0, "sugar_g": 2.0, "fiber_g": 2.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "Wok Stir-fry (Chow Mein)", "preparation": "Fast hydration" },
+      "props": ["Oft vorgekocht/gedämpft und dann als getrockneter Block verkauft", "Klassische Wok-Nudel (Bami Goreng, Chow Mein)", "Garen durch einfaches Übergießen mit kochendem Wasser extrem schnell"],
+      "lang": { "de": "Mie Nudeln (Eiernudeln)", "en": "Mie Egg Noodles", "es": "Fideos Mie al huevo", "fr": "Nouilles Mie aux œufs", "ru": "Яичная лапша Ми", "ja": "ミーヌードル (卵麺)", "zh": "鸡蛋面 (面条)", "fa": "نودل تخم‌مرغی میه", "hi": "मी एग नूडल्स", "ar": "نودلز البيض مي" }
+    },
+
+    "--- ASIAN_GF_AND_STARCH_NOODLES ---": "Glas-, Reis- & Konjaknudeln (Glutenfrei)",
+    "noodles_rice_dry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Reisnudeln (Getrocknet)", "icon": "🍜", "latin": "Oryza sativa (Fila)", "sci": ["#sci/FoodScience", "#sci/Nutrition"],
+      "val": { "kcal": 364, "water_g": 10.0, "protein_g": 4.0, "fat_total_g": 0.5, "carbs_total_g": 80.0, "sugar_g": 0.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "gluten_status": "100% Gluten-Free", "usage": "Pho & Pad Thai" },
+      "props": ["Bestehen nur aus Reismehl und Wasser", "Werden durch Einweichen in heißem Wasser gegart, nicht kochend", "Absolute Basis für vietnamesische Pho und thailändisches Pad Thai"],
+      "lang": { "de": "Reisnudeln", "en": "Rice Noodles", "es": "Fideos de arroz", "fr": "Nouilles de riz", "ru": "Рисовая лапша", "ja": "ライスヌードル (フォー)", "zh": "米粉", "fa": "نودل برنج", "hi": "चावल के नूडल्स", "ar": "نودلز الأرز" }
+    },
+    "noodles_glass_mung": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Glasnudeln (Mungbohnenstärke)", "icon": "🥢", "latin": "Vigna radiata (Amylum fila)", "sci": ["#sci/Rheology", "#sci/Nutrition"],
+      "val": { "kcal": 350, "water_g": 13.0, "protein_g": 0.2, "fat_total_g": 0.0, "carbs_total_g": 86.0, "sugar_g": 0.0, "fiber_g": 0.5 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Transparent / Gelatinous", "gluten_status": "100% Gluten-Free" },
+      "props": ["Bestehen fast ausschließlich aus reiner Stärke (Erbsen- oder Mungbohnenstärke)", "Werden nach dem Einweichen komplett durchsichtig (Glass Noodles)", "Essenziell für Sommerrollen und asiatische Salate, nehmen Aromen extrem gut auf"],
+      "lang": { "de": "Glasnudeln", "en": "Glass Noodles / Cellophane Noodles", "es": "Fideos de cristal", "fr": "Nouilles de verre", "ru": "Стеклянная лапша (Фунчоза)", "ja": "春雨 (はるさめ)", "zh": "粉丝 (绿豆粉丝)", "fa": "نودل شیشه‌ای", "hi": "ग्लास नूडल्स", "ar": "نودلز زجاجية" }
+    },
+    "noodles_shirataki_konjac": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Shirataki Nudeln (Konjak)", "icon": "💧", "latin": "Amorphophallus konjac (Fila)", "sci": ["#sci/FoodScience", "#sci/Gastroenterology"],
+      "val": { "kcal": 10, "water_g": 96.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.5, "sugar_g": 0.0, "fiber_g": 3.0, "glucomannan_g": 3.0 },
+      "meta": { "locations": ["asia_market", "dm", "rossmann"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "dietary_focus": "Zero Calorie / Keto King", "texture": "Chewy / Rubber-like" },
+      "props": ["Bestehen zu 97% aus Wasser und 3% unverdaulicher Konjak-Wurzelfaser (Glucomannan)", "Praktisch kalorienfrei und kohlenhydratfrei (Keto-Wunderwaffe)", "Müssen vor dem Verzehr gründlich gewaschen werden, um fischigen Geruch zu entfernen"],
+      "lang": { "de": "Shirataki Nudeln (Konjaknudeln)", "en": "Shirataki Noodles (Konjac)", "es": "Fideos Shirataki (Konjac)", "fr": "Nouilles Shirataki", "ru": "Лапша Ширатаки", "ja": "しらたき", "zh": "魔芋丝 (白瀑)", "fa": "نودل شیراتاکی (کنجاک)", "hi": "शिराताकी नूडल्स", "ar": "نودلز شيراتاكي" }
+    },
+    "asian_ramen_wheat": {
+      "label": "Ramen Nudeln (Weizen)", "icon": "🍜", "latin": "Triticum (Lye-treated)", "sci": ["#sci/Chemistry", "#sci/Rheology"],
+      "val": { "kcal": 360, "water_g": 10.0, "protein_g": 11.0, "fat_total_g": 1.0, "carbs_total_g": 75.0, "sugar_g": 1.0, "fiber_g": 2.0 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "alkalinity": "Kansui (Alkaline mineral water)", "springiness": "High elastic recovery" },
+      "props": ["Spezielle Weizennudeln, die durch alkalisches Wasser (Kansui) ihre gelbe Farbe und elastische Textur erhalten", "Halten auch in heißer Brühe lange ihren Biss", "Basis für alle japanischen Ramen-Suppen"],
+      "lang": { "de": "Ramen Nudeln", "en": "Ramen Noodles", "ja": "ラーメン", "zh": "拉面" }
+    },
+    "asian_rice_noodles": {
+      "label": "Reisnudeln (Bandschnitt/Vermicelli)", "icon": "🍚", "latin": "Oryza sativa (Fila)", "sci": ["#sci/FoodScience", "#sci/GlutenFree"],
+      "val": { "kcal": 350, "water_g": 10.0, "protein_g": 6.0, "fat_total_g": 0.5, "carbs_total_g": 80.0, "sugar_g": 0.1, "fiber_g": 1.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "allergen_free": "Gluten-free", "prep": "Soaking vs Boiling" },
+      "props": ["Bestehen nur aus Reismehl und Wasser", "Absolut fettarm und leicht verdaulich", "Basis für Pad Thai oder Pho Suppen"],
+      "lang": { "de": "Reisnudeln", "en": "Rice Noodles", "ja": "米粉麺", "zh": "米粉", "vi": "Bánh phở" }
+    },
+    "asian_glass_noodles": {
+      "label": "Glasnudeln (Mungobohne)", "icon": "👻", "latin": "Vigna radiata (Starch)", "sci": ["#sci/Botany", "#sci/Polymers"],
+      "val": { "kcal": 345, "water_g": 12.0, "protein_g": 0.2, "fat_total_g": 0.1, "carbs_total_g": 85.0, "sugar_g": 0.0, "fiber_g": 0.5 },
+      "meta": { "locations": ["lidl", "asia_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "transparency": "High when cooked", "texture": "Slippery / Chewy" },
+      "props": ["Bestehen aus der Stärke der Mungbohne (nicht aus Getreide!)", "Werden beim Kochen fast unsichtbar/durchsichtig", "Nehmen extrem gut Aromen von Saucen auf"],
+      "lang": { "de": "Glasnudeln", "en": "Glass Noodles / Cellophane Noodles", "zh": "粉丝" }
+    }
+  },
+  "pasta_and_noodles_brands_asia": {
+    "--- ASIAN_NOODLE_BRANDS_AND_IMPORTS ---": "Asiatische Nudeln (Marken-Standards & Original-Importe)",
+    "noodles_rice_cock_brand": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Cock Brand Reisnudeln (Pad Thai / 5mm)", "icon": "🍜", "latin": "Oryza sativa (Cock Brand)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 356, "water_g": 11.0, "protein_g": 3.5, "fat_total_g": 0.8, "carbs_total_g": 80.0, "sugar_g": 0.0, "fiber_g": 1.2 },
+      "meta": { "locations": ["asia_market", "rewe", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "brand": "Cock Brand (Thailand)", "usage": "The Pad Thai Benchmark" },
+      "props": ["Der absolute globale Goldstandard für authentisches thailändisches Pad Thai", "Extrem reißfest nach dem Einweichen in lauwarmem Wasser", "Besteht zu 90% aus reinem thailändischen Reismehl und 10% Wasser"],
+      "lang": { "de": "Cock Brand Reisnudeln (5mm)", "en": "Cock Brand Rice Noodles", "es": "Fideos de arroz Cock Brand", "fr": "Nouilles de riz Cock Brand", "ru": "Рисовая лапша Cock Brand", "ja": "コック印 ライスヌードル", "zh": "雄鸡牌米粉", "fa": "نودل برنج کاک برند", "hi": "कॉक ब्रांड राइस नूडल्स", "ar": "نودلز الأرز ماركة الديك" }
+    },
+    "noodles_vermicelli_wai_wai": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Wai Wai Reis-Vermicelli (Bún)", "icon": "🥢", "latin": "Oryza sativa (Wai Wai)", "sci": ["#sci/Culinary", "#sci/Thermodynamics"],
+      "val": { "kcal": 350, "water_g": 12.0, "protein_g": 4.0, "fat_total_g": 0.5, "carbs_total_g": 79.0, "sugar_g": 0.0, "fiber_g": 1.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Ultra-thin (Vermicelli)", "usage": "Summer Rolls & Pho" },
+      "props": ["Thailändische Traditionsmarke für extrem feine Reisnudeln", "Kochen nicht nötig – werden nur mit kochendem Wasser übergossen und abgedeckt", "Die essenzielle Füllung für vietnamesische Sommerrollen (Gỏi cuốn)"],
+      "lang": { "de": "Wai Wai Reis-Vermicelli", "en": "Wai Wai Rice Vermicelli", "es": "Fideos de arroz Wai Wai", "fr": "Vermicelles de riz Wai Wai", "ru": "Рисовая вермишель Wai Wai", "ja": "ワイワイ ビーフン", "zh": "Wai Wai 米粉", "fa": "ورمیشل برنج وای وای", "hi": "वाई वाई राइस वर्मीसेली", "ar": "شعيرية الأرز واي واي" }
+    },
+    "noodles_glass_lungkow": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Lungkow Glasnudeln (Longkou Vermicelli)", "icon": "🥡", "latin": "Vigna radiata (Longkou)", "sci": ["#sci/FoodScience", "#sci/MaterialsScience"],
+      "val": { "kcal": 338, "water_g": 14.0, "protein_g": 0.1, "fat_total_g": 0.0, "carbs_total_g": 84.0, "sugar_g": 0.0, "fiber_g": 0.5 },
+      "meta": { "locations": ["asia_market", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "base": "100% Mung Bean Starch", "origin": "Shandong, China" },
+      "props": ["Die berühmtesten Glasnudeln der Welt, benannt nach dem Hafen Longkou in China", "Absolut glutenfrei, basieren auf Mungbohnenstärke", "Saugen Dressings und Brühen auf wie ein Schwamm, ohne matschig zu werden"],
+      "lang": { "de": "Lungkow Glasnudeln", "en": "Longkou Glass Noodles", "es": "Fideos de cristal Longkou", "fr": "Nouilles de verre Longkou", "ru": "Стеклянная лапша Лункоу", "ja": "龍口春雨", "zh": "龙口粉丝", "fa": "نودل شیشه‌ای لونگ‌کو", "hi": "लॉन्गकौ ग्लास नूडल्स", "ar": "نودلز زجاجية لونغكو" }
+    },
+    "noodles_udon_samlip": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Samlip Fresh Udon (Vakuumverpackt)", "icon": "🍲", "latin": "Triticum aestivum (Samlip Fresh)", "sci": ["#sci/Rheology", "#sci/Culinary"],
+      "val": { "kcal": 150, "water_g": 60.0, "protein_g": 4.0, "fat_total_g": 0.5, "carbs_total_g": 32.0, "sugar_g": 0.5, "fiber_g": 1.0, "sodium_mg": 300.0 },
+      "meta": { "locations": ["asia_market", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "format": "Pre-cooked vacuum sealed", "texture": "Extreme Chew (Mochi-like)" },
+      "props": ["Koreanischer Marktführer für dicke, frische Weizennudeln", "Sind bereits vorgekocht und müssen nur für 1-2 Minuten in kochende Brühe gegeben werden", "Bieten einen extrem befriedigenden, gummiartig-weichen ('bouncy') Biss"],
+      "lang": { "de": "Samlip Frische Udon", "en": "Samlip Fresh Udon", "es": "Fideos Udon frescos Samlip", "fr": "Nouilles Udon fraîches Samlip", "ru": "Свежая лапша Удон Samlip", "ja": "サムリップ 生うどん", "zh": "三立新鲜乌冬面", "fa": "اودون تازه ساملیپ", "hi": "समलिप फ्रेश उदोन", "ar": "نودلز أودون طازجة سامليب" }
+    },
+    "noodles_soba_hakubaku": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Hakubaku Organic Soba", "icon": "🥢", "latin": "Fagopyrum esculentum (Hakubaku)", "sci": ["#sci/Nutrition", "#sci/Phytochemistry"],
+      "val": { "kcal": 340, "water_g": 10.0, "protein_g": 14.0, "fat_total_g": 2.0, "carbs_total_g": 65.0, "sugar_g": 1.5, "fiber_g": 5.0 },
+      "meta": { "locations": ["asia_market", "denns", "alnatura"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "brand": "Hakubaku (Japan)", "health": "High Rutin content" },
+      "props": ["Authentische japanische Premium-Marke für Soba-Nudeln", "Verwendet ein traditionelles Buchweizen-Weizen-Verhältnis für perfekten Biss ohne zu zerbrechen", "Wird portionsweise mit eleganten Papierschleifen gebündelt geliefert"],
+      "lang": { "de": "Hakubaku Soba Nudeln", "en": "Hakubaku Soba Noodles", "es": "Fideos Soba Hakubaku", "fr": "Nouilles Soba Hakubaku", "ru": "Лапша Соба Hakubaku", "ja": "はくばく 蕎麦", "zh": "白麦荞麦面", "fa": "نودل سوبا هاکوباکو", "hi": "हकुबाकु सोबा नूडल्स", "ar": "نودلز سوبا هاكوباكو" }
+    },
+    "noodles_shirataki_kajnok": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Kajnok Konjak Nudeln (Premium Shirataki)", "icon": "💧", "latin": "Amorphophallus konjac (Kajnok)", "sci": ["#sci/FoodScience", "#sci/Gastroenterology"],
+      "val": { "kcal": 9, "water_g": 97.0, "protein_g": 0.0, "fat_total_g": 0.0, "carbs_total_g": 0.0, "sugar_g": 0.0, "fiber_g": 3.0, "glucomannan_g": 3.0 },
+      "meta": { "locations": ["rewe", "edeka", "dm", "rossmann"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "brand": "Kajnok (Germany)", "odor": "Odorless (unlike cheap imports)" },
+      "props": ["Premium-Marke aus Deutschland (bekannt aus 'Die Höhle der Löwen')", "Riechen im Gegensatz zu asiatischen Billig-Importen beim Öffnen nicht fischig", "Praktisch kalorienfrei und der absolute Keto-Goldstandard für Pasta-Ersatz"],
+      "lang": { "de": "Kajnok Konjak Nudeln", "en": "Kajnok Shirataki Noodles", "es": "Fideos Konjac Kajnok", "fr": "Nouilles de Konjac Kajnok", "ru": "Лапша Конжак Kajnok", "ja": "Kajnok こんにゃく麺", "zh": "Kajnok 魔芋面", "fa": "نودل کنجاک کاجنوک", "hi": "काजनोक कोंजैक नूडल्स", "ar": "نودلز كونجاك كاجنوك" }
+    },
+
+    "--- LEGUME_AND_GF_PASTA ---": "Hülsenfrüchte & Glutenfreie Alternativen",
+    "pasta_red_lentil_gf": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Rote Linsen Nudeln (Fusilli/Penne)", "icon": "🔴", "latin": "Lens culinaris (Fila)", "sci": ["#sci/Nutrition", "#sci/SportsMedicine"],
+      "val": { "kcal": 334, "water_g": 9.0, "protein_g": 26.0, "fat_total_g": 1.7, "carbs_total_g": 50.0, "sugar_g": 1.2, "fiber_g": 7.6, "iron_plant_mg": 5.5 },
+      "meta": { "locations": ["dm", "rossmann", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "protein_focus": "Double protein of wheat pasta", "gluten_status": "100% Gluten-Free" },
+      "props": ["Moderner Superfood-Standard aus 100% Rotem Linsenmehl", "Sättigt durch massiven Protein- und Ballaststoffgehalt enorm schnell", "Kocht viel schneller als Weizenpasta, zerfällt leicht bei Überkochen"],
+      "lang": { "de": "Rote Linsen Nudeln", "en": "Red Lentil Pasta", "es": "Pasta de lentejas rojas", "fr": "Pâtes de lentilles corail", "ru": "Макароны из красной чечевицы", "ja": "赤レンズ豆パスタ", "zh": "红扁豆意面", "fa": "پاستا عدس قرمز", "hi": "लाल मसूर का पास्ता", "ar": "مكرونة العدس الأحمر" }
+    },
+    "pasta_chickpea_gf": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Kichererbsen Nudeln", "icon": "🧆", "latin": "Cicer arietinum (Fila)", "sci": ["#sci/Nutrition", "#sci/Gastroenterology"],
+      "val": { "kcal": 350, "water_g": 8.0, "protein_g": 22.0, "fat_total_g": 5.0, "carbs_total_g": 48.0, "sugar_g": 2.0, "fiber_g": 12.0, "magnesium_mg": 115.0 },
+      "meta": { "locations": ["dm", "rossmann", "rewe", "denns"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "texture": "Firm / Earthy", "benefit": "High Fiber & Magnesium" },
+      "props": ["Robuster im Biss als Linsen-Pasta", "Deutlicher Kichererbsen-Eigengeschmack (passt perfekt zu kräftigen Tomatensaucen)", "Sehr hoher Gehalt an komplexen Kohlenhydraten und Ballaststoffen"],
+      "lang": { "de": "Kichererbsen Nudeln", "en": "Chickpea Pasta", "es": "Pasta de garbanzos", "fr": "Pâtes de pois chiches", "ru": "Макароны из нута", "ja": "ひよこ豆パスタ", "zh": "鹰嘴豆意面", "fa": "پاستا نخود", "hi": "चने का पास्ता", "ar": "مكرونة الحمص" }
+    },
+    "pasta_corn_rice_classic_gf": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Glutenfreie Pasta (Mais-Reis-Mischung)", "icon": "🌽", "latin": "Zea mays et Oryza sativa (Fila)", "sci": ["#sci/FoodScience", "#sci/Rheology"],
+      "val": { "kcal": 359, "water_g": 10.0, "protein_g": 7.0, "fat_total_g": 1.5, "carbs_total_g": 78.0, "sugar_g": 0.5, "fiber_g": 1.5 },
+      "meta": { "locations": ["lidl", "kaufland", "dm", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "usage": "1:1 Wheat pasta replacement", "texture": "Often lacks stretch" },
+      "props": ["Die Standard-Alternative für Zöliakie-Patienten im Supermarkt (z.B. Barilla Senza Glutine)", "Oft eine Mischung aus Mais- und Reismehl (manchmal mit Emulgatoren zur Formstabilität)", "Wird beim Abkühlen oft sehr hart oder klebrig"],
+      "lang": { "de": "Glutenfreie Pasta (Mais/Reis)", "en": "Gluten-Free Pasta (Corn/Rice)", "es": "Pasta sin gluten (Maíz/Arroz)", "fr": "Pâtes sans gluten (Maïs/Riz)", "ru": "Безглютеновые макароны (Кукуруза/Рис)", "ja": "グルテンフリーパスタ (コーン/米)", "zh": "无麸质意面 (玉米/大米)", "fa": "پاستا بدون گلوتن (ذرت/برنج)", "hi": "ग्लूटेन-फ्री पास्ता (मक्का/चावल)", "ar": "مكرونة خالية من الجلوتين (ذرة/أرز)" }
+    },
+	"--- POTATO_BASED_PASTA ---": "Kartoffelbasierte Teigwaren (Meist Kühlregal)",
+    "pasta_gnocchi_fresh": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Gnocchi (Frisch/Kühlregal)", "icon": "🥔", "latin": "Solanum tuberosum (Pasta)", "sci": ["#sci/FoodScience", "#sci/Thermodynamics"],
+      "val": { "kcal": 160, "water_g": 60.0, "protein_g": 3.5, "fat_total_g": 0.5, "carbs_total_g": 34.0, "sugar_g": 0.5, "fiber_g": 2.0 },
+      "meta": { "locations": ["lidl", "aldi", "rewe", "edeka"], "season": ["all_year"], "vegan": "check_label (often contains egg)" },
+      "quality_metrics": { "moisture": "High (Fresh product)", "cooking_time": "Very short (2-3 min)" },
+      "props": ["Kleine Klößchen aus Kartoffelteig und Mehl", "Haben deutlich weniger Kalorien pro 100g als Trockenpasta, da sie viel Wasser enthalten", "Perfekt zum Schwenken in Salbeibutter"],
+      "lang": { "de": "Gnocchi", "en": "Potato Gnocchi", "it": "Gnocchi di patate" }
+    },
+    "pasta_schupfnudeln": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Schupfnudeln (Fingernudeln)", "icon": "🥟", "latin": "Solanum tuberosum (Fila)", "sci": ["#sci/Culinary", "#sci/CulturalAnthropology"],
+      "val": { "kcal": 180, "water_g": 55.0, "protein_g": 4.0, "fat_total_g": 1.5, "carbs_total_g": 36.0, "fiber_g": 2.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["autumn", "winter", "all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Dense / Soft", "prep": "Pan-frying recommended" },
+      "props": ["Süddeutsche Spezialität aus Kartoffelteig", "Traditionell mit Sauerkraut und Speck serviert", "Werden meist in der Pfanne goldbraun angebraten"],
+      "lang": { "de": "Schupfnudeln / Fingernudeln", "en": "Schupfnudeln (Potato Noodles)" }
+    }
+  }
+}

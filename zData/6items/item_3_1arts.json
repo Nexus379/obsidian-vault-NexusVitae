@@ -1,0 +1,155 @@
+{
+  "art_studio_matrix": {
+    "--- THE_PIGMENT_ELITE ---": "Buntstifte (High-End Layering)",
+    "art_castle_arts_gold_edition": {
+      "unit_price": 80.00,
+      "unit_type": "piece",
+      "label": "Castle Arts Gold Edition (120er Set)", "icon": "🖍️", "room": "studio", "sci": ["#sci/MaterialsScience", "#sci/Optics"],
+      "val": { "core": "Soft-Wax-Based", "lightfastness": "Tested", "pl_score": 8.5 },
+      "meta": { "locations": ["online", "special_stores"], "brand": "Castle Arts" },
+      "quality_metrics": { "layering_capability": "Extreme", "blending": "Seamless" },
+      "props": ["Technologisch optimierte Wachs-Formel für 'Buttery' Auftrag", "Ermöglicht bis zu 10 Schichten ohne Wachs-Bloom", "Farbcodierung entspricht internationalen Standards"],
+      "lang": { "de": "Castle Arts Gold", "en": "Castle Arts Soft Touch" }
+    },
+    "art_faber_castell_polychromos": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Faber-Castell Polychromos", "icon": "💎", "room": "studio", "sci": ["#sci/Chemistry"],
+      "val": { "core": "Oil-based (Harder)", "pl_score": 7.0 },
+      "meta": { "locations": ["specialty_stores"], "brand": "Faber-Castell" },
+      "props": ["Der technologische Weltstandard für Profis", "Wisch- und wasserfeste Ölkreidemine", "Extreme Lichtechtheit über Jahrzehnte"],
+      "lang": { "de": "Polychromos", "en": "Polychromos Colored Pencils" }
+    },
+    "--- THE_PROFESSIONAL_LINERS ---": "Filzstifte & Marker (High-End)",
+    "tool_marker_dual_tip_castle": {
+      "unit_price": 40.00,
+      "unit_type": "piece",
+      "label": "Castle Arts Dual Tip Pens", "icon": "🖍️", "room": "studio", "sci": ["#sci/Chemistry"],
+      "val": { "ink_type": "Water-based / Alcohol-based", "tips": "Brush & Fine", "pl_score": 9.0 },
+      "meta": { "brand": "Castle Arts" },
+      "props": ["Technologische Ergänzung zu deinen Buntstiften", "Pinselspitze für kalligraphische Verläufe", "Kein 'Ausbluten' auf hochwertigem Mixed-Media-Papier"],
+      "lang": { "de": "Castle Arts Marker", "en": "Castle Arts Dual Tip" }
+    },
+    "tool_fineliner_staedtler_triplus": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Staedtler Triplus Fineliner", "icon": "🖋️", "room": "studio", "val": { "dry_safe": "Yes", "pl_score": 8.5 },
+      "meta": { "brand": "Staedtler" },
+      "props": ["Technologischer 'Dry Safe' Schutz (kann Tage offen liegen)", "Ergonomische Dreikantform für ermüdungsfreies Arbeiten"],
+      "lang": { "de": "Staedtler Fineliner", "en": "Staedtler Fineliners" }
+	  }
+  },
+  "upgrade_art": {
+    "upgrade_target_detail": {
+      "label": "Faber-Castell Polychromos", "icon": "💎",
+      "tech_reason": "Oil-based core allows for sharp points and prevents wax bloom.",
+      "synergy_with_castle": "Perfect for adding sharp details over soft Castle Arts layers."
+    },
+    "upgrade_target_blending": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Prismacolor Premier", "icon": "🎨",
+      "tech_reason": "High wax content for maximum creaminess.",
+      "synergy_with_castle": "Extends the blending range for smooth skin tones."
+    },
+    "art_paper_mixed_media_canson": {
+      "unit_price": 20.00,
+      "unit_type": "piece",
+      "label": "Canson Mixed Media (200g+)", "icon": "📄", "room": "studio", "sci": ["#sci/Physics"],
+      "val": { "texture": "Medium Grain", "acid_free": "Yes" },
+      "props": ["Bietet technologisch den nötigen 'Grip' für Wachsstifte", "Kein Vergilben durch säurefreie Archiv-Qualität"],
+      "lang": { "de": "Mixed Media Papier", "en": "Mixed Media Paper" }
+    },
+
+    "--- THE_KINETIC_TOOLS ---": "Zeichen-Werkzeuge (Präzision)",
+    "art_tool_kneadable_eraser": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Knetradiergummi (Professional)", "icon": "🧶", "room": "studio", "val": { "residue": "Zero" },
+      "props": ["Technologisch wichtig zum 'Lupfen' von Pigmenten", "Hinterlässt keine mechanischen Schäden an der Papierfaser"],
+      "lang": { "de": "Knetradierer", "en": "Kneadable Eraser" }
+    },
+    "art_tool_blender_pencil": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Colorless Blender (Wachs-Stift)", "icon": "🖍️", "room": "studio", "props": ["Vermengt Pigmente molekular auf dem Papier", "Erzeugt einen glatten, fotorealistischen Look"],
+      "lang": { "de": "Blender-Stift", "en": "Colorless Blender" }
+    }
+  },
+
+  "premium_paper_matrix": {
+    "--- THE_DIMENSION_LOGISTICS ---": "Formate & Zuschnitte",
+    "paper_format_a3_drawing_pad": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Zeichenblock A3 (120g/m²)", "icon": "📐", "room": "studio", "val": { "size": "297 x 420 mm", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl", "kaufland"], "brand": "United Office / K-Classic" },
+      "props": ["Technologisch stabil genug für Castle Arts Layering", "Großformat für perspektivisches Zeichnen"],
+      "lang": { "de": "A3 Zeichenblock", "en": "A3 Drawing Pad" }
+    },
+    "paper_format_a5_sketchbook": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Skizzenbuch A5 (Hardcover)", "icon": "📓", "room": "studio", "val": { "size": "148 x 210 mm" },
+      "props": ["Mobile Datenaufnahme (Skizzen) mit hoher Papierstabilität", "Hält technologisch auch leichten Markereinsatz aus"],
+      "lang": { "de": "A5 Skizzenbuch", "en": "A5 Sketchbook" }
+    },
+
+    "--- THE_COLOR_STRUCTURE ---": "Farbiges Papier & Karton (Craft, nicht Kraft)",
+    "paper_craft_colored_cardboard": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Fotokarton / Tonkarton (Bunt)", "icon": "🌈", "room": "studio", "sci": ["#sci/MaterialsScience"],
+      "val": { "thickness": "220g-300g/m²", "pl_score": 10.0 },
+      "props": ["Hohe Biegesteifigkeit für 3D-Konstruktionen", "Vollständig durchgefärbt (Schnittkanten bleiben farbig)"],
+      "lang": { "de": "Bunter Fotokarton", "en": "Colored Cardstock" }
+    },
+    "paper_origami_special": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Origami-Papier (Quadratisch)", "icon": "🦢", "room": "studio", "val": { "weight": "60g-80g/m²", "precision": "Perfect Square" },
+      "props": ["Technologisch extrem faltstabil, bricht nicht an den Kanten", "Dünn genug für komplexe Falt-Sequenzen (Tessellations)"],
+      "lang": { "de": "Origami-Papier", "en": "Origami Paper" }
+    }
+  },
+  "art_tool_maintenance": {
+    "--- THE_ACRYLIC_DISSOLVERS ---": "Acryl-Reinigung (Polymer-Stopp)",
+    "cleaner_acrylic_brush_soap_da_vinci": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "da Vinci Reinigungshilfe / Kernseife", "icon": "🧼", "room": "studio", "sci": ["#sci/Chemistry"],
+      "val": { "form": "Solid Soap", "active_ing": "Vegetable Oils", "pl_score": 9.0 },
+      "meta": { "locations": ["specialty_stores"], "brand": "da Vinci" },
+      "props": ["Technologisch optimiert, um Acrylharze aus den Haaren zu lösen", "Rückfettende Wirkung bewahrt die Elastizität der Pinselhaare", "Verhindert das Austrocknen der Zwinge (Ferrule)"],
+      "lang": { "de": "da Vinci Pinselseife", "en": "da Vinci Brush Soap" }
+    },
+    "cleaner_acrylic_remover_lukas": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Lukas Acryl-Reiniger (Flüssig)", "icon": "🧪", "room": "studio", "val": { "solvent_type": "Alcohol-based", "pl_score": 8.0 },
+      "props": ["Die technologische Rettung für bereits angetrocknete Pinsel", "Löst ausgehärtete Polymerschichten molekular auf"],
+      "lang": { "de": "Acryl-Entferner", "en": "Acrylic Remover" }
+    },
+
+    "--- THE_OIL_SOLVENT_SYSTEMS ---": "Öl-Reinigung (Lipid-Management)",
+    "cleaner_terpenersatz_sansodor_winsor": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Winsor & Newton Sansodor (Geruchloses Lösungsmittel)", "icon": "💧", "room": "studio", "sci": ["#sci/OrganicChemistry"],
+      "val": { "odorless": "Yes", "evaporation_rate": "Low", "pl_score": 7.5 },
+      "meta": { "brand": "Winsor & Newton" },
+      "props": ["Technologisch sicherere Alternative zu Terpentin", "Löst Ölfarben effizient ohne Kopfschmerz-Gefahr", "Ideal für die Reinigung von Paletten und Pinseln"],
+      "lang": { "de": "Geruchloser Verdünner", "en": "Odorless Mineral Spirits" }
+    },
+
+    "--- THE_UNIVERSAL_HACK ---": "Natur-Reiniger (Bio-Logistik)",
+    "cleaner_kernseife_k_classic": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "K-Classic Kernseife (Universal)", "icon": "🛒", "room": "studio", "val": { "pl_score": 10.0 },
+      "meta": { "locations": ["kaufland", "lidl"], "brand": "K-Classic" },
+      "props": ["Technologisch unschlagbar günstig für die Grundreinigung", "Löst Fett und Farbpigmente mechanisch hervorragend", "Pur und ohne Duftstoffe, schont die Pinselhaare"],
+      "lang": { "de": "Reine Kernseife", "en": "Pure Curd Soap" }
+    }
+  }
+}

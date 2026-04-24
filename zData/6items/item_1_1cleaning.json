@@ -1,0 +1,617 @@
+{
+  "kitchen_cleaning_matrix_v2": {
+    "--- THE_DISH_SOAP_TITANS ---": "Geschirrspülmittel (Handspül-Chemie)",
+    "cleaning_pril_kraft_gel": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Pril Kraft Gel (Ultra Plus)", "icon": "💧", "room": "kitchen", "latin": "Surfactantus prilicus", "sci": ["#sci/Chemistry", "#sci/MaterialsScience"],
+      "val": { "ph_level": 7.5, "surfactant_conc": "High", "pl_score": 7.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Henkel / Pril" },
+      "quality_metrics": { "degreasing": "Premium (Double-Action)", "skin_tolerance": "Dermatologically tested" },
+      "props": ["Der deutsche Goldstandard für hartnäckiges Fett", "Technologisch optimiert für Kaltwasser-Löslichkeit", "Hohe Viskosität: Maximale Ergiebigkeit pro Tropfen"],
+      "lang": { "de": "Pril Kraft Gel", "en": "Pril Dish Soap", "es": "Pril Lavavajillas", "fr": "Pril Liquide Vaisselle" }
+    },
+    "cleaning_w5_ultra_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "W5 Spülmittel Ultra (Lidl)", "icon": "🛒", "room": "kitchen", "latin": "Surfactantus lidlianus", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 7.2, "surfactant_conc": "Medium-High", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "quality_metrics": { "price_performance": "Unbeatable", "fragrance": "Lemon / Aloe Vera" },
+      "props": ["Lidls Antwort auf die teuren Marken", "Technologisch fast identische Tensid-Mischung", "Schäumt extrem stabil für mechanische Unterstützung"],
+      "lang": { "de": "Lidl W5 Spülmittel", "en": "Lidl W5 Dish Soap", "es": "W5 Lavavajillas Lidl" }
+    },
+
+    "--- THE_DEGREASING_ASSASSINS ---": "Küchenreiniger (Fettlöser-Sprays)",
+    "cleaning_cillit_bang_fat_grease": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Cillit Bang Kraftreiniger Fett & Eingebranntes", "icon": "🔫", "room": "kitchen", "latin": "Lipidus deconstructor", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 11.5, "solvent_type": "Alkaline", "pl_score": 6.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Reckitt / Cillit Bang" },
+      "quality_metrics": { "reaction_time": "< 1 minute", "surface_safety": "Stainless Steel / Ceramic" },
+      "props": ["Die chemische Keule für Extremfälle", "Technologisch extrem alkalischer pH-Wert", "Ikonischer Duft signalisiert klinische Reinheit"],
+      "lang": { "de": "Cillit Bang Fettlöser", "en": "Cillit Bang Degreaser", "es": "Cillit Bang Desengrasante" }
+    },
+    "cleaning_k_classic_kuechenreiniger": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Küchenreiniger (Fettlöser)", "icon": "🧼", "room": "kitchen", "latin": "Lipidus kauflandia", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 10.8, "solvent_type": "Surfactant-based", "pl_score": 8.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic" },
+      "quality_metrics": { "versatility": "Multi-surface", "value": "750ml Bulk Spray" },
+      "props": ["Kauflands Allzweckwaffe gegen klebrige Oberflächen", "Gutes Gleichgewicht zwischen Reinigungskraft und Materialschonung", "Ideal für das tägliche Abwischen nach dem Kochen"],
+      "lang": { "de": "Kaufland Küchenreiniger", "en": "Kaufland Kitchen Cleaner" }
+    },
+	
+    "--- THE_ALKALINE_HEAVYWEIGHTS ---": "Putzsoda (Reine Soda - Fettlöser-Konzentrat)",
+    "cleaning_k_classic_reine_soda_kaufland": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Reine Soda (Pulver)", "icon": "🧱", "room": "kitchen", "latin": "Natriumcarbonat", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 11.5, "form": "Powder", "pl_score": 10.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic" },
+      "quality_metrics": { "degreasing_power": "Maximum", "versatility": "High (Kitchen/Laundry)" },
+      "props": ["Kauflands preiswerter Fett-Killer", "Technologisch überlegen bei extrem verkrusteten Pfannen", "Muss aufgrund des hohen pH-Werts mit Handschuhen verwendet werden"],
+      "lang": { "de": "Kaufland Reine Soda", "en": "Kaufland Washing Soda", "es": "Carbonato de sodio Kaufland" }
+    },
+    "cleaning_denkmit_reine_soda_dm": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Denkmit Reine Soda (dm)", "icon": "🧼", "room": "kitchen", "latin": "Natriumcarbonat", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 11.5, "form": "Powder", "pl_score": 10.0 },
+      "meta": { "locations": ["dm"], "brand": "Denkmit" },
+      "quality_metrics": { "purity": "High", "solubility": "Excellent in warm water" },
+      "props": ["Der Drogerie-Standard für ökologisches Reinigen", "Entfernt Beläge von Tee, Kaffee und Fett", "Technologisch unschlagbar günstig für große Flächen"],
+      "lang": { "de": "dm Denkmit Reine Soda", "en": "dm Washing Soda", "es": "Carbonato de sodio dm" }
+    },
+
+    "--- THE_DISHWASHER_ELITE ---": "Spülmaschinen-Reiniger (Automatisierung)",
+    "cleaning_w5_tabs_lidl": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "W5 Multi-Active Tabs (Lidl)", "icon": "🟡", "room": "kitchen", "latin": "Tabula lidliana suprema", "sci": ["#sci/Chemistry"],
+      "val": { "cleaning_power": "9/10", "dry_effect": "8/10", "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "quality_metrics": { "enzyme_stack": "Protease + Amylase", "bleach_type": "Oxygen-based" },
+      "props": ["Technologischer P/L-König", "Effizient gegen Stärkerückstände", "Löst sich auch bei 45°C (Eco) vollständig auf"],
+      "lang": { "de": "Lidl W5 Tabs", "en": "Lidl Dishwasher Tabs" }
+    },
+    "cleaning_finish_ultimate_plus": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Finish Ultimate Plus", "icon": "💎", "room": "kitchen", "latin": "Tabula premium finishia", "sci": ["#sci/Chemistry"],
+      "val": { "phases": 3, "fragrance": "Lemon / Fresh", "pl_score": 6.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Finish (Reckitt)" },
+      "quality_metrics": { "stain_removal": "Extreme", "shine": "Diamond Standard" },
+      "props": ["Technologische Speerspitze mit 3-Kammer-System", "Löst selbst eingebrannte Lasagne-Reste", "Hoher Anschaffungspreis"],
+      "lang": { "de": "Finish Ultimate Plus", "en": "Finish Ultimate" }
+    },
+    "cleaning_denkmit_tabs_dm": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Denkmit Tabs Multi-Power 12 (dm)", "icon": "🧼", "room": "kitchen", "latin": "Tabula dm-denkmitia", "sci": ["#sci/Chemistry"],
+      "val": { "cleaning_power": "9/10", "dry_effect": "9/10", "pl_score": 9.0 },
+      "meta": { "locations": ["dm"], "brand": "Denkmit" },
+      "quality_metrics": { "silver_protection": "Active", "low_temperature_tech": "Enhanced" },
+      "props": ["Größter Konkurrent für Lidl W5", "Hervorragend beim Silberschutz", "Neutraler Geruch nach dem Spülgang"],
+      "lang": { "de": "dm Denkmit Tabs", "en": "dm Dishwasher Tabs" }
+    },
+
+    "--- THE_SCRUBBING_SQUAD ---": "Schwämme & Tücher",
+    "utensil_glitzi_schwamm_vileda": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Vileda Glitzi Schwamm", "icon": "🧽", "room": "kitchen", "sci": ["#sci/MaterialsScience"],
+      "val": { "durability": "High", "pl_score": 7.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Vileda" },
+      "quality_metrics": { "abrasive_layer": "Very strong", "antibacterial": "Silver ions in foam" },
+      "props": ["Der technologische Urvater der Spülschwämme", "Die schwarze Seite ist extrem aggressiv gegen Krusten", "Hält deutlich länger als Billig-Schwämme"],
+      "lang": { "de": "Vileda Glitzi", "en": "Vileda Scouring Sponge" }
+    },
+    "utensil_w5_spuelschwaemme_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "W5 Spülschwämme (Lidl 6er Pack)", "icon": "🛒", "room": "kitchen", "val": { "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Der Preis-Leistungs-Killer", "Ideal für den häufigen Wechsel (Hygiene-Vorteil)", "Technologisch simpler Aufbau, aber effektiv"],
+      "lang": { "de": "W5 Schwämme", "en": "Lidl Sponges" }
+    },
+    "utensil_floralys_kuechentuecher_lidl": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Floralys Küchenrollen (Lidl)", "icon": "🧻", "room": "kitchen", "sci": ["#sci/MaterialsScience"],
+      "val": { "layers": 3, "absorbency": "High", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "Floralys" },
+      "props": ["Technologisch optimierte Prägung für maximale Flüssigkeitsaufnahme", "Reißfest auch in nassem Zustand", "Direkte Konkurrenz zu Zewa (oft identische Qualität)"],
+      "lang": { "de": "Floralys Küchentücher", "en": "Lidl Kitchen Towels" }
+    }
+  },
+  "kitchen_storage_matrix": {
+    "--- THE_BARRIER_BOSES ---": "Folien & Schutzschichten",
+    "utensil_alufolie_k_classic_kaufland": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Alufolie (extra reißfest)", "icon": "🪙", "room": "kitchen", "latin": "Folium aluminium", "sci": ["#sci/MaterialsScience", "#sci/Physics"],
+      "val": { "thickness": "12-15 µm", "heat_resistance": "High", "pl_score": 9.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic" },
+      "quality_metrics": { "barrier_effect": "100% (Light/Oxygen/Moisture)", "recyclability": "High" },
+      "props": ["Technologisch die absolut dichteste Barriere gegen Aromaverlust", "Ideal zum Grillen oder Backen (hitzestabil)", "Vorsicht bei säurehaltigen Lebensmitteln (Zitronen/Tomaten)"],
+      "lang": { "de": "Kaufland Alufolie", "en": "Aluminum Foil", "es": "Papel de aluminio" }
+    },
+    "utensil_frischhaltefolie_aromata_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Aromata Frischhaltefolie (Lidl)", "icon": "🌯", "room": "kitchen", "latin": "Polyethylene stretch", "sci": ["#sci/PolymerScience"],
+      "val": { "material": "LDPE", "stretch_factor": "300%", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "Aromata" },
+      "quality_metrics": { "adhesion": "Self-clinging technology", "breathability": "Low" },
+      "props": ["Technologisch optimierte Oberflächenspannung für maximale Haftung", "Hält Lebensmittel durch Feuchtigkeitsbarriere länger knackig", "Geruchsneutral und weichmacherfrei"],
+      "lang": { "de": "Lidl Frischhaltefolie", "en": "Cling Film", "es": "Film transparente" }
+    },
+
+    "--- THE_DEEP_FREEZE_GUARDS ---": "Gefrierbeutel (Gefrierbrand-Schutz)",
+    "utensil_gefrierbeutel_toppits_zipper": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Toppits Zipper (Der Marken-Benchmark)", "icon": "❄️", "room": "kitchen", "latin": "Saccus glaciarius", "sci": ["#sci/MaterialsScience"],
+      "val": { "closure": "Zipper-System", "thickness": "Multi-layer", "pl_score": 6.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Toppits" },
+      "quality_metrics": { "tear_resistance": "Extreme", "reusability": "High" },
+      "props": ["Die technologische Referenz für sicheres Einfrieren", "Akustisches Feedback beim Schließen ('Klick')", "Extrem dickwandig, um Gefrierbrand zu verhindern"],
+      "lang": { "de": "Toppits Zipper", "en": "Toppits Freezer Bags", "es": "Bolsas de congelación Toppits" }
+    },
+    "utensil_gefrierbeutel_aromata_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Aromata Gefrierbeutel (Lidl)", "icon": "🛒", "room": "kitchen", "val": { "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "Aromata" },
+      "props": ["Der technologische Preis-Leistungs-Sieger", "Inklusive Verschlussclips oder Drahtbindern", "Reißfeste Folie für den täglichen Standard-Gebrauch"],
+      "lang": { "de": "Lidl Gefrierbeutel", "en": "Lidl Freezer Bags" }
+    },
+
+    "cleaning_dr_beckmann_glaskeramik": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Dr. Beckmann Glaskeramik Putzstein", "icon": "💎", "room": "kitchen", "sci": ["#sci/MaterialsScience"],
+      "val": { "form": "Solid stone", "pl_score": 7.5 },
+      "meta": { "locations": ["dm", "rewe"], "brand": "Dr. Beckmann" },
+      "props": ["Baut technologisch einen Schutzfilm auf", "Verhindert das Einbrennen neuer Speisereste"],
+      "lang": { "de": "Glaskeramik Putzstein", "en": "Ceramic Hob Cleaner Stone" }
+    },
+    "cleaning_denkmit_glaskeramik_lotion": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Denkmit Glaskeramikreiniger (dm)", "icon": "🧴", "room": "kitchen", "val": { "pl_score": 9.5 },
+      "meta": { "locations": ["dm"], "brand": "Denkmit" },
+      "props": ["Günstige Alternative für den täglichen Hochglanz", "Löst Kalk und leichte Fettspritzer sofort"],
+      "lang": { "de": "dm Glaskeramikreiniger", "en": "dm Ceramic Cleaner" }
+    },
+
+    "--- THE_HEAVY_DUTY_OVEN ---": "Backofen-Infrastruktur",
+    "cleaning_w5_backofenreiniger_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "W5 Backofen- & Grillreiniger", "icon": "🔥", "room": "kitchen", "latin": "Carbonis deconstructor", "val": { "ph_level": 13.0, "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Löst selbst schwarze Karbonisierungen", "Technologisch optimierte Haftung an Decken und Wänden"],
+      "lang": { "de": "W5 Backofenreiniger", "en": "Oven Cleaner" }
+    },
+
+    "--- THE_SURFACE_GUARDS ---": "Schränke & Universale Reinigung",
+    "cleaning_w5_allzweck_tuecher_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "W5 Feuchte Allzwecktücher", "icon": "🧻", "room": "kitchen", "val": { "pl_score": 8.5 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Ideal für Schrankoberflächen und Griffe", "Technologisch schnelltrocknend gegen Schlieren"],
+      "lang": { "de": "W5 Allzwecktücher", "en": "Multi-surface Wipes" }
+    },
+    "cleaning_fit_allzweckreiniger": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fit Allesreiniger", "icon": "🧼", "room": "kitchen", "val": { "pl_score": 9.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Fit" },
+      "props": ["Technologisch sanft zu empfindlichen Kunststoff-Fronten", "Neutraler pH-Wert für maximale Materialschonung"],
+      "lang": { "de": "Allesreiniger", "en": "All Purpose Cleaner" }
+    },
+
+    "--- THE_HEAT_BUFFER ---": "Backpapier (Anti-Haft-Tech)",
+    "utensil_backpapier_k_classic_kaufland": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "K-Classic Backpapier (Zuschnitte)", "icon": "🥧", "room": "kitchen", "sci": ["#sci/Chemistry"],
+      "val": { "coating": "Silicone-based", "max_temp": "220°C", "pl_score": 9.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic" },
+      "props": ["Beidseitig beschichtet für maximale Anti-Haft-Wirkung", "Technologisch optimiert gegen Durchfetten", "Vorgeschnitten für Standard-Backbleche"],
+      "lang": { "de": "Kaufland Backpapier", "en": "Baking Paper" }
+    },
+
+    "--- THE_WASTE_MANAGEMENT ---": "Müllbeutel (Reißfestigkeits-Tech)",
+    "utensil_w5_muellbeutel_zugband": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "W5 Müllbeutel mit Zugband (35L/50L)", "icon": "🗑️", "room": "kitchen", "sci": ["#sci/PolymerScience"],
+      "val": { "material": "LDPE", "pl_score": 9.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "quality_metrics": { "tear_resistance": "High", "leak_proof": "Excellent" },
+      "props": ["Technologisch mehrschichtig co-extrudiert", "Das Zugband hält auch bei schwerem Bio-Müll", "Kein unangenehmer Chemie-Geruch"],
+      "lang": { "de": "W5 Müllbeutel", "en": "Lidl Trash Bags" }
+    }
+  },
+  "bathroom_cleaning_matrix": {
+    "--- THE_LIMESCALE_LEADERS ---": "Kalklöser (Säure-Spezialisten)",
+    "cleaning_w5_kalkreiniger_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "W5 Kalkreiniger (Lidl)", "icon": "🍋", "room": "bathroom", "latin": "Acidum contra calcem", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 1.5, "acid_base": "Sulfamic/Citric Acid", "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "quality_metrics": { "effectiveness": "Extreme on minerals", "scent": "Neutral / Lemon" },
+      "props": ["Lidls technologische Wunderwaffe gegen weiße Flecken", "Löst Kalk schneller als Essig, ohne die Dichtungen so stark anzugreifen", "Unschlagbarer Preis für die Konzentration"],
+      "lang": { "de": "Lidl Kalkreiniger", "en": "Lidl Limescale Remover", "es": "Antical Lidl", "fr": "Anticalcaire Lidl" }
+    },
+    "cleaning_antikal_classic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Antikal Classic (Spray/Gel)", "icon": "🛡️", "room": "bathroom", "latin": "Protector metallicus", "sci": ["#sci/Chemistry", "#sci/MaterialsScience"],
+      "val": { "ph_level": 1.2, "pl_score": 6.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Antikal (P&G)" },
+      "quality_metrics": { "shine_tech": "Water-sheeting effect", "durability": "High" },
+      "props": ["Der Marken-Standard mit Schutzfilm-Technologie", "Verhindert technologisch die Neubildung von Kalk durch Glättung der Oberfläche", "Deutlich teurer als Eigenmarken"],
+      "lang": { "de": "Antikal", "en": "Antikal Limescale Remover", "es": "Antical", "fr": "Antikal" }
+    },
+
+    "--- THE_TOILET_DESTROYERS ---": "WC-Reiniger (Urinstein-Löser)",
+    "cleaning_w5_wc_fix_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "W5 WC-Fix Reinigungsgel (Lidl)", "icon": "🚽", "room": "bathroom", "latin": "Acidum cloacae", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 1.0, "viscosity": "High", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "quality_metrics": { "adhesion": "Excellent (sticks to vertical surfaces)", "fragrance": "Ocean / Forest" },
+      "props": ["Technologisch optimiert für maximale Einwirkzeit unter dem Rand", "Zersetzt Urinstein und Kalkablagerungen auf molekularer Ebene", "Preis-Leistungs-Sieger für die tägliche Hygiene"],
+      "lang": { "de": "W5 WC-Reiniger", "en": "W5 Toilet Gel", "es": "Gel de baño W5" }
+    },
+    "cleaning_wc_ente_frische_siegel": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "WC-Ente Frische-Siegel", "icon": "🦆", "room": "bathroom", "sci": ["#sci/Microbiology"],
+      "val": { "form": "Gel-Stamp", "duration": "Up to 700 flushes", "pl_score": 7.0 },
+      "meta": { "locations": ["everywhere"], "brand": "SC Johnson / WC-Ente" },
+      "props": ["Technologisch innovatives System ohne Plastikkörbchen", "Sorgt bei jedem Spülgang für einen schmutzabweisenden Film", "Hygienischer als klassische Einhänger"],
+      "lang": { "de": "WC-Ente Siegel", "en": "Duck Fresh Discs", "es": "Pato Discos Activos" }
+    },
+
+    "--- THE_SURFACE_POLISHERS ---": "Badreiniger & Glas (Glanz-Matrix)",
+    "cleaning_denkmit_badreiniger_dm": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Denkmit Badreiniger (dm)", "icon": "🚿", "room": "bathroom", "latin": "Sanitarium mundus", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 2.5, "pl_score": 9.0 },
+      "meta": { "locations": ["dm"], "brand": "Denkmit" },
+      "quality_metrics": { "beading_effect": "Medium", "scent": "Fresh / Floral" },
+      "props": ["Der Allrounder für Armaturen und Fliesen", "Löst Seifenreste technologisch durch milde Säuren und Tenside", "Sehr gute Sprühbild-Verteilung"],
+      "lang": { "de": "dm Badreiniger", "en": "dm Bathroom Cleaner", "es": "Limpiador de baño dm" }
+    }
+  },
+  "glass_cleaning_matrix": {
+    "--- THE_MARKET_BENCHMARK ---": "Sidolin (Der Glanz-Standard)",
+    "cleaning_sidolin_3in1_cristal": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Sidolin 3-in-1 Cristal", "icon": "💎", "room": "bathroom", "latin": "Spiritus vitri premium", "sci": ["#sci/Chemistry", "#sci/Physics"],
+      "val": { "solvent": "Ethanol-based", "pl_score": 6.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Henkel / Sidolin" },
+      "quality_metrics": { "streak_free": "Excellent", "anti_fog": "Medium" },
+      "props": ["Der technologische Goldstandard für Spiegel und Fenster", "Innovative Sprühkopf-Technologie (Schaum oder Sprühnebel)", "Verdunstet extrem rückstandsfrei"],
+      "lang": { "de": "Sidolin Glasreiniger", "en": "Sidolin Glass Cleaner", "es": "Limpiacruz Sidolin", "fr": "Sidolin Nettoyant Vitres" }
+    },
+
+    "--- THE_PRICE_LEADER ---": "W5 Glasreiniger (Lidl)",
+    "cleaning_w5_glasreiniger_lidl": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "W5 Glasreiniger (Classic)", "icon": "🛒", "room": "bathroom", "latin": "Spiritus vitri lidlianus", "sci": ["#sci/Chemistry"],
+      "val": { "solvent": "Alcohol-based", "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "quality_metrics": { "price": "Extreme budget", "cleaning_power": "High" },
+      "props": ["Lidls Effizienz-Wunder für große Fensterflächen", "Technologisch fast identisch mit teuren Marken-Basics", "Hinterlässt einen sehr neutralen Frische-Duft"],
+      "lang": { "de": "Lidl W5 Glasreiniger", "en": "Lidl Glass Cleaner", "es": "Limpia cristales W5 Lidl" }
+    },
+
+    "--- THE_DRUGSTORE_PRO ---": "Denkmit Glasreiniger (dm)",
+    "cleaning_denkmit_glasreiniger_dm": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Denkmit Glasreiniger", "icon": "🧼", "room": "bathroom", "latin": "Spiritus vitri dm", "sci": ["#sci/Chemistry"],
+      "val": { "solvent": "Bio-Alcohol", "pl_score": 9.5 },
+      "meta": { "locations": ["dm"], "brand": "Denkmit" },
+      "quality_metrics": { "eco_factor": "High (Blue Angel certified)", "residue": "Zero" },
+      "props": ["Hervorragende Reinigungsleistung auf Polymer-Basis", "Sehr materialschonend bei Kunststoffrahmen", "Bietet einen leichten Abperleffekt nach der Reinigung"],
+      "lang": { "de": "dm Glasreiniger", "en": "dm Glass Cleaner", "fr": "Denkmit Nettoyant Vitres" }
+    }
+  },
+  "laundry_cleaning_matrix": {
+    "--- THE_HEAVY_DUTY_TITANS ---": "Vollwaschmittel (Weißes & Kochwäsche)",
+    "laundry_persil_universal_pulver": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Persil Universal Pulver (Tiefenrein)", "icon": "⚪", "room": "laundry", "latin": "Detergens universalis premium", "sci": ["#sci/Chemistry", "#sci/MaterialsScience"],
+      "val": { "form": "Powder", "bleach": "Oxygen-based", "pl_score": 6.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Henkel / Persil" },
+      "quality_metrics": { "stain_removal": "Extreme", "optical_brighteners": "High" },
+      "props": ["Der technologische Goldstandard für weiße Wäsche", "Enthält Bleichmittel, das Bakterien schon ab 40°C abtötet", "Schützt vor Vergrauung durch starke optische Aufheller"],
+      "lang": { "de": "Persil Universal", "en": "Persil Heavy Duty", "fr": "Persil Universel" }
+    },
+    "laundry_formil_ultra_plus_lidl": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Formil Ultra Plus (Pulver)", "icon": "🛒", "room": "laundry", "latin": "Detergens lidlianus", "sci": ["#sci/Chemistry"],
+      "val": { "form": "Powder", "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "Formil" },
+      "quality_metrics": { "stiftung_warentest": "Regularly Top-Rated", "price": "Extreme Budget" },
+      "props": ["Lidls Effizienz-König", "Technologisch fast identische Enzym-Dichte wie Markenprodukte", "Hervorragende Kalkbindung für deutsches Leitungswasser"],
+      "lang": { "de": "Lidl Formil Vollwaschmittel", "en": "Lidl Formil Heavy Duty" }
+    },
+
+    "--- THE_COLOR_GUARDS ---": "Colorwaschmittel (Buntwäsche)",
+    "laundry_ariel_color_gel": {
+      "unit_price": 10.00,
+      "unit_type": "piece",
+      "label": "Ariel Color Flüssig", "icon": "🌈", "room": "laundry", "latin": "Detergens coloris", "sci": ["#sci/Chemistry"],
+      "val": { "form": "Liquid", "pl_score": 7.0 },
+      "meta": { "locations": ["everywhere"], "brand": "P&G / Ariel" },
+      "quality_metrics": { "color_protection": "High", "cold_wash_tech": "Excellent" },
+      "props": ["Technologisch führend bei der Flecklösekraft in kaltem Wasser", "Verhindert das Ausbluten von Farben durch Transfer-Inhibitoren", "Hinterlässt einen sehr langanhaltenden Frischeduft"],
+      "lang": { "de": "Ariel Color", "en": "Ariel Color Liquid" }
+    },
+    "laundry_k_classic_color_kaufland": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "K-Classic Colorwaschmittel", "icon": "🧱", "room": "laundry", "val": { "form": "Liquid", "pl_score": 9.5 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic" },
+      "props": ["Kauflands Massen-Waffe für die tägliche Buntwäsche", "Sehr gute Faserglättung zur Vermeidung von Pilling", "Unschlagbar günstig im 1,5L-Format"],
+      "lang": { "de": "Kaufland Colorwaschmittel", "en": "Kaufland Color Detergent" }
+    },
+    "--- THE_SOFTNESS_MASTERS ---": "Weichspüler (Faser-Conditioning)",
+    "laundry_lenor_aprilfrisch": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Lenor Aprilfrisch", "icon": "🌸", "room": "laundry", "sci": ["#sci/Chemistry"],
+      "val": { "scent_tech": "Capsule-technology", "pl_score": 6.0 },
+      "meta": { "locations": ["everywhere"], "brand": "P&G / Lenor" },
+      "props": ["Technologische Duftkapseln setzen Aroma über Wochen frei", "Macht die Wäsche extrem weich und reduziert die Trocknungszeit", "Enthält kationische Tenside zur Faserglättung"],
+      "lang": { "de": "Lenor Aprilfrisch", "en": "Lenor Spring Awakening" }
+    },
+    "laundry_w5_weichspueler_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "W5 Weichspüler (Diverse Düfte)", "icon": "🛒", "room": "laundry", "val": { "pl_score": 9.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Der Preis-Leistungs-Sieger für weiche Wäsche", "Technologisch solide Grundrezeptur ohne teuren Markenzusatz", "Gute statische Entladung für Synthetik-Fasern"],
+      "lang": { "de": "W5 Weichspüler", "en": "Lidl Fabric Softener" }
+    },
+
+    "--- THE_STAIN_ASSASSINS ---": "Fleckentfernung & Hygiene",
+    "laundry_dr_beckmann_fleckenteufel": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Dr. Beckmann Fleckenteufel", "icon": "👹", "room": "laundry", "sci": ["#sci/Chemistry"],
+      "val": { "specialization": "Specific stain types", "pl_score": 7.5 },
+      "meta": { "locations": ["dm", "rewe", "kaufland"], "brand": "Dr. Beckmann" },
+      "props": ["Technologisch hochspezialisierte Formeln (Blut, Wein, Fett)", "Kein Universalmittel, sondern gezielte Molekular-Attacke", "Sicher für Fasern und Farben"],
+      "lang": { "de": "Fleckenteufel", "en": "Stain Devils" }
+    },
+    "laundry_w5_hygienespueler_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "W5 Hygienespüler", "icon": "🦠", "room": "laundry", "sci": ["#sci/Microbiology"],
+      "val": { "disinfection": "99.9% of bacteria", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Entfernt Gerüche und Keime bei niedrigen Temperaturen", "Technologisch wichtig für Sportkleidung und Handtücher", "Beseitigt Pilze und spezielle Viren ohne Kochen"],
+      "lang": { "de": "Hygienespüler", "en": "Hygiene Rinse" }
+    }
+  },
+  
+  "laundry_additives_matrix": {
+    "--- THE_SOFTNESS_MASTERS ---": "Weichspüler (Faser-Conditioning)",
+    "laundry_lenor_aprilfrisch": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Lenor Aprilfrisch", "icon": "🌸", "room": "laundry", "sci": ["#sci/Chemistry"],
+      "val": { "scent_tech": "Capsule-technology", "pl_score": 6.0 },
+      "meta": { "locations": ["everywhere"], "brand": "P&G / Lenor" },
+      "props": ["Technologische Duftkapseln setzen Aroma über Wochen frei", "Macht die Wäsche extrem weich und reduziert die Trocknungszeit", "Enthält kationische Tenside zur Faserglättung"],
+      "lang": { "de": "Lenor Aprilfrisch", "en": "Lenor Spring Awakening" }
+    },
+    "laundry_w5_weichspueler_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "W5 Weichspüler (Diverse Düfte)", "icon": "🛒", "room": "laundry", "val": { "pl_score": 9.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Der Preis-Leistungs-Sieger für weiche Wäsche", "Technologisch solide Grundrezeptur ohne teuren Markenzusatz", "Gute statische Entladung für Synthetik-Fasern"],
+      "lang": { "de": "W5 Weichspüler", "en": "Lidl Fabric Softener" }
+    },
+
+    "--- THE_STAIN_ASSASSINS ---": "Fleckentfernung & Hygiene",
+    "laundry_dr_beckmann_fleckenteufel": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Dr. Beckmann Fleckenteufel", "icon": "👹", "room": "laundry", "sci": ["#sci/Chemistry"],
+      "val": { "specialization": "Specific stain types", "pl_score": 7.5 },
+      "meta": { "locations": ["dm", "rewe", "kaufland"], "brand": "Dr. Beckmann" },
+      "props": ["Technologisch hochspezialisierte Formeln (Blut, Wein, Fett)", "Kein Universalmittel, sondern gezielte Molekular-Attacke", "Sicher für Fasern und Farben"],
+      "lang": { "de": "Fleckenteufel", "en": "Stain Devils" }
+    },
+    "laundry_w5_hygienespueler_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "W5 Hygienespüler", "icon": "🦠", "room": "laundry", "sci": ["#sci/Microbiology"],
+      "val": { "disinfection": "99.9% of bacteria", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Entfernt Gerüche und Keime bei niedrigen Temperaturen", "Technologisch wichtig für Sportkleidung und Handtücher", "Beseitigt Pilze und spezielle Viren ohne Kochen"],
+      "lang": { "de": "Hygienespüler", "en": "Hygiene Rinse" }
+    },
+	"laundry_formil_ultra_plus_lidl": {
+      "unit_price": 8.00,
+      "unit_type": "piece",
+      "label": "Formil Ultra Plus (Pulver)", "room": "laundry", "pl_score": 10.0,
+      "use_case": "Weiße Wäsche, Handtücher, Bettwäsche",
+      "tech_benefit": "Maximale Bleichmittel-Dichte auf Sauerstoffbasis; eliminiert Bakterien und Grauschleier molekular.",
+      "meta": { "locations": ["lidl"], "brand": "Formil" }
+    }
+  },
+  "machine_maintenance_matrix": {
+    "--- THE_ION_EXCHANGER ---": "Spezialsalz (Enthärtung)",
+    "maintenance_w5_spuelsalz_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "W5 Spezialsalz (Lidl)", "icon": "🧂", "room": "kitchen", "sci": ["#sci/Chemistry"],
+      "val": { "purity": "99.9% NaCl", "grain_size": "Coarse", "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Regeneriert technologisch den Ionenaustauscher der Spülmaschine", "Verhindert Kalkschleier auf Gläsern von Grund auf", "Grober Schnitt für optimale Lösegeschwindigkeit"],
+      "lang": { "de": "Lidl Spülsalz", "en": "Dishwasher Salt" }
+    },
+
+    "--- THE_SURFACE_TENSION_KILLER ---": "Klarspüler (Trocknungs-Beschleuniger)",
+    "maintenance_denkmit_klarspueler_dm": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Denkmit Klarspüler (dm)", "icon": "✨", "room": "kitchen", "sci": ["#sci/Physics"],
+      "val": { "surfactant_type": "Non-ionic", "pl_score": 9.5 },
+      "meta": { "locations": ["dm"], "brand": "Denkmit" },
+      "props": ["Senkt die Oberflächenspannung des Wassers molekular ab", "Sorgt für streifenfreie Trocknung durch den 'Beading-Effect'", "Technologisch extrem ergiebig"],
+      "lang": { "de": "dm Klarspüler", "en": "Rinse Aid" }
+    },
+
+    "--- THE_SYSTEM_PURGE ---": "Maschinenpfleger (Fett- & Kalk-Stop)",
+    "maintenance_w5_maschinenpfleger_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "W5 Waschmaschinen- / Spülmaschinenpfleger", "icon": "🧪", "room": "laundry", "val": { "pl_score": 9.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Entfernt Biofilme und Kalkablagerungen in Schläuchen und Pumpen", "Technologisch wichtig zur Vermeidung von Gerüchen", "Erhöht die Lebensdauer der Heizstäbe"],
+      "lang": { "de": "W5 Maschinenreiniger", "en": "Machine Cleaner" }
+    }
+  },
+
+  "drain_cleaning_matrix": {
+    "--- THE_HAIR_DISSOLVER ---": "Rohrreiniger (Chemische Keule)",
+    "cleaning_w5_rohrreiniger_gel_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "W5 Rohrreiniger Gel", "icon": "🌊", "room": "bathroom", "sci": ["#sci/Chemistry"],
+      "val": { "ph_level": 14.0, "active_ing": "Sodium Hydroxide", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Zersetzt Haare und Fett durch starke Alkalität", "Gel-Formel sinkt technologisch schwer durch das Wasser zum Pfropfen", "Sicher für alle gängigen Kunststoffrohre"],
+      "lang": { "de": "Lidl Rohrreiniger", "en": "Drain Opener Gel" }
+    },
+    "cleaning_k_classic_rohrreiniger_granulat": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "K-Classic Rohrreiniger (Granulat)", "icon": "⚡", "room": "kitchen", "val": { "reactivity": "Extreme", "pl_score": 9.0 },
+      "meta": { "locations": ["kaufland"], "brand": "K-Classic" },
+      "props": ["Technologisch gefährlich, aber effektiv: Erzeugt Hitze (Exotherm)", "Löst versteinertes Fett in der Küche", "Achtung: Nur mit kaltem Wasser nachspülen!"],
+      "lang": { "de": "Kaufland Granulat", "en": "Drain Granules" }
+    }
+  },
+
+  "floor_cleaning_matrix": {
+    "--- THE_ALLROUNDER ---": "Allzweckreiniger (Boden & Flächen)",
+    "cleaning_ajax_allzweckreiniger": {
+      "label": "Ajax Frischeduft", "icon": "🌊", "room": "kitchen", "val": { "pl_score": 7.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Ajax (CP)" },
+      "props": ["Klassische Tensid-Mischung mit starkem Fokus auf Raumduft", "Technologisch unkompliziert für Fliesen und Stein"],
+      "lang": { "de": "Ajax Allzweck", "en": "Ajax All Purpose" }
+    },
+    "cleaning_w5_glanzreiniger_lidl": {
+      "label": "W5 Glanzreiniger (Laminat & Parkett)", "icon": "🪵", "room": "pantry", "val": { "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Spezielle Polymere schützen vor Feuchtigkeit (Quellschutz)", "Hinterlässt keine rutschigen Schichten"],
+      "lang": { "de": "W5 Bodenpflege", "en": "Lidl Floor Care" }
+    }
+  },
+  "paper_logistics_matrix": {
+    "--- THE_BATHROOM_BASICS ---": "Toilettenpapier (Lagen- & Komfort-Tech)",
+    "paper_toilet_floralys_super_soft_lidl": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Floralys Super Soft (4-lagig)", "icon": "🧻", "room": "bathroom", "sci": ["#sci/MaterialsScience"],
+      "val": { "layers": 4, "material": "100% Virgin Pulp", "pl_score": 9.5 },
+      "meta": { "locations": ["lidl"], "brand": "Floralys" },
+      "quality_metrics": { "softness": "High", "tear_resistance": "Excellent" },
+      "props": ["Technologisch optimierte Prägung für maximale Weichheit", "4-Lagen-Struktur verhindert Durchreißen bei Nässe", "Preis-Leistungs-Sieger im Discounter-Segment"],
+      "lang": { "de": "Lidl Floralys 4-lagig", "en": "Lidl 4-ply Toilet Paper" }
+    },
+    "paper_toilet_sanft_und_sicher_dm_budni": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Sanft & Sicher Recycling (3-lagig)", "icon": "♻️", "room": "bathroom", "val": { "layers": 3, "material": "Recycled Fiber", "pl_score": 9.0 },
+      "meta": { "locations": ["budni", "dm"], "brand": "Sanft & Sicher" },
+      "props": ["Umwelt-Technologie: Blauer Engel zertifiziert", "Überraschend weich für Recycling-Papier", "Hohe Blattanzahl pro Rolle"],
+      "lang": { "de": "Recycling Toilettenpapier", "en": "Recycled Toilet Paper" }
+    },
+
+    "--- THE_NASAL_SHIELD ---": "Taschentücher (Hygiene-Tech)",
+    "paper_tissues_tempo_original": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Tempo Original (4-lagig)", "icon": "🤧", "room": "bathroom", "sci": ["#sci/Engineering"],
+      "val": { "layers": 4, "wash_resistant": "Yes", "pl_score": 7.0 },
+      "meta": { "locations": ["everywhere"], "brand": "Tempo" },
+      "quality_metrics": { "stability": "Maximum", "softness": "Premium" },
+      "props": ["Der technologische Goldstandard: Waschmaschinenfest", "Fasern lösen sich auch bei starker Belastung nicht auf", "Deutlich teurer als Eigenmarken, aber unerreicht stabil"],
+      "lang": { "de": "Tempo Taschentücher", "en": "Tempo Tissues" }
+    },
+    "paper_tissues_floralys_soft_lidl": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Floralys Soft Taschentücher", "icon": "🛒", "room": "bathroom", "val": { "layers": 4, "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "Floralys" },
+      "props": ["Technologisch auf Augenhöhe mit Markenprodukten zum Bruchteil des Preises", "Sehr weich an der Nase, ideal für Allergiker"],
+      "lang": { "de": "Lidl Taschentücher", "en": "Lidl Tissues" }
+    },
+
+    "--- THE_SPILL_ABSORBER ---": "Küchenrollen (Saugkraft-Matrix)",
+    "paper_kitchen_zewa_wisch_und_weg": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Zewa Wisch&Weg (Klassik)", "icon": "🧻", "room": "kitchen", "sci": ["#sci/Physics"],
+      "val": { "absorbency_tech": "Power-X-Struktur", "pl_score": 6.5 },
+      "meta": { "locations": ["everywhere"], "brand": "Zewa" },
+      "props": ["Technologische Wabenstruktur für maximale Flüssigkeitsaufnahme", "Kann ausgewrungen und weiterbenutzt werden", "Sehr reißfest im nassen Zustand"],
+      "lang": { "de": "Zewa Wisch&Weg", "en": "Zewa Kitchen Towels" }
+    }
+  },
+  "floor_maintenance_matrix": {
+    "--- THE_MOP_MONARCHS ---": "Bodenwisch-Systeme (Mechanik)",
+    "tool_vileda_ultramat_system": {
+      "unit_price": 35.00,
+      "unit_type": "piece",
+      "label": "Vileda Ultramat Komplett Set", "icon": "🧹", "room": "utility", "sci": ["#sci/MaterialsScience"],
+      "val": { "handle": "Telescopic", "mop_type": "Microfiber", "pl_score": 8.5 },
+      "meta": { "locations": ["everywhere", "kaufland"], "brand": "Vileda" },
+      "props": ["Die technologische Referenz für flaches Wischen", "Power-Zone-Struktur für maximalen Anpressdruck", "Schont den Rücken durch Eimer-Auswring-System"],
+      "lang": { "de": "Vileda Ultramat", "en": "Vileda Flat Mop System" }
+    },
+    "tool_w5_bodenwischer_set_lidl": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "W5 Bodenwischer-System (Lidl)", "icon": "🛒", "room": "utility", "val": { "pl_score": 10.0 },
+      "meta": { "locations": ["lidl"], "brand": "W5" },
+      "props": ["Der Preis-Leistungs-Killer für die schnelle Reinigung", "Kompatibel mit feuchten Bodentüchern", "Leichtbauweise für maximale Agilität"],
+      "lang": { "de": "Lidl Bodenwischer", "en": "Lidl Floor Mop" }
+    },
+
+    "--- THE_LIQUID_FRICTION ---": "Bodenreiniger (Chemie)",
+    "cleaning_denkmit_bodenpflege_parkett": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Denkmit Parkettpflege (dm)", "icon": "🪵", "room": "utility", "val": { "protection": "Carnauba Wax", "pl_score": 9.5 },
+      "meta": { "locations": ["dm"], "brand": "Denkmit" },
+      "props": ["Technologischer Quellschutz für Echtholz", "Hinterlässt einen seidenmatten Glanz", "Verhindert Grauschleier"],
+      "lang": { "de": "dm Parkettpflege", "en": "dm Wood Floor Care" }
+    }
+  }
+}

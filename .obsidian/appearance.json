@@ -1,0 +1,15 @@
+{
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "MCL Multi Column",
+    "MCL Wide Views",
+    "MCL Gallery Cards",
+    "dashboard",
+    "supercharged-links-gen",
+    "background",
+    "nolinenum"
+  ],
+  "cssTheme": "AnuPpuccin",
+  "showViewHeader": true,
+  "nativeMenus": false
+}

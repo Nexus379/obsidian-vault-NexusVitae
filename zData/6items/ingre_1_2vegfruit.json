@@ -1,0 +1,304 @@
+{
+"fruit_vegetables": {
+    "tomato": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Tomato", "icon": "🍅", "latin": "Solanum lycopersicum (Fructus recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 18, "water_g": 94.5, "protein_g": 0.9, "lycopene_mg": 3.0, "potassium_mg": 237.0, "vit_c_mg": 14.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns", "orient_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "High Lycopene" },
+      "props": ["Lycopene bio-availability increases with heat", "Rich in glutamate (Umami)", "Hydrating"],
+      "lang": { "de": "Tomate", "en": "Tomato", "es": "Tomate", "fr": "Tomate", "ru": "Помидор", "ja": "トマト", "zh": "番茄", "fa": "گوجه‌فرنگی", "hi": "टमाटर", "ar": "طماطم" }
+    },
+    "cucumber": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Cucumber", "icon": "🥒", "latin": "Cucumis sativus (Fructus recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 15, "water_g": 95.2, "protein_g": 0.6, "potassium_mg": 147.0, "vit_k_mcg": 16.4, "silica_mg": 5.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["summer", "all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "hydration": "Ultra-high" },
+      "props": ["Skin contains most nutrients", "Natural source of silica for skin", "Highly alkalizing"],
+      "lang": { "de": "Gurke", "en": "Cucumber", "es": "Pepino", "fr": "Concombre", "ru": "Огурец", "ja": "きゅうり", "zh": "黄瓜", "fa": "خیار", "hi": "खीरा", "ar": "خيار" }
+    },
+    "pepper_red_bell": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Red Bell Pepper", "icon": "🫑", "latin": "Capsicum annuum (Fructus recens maturus)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 31, "water_g": 92.2, "protein_g": 1.0, "vit_c_mg": 127.0, "vit_a_mcg": 157.0, "capsanthin_mg": 8.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns", "orient_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "nutrient_density": "Vitamin C Champion" },
+      "props": ["More Vit C than citrus fruits", "Fully ripened stage of the pepper", "High in carotenoids"],
+      "lang": { "de": "Rote Paprika", "en": "Red Bell Pepper", "es": "Pimiento rojo", "fr": "Poivron rouge", "ru": "Красный перец", "ja": "赤パプリカ", "zh": "红彩椒", "fa": "فلفل دلمه‌ای قرمز", "hi": "लाल शिमला मिर्च", "ar": "فلفل أحمر" }
+    },
+    "eggplant": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Eggplant", "icon": "🍆", "latin": "Solanum melongena (Fructus recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 25, "fiber_g": 3.0, "potassium_mg": 229.0, "nasunin_mg": 20.0, "anthocyanins_mg": 15.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "orient_market", "asia_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "antioxidant_focus": "Nasunin (Brain health)" },
+      "props": ["Skin contains Nasunin (iron chelator)", "Sponge-like texture for oils", "Low calorie density"],
+      "lang": { "de": "Aubergine", "en": "Eggplant", "es": "Berenjena", "fr": "Aubergine", "ru": "Баклажан", "ja": "なす", "zh": "茄子", "fa": "بادمجان", "hi": "बैंगन", "ar": "باذنجان" }
+    },
+	"zucchini": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Zucchini", "icon": "🥒", "latin": "Cucurbita pepo var. cylindrica (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 17, "water_g": 94.0, "protein_g": 1.2, "potassium_mg": 261.0, "vit_c_mg": 17.0, "lutein_mg": 2.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestibility": "Very easy on the gut" },
+      "props": ["High in eye-protective lutein", "Low glycemic load", "Versatile for spiralizing (Zoodles)"],
+      "lang": { "de": "Zucchini", "en": "Zucchini", "es": "Calabacín", "fr": "Courgette", "ru": "Кабачок", "ja": "ズッキーニ", "zh": "西葫芦", "fa": "کدو سبز", "hi": "तुरई", "ar": "كوسة" }
+    },
+    "okra": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Okra", "icon": "🌱", "latin": "Abelmoschus esculentus (Fructus recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 33, "fiber_g": 3.2, "calcium_mg": 82.0, "vit_c_mg": 23.0, "folate_mcg": 60.0, "mucilage_g": 1.5 },
+      "meta": { "locations": ["afro_market", "asia_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Gut lining repair" },
+      "props": ["Rich in mucilage (healing for stomach)", "High fiber for microbiome", "Stabilizes blood sugar"],
+      "lang": { "de": "Okra", "en": "Okra", "es": "Okra", "fr": "Gombo", "ru": "Окра", "ja": "オクラ", "zh": "秋葵", "fa": "بامیه", "hi": "भिन्डी", "ar": "بامية" }
+    },
+    "melon_bitter": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Bitter Melon", "icon": "🥒", "latin": "Momordica charantia (Fructus recens)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 17, "vit_c_mg": 84.0, "potassium_mg": 296.0, "charantin_mg": 10.0, "polypeptide_p_mg": 5.0 },
+      "meta": { "locations": ["asia_market", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Natural Insulin Mimetic" },
+      "props": ["Contains Charantin for glucose control", "Intense bitter flavor", "Blood purifying properties"],
+      "lang": { "de": "Bittermelone", "en": "Bitter Melon", "es": "Melón amargo", "fr": "Margose", "ru": "Момордика", "ja": "ゴーヤ", "zh": "苦瓜", "fa": "خربزه تلخ", "hi": "करेला", "ar": "قرع مر" }
+    },
+    "pepper_red_pointed": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Red Pointed Pepper", "icon": "🌶️", "latin": "Capsicum annuum var. longum (Fructus recens maturus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 28, "vit_c_mg": 140.0, "vit_a_mcg": 120.0, "potassium_mg": 210.0 },
+      "meta": { "locations": ["orient_market", "lidl", "kaufland"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Sweet & mild" },
+      "props": ["Thinner skin, easier to digest", "Higher Vitamin C than block peppers", "Aromatic sweetness"],
+      "lang": { "de": "Rote Spitzpaprika", "en": "Red Pointed Pepper", "es": "Pimiento rojo dulce", "fr": "Poivron rouge long", "ru": "Красная паприка", "ja": "赤ロングパプリカ", "zh": "红尖椒", "fa": "فلفل شیرین قرمز", "hi": "लाल लंबी मिर्च", "ar": "فلفل أحمر طويل" }
+    },
+	"chili_red": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Red Chili", "icon": "🌶️", "latin": "Capsicum annuum (Fructus recens maturus)", "sci": ["#sci/Pharmacology", "#sci/Phytochemistry"],
+      "val": { "kcal": 40, "capsaicin_mg": 2.5, "vit_c_mg": 143.0, "vit_a_mcg": 48.0 },
+      "meta": { "locations": ["asia_market", "orient_market", "lidl", "kaufland"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Metabolic stimulant" },
+      "props": ["Capsaicin boosts thermogenesis", "Pain-relieving properties", "High antioxidant load"],
+      "lang": { "de": "Rote Chili", "en": "Red Chili", "es": "Chile rojo", "fr": "Piment rouge", "ru": "Красный чили", "ja": "赤唐辛子", "zh": "红辣椒", "fa": "فلفل تند قرمز", "hi": "लाल मिर्च", "ar": "فلفل حار أحمر" }
+    },
+    "avocado": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Avocado", "icon": "🥑", "latin": "Persea americana (Fructus recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 160, "fat_total_g": 14.7, "oleic_acid_g": 9.8, "fiber_g": 6.7, "potassium_mg": 485.0, "vit_e_mg": 2.1 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns", "afro_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "lipid_profile": "Monounsaturated Goldmine" },
+      "props": ["Technically a fruit/berry", "High in heart-healthy oleic acid", "Increases absorption of nutrients"],
+      "lang": { "de": "Avocado", "en": "Avocado", "es": "Aguacate", "fr": "Avocat", "ru": "Авокадо", "ja": "アボカド", "zh": "牛油果", "fa": "آووکادو", "hi": "एवोकैडो", "ar": "أفوكادو" }
+    },
+    "pumpkin_hokkaido": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Hokkaido Pumpkin", "icon": "🎃", "latin": "Cucurbita maxima (Fructus recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 63, "carbs_g": 12.0, "fiber_g": 2.5, "vit_a_mcg": 400.0, "potassium_mg": 350.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "nutrient_focus": "Beta-Carotene" },
+      "props": ["Skin is edible", "Very high Vitamin A content", "Low water content, dense nutrients"],
+      "lang": { "de": "Hokkaido-Kürbis", "en": "Hokkaido Pumpkin", "es": "Calabaza Hokkaido", "fr": "Potimarron", "ru": "Тыква хоккайдо", "ja": "カボチャ", "zh": "红栗南瓜", "fa": "کدو حلوایی هوکایدو", "hi": "कद्दू", "ar": "يقطين هوكايدو" }
+    },
+    "squash_butternut": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Butternut Squash", "icon": "🍐", "latin": "Cucurbita moschata (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 45, "carbs_g": 11.7, "fiber_g": 2.0, "vit_c_mg": 21.0, "magnesium_mg": 34.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["autumn", "winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Buttery & smooth" },
+      "props": ["Rich in antioxidants", "Good source of manganese", "Long shelf life"],
+      "lang": { "de": "Butternut-Kürbis", "en": "Butternut Squash", "es": "Calabaza cacahuete", "fr": "Doubeurre", "ru": "Мускатная тыква", "ja": "バターナッツカボチャ", "zh": "奶油南瓜", "fa": "کدو حلوایی مسقطی", "hi": "बटरनट स्क्वैश", "ar": "قرع الجوز" }
+    },
+    "physalis": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Physalis", "icon": "🏮", "latin": "Physalis peruviana (Fructus recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 53, "protein_g": 1.9, "vit_c_mg": 11.0, "vit_a_mcg": 36.0, "withanolides_mg": 5.0 },
+      "meta": { "locations": ["rewe", "denns", "kaufland"], "season": ["winter", "spring"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "Anti-inflammatory withanolides" },
+      "props": ["Technically a fruit-vegetable (nightshade family)", "High in pectin", "Contains unique bitter principles"],
+      "lang": { "de": "Physalis", "en": "Physalis", "es": "Alquequenje", "fr": "Coqueret du Pérou", "ru": "Физалис", "ja": "ホオズキ", "zh": "灯笼果", "fa": "فیسالیس", "hi": "रसभरी", "ar": "حرنكش" }
+    },
+    "pepper_green_bell": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Green Bell Pepper", "icon": "🫑", "latin": "Capsicum annuum (Fructus recens immaturus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 20, "vit_c_mg": 80.0, "chlorophyll_mg": 12.0, "fiber_g": 1.7 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Tart / Not sweet" },
+      "props": ["Unripe form of red pepper", "Rich in chlorophyll", "Lower sugar content"],
+      "lang": { "de": "Grüne Paprika", "en": "Green Bell Pepper", "es": "Pimiento verde", "fr": "Poivron vert", "ru": "Зеленый перец", "ja": "ピーマン", "zh": "青椒", "fa": "فلفل دلمه‌ای سبز", "hi": "हरी शिमला मिर्च", "ar": "فلفل أخضر" }
+    },
+	"sweetcorn": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Sweetcorn", "icon": "🌽", "latin": "Zea mays var. saccharata (Caryopsis recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 86, "carbs_g": 18.7, "fiber_g": 2.7, "lutein_mg": 0.6, "folate_mcg": 42.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "weekly_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "type": "Energy-dense vegetable" },
+      "props": ["Botanically a grain, consumed as a vegetable", "High in zeaxanthin for eyes", "Best eaten fresh for sugar content"],
+      "lang": { "de": "Zuckermais", "en": "Sweetcorn", "es": "Maíz dulce", "fr": "Maïs doux", "ru": "Сахарная кукуруза", "ja": "トウモロコシ", "zh": "甜玉米", "fa": "ذرت شیرین", "hi": "स्वीट कॉर्न", "ar": "ذرة حلوة" }
+    },
+    "squash_pattypan": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Pattypan Squash", "icon": "☀️", "latin": "Cucurbita pepo var. clypeata (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 18, "potassium_mg": 190.0, "vit_c_mg": 15.0, "fiber_g": 1.2 },
+      "meta": { "locations": ["weekly_market", "denns"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "shape": "UFO / Star-shaped" },
+      "props": ["Mild nutty flavor", "Thin edible skin", "High magnesium content"],
+      "lang": { "de": "Patisson-Kürbis", "en": "Pattypan Squash", "es": "Calabaza bonetera", "fr": "Pâtisson", "ru": "Патиссон", "ja": "UFOズッキーニ", "zh": "飞碟瓜", "fa": "کدو ستاره‌ای", "hi": "पैटीपैन स्क्वैश", "ar": "قرع فطيرة" }
+    },
+    "cucumber_armenian": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Armenian Cucumber", "icon": "🥒", "latin": "Cucumis melo var. flexuosus (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 15, "water_g": 95.0, "potassium_mg": 150.0, "vit_c_mg": 8.0 },
+      "meta": { "locations": ["orient_market", "weekly_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "botany": "Actually a melon, used as a cucumber" },
+      "props": ["No bitterness", "Thin skin, no peeling needed", "Highly hydrating"],
+      "lang": { "de": "Armenische Gurke / Schlangengurke", "en": "Armenian Cucumber", "es": "Pepino armenio", "fr": "Concombre arménien", "ru": "Армянский огурец", "ja": "アルメニアキュウリ", "zh": "亚美尼亚黄瓜", "fa": "خیار چنبر", "hi": "आर्मेनियाई खीरा", "ar": "قثاء" }
+    },
+    "eggplant_asian": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Asian Eggplant", "icon": "🍆", "latin": "Solanum melongena var. serpentinum (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 25, "fiber_g": 3.0, "potassium_mg": 230.0, "anthocyanins_mg": 18.0 },
+      "meta": { "locations": ["asia_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "texture": "Thin skin / Seedless" },
+      "props": ["Long and slender shape", "Lesser bitter compounds than globe eggplant", "Quick cooking time"],
+      "lang": { "de": "Chinesische/Japanische Aubergine", "en": "Asian Eggplant", "es": "Berenjena china", "fr": "Aubergine chinoise", "ru": "Азиатский баклажан", "ja": "長茄子", "zh": "长茄子", "fa": "بادمجان چینی", "hi": "लंبا बैंगन", "ar": "باذنجان صيني" }
+    },
+    "eggplant_thai": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Thai Eggplant", "icon": "🟢", "latin": "Solanum virginianum (Fructus recens immaturus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 32, "fiber_g": 4.1, "calcium_mg": 25.0, "iron_plant_mg": 0.8 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Green Curry Essential" },
+      "props": ["Small golf-ball size", "Crunchy texture", "Slightly bitter seeds"],
+      "lang": { "de": "Thai-Aubergine", "en": "Thai Eggplant", "es": "Berenjena tailandesa", "fr": "Aubergine thaïe", "ru": "Тайский баклажан", "ja": "タイナス", "zh": "泰国茄子", "fa": "بادمجان تایلندی", "hi": "थाई बैंगन", "ar": "باذنجان تايلاندي" }
+    },
+	"tomato_roma": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Roma Tomato", "icon": "🍅", "latin": "Solanum lycopersicum (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 18, "lycopene_mg": 4.0, "water_g": 94.0, "potassium_mg": 240.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "orient_market"], "season": ["summer", "all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "culinary": "Best for sauces" },
+      "props": ["Egg-shaped / Oval", "High pectin content", "Low moisture, great for sun-drying"],
+      "lang": { "de": "Roma-Tomate, Eiertomate", "en": "Roma Tomato", "es": "Tomate pera", "fr": "Tomate olivette", "ru": "Томат сливка", "ja": "ローマトマト", "zh": "罗马番茄", "fa": "گوجه فرنگی رومی", "hi": "रोमा टमाटर", "ar": "طماطم روما" }
+    },
+    "sivri_biber": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Sivri Biber (Turkish Hot Pepper)", "icon": "🌶️", "latin": "Capsicum annuum (Fructus recens immaturus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 25, "vit_c_mg": 120.0, "capsaicin_mg": 0.5 },
+      "meta": { "locations": ["orient_market", "weekly_market"], "season": ["summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "Spicy-bitter" },
+      "props": ["Long thin green pepper", "Variable heat level", "Traditional Turkish grill pepper"],
+      "lang": { "de": "Sivri Biber", "en": "Sivri Biber", "es": "Chile Sivri", "fr": "Piment Sivri", "ru": "Сиври бибер", "ja": "シブリ・ビベル", "zh": "土耳其尖椒", "fa": "فلفل سیوری", "hi": "सिवरी मिर्च", "ar": "فلفل سيفري" }
+    },
+    "tamarillo": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Tamarillo (Tree Tomato)", "icon": "🍅", "latin": "Solanum betaceum (Fructus recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 31, "protein_g": 1.5, "fiber_g": 3.3, "vit_c_mg": 30.0, "potassium_mg": 320.0 },
+      "meta": { "locations": ["asia_market", "afro_market", "denns"], "season": ["winter"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High Anthocyanin concentration" },
+      "props": ["Exotic nightshade fruit", "Tangy and tart flavor", "Rich in soluble fiber"],
+      "lang": { "de": "Baumtomate, Tamarillo", "en": "Tamarillo", "es": "Tomate de árbol", "fr": "Tamarillo", "ru": "Тамарилло", "ja": "タマリロ", "zh": "树番茄", "fa": "تاماریلو", "hi": "टमारिलो", "ar": "تماريلو" }
+    },
+    "tomatillo": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Tomatillo", "icon": "🟢", "latin": "Physalis philadelphica (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 32, "vit_c_mg": 11.7, "potassium_mg": 268.0, "fiber_g": 1.9 },
+      "meta": { "locations": ["asia_market", "weekly_market", "denns"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Salsa Verde base" },
+      "props": ["Sticky outer skin (must be washed)", "High pectin content", "Tart citrus-like flavor"],
+      "lang": { "de": "Tomatillo", "en": "Tomatillo", "es": "Tomatillo", "fr": "Tomatille", "ru": "Томатилло", "ja": "トマティーヨ", "zh": "粘果酸浆", "fa": "توماتیلو", "hi": "टौमाटिलो", "ar": "توماتيلو" }
+    },
+    "chayote": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Chayote", "icon": "🍐", "latin": "Sechium edule (Fructus recens)", "sci": ["#sci/Botany", "#sci/Nutrition"],
+      "val": { "kcal": 19, "water_g": 94.0, "protein_g": 0.8, "folate_mcg": 93.0, "potassium_mg": 125.0, "vit_c_mg": 7.7 },
+      "meta": { "locations": ["asia_market", "afro_market", "orient_market"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "benefit": "High Folate source" },
+      "props": ["Pear-shaped gourd", "Crisp texture like a mix of apple and cucumber", "Low calorie, high amino acid diversity"],
+      "lang": { "de": "Chayote", "en": "Chayote", "es": "Chayote", "fr": "Chayote", "ru": "Чайот", "ja": "ハヤトウリ", "zh": "佛手瓜", "fa": "چایوته", "hi": "चायोट", "ar": "شايوت" }
+    },
+    "gourd_snake": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Snake Gourd", "icon": "🐍", "latin": "Trichosanthes cucumerina (Fructus recens)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 18, "water_g": 94.5, "magnesium_mg": 20.0, "calcium_mg": 26.0, "vit_a_mcg": 10.0 },
+      "meta": { "locations": ["asia_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "digestibility": "Cooling effect (TCM)" },
+      "props": ["Extremely long, twisted shape", "Mild, slightly waxy texture", "Common in South Asian curries"],
+      "lang": { "de": "Schlangenkürbis", "en": "Snake Gourd", "es": "Calabaza de serpiente", "fr": "Patole", "ru": "Трихозант", "ja": "ヘビウリ", "zh": "蛇瓜", "fa": "کدو مار", "hi": "चिचिंडा", "ar": "قرع الحية" }
+    },
+	"pepper_cherry": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Cherry Pepper (Kirschpaprika)", "icon": "🔴", "latin": "Capsicum annuum (Fructus recens maturus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 25, "vit_c_mg": 130.0, "capsaicin_mg": 0.2, "sugar_total_g": 4.5 },
+      "meta": { "locations": ["orient_market", "kaufland", "weekly_market"], "season": ["summer", "autumn"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "usage": "Perfect for stuffing" },
+      "props": ["Small, round and thick-walled", "Mild to medium heat", "High antioxidant capacity in the skin"],
+      "lang": { "de": "Kirschpaprika", "en": "Cherry Pepper", "es": "Pimiento cereza", "fr": "Piment cerise", "ru": "Вишневый перец", "ja": "チェリーペッパー", "zh": "樱桃椒", "fa": "فلفل گیلاسی", "hi": "चेरी मिर्च", "ar": "فلفل الكرز" }
+    },
+	"tomato_cherry": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Cherry Tomato", "icon": "🍅", "latin": "Solanum lycopersicum var. cerasiforme (Fructus recens)", "sci": ["#sci/Botany", "#sci/Phytochemistry"],
+      "val": { "kcal": 24, "water_g": 93.0, "sugar_total_g": 3.9, "lycopene_mg": 4.5, "vit_c_mg": 20.0, "potassium_mg": 240.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns", "orient_market"], "season": ["all_year", "summer"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "flavor": "High sweetness / Umami" },
+      "props": ["Highest lycopene density among fresh tomatoes", "Thick skin rich in flavonoids", "Perfect for raw snacking"],
+      "lang": { "de": "Cherry-Tomate, Kirschtomate", "en": "Cherry Tomato", "es": "Tomate cherry", "fr": "Tomate cerise", "ru": "Помидор черри", "ja": "ミニトマト", "zh": "圣女果", "fa": "گوجه گیلاسی", "hi": "चेरी टमाटर", "ar": "طماطم كرزية" }
+    },
+    "tomato_vine": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Vine Tomato", "icon": "🍅", "latin": "Solanum lycopersicum (Fructus recens cum stipite)", "sci": ["#sci/Botany", "#sci/Aromachology"],
+      "val": { "kcal": 18, "vit_c_mg": 14.0, "potassium_mg": 237.0, "aromatic_compounds_mg": 5.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "denns"], "season": ["summer", "all_year"], "vegan": true },
+      "quality_metrics": { "vegan_status": "100% Plant-based", "sensory": "High aroma from the vine" },
+      "props": ["Harvested with the stem for better aroma", "Balanced sweet-acid ratio", "Stays fresh longer due to vine connection"],
+      "lang": { "de": "Rispentomate, Strauchtomate", "en": "Vine Tomato", "es": "Tomate en rama", "fr": "Tomate grappe", "ru": "Томат на ветке", "ja": "中玉トマト", "zh": "串番茄", "fa": "گوجه خوشه‌ای", "hi": "बेल टमाटर", "ar": "طماطم عنقودية" }
+    },
+    "pumpkin": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Field Pumpkin", "icon": "🎃", "latin": "Cucurbita pepo (Fructus recens)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 26, "water_g": 92.0, "potassium_mg": 340.0, "vit_a_mcg": 210.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["autumn"], "vegan": true },
+      "props": ["High volume, low calorie", "Skin is not edible (unlike Hokkaido)", "Rich in potassium"],
+      "lang": { "de": "Gartenkürbis, Speisekürbis", "en": "Pumpkin", "es": "Calabaza", "fr": "Citrouille", "ru": "Тыква", "ja": "カボチャ", "zh": "南瓜", "fa": "کدو تنبل", "hi": "कद्दू", "ar": "يقطين" }
+    },
+    "pepper_mild": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Mild Chili Pepper", "icon": "🌶️", "latin": "Capsicum annuum (Fructus recens immaturus)", "sci": ["#sci/Botany"],
+      "val": { "kcal": 20, "vit_c_mg": 100.0, "capsaicin_mg": 0.1 },
+      "meta": { "locations": ["orient_market", "rewe"], "season": ["summer"], "vegan": true },
+      "props": ["Light green or yellow-green", "Mild heat or sweet-tart", "Perfect for pickling"],
+      "lang": { "de": "Mildspeisepaprika, Pfefferoni", "en": "Mild Pepper", "es": "Guindilla", "fr": "Piment doux", "ru": "Пеперони", "ja": "ペパロニ", "zh": "甜椒", "fa": "فلفل شیرین", "hi": "हल्की मिर्च", "ar": "بيبروني" }
+    }
+  }
+}
+
+

@@ -1,0 +1,14 @@
+.theme-light {
+	--titlebar-background: rgb(0,200,240,0.5);
+	--background-primary: rgba(255,240,240,0.8);
+	--background-secondary: rgba(230,255,255,0.7);
+	--ribbon-background: rgba(255,240,245,0.5);
+  
+ }
+ .theme-dark {
+	 --titlebar-background: rgb(5,5,15,0.6);
+	 --background-primary: rgba(30,25,40,0.8);
+	 --background-secondary: rgba(8,5,15,0.6);
+	 --ribbon-background: rgba(5,5,15,0.6);
+  
+ }

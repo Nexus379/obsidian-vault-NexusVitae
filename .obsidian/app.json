@@ -1,0 +1,17 @@
+{
+  "strictLineBreaks": false,
+  "showLineNumber": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "0_Inbox",
+  "attachmentFolderPath": "0_Inbox",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "absolute",
+  "showUnsupportedFiles": true,
+  "trashOption": "local",
+  "userIgnoreFilters": [
+    "zData"
+  ],
+  "propertiesInDocument": "hidden",
+  "promptDelete": false,
+  "showInlineTitle": false
+}

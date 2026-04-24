@@ -1,0 +1,13 @@
+# Obsidian System-Dateien (Wichtig!)
+.obsidian/cache/
+.obsidian/plugins/obsidian-git/
+.obsidian/indexedDB/
+
+# System-Müll
+.trash/
+.DS_Store
+Thumbs.db
+*.log
+
+# Falls du große lokale Backups hast
+Local Backup/

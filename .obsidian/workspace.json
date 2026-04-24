@@ -1,0 +1,291 @@
+{
+  "main": {
+    "id": "e777c4492e540d23",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3edc4d1497581d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf3eab0cfa86ceee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0_Atlas/Nexus Vitae Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Nexus Vitae Guide"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7016c7559c1ed90b",
+    "type": "split",
+    "children": [
+      {
+        "id": "45a3f2770abc159a",
+        "type": "tabs",
+        "dimension": 32.325776658270364,
+        "children": [
+          {
+            "id": "10049657445818a6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      },
+      {
+        "id": "a675c9214681c249",
+        "type": "tabs",
+        "dimension": 67.67422334172963,
+        "children": [
+          {
+            "id": "81fba5ff90392f6c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1c43e5b7afd9ea0e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 295.0124969482422
+  },
+  "right": {
+    "id": "afe8cad418ab9b54",
+    "type": "split",
+    "children": [
+      {
+        "id": "c5d9036c2abe0c60",
+        "type": "tabs",
+        "dimension": 60.58451816745656,
+        "children": [
+          {
+            "id": "a10cd1ba94e93261",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "0_Atlas/Nexus Vitae Guide.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for Nexus Vitae Guide"
+            }
+          },
+          {
+            "id": "b576c2e83076e3bc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "0_Atlas/Nexus Vitae Guide.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Nexus Vitae Guide"
+            }
+          },
+          {
+            "id": "db9e1a699a8149d3",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "clock",
+              "title": "Chronology"
+            }
+          },
+          {
+            "id": "1e0e6a21802898b6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "0_Atlas/Nexus Vitae Guide.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Nexus Vitae Guide"
+            }
+          },
+          {
+            "id": "a5f52ecf9d7b1e60",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "0_Atlas/Nexus Vitae Guide.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Nexus Vitae Guide"
+            }
+          }
+        ]
+      },
+      {
+        "id": "e64fff4d70079b30",
+        "type": "tabs",
+        "dimension": 39.41548183254344,
+        "children": [
+          {
+            "id": "9e3c58ff4a3d62c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zData/5design_modul/CalendarMonth.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CalendarMonth"
+            }
+          },
+          {
+            "id": "0bc1153ba69be7cf",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "f7b84259003bedcc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 344.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "workspaces:Manage workspace layouts": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "callout-manager:Insert Callout": false,
+      "chronology:Open Chronology": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "bf3eab0cfa86ceee",
+  "lastOpenFiles": [
+    "README.md",
+    "0_Atlas/Nexus Vitae Guide.md",
+    "zData/5design_modul/CalendarMonth.md",
+    "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Review.md",
+    "0_Atlas/0_Dashboard/0-Dashboard.md",
+    "0_Atlas/0_Dashboard/0-Financeboard.md",
+    "0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard.md",
+    "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard-PKM.md",
+    "0_Atlas/0_Dashboard/1-Stars.md",
+    "0_Atlas/0_Dashboard/0-Calendar.md",
+    "0_Atlas/0_Dashboard/0-Inbox.md",
+    "zData/1tmpl/0calendar/revd.md",
+    "zData/1tmpl/0calendar/revh.md",
+    "zData/1tmpl/0calendar/revm.md",
+    "zData/1tmpl/0calendar/revw.md",
+    "zData/1tmpl/0calendar/revy.md",
+    "zData/1tmpl/0calendar/revq.md",
+    "0_Atlas/0_Dashboard/4-Tasks.md",
+    "zData/1tmpl/4tasks/9totake.md",
+    "zData/1tmpl/3projects/9protake.md",
+    "zData/1tmpl/3projects/6propay.md",
+    "zData/1tmpl/3projects/5probuy.md",
+    "zData/1tmpl/4tasks/6topay.md",
+    "zData/1tmpl/4tasks/5tobuy.md",
+    "zData/yaml tags organization.md",
+    "0_Atlas/Nexus SetUp Roadmap.md",
+    "0_Atlas/0_Dashboard/4-Tasksboard",
+    "0_Atlas/0_Dashboard/6-Resources",
+    "0_Atlas/Bases/Resources/Videos.base",
+    "0_Atlas/Bases/Resources/Series.base",
+    "0_Atlas/Bases/Resources/Reference.base",
+    "0_Atlas/Bases/Resources/Recipes.base",
+    "0_Atlas/Bases/Resources/Papers.base",
+    "0_Atlas/Bases/Resources/Music.base",
+    "0_Atlas/Bases/Resources/Museums.base",
+    "0_Atlas/Bases/Resources/Guides.base",
+    "xAttachment/Images/gifs/evoli sitting.gif",
+    "xAttachment/Images/Banner/Area Banner/wind elve glasses.jpg",
+    "xAttachment/Images/Banner/Area Banner/study, blau.jpg",
+    "xAttachment/Images/Banner/Area Banner/power up anime girl soul.png",
+    "xAttachment/Images/Banner/Area Banner/hufflepuff_study.jpg",
+    "xAttachment/Images/Banner/Area Banner/laterne.jpg",
+    "xAttachment/Images/Banner/Area Banner/fantasy anime style 3 persons.jpg",
+    "xAttachment/Images/Banner/Area Banner/Brille_grün.jpg",
+    "xAttachment/Images/Banner/Area Banner/blau_hintergrund_berge.jpg",
+    "xAttachment/Images/Banner/violet sky ocean.jpg"
+  ]
+}

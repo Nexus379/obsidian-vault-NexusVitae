@@ -1,0 +1,524 @@
+{
+  "dairy_and_eggs": {
+    "--- EGGS_AVIAN_PROTEIN ---": "Eier (Das Goldstandard-Protein)",
+    "egg_chicken": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Chicken Egg (Size L)", "icon": "🥚", "latin": "Gallus gallus (Ovum)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 155, "protein_g": 12.6, "fat_total_g": 10.6, "choline_mg": 335.0, "vit_d_mcg": 2.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "farm_shop"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "protein_quality": "Biological Value 100 (Gold Standard)", "benefit": "High Choline for Brain Health" },
+      "props": ["Contains every nutrient needed to create life (except Vit C)", "Choline in yolk is essential for neurotransmitter synthesis", "Lutein in yolk protects eye health"],
+      "lang": { "de": "Hühnerei (Größe L)", "en": "Chicken Egg", "es": "Huevo", "fr": "Œuf", "ru": "Яйцо", "ja": "卵", "zh": "鸡蛋", "fa": "تخم‌مرغ", "hi": "अंडा", "ar": "بيض" }
+    },
+    "egg_quail": {
+      "unit_price": 5.00,
+      "unit_type": "piece",
+      "label": "Quail Egg", "icon": "🪺", "latin": "Coturnix japonica (Ova)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 158, "protein_g": 13.0, "vit_b12_mcg": 1.6, "iron_heme_mg": 3.7 },
+      "meta": { "locations": ["rewe", "delicatessen", "weekly_market"], "season": ["all_year"], "vegan": false },
+      "props": ["Rich in B12 and iron relative to size", "Often considered less allergenic than chicken eggs", "Delicacy in Asian and European cuisine"],
+      "lang": { "de": "Wachtelei", "en": "Quail Egg", "es": "Huevo de codorniz", "fr": "Œuf de caille", "ru": "Перепелиное яйцо", "ja": "うずらの卵", "zh": "鹌鹑蛋", "fa": "تخم بلدرچین", "hi": "बटेर का अंडा", "ar": "بيض السمان" }
+    },
+	"egg_duck": {
+      "unit_price": 1.00,
+      "unit_type": "piece",
+      "label": "Duck Egg", "icon": "🦆", "latin": "Ovum anatis (Anas platyrhynchos)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 185, "protein_g": 13.0, "fat_total_g": 14.0, "vit_b12_mcg": 5.4, "omega3_mg": 250.0 },
+      "meta": { "locations": ["asia_market", "farm_shop", "weekly_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "lipid_profile": "Richer & Fattier than chicken eggs" },
+      "props": ["Thicker shell allows longer storage", "Higher concentration of Omega-3 and B12", "Prized for baking due to fat content"],
+      "lang": { "de": "Entenei", "en": "Duck Egg", "es": "Huevo de pato", "fr": "Œuf de cane", "ru": "Утиное яйцо", "ja": "アヒルの卵", "zh": "鸭蛋", "fa": "تخم اردک", "hi": "बत्तخ का अंडा", "ar": "بيض بط" }
+    },
+    "egg_white": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Egg White (Liquid)", "icon": "⚪", "latin": "Albumen ovi (Gallus gallus)", "sci": ["#sci/Nutrition", "#sci/SportsMedicine"],
+      "val": { "kcal": 52, "protein_g": 11.0, "fat_total_g": 0.2, "carbs_g": 0.7, "potassium_mg": 163.0 },
+      "meta": { "locations": ["rewe", "dm", "kaufland", "gym_shop"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "Pure Protein Source / Fat-Free" },
+      "props": ["Consists of ~90% water and 10% proteins (mostly ovalbumin)", "Zero cholesterol and virtually fat-free", "Standard for high-protein, low-calorie diets"],
+      "lang": { "de": "Eiklar / Eiweiß (flüssig)", "en": "Egg White", "es": "Clara de huevo", "fr": "Blanc d'œuf", "ru": "Яичный белок", "ja": "卵白", "zh": "蛋白", "fa": "سفیده تخم‌مرغ", "hi": "अंडे की सफेदी", "ar": "بياض البيض" }
+    },
+    "egg_yolk": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Egg Yolk (Fresh)", "icon": "🟡", "latin": "Vitellus ovi (Gallus gallus)", "sci": ["#sci/Phytochemistry", "#sci/Neuroscience"],
+      "val": { "kcal": 322, "protein_g": 15.9, "fat_total_g": 26.5, "choline_mg": 680.0, "cholesterol_mg": 1234.0, "vit_a_mcg": 380.0 },
+      "meta": { "locations": ["lidl", "rewe", "butcher"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Lecithin & Choline Bomb" },
+      "props": ["Contains all the fat-soluble vitamins (A, D, E, K)", "Rich in Lecithin (natural emulsifier)", "Highest dietary source of Choline for brain health"],
+      "lang": { "de": "Eigelb / Dotter", "en": "Egg Yolk", "es": "Yema de huevo", "fr": "Jaune d'œuf", "ru": "Яичный желток", "ja": "卵黄", "zh": "蛋黄", "fa": "زرده تخم‌مرغ", "hi": "अंडे की जर्दी", "ar": "صفار البيض" }
+    },
+    "egg_ostrich": {
+      "unit_price": 30.00,
+      "unit_type": "piece",
+      "label": "Ostrich Egg", "icon": "🥚", "latin": "Ovum struthionis (Struthio camelus)", "sci": ["#sci/Anatomy"],
+      "val": { "kcal": 145, "protein_g": 12.0, "fat_total_g": 10.0, "iron_heme_mg": 3.5 },
+      "meta": { "locations": ["farm_shop", "delicatessen"], "season": ["spring", "summer"], "vegan": false },
+      "quality_metrics": { "size": "Equivalent to ~24 chicken eggs" },
+      "props": ["The largest bird egg in existence", "Thick shell requires power tools to open", "Slightly sweeter and lighter flavor than chicken eggs"],
+      "lang": { "de": "Straußenei", "en": "Ostrich Egg", "es": "Huevo de avestruz", "fr": "Œuf d'autruche", "ru": "Страусиное яйцо", "ja": "ダチョウの卵", "zh": "鸵鸟蛋", "fa": "تخم شترمرغ", "hi": "शुतुरमुर्ग का अंडा", "ar": "بيض نعام" }
+    },
+    "egg_century": {
+      "unit_price": 6.00,
+      "unit_type": "piece",
+      "label": "Century Egg (Pidan)", "icon": "🌑", "latin": "Ovum fermentatum alkaline", "sci": ["#sci/Microbiology", "#sci/FoodScience"],
+      "val": { "kcal": 190, "protein_g": 13.0, "fat_total_g": 14.0, "sodium_mg": 600.0 },
+      "meta": { "locations": ["asia_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "process": "Alkaline fermentation (Clay/Salt/Ash)" },
+      "props": ["Chinese delicacy: egg cured for weeks in alkaline mixture", "Yolk becomes creamy/dark green, white becomes dark brown jelly", "Strong sulfur and ammonia aroma"],
+      "lang": { "de": "Tausendjährige Eier", "en": "Century Egg", "es": "Huevo centenario", "fr": "Œuf de cent ans", "ru": "Столетнее яйцо", "ja": "ピータン", "zh": "皮蛋", "fa": "تخم‌مرغ صدساله", "hi": "सेंचुरी एग", "ar": "بيض القرن" }
+    }
+  },
+	"milk": {
+    "milk_cow_whole": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Whole Cow Milk (3.5%)", "icon": "🥛", "latin": "Lactis vaccinum (Bos taurus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 64, "protein_g": 3.3, "fat_total_g": 3.5, "carbs_g": 4.7, "calcium_mg": 120.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "dm"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Calcium & Phosphor source" },
+      "props": ["Primary source of dietary calcium", "Contains lactose (disaccharide)", "Standard for dairy-based nutrition"],
+      "lang": { "de": "Vollmilch (Kuh)", "en": "Whole Milk", "es": "Leche entera", "fr": "Lait entier", "ru": "Цельное молоко", "ja": "牛乳", "zh": "全脂牛奶", "fa": "شیر کامل", "hi": "दूध", "ar": "حليب كامل الدسم" }
+    },
+    "milk_goat": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Goat Milk", "icon": "🐐", "latin": "Lactis caprinum (Capra hircus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 69, "protein_g": 3.6, "fat_total_g": 4.1, "calcium_mg": 134.0, "vit_a_mcg": 57.0 },
+      "meta": { "locations": ["rewe", "denns", "alnatura"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "digestibility": "Smaller fat globules than cow milk", "benefit": "A2-Casein dominance" },
+      "props": ["Naturally homogenized fat structure", "Distinctive 'goaty' flavor from caproic acid", "Easier to digest for many people"],
+      "lang": { "de": "Ziegenmilch", "en": "Goat Milk", "es": "Leche de cabra", "fr": "Lait de chèvre", "ru": "Козье молоко", "ja": "山羊乳", "zh": "山羊奶", "fa": "شیر بز", "hi": "बकरी का दूध", "ar": "حليب ماعز" }
+    },
+    "milk_sheep": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Sheep Milk", "icon": "🐑", "latin": "Lactis ovillum (Ovis aries)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 108, "protein_g": 6.0, "fat_total_g": 7.0, "calcium_mg": 193.0 },
+      "meta": { "locations": ["denns", "weekly_market"], "season": ["spring", "summer"], "vegan": false },
+      "quality_metrics": { "nutrient_density": "Highest protein/fat of major dairy" },
+      "props": ["Remarkably high calcium and phosphorus content", "Rich, creamy texture due to high solids", "Foundation for Roquefort and Pecorino"],
+      "lang": { "de": "Schafmilch", "en": "Sheep Milk", "es": "Leche de oveja", "fr": "Lait de brebis", "ru": "Овечье молоко", "ja": "羊乳", "zh": "羊奶", "fa": "شیر گوسفند", "hi": "भेड़ का दूध", "ar": "حليب غنم" }
+    },
+    "milk_buffalo": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Buffalo Milk", "icon": "🐃", "latin": "Lactis bubalinum (Bubalus bubalis)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 97, "protein_g": 3.8, "fat_total_g": 6.9, "calcium_mg": 160.0 },
+      "meta": { "locations": ["specialty_store", "weekly_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "Authentic Mozzarella Production" },
+      "props": ["Lower cholesterol but higher fat than cow milk", "Pure white color (lacks beta-carotene)", "High antioxidant activity"],
+      "lang": { "de": "Büffelmilch", "en": "Buffalo Milk", "es": "Leche de búfala", "fr": "Lait de bufflonne", "ru": "Буйволиное молоко", "ja": "水牛乳", "zh": "水牛奶", "fa": "شیر گاومیش", "hi": "भैंस का दूध", "ar": "حليب جاموس" }
+    },
+    "milk_donkey": {
+      "unit_price": 15.00,
+      "unit_type": "piece",
+      "label": "Donkey Milk", "icon": "🫏", "latin": "Lactis asininum (Equus asinus)", "sci": ["#sci/Dermatology", "#sci/Nutrition"],
+      "val": { "kcal": 46, "protein_g": 1.7, "fat_total_g": 0.4, "carbs_g": 6.1, "vit_c_mg": 5.0 },
+      "meta": { "locations": ["specialty_store", "online"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "similarity": "Closest to human breast milk" },
+      "props": ["Historical luxury (Cleopatra's bath)", "Very low fat, high lactose", "High in lysozyme (antibacterial properties)"],
+      "lang": { "de": "Eselsmilch", "en": "Donkey Milk", "es": "Leche de burra", "fr": "Lait d'ânesse", "ru": "Ослиное молоко", "ja": "ロバ乳", "zh": "驴奶", "fa": "شیر الاغ", "hi": "गधी का दूध", "ar": "حليب حمار" }
+    },
+    "milk_camel": {
+      "unit_price": 12.00,
+      "unit_type": "piece",
+      "label": "Camel Milk", "icon": "🐪", "latin": "Lactis camelnum (Camelus dromedarius)", "sci": ["#sci/Endocrinology"],
+      "val": { "kcal": 53, "protein_g": 3.1, "fat_total_g": 2.5, "vit_c_mg": 3.8, "iron_mg": 0.2 },
+      "meta": { "locations": ["orient_market", "specialty_store"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "No Beta-Lactoglobulin (Allergy-friendly)" },
+      "props": ["Three times higher Vitamin C than cow milk", "Contains insulin-like proteins", "Staple in desert cultures for hydration and nutrients"],
+      "lang": { "de": "Kamelmilch", "en": "Camel Milk", "es": "Leche de camella", "fr": "Lait de chamelle", "ru": "Верблюжье молоко", "ja": "ラクダ乳", "zh": "骆驼奶", "fa": "شیر شتر", "hi": "ऊंटनी का दूध", "ar": "حليب ناقة" }
+    },
+	"--- THERMAL_DAIRY_VARIANTS ---": "Milch nach Verarbeitungsgrad (Kuh)",
+    "milk_cow_fresh": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Fresh Whole Milk (Pasteurized)", "icon": "🥛", "latin": "Lactis vaccinum pasteurizatum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 64, "protein_g": 3.3, "fat_total_g": 3.5, "vit_b12_mcg": 0.45 },
+      "meta": { "locations": ["lidl", "rewe", "farm_shop"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "process": "72-75°C for 15-30s", "shelf_life": "6-10 days (refrigerated)" },
+      "props": ["Minimal heat damage to proteins", "Retains more native vitamins than UHT", "Must be kept cold at all times"],
+      "lang": { "de": "Frischmilch (pasteurisiert)", "en": "Fresh Milk", "es": "Leche fresca", "fr": "Lait frais", "ru": "Свежее молоко", "ja": "新鮮な牛乳", "zh": "鲜牛奶", "fa": "شیر تازه", "hi": "ताजा दूध", "ar": "حليب طازج" }
+    },
+    "milk_cow_uht": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "UHT Whole Milk (Shelf-stable)", "icon": "📦", "latin": "Lactis vaccinum uperisatum", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 64, "protein_g": 3.3, "fat_total_g": 3.5 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "process": "135-150°C for 1-4s", "shelf_life": "3-6 months (unrefrigerated)" },
+      "props": ["Sterile packaging", "Slightly 'cooked' flavor due to Maillard reaction", "Practical for long-term storage"],
+      "lang": { "de": "H-Milch (haltbar)", "en": "UHT Milk", "es": "Leche UHT", "fr": "Lait UHT", "ru": "Ультрапастеризованное молоко", "ja": "ロングライフミルク", "zh": "超高温瞬时灭菌乳", "fa": "شیر استریل", "hi": "यूएचटी दूध", "ar": "حليب طويل الأجل" }
+    },
+	"--- PLANT_BASED_DRINKS ---": "Pflanzliche Milchgetränke (Vegan)",
+    "drink_oat": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Oat Drink (Haferdrink)", "icon": "🌾", "latin": "Extractum avenae liquidum", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 45, "carbs_g": 7.0, "fiber_g": 0.8, "protein_g": 1.0, "fat_total_g": 1.5 },
+      "meta": { "locations": ["dm", "rewe", "lidl"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Natural sweetness / High sustainability" },
+      "props": ["Contains Beta-glucans (heart healthy fiber)", "Naturally sweet without added sugar due to enzymatic breakdown", "Most environmentally friendly milk alternative"],
+      "lang": { "de": "Hafermilch / Haferdrink", "en": "Oat Milk", "es": "Leche de avena", "fr": "Lait d'avoine", "ru": "Овсяное молоко", "ja": "オーツミルク", "zh": "燕麦奶", "fa": "شیر جو دوسر", "hi": "जई का दूध", "ar": "حليب الشوفان" }
+    },
+    "drink_almond": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Almond Drink (Unsweetened)", "icon": "🫘", "latin": "Extractum amygdalae liquidum", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 13, "protein_g": 0.5, "fat_total_g": 1.1, "vit_e_mg": 3.8 },
+      "meta": { "locations": ["dm", "rewe", "lidl"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Low Calorie / High Vit E" },
+      "props": ["Very low calorie density", "Rich in antioxidant Vitamin E", "Nutty flavor profile, popular for coffee"],
+      "lang": { "de": "Mandelmilch / Mandeldrink", "en": "Almond Milk", "es": "Leche de almendras", "fr": "Lait d'amande", "ru": "Миндальное молоко", "ja": "アーモンドミルク", "zh": "杏仁奶", "fa": "شیر بادام", "hi": "बादाम का दूध", "ar": "حليب اللوز" }
+    },
+    "drink_soy": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Soy Drink", "icon": "🫛", "latin": "Extractum sojae liquidum", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 42, "protein_g": 3.3, "fat_total_g": 1.9, "isoflavones_mg": 25.0 },
+      "meta": { "locations": ["dm", "rewe", "lidl"], "season": ["all_year"], "vegan": true },
+      "quality_metrics": { "benefit": "Complete Protein Profile (comparable to cow milk)" },
+      "props": ["Highest protein content among plant milks", "Contains soy isoflavones", "Versatile for cooking and baking"],
+      "lang": { "de": "Sojamilch / Sojadrink", "en": "Soy Milk", "es": "Leche de soja", "fr": "Lait de soja", "ru": "Соевое молоко", "ja": "豆乳", "zh": "豆奶", "fa": "شیر سویا", "hi": "सोया दूध", "ar": "حليب الصويا" }
+    }
+  },
+    "YOGURT": {
+    "yogurt_greek": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Greek Yogurt (10% Fat)", "icon": "🥣", "latin": "Fermented Bos taurus milk", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 129, "protein_g": 9.0, "fat_total_g": 10.0, "calcium_mg": 110.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Strained / Ultra-creamy", "benefit": "Probiotic cultures" },
+      "props": ["Strained to remove whey, resulting in higher protein density", "Rich, thick texture", "Live active cultures support gut microbiome"],
+      "lang": { "de": "Griechischer Joghurt", "en": "Greek Yogurt", "es": "Yogur griego", "fr": "Yaourt grec", "ru": "Греческий йогурт", "ja": "ギリシャヨーグルト", "zh": "希腊酸奶", "fa": "ماست یونانی", "hi": "ग्रीक योगर्ट", "ar": "زبادي يوناني" }
+    },
+    "skyr": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Skyr (Traditional)", "icon": "🥣", "latin": "Bos taurus (curd)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 65, "protein_g": 11.0, "fat_total_g": 0.2, "calcium_mg": 120.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Highest Protein / Lowest Fat" },
+      "props": ["Icelandic dairy product, technically a soft cheese", "Extremely low fat but very high in protein", "Thick and tart flavor"],
+      "lang": { "de": "Skyr", "en": "Skyr", "es": "Skyr", "fr": "Skyr", "ru": "Скир", "ja": "スキール", "zh": "斯基尔", "fa": "اسکایر", "hi": "स्किर", "ar": "سكير" }
+    },
+	"yogurt_natural": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Natural Yogurt (3.5%)", "icon": "🥣", "latin": "Lactis fermentatum (Lactobacillus)", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 62, "protein_g": 3.4, "fat_total_g": 3.5, "carbs_g": 4.6 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "props": ["Standard fermentation with Lactobacillus bulgaricus", "Good source of calcium and probiotics", "Mild acidity, less thick than Greek style"],
+      "lang": { "de": "Naturjoghurt", "en": "Natural Yogurt", "es": "Yogur natural", "fr": "Yaourt nature", "ru": "Натуральный йогурт", "ja": "プレーンヨーグルト", "zh": "天然酸奶", "fa": "ماست طبیعی", "hi": "प्राकृतिक दही", "ar": "زبادي طبيعي" }
+    },
+    "kefir": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Kefir (Mild)", "icon": "🥛", "latin": "Lactis fermentatum yeast-based", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 46, "protein_g": 3.3, "fat_total_g": 1.5, "carbs_g": 4.8 },
+      "meta": { "locations": ["lidl", "rewe", "denns"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "Complex Symbiotic Probiotics (Bacteria & Yeast)" },
+      "props": ["Fermented with 'Kefir grains'", "Contains a wider variety of probiotics than yogurt", "Slightly effervescent and tangy due to CO2 and trace ethanol"],
+      "lang": { "de": "Kefir", "en": "Kefir", "es": "Kéfir", "fr": "Kéfir", "ru": "Кефир", "ja": "ケフィア", "zh": "开菲尔", "fa": "کفیر", "hi": "केफिर", "ar": "كفير" }
+    }
+  }, 
+	"CHEESE": {
+    "quark_low_fat": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Low-Fat Quark (Magerquark)", "icon": "🥣", "latin": "Caseus acidus (Bos taurus)", "sci": ["#sci/SportsMedicine"],
+      "val": { "kcal": 67, "protein_g": 12.0, "fat_total_g": 0.3, "calcium_mg": 92.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "dm"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "Casein Source (Slow Protein)" },
+      "props": ["Staple for muscle recovery in German-speaking countries", "Rich in slow-digesting Casein protein", "Extremely versatile for sweet and savory dishes"],
+      "lang": { "de": "Magerquark", "en": "Low-fat Quark", "es": "Quark desnatado", "fr": "Fromage blanc maigre", "ru": "Творог (обезжиренный)", "ja": "クワルク", "zh": "夸克乳酪", "fa": "کووارک", "hi": "क्वारک", "ar": "كوارك" }
+    },
+    "cheese_cottage": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Cottage Cheese (Hüttenkäse)", "icon": "🥣", "latin": "Caseus granulatus (Bos taurus)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 98, "protein_g": 11.0, "fat_total_g": 4.3, "sodium_mg": 360.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "props": ["Granular texture of small curd chunks", "High in protein and low in calories", "Good source of selenium"],
+      "lang": { "de": "Hüttenkäse / Körniger Frischkäse", "en": "Cottage Cheese", "es": "Queso cottage", "fr": "Fromage cottage", "ru": "Зернёный творог", "ja": "カッテージチーズ", "zh": "茅屋奶酪", "fa": "پنیر کلبه", "hi": "कुटीर पनीर", "ar": "جبنة قريش" }
+    },
+    "cheese_ricotta": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Ricotta", "icon": "🥣", "latin": "Caseus recoctus (Whey curd)", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 150, "protein_g": 11.2, "fat_total_g": 10.0, "calcium_mg": 200.0 },
+      "meta": { "locations": ["rewe", "kaufland", "italian_market"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "Rich in Whey Protein (fast absorption)" },
+      "props": ["Technically made from whey, not whole milk", "Lower in sodium than many other cheeses", "Light, grainy, and slightly sweet flavor"],
+      "lang": { "de": "Ricotta", "en": "Ricotta", "es": "Ricotta", "fr": "Ricotta", "ru": "Рикотта", "ja": "リコッタ", "zh": "里科塔奶酪", "fa": "پنیر ریکوتا", "hi": "रिकोटा", "ar": "ريكوتا" }
+    },
+    "cheese_mascarpone": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Mascarpone", "icon": "🥣", "latin": "Caseus butyrosus (Double cream cheese)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 412, "protein_g": 4.5, "fat_total_g": 40.0, "calcium_mg": 110.0 },
+      "meta": { "locations": ["lidl", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Velvety / High Lipid Content" },
+      "props": ["Acid-set cream cheese with very high fat content", "Essential for authentic Tiramisu", "Extremely creamy and rich mouthfeel"],
+      "lang": { "de": "Mascarpone", "en": "Mascarpone", "es": "Mascarpone", "fr": "Mascarpone", "ru": "Маскарпоне", "ja": "マスカルポーネ", "zh": "马斯卡彭奶酪", "fa": "پنیر ماسکارپونه", "hi": "मस्करपोन", "ar": "ماسكاربوني" }
+    },
+	"--- SOFT_AND_MOLD_CHEESE ---": "Weich- & Edelschimmelkäse",
+    "cheese_camembert": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Camembert / Brie", "icon": "🧀", "latin": "Caseus mofla (Penicillium)", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 290, "protein_g": 20.0, "fat_total_g": 23.0, "vit_k2_mcg": 60.0 },
+      "meta": { "locations": ["lidl", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "props": ["Edible white mold rind", "Ripens from outside in", "High in Vitamin K2"],
+      "lang": { "de": "Camembert", "en": "Camembert", "es": "Camembert", "fr": "Camembert", "ru": "Камамбер", "ja": "カマンベール", "zh": "卡门贝尔", "fa": "کاممبر", "hi": "कैमेम्बर्ट", "ar": "كاميمبير" }
+    },
+    "cheese_gorgonzola": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Gorgonzola (Blue Cheese)", "icon": "🧀", "latin": "Caseus mofla caeruleus", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 350, "protein_g": 21.0, "fat_total_g": 29.0 },
+      "meta": { "locations": ["rewe", "kaufland", "italian_market"], "season": ["all_year"], "vegan": false },
+      "props": ["Internal blue mold veins", "Sharp, piquant flavor", "Rich in bioactive peptides"],
+      "lang": { "de": "Gorgonzola", "en": "Gorgonzola", "es": "Gorgonzola", "fr": "Gorgonzola", "ru": "Горгонзола", "ja": "ゴルゴンゾーラ", "zh": "戈贡佐拉", "fa": "گورگونزولا", "hi": "गॉर्गन्ज़ोला", "ar": "غورغونزولا" }
+    },
+    "--- MOUNTAIN_AND_ALPINE_CHEESE ---": "Berg- & Lochkäse",
+    "cheese_emmentaler": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Emmentaler", "icon": "🧀", "latin": "Caseus helveticus", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 380, "protein_g": 27.0, "fat_total_g": 30.0, "calcium_mg": 1000.0 },
+      "meta": { "locations": ["lidl", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "props": ["Characteristic large holes from CO2", "Mild, nutty flavor", "Extremely high calcium content"],
+      "lang": { "de": "Emmentaler", "en": "Emmental", "es": "Emmental", "fr": "Emmental", "ru": "Эмменталь", "ja": "エメンタール", "zh": "埃曼塔", "fa": "امنتال", "hi": "एमेंटल", "ar": "إيمنتال" }
+    },
+    
+	"--- SEMI_HARD_AND_CHEDDARED_CHEESE ---": "Schnittkäse & Cheddar-Varianten",
+    "cheese_cheddar_aged": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Aged Cheddar", "icon": "🧀", "latin": "Caseus cheddarensis", "sci": ["#sci/FoodScience", "#sci/Microbiology"],
+      "val": { "kcal": 403, "protein_g": 25.0, "fat_total_g": 33.0, "calcium_mg": 720.0, "sodium_mg": 620.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "process": "Cheddaring (Stacking curds)", "visual": "Deep yellow to orange (often Annatto)" },
+      "props": ["Unique 'Cheddaring' process involves stacking and turning curd blocks", "Lactose-free due to long aging", "Complex, sharp and nutty flavor profile"],
+      "lang": { "de": "Cheddar (gereift)", "en": "Cheddar Cheese", "es": "Queso cheddar", "fr": "Cheddar", "ru": "Чеддер", "ja": "チェダーチーズ", "zh": "切达奶酪", "fa": "پنیر چدار", "hi": "चेडर चीज़", "ar": "جبن شيدر" }
+    },
+	"cheese_gouda_young": {
+      "unit_price": 1.00,
+      "unit_type": "100g",
+      "label": "Gouda (Jung)", "icon": "🧀", "latin": "Caseus goudensis recens", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 350, "protein_g": 23.0, "fat_total_g": 28.0, "calcium_mg": 700.0, "lactose_g": 0.1 },
+      "meta": { "locations": ["lidl", "aldi", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "aging": "4-8 weeks", "texture": "Soft / Mild / High meltability" },
+      "props": ["Der Klassiker für das tägliche Brot", "Sehr mild, fast sahnig im Geschmack", "Schmilzt hervorragend auf Aufläufen oder im Toast"],
+      "lang": { "de": "Gouda (jung)", "en": "Mild Gouda", "nl": "Jonge Gouda" }
+    },
+    "cheese_gouda_medium": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Gouda (Mittelalt)", "icon": "🧀", "latin": "Caseus goudensis maturus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 365, "protein_g": 24.5, "fat_total_g": 30.0, "calcium_mg": 750.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "aging": "2-6 months", "texture": "Firm / Slightly aromatic" },
+      "props": ["Die goldene Mitte der Reifung", "Herzhafter als junger Gouda, aber noch nicht brüchig", "Perfekter Allrounder für Brot und Überbacken"],
+      "lang": { "de": "Gouda (mittelalt)", "en": "Medium Aged Gouda", "nl": "Belegen Gouda" }
+    },
+    "cheese_gouda_aged": {
+      "unit_price": 2.00,
+      "unit_type": "100g",
+      "label": "Aged Gouda", "icon": "🧀", "latin": "Caseus goudensis", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 356, "protein_g": 25.0, "fat_total_g": 27.0, "calcium_mg": 700.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Firm with protein crystals (Old Gouda)" },
+      "props": ["Washed-curd process removes lactose and creates a sweeter profile", "Aged versions develop intense caramel notes", "One of the most popular cheeses in Europe"],
+      "lang": { "de": "Gouda (alt/gereift)", "en": "Aged Gouda", "es": "Queso Gouda", "fr": "Gouda", "ru": "Гауда", "ja": "ゴーダチーズ", "zh": "豪达奶酪", "fa": "پنیر گودا", "hi": "गौड़ा चीज़", "ar": "جبن جودا" }
+    },
+    "cheese_monterey_jack": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Monterey Jack", "icon": "🧀", "latin": "Caseus americanus (Monterey)", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 373, "protein_g": 24.5, "fat_total_g": 30.0 },
+      "meta": { "locations": ["rewe", "specialty_store"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "usage": "High Meltability (Burgers/Tex-Mex)" },
+      "props": ["True American original from California", "Mild flavor and excellent melting properties", "Often marbled with Colby (Colby-Jack)"],
+      "lang": { "de": "Monterey Jack", "en": "Monterey Jack", "es": "Monterey Jack", "fr": "Monterey Jack", "ru": "Монтерей Джек", "ja": "モンテレージャック", "zh": "蒙特利杰克奶酪", "fa": "پنیر مونتری جک", "hi": "मोंटेरे जैक", "ar": "مونتيري جاك" }
+    },
+	"cheese_halloumi_cyprus_classic": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Halloumi (Original Zypern)", "icon": "🇨🇾", "latin": "Caseus cyprius", "sci": ["#sci/Microbiology", "#sci/FoodScience"],
+      "val": { "kcal": 320, "water_g": 45.0, "protein_g": 22.0, "fat_total_g": 25.0, "carbs_total_g": 2.0, "sugar_g": 1.5, "sodium_mg": 1200.0 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "brand": "Gazi / Alis", "vegan": false },
+      "quality_metrics": { "pdo_status": "Protected Designation of Origin", "texture": "Rubber-like / Squeaky" },
+      "props": ["Traditionell aus Schaf- und Ziegenmilch (oder Mischung)", "Schmilzt nicht dank des Kochvorgangs des Bruchs (Denaturierung der Proteine)", "Typisches 'Quietschen' beim Kauen ist ein Qualitätsmerkmal der Proteinstruktur"],
+      "lang": { "de": "Halloumi", "en": "Halloumi", "es": "Queso Halloumi", "fr": "Halloumi", "ru": "Халлуми", "ja": "ハルーミ", "zh": "哈罗米干酪", "fa": "پنیر هالومی", "hi": "हलौमी पनीर", "ar": "جبنة حلوم" }
+    },
+    "cheese_grillkaese_gazi_herbs": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Gazi Grill- und Pfannenkäse (Kräuter)", "icon": "🌿", "latin": "Caseus frictis gazi", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 335, "water_g": 42.0, "protein_g": 18.0, "fat_total_g": 28.0, "carbs_total_g": 1.5, "sugar_g": 1.0 },
+      "meta": { "locations": ["kaufland", "rewe"], "brand": "Gazi", "vegan": false },
+      "quality_metrics": { "flavor": "Mediterranean Herbs", "versatility": "Pan and Grill" },
+      "props": ["Der deutsche Marktführer für Grillkäse-Spezialitäten", "Weniger 'quietschig' als echter Halloumi, dafür cremiger im Biss", "In Kräuteröl mariniert für sofortige Anwendung"],
+      "lang": { "de": "Gazi Grillkäse", "en": "Gazi Grill Cheese", "es": "Queso para parrilla Gazi", "fr": "Fromage à griller Gazi", "ru": "Сыр для гриля Гази", "ja": "Gazi グリルチーズ", "zh": "Gazi 烤奶酪", "fa": "پنیر کبابی گازی", "hi": "गाज़ी ग्रिल पनीर", "ar": "جبنة غازي للشواء" }
+    },
+    "cheese_grill_milbona_lidl": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Milbona Grillkäse (Lidl)", "icon": "🧀", "latin": "Caseus frictis lidlianus", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 328, "water_g": 44.0, "protein_g": 19.5, "fat_total_g": 26.5, "carbs_total_g": 1.8, "sugar_g": 1.2 },
+      "meta": { "locations": ["lidl"], "brand": "Milbona", "vegan": false },
+      "quality_metrics": { "price_segment": "Budget BBQ", "varieties": ["Honey-Mustard", "Herbs", "Chili"] },
+      "props": ["Lidls preiswerte Antwort auf Gazi", "Sehr stabile Proteinmatrix, hält die Form auf dem Grill perfekt", "Oft in Doppelpackungen für den Massenkonsum erhältlich"],
+      "lang": { "de": "Milbona Grillkäse", "en": "Milbona Grill Cheese", "es": "Queso para parrilla Milbona", "fr": "Fromage à griller Milbona", "ru": "Сыр для гриля Милбона", "ja": "Lidl グリルチーズ", "zh": "Lidl 烤奶酪", "fa": "پنیر کبابی میلونا", "hi": "लिडल ग्रिल पनीर", "ar": "جبنة ميلبونا للشواء" }
+    },
+	"--- HARD_AND_GRATED_MASTERS ---": "Hartkäse & Italienische Reifekunst",
+    "cheese_parmigiano_reggiano_24m": {
+      "unit_price": 5.00,
+      "unit_type": "100g",
+      "label": "Parmigiano Reggiano (24 Monate gereift)", "icon": "🇮🇹", "latin": "Caseus parmensis", "sci": ["#sci/Microbiology", "#sci/Nutrition"],
+      "val": { "kcal": 392, "water_g": 30.0, "protein_g": 33.0, "fat_total_g": 28.0, "calcium_mg": 1160.0, "sodium_mg": 650.0 },
+      "meta": { "locations": ["rewe", "edeka", "kaufland"], "pdo_status": "Protected Designation of Origin", "vegan": false },
+      "quality_metrics": { "aging": "24 months (Vecchio)", "texture": "Granular with crystals" },
+      "props": ["Die Königsklasse des Käses", "Extrem proteinreich und praktisch laktosefrei", "Enthält konzentrierte Glutaminsäure für natürlichen Umami-Boost", "Calcium-Bombe für Knochen und Zähne"],
+      "lang": { "de": "Parmesan (Parmigiano Reggiano)", "en": "Parmesan Cheese", "it": "Parmigiano Reggiano" }
+    },
+    "cheese_grana_padano": {
+      "unit_price": 3.00,
+      "unit_type": "100g",
+      "label": "Grana Padano", "icon": "🧀", "latin": "Caseus granensis", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 384, "protein_g": 33.0, "fat_total_g": 28.0, "calcium_mg": 1100.0 },
+      "meta": { "locations": ["lidl", "aldi", "rewe"], "vegan": false },
+      "quality_metrics": { "aging": "9-16 months", "texture": "Grainy / Brittle" },
+      "props": ["Der etwas mildere Bruder des Parmesan", "Wird in der gesamten Po-Ebene produziert", "Ideal zum Reiben über Pasta im Alltag"],
+      "lang": { "de": "Grana Padano", "en": "Grana Padano", "it": "Grana Padano" }
+    },
+    "cheese_pecorino_romano": {
+      "unit_price": 4.00,
+      "unit_type": "100g",
+      "label": "Pecorino Romano (Schafskäse)", "icon": "🐏", "latin": "Caseus pecorinus", "sci": ["#sci/Culinary", "#sci/Nutrition"],
+      "val": { "kcal": 387, "protein_g": 25.0, "fat_total_g": 32.0, "sodium_mg": 1500.0, "calcium_mg": 900.0 },
+      "meta": { "locations": ["rewe", "kaufland", "specialty"], "vegan": false },
+      "quality_metrics": { "source": "100% Sheep Milk", "flavor": "Salty / Sharp / Piquant" },
+      "props": ["Basis für original Carbonara und Cacio e Pepe", "Deutlich salziger und schärfer als Parmesan", "Schafmilch sorgt für ein spezifisches Fettsäurenprofil"],
+      "lang": { "de": "Pecorino Romano", "en": "Pecorino Romano", "it": "Pecorino Romano" }
+    },
+	
+	"--- SPREADABLE_FRESH_CHEESE ---": "Streichfähiger Frischkäse & Spezialitäten",
+    "cheese_cream_full_fat": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Cream Cheese (Double Cream)", "icon": "🥣", "latin": "Caseus butyrosus recens", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 342, "protein_g": 6.0, "fat_total_g": 33.0, "carbs_g": 4.0 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Smooth / High Lipid Content", "process": "Acid-set cream fermentation" },
+      "props": ["Made from milk enriched with cream", "Mild, slightly tangy flavor profile", "Staple for cheesecakes and bagel spreads"],
+      "lang": { "de": "Frischkäse (Doppelrahm)", "en": "Cream Cheese", "es": "Queso crema", "fr": "Fromage à la crème", "ru": "Сливочный сыр", "ja": "クリームチーズ", "zh": "奶油奶酪", "fa": "پنیر خامه‌ای", "hi": "क्रीम चीज़", "ar": "جبنة كريمية" }
+    },
+    "cheese_goat_fresh": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Fresh Goat Cheese", "icon": "🐐", "latin": "Caseus caprinus recens", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 268, "protein_g": 18.5, "fat_total_g": 21.0, "calcium_mg": 140.0 },
+      "meta": { "locations": ["rewe", "denns", "weekly_market"], "season": ["spring", "summer"], "vegan": false },
+      "quality_metrics": { "digestibility": "High (A2-Casein structure)", "purity": "100% Goat milk" },
+      "props": ["Naturally pure white color (no beta-carotene in goat milk)", "Tart, earthy flavor that intensifies with age", "Contains medium-chain fatty acids (MCFAs)"],
+      "lang": { "de": "Ziegenfrischkäse", "en": "Fresh Goat Cheese", "es": "Queso de cabra fresco", "fr": "Chèvre frais", "ru": "Свежий козий сыр", "ja": "フレッシュ山羊乳チーズ", "zh": "新鲜山羊奶酪", "fa": "پنیر بز تازه", "hi": "ताजा बकरी पनीर", "ar": "جبن ماعز طازج" }
+    },
+	
+	"--- BRANDED_FRESH_CHEESE_PHILADELPHIA ---": "Frischkäse-Referenz (Marke: Philadelphia)",
+    "cheese_cream_philadelphia_original": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Philadelphia Original (Double Cream)", "icon": "🥣", "latin": "Caseus butyrosus (Philadelphia)", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 225, "protein_g": 5.4, "fat_total_g": 21.0, "carbs_g": 4.3, "salt_g": 0.75 },
+      "meta": { "locations": ["lidl", "kaufland", "rewe", "edeka"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "texture": "Ultra-creamy / Firm", "fat_content": "Double Cream Grade" },
+      "props": ["The global gold standard for New York Cheesecake", "Lower calorie than pure butter but high lipid satisfaction", "Smooth, non-grainy texture due to specific stabilization"],
+      "lang": { "de": "Philadelphia Original", "en": "Philadelphia Original", "es": "Philadelphia Original", "fr": "Philadelphia Nature", "ru": "Филадельфия Оригинал", "ja": "フィラデルフィア・オリジナル", "zh": "飞利浦原味奶酪", "fa": "پنیر فیلادلفیا اصلی", "hi": "फिलाडेल्फिया मूल", "ar": "فيلادلفيا الأصلية" }
+    },
+    "cheese_cream_philadelphia_balance": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Philadelphia Balance (11% Fat)", "icon": "🥣", "latin": "Caseus butyrosus levis", "sci": ["#sci/Nutrition"],
+      "val": { "kcal": 159, "protein_g": 8.1, "fat_total_g": 11.0, "carbs_g": 6.1 },
+      "meta": { "locations": ["rewe", "kaufland", "lidl"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "benefit": "Reduced Calories / Higher Protein than Original" },
+      "props": ["Hybrid texture: creamy but lighter", "Balanced ratio for daily breakfast", "Retains the characteristic mild Philadelphia tang"],
+      "lang": { "de": "Philadelphia Balance", "en": "Philadelphia Balance", "es": "Philadelphia Balance", "fr": "Philadelphia Balance", "ru": "Филадельфия Баланс", "ja": "フィラデルフィア・バランス", "zh": "飞利浦平衡奶酪", "fa": "فیلادلفیا بالانس", "hi": "फिलाडेल्फिया बैलेंस", "ar": "فيلادلفيا بالانس" }
+    },
+    "cheese_cream_philadelphia_protein": {
+      "unit_price": 3.00,
+      "unit_type": "piece",
+      "label": "Philadelphia Protein (3% Fat)", "icon": "🥣", "latin": "Caseus proteicus (Philadelphia)", "sci": ["#sci/SportsMedicine"],
+      "val": { "kcal": 88, "protein_g": 11.0, "fat_total_g": 3.0, "carbs_g": 4.1 },
+      "meta": { "locations": ["rewe", "kaufland", "edeka"], "season": ["all_year"], "vegan": false },
+      "quality_metrics": { "nutrient_focus": "Maximum Protein / Minimum Fat" },
+      "props": ["Optimized for muscle recovery and dieting", "Texture is slightly firmer/drier than Original", "High Casein content for long-term satiety"],
+      "lang": { "de": "Philadelphia Protein", "en": "Philadelphia Protein", "es": "Philadelphia Protein", "fr": "Philadelphia Protéine", "ru": "Филадельфия Протеин", "ja": "フィラデルフィア・プロテイン", "zh": "飞利浦蛋白质奶酪", "fa": "فیلادلفیا پروتئین", "hi": "फिलाडेल्फिया प्रोटीन", "ar": "فيلادلفيا بروتين" }
+    },
+	"--- DAIRY_FAT_AND_CREAM ---": "Milchfett & Sahne",
+    "butter_grass_fed": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Grass-Fed Butter", "icon": "🧈", "latin": "Butyrum (Bos taurus)", "sci": ["#sci/Lipidology"],
+      "val": { "kcal": 717, "fat_total_g": 81.0, "sfa_g": 51.0, "vit_k2_mcg": 15.0 },
+      "meta": { "locations": ["rewe", "edeka", "denns"], "season": ["all_year"], "vegan": false },
+      "props": ["High in Omega-3 and K2", "Naturally yellow from beta-carotene", "Contains butyrate for gut health"],
+      "lang": { "de": "Weidebutter", "en": "Grass-fed Butter", "es": "Mantequilla", "fr": "Beurre", "ru": "Сливочное масло", "ja": "バター", "zh": "黄油", "fa": "کره", "hi": "मक्खन", "ar": "زبدة" }
+    },
+    "cream_heavy": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Heavy Cream (30%)", "icon": "🥛", "latin": "Flos lactis", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 292, "protein_g": 2.4, "fat_total_g": 30.0, "carbs_g": 3.2 },
+      "meta": { "locations": ["lidl", "rewe", "kaufland"], "season": ["all_year"], "vegan": false },
+      "props": ["Fat-rich part of the milk", "Essential for sauces and whipping", "High satiety factor"],
+      "lang": { "de": "Schlagsahne", "en": "Heavy Cream", "es": "Nata", "fr": "Crème liquide", "ru": "Сливки", "ja": "生クリーム", "zh": "淡奶油", "fa": "خامه", "hi": "मलाई", "ar": "قشطة" }
+    },
+	"--- DAIRY_FAT_AND_CREAM ---": "Milchfette, Sahne & Kochhelfer",
+    "dairy_butter_irish": {
+      "unit_price": 4.00,
+      "unit_type": "piece",
+      "label": "Irische Butter (z.B. Kerrygold)", "icon": "🧈", "latin": "Butyrum hibernicum", "sci": ["#sci/LipidScience"],
+      "val": { "kcal": 743, "fat_total_g": 82.0, "protein_g": 0.7, "carbs_total_g": 0.7, "vit_a_mcg": 600.0 },
+      "meta": { "locations": ["lidl", "rewe", "edeka"], "quality": "Grass-fed (Weidemilch)" },
+      "quality_metrics": { "spreadability": "High (even when cold)", "color": "Naturally deep yellow" },
+      "props": ["Höherer Anteil an Omega-3 und Beta-Carotin durch Weidehaltung", "Streichzarter als Standard-Butter", "Der Klassiker für das Sonntagsfrühstück"],
+      "lang": { "de": "Irische Butter", "en": "Irish Butter", "ga": "Im" }
+    },
+    "dairy_heavy_cream_30": {
+      "label": "Schlagsahne (30% Fett)", "icon": "🥛", "latin": "Flos lactis", "sci": ["#sci/FoodScience"],
+      "val": { "kcal": 292, "fat_total_g": 30.0, "protein_g": 2.4, "carbs_total_g": 3.2 },
+      "meta": { "locations": ["lidl", "aldi", "rewe"], "vegan": false },
+      "quality_metrics": { "whip_stability": "High", "process": "UHT or Fresh" },
+      "props": ["Unverzichtbar für cremige Saucen und Desserts", "Bindet Saucen durch Fett-Emulsion", "Sollte für maximale Aufschlagbarkeit sehr kalt sein"],
+      "lang": { "de": "Schlagsahne", "en": "Heavy Cream", "fr": "Crème fleurette" }
+    },
+    "dairy_sour_cream_20": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Schmand / Sour Cream (20-24%)", "icon": "🥣", "latin": "Lactis flos acidus", "sci": ["#sci/Microbiology"],
+      "val": { "kcal": 210, "fat_total_g": 20.0, "protein_g": 2.5, "carbs_total_g": 3.5 },
+      "meta": { "locations": ["lidl", "rewe", "kaufland"], "vegan": false },
+      "quality_metrics": { "heat_stability": "High (no curdling in sauces)" },
+      "props": ["Stichfeste, gesäuerte Sahne", "Ideal für Dips, Ofenkartoffeln oder zum Verfeinern von Suppen", "Flockt bei Hitze weniger aus als saure Sahne"],
+      "lang": { "de": "Schmand / Sauerrahm", "en": "Sour Cream", "ru": "Сметана" }
+    },
+    "dairy_creme_fraiche": {
+      "unit_price": 2.00,
+      "unit_type": "piece",
+      "label": "Crème Fraîche (30% Fett)", "icon": "🇫🇷", "latin": "Flos lactis gallicus", "sci": ["#sci/Culinary"],
+      "val": { "kcal": 290, "fat_total_g": 30.0, "protein_g": 2.1, "carbs_total_g": 2.5 },
+      "meta": { "locations": ["rewe", "edeka", "lidl"], "origin": "France/Normandy" },
+      "quality_metrics": { "acidity": "Low / Mild", "usage": "Gourmet sauces" },
+      "props": ["Sehr feiner, leicht säuerlicher Geschmack", "Hoher Fettgehalt verhindert das Ausflocken in kochenden Flüssigkeiten", "Der Liebling der französischen Küche"],
+      "lang": { "de": "Crème Fraîche", "en": "Crème Fraîche", "fr": "Crème Fraîche" }
+    }
+  }
+}
