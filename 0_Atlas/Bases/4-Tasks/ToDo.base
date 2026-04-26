@@ -1,0 +1,41 @@
+filters:
+  and:
+    - arch.contains("#4task")
+    - archtype.contains("#4task/todo")
+    - inbox != true
+    - done != true
+    - status != "done"
+    - status != "canceled"
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+views:
+  - type: table
+    name: ToDo
+    order:
+      - file.name
+      - status
+      - priority
+      - due
+      - do
+      - progress
+      - recdays
+      - file.mtime
+      - file.path
+    sort:
+      - property: due
+        direction: ASC
+      - property: priority
+        direction: DESC
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 260
+      note.status: 90
+      note.priority: 70
+      note.due: 120
+      note.do: 120
+      note.progress: 90
+      note.recdays: 80
+      file.mtime: 120
+

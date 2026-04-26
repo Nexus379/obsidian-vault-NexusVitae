@@ -1,0 +1,30 @@
+filters:
+  and:
+    - arch.contains("#5note")
+    - archtype.contains("#5note/2literature")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+views:
+  - type: table
+    name: Literature
+    order:
+      - file.name
+      - status
+      - science
+      - discipline
+      - resource6
+      - file.mtime
+      - file.path
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 260
+      note.status: 90
+      note.science: 130
+      note.discipline: 130
+      note.resource6: 180
+      file.mtime: 120

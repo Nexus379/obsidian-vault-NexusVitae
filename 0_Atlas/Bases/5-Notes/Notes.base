@@ -1,0 +1,33 @@
+filters:
+  and:
+    - arch.contains("#5note")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+views:
+  - type: table
+    name: Notes
+    order:
+      - file.name
+      - archtype
+      - status
+      - priority
+      - area2
+      - science
+      - discipline
+      - file.mtime
+      - file.path
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 260
+      note.archtype: 150
+      note.status: 90
+      note.priority: 70
+      note.area2: 130
+      note.science: 130
+      note.discipline: 130
+      file.mtime: 120

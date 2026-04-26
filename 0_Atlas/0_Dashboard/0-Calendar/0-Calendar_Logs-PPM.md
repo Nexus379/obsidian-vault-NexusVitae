@@ -36,7 +36,7 @@ cssclasses:
 > >              { label: "Critic", key: "critic", color: "#bac2de" }
 > >          ];
 > > 
-> >          const pages = dv.pages('!"zData"');
+> >          const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > >          const counts = personas.map(p => pages.where(page => dv.array(page.persona).some(v => String(v).toLowerCase().includes(p.key)) || dv.array(page.file.tags).some(v => String(v).toLowerCase() === "#" + p.key)).length);
 > >          const hasData = counts.some(c => c > 0);
 > > 
@@ -82,7 +82,8 @@ cssclasses:
 > > > 📊 **PPM Active Pipeline**
 > > > ```dataviewjs
 > > > const ppmKeys = ["worker", "trainer", "strategist", "organizer", "healer", "queen_king", "diplomat", "visionary", "architect", "entrepreneur", "mentor", "critic"];
-> > > const pages = dv.pages('"3_Projects"')
+> > > const pages = dv.pages('"3_Projects" AND !"zData" AND -"yArchive"')
+> > >      .where(p => p.inbox !== true)
 > > >      .where(p => !dv.array(p.status).some(s => String(s).toLowerCase().includes("done")) && (
 > > >          dv.array(p.persona).some(v => ppmKeys.some(k => String(v).toLowerCase().includes(k))) ||
 > > >          dv.array(p.archtype).some(v => ["ppm", "2ppm"].some(k => String(v).toLowerCase().includes(k)))
@@ -114,17 +115,17 @@ cssclasses:
 > > > 🛰️ **Management Navigation**
 > > > > [!multi-column]
 > > > > > [!success]- 👷 Worker
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('worker')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#worker' || String(v).toLowerCase() === '#persona/worker')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('worker')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#worker' || String(v).toLowerCase() === '#persona/worker')).limit(3).file.link)`
 > > > >
 > > > > > [!warning]- 👑 Queen/King
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('queen_king')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#queen_king' || String(v).toLowerCase() === '#persona/queen_king')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('queen_king')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#queen_king' || String(v).toLowerCase() === '#persona/queen_king')).limit(3).file.link)`
 > > > > 
 > > > > > [!info]- 📊 Organizer
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('organizer')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#organizer' || String(v).toLowerCase() === '#persona/organizer')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('organizer')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#organizer' || String(v).toLowerCase() === '#persona/organizer')).limit(3).file.link)`
 > > > 
 > > > > [!multi-column]
 > > > > > [!todo]- 🏋️ Trainer
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('trainer')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#trainer' || String(v).toLowerCase() === '#persona/trainer')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('trainer')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#trainer' || String(v).toLowerCase() === '#persona/trainer')).limit(3).file.link)`
 > > > > 
 > > > > > [!info]- Strategist
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('strategist')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#strategist' || String(v).toLowerCase() === '#persona/strategist')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('strategist')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#strategist' || String(v).toLowerCase() === '#persona/strategist')).limit(3).file.link)`

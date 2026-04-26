@@ -2,8 +2,10 @@
 // 🔱 1. PROJECT-CHOICE FIRST (Die Basis wie beim Area-Prompt)
 const pStatusOpt = ["⚡ 1_Active", "⏳ 2_Passive", "☁️ 3_Idea", "🔄 0_Recurring"];
 const pStatusVal = ["1active", "2passive", "3idea", "0recurring"];
-const pStyleOpt  = ["🛠️ Pro-Do", "🏃🏽 Pro-Go", "🎓 Pro-Study", "📅 Pro-Meet", "💰 Pro-Buy", "💵 Pro-Pay", "🍜 Pro-Cook", "🎀 Pro-Craft"];
-const pStyleVal  = ["1prodo", "2progo", "3prostudy", "4promeet", "5probuy", "6propay", "7procook", "8procraft"];
+
+// 🔱 EXAKTE LISTE: 1-8 bleiben unangetastet, 9 wird ergänzt
+const pStyleOpt  = ["🛠️ Pro-Do", "🏃🏽 Pro-Go", "🎓 Pro-Study", "📅 Pro-Meet", "💰 Pro-Buy", "💵 Pro-Pay", "🍜 Pro-Cook", "🎀 Pro-Craft", "📥 Pro-Get"];
+const pStyleVal  = ["1prodo", "2progo", "3prostudy", "4promeet", "5probuy", "6propay", "7procook", "8procraft", "9proget"];
 
 // 🔱 2. NAVIGATION & ESC-SAFETY
 let pStatus = null;

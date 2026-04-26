@@ -25,9 +25,11 @@ cssclasses:
 > >     chartContainer.style.margin = "0 auto";
 > > 
 > >     if (chartContainer.innerHTML.length < 50) {
-> >         const entries = dv.pages('!"zData"').where(p => 
-> >             p.file.ctime >= start || (p['cal-date'] && moment(p['cal-date'].toString()).isAfter(start))
-> >         );
+> >         const entries = dv.pages('!"zData" AND -"yArchive"')
+> >             .where(p => p.inbox !== true)
+> >             .where(p =>
+> >                 p.file.ctime >= start || (p['cal-date'] && moment(p['cal-date'].toString()).isAfter(start))
+> >             );
 > > 
 > >         const noteLabels = ["Fleeting", "Literature", "Permanent", "Atomic", "Evergreen"];
 > >         const noteTags = ["fleeting", "literature", "permanent", "atomic", "evergreen"];
@@ -89,7 +91,11 @@ cssclasses:
 > >     let html = '<div style="display: flex; gap: 10px; overflow-x: auto; padding: 10px; background: var(--background-secondary); border-radius: 12px;">';
 > > 
 > >     stages.forEach(s => {
-> >         const stageNotes = dv.pages(s.path).sort(p => p.file.mtime, 'desc').slice(0, 5);
+> >         const stageNotes = dv.pages(s.path)
+> >             .where(p => p.inbox !== true)
+> >             .where(p => !["archive", "archived", "bin", "canceled"].includes(String(p.status ?? "").toLowerCase()))
+> >             .sort(p => p.file.mtime, 'desc')
+> >             .slice(0, 5);
 > > 
 > >         html += '<div style="min-width: 180px; flex: 1; display: flex; flex-direction: column;">';
 > >         html += `<div style="font-size: 0.7em; font-weight: 800; text-align: center; color: ${s.color}; margin-bottom: 8px; text-transform: uppercase;">${s.label}</div>`;
@@ -107,3 +113,6 @@ cssclasses:
 > >     dv.el('div', html + '</div>');
 > > }
 > > ```
+
+> [!source] **Notes Library**
+> ![[0_Atlas/Bases/5-Notes/Notes.base]]

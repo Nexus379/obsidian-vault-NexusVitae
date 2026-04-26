@@ -1,0 +1,34 @@
+filters:
+  and:
+    - arch.contains("#5note")
+    - archtype.contains("#5note/4atomic")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+views:
+  - type: table
+    name: Atomic
+    order:
+      - LID
+      - file.name
+      - archtype
+      - status
+      - science
+      - discipline
+      - file.mtime
+      - file.path
+    sort:
+      - property: LID
+        direction: ASC
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      note.LID: 90
+      file.name: 260
+      note.archtype: 160
+      note.status: 90
+      note.science: 130
+      note.discipline: 130
+      file.mtime: 120

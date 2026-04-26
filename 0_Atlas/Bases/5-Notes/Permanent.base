@@ -1,0 +1,32 @@
+filters:
+  and:
+    - arch.contains("#5note")
+    - archtype.contains("#5note/3permanent")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+views:
+  - type: table
+    name: Permanent
+    order:
+      - LID
+      - file.name
+      - status
+      - science
+      - discipline
+      - file.mtime
+      - file.path
+    sort:
+      - property: LID
+        direction: ASC
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      note.LID: 90
+      file.name: 260
+      note.status: 90
+      note.science: 130
+      note.discipline: 130
+      file.mtime: 120

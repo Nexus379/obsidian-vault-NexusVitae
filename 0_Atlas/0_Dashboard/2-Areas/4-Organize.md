@@ -27,12 +27,12 @@ banner_y: 0
 > >             return hay.includes('#2area/4organize') || hay.includes('2area/4organize') || hay.includes('2_areas/4_organize') || hay.includes('4_organize') || hay.includes('4organize');
 > >         };
 > >         const values = [
-> >             dv.pages('#2area/4organize AND !"zData"').length,
-> >             dv.pages('"3_Projects"').where(linked).length,
-> >             dv.pages('"4_Tasks"').where(linked).length,
-> >             dv.pages('"5_Notes"').where(linked).length,
-> >             dv.pages('"6_Resources"').where(linked).length,
-> >             dv.pages('"0_Calendar"').where(linked).length
+> >             dv.pages('#2area/4organize AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length,
+> >             dv.pages('"3_Projects" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
+> >             dv.pages('"4_Tasks" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
+> >             dv.pages('"5_Notes" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
+> >             dv.pages('"6_Resources" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
+> >             dv.pages('"0_Calendar" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length
 > >         ];
 > >         const hasData = values.some(v => v > 0);
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
@@ -50,32 +50,35 @@ banner_y: 0
 > > > [!organize] **🧩 Organize Entries**
 > > > ```dataview
 > > > TABLE status, priority, area2, file.mtime AS updated
-> > > FROM #2area/4organize AND !"zData"
+> > > FROM #2area/4organize AND !"zData" AND -"yArchive"
+> > > WHERE inbox != true
 > > > SORT file.mtime DESC
 > > > ```
 > >
 > > > [!project] **Projects and Tasks**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due
-> > > FROM "3_Projects" OR "4_Tasks"
-> > > WHERE contains(string(area2), "4_Organize") OR contains(string(area2), "4organize") OR contains(string(archtype), "#2area/4organize") OR contains(string(file.outlinks), "4_Organize")
+> > > FROM "3_Projects" OR "4_Tasks" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(area2), "4_Organize") OR contains(string(area2), "4organize") OR contains(string(archtype), "#2area/4organize") OR contains(string(file.outlinks), "4_Organize")) AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```
 > >
 > > > [!literature] **Notes and Resources**
 > > > ```dataview
 > > > TABLE archtype, status, discipline, file.mtime AS updated
-> > > FROM "5_Notes" OR "6_Resources"
-> > > WHERE contains(string(area2), "4_Organize") OR contains(string(area2), "4organize") OR contains(string(archtype), "#2area/4organize") OR contains(string(file.outlinks), "4_Organize")
+> > > FROM "5_Notes" OR "6_Resources" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(area2), "4_Organize") OR contains(string(area2), "4organize") OR contains(string(archtype), "#2area/4organize") OR contains(string(file.outlinks), "4_Organize")) AND inbox != true
 > > > SORT file.mtime DESC
 > > > ```
 > >
 > > > [!info] **Logs and Reviews**
 > > > ```dataview
 > > > TABLE archtype, status, file.mtime AS updated
-> > > FROM "0_Calendar"
-> > > WHERE contains(string(area2), "4_Organize") OR contains(string(area2), "4organize") OR contains(string(archtype), "#2area/4organize") OR contains(string(file.outlinks), "4_Organize")
+> > > FROM "0_Calendar" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(area2), "4_Organize") OR contains(string(area2), "4organize") OR contains(string(archtype), "#2area/4organize") OR contains(string(file.outlinks), "4_Organize")) AND inbox != true
 > > > SORT file.mtime DESC
 > > > LIMIT 12
 > > > ```
 
+> [!source] **Organize Library**
+> ![[0_Atlas/Bases/2-Areas/Organize.base]]

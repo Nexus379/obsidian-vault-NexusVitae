@@ -28,7 +28,7 @@ cssclasses:
 > >              { label: "Recurring", status: "0recurring", color: "#cba6f7" }
 > >          ];
 > > 
-> >          const counts = phases.map(phase => dv.pages('"3_Projects"').where(p => String(p.status).toLowerCase() === phase.status).length);
+> >          const counts = phases.map(phase => dv.pages('"3_Projects" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => String(p.status).toLowerCase() === phase.status).length);
 > >          const hasData = counts.some(v => v > 0);
 > > 
 > >          const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
@@ -72,7 +72,8 @@ cssclasses:
 > > > [!project]
 > > > 📊 **Active Pipeline**
 > > > ```dataviewjs
-> > > const pages = dv.pages('"3_Projects"')
+> > > const pages = dv.pages('"3_Projects" AND !"zData" AND -"yArchive"')
+> > >      .where(p => p.inbox !== true)
 > > >      .where(p => String(p.status).toLowerCase() === "1active")
 > > >      .where(p => !dv.array(p.status).includes("❇️done"))
 > > >      .sort(p => p.priority, "desc")
@@ -102,7 +103,7 @@ cssclasses:
 > > > 🛰️ **Status Overview**
 > > > > [!multi-column]
 > > > > > [!caution]- ⏳ Passive
-> > > > > `$= dv.list(dv.pages('"3_Projects"').where(p => String(p.status).toLowerCase() === "2passive").limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('"3_Projects" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => String(p.status).toLowerCase() === "2passive").limit(3).file.link)`
 > > > >
 > > > > > [!thought]- ☁️ Ideas
-> > > > > `$= dv.list(dv.pages('"3_Projects"').where(p => String(p.status).toLowerCase() === "3idea").limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('"3_Projects" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => String(p.status).toLowerCase() === "3idea").limit(3).file.link)`

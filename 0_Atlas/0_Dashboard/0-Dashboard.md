@@ -46,7 +46,7 @@ cssclasses:
 > > 
 > >         const getFreshData = () => {
 > >             const start = moment().subtract(7, 'days').startOf('day');
-> >             const entries = dv.pages('!"zData"').where(p => 
+> >             const entries = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => 
 > >                 p.file.ctime >= start || (p['cal-date'] && moment(p['cal-date'].toString()).isAfter(start))
 > >             );
 > > 
@@ -121,7 +121,7 @@ cssclasses:
 > > > > {
 > > > >     const container = this.container;
 > > > >     if (container.innerHTML.length < 50) {
-> > > >         const pages = dv.pages('!"zData" and !"0_Calendar"')
+> > > >         const pages = dv.pages('!"zData" and !"0_Calendar" and -"yArchive"').where(p => p.inbox !== true)
 > > > >             .where(p => dv.array(p.persona).some(m => ["guardian", "warrior", "nurturer", "parent", "child", "sibling", "partner", "friend", "lover", "host", "traveler", "player", "monk_nun"].some(tag => String(m).includes(tag))) 
 > > > >                      || dv.array(p.archtype).some(t => String(t).toLowerCase().includes("plm")))
 > > > >             .sort(p => p.file.mtime, "desc").limit(5);
@@ -152,7 +152,7 @@ cssclasses:
 > > > > {
 > > > >     const container = this.container;
 > > > >     if (container.innerHTML.length < 50) {
-> > > >         const pages = dv.pages('!"zData" and !"0_Calendar"')
+> > > >         const pages = dv.pages('!"zData" and !"0_Calendar" and -"yArchive"').where(p => p.inbox !== true)
 > > > >             .where(p => dv.array(p.persona).some(m => ["worker", "trainer", "strategist", "organizer", "healer", "queen_king", "diplomat", "visionary", "architect", "entrepreneur", "mentor", "critic"].some(tag => String(m).includes(tag))) 
 > > > >                      || (dv.array(p.archtype).some(t => String(t).toLowerCase().includes("ppm") && !String(t).toLowerCase().includes("study"))))
 > > > >             .where(p => !dv.array(p.status).includes("done"))
@@ -184,7 +184,7 @@ cssclasses:
 > > > > {
 > > > >     const container = this.container;
 > > > >     if (container.innerHTML.length < 50) {
-> > > >         const pages = dv.pages('!"zData" and !"0_Calendar"')
+> > > >         const pages = dv.pages('!"zData" and !"0_Calendar" and -"yArchive"').where(p => p.inbox !== true)
 > > > >             .where(p => dv.array(p.persona).some(m => String(m).includes("study")) 
 > > > >                      || (p.discipline && dv.array(p.discipline).length > 0) 
 > > > >                      || dv.array(p.archtype).some(t => ["3pkm", "pkm", "study"].some(tag => String(t).toLowerCase().includes(tag)))
@@ -233,7 +233,7 @@ cssclasses:
 > >         window.lastHeatmapRender = now;
 > > 
 > >         const days = 14; 
-> >         const allPages = dv.pages('!"zData"'); 
+> >         const allPages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true); 
 > > 
 > >         const getNoteDate = (p) => {
 > >             if (p.file.path.includes("0_Calendar")) {
@@ -308,7 +308,6 @@ cssclasses:
 > > 
 > > ```
 >   
-
 
 
 

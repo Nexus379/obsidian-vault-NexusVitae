@@ -39,7 +39,7 @@ cssclasses:
 > >              { label: "Monk/Nun", key: "monk_nun", color: "#bac2de" }
 > >          ];
 > > 
-> >          const pages = dv.pages('!"zData"');
+> >          const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > >          const counts = personas.map(p => pages.where(page => dv.array(page.persona).some(v => String(v).toLowerCase().includes(p.key)) || dv.array(page.file.tags).some(v => String(v).toLowerCase() === "#" + p.key)).length);
 > >          const hasData = counts.some(c => c > 0);
 > > 
@@ -85,7 +85,8 @@ cssclasses:
 > > > 📊 **PLM Active Pipeline**
 > > > ```dataviewjs
 > > > const plmKeys = ["guardian", "warrior", "nurturer", "parent", "child", "sibling", "partner", "friend", "lover", "host", "traveler", "player", "monk_nun"];
-> > > const pages = dv.pages('"3_Projects"')
+> > > const pages = dv.pages('"3_Projects" AND !"zData" AND -"yArchive"')
+> > >      .where(p => p.inbox !== true)
 > > >      .where(p => !dv.array(p.status).some(s => String(s).toLowerCase().includes("done")) && (
 > > >          dv.array(p.persona).some(v => plmKeys.some(k => String(v).toLowerCase().includes(k))) ||
 > > >          dv.array(p.archtype).some(v => ["plm", "1plm"].some(k => String(v).toLowerCase().includes(k)))
@@ -117,17 +118,17 @@ cssclasses:
 > > > 🛰️ **Life Navigation**
 > > > > [!multi-column]
 > > > > > [!pink]- Guardian
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('guardian')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#guardian' || String(v).toLowerCase() === '#persona/guardian')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('guardian')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#guardian' || String(v).toLowerCase() === '#persona/guardian')).limit(3).file.link)`
 > > > >
 > > > > > [!soul]- 🦄 Love & Relation
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('partner')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#partner' || String(v).toLowerCase() === '#persona/partner')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('partner')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#partner' || String(v).toLowerCase() === '#persona/partner')).limit(3).file.link)`
 > > > > 
 > > > > > [!healer]- Nurturer
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('nurturer')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#nurturer' || String(v).toLowerCase() === '#persona/nurturer')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('nurturer')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#nurturer' || String(v).toLowerCase() === '#persona/nurturer')).limit(3).file.link)`
 > > > 
 > > > > [!multi-column]
 > > > > > [!social]- 👥 Friends & Social
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('friend')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#friend' || String(v).toLowerCase() === '#persona/friend')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('friend')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#friend' || String(v).toLowerCase() === '#persona/friend')).limit(3).file.link)`
 > > > > 
 > > > > > [!travel]- 🧭 Traveler
-> > > > > `$= dv.list(dv.pages('!"zData"').where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('traveler')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#traveler' || String(v).toLowerCase() === '#persona/traveler')).limit(3).file.link)`
+> > > > > `$= dv.list(dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => dv.array(p.persona).some(v => String(v).toLowerCase().includes('traveler')) || dv.array(p.file.tags).some(v => String(v).toLowerCase() === '#traveler' || String(v).toLowerCase() === '#persona/traveler')).limit(3).file.link)`

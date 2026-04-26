@@ -31,7 +31,7 @@ cssclasses:
 > >          window.lastPieRender = now;
 > > 
 > >          // --- 🟢 1. DATA SOURCE ---
-> >          const pages = dv.pages('!"zData"').where(p => p.discipline); 
+> >          const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.discipline); 
 > > 
 > >          // --- 🔵 2. LOGIC ---
 > >          const counts = {};

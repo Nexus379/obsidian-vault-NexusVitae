@@ -14,5 +14,7 @@ cssclasses:
 
 > [!archive]
 > ![[0_Atlas/Bases/yArchiveBase.base|yArchiveBase]]
+> > ![[zData/5design_modul/QuickCaptureModul|QuickCaptureModul]]
 
-
+> [!info] Archive Boards
+> - [[0_Atlas/0_Dashboard/yArchive/Statusboard|Statusboard]]

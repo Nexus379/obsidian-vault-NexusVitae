@@ -1,0 +1,25 @@
+filters:
+  and:
+    - arch.contains("#6resou")
+    - archtype.contains("#6resou/book")
+views:
+  - type: table
+    name: Books
+    order:
+      - cover
+      - file.name
+      - creator
+      - status
+      - rating
+      - discipline
+      - science
+      - file.path
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      cover: 90
+      file.name: 260
+      note.creator: 170
+      note.status: 90
+      note.rating: 80

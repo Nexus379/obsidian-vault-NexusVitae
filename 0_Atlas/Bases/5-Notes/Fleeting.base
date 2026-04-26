@@ -1,0 +1,32 @@
+filters:
+  and:
+    - arch.contains("#5note")
+    - archtype.contains("#5note/1fleeting")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+views:
+  - type: table
+    name: Fleeting
+    order:
+      - file.name
+      - status
+      - priority
+      - area2
+      - science
+      - discipline
+      - file.mtime
+      - file.path
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 260
+      note.status: 90
+      note.priority: 70
+      note.area2: 130
+      note.science: 130
+      note.discipline: 130
+      file.mtime: 120

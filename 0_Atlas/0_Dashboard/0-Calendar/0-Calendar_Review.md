@@ -19,9 +19,9 @@ cssclasses:
 > >      chartContainer.style.width = "300px";
 > >      chartContainer.style.margin = "0 auto";
 > >
-> >      const dailies = dv.pages('#0cal/1review').where(p => p.archtype.includes("daily") || (!p.archtype.includes("weekly") && !p.archtype.includes("monthly"))).length;
-> >      const weeklies = dv.pages('#0cal/1review/weekly').length;
-> >      const strategic = dv.pages('#0cal/1review').where(p => p.archtype.includes("monthly") || p.archtype.includes("quarterly") || p.archtype.includes("yearly")).length;
+> >      const dailies = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.archtype.includes("daily") || (!p.archtype.includes("weekly") && !p.archtype.includes("monthly"))).length;
+> >      const weeklies = dv.pages('#0cal/1review/weekly AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length;
+> >      const strategic = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.archtype.includes("monthly") || p.archtype.includes("quarterly") || p.archtype.includes("yearly")).length;
 > >
 > >      const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
 > >      
@@ -54,6 +54,8 @@ cssclasses:
 > > }
 > > ```
 >
+> > ![[zData/5design_modul/QuickCaptureModul|QuickCaptureModul]]
+>
 > > [!blank|wide-5]
 > > ### 📈 **VITALITY ARC (30D)**
 > > ```dataviewjs
@@ -64,7 +66,7 @@ cssclasses:
 > >
 > >      const days = 30;
 > >      const start = moment().subtract(days, 'days');
-> >      const reviews = dv.pages('#0cal/1review').where(p => p.cal_date >= start.format("YYYY-MM-DD")).sort(p => p.cal_date, "asc");
+> >      const reviews = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.cal_date >= start.format("YYYY-MM-DD")).sort(p => p.cal_date, "asc");
 > >
 > >      const labels = [];
 > >      const energyData = [];
@@ -108,7 +110,7 @@ cssclasses:
 > > ### 🏆 **HALL OF WINS**
 > > ```dataviewjs
 > > {
-> >     const weeklies = dv.pages('#0cal/1review/weekly').sort(p => p.file.mtime, "desc").limit(4);
+> >     const weeklies = dv.pages('#0cal/1review/weekly AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).sort(p => p.file.mtime, "desc").limit(4);
 > >     let html = `<div style="display: flex; flex-direction: column; gap: 8px;">`;
 > >     
 > >     if(weeklies.length > 0) {
@@ -134,7 +136,7 @@ cssclasses:
 > > [!pink] **Dailies (7D)**
 > > ```dataviewjs
 > > {
-> >     const pages = dv.pages('#0cal/1review').where(p => !p.file.path.includes("Weekly") && !p.file.path.includes("Monthly")).sort(p => p.cal_date, "desc").limit(7);
+> >     const pages = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => !p.file.path.includes("Weekly") && !p.file.path.includes("Monthly")).sort(p => p.cal_date, "desc").limit(7);
 > >     if(pages.length > 0) {
 > >         dv.list(pages.map(p => `[[${p.file.path}|📅 ${p.file.name.split(' ')[0]}]] (Mood: ${p.mood_plm_revD || "?"})`));
 > >     } else {
@@ -146,8 +148,8 @@ cssclasses:
 > > [!info] **Weeklies & Monthlies**
 > > ```dataviewjs
 > > {
-> >     const w = dv.pages('#0cal/1review/weekly').sort(p => p.rev_end, "desc").limit(4);
-> >     const m = dv.pages('#0cal/1review/monthly').sort(p => p.rev_end, "desc").limit(2);
+> >     const w = dv.pages('#0cal/1review/weekly AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).sort(p => p.rev_end, "desc").limit(4);
+> >     const m = dv.pages('#0cal/1review/monthly AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).sort(p => p.rev_end, "desc").limit(2);
 > >     dv.header(6, "🛰️ Recent Weeklies");
 > >     if(w.length > 0) dv.list(w.map(p => `[[${p.file.path}|Weekly ${p.rev_end || ""}]]`));
 > >     else dv.paragraph("_None_");
@@ -160,7 +162,7 @@ cssclasses:
 > > [!success] **Strategic (Q/H/Y)**
 > > ```dataviewjs
 > > {
-> >     const s = dv.pages('#0cal/1review').where(p => String(p.archtype).includes("quarterly") || String(p.archtype).includes("halfyear") || String(p.archtype).includes("yearly")).sort(p => p.file.mtime, "desc").limit(5);
+> >     const s = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => String(p.archtype).includes("quarterly") || String(p.archtype).includes("halfyear") || String(p.archtype).includes("yearly")).sort(p => p.file.mtime, "desc").limit(5);
 > >     if(s.length > 0) {
 > >         dv.list(s.map(p => `[[${p.file.path}|🏛️ ${p.file.name}]]`));
 > >     } else {

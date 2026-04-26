@@ -25,7 +25,7 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > >     nexusContainer.style.margin = "0 auto"; // Zentriert den Chart
 > >     
 > >     if (nexusContainer.innerHTML.length < 50) {
-> >         const entries = dv.pages('!"zData"');
+> >         const entries = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > > 
 > >         const plm = entries.filter(p => dv.array(p.persona).some(m => ["guardian", "warrior", "nurturer", "parent", "child", "sibling", "partner", "friend", "lover", "host", "traveler", "player", "monk_nun"].some(tag => String(m).includes(tag))) || dv.array(p.archtype).some(t => String(t).toLowerCase().includes("plm"))).length;
 > >         const ppm = entries.filter(p => dv.array(p.persona).some(m => ["worker", "trainer", "strategist", "organizer", "healer", "queen_king", "diplomat", "visionary", "architect", "entrepreneur", "mentor", "critic"].some(tag => String(m).includes(tag))) || (dv.array(p.archtype).some(t => String(t).toLowerCase().includes("ppm") && !String(t).toLowerCase().includes("study")))).length;
@@ -75,7 +75,7 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > > ```dataviewjs
 > > // 1. INITIALISIERUNG
 > > if (window.nexusOffset === undefined) window.nexusOffset = 0;
-> > const allLogs = dv.pages('"0_Calendar"');
+> > const allLogs = dv.pages('"0_Calendar" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > > 
 > > const config = {
 > >     jou: { suffix: 'plm', folder: '0_Calendar/1_PLM', template: 'zData/1tmpl/0calendar/dailyplm', icon: '🌷', color: '#ff79c6' },
@@ -219,4 +219,3 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > > ```dataviewjs
 > > await dv.view("zData/tasksCalendar", {pages: "", view: "month", firstDayOfWeek: "0", options: "style2"})
 > > ```
-

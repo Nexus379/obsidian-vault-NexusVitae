@@ -31,7 +31,7 @@ cssclasses:
 > >          window.lastPieRender = now;
 > > 
 > >          // --- 🟢 1. DATA SOURCE ---
-> >          const pages = dv.pages('!"zData"').where(p => p.discipline); 
+> >          const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.discipline); 
 > > 
 > >          // --- 🔵 2. LOGIC ---
 > >          const counts = {};
@@ -173,7 +173,8 @@ cssclasses:
 const today = moment();
 
 // 1. DATA PULL
-const studyNotes = dv.pages('(#5note OR #4task/tostudy) AND !"zData"')
+const studyNotes = dv.pages('(#5note OR #4task/tostudy) AND !"zData" AND -"yArchive"')
+    .where(p => p.inbox !== true)
     .where(p => p.discipline && !String(p.status).includes("spaced"));
 
 // 2. LOGIC-ENGINE 

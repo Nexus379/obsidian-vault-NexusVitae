@@ -1,0 +1,31 @@
+filters:
+  and:
+    - arch.contains("#1stars")
+    - archtype.contains("#1stars/3goals")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+views:
+  - type: table
+    name: Goals
+    order:
+      - file.name
+      - status
+      - priority
+      - due
+      - progress
+      - file.mtime
+      - file.path
+    sort:
+      - property: due
+        direction: ASC
+    columnSize:
+      file.name: 260
+      note.status: 90
+      note.priority: 70
+      note.due: 120
+      note.progress: 90
+      file.mtime: 120
+

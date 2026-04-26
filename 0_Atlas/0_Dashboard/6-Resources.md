@@ -26,7 +26,7 @@ cssclasses:
 > >          const start = moment().subtract(days, 'days').startOf('day');
 > > 
 > >          // Scan resources (Path & Tag combined)
-> >          const entries = dv.pages('!"zData"').where(p => 
+> >          const entries = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => 
 > >              String(p.arch || p.file.etags || "").includes("#6") || 
 > >              p.file.path.includes("6_Resources")
 > >          );
@@ -85,7 +85,8 @@ cssclasses:
 > > > [!info] **📚 Recent Sources (Input Radar)**
 > > > *Latest additions to your library:*
 > > > ```dataviewjs
-> > > const recent = dv.pages('!"zData"')
+> > > const recent = dv.pages('!"zData" AND -"yArchive"')
+> > >      .where(p => p.inbox !== true)
 > > >      .where(p => (
 > > >          String(p.arch || "").includes("#6") || 
 > > >          p.file.path.includes("6_Resources")

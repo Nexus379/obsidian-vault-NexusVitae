@@ -34,7 +34,7 @@ cssclasses:
 > > 
 > >         // --- 🟢 1. DATA SOURCE (Change this for other charts) ---
 > >         // Here we say: Find all pages that have 'inbox: true' in YAML
-> >         const pages = dv.pages('!"zData"').where(p => p.inbox === true); 
+> >         const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox === true); 
 > > 
 > >         // --- 🔵 2. LOGIC (Define what is counted here) ---
 > >         const countTag = (tagPrefix) => pages.filter(p => 
@@ -92,4 +92,3 @@ cssclasses:
 >
 > >[!inbox|wide-5] Inbox
 > > ![[0_Atlas/Bases/Inboxbase.base|Inboxbase]]
-

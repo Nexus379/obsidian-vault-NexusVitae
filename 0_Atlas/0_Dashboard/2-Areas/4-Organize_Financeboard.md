@@ -20,7 +20,7 @@ cssclasses:
 > >      chartContainer.style.width = "300px";
 > >      chartContainer.style.margin = "0 auto";
 > >
-> >      const pages = dv.pages('!"zData"').where(p => p.amount != null);
+> >      const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.amount != null);
 > >      const getSum = (arr) => arr.reduce((a, b) => a + (Number(b) || 0), 0);
 > >      
 > >      const totalIn = getSum(pages.where(p => p.flow === "in").amount.array());
@@ -62,7 +62,7 @@ cssclasses:
 > > **Net Balance:**
 > > ```dataviewjs
 > > {
-> >      const pages = dv.pages('!"zData"').where(p => p.amount != null);
+> >      const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.amount != null);
 > >      const getSum = (arr) => arr.reduce((a, b) => a + (Number(b) || 0), 0);
 > >      const totalIn = getSum(pages.where(p => p.flow === "in").amount.array());
 > >      const totalOut = getSum(pages.where(p => p.flow === "out").amount.array());
@@ -72,13 +72,15 @@ cssclasses:
 > > }
 > > ```
 >
+> > ![[zData/5design_modul/QuickCaptureModul|QuickCaptureModul]]
+>
 > > [!blank|wide-5] 💳 Accounts & Liquidity
 > > > [!multi-column]
 > > >
 > > > > [!info] **🔵 PAYPAL**
 > > > > ```dataviewjs
 > > > > {
-> > > >      const p = dv.pages('!"zData"').where(p => p.account === "PayPal");
+> > > >      const p = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.account === "PayPal");
 > > > >      const getSum = (arr) => arr.reduce((a, b) => a + (Number(b) || 0), 0);
 > > > >      const sum = getSum(p.where(p => p.flow === "in").amount.array()) - getSum(p.where(p => p.flow === "out").amount.array());
 > > > >      dv.paragraph("**" + sum.toFixed(2) + " €**");
@@ -88,7 +90,7 @@ cssclasses:
 > > > > [!success] **🏦 BANK**
 > > > > ```dataviewjs
 > > > > {
-> > > >      const p = dv.pages('!"zData"').where(p => p.account === "Bank");
+> > > >      const p = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.account === "Bank");
 > > > >      const getSum = (arr) => arr.reduce((a, b) => a + (Number(b) || 0), 0);
 > > > >      const sum = getSum(p.where(p => p.flow === "in").amount.array()) - getSum(p.where(p => p.flow === "out").amount.array());
 > > > >      dv.paragraph("**" + sum.toFixed(2) + " €**");
@@ -98,7 +100,7 @@ cssclasses:
 > > > > [!warning] **💳 VISA**
 > > > > ```dataviewjs
 > > > > {
-> > > >      const p = dv.pages('!"zData"').where(p => p.account === "Visa");
+> > > >      const p = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.account === "Visa");
 > > > >      const getSum = (arr) => arr.reduce((a, b) => a + (Number(b) || 0), 0);
 > > > >      const sum = getSum(p.where(p => p.flow === "in").amount.array()) - getSum(p.where(p => p.flow === "out").amount.array());
 > > > >      dv.paragraph("**" + sum.toFixed(2) + " €**");
@@ -109,7 +111,7 @@ cssclasses:
 > > ### 🗓️ Recent Transactions
 > > ```dataviewjs
 > > {
-> >     const pages = dv.pages('!"zData"').where(p => p.amount != null).sort(p => p.file.mtime, "desc").limit(8);
+> >     const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.amount != null).sort(p => p.file.mtime, "desc").limit(8);
 > >     let html = `<div style="display: flex; flex-direction: column; gap: 6px;">`;
 > >     
 > >     pages.forEach(p => {
@@ -135,5 +137,3 @@ cssclasses:
 > >     dv.el("div", html + "</div>");
 > > }
 > > ```
-
-

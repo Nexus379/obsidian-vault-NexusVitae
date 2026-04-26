@@ -21,7 +21,7 @@ cssclasses:
 > >     container.style.margin = "0 auto";
 > >     if (!container.querySelector('canvas')) {
 > >         const linked = p => String([p.file.path, p.file.outlinks, p.arch, p.archtype, p.note5, p.resource6, p.project3, p.task4].join(' ')).toLowerCase().includes('#5note/2literature') || String([p.file.path, p.file.outlinks, p.note5].join(' ')).toLowerCase().includes('2_literature');
-> >         const values = [dv.pages('"5_Notes/2_Literature" OR #5note/2literature').length, dv.pages('"3_Projects"').where(linked).length, dv.pages('"4_Tasks"').where(linked).length, dv.pages('"6_Resources"').where(linked).length, dv.pages('"0_Calendar"').where(linked).length];
+> >         const values = [dv.pages('("5_Notes/2_Literature" OR #5note/2literature) AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length, dv.pages('"3_Projects" AND !"zData" AND -"yArchive"').where(linked).where(p => p.inbox !== true).length, dv.pages('"4_Tasks" AND !"zData" AND -"yArchive"').where(linked).where(p => p.inbox !== true).length, dv.pages('"6_Resources" AND !"zData" AND -"yArchive"').where(linked).where(p => p.inbox !== true).length, dv.pages('"0_Calendar" AND !"zData" AND -"yArchive"').where(linked).where(p => p.inbox !== true).length];
 > >         const hasData = values.some(v => v > 0);
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
 > >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Literature', 'Projects', 'Tasks', 'Resources', 'Logs'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#89dceb', '#f38ba8', '#fab387', '#cba6f7', '#89b4fa'] : ['var(--background-modifier-border)'], borderWidth: 0 }] }, options: { cutout: '80%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
@@ -36,22 +36,26 @@ cssclasses:
 > > > [!literature] **📖 Literature Notes**
 > > > ```dataview
 > > > TABLE status, science, discipline, resource6, file.mtime AS updated
-> > > FROM "5_Notes/2_Literature" OR #5note/2literature AND !"zData"
+> > > FROM "5_Notes/2_Literature" OR #5note/2literature AND !"zData" AND -"yArchive"
+> > > WHERE inbox != true
 > > > SORT file.mtime DESC
 > > > ```
 > >
 > > > [!source] **Source Connections**
 > > > ```dataview
 > > > TABLE archtype, status, resource6, file.mtime AS updated
-> > > FROM "6_Resources"
-> > > WHERE contains(string(note5), "2_Literature") OR contains(string(note5), "2literature") OR contains(string(file.outlinks), "2_Literature")
+> > > FROM "6_Resources" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(note5), "2_Literature") OR contains(string(note5), "2literature") OR contains(string(file.outlinks), "2_Literature")) AND inbox != true
 > > > SORT file.mtime DESC
 > > > ```
 > >
 > > > [!project] **Linked Work**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due
-> > > FROM "3_Projects" OR "4_Tasks"
-> > > WHERE contains(string(note5), "2_Literature") OR contains(string(note5), "2literature") OR contains(string(archtype), "#5note/2literature") OR contains(string(file.outlinks), "2_Literature")
+> > > FROM "3_Projects" OR "4_Tasks" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(note5), "2_Literature") OR contains(string(note5), "2literature") OR contains(string(archtype), "#5note/2literature") OR contains(string(file.outlinks), "2_Literature")) AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```
+
+> [!source] **Literature Notes Library**
+> ![[0_Atlas/Bases/5-Notes/Literature.base]]

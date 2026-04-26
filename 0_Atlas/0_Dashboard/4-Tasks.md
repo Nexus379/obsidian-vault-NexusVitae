@@ -5,7 +5,7 @@ cssclasses:
 ---
 
 # Tasks
-| [[0_Atlas/Bases/Tasksbase.base|Tasksbase]] | [[0_Atlas/0_Dashboard/4-Tasks/1-Task-Center|Task Center]] |
+| [[0_Atlas/Bases/Tasksbase.base|Tasksbase]] | [[0_Atlas/0_Dashboard/4-Tasks/0-Task-Center|Task Center]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -20,23 +20,24 @@ cssclasses:
 > >     container.style.margin = "0 auto";
 > >     const clean = value => String(value ?? "").toLowerCase();
 > >     const hasTaskContext = p => clean(p.arch).includes("#4task") || clean(p.archtype).includes("#4task") || p.file.path.includes("4_Tasks");
-> >     const pages = dv.pages('!"zData"').where(p => !p.file.path.includes("zData") && !p.file.path.includes("yArchive"));
+> >     const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > >     const taskPages = pages.where(p => hasTaskContext(p) && p.done !== true && !["done", "canceled", "archive", "bin"].includes(clean(p.status)));
 > >     const inlineTasks = pages
 > >         .where(p => hasTaskContext(p) || p.file.tasks.where(t => clean(t.text).includes("#4task")).length)
 > >         .file.tasks
 > >         .where(t => !t.completed && !t.path.includes("zData") && !t.path.includes("yArchive"))
 > >         .where(t => hasTaskContext(dv.page(t.path)) || clean(t.text).includes("#4task"));
-> >     const types = [
-> >         { label: "Cook", key: "tocook", color: "#f38ba8" },
-> >         { label: "Craft", key: "tocraft", color: "#fab387" },
-> >         { label: "Pay", key: "topay", color: "#f9e2af" },
-> >         { label: "Buy", key: "tobuy", color: "#eed49f" },
-> >         { label: "Do", key: "todo", color: "#a6e3a1" },
-> >         { label: "Go", key: "togo", color: "#94e2d5" },
-> >         { label: "Meet", key: "tomeet", color: "#89dceb" },
-> >         { label: "Study", key: "tostudy", color: "#89b4fa" }
-> >     ];
+> >      const types = [
+> >          { label: "Cook", key: "tocook", color: "#f38ba8" },
+> >          { label: "Craft", key: "tocraft", color: "#fab387" },
+> >          { label: "Pay", key: "topay", color: "#f9e2af" },
+> >          { label: "Buy", key: "tobuy", color: "#eed49f" },
+> >          { label: "Do", key: "todo", color: "#a6e3a1" },
+> >          { label: "Go", key: "togo", color: "#94e2d5" },
+> >          { label: "Meet", key: "tomeet", color: "#89dceb" },
+> >          { label: "Study", key: "tostudy", color: "#89b4fa" },
+> >          { label: "Get", key: "toget", color: "#cba6f7" }
+> >      ];
 > >     const counts = types.map(type => {
 > >         const fileCount = taskPages.where(p => clean(p.archtype).includes(type.key)).length;
 > >         const inlineCount = inlineTasks.where(t => clean(t.text).includes(type.key) || clean(dv.page(t.path).archtype).includes(type.key)).length;
@@ -58,7 +59,7 @@ cssclasses:
 > >     const clean = value => String(value ?? "").toLowerCase();
 > >     const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 > >     const hasTaskContext = p => clean(p.arch).includes("#4task") || clean(p.archtype).includes("#4task") || p.file.path.includes("4_Tasks");
-> >     const pages = dv.pages('!"zData"').where(p => !p.file.path.includes("zData") && !p.file.path.includes("yArchive"));
+> >     const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > >     const items = [];
 > >     pages.where(p => hasTaskContext(p) && p.done !== true && !["done", "canceled", "archive", "bin"].includes(clean(p.status))).forEach(p => {
 > >         items.push({ name: p.file.name, path: p.file.path, due: p.due, source: "Task File", status: clean(p.status) || "1active" });
@@ -92,7 +93,7 @@ cssclasses:
 > > ```dataviewjs
 > > const clean = value => String(value ?? "").toLowerCase();
 > > const hasTaskContext = p => clean(p.arch).includes("#4task") || clean(p.archtype).includes("#4task") || p.file.path.includes("4_Tasks");
-> > const pages = dv.pages('!"zData"').where(p => !p.file.path.includes("zData") && !p.file.path.includes("yArchive"));
+> > const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > > const taskCalendarTasks = pages
 > >     .where(p => hasTaskContext(p) || p.file.tasks.where(t => clean(t.text).includes("#4task")).length)
 > >     .file.tasks
@@ -102,4 +103,4 @@ cssclasses:
 > > ```
 
 > [!important] Task Center
-> [[0_Atlas/0_Dashboard/4-Tasks/1-Task-Center|Open detailed Task Center]]
+> [[0_Atlas/0_Dashboard/4-Tasks/0-Task-Center|Open detailed Task Center]]

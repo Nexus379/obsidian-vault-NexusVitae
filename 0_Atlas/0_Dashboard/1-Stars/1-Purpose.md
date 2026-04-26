@@ -27,12 +27,12 @@ banner_y: 0
 > >             return hay.includes('#1stars/1purpose') || hay.includes('1stars/1purpose') || hay.includes('1_stars/1_purpose') || hay.includes('1purpose');
 > >         };
 > >         const values = [
-> >             dv.pages('#1stars/1purpose AND !"zData"').length,
-> >             dv.pages('#1stars/2vision AND !"zData"').where(linked).length,
-> >             dv.pages('#1stars/3goals AND !"zData"').where(linked).length,
-> >             dv.pages('"3_Projects"').where(linked).length,
-> >             dv.pages('"4_Tasks"').where(linked).length,
-> >             dv.pages('"5_Notes" OR "6_Resources"').where(linked).length
+> >             dv.pages('#1stars/1purpose AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length,
+> >             dv.pages('#1stars/2vision AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
+> >             dv.pages('#1stars/3goals AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
+> >             dv.pages('"3_Projects" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
+> >             dv.pages('"4_Tasks" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
+> >             dv.pages('("5_Notes" OR "6_Resources") AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length
 > >         ];
 > >         const hasData = values.some(v => v > 0);
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
@@ -50,30 +50,34 @@ banner_y: 0
 > > > [!purpose] **Purpose Anchors**
 > > > ```dataview
 > > > TABLE status, priority, file.mtime AS updated
-> > > FROM #1stars/1purpose AND !"zData"
+> > > FROM #1stars/1purpose AND !"zData" AND -"yArchive"
+> > > WHERE inbox != true
 > > > SORT file.mtime DESC
 > > > ```
+
+> [!source] **Purpose Library**
+> ![[0_Atlas/Bases/1-Stars/Purpose.base]]
 > >
 > > > [!vision] **Vision and Goals**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due
-> > > FROM "1_Stars/2_Vision" OR "1_Stars/3_Goals"
-> > > WHERE contains(string(stars1), "1_Purpose") OR contains(string(stars1), "1purpose") OR contains(string(parent), "1_Purpose") OR contains(string(file.outlinks), "1_Purpose")
+> > > FROM "1_Stars/2_Vision" OR "1_Stars/3_Goals" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(stars1), "1_Purpose") OR contains(string(stars1), "1purpose") OR contains(string(parent), "1_Purpose") OR contains(string(file.outlinks), "1_Purpose")) AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```
 > >
 > > > [!project] **Projects and Tasks**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due
-> > > FROM "3_Projects" OR "4_Tasks"
-> > > WHERE contains(string(stars1), "1_Purpose") OR contains(string(stars1), "1purpose") OR contains(string(parent), "1_Purpose") OR contains(string(file.outlinks), "1_Purpose")
+> > > FROM "3_Projects" OR "4_Tasks" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(stars1), "1_Purpose") OR contains(string(stars1), "1purpose") OR contains(string(parent), "1_Purpose") OR contains(string(file.outlinks), "1_Purpose")) AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```
 > >
 > > > [!literature] **Notes and Resources**
 > > > ```dataview
 > > > TABLE archtype, status, discipline, file.mtime AS updated
-> > > FROM "5_Notes" OR "6_Resources"
-> > > WHERE contains(string(stars1), "1_Purpose") OR contains(string(stars1), "1purpose") OR contains(string(parent), "1_Purpose") OR contains(string(file.outlinks), "1_Purpose")
+> > > FROM "5_Notes" OR "6_Resources" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(stars1), "1_Purpose") OR contains(string(stars1), "1purpose") OR contains(string(parent), "1_Purpose") OR contains(string(file.outlinks), "1_Purpose")) AND inbox != true
 > > > SORT file.mtime DESC
 > > > ```

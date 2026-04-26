@@ -32,7 +32,7 @@ cssclasses:
 > >             { label: "Pro-Cook", tag: "#3project/procook", color: "#cba6f7" },
 > >             { label: "Pro-Craft", tag: "#3project/procraft", color: "#b4befe" }
 > >         ];
-> >         const pages = dv.pages('"3_Projects"').where(hasStatus);
+> >         const pages = dv.pages('"3_Projects" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(hasStatus);
 > >         const counts = types.map(t => pages.where(p => dv.array(p.archtype).some(v => String(v).toLowerCase() === t.tag)).length);
 > >         const hasData = counts.some(v => v > 0);
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
@@ -62,16 +62,16 @@ cssclasses:
 > > > [!caution] **⏳ Passive**
 > > > ```dataview
 > > > TABLE archtype, priority, due, area2, stars1, file.mtime AS updated
-> > > FROM "3_Projects"
-> > > WHERE string(status) = "2passive"
+> > > FROM "3_Projects" AND !"zData" AND -"yArchive"
+> > > WHERE string(status) = "2passive" AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```
 > >
 > > > [!project] **Project Types**
 > > > ```dataview
 > > > TABLE rows.file.link AS Projects
-> > > FROM "3_Projects"
-> > > WHERE string(status) = "2passive"
+> > > FROM "3_Projects" AND !"zData" AND -"yArchive"
+> > > WHERE string(status) = "2passive" AND inbox != true
 > > > GROUP BY archtype
 > > > SORT key ASC
 > > > ```

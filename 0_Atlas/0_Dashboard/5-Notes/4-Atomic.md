@@ -20,7 +20,7 @@ cssclasses:
 > >     container.style.width = "280px";
 > >     container.style.margin = "0 auto";
 > >     if (!container.querySelector('canvas')) {
-> >         const pages = dv.pages('#5note/4atomic AND !"zData"');
+> >         const pages = dv.pages('#5note/4atomic AND !"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > >         const values = [
 > >             pages.where(p => !String(p.archtype).toLowerCase().includes('anki') && !String(p.archtype).toLowerCase().includes('nutrition')).length,
 > >             pages.where(p => String(p.archtype).toLowerCase().includes('anki')).length,
@@ -40,14 +40,16 @@ cssclasses:
 > > > [!literature] **⚛️ Atomic Notes**
 > > > ```dataview
 > > > TABLE LID, status, science, discipline, file.mtime AS updated
-> > > FROM "5_Notes/4_Atomic" OR #5note/4atomic AND !"zData"
+> > > FROM "5_Notes/4_Atomic" OR #5note/4atomic AND !"zData" AND -"yArchive"
+> > > WHERE inbox != true
 > > > SORT LID ASC, file.mtime DESC
 > > > ```
 > >
 > > > [!info] **Atomic Branches**
 > > > ```dataview
 > > > TABLE rows.file.link AS Notes
-> > > FROM "5_Notes/4_Atomic" OR #5note/4atomic AND !"zData"
+> > > FROM "5_Notes/4_Atomic" OR #5note/4atomic AND !"zData" AND -"yArchive"
+> > > WHERE inbox != true
 > > > GROUP BY archtype
 > > > SORT key ASC
 > > > ```
@@ -55,7 +57,10 @@ cssclasses:
 > > > [!project] **Linked Work**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due
-> > > FROM "3_Projects" OR "4_Tasks" AND !"zData"
-> > > WHERE contains(string(note5), "4_Atomic") OR contains(string(note5), "4atomic") OR contains(string(archtype), "#5note/4atomic") OR contains(string(file.outlinks), "4_Atomic")
+> > > FROM "3_Projects" OR "4_Tasks" AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(note5), "4_Atomic") OR contains(string(note5), "4atomic") OR contains(string(archtype), "#5note/4atomic") OR contains(string(file.outlinks), "4_Atomic")) AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```
+
+> [!source] **Atomic Notes Library**
+> ![[0_Atlas/Bases/5-Notes/Atomic.base]]

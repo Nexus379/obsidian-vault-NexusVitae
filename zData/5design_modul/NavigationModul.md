@@ -31,6 +31,7 @@
 >> - [[0_Atlas/0_Dashboard/2-Areas/7-Entertainment|🕹️Entertainment]]
 >
 >>[!project]- [[0_Atlas/0_Dashboard/3-Projects|🚧 Projects]]
+>>
 >> - [[0_Atlas/0_Dashboard/3-Projects/0-Recurring|🔄Recurring]]
 >>
 >> - [[0_Atlas/0_Dashboard/3-Projects/1-Active|⚡Active]]
@@ -42,7 +43,25 @@
 >> [!task]- [[0_Atlas/0_Dashboard/4-Tasks|🛠️Tasks]]
 >> - [[0_Atlas/Bases/Tasksbase.base|Tasksbase]]
 >>
->> - [[0_Atlas/0_Dashboard/4-Tasks/1-Task-Center|Task Center]]
+>> - [[0_Atlas/0_Dashboard/4-Tasks/0-Task-Center|Task Center]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/1-ToDo|ToDo]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/2-ToGo|ToGo]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/3-ToStudy|ToStudy]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/4-ToMeet|ToMeet]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/5-ToBuy|ToBuy]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/6-ToPay|ToPay]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/7-ToCook|ToCook]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/8-ToCraft|ToCraft]]
+>>
+>> - [[0_Atlas/0_Dashboard/4-Tasks/9-ToGet|ToGet]]
 >
 >>[!literature]- [[0_Atlas/0_Dashboard/5-Notes|✏️Notes]] 
 >> - [[0_Atlas/0_Dashboard/5-Notes/1-Fleeting|🍂Fleeting]]

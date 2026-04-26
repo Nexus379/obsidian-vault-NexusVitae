@@ -1,0 +1,24 @@
+filters:
+  and:
+    - arch.contains("#6resou")
+    - archtype.contains("#6resou/class")
+views:
+  - type: table
+    name: Classes
+    order:
+      - cover
+      - file.name
+      - creator
+      - status
+      - rating
+      - discipline
+      - science
+      - file.path
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      cover: 90
+      file.name: 240
+      note.creator: 160
+      note.status: 90

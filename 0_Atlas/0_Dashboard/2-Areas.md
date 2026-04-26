@@ -32,7 +32,7 @@ cssclasses:
 > >              { label: "🕹️ Entertain", path: '"2_Areas/7_Entertainment"', color: "#cc99ff" } 
 > >          ];
 > > 
-> >          const counts = areas.map(a => dv.pages(a.path).length);
+> >          const counts = areas.map(a => dv.pages(a.path).where(p => p.inbox !== true).length);
 > > 
 > >          const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
 > >          const chartData = {
@@ -81,24 +81,26 @@ cssclasses:
 > > > > 🛰️ **Area Navigation**
 > > > > > [!multi-column]
 > > > > > > [!pink]- 🌸 Selfcare
-> > > > > > `$= dv.list(dv.pages('#2area/1selfcare AND !"zData"').limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/1selfcare AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > >
 > > > > > > [!soul]- 🦄 Relation
-> > > > > > `$= dv.list(dv.pages('#2area/2relationship AND !"zData"').limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/2relationship AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > > 
 > > > > > > [!mind]- 🧠 Mind
-> > > > > > `$= dv.list(dv.pages('#2area/3mind AND !"zData"').limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/3mind AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > 
 > > > > > [!multi-column]
 > > > > > > [!organize]- 🧩 Organize
-> > > > > > `$= dv.list(dv.pages('#2area/4organize AND !"zData"').limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/4organize AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > >
 > > > > > > [!creativity]- 🎨 Creativity
-> > > > > > `$= dv.list(dv.pages('#2area/5creativity AND !"zData"').limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/5creativity AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > >
 > > > > > > [!activity]- 🚵🏽 Activity
-> > > > > > `$= dv.list(dv.pages('#2area/6activity AND !"zData"').limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/6activity AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > >
 > > > > > > [!collect]- 🕹️ Entertainment
-> > > > > > `$= dv.list(dv.pages('#2area/7entertain AND !"zData"').limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/7entertain AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 
+> [!source] **Areas Library**
+> ![[0_Atlas/Bases/2-Areas/Areas.base]]

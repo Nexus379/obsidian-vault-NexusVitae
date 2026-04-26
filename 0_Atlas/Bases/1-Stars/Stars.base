@@ -1,0 +1,31 @@
+filters:
+  and:
+    - arch.contains("#1stars")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+views:
+  - type: table
+    name: Stars
+    groupBy:
+      property: archtype
+      direction: ASC
+    order:
+      - file.name
+      - archtype
+      - status
+      - priority
+      - file.mtime
+      - file.path
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 260
+      note.archtype: 150
+      note.status: 90
+      note.priority: 70
+      file.mtime: 120
+

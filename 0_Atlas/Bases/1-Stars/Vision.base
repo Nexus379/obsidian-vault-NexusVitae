@@ -1,0 +1,27 @@
+filters:
+  and:
+    - arch.contains("#1stars")
+    - archtype.contains("#1stars/2vision")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+views:
+  - type: table
+    name: Vision
+    order:
+      - file.name
+      - status
+      - priority
+      - file.mtime
+      - file.path
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 260
+      note.status: 90
+      note.priority: 70
+      file.mtime: 120
+

@@ -25,13 +25,13 @@ banner_y: 0
 > >     
 > >     if (chartContainer.innerHTML.length < 50) {
 > >         // Fetches all pages except the data folder
-> >         const entries = dv.pages('!"zData"');
+> >         const entries = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > > 
 > >         // 🔱 YOUR STARS LOGIC (Purpose, Vision, Goals)
 > >         // Path update for Stars:
-> >         const purpose = dv.pages('"1_Stars/1_Purpose" AND !"zData"').length;
-> >         const vision = dv.pages('"1_Stars/2_Vision" AND !"zData"').length;
-> >         const goals = dv.pages('"1_Stars/3_Goals" AND !"zData"').length;
+> >         const purpose = dv.pages('"1_Stars/1_Purpose" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length;
+> >         const vision = dv.pages('"1_Stars/2_Vision" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length;
+> >         const goals = dv.pages('"1_Stars/3_Goals" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length;
 > > 
 > > 
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
@@ -87,22 +87,22 @@ banner_y: 0
 > > >
 > > >> [!purpose] **1 🌟 Purpose**
 > > >> *Your Why – The anchor of your existence.*
-> > >> `$= dv.list(dv.pages('#1stars/1purpose AND !"zData"').file.link)`
+> > >> `$= dv.list(dv.pages('#1stars/1purpose AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).file.link)`
 > > >
 > > >> [!vision] **2 🧭 Vision**
 > > >> *The 5-10 year horizon.*
-> > >> `$= dv.list(dv.pages('#1stars/2vision AND !"zData"').file.link)`
+> > >> `$= dv.list(dv.pages('#1stars/2vision AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).file.link)`
 > > >
 > > >> [!goals] **3 🎯 Goals**
 > > >> *Active milestones.*
-> > >> `$= dv.list(dv.pages('#1stars/3goals AND !"zData"').where(p => !dv.array(p.status).includes("❇️done")).file.link)`
+> > >> `$= dv.list(dv.pages('#1stars/3goals AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => !dv.array(p.status).includes("❇️done")).file.link)`
 > >   
 > > > [!blank]
 > > > ### 🌌 Current Trajectory (Recent Insights)
 > > > ```dataview
 > > > TASK
-> > > FROM (#4🛠️ OR #3🚧) AND !"zData"
-> > > WHERE !completed 
+> > > FROM (#4🛠️ OR #3🚧) AND !"zData" AND -"yArchive"
+> > > WHERE !completed AND inbox != true
 > > > AND (
 > > >     contains(stars1, "3 🎯 Goals") OR 
 > > >     contains(parent, "3 🎯 Goals") OR
@@ -112,3 +112,5 @@ banner_y: 0
 > > > LIMIT 8
 > > > ```
 
+> [!source] **Stars Library**
+> ![[0_Atlas/Bases/1-Stars/Stars.base]]

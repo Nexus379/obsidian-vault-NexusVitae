@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0_Atlas/Nexus Vitae Guide.md",
+                "file": "zData/1tmpl/3projectesprompt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Nexus Vitae Guide"
+              "title": "3projectesprompt"
+            }
+          },
+          {
+            "id": "571ad661a14590a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zData/1tmpl/4tasksprompt.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "4tasksprompt"
+            }
+          },
+          {
+            "id": "a4078c59ce2e81bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0_Atlas/0_Dashboard/4-Tasks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "4-Tasks"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -33,7 +62,7 @@
       {
         "id": "45a3f2770abc159a",
         "type": "tabs",
-        "dimension": 32.325776658270364,
+        "dimension": 33.3950046253469,
         "children": [
           {
             "id": "10049657445818a6",
@@ -50,7 +79,7 @@
       {
         "id": "a675c9214681c249",
         "type": "tabs",
-        "dimension": 67.67422334172963,
+        "dimension": 66.6049953746531,
         "children": [
           {
             "id": "81fba5ff90392f6c",
@@ -95,7 +124,7 @@
       {
         "id": "c5d9036c2abe0c60",
         "type": "tabs",
-        "dimension": 60.58451816745656,
+        "dimension": 60.58451816745655,
         "children": [
           {
             "id": "a10cd1ba94e93261",
@@ -103,10 +132,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "0_Atlas/Nexus Vitae Guide.md"
+                "file": "zData/5design_modul/CalendarMonth.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Nexus Vitae Guide"
+              "title": "File properties for CalendarMonth"
             }
           },
           {
@@ -166,8 +195,19 @@
               "icon": "links-going-out",
               "title": "Outgoing links from Nexus Vitae Guide"
             }
+          },
+          {
+            "id": "aaab64b3b65bd7bf",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "clock",
+              "title": "Chronology"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "e64fff4d70079b30",
@@ -221,7 +261,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 344.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -236,47 +277,48 @@
       "templater-obsidian:Templater": false,
       "callout-manager:Insert Callout": false,
       "chronology:Open Chronology": false,
-      "obsidian-kanban:Create new board": false
+      "obsidian-kanban:Create new board": false,
+      "local-backup:Run local backup": false
     }
   },
-  "active": "bf3eab0cfa86ceee",
+  "active": "a4078c59ce2e81bc",
   "lastOpenFiles": [
-    "README.md",
-    "0_Atlas/Nexus Vitae Guide.md",
-    "zData/5design_modul/CalendarMonth.md",
-    "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Review.md",
     "0_Atlas/0_Dashboard/0-Dashboard.md",
-    "0_Atlas/0_Dashboard/0-Financeboard.md",
-    "0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard.md",
-    "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard-PKM.md",
-    "0_Atlas/0_Dashboard/1-Stars.md",
-    "0_Atlas/0_Dashboard/0-Calendar.md",
-    "0_Atlas/0_Dashboard/0-Inbox.md",
-    "zData/1tmpl/0calendar/revd.md",
-    "zData/1tmpl/0calendar/revh.md",
-    "zData/1tmpl/0calendar/revm.md",
-    "zData/1tmpl/0calendar/revw.md",
-    "zData/1tmpl/0calendar/revy.md",
-    "zData/1tmpl/0calendar/revq.md",
-    "0_Atlas/0_Dashboard/4-Tasks.md",
-    "zData/1tmpl/4tasks/9totake.md",
-    "zData/1tmpl/3projects/9protake.md",
-    "zData/1tmpl/3projects/6propay.md",
-    "zData/1tmpl/3projects/5probuy.md",
-    "zData/1tmpl/4tasks/6topay.md",
-    "zData/1tmpl/4tasks/5tobuy.md",
+    "0_Atlas/0_Dashboard/5-Notes/1-Fleeting.md",
     "zData/yaml tags organization.md",
-    "0_Atlas/Nexus SetUp Roadmap.md",
-    "0_Atlas/0_Dashboard/4-Tasksboard",
-    "0_Atlas/0_Dashboard/6-Resources",
-    "0_Atlas/Bases/Resources/Videos.base",
-    "0_Atlas/Bases/Resources/Series.base",
-    "0_Atlas/Bases/Resources/Reference.base",
-    "0_Atlas/Bases/Resources/Recipes.base",
-    "0_Atlas/Bases/Resources/Papers.base",
-    "0_Atlas/Bases/Resources/Music.base",
-    "0_Atlas/Bases/Resources/Museums.base",
-    "0_Atlas/Bases/Resources/Guides.base",
+    "0_Atlas/0_Dashboard/6-Resources/Books.md",
+    "0_Atlas/0_Dashboard/6-Resources/Boardgame.md",
+    "0_Atlas/0_Dashboard/6-Resources/Articles.md",
+    "0_Atlas/0_Dashboard/6-Resources.md",
+    "0_Atlas/0_Dashboard/3-Projects.md",
+    "0_Atlas/0_Dashboard/4-Tasks.md",
+    "0_Atlas/0_Dashboard/5-Notes.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Videos.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Series.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Reference.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Recipes.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Papers.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Music.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Museums.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Guides.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Games.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Films.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Courses.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Classes.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Books.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Boardgame.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/Articles.md",
+    "0_Atlas/0_Dashboard 1/6-Resources/AI.md",
+    "0_Atlas/0_Dashboard 1/6-Resources",
+    "0_Atlas/0_Dashboard 1/5-Notes",
+    "0_Atlas/0_Dashboard 1/4-Tasks",
+    "0_Atlas/0_Dashboard 1/3-Projects",
+    "0_Atlas/0_Dashboard 1/2-Areas",
+    "0_Atlas/0_Dashboard 1/1-Stars",
+    "0_Atlas/0_Dashboard 1/0-Calendar",
+    "0_Atlas/0_Dashboard 1",
+    "0_Atlas/Bases/yArchiveBase.base",
+    "0_Atlas/Bases/Resourcebase.base",
     "xAttachment/Images/gifs/evoli sitting.gif",
     "xAttachment/Images/Banner/Area Banner/wind elve glasses.jpg",
     "xAttachment/Images/Banner/Area Banner/study, blau.jpg",

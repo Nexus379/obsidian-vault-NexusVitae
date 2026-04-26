@@ -9,8 +9,9 @@ let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.
 const activeTrigger = tp.variables.originTrigger || ""; 
 
 // 🔱 2. TASK SELECTION
-const tOptions = ["🛠️ 1_Todo", "🏃🏽 2_Togo", "🎓 3_Tostudy", "📅 4_Tomeet", "💰 5_Tobuy", "💵 6_Topay", "🍜 7_Tocook", "🎀 8_Tocraft"];
-const tValues  = ["1todo", "2togo", "3tostudy", "4tomeet", "5tobuy", "6topay", "7tocook", "8tocraft"];
+// Die bestehenden Nummern (1-8) bleiben EXAKT wie sie waren!
+const tOptions = ["🛠️ 1_Todo", "🏃🏽 2_Togo", "🎓 3_Tostudy", "📅 4_Tomeet", "💰 5_Tobuy", "💵 6_Topay", "🍜 7_Tocook", "🎀 8_Tocraft", "📥 9_Toget"];
+const tValues  = ["1todo", "2togo", "3tostudy", "4tomeet", "5tobuy", "6topay", "7tocook", "8tocraft", "9toget"];
 
 const triggerMap = { 
     "todo": "1todo", 
@@ -21,6 +22,9 @@ const triggerMap = {
     "pay": "6topay",
     "cook": "7tocook",
     "craft": "8tocraft",
+    "get": "9toget",       // 🔱 NEU (Nummer 9)
+    "receive": "9toget",
+    "income": "9toget",
     "t": "1todo" // Expliziter t-Fallback
 };
 
@@ -33,11 +37,12 @@ const deadlineConfig = {
     "1todo": 1,    // +1 Tag
     "2togo": 14,   // 14 Tage
     "3tostudy": 1, // +1 Tag
-    "4tomeet": 0,  // Eigenes Datum (Prompt wird leerer Vorschlag oder heute)
+    "4tomeet": 0,  // Eigenes Datum
     "5tobuy": 7,   // 7 Tage
     "6topay": 3,   // 3 Tage
     "7tocook": 0,  
-    "8tocraft": 14 // 14 Tage
+    "8tocraft": 14, // 14 Tage
+    "9toget": 3    // 🔱 NEU
 };
 
 const daysToAdd = deadlineConfig[choice] || 0;
