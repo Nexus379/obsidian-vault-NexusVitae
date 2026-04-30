@@ -30,7 +30,7 @@ Welcome to my personal Obsidian Vault. I built Nexus Vitae to bring a bit more s
 Here is what I am currently tinkering with:
 - [ ] Change suggester for energy to a slider in templates
 - [x] Write minutes in dailypkm for add-disc-pkm
-- [ ] Dashboard Review
+- [x] Dashboard Review
 - [x] Dashboard Studylog
 - [x] ! income templtaes
 	- [x] totake

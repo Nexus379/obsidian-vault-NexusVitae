@@ -82,21 +82,24 @@ if (dv) {
 // 🧹 5.4 FINAL NEXUS HOUSEHOLD ENGINE (Weekend Lockdown Edition)
 const dayOfWeek = moment(dateStr).format("dddd"); 
 
+// 🧽 5.4 FINAL NEXUS HOUSEHOLD ENGINE (Consistent Laundry Edition)
+const dayOfWeek = moment(dateStr).format("dddd"); 
+
 const chores = {
-    "Monday":    ["Weekly Grocery Run 🛒", "Floor (Vacuum & Mop) 🧼"], // Power-Start
-    "Tuesday":   ["Bathroom (Toilet & Sink)", "Mirror Polish"],
-    "Wednesday": ["Kitchen Deep Clean", "Fridge Check"],
-    "Thursday":  ["Fresh Supply Refill 🛒", "Floor (Vacuum & Mop) 🧼"], // Weekend-Vorbereitung
-    "Friday":    ["Bathroom (Shower & Floor)", "Laundry Day 🧺"],    // Letzte Tasks vor dem Weekend
-    "Saturday":  ["OFF - System Idle 💠", "Rest & Recharge"],         // Absolutes Minimum / Nichts
-    "Sunday":    ["Selfcare Sanctuary 🧘", "Mental Alignment 💎"]     // Nur Fokus auf dich
+    "Monday":    ["Weekly Grocery Run 🛒", "Daily Laundry & Iron 🧺"],
+    "Tuesday":   ["Kitchen & Fridge Check 🍳", "Daily Laundry & Iron 🧺"],
+    "Wednesday": ["Floor (Vacuum & Mop) 🧽", "Daily Laundry & Iron 🧺"],
+    "Thursday":  ["Dusting & Fresh Supply 🛒", "Daily Laundry & Iron 🧺"],
+    "Friday":    ["Complete Bathroom Clean 🛁", "Daily Laundry & Iron 🧺"],
+    "Saturday":  ["OFF - System Idle 💠", "Rest & Recharge"],
+    "Sunday":    ["Bed Sheets & Plants 🌱", "Selfcare Sanctuary 🧘"]
 };
 
 const taskPair = chores[dayOfWeek] || ["Maintenance", "Idle"];
 
 // Variablen für Frontmatter setzen
-tp.variables.maintask5 = taskPair[0];
-tp.variables.maintask6 = taskPair[1];
+tp.variables.maintask1 = taskPair[0];
+tp.variables.maintask2 = taskPair[1];
 
 // Falls im aktuellen Frontmatter schon was steht (manuelle Änderung), behalten wir das
 if (tp.frontmatter && tp.frontmatter.focusM_ppm) {
@@ -143,12 +146,12 @@ focusD_ppm: "<%- pureFocus %>"
 focusD_pkm: "<%- aim3Focus %>"
 focusM_ppm: "<%- focusM_ppm %>"
 focusM_start: "<%- focusStart %>"
-maintask1: ""
-maintask2: ""
+maintask1: "<%- tp.variables.maintask1 %>"
+maintask2: "<%- tp.variables.maintask2 %>"
 maintask3: ""
 maintask4: ""
-maintask5: "<%- tp.variables.maintask5 %>"
-maintask6: "<%- tp.variables.maintask6 %>"
+maintask5: ""
+maintask6: ""
 cal_date: <%- dateStr %>
 
 ---
@@ -196,12 +199,12 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >
 > > > [!blank|wide-1] 
 > > > **Main Tasks**
-> > > 1. **`INPUT[text:maintask1]`**
-> > > 2. **`INPUT[text:maintask2]`**
+> > > 1. **`INPUT[text:maintask1]`** <span style="font-size: 0.79em; opacity: 0.7;">🧹</span>
+> > > 2. **`INPUT[text:maintask2]`** <span style="font-size: 0.79em; opacity: 0.7;">🧹</span>
 > > > 3. `INPUT[text:maintask3]`
 > > > 4. `INPUT[text:maintask4]`
-> > > 5. <small>🧹</small> `INPUT[text:maintask5]`
-> > > 6. <small>🧹</small> `INPUT[text:maintask6]`
+> > > 5. `INPUT[text:maintask5]`
+> > > 6. `INPUT[text:maintask6]`
 
 
 ##### Sidequest /Braindump

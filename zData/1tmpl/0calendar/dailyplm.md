@@ -220,6 +220,19 @@ food_rem:
 
 <%- tp.file.include("[[zData/5design_modul/CalendarLog]]") %>
 
+## <%- displayTitle %>
+
+<%-*
+// 🔱 3. DYNAMISCHE LINKS ZU DEN ANDEREN LOGS
+const todayPPM = `0_Calendar/2_PPM/${year}/${month}/${dateStr} ppm`;
+const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
+const displayTitle = pureFocus || "Daily Journal";
+%>
+**Professional:** [[<%- todayPPM %>|🌻 Go to today's Manager-Log (PPM)]]
+**Knowledge:** [[<%- todayPKM %>|🌼 Go to today's Study-Log (PKM)]]
+
+---
+
 > [!soul] Focus PLM
 > > [!multi-column]
 > > > [!blank|wide-2]
@@ -245,6 +258,12 @@ food_rem:
 > > > 
 > > > `BUTTON[reset-focus]`
 
+> [!quote|flat] ☀️ AM Protocol
+> - [ ] 🧘🏽‍♀️ Yoga (Stretching)
+> - [ ] 🛏️ Make bed & air out the room
+> - [ ] 🍽️ Empty dishwasher
+> - [ ] ☕ Make coffee / tea
+> - [ ] 💊 Vitamins / Supplements
 
 ## 🌿Consuetudo
 ```dataviewjs
@@ -470,32 +489,32 @@ food_rem:
 > > >      if(cur < gaps[k][1]) mList.push("**" + gaps[k][0] + ":** " + Math.max(0, cur).toFixed(1) + " / " + gaps[k][1] + gaps[k][2]); 
 > > > }
 > > > const gapStr = mList.length > 0 ? mList.join("<br>") : "✅ **All molecular baselines stabilized.**";
-> > > dv.paragraph(resStr + "\n\n> [!danger] **Molecular Gaps (Action Matrix)**\n> " + gapStr);
+> > > dv.paragraph(resStr + "\n\n> [!quote] **Molecular Gaps (Action Matrix)**\n> " + gapStr);
 > > > ```
-
-> [!abstract]- ⏲️ Molecular Timing Guide (Ref)
-> > [!multi-column]
-> >
-> > > [!info]  **🌅 Morning (AM)**
-> > > *Focus: Oxygen & Energy*
-> > > - **Iron + Vit C:** Best on empty stomach.
-> > > - **B-Complex:** Activates metabolism.
-> > > - **Creatine:** Saturation for the day.
-> > > ---
-> > > *🚫 Blocker:* Coffee/Tea (60min gap).
-> >
-> > > [!info]  **☀️ Midday (MID)**
-> > > *Focus: Protection & Lipids*
-> > > - **D3 + K2 + Omega-3:** Needs fat to absorb.
-> > > - **Choline:** Supports midday focus.
-> > > ---
-> > > *🥑 Synergy:* Take with meal for hormone synthesis.
-> >
-> > > [!info] **🌙 Evening (PM)**
-> > > *Focus: Recovery & CNS*
-> > > - **Magnesium:** Relaxes muscles & CNS.
-> > > - **Zinc + Selenium:** Immune & hormone repair.
-> > > - **Glycine:** Lowers core temp for sleep.
+>
+> > [!quote]- ⏲️ Molecular Timing Guide (Ref)
+> > > [!multi-column]
+> > >
+> > > > [!info]  **🌅 Morning (AM)**
+> > > > *Focus: Oxygen & Energy*
+> > > > - **Iron + Vit C:** Best on empty stomach.
+> > > > - **B-Complex:** Activates metabolism.
+> > > > - **Creatine:** Saturation for the day.
+> > > > ---
+> > > > *🚫 Blocker:* Coffee/Tea (60min gap).
+> > >
+> > > > [!info]  **☀️ Midday (MID)**
+> > > > *Focus: Protection & Lipids*
+> > > > - **D3 + K2 + Omega-3:** Needs fat to absorb.
+> > > > - **Choline:** Supports midday focus.
+> > > > ---
+> > > > *🥑 Synergy:* Take with meal for hormone synthesis.
+> > >
+> > > > [!info] **🌙 Evening (PM)**
+> > > > *Focus: Recovery & CNS*
+> > > > - **Magnesium:** Relaxes muscles & CNS.
+> > > > - **Zinc + Selenium:** Immune & hormone repair.
+> > > > - **Glycine:** Lowers core temp for sleep.
 
 > [!pink] E - Emotions
 > >[!multi-column]
@@ -551,49 +570,15 @@ food_rem:
 > [!pink] N - Night / Sleep
 > - **Sleep:** <%- schlaf %>h `$= Number(<%- schlaf %>) >= 7 ? "🟢" : "🔴"`
 
+> [!quote|flat] 🌙 PM Protocol
+> - [ ] 🍽️ Load & start dishwasher
+> - [ ] 🗑️ Check trash & take out if needed
+> - [ ] 🛋️ 5-Minute Reset (clear tables & surfaces)
+> - [ ] 📱 Plug in devices & switch to offline mode
 
-> [!info] 📊 Status & Records
-> 
-> > [!multi-column]
-> >
-> >> [!zettelkasten] ✍️ Recent Notes
-> >> ```dataviewjs
-> >> const notes = dv.pages('"5_Notes"').sort(p => p.file.mtime, "desc").limit(5);
-> >> if (notes.length > 0) dv.list(notes.file.link);
-> >> else dv.paragraph("_No recent notes found._");
-> >> ```
-> >
-> >> [!log] 🌙 Last Syncs
-> >> ```dataviewjs
-> >> const syncConfigs = [
-> >>     { label: "Journal",  folder: '"0_Calendar/1_PLM"' },
-> >>     { label: "Log",      folder: '"0_Calendar/2_PPM"' },
-> >>     { label: "Study",    folder: '"0_Calendar/3_PKM"' },
-> >>     { label: "Project",  folder: '"0_Calendar/4_Projectlog"' },
-> >>     { label: "Review",   folder: '"0_Calendar/6_Review"' }
-> >> ];
-> >> let out = [];
-> >> syncConfigs.forEach(cfg => {
-> >>     const lastFile = dv.pages(cfg.folder).sort(p => p.file.name, "desc").first();
-> >>     if (lastFile) out.push(`**${cfg.label}:** ${lastFile.file.link}`);
-> >> });
-> >> if (out.length > 0) dv.list(out);
-> >> else dv.paragraph("_No logs found._");
-> >> ```
-> 
-> ---
-> ---
-> 
-> 
-> ## 🔱 Eat the Frog
-> **Professional:** [[<%- ppmPath %>|🌻 Manager-Log (PPM)]]
-> 
-> **Knowledge:** [[<%- pkmPath %>|🌼 Study-Log (PKM)]]
-> 
-> `BUTTON[freezer]`
-> 
-> ---
-> ---
+---
+`BUTTON[freezer]`
+
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 

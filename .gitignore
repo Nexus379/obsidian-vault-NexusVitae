@@ -3,6 +3,11 @@
 .obsidian/plugins/obsidian-git/
 .obsidian/indexedDB/
 
+# Workspace & UI State (Damit GitHub nicht bei jedem Klick nervt)
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
 # System-Müll
 .trash/
 .DS_Store
@@ -11,3 +16,4 @@ Thumbs.db
 
 # Falls du große lokale Backups hast
 Local Backup/
+.obsidian/workspace.json

@@ -4,53 +4,44 @@
     "type": "split",
     "children": [
       {
-        "id": "a3edc4d1497581d4",
+        "id": "08a26d80bd732f1c",
         "type": "tabs",
         "children": [
           {
-            "id": "bf3eab0cfa86ceee",
+            "id": "eb06e35c987408ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zData/1tmpl/3projectesprompt.md",
+                "file": "zData/1tmpl/0calendar/dailyplm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3projectesprompt"
-            }
-          },
-          {
-            "id": "571ad661a14590a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "zData/1tmpl/4tasksprompt.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "4tasksprompt"
-            }
-          },
-          {
-            "id": "a4078c59ce2e81bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0_Atlas/0_Dashboard/4-Tasks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "4-Tasks"
+              "title": "dailyplm"
             }
           }
-        ],
-        "currentTab": 2
+        ]
+      },
+      {
+        "id": "7d22a3fd2a5e4ae4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bfde0481592c8d00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -261,8 +252,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5,
-    "collapsed": true
+    "width": 344.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -281,9 +271,17 @@
       "local-backup:Run local backup": false
     }
   },
-  "active": "a4078c59ce2e81bc",
+  "active": "bfde0481592c8d00",
   "lastOpenFiles": [
+    "zData/1tmpl/0calendar/dailyppm.md",
+    "zData/1tmpl/0calendar/dailyplm.md",
+    "zData/1tmpl/0calendar/dailypkm.md",
+    "0_Atlas/Nexus Vitae Guide.md",
     "0_Atlas/0_Dashboard/0-Dashboard.md",
+    "0_Atlas/Nexus Center.md",
+    "zData/1tmpl/3projectesprompt.md",
+    "zData/1tmpl/4tasksprompt.md",
+    "0_Atlas/0_Dashboard/4-Tasks.md",
     "0_Atlas/0_Dashboard/5-Notes/1-Fleeting.md",
     "zData/yaml tags organization.md",
     "0_Atlas/0_Dashboard/6-Resources/Books.md",
@@ -291,7 +289,6 @@
     "0_Atlas/0_Dashboard/6-Resources/Articles.md",
     "0_Atlas/0_Dashboard/6-Resources.md",
     "0_Atlas/0_Dashboard/3-Projects.md",
-    "0_Atlas/0_Dashboard/4-Tasks.md",
     "0_Atlas/0_Dashboard/5-Notes.md",
     "0_Atlas/0_Dashboard 1/6-Resources/Videos.md",
     "0_Atlas/0_Dashboard 1/6-Resources/Series.md",
@@ -302,13 +299,6 @@
     "0_Atlas/0_Dashboard 1/6-Resources/Museums.md",
     "0_Atlas/0_Dashboard 1/6-Resources/Guides.md",
     "0_Atlas/0_Dashboard 1/6-Resources/Games.md",
-    "0_Atlas/0_Dashboard 1/6-Resources/Films.md",
-    "0_Atlas/0_Dashboard 1/6-Resources/Courses.md",
-    "0_Atlas/0_Dashboard 1/6-Resources/Classes.md",
-    "0_Atlas/0_Dashboard 1/6-Resources/Books.md",
-    "0_Atlas/0_Dashboard 1/6-Resources/Boardgame.md",
-    "0_Atlas/0_Dashboard 1/6-Resources/Articles.md",
-    "0_Atlas/0_Dashboard 1/6-Resources/AI.md",
     "0_Atlas/0_Dashboard 1/6-Resources",
     "0_Atlas/0_Dashboard 1/5-Notes",
     "0_Atlas/0_Dashboard 1/4-Tasks",
