@@ -63,14 +63,22 @@ review:
 
 # <%- icon %> <%- displayTitle %>
 
-> [!money] Focus: Acquisition & Research (Horizon 1)
-> **Parent Goal/Star:** <%- pLink %>
-> **Budget:** `<%- amount %>` 
-> **Contact:** `<%- payee %>`
-> **Deadline:** `<%- tp.date.now("YYYY-MM-DD", 7) %>`
+> [!info] Focus: Acquisition & Research (Horizon 1)
+> > [!multi-column]
+> > > [!blank|wide-5]
+> > > **Parent Goal/Star:** <%- pLink %>
+> > > 
+> > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
+> >> **Deadline:** `<%- tp.date.now("YYYY-MM-DD", 7) %>`
+> > 
+> > >[!blank|wide-0]
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
+
+- 💵 Budget: `INPUT[number:amount]` € via <%- account %>
+-  **Contact:** `<%- payee %>`
 
 ---
-
 ## 🛒 Purchase Blueprint
 
 > [!multi-column]

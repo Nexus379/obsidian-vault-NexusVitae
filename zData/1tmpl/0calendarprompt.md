@@ -239,20 +239,28 @@ else if (tp.variables.title && !tp.variables.title.includes("Entry-")) {
                          .trim();
 }
 
+// Systemunabhängige Eliminierung des lokalen Standardnamens (inklusive inkrementeller Ziffern)
+const localDefaultPattern = new RegExp("^" + defaultName + "(\\s\\d+)?$", "i");
+if (localDefaultPattern.test(cleanTitle)) {
+    cleanTitle = "";
+}
+
+// Abfrage des Fokus, sofern der Titel nun korrekt als leer identifiziert wurde
 if (!cleanTitle && (!cIdx || cIdx !== 5)) {
-    const needsManualName = ["proj", "prot"].includes(activeMod.id);
+    const needsManualName = ["proj", "prot", "ppm"].includes(activeMod.id);
     if (needsManualName) {
-        cleanTitle = await tp.system.prompt(`Nexus: Name for ${activeMod.label}?`, "", false) || "";
+        let pMsg = `Nexus: Name for ${activeMod.label}?`;
+        if (activeMod.id === "ppm") pMsg = "🌻 Nexus PPM: Strategic Focus for today?";
+        cleanTitle = await tp.system.prompt(pMsg, "", false) || "";
     } else {
         cleanTitle = ""; 
     }
 } else if (cIdx === 5 && reviewPhase !== "revD" && !cleanTitle) {
-    // Only ask for a name if it's a Review, NOT Daily, and has no title yet
     cleanTitle = await tp.system.prompt(`Nexus: Title for ${activeMod.label}?`, "", false) || "";
 }
 
 tp.variables.title = cleanTitle;
-tp.variables.displayTitle = cleanTitle; 
+tp.variables.displayTitle = cleanTitle;
 
 // 🔱 FINAL FILENAME (e.g., 2026-04-20 revD)
 let displaySuffix = (cIdx === 5) ? revSuffix : activeMod.id;

@@ -28,7 +28,16 @@ Welcome to my personal Obsidian Vault. I built Nexus Vitae to bring a bit more s
 
 ## 🗺️ Roadmap
 Here is what I am currently tinkering with:
-- [ ] Change suggester for energy to a slider in templates
+- [ ] Journal Ideas.md
+- [ ] Dashboard Review
+- [ ] Better Dashboard Structure
+- [ ] Create short videos to explain the vault workflows
+### Upgrades
+- [x] write minutes in dailypkm for add-disc-pkm
+- [x] Change suggester for energy to a slider in templates
+	- [x] ppm
+	- [x] pkm
+	- [x] plm
 - [x] Write minutes in dailypkm for add-disc-pkm
 - [x] Dashboard Review
 - [x] Dashboard Studylog
@@ -36,9 +45,21 @@ Here is what I am currently tinkering with:
 	- [x] totake
 	- [x] protake
 - [x] Finance Dashborad
-- [ ] Journal Ideas MD
-- [ ] Better Dashboard Structure
-- [ ] Create short videos to explain the vault workflows
+- [x] status Done! : button
+- [ ] control dashy: space_date in Spaced Reptition dashy
+- [ ] recurring date -> bases?
+### Bug Fixes
+- [x] daily focus prompt
+- [x] daily ppm monthly reset
+- [x] to-pay metainput field for amount
+	- [x] tobuy, toget also
+	- [x] probuy, pay,get also
+- [x] log via button monthcalendar, doesn't check if log is existing
+- [x] ppm overdue callout: shows archived stuff
+- [x] 3tostudy to many buttons ID not found
+- [x] tasks update: status suggester
+- [x] projects update: status suggester
+- [x] notes update : phase suggester
 
 
 ## 🙏 Thank You & Inspirations

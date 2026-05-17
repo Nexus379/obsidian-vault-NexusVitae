@@ -76,13 +76,25 @@ review:
 ---
 # 📥 To-Get: <%- displayTitle %>
 
+> [!todo] Short-term Execution (Horizon 0)
+> > [!multi-column]
+> > > [!blank|wide-5]
+> > > **Action:** <%- displayTitle %>
+> > > **Deadline:** `<%- deadline %>` 
+> > > **Persona:** `<%- persona %>`
+> > 
+> > >[!blank|wide-0]
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
+
 > [!success] Pure Gain (<%- gainType %>)
 > **Source:** `<%- payee %>` | **Expected Value:** `<%- amount %> €`
 <%- item !== "" ? "> **Item:** `" + item + "`\n" : "" -%>
 > **Target Account/Asset:** `<%- account %>`
 
-- [ ] Receive & Acknowledge: <%- displayTitle %> 
 
+- [ ] Receive & Acknowledge: <%- displayTitle %> 
+💵 Budget: `INPUT[number:amount]` € via <%- account %>
 ---
 [[n-lit|+ Create Note]] | [[p-active|+ Create Project]] 
 

@@ -60,14 +60,21 @@ parent: "<%- pLink %>"
 
 # 📅 To-Meet: <%- displayTitle %>
 
-> [!info] Appointment (Horizon 0)
-> **Action:** <%- displayTitle %>
-> 
-> **Location:** `<%- location %>` 
-> 
-> **With:** `<%- attendees %>`
->
-> **Deadline/Time:** `<%- deadline %>`
+>[!info] Appointment (Horizon 0)
+> >[!multi-column]
+> > > [!blank] 
+> > > **Action:** <%- displayTitle %>
+> > > 
+> > > **Location:** `<%- location %>` 
+> > > 
+> > > **With:** `<%- attendees %>`
+> > >
+> > 
+> > >[!blank|wide-0]
+> > > **Deadline/Time:** `<%- deadline %>`
+> > > 
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 
 ## 🕒 Details
 - [ ] <%- displayTitle %> | 🕒 Time: 

@@ -82,12 +82,14 @@ review:
 > [!multi-column]
 > > [!abstract] Questio (Context)
 > > Summaries and excerpts in your own words. What are the author's core messages and intentions?
+> > > **Phase:** `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 > 
 > > [!info] Bibliographia
 > > **Source:** <%- pLink %>
 > > **Author:** <%- rawCreator %>
 > > **Science:** `$= dv.current().science` 
 > > **Discipline:** `$= dv.current().discipline`
+
 
 ## 🔖 Key-Takeaways
 - 

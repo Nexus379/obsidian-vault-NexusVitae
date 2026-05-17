@@ -96,7 +96,7 @@ status:
   - "done"
   - "canceled"
   - "review"
-  - "archive"
+  - "archived"
   - "bin"
 explore_lvl:
   - "0blueprint"

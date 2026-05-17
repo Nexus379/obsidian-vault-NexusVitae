@@ -16,7 +16,7 @@ const srsRanks = [
 const visualIcons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"];
 
 const grades = ["🔴 1: Blackout (Reset)", "🟠 2: Hard (Stagnate)", "🟡 3: Okay (+1 Level)", "🟢 4: Good (+2 Levels)", "🔥 5: Perfect (+3 Levels)"];  
-const gChoice = await tp.system.suggester(grades, [0, 0, 1, 2, 3], false, "🔱 Nexus Grade?");
+const gChoice = await tp.system.suggester(grades, ["reset", 0, 1, 2, 3], false, "🔱 Nexus Grade?");
 
 if (gChoice !== null) {  
     const tFile = tp.config.target_file;  
@@ -25,11 +25,11 @@ if (gChoice !== null) {
     await app.fileManager.processFrontMatter(tFile, (fm) => {  
         // ⚡ HIER SIND DEINE NEUEN VARIABLEN:
         let currentLevel = Number(fm["space_lvl"]) || 0;  
-        nextLvl = (gChoice === 0) ? 0 : Math.max(0, Math.min(srsIntervals.length - 1, currentLevel + gChoice));
+        nextLvl = (gChoice === "reset") ? 0 : Math.max(0, Math.min(srsIntervals.length - 1, currentLevel + gChoice));
 
         fm["space_lvl"] = nextLvl;  
         fm["space_rank"] = srsRanks[Math.min(nextLvl, srsRanks.length - 1)] || "Nexus Core";  
-        fm["spaced_date"] = moment().add(srsIntervals[nextLvl], 'days').format("YYYY-MM-DD");  
+        fm["space_date"] = moment().add(srsIntervals[nextLvl], 'days').format("YYYY-MM-DD");  
     });
 
     const icon = visualIcons[Math.min(nextLvl, visualIcons.length - 1)] || "🔱";  

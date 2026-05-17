@@ -67,9 +67,15 @@ review:
 # 🏃🏽 To-Go: <%- displayTitle %>
 
 > [!todo] Mission Location: `<%- loca %>` (Horizon 0)
-> **Action:** <%- displayTitle %>
-> **Persona:** `<%- persona %>`
-> **Deadline:** `<%- deadline %>`
+> > [!multi-column]
+> > > [!blank|wide-5]
+> > > **Action:** <%- displayTitle %>
+> > > **Deadline:** `<%- deadline %>` 
+> > > **Persona:** `<%- persona %>`
+> > 
+> > >[!blank|wide-0]
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 
 ## 📌 Physical Task
 - [ ] Mission: <%- displayTitle %> 📍 Loca: `<%- loca %>`

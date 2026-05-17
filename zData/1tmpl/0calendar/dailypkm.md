@@ -146,7 +146,41 @@ music: ""
 > > [!abstract] 🕒 Chronos Sync
 > > **Date:** `VIEW[{cal_date}]`
 > > 
-> > **Energy:** `VIEW[{energy}]` / 5
+> > ```dataviewjs
+> > const tFile = app.vault.getAbstractFileByPath(dv.current().file.path);
+> > const currentEnergy = dv.current().energy || "3";
+> > const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
+> > 
+> > // Container für das Interface-Element erstellen
+> > const container = dv.container.createEl("div", { style: "font-size: 0.85em; font-family: var(--font-interface);" });
+> > 
+> > // Label und Status-Text-Element
+> > const label = container.createEl("small", { text: "⚡ Energy Level: ", style: "opacity: 0.8;" });
+> > const statusText = container.createEl("span", { 
+> >     text: eMap[String(currentEnergy)] || currentEnergy, 
+> >     style: "font-weight: bold; margin-left: 4px;" 
+> > });
+> > 
+> > container.createEl("br");
+> > 
+> > // Der HTML Slider (input type='range')
+> > const slider = container.createEl("input", {
+> >     type: "range",
+> >     attr: { min: "1", max: "5", value: String(currentEnergy), step: "1" },
+> >     style: "width: 100%; max-width: 150px; margin-top: 6px; cursor: pointer;"
+> > });
+> > 
+> > // Event-Listener für Interaktionen
+> > slider.addEventListener("input", async (e) => {
+> >     const val = e.target.value;
+> >     statusText.innerText = eMap[val] || val;
+> >     
+> >     // Schreibt den Wert direkt zurück in das YAML Frontmatter der aktuellen Datei
+> >     await app.fileManager.processFrontMatter(tFile, (fm) => {
+> >         fm["energy"] = Number(val);
+> >     });
+> > });
+> >```
 > > 
 > > **Brain-Drain:** `VIEW[{brain-drain}]` / 5
 > > 

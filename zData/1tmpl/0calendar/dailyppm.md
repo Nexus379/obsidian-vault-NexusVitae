@@ -29,19 +29,20 @@ if (tp.variables.title && !tp.variables.title.includes("Entry-")) {
 }
 
 // 🔱 2.1 PPM-SPEZIFIKUM: Falls leer, fragen wir nach dem strategischen Fokus
-if (!cleanPart || cleanPart.toLowerCase() === "daily log") {
+if (!tp.variables.finalTitle && (!cleanPart || cleanPart.toLowerCase() === "daily log")) {
     const focus = await tp.system.prompt("🌻 Nexus PPM: Strategic Focus for today?", "");
+    if (focus) cleanPart = focus;
 }
 
 // Finalen Titel konstruieren
 let finalTitle = `${dateStr} ppm${cleanPart ? " - " + cleanPart : ""}`;
 const pureFocus = cleanPart || "";
+
 // 🔱 3. DATEI-STABILISIERUNG (Physisches Umbenennen)
-// Bei manuellem Start wird die Datei hier korrekt umbenannt.
-if (currentFileTitle !== finalTitle) {
+if (!tp.variables.finalTitle && currentFileTitle !== finalTitle) {
     await tp.file.rename(finalTitle);
     await new Promise(r => setTimeout(r, 200)); 
-}   
+}
 
 // Variablen für das restliche Template festschreiben
 tp.variables.title = finalTitle;
@@ -80,9 +81,6 @@ if (dv) {
     }
 }
 // 🧹 5.4 FINAL NEXUS HOUSEHOLD ENGINE (Weekend Lockdown Edition)
-const dayOfWeek = moment(dateStr).format("dddd"); 
-
-// 🧽 5.4 FINAL NEXUS HOUSEHOLD ENGINE (Consistent Laundry Edition)
 const dayOfWeek = moment(dateStr).format("dddd"); 
 
 const chores = {
@@ -178,10 +176,10 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >
 > > > [!blank|wide-2] 
 > > > **Strategic Focus**
-> > > <small>Monthly Cycle:</small>
-> > > `INPUT[text:focusM_ppm]` `BUTTON[reset-focus]` <small style="opacity:0.5;">`$= Math.max(0,30 - moment().diff(moment(dv.current().focusM_start),"days"))`d left</small>
 > > > 
-> > > ---
+> > > <small>Monthly Cycle:</small>
+> > > `INPUT[text:focusM_ppm]` `BUTTON[reset-focus]` <small style="opacity:0.5;">`$= const c = dv.current(); c.focusM_ppm ? Math.max(0, 30 - moment(String(c.cal_date)).diff(moment(String(c.focusM_start)), "days")) + "d left" : ""`</small>
+> > > 
 > > > ```dataviewjs
 > > > const curr = dv.current();
 > > > const logDate = curr.file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || "";
@@ -191,9 +189,9 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const pkm = dv.page(`0_Calendar/3_PKM/${yy}/${mm}/${logDate} pkm`);
 > > > 
 > > > dv.paragraph(
-> > >     "<small>🌷 Aim 1: PLM (Selfcare)</small><br>**" + (plm?.focusD_plm || "...") + "**<br><br>" +
-> > >     "<small>🌻 Aim 2: PPM (Strategy)</small><br>`INPUT[text(placeholder(Strategic Focus...)):focusD_ppm]`<br><br>" +
-> > >     "<small>🌼 Aim 3: PKM (Knowledge)</small><br>**" + (pkm?.focusD_pkm || "...") + "**"
+> > >      "<small>🌷 Aim 1: PLM (Selfcare)</small><br>**" + (plm?.focusD_plm || "...") + "**<br><br>" +
+> > >      "<small>🌻 Aim 2: PPM (Strategy)</small><br>`INPUT[text(placeholder(Strategic Focus...)):focusD_ppm]`<br><br>" +
+> > >      "<small>🌼 Aim 3: PKM (Knowledge)</small><br>**" + (pkm?.focusD_pkm || "...") + "**"
 > > > );
 > > > ```
 > >
@@ -205,11 +203,45 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 4. `INPUT[text:maintask4]`
 > > > 5. `INPUT[text:maintask5]`
 > > > 6. `INPUT[text:maintask6]`
-
+> > > ---
+> > > ```dataviewjs
+> > > const tFile = app.vault.getAbstractFileByPath(dv.current().file.path);
+> > > const currentEnergy = dv.current().energy || "3";
+> > > const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
+> > > 
+> > > // Container für das Interface-Element erstellen
+> > > const container = dv.container.createEl("div", { style: "font-size: 0.85em; font-family: var(--font-interface);" });
+> > > 
+> > > // Label und Status-Text-Element
+> > > const label = container.createEl("small", { text: "⚡ Energy Level: ", style: "opacity: 0.8;" });
+> > > const statusText = container.createEl("span", { 
+> > >     text: eMap[String(currentEnergy)] || currentEnergy, 
+> > >     style: "font-weight: bold; margin-left: 4px;" 
+> > > });
+> > > 
+> > > container.createEl("br");
+> > > 
+> > > // Der HTML Slider (input type='range')
+> > > const slider = container.createEl("input", {
+> > >     type: "range",
+> > >     attr: { min: "1", max: "5", value: String(currentEnergy), step: "1" },
+> > >     style: "width: 100%; max-width: 150px; margin-top: 6px; cursor: pointer;"
+> > > });
+> > > 
+> > > // Event-Listener für Interaktionen
+> > > slider.addEventListener("input", async (e) => {
+> > >     const val = e.target.value;
+> > >     statusText.innerText = eMap[val] || val;
+> > >     
+> > >     // Schreibt den Wert direkt zurück in das YAML Frontmatter der aktuellen Datei
+> > >     await app.fileManager.processFrontMatter(tFile, (fm) => {
+> > >         fm["energy"] = Number(val);
+> > >     });
+> > > });
+> > >```
 
 ##### Sidequest /Braindump
 - 
-
 
 
 ## 🛠️ Management & Fokus
@@ -217,96 +249,121 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > [!calendar|wide-0] ⏳ Zeit-Matrix
 > > ```dataviewjs
 > > (() => {
-> >   if (dv.viewCount && dv.viewCount > 1) return; // ruhig bleiben
-> >   const hours = ['08','09','10','11','12','13','14','15','16','17','18','19','20'];
-> >   const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || dv.current().file.name;
-> >   const archIcons = { "#0cal":"📅", "#1stars":"✨", "#2area":"💠", "#3project":"🚧", "#4task":"🛠️", "#5note":"✏️", "#6resou":"🔖" };
-> >   const items = [];
-> >   dv.pages('"4_Tasks"').forEach(p => {
-> >     let typeIcon = "";
-> >     const archTags = Array.isArray(p.arch) ? p.arch : [p.arch];
-> >     for (const tag of archTags) { if (archIcons[tag]) { typeIcon = archIcons[tag] + " "; break; } }
-> >     const finalIcon = p.banner_icon ? p.banner_icon + " " : typeIcon;
-> >     if ((p.due && String(p.due).includes(logDate)) || (p.do && String(p.do).includes(logDate))) {
-> >         items.push({ link: p.file.link, due: p.due, do: p.do, arch: p.arch, icon: finalIcon, origin: null });
-> >     }
-> >     if (p.file.tasks) {
-> >         p.file.tasks.filter(t => !t.completed && t.due && String(t.due).includes(logDate)).forEach(t => {
-> >             items.push({ link: dv.sectionLink(p.file.path, t.section.subpath, false, t.text), due: t.due, do: null, arch: p.arch, icon: finalIcon, origin: p.file.link });
-> >         });
-> >     }
-> >   });
-> >   const getArchTag = (item) => {
-> >      if (!item.arch) return '4_Tasks';
-> >      const a = Array.isArray(item.arch) ? item.arch.find(t => String(t).includes("4task")) : item.arch;
-> >      return a ? String(a).replace("#","") : '4_Tasks';
-> >   };
-> >   const archs = [...new Set(items.map(i => getArchTag(i)))].sort();
-> >   const formatItem = (i, colName) => {
-> >       const icon = (colName === "4_Tasks") ? "" : i.icon;
-> >       let text = icon + i.link;
-> >       if (i.origin) text += ` <small style="opacity:0.4;font-style:italic;">(${i.origin})</small>`;
-> >       return text;
-> >   };
-> >   const untimedRow = [
+> >    if (dv.viewCount && dv.viewCount > 1) return; // ruhig bleiben
+> >    const hours = ['08','09','10','11','12','13','14','15','16','17','18','19','20'];
+> >    const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || dv.current().file.name;
+> >    const archIcons = { "#0cal":"📅", "#1stars":"✨", "#2area":"💠", "#3project":"🚧", "#4task":"🛠️", "#5note":"✏️", "#6resou":"🔖" };
+> >    const items = [];
+> >    
+> >    // Logische Exklusion von archivierten, stornierten oder gelöschten Elementen
+> >    dv.pages('"4_Tasks"').where(p => {
+> >        const stat = String(p.status || "").toLowerCase();
+> >        if (stat.includes("archive") || stat.includes("archived") || stat.includes("canceled") || stat.includes("bin") || p.completed) return false;
+> >        return true;
+> >    }).forEach(p => {
+> >      let typeIcon = "";
+> >      const archTags = Array.isArray(p.arch) ? p.arch : [p.arch];
+> >      for (const tag of archTags) { if (archIcons[tag]) { typeIcon = archIcons[tag] + " "; break; } }
+> >      const finalIcon = p.banner_icon ? p.banner_icon + " " : typeIcon;
+> >      
+> >      if ((p.due && String(p.due).includes(logDate)) || (p.do && String(p.do).includes(logDate))) {
+> >          items.push({ link: p.file.link, due: p.due, do: p.do, arch: p.arch, icon: finalIcon, origin: null });
+> >      }
+> >      
+> >      if (p.file.tasks) {
+> >          p.file.tasks.filter(t => !t.completed && t.due && String(t.due).includes(logDate)).forEach(t => {
+> >              items.push({ link: dv.sectionLink(p.file.path, t.section.subpath, false, t.text), due: t.due, do: null, arch: p.arch, icon: finalIcon, origin: p.file.link });
+> >          });
+> >      }
+> >    });
+> >    
+> >    const getArchTag = (item) => {
+> >       if (!item.arch) return '4_Tasks';
+> >       const a = Array.isArray(item.arch) ? item.arch.find(t => String(t).includes("4task")) : item.arch;
+> >       return a ? String(a).replace("#","") : '4_Tasks';
+> >    };
+> >    const archs = [...new Set(items.map(i => getArchTag(i)))].sort();
+> >    
+> >    const formatItem = (i, colName) => {
+> >        const icon = (colName === "4_Tasks") ? "" : i.icon;
+> >        let text = icon + i.link;
+> >        if (i.origin) text += ` <small style="opacity:0.4;font-style:italic;">(${i.origin})</small>`;
+> >        return text;
+> >    };
+> >    
+> >    const untimedRow = [
 > >      `*All-day*`,
 > >      ...archs.map(a => {
-> >         const matches = items.filter(i => {
-> >            const hasNoTime = !String(i.due || i.do).includes('T');
-> >            const isMidnight = String(i.due || i.do).includes('T00:00');
-> >            return getArchTag(i) === a && (hasNoTime || isMidnight);
-> >         });
-> >         return matches.length ? matches.map(i => formatItem(i, a)).join('<br>') : '';
+> >          const matches = items.filter(i => {
+> >             const hasNoTime = !String(i.due || i.do).includes('T');
+> >             const isMidnight = String(i.due || i.do).includes('T00:00');
+> >             return getArchTag(i) === a && (hasNoTime || isMidnight);
+> >          });
+> >          return matches.length ? matches.map(i => formatItem(i, a)).join('<br>') : '';
 > >      })
-> >   ];
-> >   const timedRows = hours.map(h => [
+> >    ];
+> >    
+> >    const timedRows = hours.map(h => [
 > >      `**${h}:00**`,
 > >      ...archs.map(a => {
-> >         const matches = items.filter(i => getArchTag(i) === a &&
+> >          const matches = items.filter(i => getArchTag(i) === a &&
 > >            ((i.due && String(i.due).includes('T'+h+':')) || (i.do && String(i.do).includes('T'+h+':')))
-> >         );
-> >         return matches.length ? matches.map(i => formatItem(i, a)).join('<br>') : '';
+> >          );
+> >          return matches.length ? matches.map(i => formatItem(i, a)).join('<br>') : '';
 > >      })
-> >   ]);
-> >   dv.table(['Time', ...archs], [untimedRow, ...timedRows]);
-> >   const style = document.createElement('style');
-> >   style.innerHTML = `
-> >   .dataview.table-view-table thead th { display: table-cell !important; border-bottom: 1px solid var(--background-modifier-border) !important; font-weight: normal; opacity: 0.4; font-size: 0.75em; text-transform: uppercase; }
-> >   .dataview.table-view-table td { border-bottom: 0.5px solid var(--background-modifier-border-soft) !important; padding: 6px 4px !important; border-left: none !important; border-right: none !important; }
-> >   .dataview.table-view-table td:first-child { font-size: 1.05em !important; opacity: 0.7; width: 75px; vertical-align: top; }
-> >   `;
-> >   dv.container.appendChild(style);
+> >    ]);
+> >    
+> >    dv.table(['Time', ...archs], [untimedRow, ...timedRows]);
+> >    
+> >    const style = document.createElement('style');
+> >    style.innerHTML = `
+> >    .dataview.table-view-table thead th { display: table-cell !important; border-bottom: 1px solid var(--background-modifier-border) !important; font-weight: normal; opacity: 0.4; font-size: 0.75em; text-transform: uppercase; }
+> >    .dataview.table-view-table td { border-bottom: 0.5px solid var(--background-modifier-border-soft) !important; padding: 6px 4px !important; border-left: none !important; border-right: none !important; }
+> >    .dataview.table-view-table td:first-child { font-size: 1.05em !important; opacity: 0.7; width: 75px; vertical-align: top; }
+> >    `;
+> >    dv.container.appendChild(style);
 > > })();
 > > ```
 >
 > > [!decent|wide-4]
 > > ```dataviewjs
 > > (() => {
-> >   if (dv.viewCount && dv.viewCount > 1) return; // ruhig bleiben
-> >   const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || moment().format("YYYY-MM-DD");
-> >   const today = moment(logDate);
-> >   const nextWeek = moment(logDate).add(7,'days');
-> >   const getPrioIcon = (p) => ({"1":"🔴","2":"🟠","3":"🟡","4":"🔵"}[p] || "⚪");
-> >   const allItems = [];
-> >   dv.pages().where(p => p.arch && String(p.arch).includes("#4task") && !p.completed).forEach(p => {
-> >       allItems.push({ text: p.file.name, date: p.due || p.do, priority: p.priority || p.prio || "0", link: p.file.link });
-> >   });
-> >   const overdue = allItems.filter(t => t.date && moment(String(t.date)).isBefore(today,'day'));
-> >   const focus   = allItems.filter(t => String(t.date).includes(logDate));
-> >   const radar   = allItems.filter(t => { const d = moment(String(t.date)); return d.isAfter(today,'day') && d.isSameOrBefore(nextWeek,'day'); });
-> >   const format = (t) => `- [ ] ${getPrioIcon(t.priority)} ${t.link}`;
-> >   const hub = [
-> >     "> [!multi-column]",
-> >     "> > [!danger|flat] ⚠️ Overdue",
-> >     (overdue.length ? overdue.map(t => "> > " + format(t)).join("\n") : "> > _Clear!_"),
-> >     ">",
-> >     "> > [!task|flat] ⚡ Today",
-> >     (focus.length ? focus.map(t => "> > " + format(t)).join("\n") : "> > _All done!_"),
-> >     ">",
-> >     "> > [!abstract|flat] 📅 Radar",
-> >     (radar.length ? radar.map(t => "> > " + format(t)).join("\n") : "> > _Nothing._")
-> >   ].join("\n");
-> >   dv.paragraph(hub);
+> >    if (dv.viewCount && dv.viewCount > 1) return; // ruhig bleiben
+> >    const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || moment().format("YYYY-MM-DD");
+> >    const today = moment(logDate);
+> >    const nextWeek = moment(logDate).add(7,'days');
+> >    const getPrioIcon = (p) => ({"1":"🔴","2":"🟠","3":"🟡","4":"🔵"}[p] || "⚪");
+> >    const allItems = [];
+> >    
+> >    dv.pages().where(p => {
+> >        // 1. Basis-Prüfung: Ist es ein Task und unvollständig?
+> >        if (!p.arch || !String(p.arch).includes("#4task") || p.completed) return false;
+> >        
+> >        // 2. Status-Exklusion: Archiviert, abgebrochen oder gelöscht ignorieren
+> >        const stat = String(p.status || "").toLowerCase();
+> >        if (stat.includes("archive") || stat.includes("archived") || stat.includes("canceled") || stat.includes("bin")) return false;
+> >        
+> >        return true;
+> >    }).forEach(p => {
+> >        allItems.push({ text: p.file.name, date: p.due || p.do, priority: p.priority || p.prio || "0", link: p.file.link });
+> >    });
+> >    
+> >    const overdue = allItems.filter(t => t.date && moment(String(t.date)).isBefore(today,'day'));
+> >    const focus   = allItems.filter(t => String(t.date).includes(logDate));
+> >    const radar   = allItems.filter(t => { const d = moment(String(t.date)); return d.isAfter(today,'day') && d.isSameOrBefore(nextWeek,'day'); });
+> >    const format = (t) => `- [ ] ${getPrioIcon(t.priority)} ${t.link}`;
+> >    const hub = [
+> >      "> [!multi-column]",
+> >      "> > [!danger|flat] ⚠️ Overdue",
+> >      (overdue.length ? overdue.map(t => "> > " + format(t)).join("\n") : "> > _Clear!_"),
+> >      ">",
+> >      "> > [!task|flat] ⚡ Today",
+> >      (focus.length ? focus.map(t => "> > " + format(t)).join("\n") : "> > _All done!_"),
+> >      ">",
+> >      "> > [!abstract|flat] 📅 Radar",
+> >      (radar.length ? radar.map(t => "> > " + format(t)).join("\n") : "> > _Nothing._")
+> >    ].join("\n");
+> >    dv.paragraph(hub);
 > > })();
 > > ```
 

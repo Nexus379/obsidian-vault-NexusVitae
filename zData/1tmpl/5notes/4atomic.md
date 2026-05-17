@@ -62,6 +62,7 @@ review:
 
 > [!abstract] Elementum (Atomic Fact)
 > Cluster: <%- sci %> | Discipline: <%- disc %>
+> > **Phase:** `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
 ## 🗂️ Flashcard Content
 - **Questio (Question):** - **Responsio (Answer):** ---

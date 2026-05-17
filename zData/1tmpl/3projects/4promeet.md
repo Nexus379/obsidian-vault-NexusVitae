@@ -65,11 +65,19 @@ review:
 # <%- icon %> <%- displayTitle %>
 
 > [!info] Focus: Protocol & Coordination (Horizon 1)
-> **Parent Goal/Star:** <%- pLink %>
-> **Date:** `<%- tp.date.now("YYYY-MM-DD") %>`
-> **Participants:** `<%- attendees %>` | **Location:** `<%- location %>`
+> > [!multi-column]
+> > > [!blank|wide-5]
+> > > **Parent Goal/Star:** <%- pLink %>
+> > > 
+> > > **Participants:** `<%- attendees %>` | **Location:** `<%- location %>
+> > > 
+> > > **Date:** `<%- tp.date.now("YYYY-MM-DD") %>
+> > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
+> > 
+> > >[!blank|wide-0]
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 
----
 
 ## 📋 Meeting Blueprint
 

@@ -76,13 +76,25 @@ review:
 
 # <%- icon %> <%- displayTitle %>
 
+> [!info] Focus: Execution (Horizon 1)
+> > [!multi-column]
+> > > [!blank|wide-5]
+> > > **Parent Goal/Star:** <%- pLink %>
+> > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
+> > 
+> > >[!blank|wide-0]
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
+
 > [!success] Pure Gain Project (Horizon 1) - <%- gainType %>
 > **From (Payee):** `<%- payee %>` | **Expected**: `<%- amount %> €`
 <%- item !== "" ? "> **Asset/Item:** `" + item + "`\n" : "" -%>
 > **Account/Target:** `<%- account %>` | **Target Date:** `<%- deadline %>`
 
 ---
+- 💵 Budget: `INPUT[number:amount]` € via <%- account %>
 
+---
 ## 📥 Revenue Blueprint
 
 > [!multi-column]

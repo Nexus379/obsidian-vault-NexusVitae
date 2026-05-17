@@ -62,14 +62,18 @@ review:
 # 💰 To-Buy: <%- displayTitle %>
 
 > [!todo] Purchase Plan (Horizon 0)
-> **Item:** <%- displayTitle %>
-> **Deadline:** `<%- deadline %>`
+> >[!multi-column]
+> >>[!blank]
+> > > **Item:** <%- displayTitle %>
+> > > **Deadline:** `<%- deadline %>`
+> > > **Payee:** <%- payee %>
+> > 
+> > >[!blank|wide-0]
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 
 - [ ] <%- displayTitle %>
-💵 Budget: <%- amount %> € via <%- account %>
-
-
-
+- 💵 Budget: `INPUT[number:amount]` € via <%- account %>
 
 ---
 [[p-active|+ Create Project]] 

@@ -72,12 +72,15 @@ review:
 
 # <%- icon %> <%- displayTitle %>
 
-> [!todo] Focus: Physical Execution (Horizon 1)
-> **Location/Context:** `<%- loca %>`
-> **Parent Goal/Star:** <%- pLink %>
-> **Deadline:** `<%- deadline %>`
-
----
+> [!info]  Focus: Physical Execution (Horizon 1)
+> > [!multi-column]
+> > > [!blank|wide-5]
+> > > **Parent Goal/Star:** <%- pLink %>
+> > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
+> > 
+> > >[!blank|wide-0]
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 
 ## 🎯 Project Blueprint
 

@@ -68,6 +68,8 @@ review:
 > > **Discipline:** `$= dv.current().discipline`
 > 
 > > An Evergreen note is a living statement. It is constantly updated, refined, and linked with new Atomic Notes.
+> > 
+> > **Phase:** `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
 ## 🌿 Synthesis & Insight
 - **Core Thesis:** - **Connections:** ## 🧪 Evidence (Linked Atoms)

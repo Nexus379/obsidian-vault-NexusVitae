@@ -67,10 +67,18 @@ review:
 
 # <%- icon %> <%- displayTitle %>
 
-> [!abstract] Focus: Culinary Execution (Horizon 1)
-> **Parent Goal/Star:** <%- pLink %>
-> **Date:** `<%- deadline %>` | **Cost:** `<%- cost %>`
-> **Merchant:** `<%- merchant %>` | **Amount:** `<%- amount %>`
+> [!info]  Focus: Culinary Execution (Horizon 1)
+> > [!multi-column]
+> > > [!blank|wide-5]
+> > > **Parent Goal/Star:** <%- pLink %>
+> > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
+> > 
+> > >[!blank|wide-0]
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
+
+> **Cost:** `<%- cost %>`
+> **Merchant:** `<%- merchant %>` 
 
 ---
 
