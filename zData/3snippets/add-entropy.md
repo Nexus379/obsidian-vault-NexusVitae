@@ -1,6 +1,6 @@
 <%-*
 /**
- * 🧘 NEXUS ENTROPY MASTER INJECTOR - The Sorting Hat Edition
+ * 🧘 NEXUS ENTROPY MASTER INJECTOR - Dynamic Persona Edition
  */
 
 try {
@@ -13,36 +13,36 @@ try {
     const activeFile = app.workspace.getActiveFile();
     if (!activeFile) return;
 
-    // 🔱 1. KATEGORIEN & ZIELFELDER (Hier liegt die Magie!)
+    // 🔱 1. KATEGORIEN & ZIELFELDER
     const entropyModes = [
         { 
             display: "🎭 Entertainment", 
-            type: "entertain_link", // Landet unter der Entertainment-Überschrift
+            type: "entertain_link", 
             arch: ["#6resou"], 
-            folder: "6_Resources/Entertainment", 
-            persona: "player",
+            query: '"6_Resources/Books" or "6_Resources/Films" or "6_Resources/Series" or "6_Resources/Games"',
+            baseFolder: "6_Resources",
             subTypes: [
                 { id: "book", icon: "📖", label: "Book" },
                 { id: "film", icon: "🎬", label: "Film" },
-                { id: "serie", icon: "📺", label: "Serie" },
+                { id: "serie", icon: "📺", label: "Serie" }, // Wird zu "Series"
                 { id: "game", icon: "🎮", label: "Game" }
             ]
         },
         { 
             display: "🎨 Creativity", 
-            type: "creativity_link", // Landet unter der Creativity-Überschrift
+            type: "creativity_link", 
             arch: ["#2area", "#3project"], 
             archtype: "#2area/5creativity",
-            folder: "2_Areas/5_Creativity", 
-            persona: "creator"
+            query: '"2_Areas/5_Creativity"',
+            folder: "2_Areas/5_Creativity"
         },
         { 
             display: "🧘 Activity", 
-            type: "activity_link", // Landet unter der Activity-Überschrift
+            type: "activity_link", 
             arch: ["#2area"], 
             archtype: "#2area/6activity",
-            folder: "2_Areas/6_Activity", 
-            persona: "healer"
+            query: '"2_Areas/6_Activity"',
+            folder: "2_Areas/6_Activity"
         }
     ];
 
@@ -50,7 +50,7 @@ try {
     if (!mode) return;
 
     // 🔱 2. DATEN ABRUFEN ODER NEU ERSTELLEN
-    const pages = dv.pages(`"${mode.folder}"`);
+    const pages = dv.pages(mode.query);
     const existingItems = pages
         .sort(p => p.file.mtime, "desc")
         .limit(20)
@@ -69,14 +69,46 @@ try {
         itemTitle = await tp.system.prompt(`Enter Title for ${mode.display}:`);
         if (!itemTitle) return;
 
+        // --- 🎯 NEU: DYNAMISCHE PERSONA ABFRAGE ---
+        let selectedPersona = "seeker"; // Fallback
+        try {
+            // Lade die Persona Engine dynamisch
+            const file = app.vault.getAbstractFileByPath("zData/2scripts/personaEngine.js");
+            if (file) {
+                const code = await app.vault.read(file);
+                const module = { exports: {} };
+                new Function("module", "exports", code)(module, module.exports);
+                const personaEngine = module.exports;
+                
+                if (typeof personaEngine === "function") {
+                    const engine = personaEngine();
+                    const pLabels = engine.getPersonaLabels();
+                    
+                    const pChoice = await tp.system.suggester(
+                        pLabels.map(p => `${p.icon} ${p.label}`),
+                        pLabels.map(p => p.key),
+                        false,
+                        `🧑‍💼 Which Persona for ${itemTitle}?`
+                    );
+                    
+                    if (pChoice) selectedPersona = pChoice;
+                }
+            }
+        } catch (e) {
+            console.log("Persona Engine load failed, using fallback.", e);
+        }
+        // ------------------------------------------
+
         let subTag = mode.archtype || "";
-        let subFolder = mode.folder;
+        let subFolder = mode.folder || mode.baseFolder;
         
         if (mode.type === "entertain_link") {
             const sType = await tp.system.suggester(mode.subTypes.map(s => s.icon + " " + s.label), mode.subTypes, false, "Type:");
             if (sType) {
                 subTag = `#6resou/${sType.id}`;
-                subFolder = `${mode.folder}/${sType.label}s`;
+                subFolder = `${mode.baseFolder}/${sType.label}s`;
+            } else {
+                return;
             }
         }
 
@@ -96,14 +128,14 @@ try {
 arch: ${JSON.stringify(mode.arch)}
 archtype: ["${subTag}"]
 status: "1active"
-persona: "${mode.persona}"
+persona: "${selectedPersona}"
 created: ${tp.date.now("YYYY-MM-DD")}
 ---
 # ${itemTitle}\n\n---`;
 
         await app.vault.create(fullPath, content);
         finalLink = `[[${fullPath}|${itemTitle}]]`;
-        new Notice("✅ Resource Created");
+        new Notice(`✅ Resource Created (${selectedPersona})`);
     } else {
         finalLink = choice.value;
         itemTitle = choice.title;
@@ -111,7 +143,7 @@ created: ${tp.date.now("YYYY-MM-DD")}
 
     // 🔱 3. SICHERER FRONTMATTER-SYNC
     await app.fileManager.processFrontMatter(activeFile, (fm) => {
-        const targetField = mode.type; // Holt sich genau das richtige Fach!
+        const targetField = mode.type;
 
         let existingData = fm[targetField];
 

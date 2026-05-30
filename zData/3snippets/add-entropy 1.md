@@ -1,26 +1,23 @@
 <%-*
 /**
- * 🧘 NEXUS ENTROPY MASTER INJECTOR - Array Fixed Edition
+ * 🧘 NEXUS ENTROPY MASTER INJECTOR - The Sorting Hat Edition
  */
 
 try {
     const dv = app.plugins.plugins.dataview?.api;
     if (!dv) {
-        new Notice("❌ Error: Dataview API not ready. Please wait a second.");
+        new Notice("❌ Error: Dataview API not ready.");
         return;
     }
 
     const activeFile = app.workspace.getActiveFile();
-    if (!activeFile) {
-        new Notice("❌ Error: Active file lost. Please click the button again.");
-        return;
-    }
+    if (!activeFile) return;
 
-    // 🔱 1. KATEGORIEN
+    // 🔱 1. KATEGORIEN & ZIELFELDER (Hier liegt die Magie!)
     const entropyModes = [
         { 
             display: "🎭 Entertainment", 
-            type: "ent", 
+            type: "entertain_link", // Landet unter der Entertainment-Überschrift
             arch: ["#6resou"], 
             folder: "6_Resources/Entertainment", 
             persona: "player",
@@ -33,7 +30,7 @@ try {
         },
         { 
             display: "🎨 Creativity", 
-            type: "crea", 
+            type: "creativity_link", // Landet unter der Creativity-Überschrift
             arch: ["#2area", "#3project"], 
             archtype: "#2area/5creativity",
             folder: "2_Areas/5_Creativity", 
@@ -41,7 +38,7 @@ try {
         },
         { 
             display: "🧘 Activity", 
-            type: "act", 
+            type: "activity_link", // Landet unter der Activity-Überschrift
             arch: ["#2area"], 
             archtype: "#2area/6activity",
             folder: "2_Areas/6_Activity", 
@@ -52,13 +49,13 @@ try {
     const mode = await tp.system.suggester(entropyModes.map(m => m.display), entropyModes, false, "Entropy Category:");
     if (!mode) return;
 
-    // 🔱 2. SUCHE BESTEHENDE (MIT .array() FIX)
+    // 🔱 2. DATEN ABRUFEN ODER NEU ERSTELLEN
     const pages = dv.pages(`"${mode.folder}"`);
     const existingItems = pages
         .sort(p => p.file.mtime, "desc")
         .limit(20)
         .map(p => ({ display: `✨ ${p.file.name}`, value: `[[${p.file.path}|${p.file.name}]]`, title: p.file.name, isNew: false }))
-        .array(); // <-- Das verwandelt es in ein echtes Array!
+        .array(); 
 
     existingItems.unshift({ display: "➕ [CREATE NEW...]", value: null, isNew: true });
 
@@ -75,7 +72,7 @@ try {
         let subTag = mode.archtype || "";
         let subFolder = mode.folder;
         
-        if (mode.type === "ent") {
+        if (mode.type === "entertain_link") {
             const sType = await tp.system.suggester(mode.subTypes.map(s => s.icon + " " + s.label), mode.subTypes, false, "Type:");
             if (sType) {
                 subTag = `#6resou/${sType.id}`;
@@ -112,18 +109,23 @@ created: ${tp.date.now("YYYY-MM-DD")}
         itemTitle = choice.title;
     }
 
-    // 🔱 3. UNIFIED SYNC TO FRONTMATTER
+    // 🔱 3. SICHERER FRONTMATTER-SYNC
     await app.fileManager.processFrontMatter(activeFile, (fm) => {
-        if (fm.entertain_link) delete fm.entertain_link;
+        const targetField = mode.type; // Holt sich genau das richtige Fach!
 
-        if (!fm.entropy_link) fm.entropy_link = [];
-        if (!Array.isArray(fm.entropy_link)) fm.entropy_link = [fm.entropy_link];
-        
+        let existingData = fm[targetField];
+
+        if (!existingData) {
+            fm[targetField] = [];
+        } else if (!Array.isArray(existingData)) {
+            fm[targetField] = [existingData];
+        }
+
         const cleanPath = finalLink.replace(/[\[\]]/g, "").split("|")[0];
         
-        if (!fm.entropy_link.some(l => String(l).includes(cleanPath))) {
-            fm.entropy_link.push(finalLink);
-            new Notice(`➕ Added ${itemTitle} to Entropy Log`);
+        if (!fm[targetField].some(l => String(l).includes(cleanPath))) {
+            fm[targetField].push(finalLink);
+            new Notice(`➕ Added ${itemTitle} to ${mode.display}`);
         } else {
             new Notice("ℹ️ Already in Log");
         }
@@ -131,6 +133,5 @@ created: ${tp.date.now("YYYY-MM-DD")}
 
 } catch (error) {
     new Notice("🔥 CRITICAL ERROR: " + error.message, 10000);
-    console.error("Entropy Script Error:", error);
 }
 -%>
