@@ -25,7 +25,8 @@ if (tp.file.title !== title) {
 let deadline = await tp.system.prompt("📅 Project Deadline?", tp.date.now("YYYY-MM-DD", 14));
 
 // 🔱 4. CLEANING
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(1prodo-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(1prodo-|p-|3project-)/i, "").trim();
+
 
 tR += "---"  
 %>
@@ -38,7 +39,7 @@ arch:
   - "#3project"
 archtype:
   - "#3project/prodo"
-status: <%- tp.variables.projectStatus || "1active" %>
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "4"
 science: ["<%- sci %>"]

@@ -41,7 +41,7 @@ arch:
   - "#4task"
 archtype:
   - "#4task/tomeet"
-status: 1active
+status: "1active"
 priority:
   - "1"
 persona: "<%- persona %>"
@@ -64,7 +64,7 @@ parent: "<%- pLink %>"
 > >[!multi-column]
 > > > [!blank] 
 > > > **Action:** <%- displayTitle %>
-> > > 
+> > > **Project:** <%- pLink || "None" %>
 > > > **Location:** `<%- location %>` 
 > > > 
 > > > **With:** `<%- attendees %>`

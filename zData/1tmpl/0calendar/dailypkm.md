@@ -206,6 +206,51 @@ music: ""
 > [!info] 🔱 Click here to log a discipline:
 > `BUTTON[add-disc-pkm]`
 
+>[!log]
+> ```dataviewjs
+> const c = dv.current();
+> const sessions = [];
+> let totalMin = 0;
+> 
+> // Sucht nach allen generierten Schlüsseln, die auf "_min" enden
+> for (let key in c) {
+>     if (key.endsWith("_min")) {
+>         let baseKey = key.replace("_min", "");
+>         
+>         // Prüft, ob Meta-Bind den Eintrag angelegt hat
+>         if (c[baseKey] !== undefined || c[key] !== undefined) {
+>             // Macht aus einem leeren Feld eine 0 für die Berechnung
+>             let time = Number(c[key]) || 0; 
+>             
+>             // Rohdaten des Themas abgreifen
+>             let rawTopic = c[baseKey] || "---"; 
+>             
+>             // SICHERHEITS-CHECK FÜR LINKS:
+>             // Falls du mehrere Links wie "[[n-lit1]], [[n-lit2]]" einträgst, 
+>             // macht Dataview ein Array daraus. Das fangen wir hier sauber ab:
+>             let topic = Array.isArray(rawTopic) ? rawTopic.join(", ") : rawTopic;
+>             
+>             // Extrahiert den Namen (z.B. "physics" aus "physics_1234")
+>             let subjRaw = baseKey.split("_")[0];
+>             let subj = subjRaw.charAt(0).toUpperCase() + subjRaw.slice(1);
+>             
+>             // Zeigt die Zeit an, oder "---" wenn sie 0 / leer ist
+>             let displayTime = time > 0 ? `${time} min` : `---`;
+>             
+>             sessions.push([`**${subj}**`, topic, displayTime]);
+>             totalMin += time;
+>         }
+>     }
+> }
+> 
+> if (sessions.length > 0) {
+>     dv.table(["Discipline", "Topic", "Time"], sessions);
+>     dv.paragraph(`<center><span style="color: var(--interactive-accent); font-weight: bold;">Total Time: ${totalMin} min</span></center>`);
+> } else {
+>     dv.paragraph("<center><i>No sessions logged today. Use the button above.</i></center>");
+> }
+> ```
+
 ## Studyplan
 ```dataview
 TABLE WITHOUT ID

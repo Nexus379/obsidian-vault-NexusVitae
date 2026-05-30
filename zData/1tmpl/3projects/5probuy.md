@@ -27,7 +27,7 @@ let amount = await tp.system.prompt("💰 Estimated Amount?", "0.00");
 let account = await tp.system.suggester(["💳 Visa", "🔵 PayPal", "🏦 Bank", "💵 Cash"], ["Visa", "PayPal", "Bank", "Cash"]) || "TBD";
 
 // 🔱 4. CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(5probuy-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(5probuy-|p-|3project-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -40,7 +40,7 @@ arch:
   - "#3project"
 archtype:
   - "#3project/probuy"
-status: <%- tp.variables.projectStatus || "1active" %>
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "3"
 amount: <%- amount %>

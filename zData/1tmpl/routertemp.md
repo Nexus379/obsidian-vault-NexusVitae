@@ -78,7 +78,8 @@ if (tp.variables.preSelectedSub) {
 
 // B) Trigger from Title
 if (!selection && rawTitle.includes("-")) {
-    let t = rawTitle.split("-")[0].toLowerCase().replace(/\s+/g, "");
+    // ERKLÄRUNG: .toLowerCase() wurde hier entfernt!
+    let t = rawTitle.split("-")[0].replace(/\s+/g, "");
     if (promptMap[t]) { selection = promptMap[t]; activeTrigger = t; }
 }
 

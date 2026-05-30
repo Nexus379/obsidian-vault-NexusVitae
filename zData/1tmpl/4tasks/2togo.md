@@ -43,7 +43,7 @@ arch:
   - "#4task"
 archtype:
   - "#4task/togo"
-status: 1active
+status: "1active"
 priority:
   - "1"
 persona: "<%- persona %>"
@@ -71,6 +71,7 @@ review:
 > > > [!blank|wide-5]
 > > > **Action:** <%- displayTitle %>
 > > > **Deadline:** `<%- deadline %>` 
+> > > **Project:** <%- pLink || "None" %> 
 > > > **Persona:** `<%- persona %>`
 > > 
 > > >[!blank|wide-0]

@@ -35,7 +35,7 @@ if (!loca) loca = "TBD";
 let deadline = await tp.system.prompt("📅 Project Deadline?", tp.date.now("YYYY-MM-DD", 14));
 
 // 🔱 5. CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(2progo-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(2progo-|p-|3project-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -48,7 +48,7 @@ arch:
   - "#3project"
 archtype:
   - "#3project/progo"
-status: <%- tp.variables.projectStatus || "1active" %>
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "2"
 science: ["<%- sci %>"]

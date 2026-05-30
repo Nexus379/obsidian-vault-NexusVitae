@@ -26,7 +26,7 @@ let attendees = await tp.system.prompt("👥 Attendees?", "Self");
 let location  = await tp.system.prompt("📍 Location / Link?", "Discord/Office");
 
 // 🔱 4. CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(4promeet-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(4promeet-|p-|3project-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -39,7 +39,7 @@ arch:
   - "#3project"
 archtype:
   - "#3project/promeet"
-status: <%- tp.variables.projectStatus || "1active" %>
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "2"
 science: ["<%- sci %>"]

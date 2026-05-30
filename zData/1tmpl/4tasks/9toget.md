@@ -39,7 +39,7 @@ let amount = await tp.system.prompt("💰 Expected Value/Amount?", "0.00");
 let account = await tp.system.suggester(["🏦 Bank", "🔵 PayPal", "💵 Cash", "💎 Physical Asset (No Bank)"], ["Bank", "PayPal", "Cash", "Physical"]) || "TBD";
 
 // 🔱 4. CLEANING (Entfernt Trigger wie 7toget- oder g-)
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(7toget-|g-|t-|4task-)/i, "").trim();
+let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(9toget-|g-|t-|4task-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -51,7 +51,7 @@ arch:
 archtype:
   - "#4task/toget"
 gain_type: "<%- gainType %>"
-status: 1active
+status: "1active"
 priority:
   - "1"
 persona: "<%- persona %>"
@@ -80,6 +80,7 @@ review:
 > > [!multi-column]
 > > > [!blank|wide-5]
 > > > **Action:** <%- displayTitle %>
+> > > **Project:** <%- pLink || "None" %> 
 > > > **Deadline:** `<%- deadline %>` 
 > > > **Persona:** `<%- persona %>`
 > > 

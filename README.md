@@ -32,35 +32,7 @@ Here is what I am currently tinkering with:
 - [ ] Dashboard Review
 - [ ] Better Dashboard Structure
 - [ ] Create short videos to explain the vault workflows
-### Upgrades
-- [x] write minutes in dailypkm for add-disc-pkm
-- [x] Change suggester for energy to a slider in templates
-	- [x] ppm
-	- [x] pkm
-	- [x] plm
-- [x] Write minutes in dailypkm for add-disc-pkm
-- [x] Dashboard Review
-- [x] Dashboard Studylog
-- [x] ! income templtaes
-	- [x] totake
-	- [x] protake
-- [x] Finance Dashborad
-- [x] status Done! : button
-- [ ] control dashy: space_date in Spaced Reptition dashy
-- [ ] recurring date -> bases?
-### Bug Fixes
-- [x] daily focus prompt
-- [x] daily ppm monthly reset
-- [x] to-pay metainput field for amount
-	- [x] tobuy, toget also
-	- [x] probuy, pay,get also
-- [x] log via button monthcalendar, doesn't check if log is existing
-- [x] ppm overdue callout: shows archived stuff
-- [x] 3tostudy to many buttons ID not found
-- [x] tasks update: status suggester
-- [x] projects update: status suggester
-- [x] notes update : phase suggester
-
+- [ ] Fitness to Log
 
 ## 🙏 Thank You & Inspirations
 This vault is heavily inspired by the Obsidian community and various thinkers. I am sharing it here for free in case it's helpful to anyone else. Feel free to use, break, and rebuild it however you like!

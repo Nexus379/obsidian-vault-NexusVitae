@@ -28,7 +28,7 @@ let amount   = await tp.system.prompt("⚖️ Amount (Nutrition/Portions)?", "1 
 let deadline = await tp.system.prompt("📅 Cooking Date?", tp.date.now("YYYY-MM-DD"));
 
 // 🔱 4. CLEANING
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(7procook-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(7procook-|p-|3project-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -41,7 +41,7 @@ arch:
   - "#3project"
 archtype:
   - "#3project/procook"
-status: <%- tp.variables.projectStatus || "1active" %>
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "1"
 science: ["<%- sci %>"]

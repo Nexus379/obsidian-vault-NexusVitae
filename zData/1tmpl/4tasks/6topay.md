@@ -39,7 +39,7 @@ arch:
   - "#4task"
 archtype:
   - "#4task/topay"
-status: 1active
+status: "1active"
 priority:
   - "1"
 persona: "<%- persona %>"
@@ -67,6 +67,7 @@ review:
 > >[!multi-column]
 > >>[!blank]
 > > > **Item:** <%- displayTitle %>
+> > > **Project:** <%- pLink || "None" %>
 > > > **Deadline:** `<%- deadline %>`
 > > > **Payee:** <%- payee %>
 > > 

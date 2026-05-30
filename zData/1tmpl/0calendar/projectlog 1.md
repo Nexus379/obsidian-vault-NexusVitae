@@ -9,67 +9,21 @@ const matchDate = tp.file.title.match(/^\d{4}-\d{2}-\d{2}/);
 const dateStr = tp.variables.targetDate || (matchDate ? matchDate[0] : tp.date.now("YYYY-MM-DD"));
 const [yy, mm] = dateStr.split("-");
 
-// 🔱 2. PROJECT LINK & DYNAMIC SELECTOR (Mit Fallbacks & Router-Sync)
+// 🔱 2. PROJECT LINK (The Anchor)
 let logConnect = (tp.variables && tp.variables.logConnect) ? tp.variables.logConnect : "";
-let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : "";
 
-// 🎯 NEXUS-SYNC: Fängt den sauberen Namen aus dem Router auf
-if (!displayTitle && tp.variables && tp.variables.title && !tp.variables.title.includes(defaultName)) {
-    displayTitle = tp.variables.title;
+// Fallback if the router provides nothing:
+if (!logConnect) {
+    const manual = await tp.system.prompt("🔗 Link to Project? (Fallback)", "");
+    logConnect = manual ? (manual.includes("[[") ? manual : `[[${manual}]]`) : "[[Unlinked]]";
 }
 
-let selStat = "1_Active"; // Standard-Fallback
-
-// FALL A: DER ROUTER HAT SCHON EIN PROJEKT ÜBERGEBEN
-if (displayTitle && displayTitle !== "Unlinked" && displayTitle !== "") {
-    const existingProj = dv ? dv.page(`"3_Projects" and "${displayTitle}"`) : null;
-    if (existingProj) {
-        let match = existingProj.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
-        selStat = match ? match[1] : "1_Active";
-    } else {
-        const statLabels = ["🟢 1_Active", "🟡 2_Passive", "💡 3_Idea", "🔄 0_Recurring"];
-        const statFolders = ["1_Active", "2_Passive", "3_Idea", "0_Recurring"];
-        selStat = await tp.system.suggester(statLabels, statFolders, false, `🚦 Status for Router-Project '${displayTitle}'?`) || "1_Active";
-    }
-} 
-// FALL B: ES GIBT NOCH KEIN PROJEKT (Das Dataview-Dropdown startet)
-else {
-    const projs = dv ? dv.pages('"3_Projects"').where(p => !p.file.path.includes("/Logs/")).sort(p => p.file.mtime, "desc") : [];
-    const projOptions = ["➕ ✨ Create New Project"];
-    const projPaths = ["NEW"];
-
-    for (let p of projs) {
-        let match = p.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
-        let stat = match ? match[1] : "1_Active";
-        projOptions.push(`🧩 ${p.file.name} (${stat})`);
-        projPaths.push(`${p.file.name}|${stat}`);
-    }
-
-    const pick = await tp.system.suggester(projOptions, projPaths, false, "🔗 Select Project or Create New:");
-    
-    if (!pick) { 
-        displayTitle = await tp.system.prompt("📝 Project Name? (Manual Fallback)", "General") || "General";
-        selStat = "1_Active";
-    } else if (pick === "NEW") {
-        displayTitle = await tp.system.prompt("📝 Name of the NEW Project?", "New Project") || "New Project";
-        const statLabels = ["🟢 1_Active", "🟡 2_Passive", "💡 3_Idea", "🔄 0_Recurring"];
-        const statFolders = ["1_Active", "2_Passive", "3_Idea", "0_Recurring"];
-        selStat = await tp.system.suggester(statLabels, statFolders, false, "🚦 Initial Project Status?") || "1_Active";
-    } else {
-        const parts = pick.split("|");
-        displayTitle = parts[0];  
-        selStat = parts[1];       
-    }
+// 🔱 3. DISPLAY TITLE (The Project Name)
+let displayTitle = tp.variables.displayTitle || logConnect.replace(/[\[\]]/g, "");
+// FALLBACK: If we still have no name
+if (!displayTitle || displayTitle === "Unlinked") {
+    displayTitle = await tp.system.prompt("📝 Project Name?", "General") || "General";
 }
-
-// 🔱 3. VARIABLEN ZUSAMMENFÜHREN
-if (!logConnect || logConnect === "[[Unlinked]]" || logConnect === "") {
-    logConnect = `[[${displayTitle}]]`;
-}
-
-// YAML-Tag generieren
-const statTagsMap = { "1_Active": "1active", "2_Passive": "2passive", "3_Idea": "3idea", "0_Recurring": "0recurring", "4_Archive": "4archive" };
-const finalStatus = statTagsMap[selStat] || "1active";
 
 // 🔱 4. THE ONLY REAL PROMPT (Your "this")
 let focus_LOG = await tp.system.prompt(`🎯Focus in '${displayTitle}'?`, "Work Step");
@@ -112,16 +66,9 @@ const axisMap = { "PLM": "1_Selfcare", "PPM": "4_Organize", "PKM": "3_Mind" };
 const areaBase = tp.variables.ARCH?.a?.tag || "#2area";
 const areaTag = axisMap[pArea] ? `${areaBase}/${axisMap[pArea]}` : `${areaBase}/unknown`;
  
-// 🔱 6. PATH LOGISTICS & RENAME (Die neue Weiche)
-let targetFolder = "";
-
-// WEICHE: Ist es ein echtes Projekt oder nur ein allgemeines Log ("General")?
-if (displayTitle === "General" || displayTitle === "Unlinked") {
-    const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
-    targetFolder = `${baseCal}/4_Projectlog/${yy}/${displayTitle}/${mm}`;
-} else {
-    targetFolder = `3_Projects/${selStat}/${displayTitle}/Logs/${yy}/${mm}`;
-}
+// 🔱 6. PATH LOGISTICS & RENAME
+const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
+const targetFolder = `${baseCal}/4_Projectlog/${yy}/${displayTitle}/${mm}`;
 
 // Ensure folder structure
 let currentPath = "";
@@ -161,7 +108,7 @@ focus_LOG: "<%- focus_LOG %>"
 cal0:
 area2: "<%- areaTag %>"
 project3: ["<%- logConnect %>"]
-status: "<%- finalStatus %>"
+status: 1active
 cal_date: <%- dateStr %>
 ---
 

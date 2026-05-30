@@ -33,8 +33,7 @@ let deadline = await tp.system.prompt("📅 Exam/Deadline Date?", tp.date.now("Y
 let p1 = tp.date.now("YYYY-MM-DD");
 
 // 🔱 6. CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(3prostudy-|p-|3project-)/i, "").trim();
-
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(3prostudy-|p-|3project-)/i, "").trim();
 tR += "---"  
 %>
 banner: "![[xAttachment/Images/Banner/Black-hole-banner.jpg]]"
@@ -46,7 +45,7 @@ arch:
   - "#3project"
 archtype:
   - "#3project/prostudy"
-status: <%- tp.variables.projectStatus || "1active" %>
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "1"
 science: ["<%- sci %>"]

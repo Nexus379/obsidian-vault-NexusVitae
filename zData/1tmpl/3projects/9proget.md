@@ -36,7 +36,7 @@ let amount = await tp.system.prompt("💰 Expected Value/Amount?", "0.00");
 let account = await tp.system.suggester(["🏦 Bank", "🔵 PayPal", "💵 Cash", "💎 Physical Asset"], ["Bank", "PayPal", "Cash", "Physical"]) || "TBD";
 
 // 🔱 4. CLEANING
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(7proget-|g-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(9proget-|p-|3project-)/i, "").trim();
 let deadline = tp.date.now("YYYY-MM-DD", 7);
 
 tR += "---"  
@@ -51,7 +51,7 @@ arch:
 archtype:
   - "#3project/proget"
 gain_type: "<%- gainType %>"
-status: <%- tp.variables.projectStatus || "1active" %>
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "1"
 due: <%- deadline %>

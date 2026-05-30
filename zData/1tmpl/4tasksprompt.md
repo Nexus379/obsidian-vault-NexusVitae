@@ -3,6 +3,7 @@
 if (!tp.variables) tp.variables = {};
 const SYS = tp.variables.SYS || {};
 const ARCH = tp.variables.ARCH || {};
+const dv = app.plugins.plugins.dataview.api; // 🎯 NEU: Dataview für die Projekt-Suche
 
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
@@ -53,6 +54,35 @@ tp.variables.deadline = await tp.system.prompt(
     suggestion
 );
 
+// 🔱 4. PROJECT ASSIGNMENT (Das neue GTD-Routing für Tasks)
+let pLink = "";
+let targetFolder = (ARCH && ARCH.t && ARCH.t.folder) ? ARCH.t.folder : "4_Tasks"; // Standard-Fallback "4_Tasks"
+
+const projs = dv ? dv.pages('"3_Projects"').where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/")).sort(p => p.file.mtime, "desc") : [];
+const projOptions = ["✖️ No Project (General Task)"];
+const projPaths = ["NONE"];
+
+for (let p of projs) {
+    let match = p.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
+    let stat = match ? match[1] : "1_Active";
+    projOptions.push(`🧩 ${p.file.name} (${stat})`);
+    projPaths.push(`${p.file.name}|${stat}`);
+}
+
+const pick = await tp.system.suggester(projOptions, projPaths, false, "🔗 Link Task to Project?");
+
+if (pick && pick !== "NONE") {
+    // Projekt wurde ausgewählt: Wir bauen den neuen Projekt-Ordner-Pfad
+    const parts = pick.split("|");
+    const pName = parts[0];  
+    const pStat = parts[1];
+    pLink = `[[${pName}]]`;
+    targetFolder = `3_Projects/${pStat}/${pName}/Tasks`;
+}
+
+// Variablen sichern, damit die Templates (z.B. 1todo.md) den Link nutzen können
+tp.variables.pLink = pLink;
+
 // 🔱 5. TITLE & LOGISTICS
 if (!title || title.trim() === "" || title.toLowerCase().includes(defaultName.toLowerCase())) {
     title = await tp.system.prompt("🛠️ Task Action: What needs to be done?", "");
@@ -61,22 +91,20 @@ if (!title || title.trim() === "") title = "Task_" + tp.date.now("HH_mm");
 title = title.trim();
 tp.variables.title = title;
 
-// Sicherer Fallback für den Root-Folder
-const taskRoot = (ARCH && ARCH.t && ARCH.t.folder) ? ARCH.t.folder : "4_Tasks";
-
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200));
 }
 
+// Ordnerstruktur bauen (entweder 4_Tasks oder der Projekt-Ordner)
 let pathAcc = "";
-for (const seg of taskRoot.split('/').filter(s => s)) {
+for (const seg of targetFolder.split('/').filter(s => s)) {
     pathAcc += (pathAcc ? "/" : "") + seg;
     if (!app.vault.getAbstractFileByPath(pathAcc)) await app.vault.createFolder(pathAcc);
 }
 
 // 🔱 6. RENAME & MOVE (Stabilisiert)
-const finalPath = `${taskRoot}/${title}.md`;
+const finalPath = `${targetFolder}/${title}.md`;
 if (tp.file.path !== finalPath && !app.vault.getAbstractFileByPath(finalPath)) {
     await tp.file.move(finalPath);
 }

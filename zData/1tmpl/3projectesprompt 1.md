@@ -65,28 +65,10 @@ if (!title) title = "Project-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) await tp.file.rename(title);
 
-// 🎯 NEU: Clean Display Title (wichtig für einen sauberen Ordnernamen)
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(1prodo-|p-|3project-)/i, "").trim();
-
-// 🎯 NEU: GTD Ordner-Mapping
-const statusFolderMap = {
-    "1active": "1_Active",
-    "2passive": "2_Passive",
-    "3idea": "3_Idea",
-    "0recurring": "0_Recurring"
-};
-const statFolder = statusFolderMap[pStatus] || "1_Active";
-
 // WICHTIG: Falls dein Router 'p' statt 'projects' nutzt, hier ARCH.p.folder nutzen!
 const projectRoot = (ARCH && ARCH.p && ARCH.p.folder) ? ARCH.p.folder : "3_Projects";
-
-// 🎯 NEU: Der Pfad zielt jetzt in den GTD-Ordner
-const targetFolder = `${projectRoot}/${statFolder}/${displayTitle}`;
-
-// 🛡️ SICHERHEITS-NETZ: Variablen für das finale Template (1prodo) abspeichern!
+const targetFolder = projectRoot;
 tp.variables.projectStatus = pStatus;
-tp.variables.title = title; 
-tp.variables.displayTitle = displayTitle; 
 
 // Folder-Bot (Sichert die Struktur)
 if (!app.vault.getAbstractFileByPath(targetFolder)) {

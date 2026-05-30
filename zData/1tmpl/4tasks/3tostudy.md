@@ -67,7 +67,7 @@ arch:
   - "#4task"
 archtype:
   - "#4task/tostudy/<%- studyType %>"
-status: <%- (studyType === 'spaced') ? 'review' : '1active' %>
+status: "<%- (studyType === 'spaced') ? 'review' : '1active' %>"
 priority:
   - "1"
 persona:
@@ -95,6 +95,7 @@ review:
 
 # 🎓 Quest: <%- displayTitle %>
 ## 🛰️ Mission Control Display
+**Project:** <%- pLink || "None" %>
 
 > [!multi-column]
 > > [!calendar|wide-5] Ebbinghaus Prime-Chain (99% Retention)

@@ -27,7 +27,7 @@ let amount = await tp.system.prompt("💰 Estimated Amount?", "0.00");
 let account = await tp.system.suggester(["💳 Visa", "🔵 PayPal", "🏦 Bank", "💵 Cash"], ["Visa", "PayPal", "Bank", "Cash"]) || "TBD";
 
 // 🔱 4. CLEANING & DEADLINE
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(6propay-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(6propay-|p-|3project-)/i, "").trim();
 let deadline = tp.date.now("YYYY-MM-DD", 5);
 
 tR += "---"  
@@ -41,7 +41,7 @@ arch:
   - "#3project"
 archtype:
   - "#3project/propay"
-status: <%- tp.variables.projectStatus || "1active" %>
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "1"
 due: <%- deadline %>
