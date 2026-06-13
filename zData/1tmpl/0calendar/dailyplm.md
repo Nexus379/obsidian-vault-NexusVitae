@@ -479,7 +479,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > [!multi-column]
 > > > [!blank]
 > > > ### 🍽️ Planned Menu (Baseline)
-> > > [[2_Areas/1_Selfcare/Meal_Plan|Meal_Plan]]
+> > > [[2_Areas/1_Selfcare/Nutrition/Meal_Plan|Meal_Plan]]
 > > > - **🌅 Breakfast**
 > > >   - _empty_
 > > > - **🍱 Bento**

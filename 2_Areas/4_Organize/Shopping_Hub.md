@@ -39,7 +39,7 @@ cssclasses:
 > > [!info] 🧊 Inventory & Strategy
 > > **Look-Ahead Mode:** `$= (moment().day() === 1) ? "3 Days (Mon-Wed)" : (moment().day() === 4 ? "4 Days (Thu-Sun)" : "24h Focus")`
 > > ---
-> > **Status:** Data-sync active with [[2_Areas/1_Selfcare/Meal_Plan]] & [[6_Resources/Recipes/Recipes | Recipes Database]].
+> > **Status:** Data-sync active with [[2_Areas/1_Selfcare/Nutrition/Meal_Plan]] & [[6_Resources/Recipes/Recipes | Recipes Database]].
 >
 > > [!todo] ➕ Quick Actions
 > > [[t-buy|+ New To-Buy (Horizon 0)]]
