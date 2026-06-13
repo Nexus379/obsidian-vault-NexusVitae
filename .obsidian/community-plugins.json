@@ -6,7 +6,6 @@
   "obsidian-meta-bind-plugin",
   "colored-tags",
   "callout-integrator",
-  "obsidian-to-anki-plugin",
   "callout-manager",
   "chronology",
   "callout-suggestions",
@@ -16,5 +15,6 @@
   "tag-wrangler",
   "obsidian-charts",
   "obsidian-kanban",
-  "local-backup"
+  "local-backup",
+  "flashcards-obsidian"
 ]

@@ -83,18 +83,13 @@ tags: ["#anki/sync"]
 > ID: 0
 > END
 
-> [!quote]- 🎓 Anki Commands Cheat Sheet
-> **Basic:** `{Basic}` | `Front:` | `Back:`
-> 
-> **Cloze:** `{Cloze}` | `Text: {{c1::...}}` | `Extra:`
-> 
-> - Create blank: `{{c1::Text}}`
-> - Second blank in the same sentence: `{{c2::Text}}`
-> - Add hint: `{{c1::Text::Hint}}`
-> 
-> **Always wrap with START and END!**
+> [!quote] 🧩 Cloze Deletions Cheat Sheet
+> **Basic Cloze:** The capital of France is ==Paris==. 
+> **Multiple Clozes:** ==Rome== is the capital of ==Italy==. *(Creates 2 separate cards)*
+> **Classic Anki-Style:** You can still use `{{c1::Text}}` or `{Text}` if you prefer or need specific numbering!
+> **Extra Info:** Add extra context directly below the sentence, or use `?` on the next line to add a hidden "back" text.
 
-TARGET DECK: Nexus::General
+[cards-deck:: ]
 FILE TAGS: #anki
 
 ## 🧠 Cloze / Fill-in-the-blank

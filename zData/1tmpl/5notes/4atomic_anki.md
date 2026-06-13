@@ -84,14 +84,14 @@ tags: ["#anki/sync"]
 > ID: 0
 > END
 
-> [!quote]- 🎓 Anki Commands Cheat Sheet
-> **Basic:** `{Basic}` | `Front:` | `Back:`
-> 
-> **Cloze:** `{Cloze}` | `Text: {{c1::...}}` | `Extra:`
-> 
-> **Always wrap with START and END!**
+> [!quote] 🎓 Flashcards Cheat Sheet
+> **Basic (Inline):** Front :: Back
+> **Reversed (Inline):** Front ::: Back
+> **Multi-line:** Front \n ? \n Back
+> **Cloze:** Highlight text to create a ==cloze== deletion
+> *(Note: The file must contain the `#flashcards` tag!)*
 
-TARGET DECK: Nexus::General
+[cards-deck :: ]
 FILE TAGS: #anki
 
 
