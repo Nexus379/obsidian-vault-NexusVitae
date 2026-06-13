@@ -212,6 +212,8 @@ selfcare_pm: false
 meal: []
 activity_link: []
 creativity_link: []
+play_instrum: []
+play_instrum_time: 0
 entertain_link: []
 strength_link: []
 vita_snap: []
@@ -264,12 +266,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 
 > > > `BUTTON[reset-focus]`
 
-> [!quote|flat] ☀️ AM Protocol
-> - [ ] 🧘🏽‍♀️ Yoga (Stretching)
-> - [ ] 🛏️ Make bed & air out the room
-> - [ ] 🍽️ Empty dishwasher
-> - [ ] ☕ Make coffee / tea
-> - [ ] 💊 Vitamins / Supplements
+
 
 ## 🌿Consuetudo
 ```dataviewjs
@@ -362,7 +359,19 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 ```
 [^1]
 
+> [!quote|flat] ☀️ AM Protocol
+> - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
+> -  **Journal** AM: `INPUT[toggle:journal_am]` 
+> 	- *Gratitude, Fascinating, Braindump*
+> - **Fitness** AM: `INPUT[number:fitness_am]`
+> - [ ] 🛏️ Make bed & air out the room
+> - [ ] 🍽️ Empty dishwasher
+> - [ ] 🍵 Make tea
+> - [ ] 🪻 Give Flowers Love
+
 > [!pink] L - Lifestyle / Food  
+> 
+> 
 > ```dataviewjs
 > const c = dv.current();
 > const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
@@ -470,7 +479,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > [!multi-column]
 > > > [!blank]
 > > > ### 🍽️ Planned Menu (Baseline)
-> > > [[2_Areas/1_Selfcare/Nutrition/Meal_Plan|Meal_Plan]]
+> > > [[2_Areas/1_Selfcare/Meal_Plan|Meal_Plan]]
 > > > - **🌅 Breakfast**
 > > >   - _empty_
 > > > - **🍱 Bento**
@@ -525,11 +534,6 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 > [!pink] E - Emotions
 > >[!multi-column]
-> > > [!journal]
-> > > - **Journaling:**
-> > > - AM: `INPUT[toggle:journal_am]` 
-> > > - PM: `INPUT[toggle:journal_pm]` 
-> > > - *Gratitude, Fascinating, Braindump*
 > > 
 > > > [!journal] **Resonance Radar:** 
 > > > Mood: <%- mood %> / 5 <%- mM[mood] || "⚪" %> 
@@ -572,12 +576,6 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 >[!pink] B - Body / Movement
 > > [!multi-column]
-> > > [!blank]
-> > > **Fitness:**
-> > > 
-> > > AM: `INPUT[number:fitness_am]`
-> > > 
-> > > PM: `INPUT[number:fitness_pm]`
 > >  
 > > > [!blank]
 > > > ```dataviewjs
@@ -597,13 +595,53 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 
 > > > dv.paragraph(`🏃🏽 **Status:** ${gesamt} / ${ziel} min ${icon}${flair}`);
 > > > ```
+> > > 
+> > > ```dataviewjs
+> > > // 🏋️ NEXUS FITNESS SYNC
+> > > const dStr = dv.current().file.name.substring(0, 10);
+> > > const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
+> > > const dObj = moment(dStr, "YYYY-MM-DD");
+> > > const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
+> > > 
+> > > const fitPlan = dv.page("2_Areas/6_Activity/Fitness_Routine");
+> > > if (fitPlan) {
+> > >     const regions = [
+> > >         {l: "🤸 Warmup", v: "mobility"},
+> > >         {l: "💪 Upper Body", v: "upper"},
+> > >         {l: "🦵 Lower Body", v: "lower"},
+> > >         {l: "🪨 Core", v: "core"},
+> > >         {l: "🔥 Cardio", v: "cardio"}
+> > >     ];
+> > >     
+> > >     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
+> > >     let engine = null;
+> > >     try { engine = require(enginePath)(); } catch(e) {}
+> > >     
+> > >     let todaysWorkout = [];
+> > >     regions.forEach(r => {
+> > >         let exKey = fitPlan[`fit_${todayStr}_${r.v}`];
+> > >         if (exKey && exKey !== "free") {
+> > >             if (engine && engine.all[exKey]) {
+> > >                 todaysWorkout.push(`> - **${r.l}**: ${engine.all[exKey].icon} ${engine.all[exKey].label}`);
+> > >             } else {
+> > >                 todaysWorkout.push(`> - **${r.l}**: ${exKey}`);
+> > >             }
+> > >         }
+> > >     });
+> > >     
+> > >     if (todaysWorkout.length > 0) {
+> > >         dv.header(4, "🏋️ Today's Training Protocol");
+> > >         dv.paragraph(todaysWorkout.join("\n"));
+> > >     } else {
+> > >         dv.paragraph("> [!info|clean] 🧘 **Rest Day.** Recover and flow like water.");
+> > >     }
+> > > } else {
+> > >     dv.paragraph("⚠️ FitnessPlan missing.");
+> > > }
+> > > ```
 
 > [!pink] E - Entropy / Relaxation
 > >[!multi-column]
-> > > [!blank]
-> > > **Selfcare**
-> > > >[!blank]
-> > > > AM: `INPUT[toggle:selfcare_am]`   |  PM: `INPUT[toggle:selfcare_pm]`
 > > 
 > > > [!blank]
 > > > **Active Enjoyment**
@@ -613,23 +651,60 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > > `INPUT[inlineList:activity_link]`
 > > > > 
 > > > > **🎨 Creativity**
-> > > > Painting/Drawing, Crafting, Play an instrument
+> > > > Painting/Drawing, Crafting, etc
 > > > > `INPUT[inlineList:creativity_link]`
->
+> > > > 
+> > > > 🎸 Instrument Practice
+> > > > Which instrument did you play today?
+> > > > `INPUT[inlineList:play_instrum]` ⏱️ Duration: `INPUT[number:play_instrum_time]` min
+> 
 > > [!quote|flat] 📺 Entertainment (Passive)
 > > *Unplug & Consume: Gaming, Movies, Series, etc.*
 > > `INPUT[inlineList:entertain_link]`
+> > 
+> > ```dataviewjs
+> > // 📺 NEXUS CONSUMPTION MONITOR
+> > // Scannt deine Entertainment-Ordner und zeigt die 3 zuletzt aktualisierten Einträge
+> > const sources = ['6_Resources/Films', '6_Resources/Series', '6_Resources/Games'];
+> > const pages = dv.pages(sources.map(s => `"${s}"`).join(" or "));
+> > 
+> > const recent = pages
+> >     .sort(p => p.file.mday, 'desc') // Sortiert nach dem letzten Änderungsdatum
+> >     .limit(3);
+> > 
+> > if (recent.length > 0) {
+> >     dv.table(
+> >         ["Title", "Type", "Last Update"],
+> >         recent.map(p => [
+> >             p.file.link, 
+> >             p.file.folder.split('/').pop(), // Zeigt an, ob Film, Serie oder Game
+> >             p.file.mday.toFormat("yyyy-MM-dd")
+> >         ])
+> >     );
+> > } else {
+> >     dv.paragraph("_No recent entertainment activity found._");
+> > }
+> > ```
+> > 
 > 
 > > **Action:** `BUTTON[add-entropy]`
 
 > [!pink] N - Night / Sleep
+> > [!quote|flat] 🌙 PM Protocol
+> > - **Selfcare** PM: `INPUT[toggle:selfcare_pm]`
+> > - **Journal** PM: `INPUT[toggle:journal_pm]` 
+> > 	- *Gratitude, Fascinating, Braindump*
+> > - **Fitness** PM: `INPUT[number:fitness_pm]`
+> > - [ ] 🍽️ Load & start dishwasher
+> > - [ ] 🗑️ Check trash & take out if needed
+> > - [ ] 🛋️ 5-Minute Reset (clear tables & surfaces)
+> > - [ ] 📱 Plug in devices & switch to offline mode
+
+> 
 > - **Sleep:** <%- schlaf %>h `$= Number(<%- schlaf %>) >= 7 ? "🟢" : "🔴"`
 
-> [!quote|flat] 🌙 PM Protocol
-> - [ ] 🍽️ Load & start dishwasher
-> - [ ] 🗑️ Check trash & take out if needed
-> - [ ] 🛋️ 5-Minute Reset (clear tables & surfaces)
-> - [ ] 📱 Plug in devices & switch to offline mode
+
+
 
 ---
 `BUTTON[freezer]`

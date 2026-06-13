@@ -94,6 +94,73 @@ if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
     await tp.file.move(finalDest);
 }
 
+// 🔱 6.5 TIMETABLE SYNC (Auto-Extraction)
+let timetableBlocks = "";
+try {
+    // 1. Finde den passenden Wochentag heraus (z.B. "mon", "tue")
+    const ttDate = moment(dateStr);
+    const dayPrefix = ttDate.locale('en').format("ddd").toLowerCase(); 
+
+    // 2. Lade die Timetable-Datei (Sucht die Datei im Vault)
+    const ttPage = dv.page("2_Areas/3_Mind/Timetable");// Geht davon aus, dass deine Datei "Timetable.md" heißt
+
+    if (ttPage && ["mon", "tue", "wed", "thu", "fri"].includes(dayPrefix)) {
+        let dailySubjects = new Set(); // Set verhindert doppelte Einträge bei Doppelstunden
+        
+        // 3. Durchsuche das YAML der Timetable nach den Einträgen für diesen Tag
+        for (let key in ttPage) {
+            if (key.startsWith(`tt_${dayPrefix}_`)) {
+                let val = ttPage[key];
+                if (val && val !== "free" && val !== "break") {
+                    dailySubjects.add(val);
+                }
+            }
+        }
+
+        // 4. Wenn wir Fächer gefunden haben, lade die Discipline Engine
+        if (dailySubjects.size > 0) {
+            const enginePath = "zData/2scripts/disciplineEngine.js";
+            const eFile = app.vault.getAbstractFileByPath(enginePath);
+            let engineData = {};
+            
+            if (eFile) {
+                const code = await app.vault.read(eFile);
+                const module = { exports: {} };
+                new Function("module", "exports", code)(module, module.exports);
+                const engineFn = module.exports;
+                engineData = (typeof engineFn === "function") ? engineFn().all : {};
+            }
+
+            // 5. Baue die Blöcke exakt im Format deines Button-Skripts
+            timetableBlocks += `> [!info] 🗓️ **Timetable Sync: ${ttDate.format("dddd")}**\n>\n> Die folgenden Fächer stehen heute auf dem Plan:\n\n`;
+            
+            for (let subjKey of dailySubjects) {
+                let disc = engineData[subjKey];
+                if (disc) {
+                    const sciTags = (disc.sci && disc.sci.length) ? disc.sci.join(", ") : "#sci/General";
+                    const counter = Math.floor(Math.random() * 9000) + 1000;
+                    const fieldTopic = `${subjKey}_${counter}`;
+                    const fieldTime = `${subjKey}_${counter}_min`;
+                    
+                    timetableBlocks += `${disc.icon} **${disc.label}**\n📝 Topic: \`INPUT[text:${fieldTopic}]\`\n⏱️ Time: \`INPUT[number:${fieldTime}]\` min.\n<small style="opacity:0.65;font-style:italic;font-size:0.9em;">(Sci: ${sciTags})</small>\n\n`;
+                }
+            }
+        } else {
+            timetableBlocks = "> [!info] 🗓️ **Timetable:** Keine Fächer für heute eingetragen.\n\n";
+        }
+    } else if (["sat", "sun"].includes(dayPrefix)) {
+    timetableBlocks = "> [!info] 🌴 **Weekend Mode:** No regular subjects scheduled today.\n\n";
+} else {
+    timetableBlocks = "> [!caution] ⚠️ **Timetable Error:** Could not locate Timetable.md.\n\n";
+}
+} catch (error) {
+    console.error("Timetable Sync Error: ", error);
+}
+
+// Speichere die gebauten Blöcke als Variable, um sie unten auszugeben
+tp.variables.timetableSync = timetableBlocks;
+
+
 // 🔱 7. CLEANUP
 if (tp.variables && tp.variables.targetDate) delete tp.variables.targetDate;
 tR = "---\n";
@@ -139,60 +206,52 @@ music: ""
 # 🎓 <%- dateStr %> - <%- displayTitle %>
 > [!abstract] 🔱 Nexus Sync: <%- energy %>/5 | Brain: <%- drainVal %>/5
 
-
 <%- tp.file.include("[[zData/5design_modul/CalendarLog]]") %>
 
 > [!multi-column]
-> > [!abstract] 🕒 Chronos Sync
-> > **Date:** `VIEW[{cal_date}]`
-> > 
-> > ```dataviewjs
-> > const tFile = app.vault.getAbstractFileByPath(dv.current().file.path);
-> > const currentEnergy = dv.current().energy || "3";
-> > const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
-> > 
-> > // Container für das Interface-Element erstellen
-> > const container = dv.container.createEl("div", { style: "font-size: 0.85em; font-family: var(--font-interface);" });
-> > 
-> > // Label und Status-Text-Element
-> > const label = container.createEl("small", { text: "⚡ Energy Level: ", style: "opacity: 0.8;" });
-> > const statusText = container.createEl("span", { 
-> >     text: eMap[String(currentEnergy)] || currentEnergy, 
-> >     style: "font-weight: bold; margin-left: 4px;" 
-> > });
-> > 
-> > container.createEl("br");
-> > 
-> > // Der HTML Slider (input type='range')
-> > const slider = container.createEl("input", {
-> >     type: "range",
-> >     attr: { min: "1", max: "5", value: String(currentEnergy), step: "1" },
-> >     style: "width: 100%; max-width: 150px; margin-top: 6px; cursor: pointer;"
-> > });
-> > 
-> > // Event-Listener für Interaktionen
-> > slider.addEventListener("input", async (e) => {
-> >     const val = e.target.value;
-> >     statusText.innerText = eMap[val] || val;
-> >     
-> >     // Schreibt den Wert direkt zurück in das YAML Frontmatter der aktuellen Datei
-> >     await app.fileManager.processFrontMatter(tFile, (fm) => {
-> >         fm["energy"] = Number(val);
-> >     });
-> > });
-> >```
-> > 
-> > **Brain-Drain:** `VIEW[{brain-drain}]` / 5
-> > 
-> > **Focus** (monthly) `INPUT[text:focusM_pkm]`
->
-> > [!log] 📜 On this day
-> > **Focus** (daily) `INPUT[text:focusD_pkm]`
+> > [!abstract|flat] 📅 Focus
+> > **Monthly Aim:** `INPUT[text(placeholder(Monthly Study Goal...)):focusM_pkm]`
+> > **Daily Mission:** `INPUT[text(placeholder(What to conquer today?)):focusD_pkm]`
+> 
+> > [!quote|flat] 📜 On this day
 > > ```dataview
 > > LIST FROM "0_Calendar/3_PKM"
 > > WHERE file.day.month = this.file.day.month AND file.day.day = this.file.day.day
 > > AND file.name != this.file.name
 > > ```
+
+```dataviewjs
+// ⚡ NEXUS VITALITY DASHBOARD (Energy & Brain-Drain)
+const tFile = app.vault.getAbstractFileByPath(dv.current().file.path);
+const c = dv.current();
+
+const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
+const bMap = {"5":"🧠 Fresh / Ready", "4":"💡 Focused", "3":"😐 Average", "2":"🥱 Tired", "1":"🍳 Fried"};
+
+// Das "display: flex" sorgt dafür, dass die Elemente nebeneinander stehen
+const container = dv.container.createEl("div", { 
+    style: "display: flex; gap: 15px; margin-bottom: 20px;" 
+});
+
+// Funktion zum Erstellen der Boxen
+function createDashboardBox(title, map, fieldName, color, icon) {
+    const box = container.createEl("div", { 
+        style: `flex: 1; padding: 12px; background: var(--background-secondary-alt); border-radius: 8px; border-left: 4px solid ${color};` 
+    });
+    box.createEl("div", { text: `${icon} ${title}`, style: "opacity: 0.7; font-weight: bold; text-transform: uppercase; font-size: 0.75em; margin-bottom: 8px;" });
+    const valText = box.createEl("div", { text: map[String(c[fieldName])] || c[fieldName], style: "font-weight: bold; font-size: 1.1em;" });
+    const slider = box.createEl("input", { type: "range", attr: { min: "1", max: "5", value: String(c[fieldName] || 3), step: "1" }, style: "width: 100%; margin-top: 10px; cursor: pointer;" });
+    
+    slider.addEventListener("input", async (e) => { 
+        valText.innerText = map[e.target.value]; 
+        await app.fileManager.processFrontMatter(tFile, fm => fm[fieldName] = Number(e.target.value)); 
+    });
+}
+
+// Boxen generieren
+createDashboardBox("System Energy", eMap, "energy", "var(--interactive-accent)", "⚡");
+createDashboardBox("Cognitive Load", bMap, "brain-drain", "#b873f0", "🧠");
+```
 
 
 ## 🚀 Fokus
@@ -203,8 +262,14 @@ music: ""
 
 ### 🎓 Daily Study Tracker
 
+
+
 > [!info] 🔱 Click here to log a discipline:
 > `BUTTON[add-disc-pkm]`
+
+
+<%- tp.variables.timetableSync %>
+
 
 >[!log]
 > ```dataviewjs
@@ -245,7 +310,13 @@ music: ""
 > 
 > if (sessions.length > 0) {
 >     dv.table(["Discipline", "Topic", "Time"], sessions);
->     dv.paragraph(`<center><span style="color: var(--interactive-accent); font-weight: bold;">Total Time: ${totalMin} min</span></center>`);
+>     // Hier ist das optische Upgrade: Die "Total Time" Box
+>     dv.paragraph(`
+>         <div style="text-align: center; padding: 10px; background: var(--background-secondary-alt); border-radius: 8px; margin-top: 10px;">
+>             <span style="opacity: 0.8; text-transform: uppercase; font-size: 0.8em;">Total Study Time Today</span><br>
+>             <span style="color: var(--interactive-accent); font-weight: bold; font-size: 1.2em;">⏱️ ${totalMin} min</span>
+>         </div>
+>     `);
 > } else {
 >     dv.paragraph("<center><i>No sessions logged today. Use the button above.</i></center>");
 > }

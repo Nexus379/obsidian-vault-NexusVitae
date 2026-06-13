@@ -80,29 +80,53 @@ if (dv) {
         focusM_Date = lastLog.focusMdate || lastLog["cal_date"] || dateStr;
     }
 }
-// 🧹 5.4 FINAL NEXUS HOUSEHOLD ENGINE (Weekend Lockdown Edition)
-const dayOfWeek = moment(dateStr).format("dddd"); 
+// 🧹 5.4 FINAL NEXUS HOUSEHOLD ENGINE (Hybrid Pull)
+const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
+const momentDay = moment(dateStr);
+const todayPrefix = dayMap[momentDay.day()]; 
+const fullDayName = momentDay.locale("en").format("dddd");
 
-const chores = {
-    "Monday":    ["Weekly Grocery Run 🛒", "Daily Laundry & Iron 🧺"],
-    "Tuesday":   ["Kitchen & Fridge Check 🍳", "Daily Laundry & Iron 🧺"],
-    "Wednesday": ["Floor (Vacuum & Mop) 🧽", "Daily Laundry & Iron 🧺"],
-    "Thursday":  ["Dusting & Fresh Supply 🛒", "Daily Laundry & Iron 🧺"],
-    "Friday":    ["Complete Bathroom Clean 🛁", "Daily Laundry & Iron 🧺"],
-    "Saturday":  ["OFF - System Idle 💠", "Rest & Recharge"],
-    "Sunday":    ["Bed Sheets & Plants 🌱", "Selfcare Sanctuary 🧘"]
-};
+let task1 = "Maintenance";
+let task2 = "Idle";
+let engineChores = [];
 
-const taskPair = chores[dayOfWeek] || ["Maintenance", "Idle"];
+// 1. Hole Fallback-Werte aus der Engine
+const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
+try { 
+    const engine = require(enginePath)(); 
+    if (engine && engine.getDailyChores) {
+        engineChores = engine.getDailyChores(fullDayName);
+    }
+} catch(e) {}
 
-// Variablen für Frontmatter setzen
-tp.variables.maintask1 = taskPair[0];
-tp.variables.maintask2 = taskPair[1];
-
-// Falls im aktuellen Frontmatter schon was steht (manuelle Änderung), behalten wir das
-if (tp.frontmatter && tp.frontmatter.focusM_ppm) {
-    focusM_ppm = tp.frontmatter.focusM_ppm;
+// 2. Prüfe das Timeblocking auf "household" Blöcke
+if (dv) {
+    const routinePage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+    if (routinePage) {
+        const totalPeriods = Number(routinePage.rt_periods) || 14;
+        let foundCustomTasks = [];
+        
+        for (let i = 1; i <= totalPeriods; i++) {
+            let slotValue = String(routinePage[`rt_${todayPrefix}_${i}`] || "");
+            if (slotValue.startsWith("household|")) {
+                foundCustomTasks.push(slotValue.split("|")[1].trim());
+            }
+        }
+        
+        // Wenn spezifische Eingaben (mit |) existieren, überschreibe die Baseline
+        if (foundCustomTasks.length > 0) {
+            task1 = foundCustomTasks[0] || engineChores[0];
+            task2 = foundCustomTasks[1] || engineChores[1] || "";
+        } else {
+            task1 = engineChores[0];
+            task2 = engineChores[1];
+        }
+    }
 }
+
+tp.variables.maintask1 = task1;
+tp.variables.maintask2 = task2;
+
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const targetFolder = `0_Calendar/2_PPM/${y}/${m}`;
 const finalDest = `${targetFolder}/${finalTitle}.md`;
