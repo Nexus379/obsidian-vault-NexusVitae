@@ -44,50 +44,124 @@
           "ctime": 1780991412838,
           "path": "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM.md",
           "title": "3-PKM"
+        }
+      ],
+      "title": "Calendar"
+    },
+    {
+      "type": "group",
+      "ctime": 1781432449586,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1776765546333,
+          "path": "0_Atlas/0_Dashboard/1-Stars.md"
+        }
+      ],
+      "title": "Stars"
+    },
+    {
+      "type": "group",
+      "ctime": 1781432454852,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1776765552525,
+          "path": "0_Atlas/0_Dashboard/2-Areas.md"
+        }
+      ],
+      "title": "Areas"
+    },
+    {
+      "type": "group",
+      "ctime": 1781432458219,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1776765557321,
+          "path": "0_Atlas/0_Dashboard/3-Projects.md"
+        }
+      ],
+      "title": "Projects"
+    },
+    {
+      "type": "group",
+      "ctime": 1781432465530,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1776765569801,
+          "path": "0_Atlas/0_Dashboard/4-Tasks.md"
+        }
+      ],
+      "title": "Tasks"
+    },
+    {
+      "type": "group",
+      "ctime": 1781432476725,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1776765585593,
+          "path": "0_Atlas/0_Dashboard/5-Notes.md"
+        }
+      ],
+      "title": "Notes"
+    },
+    {
+      "type": "group",
+      "ctime": 1781432479578,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1776765591889,
+          "path": "0_Atlas/0_Dashboard/6-Resources.md"
+        }
+      ],
+      "title": "Resources"
+    },
+    {
+      "type": "group",
+      "ctime": 1781432485206,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1781432602259,
+          "path": "2_Areas/4_Organize/Routine-Timeblocking.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1781432627174,
+          "path": "2_Areas/6_Activity/Fitness_Routine.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1781432530052,
+          "path": "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1781432616144,
+          "path": "2_Areas/4_Organize/Shopping_Hub.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1780996649264,
+          "path": "2_Areas/3_Mind/Timetable.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1781432592084,
+          "path": "2_Areas/3_Mind/Spaced_Repitition.md"
         },
         {
           "type": "file",
           "ctime": 1780991265417,
           "path": "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard.md",
           "title": "Studyboard"
-        },
-        {
-          "type": "file",
-          "ctime": 1780996649264,
-          "path": "2_Areas/3_Mind/Timetable.md"
         }
       ],
-      "title": "Calendar"
-    },
-    {
-      "type": "file",
-      "ctime": 1776765546333,
-      "path": "0_Atlas/0_Dashboard/1-Stars.md"
-    },
-    {
-      "type": "file",
-      "ctime": 1776765552525,
-      "path": "0_Atlas/0_Dashboard/2-Areas.md"
-    },
-    {
-      "type": "file",
-      "ctime": 1776765557321,
-      "path": "0_Atlas/0_Dashboard/3-Projects.md"
-    },
-    {
-      "type": "file",
-      "ctime": 1776765569801,
-      "path": "0_Atlas/0_Dashboard/4-Tasks.md"
-    },
-    {
-      "type": "file",
-      "ctime": 1776765585593,
-      "path": "0_Atlas/0_Dashboard/5-Notes.md"
-    },
-    {
-      "type": "file",
-      "ctime": 1776765591889,
-      "path": "0_Atlas/0_Dashboard/6-Resources.md"
+      "title": "Plans"
     }
   ]
 }
