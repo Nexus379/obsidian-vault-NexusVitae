@@ -1,45 +1,49 @@
 function routineEngine() {
     const ROUTINES = {
-        // --- 🌷 Selfcare & PLM ---
-        journal_am: { label: "☀️ AM Journal", icon: "🌅", group: "Selfcare & PLM", persona: "healer" },
-        journal_pm: { label: "🌙 PM Journal", icon: "🌙", group: "Selfcare & PLM", persona: "healer" },
-        selfcare_am: { label: "🧘‍♀️ AM Selfcare", icon: "🧖‍♀️", group: "Selfcare & PLM", persona: "nurturer" },
-        selfcare_pm: { label: "🛀 PM Selfcare", icon: "🛁", group: "Selfcare & PLM", persona: "nurturer" },
-        fitness: { label: "🏃🏽‍♀️ Fitness & Body", icon: "💪", group: "Selfcare & PLM", persona: "warrior" },
+        // === 🌷 SELFCARE & PLM ===
+        morning_routine: { label: "🌅 Morning Setup / Awakening", icon: "☀️", group: "Selfcare & PLM", persona: "healer" },
+        evening_routine: { label: "🌙 Nightfall / Shutdown", icon: "🛌", group: "Selfcare & PLM", persona: "healer" },
+        journal_am:      { label: "✍️ AM Journal & Coding", icon: "🌅", group: "Selfcare & PLM", persona: "healer" },
+        journal_pm:      { label: "📝 PM Journal & Reflection", icon: "🌙", group: "Selfcare & PLM", persona: "healer" },
+        meditation:      { label: "🧘‍♀️ Mindfulness & Breath", icon: "🎐", group: "Selfcare & PLM", persona: "healer" },
+        skincare:        { label: "🧖‍♀️ Skincare & Hygiene", icon: "🧴", group: "Selfcare & PLM", persona: "nurturer" },
+        workout_strength:{ label: "🏋️ Strength Training / Gym", icon: "💪", group: "Selfcare & PLM", persona: "warrior" },
+        workout_cardio:  { label: "🏃🏽‍♀️ Cardio / Endurance", icon: "🔥", group: "Selfcare & PLM", persona: "warrior" },
+        mobility:        { label: "🤸 Mobility & Stretching", icon: "🧬", group: "Selfcare & PLM", persona: "warrior" },
         
-        // --- 🌿 Life & Home ---
-        household: { label: "🧹 Household & Chores", icon: "🧺", group: "Life & Home", persona: "technician" },
-        meal_prep: { label: "🍱 Meal Prep / Cooking", icon: "🍎", group: "Life & Home", persona: "nurturer" },
-        social: { label: "👨‍👩‍👧 Social & Family", icon: "💬", group: "Life & Home", persona: "friend" },
-        rest: { label: "🔋 Entropy / Enjoyment", icon: "📺", group: "Life & Home", persona: "player" },
-        commute: { label: "🚗 Transit / Travel", icon: "🗺️", group: "Life & Home", persona: "explorer" },
+        // === 🌿 LIFE & HOME ===
+        clean_general:   { label: "🧹 Cleaning & Tidy Up", icon: "🧽", group: "Life & Home", persona: "technician" },
+        laundry:         { label: "🧺 Laundry & Ironing", icon: "👕", group: "Life & Home", persona: "technician" },
+        groceries:       { label: "🛒 Grocery Shopping", icon: "🛍️", group: "Life & Home", persona: "explorer" },
+        cooking:         { label: "🍳 Cooking / Meal Prep", icon: "🥘", group: "Life & Home", persona: "nurturer" },
+        plants:          { label: "🪴 Plant Care & Garden", icon: "🌱", group: "Life & Home", persona: "healer" },
+        finances:        { label: "💳 Wealth & Budget Check", icon: "📊", group: "Life & Home", persona: "organizer" },
+        life_admin:      { label: "✉️ Life Admin & Mail", icon: "🗂️", group: "Life & Home", persona: "organizer" },
+        social:          { label: "👨‍👩‍👧 Social & Family Time", icon: "💬", group: "Life & Home", persona: "friend" },
+        rest:            { label: "🔋 Entropy / Relaxation", icon: "📺", group: "Life & Home", persona: "player" },
+        commute:         { label: "🚗 Transit & Travel", icon: "🗺️", group: "Life & Home", persona: "explorer" },
 
-        // --- 🌻 Work & Projects (PPM) ---
-        focus_block: { label: "🔱 Main Task / Deep Work", icon: "🧠", group: "Work & Projects", persona: "architect" },
-        admin: { label: "🗂️ Admin & Orga", icon: "💼", group: "Work & Projects", persona: "organizer" },
-        meetings: { label: "🤝 Syncs & Calls", icon: "📞", group: "Work & Projects", persona: "communicator" },
-        review: { label: "🎯 Planning & Review", icon: "🧭", group: "Work & Projects", persona: "architect" },
+        // === 🌻 WORK & PROJECTS (PPM) ===
+        deep_work:       { label: "🔱 Deep Work / Core Mission", icon: "🧠", group: "Work & Projects", persona: "architect" },
+        admin_work:      { label: "💼 Work Admin & Sorting", icon: "🗂️", group: "Work & Projects", persona: "organizer" },
+        inbox_zero:      { label: "📬 Inbox Zero / Messages", icon: "✉️", group: "Work & Projects", persona: "communicator" },
+        meetings:        { label: "🤝 Syncs, Calls & Scrums", icon: "📞", group: "Work & Projects", persona: "communicator" },
+        project_plan:    { label: "🎯 Project Planning / Architecture", icon: "📐", group: "Work & Projects", persona: "architect" },
+        review_pdm:      { label: "🧭 Daily/Weekly Review", icon: "🗺️", group: "Work & Projects", persona: "architect" },
+        networking:      { label: "🚀 Career & Growth Strategy", icon: "📈", group: "Work & Projects", persona: "explorer" },
         
-        // --- 🌼 Knowledge (PKM) ---
-        study: { label: "📚 Study / Learning", icon: "🎓", group: "Knowledge & PKM", persona: "student" },
-        read: { label: "📖 Reading / Research", icon: "🔍", group: "Knowledge & PKM", persona: "scholar" }
-    };
-
-    // --- 🧹 Default Household Baseline ---
-    const CHORES_SCHEDULE = {
-        "Monday":    ["Weekly Grocery Run 🛒", "Daily Laundry & Iron 🧺"],
-        "Tuesday":   ["Kitchen & Fridge Check 🍳", "Daily Laundry & Iron 🧺"],
-        "Wednesday": ["Floor (Vacuum & Mop) 🧽", "Daily Laundry & Iron 🧺"],
-        "Thursday":  ["Dusting & Fresh Supply 🛒", "Daily Laundry & Iron 🧺"],
-        "Friday":    ["Complete Bathroom Clean 🛁", "Daily Laundry & Iron 🧺"],
-        "Saturday":  ["OFF - System Idle 💠", "Rest & Recharge"],
-        "Sunday":    ["Bed Sheets & Plants 🌱", "Selfcare Sanctuary 🧘"]
+        // === 🌼 KNOWLEDGE (PKM) ===
+        lecture_class:   { label: "🏫 Lecture / Class Session", icon: "🏛️", group: "Knowledge & PKM", persona: "student" },
+        study_review:    { label: "📚 Active Recall & Study", icon: "📖", group: "Knowledge & PKM", persona: "student" },
+        anki_cards:      { label: "🎓 Anki / Spaced Repetition", icon: "⚡", group: "Knowledge & PKM", persona: "student" },
+        read_research:   { label: "🔍 Reading & Lit-Research", icon: "📜", group: "Knowledge & PKM", persona: "scholar" },
+        distill_notes:   { label: "🧪 Zettelkasten Distillation", icon: "⚗️", group: "Knowledge & PKM", persona: "scholar" },
+        writing_thesis:  { label: "✍️ Paper & Thesis Writing", icon: "✒️", group: "Knowledge & PKM", persona: "scholar" }
     };
 
     return {
         all: ROUTINES,
-        getRoutineLabels: () => Object.keys(ROUTINES).sort().map(k => ({ key: k, ...ROUTINES[k] })),
-        getDailyChores: (dayName) => CHORES_SCHEDULE[dayName] || ["Maintenance", "Idle"]
+        getRoutineLabels: () => Object.keys(ROUTINES).sort().map(k => ({ key: k, ...ROUTINES[k] }))
     };
 }
 module.exports = routineEngine;

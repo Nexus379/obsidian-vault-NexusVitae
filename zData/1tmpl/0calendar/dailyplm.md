@@ -157,6 +157,96 @@ if (tp.frontmatter && tp.frontmatter.focusM_plm) {
     focusM_plm = tp.frontmatter.focusM_plm;
 }
 
+// 🔱 5.5 ROUTINE & HOUSEHOLD SYNC (Pure Timeblocking MD Edition)
+let routineBlocks = "";
+try {
+    const rDate = moment(dateStr);
+    const rDayPrefix = rDate.locale('en').format("ddd").toLowerCase(); // z.B. "mon"
+    
+    const rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+
+    if (rPage && ["mon", "tue", "wed", "thu", "fri", "sat", "sun"].includes(rDayPrefix)) {
+        const enginePath = "zData/2scripts/routineEngine.js";
+        const eFile = app.vault.getAbstractFileByPath(enginePath);
+        let engineData = {};
+        
+        if (eFile) {
+            const code = await app.vault.read(eFile);
+            const module = { exports: {} };
+            new Function("module", "exports", code)(module, module.exports);
+            const engineFn = module.exports;
+            engineData = (typeof engineFn === "function") ? engineFn().all : {};
+        }
+
+        const rStart = rPage.rt_start || "07:00";
+        const rDur = Number(rPage.rt_duration) || 60;
+        const rTotal = Number(rPage.rt_periods) || 14;
+        
+        const rBreaksStr = String(rPage.rt_breaks || "");
+        const rCustomBreaks = {};
+        if (rBreaksStr) {
+            rBreaksStr.split(",").forEach(b => {
+                let parts = b.split(":");
+                if(parts.length === 2) rCustomBreaks[parseInt(parts[0].trim())] = parseInt(parts[1].trim());
+            });
+        }
+
+        let rCurrent = moment(rStart, ["HH:mm", "h:mm A", "h:mma"]);
+        let dailyRoutines = [];
+
+        // Nur die Zeitblöcke aus der MD-Datei auslesen
+        for (let i = 1; i <= rTotal; i++) {
+            let key = `rt_${rDayPrefix}_${i}`;
+            let val = rPage[key];
+            
+            if (val && val !== "free" && val !== "break") {
+                let parts = String(val).split("|");
+                let baseKey = parts[0];
+                let detail = parts.length > 1 ? ` _(${parts.slice(1).join(" ")})_` : "";
+                
+                let isHousehold = false;
+                let label = baseKey;
+                let icon = "🔸";
+
+                // Filter: Gehört dieser Block aus der Timeblocking.md zum Haushalt/Life?
+                if (engineData && engineData[baseKey]) {
+                    if (engineData[baseKey].group === "Life & Home" || engineData[baseKey].group === "Selfcare & PLM") {
+                        isHousehold = true;
+                        label = engineData[baseKey].label;
+                        icon = engineData[baseKey].icon || "🔸";
+                    }
+                } else if (baseKey === "custom") {
+                    // Wenn du "custom" nutzt, lassen wir es im PLM auftauchen (z.B. für schnelle, eigene Todos)
+                    isHousehold = true; 
+                    label = parts.slice(1).join(" ");
+                    detail = "";
+                }
+
+                if (isHousehold) {
+                    dailyRoutines.push(`- [ ] **${rCurrent.format("HH:mm")}** | ${icon} ${label}${detail}`);
+                }
+            }
+            
+            rCurrent.add(rDur, 'minutes');
+            if (rCustomBreaks[i] && i !== rTotal) {
+                rCurrent.add(rCustomBreaks[i], 'minutes');
+            }
+        }
+
+        if (dailyRoutines.length > 0) {
+            routineBlocks = `> [!info|clean] 🧹 **Today's Scheduled Routines**\n> \n` + dailyRoutines.map(r => `> ${r}`).join("\n> ");
+        } else {
+            routineBlocks = `> [!info|clean] 🌿 **Free Day:** No household or life routines scheduled today.`;
+        }
+    } else {
+        routineBlocks = "> [!caution] ⚠️ **Sync Error:** Could not locate Routine-Timeblocking file.";
+    }
+} catch (error) {
+    console.error("Routine Sync Error: ", error);
+    routineBlocks = "> [!caution] ⚠️ **Sync Error:** Routine Engine failed to load.";
+}
+tp.variables.routineSync = routineBlocks;
+
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
 const targetFolder = `0_Calendar/1_PLM/${y}/${m}`;
@@ -370,7 +460,8 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > - [ ] 🪻 Give Flowers Love
 
 > [!pink] L - Lifestyle / Food  
-> 
+> ### Basics doing
+> <%- tp.variables.routineSync %>
 > 
 > ```dataviewjs
 > const c = dv.current();

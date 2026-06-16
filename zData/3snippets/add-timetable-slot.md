@@ -1,21 +1,21 @@
 <%-*
 /**
- * 🎒 NEXUS TIMETABLE EDITOR - Smart Read Edition
+ * 👑 NEXUS ROUTINE MULTI-EDITOR (Bulk Fill Edition)
+ * Writes granular routines flexibly into multiple slots and days simultaneously.
  */
 try {
     const file = app.workspace.getActiveFile();
     if (!file) return;
 
-    // --- ⚙️ PARAMETER AUS DER DATEI LESEN ---
+    // --- ⚙️ READ PARAMETERS FROM ROUTINE-TIMEBLOCKING ---
     const cache = app.metadataCache.getFileCache(file);
     const fm = cache?.frontmatter || {};
 
-    const startTime = fm.tt_start || "08:00";     
-    const classDuration = Number(fm.tt_duration) || 45;      
-    const totalPeriods = Number(fm.tt_periods) || 8;        
-    const breaksStr = fm.tt_breaks || "";
+    const startTime = fm.rt_start || "07:00";     
+    const classDuration = Number(fm.rt_duration) || 60;      
+    const totalPeriods = Number(fm.rt_periods) || 14;        
+    const breaksStr = fm.rt_breaks || "";
     
-    // Pausen-Text (z.B. "2:20, 4:15") in ein intelligentes Objekt verwandeln
     const customBreaks = {};
     if (breaksStr) {
         breaksStr.split(",").forEach(b => {
@@ -27,60 +27,81 @@ try {
             }
         });
     }
-    // ---------------------------------
 
-    // Zeit-Slots automatisch berechnen
+    // Calculate time slots for display (Only numeric periods for block selection)
     let current = moment(startTime, "HH:mm");
-    let slots = [];
+    let numericSlots = [];
 
     for (let i = 1; i <= totalPeriods; i++) {
         let end = moment(current).add(classDuration, 'minutes');
-        slots.push({
-            id: String(i),
-            label: `Period ${i} (${current.format("HH:mm")} - ${end.format("HH:mm")})`
+        numericSlots.push({
+            id: i,
+            label: `Slot ${i} (${current.format("HH:mm")} - ${end.format("HH:mm")})`
         });
         current = end;
-
         if (customBreaks[i] && i !== totalPeriods) {
-            let currentBreakDuration = customBreaks[i];
-            let breakEnd = moment(current).add(currentBreakDuration, 'minutes');
-            slots.push({
-                id: `break${i}`,
-                label: `☕ Break (${currentBreakDuration}m) (${current.format("HH:mm")} - ${breakEnd.format("HH:mm")})`
-            });
-            current = breakEnd;
+            current = moment(current).add(customBreaks[i], 'minutes');
         }
     }
 
-    // 1. Tag wählen
-    const days = [
-        {l: "Monday", v: "mon"}, {l: "Tuesday", v: "tue"}, 
-        {l: "Wednesday", v: "wed"}, {l: "Thursday", v: "thu"}, {l: "Friday", v: "fri"}
+    // 🔱 1. CHOOSE DAY OR DAY-BLOCK
+    const dayOptions = [
+        { l: "Monday", v: ["mon"] },
+        { l: "Tuesday", v: ["tue"] },
+        { l: "Wednesday", v: ["wed"] },
+        { l: "Thursday", v: ["thu"] },
+        { l: "Friday", v: ["fri"] },
+        { l: "Saturday", v: ["sat"] },
+        { l: "Sunday", v: ["sun"] },
+        { l: "🔄 All Weekdays (Mon-Fri)", v: ["mon", "tue", "wed", "thu", "fri"] },
+        { l: "🌴 Weekend (Sat-Sun)", v: ["sat", "sun"] },
+        { l: "🌍 Whole Week (Mon-Sun)", v: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"] }
     ];
-    const day = await tp.system.suggester(days.map(d => d.l), days, false, "🗓️ Choose a day:");
-    if(!day) return;
+    
+    const selectedDayGroup = await tp.system.suggester(dayOptions.map(d => d.l), dayOptions, false, "🗓️ Choose target Day(s):");
+    if(!selectedDayGroup) return;
 
-    // 2. Stunde wählen
-    const slot = await tp.system.suggester(slots.map(s => s.label), slots, false, `⌚ Which period on ${day.l}?`);
-    if(!slot) return;
+    // 🔱 2. CHOOSE START SLOT
+    const startSlot = await tp.system.suggester(numericSlots.map(s => s.label), numericSlots, false, "🛫 Select START Slot:");
+    if(!startSlot) return;
 
-    // 3. Discipline Engine laden
-    const enginePath = app.vault.adapter.basePath + "/zData/2scripts/disciplineEngine.js";
+    // 🔱 3. CHOOSE END SLOT (Automatically filters valid endpoints)
+    const validEndSlots = numericSlots.filter(s => s.id >= startSlot.id);
+    const endSlot = await tp.system.suggester(validEndSlots.map(s => s.label), validEndSlots, false, "🛬 Select END Slot:");
+    if(!endSlot) return;
+
+    // 🔱 4. LOAD ROUTINE ENGINE
+    const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
     let engine;
-    try { engine = require(enginePath)(); } catch(e) { return; }
+    try { engine = require(enginePath)(); } catch(e) { new Notice("❌ routineEngine.js not found!"); return; }
 
-    const discList = engine.getDisciplineLabels();
-    discList.unshift({key: "free", icon: "➖", label: "Free Period (Clear entry)"});
-    discList.unshift({key: "break", icon: "☕", label: "Mark as Pause/Break"});
+    const routineList = engine.getRoutineLabels();
+    routineList.unshift({key: "free", icon: "➖", label: "Free Period (Clear entry)"});
+    routineList.unshift({key: "break", icon: "☕", label: "Mark as Pause/Break"});
 
-    // 4. Fach wählen
-    const subj = await tp.system.suggester(discList.map(d => `${d.icon} ${d.label}`), discList, false, "📚 Which subject?");
-    if(!subj) return;
+    // 🔱 5. CHOOSE ROUTINE
+    const routine = await tp.system.suggester(routineList.map(r => `${r.icon} ${r.label}`), routineList, false, "🧹 Select Routine to deploy:");
+    if(!routine) return;
 
-    // 5. In YAML speichern
-    await app.fileManager.processFrontMatter(file, (fm) => {
-        fm[`tt_${day.v}_${slot.id}`] = subj.key;
+    // Optional detail addition
+    let finalKey = routine.key;
+    if (routine.key !== "free" && routine.key !== "break") {
+        const detail = await tp.system.prompt(`📝 Optional text details for this block? (Leave empty for standard ${routine.label})`, "");
+        if (detail && detail.trim() !== "") {
+            finalKey = `${routine.key}|${detail.trim()}`;
+        }
+    }
+
+    // 🔱 6. FRONTMATTER BULK SYNC
+    await app.fileManager.processFrontMatter(file, (frontmatter) => {
+        selectedDayGroup.v.forEach(dayPrefix => {
+            for (let slotId = startSlot.id; slotId <= endSlot.id; slotId++) {
+                frontmatter[`rt_${dayPrefix}_${slotId}`] = finalKey;
+            }
+        });
     });
+
+    new Notice(`⚡ Deploy complete! Filled Slots ${startSlot.id} to ${endSlot.id}.`);
 
 } catch(e) {
     new Notice("🔥 Error: " + e.message, 10000);

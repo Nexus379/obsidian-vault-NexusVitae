@@ -54,15 +54,21 @@ const displayTitle = cleanPart || "Daily Strategy";
 const energy = tp.variables.energy || tp.frontmatter?.energy || "3";
 tp.variables.energy = energy;
 
-// 🔱 5. SYNC: VERBUNDENE FOCI (PLM & PKM)
+// 🔱 5. SYNC: VERBUNDENE FOCI (PLM & PKM) - ROBUST EDITION
 const [y, m] = dateStr.split("-");
-const plmPath = `0_Calendar/1_PLM/${y}/${m}/${dateStr} plm`;
-const pkmPath = `0_Calendar/3_PKM/${y}/${m}/${dateStr} pkm`;
 
-const plmPage = dv ? dv.page(plmPath) : null; const pkmPage = dv ? dv.page(pkmPath) : null; 
+let aim1Focus = "";
+let aim3Focus = "";
 
-const aim1Focus = plmPage ? (plmPage.focusD_plm || "") : "";
-const aim3Focus = pkmPage ? (pkmPage.focusD_pkm || "") : "";
+if (dv) {
+    // Wir suchen in den entsprechenden Ordnern nach einer Datei, 
+    // die mit dem Datum beginnt, egal was danach im Namen steht.
+    const plmPage = dv.pages(`"0_Calendar/1_PLM/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} plm`));
+    const pkmPage = dv.pages(`"0_Calendar/3_PKM/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} pkm`));
+    
+    aim1Focus = plmPage ? (plmPage.focusD_plm || "") : "";
+    aim3Focus = pkmPage ? (pkmPage.focusD_pkm || "") : "";
+}
 
 // 🔱 5.1 MONTHLY STRATEGY SYNC (Pulls the last set monthly focus)
 let focusM_ppm = "";
@@ -80,52 +86,63 @@ if (dv) {
         focusM_Date = lastLog.focusMdate || lastLog["cal_date"] || dateStr;
     }
 }
-// 🧹 5.4 FINAL NEXUS HOUSEHOLD ENGINE (Hybrid Pull)
+
+// 💼 5.4 WORK & PROJECT SYNC (PPM Auto-Fill Main Tasks)
 const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
 const momentDay = moment(dateStr);
 const todayPrefix = dayMap[momentDay.day()]; 
-const fullDayName = momentDay.locale("en").format("dddd");
 
-let task1 = "Maintenance";
-let task2 = "Idle";
-let engineChores = [];
+let workTasks = [];
 
-// 1. Hole Fallback-Werte aus der Engine
-const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
-try { 
-    const engine = require(enginePath)(); 
-    if (engine && engine.getDailyChores) {
-        engineChores = engine.getDailyChores(fullDayName);
-    }
-} catch(e) {}
-
-// 2. Prüfe das Timeblocking auf "household" Blöcke
 if (dv) {
     const routinePage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
     if (routinePage) {
+        const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
+        let engineData = {};
+        try { 
+            const eFile = app.vault.getAbstractFileByPath(enginePath);
+            if (eFile) {
+                const code = await app.vault.read(eFile);
+                const module = { exports: {} };
+                new Function("module", "exports", code)(module, module.exports);
+                engineData = typeof module.exports === "function" ? module.exports().all : {};
+            }
+        } catch(e) { console.error("Engine Load Error", e); }
+
         const totalPeriods = Number(routinePage.rt_periods) || 14;
-        let foundCustomTasks = [];
         
         for (let i = 1; i <= totalPeriods; i++) {
             let slotValue = String(routinePage[`rt_${todayPrefix}_${i}`] || "");
-            if (slotValue.startsWith("household|")) {
-                foundCustomTasks.push(slotValue.split("|")[1].trim());
+            if (slotValue && slotValue !== "free" && slotValue !== "break") {
+                let parts = slotValue.split("|");
+                let baseKey = parts[0];
+                let detail = parts.length > 1 ? ` (${parts.slice(1).join(" ")})` : "";
+                
+                // 🔥 DER FILTER: Zieht NUR PPM/Arbeits-Aufgaben (Kein Haushalt, kein Studium!)
+                if (engineData && engineData[baseKey] && engineData[baseKey].group === "Work & Projects") {
+                    let label = engineData[baseKey].label; 
+                    let icon = engineData[baseKey].icon || "💼";
+                    workTasks.push(`${icon} ${label}${detail}`);
+                }
             }
-        }
-        
-        // Wenn spezifische Eingaben (mit |) existieren, überschreibe die Baseline
-        if (foundCustomTasks.length > 0) {
-            task1 = foundCustomTasks[0] || engineChores[0];
-            task2 = foundCustomTasks[1] || engineChores[1] || "";
-        } else {
-            task1 = engineChores[0];
-            task2 = engineChores[1];
         }
     }
 }
 
-tp.variables.maintask1 = task1;
-tp.variables.maintask2 = task2;
+// Deduplizierung: Fasst direkt aufeinanderfolgende gleiche Blöcke zusammen
+let uniqueWorkTasks = [];
+workTasks.forEach(t => {
+    if(uniqueWorkTasks[uniqueWorkTasks.length - 1] !== t) {
+        uniqueWorkTasks.push(t);
+    }
+});
+
+tp.variables.maintask1 = uniqueWorkTasks[0] || "";
+tp.variables.maintask2 = uniqueWorkTasks[1] || "";
+tp.variables.maintask3 = uniqueWorkTasks[2] || "";
+tp.variables.maintask4 = uniqueWorkTasks[3] || "";
+tp.variables.maintask5 = uniqueWorkTasks[4] || "";
+tp.variables.maintask6 = uniqueWorkTasks[5] || "";
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const targetFolder = `0_Calendar/2_PPM/${y}/${m}`;
@@ -209,20 +226,21 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const logDate = curr.file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || "";
 > > > const [yy, mm] = logDate.split("-");
 > > > 
-> > > const plm = dv.page(`0_Calendar/1_PLM/${yy}/${mm}/${logDate} plm`);
-> > > const pkm = dv.page(`0_Calendar/3_PKM/${yy}/${mm}/${logDate} pkm`);
+> > > // Sucht gezielt nach "[Datum] plm" und "[Datum] pkm"
+> > > const plm = dv.pages(`"0_Calendar/1_PLM/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} plm`));
+> > > const pkm = dv.pages(`"0_Calendar/3_PKM/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} pkm`));
 > > > 
 > > > dv.paragraph(
-> > >      "<small>🌷 Aim 1: PLM (Selfcare)</small><br>**" + (plm?.focusD_plm || "...") + "**<br><br>" +
-> > >      "<small>🌻 Aim 2: PPM (Strategy)</small><br>`INPUT[text(placeholder(Strategic Focus...)):focusD_ppm]`<br><br>" +
-> > >      "<small>🌼 Aim 3: PKM (Knowledge)</small><br>**" + (pkm?.focusD_pkm || "...") + "**"
+> > >     "<small>🌷 Aim 1: PLM (Selfcare)</small><br>**" + (plm?.focusD_plm || "...") + "**<br><br>" +
+> > >     "<small>🌻 Aim 2: PPM (Strategy)</small><br>`INPUT[text(placeholder(Strategic Focus...)):focusD_ppm]`<br><br>" +
+> > >     "<small>🌼 Aim 3: PKM (Knowledge)</small><br>**" + (pkm?.focusD_pkm || "...") + "**"
 > > > );
 > > > ```
 > >
 > > > [!blank|wide-1] 
 > > > **Main Tasks**
-> > > 1. **`INPUT[text:maintask1]`** <span style="font-size: 0.79em; opacity: 0.7;">🧹</span>
-> > > 2. **`INPUT[text:maintask2]`** <span style="font-size: 0.79em; opacity: 0.7;">🧹</span>
+> > > 1. **`INPUT[text:maintask1]`** <span style="font-size: 0.79em; opacity: 0.7;">🎯</span>
+> > > 2. **`INPUT[text:maintask2]`** <span style="font-size: 0.79em; opacity: 0.7;">🎯</span>
 > > > 3. `INPUT[text:maintask3]`
 > > > 4. `INPUT[text:maintask4]`
 > > > 5. `INPUT[text:maintask5]`

@@ -34,6 +34,8 @@ rt_duration: 45
 rt_periods: 21
 rt_breaks: 4:30, 8:60
 rt_end: 22:00
+cssclasses:
+  - wide-page
 ---
 
 # 🧩 Nexus Timeblocking (Routines)
@@ -101,13 +103,13 @@ for (let i = 1; i <= totalPeriods; i++) {
 }
 
 // --- RENDER TABLE ---
-const headers = ["⌚ Start", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const headers = ["⌚ Time", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const rows = slots.map(s => {
     if(s.isBreak) {
         return [`*${s.time}*`, getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break")];
     }
     return [
-        `**${s.time}**`,
+        `**${s.time}**<br><small style="opacity: 0.5;">[${s.id}]</small>`,
         getD(c[`rt_mon_${s.id}`]),
         getD(c[`rt_tue_${s.id}`]),
         getD(c[`rt_wed_${s.id}`]),
