@@ -75,15 +75,30 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > > ```dataviewjs
 > > // 1. INITIALISIERUNG
 > > if (window.nexusOffset === undefined) window.nexusOffset = 0;
-> > const allLogs = dv.pages('"0_Calendar" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true);
+> > const allLogs = dv.pages('!"zData" AND -"yArchive"')
+> >     .where(p => p.inbox !== true)
+> >     .where(p => p.cal_date || p.rev_end)
+> >     .where(p => p.file.path.startsWith("0_Calendar/") || String(p.archtype || "").includes("projectlog"));
 > > 
 > > const config = {
-> >     jou: { suffix: 'plm', folder: '0_Calendar/1_PLM', template: 'zData/1tmpl/0calendar/dailyplm', icon: '🌷', color: '#ff79c6' },
-> >     log: { suffix: 'ppm', folder: '0_Calendar/2_PPM', template: 'zData/1tmpl/0calendar/dailyppm', icon: '🌻', color: '#a6e3a1' },
-> >     study: { suffix: 'pkm', folder: '0_Calendar/3_PKM', template: 'zData/1tmpl/0calendar/dailypkm', icon: '🌼', color: '#89dceb' },
-> >     prolog: { suffix: 'prjlog', folder: '0_Calendar/4_Projectlog', template: 'zData/1tmpl/0calendar/projectlog', icon: '🧩', color: '#ffb86c' },
-> >     proto: { suffix: 'prot', folder: '0_Calendar/5_Protocol', template: 'zData/1tmpl/0calendar/protocol', icon: '📜', color: '#8be9fd' },
-> >     rev: { suffix: 'rev', folder: '0_Calendar/6_Review', template: 'zData/1tmpl/0calendar/revw', icon: '🛰️', color: '#50fa7b' }
+> >     jou:    { trigger: 'plm',  fileSuffix: 'plm',  icon: '🌷', color: '#ff79c6' },
+> >     log:    { trigger: 'ppm',  fileSuffix: 'ppm',  icon: '🌻', color: '#a6e3a1' },
+> >     study:  { trigger: 'pkm',  fileSuffix: 'pkm',  icon: '🌼', color: '#89dceb' },
+> >     prolog: { trigger: 'proj', fileSuffix: 'proj', icon: '🧩', color: '#ffb86c' },
+> >     proto:  { trigger: 'prot', fileSuffix: 'prot', icon: '📜', color: '#8be9fd' },
+> >     rev:    { trigger: 'rev',  fileSuffix: 'rev',  icon: '🛰️', color: '#50fa7b' }
+> > };
+> > const routerPath = 'zData/1tmpl/0calendarprompt.md';
+> > 
+> > const matchesType = (page, type, dateStr) => {
+> >     const name = page.file.name.toLowerCase();
+> >     const archtype = String(page.archtype || "").toLowerCase();
+> >     const pageDate = String(page.cal_date || page.rev_end || "").substring(0, 10);
+> >     if (pageDate !== dateStr && !name.startsWith(dateStr)) return false;
+> >     if (type === 'prolog') return archtype.includes('projectlog') || name.startsWith(`${dateStr} proj`);
+> >     if (type === 'proto') return archtype.includes('protocol') || name.startsWith(`${dateStr} prot`);
+> >     if (type === 'rev') return archtype.includes('review') || name.includes('rev');
+> >     return name.startsWith(`${dateStr} ${config[type].fileSuffix}`);
 > > };
 > > 
 > > // 2. NAVIGATION
@@ -110,19 +125,25 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > >     const isToday = (dStr === moment().format('YYYY-MM-DD'));
 > >     const isWeekend = (mDate.day() === 0 || mDate.day() === 6);
 > > 
-> >     const dayFiles = allLogs.filter(p => p.file.name.includes(dStr));
-> >     const fitLog = dayFiles.find(p => p['fitness-am'] !== undefined || p['fitness-pm'] !== undefined);
-> >     const fitTotal = (fitLog ? (Number(fitLog['fitness-am']) || 0) + (Number(fitLog['fitness-pm']) || 0) : 0);
+> >     const dayFiles = allLogs.filter(p =>
+> >         p.file.name.includes(dStr) ||
+> >         String(p.cal_date || "").substring(0, 10) === dStr ||
+> >         String(p.rev_end || "").substring(0, 10) === dStr
+> >     );
+> >     const fitLog = dayFiles.find(p => p.fitness_am !== undefined || p.fitness_pm !== undefined);
+> >     const fitTotal = (fitLog ? (Number(fitLog.fitness_am) || 0) + (Number(fitLog.fitness_pm) || 0) : 0);
 > >     const energy = dayFiles.find(p => p.energy)?.energy || null;
 > >     const tasks = dayFiles.array().reduce((acc, p) => acc + (p.file.tasks ? p.file.tasks.where(t => !t.completed).length : 0), 0);
 > > 
-> >     dayData.push({ dStr, mDate });
+> >     const files = {};
+> >     Object.keys(config).forEach(type => files[type] = dayFiles.find(p => matchesType(p, type, dStr)));
+> >     dayData.push({ dStr, mDate, files });
 > > 
 > >     // 🎨 MULTI-FADE LOGIK
 > >     let gradients = [];
-> >     const hasJou = dayFiles.find(p => p.file.name.includes(config.jou.suffix));
-> >     const hasLog = dayFiles.find(p => p.file.name.includes(config.log.suffix));
-> >     const hasStudy = dayFiles.find(p => p.file.name.includes(config.study.suffix));
+> >     const hasJou = files.jou;
+> >     const hasLog = files.log;
+> >     const hasStudy = files.study;
 > > 
 > >     if (hasJou) gradients.push(`linear-gradient(90deg, ${config.jou.color}25 0%, transparent 50%)`);
 > >     if (hasLog) gradients.push(`linear-gradient(180deg, ${config.log.color}25 0%, transparent 50%)`);
@@ -142,7 +163,7 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > >     // BLUMEN (🌷🌻🌼)
 > >     gridHTML += `<div style="display: flex; justify-content: space-around; margin: 4px 0 10px 0;">`;
 > >     ['jou', 'log', 'study'].forEach(k => {
-> >         const ex = dayFiles.find(p => p.file.name.toLowerCase().includes(config[k].suffix));
+> >         const ex = files[k];
 > >         const style = ex ? `opacity: 1; filter: drop-shadow(0 0 5px ${config[k].color}); transform: scale(1.1);` : `opacity: 0.1; filter: grayscale(1);`;
 > >         gridHTML += `<span class="${k}-btn" data-idx="${dayData.length-1}" style="${style} font-size: 1.5em; cursor: pointer;">${config[k].icon}</span>`;
 > >     });
@@ -151,7 +172,7 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > >     // PROJEKTE (🧩📜🛰️)
 > >     gridHTML += `<div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 6px;">`;
 > >     ['prolog', 'proto', 'rev'].forEach(k => {
-> >         const ex = dayFiles.find(p => p.file.name.toLowerCase().includes(config[k].suffix));
+> >         const ex = files[k];
 > >         const style = ex ? `opacity: 1; filter: drop-shadow(0 0 3px ${config[k].color});` : `opacity: 0.15; filter: grayscale(1);`;
 > >         gridHTML += `<span class="${k}-btn" data-idx="${dayData.length-1}" style="${style} font-size: 1.15em; cursor: pointer;">${config[k].icon}</span>`;
 > >     });
@@ -174,25 +195,50 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > > 
 > > // 4. KLICK-LOGIK
 > > const handleBtnClick = async (type, idx) => {
-> >     const data = dayData[idx];
-> >     const cfg = config[type];
-> >     const folderPath = `${cfg.folder}/${data.mDate.format('YYYY')}/${data.mDate.format('MM')}`;
-> >     const fullPath = `${folderPath}/${data.dStr} ${cfg.suffix}.md`;
+> >     if (window._nexusCalendarRunning) return;
+> >     window._nexusCalendarRunning = true;
 > > 
-> >     let file = app.vault.getAbstractFileByPath(fullPath);
-> >     if (!file) {
-> >         let current = '';
-> >         for (const seg of folderPath.split('/')) {
-> >             current = current === '' ? seg : `${current}/${seg}`;
-> >             if (!app.vault.getAbstractFileByPath(current)) await app.vault.createFolder(current);
-> >         }
-> >         file = await app.vault.create(fullPath, '');
-> >         await new Promise(r => setTimeout(r, 250)); 
+> >     try {
+> >     const data = dayData[idx];
+> >     const existing = data.files[type];
+> >     if (existing) {
+> >         const file = app.vault.getAbstractFileByPath(existing.file.path);
+> >         if (file) await app.workspace.getLeaf('tab').openFile(file);
+> >         return;
 > >     }
-> >     await app.workspace.getLeaf('tab').openFile(file);
-> >     const templater = app.plugins.plugins['templater-obsidian'];
-> >     const tFile = app.vault.getAbstractFileByPath(cfg.template + '.md');
-> >     if (tFile && templater && file.stat.size === 0) await templater.templater.append_template_to_active_file(tFile);
+> > 
+> >     const plugin = app.plugins.plugins['templater-obsidian'];
+> >     const routerFile = app.vault.getAbstractFileByPath(routerPath);
+> >     const inbox = app.vault.getAbstractFileByPath('0_Inbox');
+> >     if (!plugin || !routerFile || !inbox) {
+> >         new Notice('Calendar UI: Templater, Router oder 0_Inbox fehlt.');
+> >         return;
+> >     }
+> > 
+> >     const vars = plugin.templater.variables || (plugin.templater.variables = {});
+> >     ['preSelectedSub','customPath','displayTitle','logConnect','finalTitle','targetFolder','revSuffix','revStart','revEnd','revModule','energy']
+> >         .forEach(key => delete vars[key]);
+> >     vars.targetDate = data.dStr;
+> >     vars.activeTrigger = config[type].trigger;
+> >     vars.title = '';
+> > 
+> >     try {
+> >         await plugin.templater.create_new_note_from_template(
+> >             routerFile,
+> >             inbox,
+> >             `${data.dStr} ${config[type].trigger}`,
+> >             true
+> >         );
+> >     } finally {
+> >         ['targetDate','activeTrigger','title','preSelectedSub','customPath','displayTitle','logConnect','finalTitle','targetFolder','revSuffix','revStart','revEnd','revModule']
+> >             .forEach(key => delete vars[key]);
+> >     }
+> >     } catch (error) {
+> >         console.error('Calendar UI Error:', error);
+> >         new Notice('Calendar UI: Erstellung fehlgeschlagen. Details stehen in der Konsole.');
+> >     } finally {
+> >         window._nexusCalendarRunning = false;
+> >     }
 > > };
 > > 
 > > // Event-Binding

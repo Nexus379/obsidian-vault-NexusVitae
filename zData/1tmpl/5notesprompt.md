@@ -52,12 +52,44 @@ if (pID) {
 const nOptions = ["🍂 1_Fleeting", "📘 2_Literature", "📜 3_Permanent", "🗃️ 4_Atomic...", "🌳 5_Evergreen"];
 const nVals = ["1fleet", "2lit", "3perma", "atomic_sub", "5ever"];
 const nFolders = ["1_Fleeting", "2_Literature", "3_Permanent", "4_Atomic", "5_Evergreen"];
+const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
+const noteTriggerMap = {
+    fleet: "1fleet",
+    fleeting: "1fleet",
+    lit: "2lit",
+    literature: "2lit",
+    perma: "3perma",
+    permanent: "3perma",
+    atomic: "4atomic",
+    nutri: "4atomic_ingredients",
+    nutrition: "4atomic_ingredients",
+    anki: "4atomic_anki",
+    ankicloze: "4atomic_ankicloze",
+    ever: "5ever",
+    evergreen: "5ever"
+};
 
-let nIdx = await tp.system.suggester(nOptions, Array.from(nOptions.keys()));
-if (nIdx === null) return;
+let nChoice = noteTriggerMap[originTrigger] || "";
+let targetFolder = "";
 
-let nChoice = nVals[nIdx];
-let targetFolder = `5_Notes/${nFolders[nIdx]}`;
+if (!nChoice) {
+    const nIdx = await tp.system.suggester(nOptions, Array.from(nOptions.keys()));
+    if (nIdx === null) return;
+    nChoice = nVals[nIdx];
+    targetFolder = `5_Notes/${nFolders[nIdx]}`;
+} else {
+    const directFolders = {
+        "1fleet": "1_Fleeting",
+        "2lit": "2_Literature",
+        "3perma": "3_Permanent",
+        "4atomic": "4_Atomic",
+        "4atomic_ingredients": "4_Atomic/Nutrition/Ingredients",
+        "4atomic_anki": "4_Atomic/anki",
+        "4atomic_ankicloze": "4_Atomic/anki",
+        "5ever": "5_Evergreen"
+    };
+    targetFolder = `5_Notes/${directFolders[nChoice]}`;
+}
 
 if (nChoice === "atomic_sub") {
     const aOptions = ["🗃️ Standard Atomic", "⚛️ Nutrition", "🎴 Anki-Basic", "🧠 Anki-Cloze"];

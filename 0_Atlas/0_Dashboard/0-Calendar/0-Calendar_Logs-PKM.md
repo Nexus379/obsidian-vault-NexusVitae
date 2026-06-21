@@ -104,7 +104,8 @@ cssclasses:
 > > ```dataviewjs
 > > dv.table(
 > >     ["Log", "Fokus & Themen"],
-> >     dv.pages('"0_Calendar/3_PKM"')
+> >     dv.pages('"0_Calendar/1_Logs"')
+> >         .where(p => p.file.name.toLowerCase().includes(" pkm"))
 > >         .sort(p => p.file.ctime, 'desc')
 > >         .limit(10)
 > >         .map(p => {

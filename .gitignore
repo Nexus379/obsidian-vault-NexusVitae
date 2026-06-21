@@ -4,9 +4,7 @@
 .obsidian/indexedDB/
 
 # Workspace & UI State (Damit GitHub nicht bei jedem Klick nervt)
-.obsidian/workspace
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+
 
 # System-Müll
 .trash/

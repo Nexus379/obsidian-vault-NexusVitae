@@ -12,9 +12,26 @@ const areaTemplates = ["1selfcare", "2relation", "3mind", "4organize", "5creativ
 // 🔱 2. NAVIGATION & ESC-SAFETY
 let aIdx = -1;
 const preSub = tp.variables.preSelectedSub || "";
+const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
+const areaTriggerMap = {
+    selfcare: 0,
+    relation: 1,
+    relationship: 1,
+    person: 1,
+    mind: 2,
+    organize: 3,
+    creativity: 4,
+    activity: 5,
+    entertain: 6,
+    entertainment: 6
+};
 
 if (preSub) {
     aIdx = areaFolders.findIndex(f => preSub.includes(f));
+}
+
+if (aIdx === -1 && areaTriggerMap[originTrigger] !== undefined) {
+    aIdx = areaTriggerMap[originTrigger];
 }
 
 if (aIdx === -1) {

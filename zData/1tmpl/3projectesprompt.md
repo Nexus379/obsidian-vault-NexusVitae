@@ -10,10 +10,36 @@ const pStyleVal  = ["1prodo", "2progo", "3prostudy", "4promeet", "5probuy", "6pr
 // 🔱 2. NAVIGATION & ESC-SAFETY
 let pStatus = null;
 const preSub = tp.variables.preSelectedSub || "";
+const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
+const statusTriggerMap = {
+    active: "1active",
+    passive: "2passive",
+    idea: "3idea",
+    recurring: "0recurring"
+};
+const styleTriggerMap = {
+    do: "1prodo", prodo: "1prodo",
+    go: "2progo", progo: "2progo",
+    study: "3prostudy", prostudy: "3prostudy",
+    meet: "4promeet", promeet: "4promeet",
+    buy: "5probuy", probuy: "5probuy",
+    pay: "6propay", propay: "6propay",
+    cook: "7procook", procook: "7procook",
+    craft: "8procraft", procraft: "8procraft",
+    get: "9proget", proget: "9proget"
+};
 
 if (preSub) {
     const normalizedPreSub = preSub.toLowerCase().replace(/[_\s-]/g, "");
     pStatus = pStatusVal.find(v => normalizedPreSub.includes(v));
+}
+
+if (!pStatus && statusTriggerMap[originTrigger]) {
+    pStatus = statusTriggerMap[originTrigger];
+}
+
+if (!pStatus && styleTriggerMap[originTrigger]) {
+    pStatus = "1active";
 }
 
 if (!pStatus) {
@@ -25,7 +51,7 @@ if (!pStatus) {
     return; 
 }
 
-let style = await tp.system.suggester(pStyleOpt, pStyleVal) || "1prodo";
+let style = styleTriggerMap[originTrigger] || await tp.system.suggester(pStyleOpt, pStyleVal) || "1prodo";
 
 // 🔱 3. DISCIPLINE ENGINE
 if (typeof tp.user.disciplineEngine === "function") {

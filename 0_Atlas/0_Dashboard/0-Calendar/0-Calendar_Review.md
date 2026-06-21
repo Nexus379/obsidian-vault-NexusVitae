@@ -19,9 +19,11 @@ cssclasses:
 > >      chartContainer.style.width = "300px";
 > >      chartContainer.style.margin = "0 auto";
 > >
-> >      const dailies = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.archtype.includes("daily") || (!p.archtype.includes("weekly") && !p.archtype.includes("monthly"))).length;
+> >      const allReviews = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true);
+> >      const reviewType = p => String(p.archtype || "");
+> >      const dailies = allReviews.where(p => reviewType(p).includes("daily") || (!reviewType(p).includes("weekly") && !reviewType(p).includes("monthly") && !reviewType(p).includes("quarterly") && !reviewType(p).includes("halfyear") && !reviewType(p).includes("yearly"))).length;
 > >      const weeklies = dv.pages('#0cal/1review/weekly AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length;
-> >      const strategic = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.archtype.includes("monthly") || p.archtype.includes("quarterly") || p.archtype.includes("yearly")).length;
+> >      const strategic = allReviews.where(p => reviewType(p).includes("monthly") || reviewType(p).includes("quarterly") || reviewType(p).includes("halfyear") || reviewType(p).includes("yearly")).length;
 > >
 > >      const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
 > >      
@@ -136,7 +138,10 @@ cssclasses:
 > > [!pink] **Dailies (7D)**
 > > ```dataviewjs
 > > {
-> >     const pages = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => !p.file.path.includes("Weekly") && !p.file.path.includes("Monthly")).sort(p => p.cal_date, "desc").limit(7);
+> >     const pages = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => {
+> >         const type = String(p.archtype || "");
+> >         return type.includes("daily") || (!type.includes("weekly") && !type.includes("monthly") && !type.includes("quarterly") && !type.includes("halfyear") && !type.includes("yearly"));
+> >     }).sort(p => p.cal_date, "desc").limit(7);
 > >     if(pages.length > 0) {
 > >         dv.list(pages.map(p => `[[${p.file.path}|📅 ${p.file.name.split(' ')[0]}]] (Mood: ${p.mood_plm_revD || "?"})`));
 > >     } else {

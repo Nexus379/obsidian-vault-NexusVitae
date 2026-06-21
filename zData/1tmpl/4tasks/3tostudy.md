@@ -70,7 +70,7 @@ archtype:
 status: "<%- (studyType === 'spaced') ? 'review' : '1active' %>"
 priority:
   - "1"
-persona:
+persona: "<%- persona %>"
 due: <%- today %>
 space_lvl: 0
 space_rank: "Ground Crew (Sprout)"

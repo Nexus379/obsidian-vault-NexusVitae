@@ -8,12 +8,12 @@ if (window.nexusOffset === undefined) window.nexusOffset = 0;
 
 const allLogs = dv.pages('"0_Calendar"');
 const config = {
-    jou: { suffix: "plm", folder: "0_Calendar/1_PLM", template: "zData/1temp/0cal/dailyplm", icon: "🌷", color: "#ff79c6" },
-    log: { suffix: "ppm", folder: "0_Calendar/2_PPM", template: "zData/1temp/0cal/dailyppm", icon: "🌻", color: "#f1fa8c" },
-    study: { suffix: "pkm", folder: "0_Calendar/3_PKM", template: "zData/1temp/0cal/dailypkm", icon: "🌼", color: "#bd93f9" },
-    prolog: { suffix: "prjlog", folder: "0_Calendar/4_Projectlog", template: "zData/1temp/0cal/projectlog", icon: "🧩", color: "#ffb86c" },
-    proto: { suffix: "prtcl", folder: "0_Calendar/5_Protocol", template: "zData/1temp/0cal/protocol", icon: "📜", color: "#8be9fd" },
-    rev: { suffix: "rev", folder: "0_Calendar/6_Review", template: "zData/1temp/0cal/revweekly", icon: "🛰️", color: "#50fa7b" }
+    jou: { suffix: "plm", folder: "0_Calendar/1_Logs", template: "zData/1temp/0cal/dailyplm", icon: "🌷", color: "#ff79c6" },
+    log: { suffix: "ppm", folder: "0_Calendar/1_Logs", template: "zData/1temp/0cal/dailyppm", icon: "🌻", color: "#f1fa8c" },
+    study: { suffix: "pkm", folder: "0_Calendar/1_Logs", template: "zData/1temp/0cal/dailypkm", icon: "🌼", color: "#bd93f9" },
+    prolog: { suffix: "prjlog", folder: "0_Calendar/2_Projectlogs", template: "zData/1temp/0cal/projectlog", icon: "🧩", color: "#ffb86c" },
+    proto: { suffix: "prtcl", folder: "0_Calendar/3_Protocols", template: "zData/1temp/0cal/protocol", icon: "📜", color: "#8be9fd" },
+    rev: { suffix: "rev", folder: "0_Calendar/4_Reviews", template: "zData/1temp/0cal/revweekly", icon: "🛰️", color: "#50fa7b" }
 };
 
 // 2. NAVIGATION UI
@@ -133,8 +133,8 @@ types.forEach(type => {
 
 
 
-**Selfcare:** [[0_Calendar/1_PLM/2026/03/2026-03-14 plm|🌷 Go to today's Journal (PLM)]]
-**Knowledge:** [[0_Calendar/3_PKM/2026/03/2026-03-14 pkm|🌼 Go to today's Study-Log (PKM)]]
+**Selfcare:** [[0_Calendar/1_Logs/2026/03/2026-03-14 plm|🌷 Go to today's Journal (PLM)]]
+**Knowledge:** [[0_Calendar/1_Logs/2026/03/2026-03-14 pkm|🌼 Go to today's Study-Log (PKM)]]
 
 ---
 

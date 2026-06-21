@@ -22,7 +22,11 @@ let selStat = "1_Active"; // Standard-Fallback
 
 // FALL A: DER ROUTER HAT SCHON EIN PROJEKT ÜBERGEBEN
 if (displayTitle && displayTitle !== "Unlinked" && displayTitle !== "") {
-    const existingProj = dv ? dv.page(`"3_Projects" and "${displayTitle}"`) : null;
+    const existingProj = dv
+        ? dv.pages('"3_Projects"')
+            .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/") && p.file.name === displayTitle)
+            .first()
+        : null;
     if (existingProj) {
         let match = existingProj.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
         selStat = match ? match[1] : "1_Active";
@@ -118,7 +122,8 @@ let targetFolder = "";
 // WEICHE: Ist es ein echtes Projekt oder nur ein allgemeines Log ("General")?
 if (displayTitle === "General" || displayTitle === "Unlinked") {
     const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
-    targetFolder = `${baseCal}/4_Projectlog/${yy}/${displayTitle}/${mm}`;
+    // 🎯 KORRIGIERT AUF NEUEN ORDNER:
+    targetFolder = `${baseCal}/2_Projectlogs/${yy}/${displayTitle}/${mm}`;
 } else {
     targetFolder = `3_Projects/${selStat}/${displayTitle}/Logs/${yy}/${mm}`;
 }
@@ -156,7 +161,7 @@ archtype:
   - "<%- tp.variables.ARCH?.c?.tag || '#0cal' %>/4projectlog"
 persona: "<%- persona %>"
 discipline: "<%- discTag %>"
-sci: <%- Array.isArray(sciTag) ? sciTag.join(", ") : sciTag %>
+sci: <%- JSON.stringify(Array.isArray(sciTag) ? sciTag : [sciTag]) %>
 focus_LOG: "<%- focus_LOG %>"
 cal0:
 area2: "<%- areaTag %>"

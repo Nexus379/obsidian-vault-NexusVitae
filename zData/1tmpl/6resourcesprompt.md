@@ -33,9 +33,33 @@ const resources = [
 
 let nIdx = null;
 const preSub = tp.variables.preSelectedSub || "";
+const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
+const resourceTriggerMap = {
+    ai: "sourceai",
+    article: "sourcearticle",
+    book: "sourcebook",
+    class: "sourceclass",
+    course: "sourcecourse",
+    film: "sourcefilm",
+    game: "sourcegame",
+    guide: "sourceguide",
+    museum: "sourcemuseum",
+    music: "sourcemusic",
+    paper: "sourcepaper",
+    recipe: "sourcerecipe",
+    reference: "sourcereference",
+    serie: "sourceserie",
+    series: "sourceserie",
+    video: "sourcevideo",
+    boardgame: "sourceboardgame"
+};
 
 if (preSub) {
     nIdx = resources.findIndex(r => preSub.includes(r.folder));
+}
+
+if ((nIdx === null || nIdx === -1) && resourceTriggerMap[originTrigger]) {
+    nIdx = resources.findIndex(r => r.val === resourceTriggerMap[originTrigger]);
 }
 
 if (nIdx === null || nIdx === -1) {

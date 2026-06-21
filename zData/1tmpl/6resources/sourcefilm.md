@@ -24,7 +24,7 @@ if (style === "custom") style = await tp.system.prompt("Style Name?");
 if (!style) style = "Live-Action";
 
 // 🔱 3. HIERARCHISCHER FOLDER-BOT (Cover/Film/Stil)
-const coverFolder = `x-Attachment/Cover/Film/${style}`;
+const coverFolder = `xAttachment/Cover/Film/${style}`;
 let current = "";
 for (const seg of coverFolder.split('/')) {
     current = current === "" ? seg : `${current}/${seg}`;
@@ -49,7 +49,7 @@ let genre = await tp.system.suggester(gOptions, gOptions);
 if (genre === "[+] Custom...") genre = await tp.system.prompt("Genre?");
 
 // 🔱 6. SMART LOGIC (Director & Author Sort)
-let rawDir = await tp.system.prompt("🎬 Director / Regisseur?", "Unknown");
+let rawDir = await tp.system.prompt("🎬 Director / Regisseur?", "Unknown") || "Unknown";
 let dirSort = rawDir;
 if (rawDir.includes(" ")) {
     let parts = rawDir.trim().split(/\s+/);
@@ -58,7 +58,7 @@ if (rawDir.includes(" ")) {
     dirSort = lastName + ", " + firstName;
 }
 
-let rawCreator = await tp.system.prompt("Author?", "Unknown");
+let rawCreator = await tp.system.prompt("Author?", "Unknown") || "Unknown";
 let creatorSort = rawCreator;
 if (rawCreator.includes(" ")) {
     let parts = rawCreator.trim().split(/\s+/);
@@ -68,9 +68,9 @@ if (rawCreator.includes(" ")) {
 }
 
 // 🔱 7. ADDITIONAL METADATA
-let company = await tp.system.prompt("🏢 Production Company / Studio?", "Unknown");
-let cast = await tp.system.prompt("🎭 Actors / Cast (comma separated)?", "Unknown");
-let vol = await tp.system.prompt("🔢 Volume / Part?", "1");
+let company = await tp.system.prompt("🏢 Production Company / Studio?", "Unknown") || "Unknown";
+let cast = await tp.system.prompt("🎭 Actors / Cast (comma separated)?", "Unknown") || "Unknown";
+let vol = await tp.system.prompt("🔢 Volume / Part?", "1") || "1";
 
 let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(film-|r-)/i, "").trim();
 

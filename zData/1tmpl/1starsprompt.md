@@ -19,9 +19,20 @@ const sTemps   = ["1purpose", "2vision", "3goals"];
 
 let sIdx = -1;
 const preSub = tp.variables.preSelectedSub || "";
+const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
+const starTriggerMap = {
+    purpose: 0,
+    vision: 1,
+    goal: 2,
+    goals: 2
+};
 
 if (preSub) {
     sIdx = sFolders.findIndex(f => preSub.toLowerCase().includes(f.toLowerCase()));
+}
+
+if (sIdx === -1 && starTriggerMap[originTrigger] !== undefined) {
+    sIdx = starTriggerMap[originTrigger];
 }
 
 if (sIdx === -1) {

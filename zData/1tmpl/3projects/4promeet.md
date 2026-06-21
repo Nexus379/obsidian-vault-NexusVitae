@@ -24,6 +24,7 @@ if (tp.file.title !== title) {
 // 🔱 3. MEETING SPECIFICS
 let attendees = await tp.system.prompt("👥 Attendees?", "Self");
 let location  = await tp.system.prompt("📍 Location / Link?", "Discord/Office");
+let deadline = await tp.system.prompt("📅 Meeting Date?", tp.date.now("YYYY-MM-DD")) || tp.date.now("YYYY-MM-DD");
 
 // 🔱 4. CLEANING
 let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(4promeet-|p-|3project-)/i, "").trim();
@@ -44,7 +45,7 @@ priority:
   - "2"
 science: ["<%- sci %>"]
 discipline: ["<%- disc %>"]
-due: <%- tp.date.now("YYYY-MM-DD") %>
+due: <%- deadline %>
 attendees: "<%- attendees %>"
 location: "<%- location %>"
 cal0:
@@ -69,9 +70,9 @@ review:
 > > > [!blank|wide-5]
 > > > **Parent Goal/Star:** <%- pLink %>
 > > > 
-> > > **Participants:** `<%- attendees %>` | **Location:** `<%- location %>
+> > > **Participants:** `<%- attendees %>` | **Location:** `<%- location %>`
 > > > 
-> > > **Date:** `<%- tp.date.now("YYYY-MM-DD") %>
+> > > **Date:** `<%- deadline %>`
 > > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
 > > 
 > > >[!blank|wide-0]

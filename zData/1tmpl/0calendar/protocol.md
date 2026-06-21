@@ -67,7 +67,9 @@ const areaTag = axisMap[pArea] ? `${areaBase}/${axisMap[pArea]}` : `${areaBase}/
 
 // 🔱 5. PATH LOGISTICS
 const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
-const targetFolder = `${baseCal}/5_Protocol/${yy}/${folderContext}`;
+
+// 🎯 KORRIGIERT AUF NEUEN ORDNER:
+const targetFolder = `${baseCal}/3_Protocols/${yy}/${folderContext}`;
 
 let currentPath = "";
 for (const seg of targetFolder.split('/')) {
@@ -93,7 +95,7 @@ archtype:
   - "<%- tp.variables.ARCH?.c?.tag || '#0cal' %>/5protocol"
 persona: "<%- persona %>"
 discipline: "<%- discTag %>"
-sci: <%- Array.isArray(sciTag) ? sciTag.join(", ") : sciTag %>
+sci: <%- JSON.stringify(Array.isArray(sciTag) ? sciTag : [sciTag]) %>
 focusD_prot: "<%- focusD_prot %>"
 cal0: ["<%- logConnect %>"]
 area2: "<%- areaTag %>"

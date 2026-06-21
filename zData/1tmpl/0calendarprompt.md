@@ -24,15 +24,15 @@ if (!SYS) {
 
 // 🔱 3. CALENDAR CONFIGURATION
 tp.variables.ARCHTYPES_CAL = [
-    { id: "plm",  label: "Journal",    icon: "🌷", subfolder: "1_PLM",        tmpl: "dailyplm" },
-    { id: "ppm",  label: "Log",        icon: "🌻", subfolder: "2_PPM",        tmpl: "dailyppm" },
-    { id: "pkm",  label: "Studylog",   icon: "🌼", subfolder: "3_PKM",        tmpl: "dailypkm" },
-    { id: "proj", label: "Projectlog", icon: "🧩", subfolder: "4_Projectlog", tmpl: "projectlog", connectTo: "p" },
-    { id: "prot", label: "Protocol",   icon: "📜", subfolder: "5_Protocol",   tmpl: "protocol",   connectTo: "c" },
-    { id: "rev",  label: "Review",     icon: "🛰️", subfolder: "6_Review",   tmpl: "rev" }
+    { id: "plm",  label: "Journal",    icon: "🌷", subfolder: "1_Logs",        tmpl: "dailyplm" },
+    { id: "ppm",  label: "Log",        icon: "🌻", subfolder: "1_Logs",        tmpl: "dailyppm" },
+    { id: "pkm",  label: "Studylog",   icon: "🌼", subfolder: "1_Logs",        tmpl: "dailypkm" },
+    { id: "proj", label: "Projectlog", icon: "🧩", subfolder: "2_Projectlogs", tmpl: "projectlog", connectTo: "p" },
+    { id: "prot", label: "Protocol",   icon: "📜", subfolder: "3_Protocols",   tmpl: "protocol",   connectTo: "c" },
+    { id: "rev",  label: "Review",     icon: "🛰️", subfolder: "4_Reviews",     tmpl: "rev" }
 ];
 const ARCHTYPES_CAL = tp.variables.ARCHTYPES_CAL;
-const reviewBase = "6_Review";
+const reviewBase = "4_Reviews";
 
 const calLabel     = ARCHTYPES_CAL.map(m => `${m.icon || ""} ${m.label}`.trim());
 const calSubfolder = ARCHTYPES_CAL.map(m => m.subfolder);
@@ -74,7 +74,10 @@ tp.variables.targetDate = dateStr;
 let cIdx = null;
 const preSub = tp.variables.preSelectedSub || "";
 if (preSub) {
-    cIdx = calSubfolder.findIndex(v => preSub.toLowerCase().includes(v.toLowerCase()));
+    const matchingIndexes = calSubfolder
+        .map((folder, index) => preSub.toLowerCase().includes(folder.toLowerCase()) ? index : -1)
+        .filter(index => index !== -1);
+    if (matchingIndexes.length === 1) cIdx = matchingIndexes[0];
 }
 if (cIdx === null || cIdx === -1) {
     const triggerMap = { plm:0, ppm:1, pkm:2, projectlog:3, proj:3, prjlog:3, protocol:4, prot:4, prtcl:4, rev:5 };
@@ -104,7 +107,9 @@ const [y, m] = dateStr.split("-");
 
 // --- CASE A: PROJECTLOG (cIdx 3) ---
 if (cIdx === 3 && dv && ARCH.p) {
-    const projects = dv.pages(`"${ARCH.p.folder}"`).sort(p => p.file.mtime, "desc").limit(15).file.path.array();
+    const projects = dv.pages(`"${ARCH.p.folder}"`)
+        .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/"))
+        .sort(p => p.file.mtime, "desc").limit(15).file.path.array();
     const labels   = projects.map(p => "🧩 " + p.split("/").pop().replace(".md",""));
     const pick = await tp.system.suggester(["➕ Manual Entry", ...labels], ["MAN", ...projects], false, "🔗 Link to Project?");
 
@@ -179,6 +184,8 @@ if (cIdx === 5) {
         tp.variables.displayTitle = targetMoment.format("MMMM");
     } else if (reviewPhase === "revQ") {
         tp.variables.displayTitle = `Q${targetMoment.format("Q")}`;
+    } else if (reviewPhase === "revH") {
+        tp.variables.displayTitle = `H${targetMoment.month() < 6 ? "1" : "2"}`;
     } else if (reviewPhase === "revY") {
         tp.variables.displayTitle = `${tp.variables.year}`;
     }
@@ -187,7 +194,9 @@ if (cIdx === 5) {
     
     // Select Project if Project Review
     if (modChoice.id === "proj" && dv && ARCH.p) {
-        const projects = dv.pages(`"${ARCH.p.folder}"`).sort(p => p.file.mtime, "desc").limit(15).file.path.array();
+        const projects = dv.pages(`"${ARCH.p.folder}"`)
+            .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/"))
+            .sort(p => p.file.mtime, "desc").limit(15).file.path.array();
         const labels   = projects.map(p => "🧩 " + p.split("/").pop().replace(".md",""));
         const pick     = await tp.system.suggester(["➕ Manual Entry", ...labels], ["MAN", ...projects], false, "🔗 Select Project?");
         const projName = (pick && pick !== "MAN") ? pick.split("/").pop().replace(".md","") : await tp.system.prompt("Project Name?");
@@ -199,15 +208,17 @@ if (cIdx === 5) {
     
     const revFolderPath = `${ARCH.c.folder}/${reviewBase}/${modSubPath}`;
     let lastDate = "";
-    const folderObj = app.vault.getAbstractFileByPath(revFolderPath);
-    if (folderObj && folderObj.children) {
-        const filterStr = `${modChoice.id}_${reviewPhase}`;
-        const lastFiles = folderObj.children.filter(f => f.name.includes(filterStr)).sort((a,b)=>b.name.localeCompare(a.name));
-        if (lastFiles.length > 0) lastDate = lastFiles[0].name.substring(0,10);
+    const filterStr = (modChoice.id === "master" && reviewPhase === "revD") ? " revD" : `${modChoice.id}_${reviewPhase}`;
+    const lastFiles = app.vault.getMarkdownFiles()
+        .filter(f => f.path.startsWith(`${revFolderPath}/`) && f.name.includes(filterStr))
+        .sort((a,b) => b.name.localeCompare(a.name));
+    if (lastFiles.length > 0) {
+        const dateMatch = lastFiles[0].name.match(/^\d{4}-\d{2}-\d{2}/);
+        if (dateMatch) lastDate = dateMatch[0];
     }
     if (!lastDate) {
         const fallbacks = { revD:1, revW:7, revM:30, revQ:90, revH:180, revY:365 };
-        lastDate = tp.date.now("YYYY-MM-DD", -fallbacks[reviewPhase]);
+        lastDate = targetMoment.clone().subtract(fallbacks[reviewPhase], "days").format("YYYY-MM-DD");
     }
     tp.variables.revStart  = lastDate;
     tp.variables.revEnd    = dateStr;
@@ -228,7 +239,10 @@ if (cIdx === 5) {
 // 🔱 9. TITLE CLEANUP & STRUCTURE
 let cleanTitle = "";
 
-if (tp.variables.displayTitle !== undefined && tp.variables.displayTitle !== "") {
+if (cIdx === 5 && reviewPhase === "revD") {
+    cleanTitle = "";
+}
+else if (tp.variables.displayTitle !== undefined && tp.variables.displayTitle !== "") {
     cleanTitle = tp.variables.displayTitle;
 } 
 else if (tp.variables.title && !tp.variables.title.includes("Entry-")) {

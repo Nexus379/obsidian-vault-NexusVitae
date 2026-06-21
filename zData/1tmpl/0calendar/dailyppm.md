@@ -63,8 +63,8 @@ let aim3Focus = "";
 if (dv) {
     // Wir suchen in den entsprechenden Ordnern nach einer Datei, 
     // die mit dem Datum beginnt, egal was danach im Namen steht.
-    const plmPage = dv.pages(`"0_Calendar/1_PLM/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} plm`));
-    const pkmPage = dv.pages(`"0_Calendar/3_PKM/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} pkm`));
+    const plmPage = dv.pages(`"0_Calendar/1_Logs/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} plm`));
+    const pkmPage = dv.pages(`"0_Calendar/1_Logs/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} pkm`));
     
     aim1Focus = plmPage ? (plmPage.focusD_plm || "") : "";
     aim3Focus = pkmPage ? (pkmPage.focusD_pkm || "") : "";
@@ -76,14 +76,14 @@ let focusM_Date = dateStr; // Fallback auf heute
 
 if (dv) {
     // Suche alle PPMs im aktuellen Monatsordner
-    const monthlyLogs = dv.pages(`"0_Calendar/2_PPM/${year}/${month}"`)
+    const monthlyLogs = dv.pages(`"0_Calendar/1_Logs/${year}/${month}"`)
         .where(p => p.focusM_ppm && p.focusM_ppm !== "")
         .sort(p => p.file.name, "desc");
 
     if (monthlyLogs.length > 0) {
         const lastLog = monthlyLogs.first();
         focusM_ppm = lastLog.focusM_ppm;
-        focusM_Date = lastLog.focusMdate || lastLog["cal_date"] || dateStr;
+        focusM_Date = lastLog.focusM_start || lastLog["cal_date"] || dateStr;
     }
 }
 
@@ -97,7 +97,7 @@ let workTasks = [];
 if (dv) {
     const routinePage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
     if (routinePage) {
-        const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
+        const enginePath = "zData/2scripts/routineEngine.js";
         let engineData = {};
         try { 
             const eFile = app.vault.getAbstractFileByPath(enginePath);
@@ -145,11 +145,11 @@ tp.variables.maintask5 = uniqueWorkTasks[4] || "";
 tp.variables.maintask6 = uniqueWorkTasks[5] || "";
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
-const targetFolder = `0_Calendar/2_PPM/${y}/${m}`;
+const targetFolder = `0_Calendar/1_Logs/${y}/${m}`;
 const finalDest = `${targetFolder}/${finalTitle}.md`;
 
 // Monthly Focus Start (falls nicht gesetzt)
-const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : dateStr;
+const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : focusM_Date;
 
 // Falls die Datei noch nicht am richtigen Ort liegt (z.B. nach Alt+E in der Inbox)
 if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
@@ -187,10 +187,10 @@ focusM_ppm: "<%- focusM_ppm %>"
 focusM_start: "<%- focusStart %>"
 maintask1: "<%- tp.variables.maintask1 %>"
 maintask2: "<%- tp.variables.maintask2 %>"
-maintask3: ""
-maintask4: ""
-maintask5: ""
-maintask6: ""
+maintask3: "<%- tp.variables.maintask3 %>"
+maintask4: "<%- tp.variables.maintask4 %>"
+maintask5: "<%- tp.variables.maintask5 %>"
+maintask6: "<%- tp.variables.maintask6 %>"
 cal_date: <%- dateStr %>
 
 ---
@@ -204,8 +204,8 @@ cal_date: <%- dateStr %>
 // 🔱 3. DYNAMISCHE LINKS ZU DEN ANDEREN LOGS
 
 // Pfade zu den Schwester-Logs (Journal & Study)
-const todayPLM = `0_Calendar/1_PLM/${year}/${month}/${dateStr} plm`;
-const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
+const todayPLM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} plm`;
+const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 %>
 **Selfcare:** [[<%- todayPLM %>|🌷 Go to today's Journal (PLM)]]
 **Knowledge:** [[<%- todayPKM %>|🌼 Go to today's Study-Log (PKM)]]
@@ -219,7 +219,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > **Strategic Focus**
 > > > 
 > > > <small>Monthly Cycle:</small>
-> > > `INPUT[text:focusM_ppm]` `BUTTON[reset-focus]` <small style="opacity:0.5;">`$= const c = dv.current(); c.focusM_ppm ? Math.max(0, 30 - moment(String(c.cal_date)).diff(moment(String(c.focusM_start)), "days")) + "d left" : ""`</small>
+> > > `INPUT[text:focusM_ppm]` `BUTTON[reset-focus]` <small style="opacity:0.5;">`$= const c = dv.current(); (c.focusM_ppm && c.focusM_start) ? Math.max(0, 30 - moment(c.file.name.substring(0,10)).diff(moment(String(c.focusM_start).substring(0,10)), "days")) + "d left" : ""`</small>
 > > > 
 > > > ```dataviewjs
 > > > const curr = dv.current();
@@ -227,8 +227,8 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const [yy, mm] = logDate.split("-");
 > > > 
 > > > // Sucht gezielt nach "[Datum] plm" und "[Datum] pkm"
-> > > const plm = dv.pages(`"0_Calendar/1_PLM/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} plm`));
-> > > const pkm = dv.pages(`"0_Calendar/3_PKM/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} pkm`));
+> > > const plm = dv.pages(`"0_Calendar/1_Logs/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} plm`));
+> > > const pkm = dv.pages(`"0_Calendar/1_Logs/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} pkm`));
 > > > 
 > > > dv.paragraph(
 > > >     "<small>🌷 Aim 1: PLM (Selfcare)</small><br>**" + (plm?.focusD_plm || "...") + "**<br><br>" +
@@ -298,7 +298,8 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >    const items = [];
 > >    
 > >    // Logische Exklusion von archivierten, stornierten oder gelöschten Elementen
-> >    dv.pages('"4_Tasks"').where(p => {
+> >    dv.pages('!"zData" AND -"yArchive" AND -"0_Atlas"').where(p => {
+> >        if (!p.arch || !String(p.arch).includes("#4task")) return false;
 > >        const stat = String(p.status || "").toLowerCase();
 > >        if (stat.includes("archive") || stat.includes("archived") || stat.includes("canceled") || stat.includes("bin") || p.completed) return false;
 > >        return true;
@@ -485,121 +486,36 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 <%-* } %>
 
 ---
----
-## 🛒 Procurement & Supply
+
+## 🛒 Strategic Procurement & Supply
 
 > [!multi-column]
 >
-> > [!info|flat] 🧊 Nutrition Requirements (Batch Calculation)
-> > ```dataviewjs
-> > const planPath = "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md";
-> > const planPage = dv.page(planPath);
-> > const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
-> > let Nexus;
-> > try { Nexus = await (require(enginePath))(app); } catch(e) {}
-> > 
-> > if (!planPage) {
-> >     dv.paragraph("❌ _No meal plan found._");
-> > } else {
-> >     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-> >     const slots = ["brk", "ben", "snk", "eve"];
-> >     
-> >     // 🔱 THE SHOPPING DAY LOGIC (Look-Ahead)
-> >     const todayIdx = moment().day();
-> >     let lookAhead = (todayIdx === 1) ? 3 : (todayIdx === 4 ? 4 : 1);
-> >     let periodText = (todayIdx === 1) ? "Mon-Wed (3 Days)" : (todayIdx === 4 ? "Thu-Sun (4 Days)" : "Next 24h");
-> >     
-> >     let recipeCounts = {}; 
-> > 
-> >     // 1. Calculate Consumption Need for specific period
-> >     for (let i = 0; i < lookAhead; i++) {
-> >         const dayStr = days[(todayIdx + i) % 7];
-> >         for (let slot of slots) {
-> >             let meals = planPage[`${dayStr}_${slot}`];
-> >             if (!meals) continue;
-> >             let mealArray = Array.isArray(meals) ? meals : [meals];
-> >             for (let m of mealArray) {
-> >                 const cleanId = String(m).replace(/[\[\]"]/g, "").trim();
-> >                 recipeCounts[cleanId] = (recipeCounts[cleanId] || 0) + 1;
-> >             }
-> >         }
-> >     }
-> > 
-> >     let neededAtoms = {};
-> > 
-> >     // 2. Inventory & Batch Calculation
-> >     for (let [recipeName, neededServings] of Object.entries(recipeCounts)) {
-> >         const recipe = dv.page(recipeName);
-> >         if (!recipe) continue;
-> > 
-> >         let stored = Number(recipe.portions_stored) || 0;
-> >         let pDate = recipe.prep_date ? moment(String(recipe.prep_date)) : null;
-> >         let shelfLife = Number(recipe.prep_shelf_life) || 4; 
-> >         let isExpired = (stored > 0 && pDate && moment().diff(pDate, 'days') > shelfLife);
-> >         
-> >         if (isExpired) stored = 0; // Expired stock is ignored
-> > 
-> >         let deficit = neededServings - stored;
-> >         let rYield = Number(recipe.portions) || 1; 
-> > 
-> >         if (deficit > 0) {
-> >             let batchesToCook = Math.ceil(deficit / rYield);
-> >             for (let key in recipe) {
-> >                 if (key.startsWith("amt_")) {
-> >                     const atomId = key.replace("amt_", "");
-> >                     const amountPerBatch = Number(recipe[key]) || 0;
-> >                     neededAtoms[atomId] = (neededAtoms[atomId] || 0) + (amountPerBatch * batchesToCook);
-> >                 }
-> >             }
-> >         }
-> >     }
-> > 
-> >     // 3. UI Generation (Clean Design & English)
-> >     dv.paragraph(`<div style="font-size: 0.8em; opacity: 0.6; margin-bottom: 8px; text-transform: uppercase;">Scanning: <b>${periodText}</b></div>`);
-> >     
-> >     let html = `<div style="display: flex; flex-direction: column; gap: 6px;">`;
-> >     const sortedAtoms = Object.entries(neededAtoms).sort();
-> >     
-> >     if (sortedAtoms.length > 0) {
-> >         sortedAtoms.forEach(([id, amount]) => {
-> >             const item = Nexus ? Nexus.find(id) : null;
-> >             const label = item ? (item.label || id) : id.replace(/_/g, " ");
-> >             const icon = item ? (item.icon || "📦") : "📦";
-> >             const unit = item ? item.unit : "Stk";
-> >             const val = Math.round(amount * 10) / 10;
-> >             
-> >             html += `<div style="display: flex; justify-content: space-between; padding: 6px 10px; background: var(--background-secondary-alt); border-radius: 6px; border-left: 3px solid var(--interactive-accent); font-size: 0.9em;">
-> >                 <span>${icon} <b>${label}</b></span>
-> >                 <span style="opacity:0.8; font-family: monospace;">${val} ${unit}</span>
-> >             </div>`;
-> >         });
-> >     } else {
-> >         html += `<div style="padding: 10px; opacity: 0.6; text-align: center; background: var(--background-secondary); border-radius: 6px;">_Inventory stable. No batch ingredients needed._</div>`;
-> >     }
-> >     html += `</div>`;
-> >     dv.paragraph(html);
-> > }
-> > ```
-> > <br>[[2_Areas/4_Organize/Shopping_Hub|➡️ Open Central Procurement Hub]]
->
-> > [!todo|flat] 📝 Active Procurement (Manual)
-> > **Household & Quick Extras:**
-> > `INPUT[inlineListSuggester(optionQuery("")):shopping_extras]`
-> > <br>
+> > [!todo|flat] 💸 Horizon 0: To-Buy
 > > ```dataview
-> > TABLE WITHOUT ID 
-> >   text AS "Item", 
-> >   link(file.path, file.name) AS "Origin / Project"
+> > TABLE WITHOUT ID
+> >   file.link AS "Item",
+> >   due AS "Deadline",
+> >   parent AS "Project"
 > > FROM #4task/tobuy
 > > WHERE !completed
 > > SORT due ASC
 > > ```
-
+>
+> > [!money|flat] 💎 Horizon 1: Pro-Buy
+> > ```dataview
+> > TABLE WITHOUT ID
+> >   file.link AS "Acquisition",
+> >   amount AS "Budget",
+> >   payee AS "Contact"
+> > FROM #3project/probuy
+> > WHERE status = "1active"
+> > SORT due ASC
+> > ```
+>
+> [[2_Areas/4_Organize/Shopping_Hub|➡️ Open Central Procurement Hub]]
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
 
 `BUTTON[freezer]`
-
-
-

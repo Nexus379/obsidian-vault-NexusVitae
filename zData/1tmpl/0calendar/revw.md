@@ -2,32 +2,32 @@
 // 🔱 1. INITIALIZATION & CONTEXT
 const dv = app.plugins.plugins.dataview.api;
 const revModule = tp.variables.revModule || "master";
-const start = tp.variables.revStart; 
-const end = tp.variables.revEnd;
+const end = tp.variables.revEnd || tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
+const start = tp.variables.revStart || moment(end).subtract(7, "days").format("YYYY-MM-DD"); 
 const logConnect = tp.variables.logConnect || ""; 
 const displayTitle = tp.variables.displayTitle || "Weekly Review";
 
-const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
 const isMaster = (revModule === "master");
-const [yy, mm] = end.split("-");
 
-// 🔱 2. PATH & TITLE LOGIC
-const targetFolder = `${baseCal}/6_Review/Weekly/${yy}`;
-const finalTitle = `${end} revW - ${displayTitle}`; 
-const finalDest = `${targetFolder}/${finalTitle}.md`;
+// 🔱 2. PATH & TITLE LOGIC (Backsafe for direct template starts)
+if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
+    const yy = end.split("-")[0];
+    const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
+    const targetFolder = `${baseCal}/4_Reviews/Weekly/${yy}`;
+    const finalTitle = `${end} revW - ${displayTitle}`;
+    const finalDest = `${targetFolder}/${finalTitle}.md`;
 
-// Ensure folder structure
-let currentPath = "";
-for (const seg of targetFolder.split('/')) {
-    currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;
-    if (!app.vault.getAbstractFileByPath(currentPath)) await app.vault.createFolder(currentPath);
-}
+    let currentPath = "";
+    for (const seg of targetFolder.split('/')) {
+        currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;
+        if (!app.vault.getAbstractFileByPath(currentPath)) await app.vault.createFolder(currentPath);
+    }
 
-// Rename and move
-if (tp.file.title !== finalTitle) await tp.file.rename(finalTitle);
-if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
-    await new Promise(r => setTimeout(r, 200));
-    await tp.file.move(finalDest);
+    if (tp.file.title !== finalTitle) await tp.file.rename(finalTitle);
+    if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
+        await new Promise(r => setTimeout(r, 200));
+        await tp.file.move(finalDest);
+    }
 }
 
 tR += "---";
@@ -99,7 +99,7 @@ status: 1active
 >     colors: { plmPink: ["#f8bbd0", "#f48fb1", "#f06292", "#e91e63", "#c2185b"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date)) {
+> for (let page of dv.pages('#0cal/1plm').where(p => p.cal_date)) {
 >     calendarData.entries.push({
 >         date: page.cal_date,
 >         intensity: page.energy || 1,
@@ -112,7 +112,7 @@ status: 1active
 > [!multi-column]
 > > [!pink|wide-1] 📈 The Story (Daily Focus & Energy)
 > > ```dataviewjs
-> > const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").sort(p => p.cal_date, "asc");
+> > const p = dv.pages('#0cal/1plm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").sort(p => p.cal_date, "asc");
 > > let focusList = [];
 > > p.forEach(x => {
 > >     let dayName = moment(String(x.cal_date)).format("ddd");
@@ -124,10 +124,10 @@ status: 1active
 > > ```
 >
 > > [!abstract|wide-1] 🏃 Resonance (Averages & Sums)
-> > - **Weekly Avg Energy:** `$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
-> > - **Weekly Avg Mood:** `$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.mood.avg() * 10) / 10 || 0) + "** / 5")`
-> > - **Sleep Avg:** `$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
-> > - **Fitness Total:** `$= dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").fitness_revD.sum() || 0` min
+> > - **Weekly Avg Energy:** `$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
+> > - **Weekly Avg Mood:** `$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.mood.avg() * 10) / 10 || 0) + "** / 5")`
+> > - **Sleep Avg:** `$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
+> > - **Fitness Total:** `$= dv.pages('#0cal/1plm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.fitness_am) || 0) + (Number(p.fitness_pm) || 0), 0)` min
 
 ---
 <%* } %>
@@ -146,7 +146,7 @@ status: 1active
 >     colors: { ppmBlue: ["#bbdefb", "#90caf9", "#64b5f6", "#2196f3", "#1976d2"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date)) {
+> for (let page of dv.pages('#0cal/2ppm').where(p => p.cal_date)) {
 >     calendarData.entries.push({
 >         date: page.cal_date,
 >         intensity: page.energy || 1,
@@ -161,7 +161,7 @@ status: 1active
 >
 > > [!todo|wide-1] 🎯 The Story (Daily Strategy)
 > > ```dataviewjs
-> > const p = dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").sort(p => p.cal_date, "asc");
+> > const p = dv.pages('#0cal/2ppm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").sort(p => p.cal_date, "asc");
 > > let focusList = [];
 > > p.forEach(x => {
 > >     if(x.focusD_ppm && String(x.focusD_ppm).trim() !== "") {
@@ -176,7 +176,7 @@ status: 1active
 > > <small style="opacity:0.5; text-transform:uppercase;">Project Logs this week</small>
 > >
 > > ```dataviewjs
-> > const pr = dv.pages('"0_Calendar/4_Projectlog"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").sort(p => p.cal_date, "asc");
+> > const pr = dv.pages('#0cal/4projectlog').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").sort(p => p.cal_date, "asc");
 > > let pList = [];
 > > pr.forEach(x => {
 > >     if ("<%- revModule %>" !== "proj" || x.file.name.includes("<%- logConnect.replace(/[\[\]]/g, '') %>") || (x.file.outlinks && String(x.file.outlinks).includes("<%- logConnect.replace(/[\[\]]/g, '') %>"))) {
@@ -205,7 +205,7 @@ status: 1active
 > > <small style="opacity:0.5; text-transform:uppercase;">Protocols Created</small>
 > >
 > > ```dataviewjs
-> > const prots = dv.pages('"0_Calendar/5_Protocol"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
+> > const prots = dv.pages('#0cal/5protocol').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
 > > let pFiltered = prots;
 > > if ("<%- revModule %>" === "proj") {
 > >     const projName = "<%- logConnect.replace(/[\[\]]/g, '') %>";
@@ -228,10 +228,10 @@ status: 1active
 >     colors: { pkmOrange: ["#ffe0b2", "#ffcc80", "#ffb74d", "#ff9800", "#e65100"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/3_PKM"').where(p => p.cal_date)) {
+> for (let page of dv.pages('#0cal/3pkm').where(p => p.cal_date)) {
 >     calendarData.entries.push({
 >         date: page.cal_date,
->         intensity: page['brain-drain'] || 1, // Zieht den Brain-Drain Wert als Intensität!
+>         intensity: page['brain-drain'] || 1, 
 >         content: ""
 >     });
 > }
@@ -241,7 +241,7 @@ status: 1active
 > [!multi-column]
 > > [!info|wide-1] 🧠 The Story (Daily Knowledge)
 > > ```dataviewjs
-> > const p = dv.pages('"0_Calendar/3_PKM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").sort(p => p.cal_date, "asc");
+> > const p = dv.pages('#0cal/3pkm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").sort(p => p.cal_date, "asc");
 > > let focusList = [];
 > > p.forEach(x => {
 > >     if(x.focusD_pkm && String(x.focusD_pkm).trim() !== "") {
@@ -254,7 +254,7 @@ status: 1active
 > > ```
 > > <small style="opacity:0.5; text-transform:uppercase;">Total Time per Subject</small>
 > > ```dataviewjs
-> > const p = dv.pages('"0_Calendar/3_PKM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
+> > const p = dv.pages('#0cal/3pkm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
 > > const subjects = ["english", "german", "math", "latin", "physics", "biology", "chemistry", "history", "philosophy", "politics", "economics", "law", "psychology", "art", "music"];
 > > let totals = {};
 > > let grandTotal = 0;
@@ -274,7 +274,7 @@ status: 1active
 > > }
 > > if (output.length > 0) {
 > >     dv.list(output);
-> >     dv.paragraph(`> **Grand Total:** ${grandTotal} min`);
+> >     dv.paragraph("> **Grand Total:** " + grandTotal + " min");
 > > } else {
 > >     dv.paragraph("_No study minutes logged._");
 > > }

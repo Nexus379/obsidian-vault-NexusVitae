@@ -42,7 +42,7 @@ arch:
   - "#3project"
 archtype:
   - "#3project/procraft"
-status: "<%- tp.variables.projectStatus || '1active' %>"e
+status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "1"
 science: ["<%- sci %>"]
@@ -74,7 +74,7 @@ review:
 > > > 
 > > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
 > > > 
-> > > **Materials:** `<%- merchant %>` | **Costs:** `<%- cost %>
+> > > **Materials:** `<%- merchant %>` | **Costs:** `<%- cost %>`
 > > 
 > > >[!blank|wide-0]
 > > > **Status:**

@@ -25,7 +25,7 @@ else if (currentPath.includes("6_Resources")) category = "6_Resources";
 // 🔱 3. UNTERSTRUKTUR (Spezial-Handling für Kalender-Module)
 let subPath = "";
 if (category === "0_Calendar") {
-    const mods = ["1_PLM", "2_PPM", "3_PKM", "4_Projectlog", "5_Protocol", "6_Review"];
+    const mods = ["1_Logs", "2_Projectlogs", "3_Protocols", "4_Reviews"];
     const foundMod = mods.find(m => currentPath.includes(m));
     subPath = foundMod ? `/${foundMod}` : "/DailyLogs";
 }

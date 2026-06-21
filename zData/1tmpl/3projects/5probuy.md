@@ -25,6 +25,7 @@ if (tp.file.title !== title) {
 let payee = await tp.system.prompt("👤 Contact (Person/Company)?", "Name");
 let amount = await tp.system.prompt("💰 Estimated Amount?", "0.00");
 let account = await tp.system.suggester(["💳 Visa", "🔵 PayPal", "🏦 Bank", "💵 Cash"], ["Visa", "PayPal", "Bank", "Cash"]) || "TBD";
+let deadline = await tp.system.prompt("📅 Acquisition Deadline?", tp.date.now("YYYY-MM-DD", 14)) || tp.date.now("YYYY-MM-DD", 14);
 
 // 🔱 4. CLEANING
 let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(5probuy-|p-|3project-)/i, "").trim();
@@ -43,6 +44,7 @@ archtype:
 status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "3"
+due: <%- deadline %>
 amount: <%- amount %>
 payee: "<%- payee %>"
 account: "<%- account %>"
@@ -69,7 +71,6 @@ review:
 > > > **Parent Goal/Star:** <%- pLink %>
 > > > 
 > > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
-> >> **Deadline:** `<%- tp.date.now("YYYY-MM-DD", 7) %>`
 > > 
 > > >[!blank|wide-0]
 > > > **Status:**

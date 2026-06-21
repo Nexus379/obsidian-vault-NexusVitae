@@ -119,7 +119,7 @@ if (planPage) {
         }
     }
 } else {
-    tp.variables.plannedMealsText = "> > > _No Meal Plan found._";
+    tp.variables.plannedMealsText = "_No Meal Plan found._";
 }
 
 tp.variables.nexusYaml = Object.entries(nexusBase).map(([k, v]) => `${k}: ${v}`).join("\n");
@@ -141,7 +141,7 @@ let focusM_plm = "";
 let focusM_Date = dateStr; 
 
 if (dv) {
-    const monthlyLogs = dv.pages(`"0_Calendar/1_PLM/${year}/${month}"`)
+    const monthlyLogs = dv.pages(`"0_Calendar/1_Logs/${year}/${month}"`)
         .where(p => p.focusM_plm && p.focusM_plm !== "")
         .sort(p => p.file.name, "desc");
 
@@ -249,10 +249,10 @@ tp.variables.routineSync = routineBlocks;
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
-const targetFolder = `0_Calendar/1_PLM/${y}/${m}`;
+const targetFolder = `0_Calendar/1_Logs/${y}/${m}`; // 🎯 HIER GEÄNDERT!
 const finalDest = `${targetFolder}/${finalTitle}.md`;
 
-const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : dateStr;
+const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : focusM_Date;
 
 if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
     let currentPath = "";
@@ -264,8 +264,8 @@ if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
 }
 
 // 🔱 6.5 EAT THE FROG (Path Calculation)
-const ppmPath = `0_Calendar/2_PPM/${year}/${month}/${dateStr} ppm`;
-const pkmPath = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
+const ppmPath = `0_Calendar/1_Logs/${year}/${month}/${dateStr} ppm`; // 🎯 HIER GEÄNDERT!
+const pkmPath = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`; // 🎯 HIER GEÄNDERT!
 
 // 🔱 7. CLEANUP
 if (tp.variables && tp.variables.targetDate) delete tp.variables.targetDate;
@@ -323,8 +323,8 @@ food_rem:
 
 <%-*
 // 🔱 3. DYNAMISCHE LINKS ZU DEN ANDEREN LOGS
-const todayPPM = `0_Calendar/2_PPM/${year}/${month}/${dateStr} ppm`;
-const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
+const todayPPM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} ppm`;
+const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 %>
 **Professional:** [[<%- todayPPM %>|🌻 Go to today's Manager-Log (PPM)]]
 **Knowledge:** [[<%- todayPKM %>|🌼 Go to today's Study-Log (PKM)]]
@@ -369,7 +369,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
     // --- 2. THE 5 PILLARS (L-E-B-E-N) ---
     const vitaminTasks = (v && v.file.tasks) ? v.file.tasks : [];
-    const isAlchemy = (t) => String(t.section).includes("Alchemy") || String(t.section).includes("Alchemy");
+    const isAlchemy = (t) => String(t.section).includes("Alchemy");
     
     // P1: Lifestyle (Food) - 75% of Bold Tasks
     const baseTasks = vitaminTasks.filter(t => !isAlchemy(t) && String(t.text).includes("**"));
@@ -470,7 +470,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > try { Nexus = await (require(enginePath))(app); } catch(e) {}
 > 
 > // 🔱 1. LOAD BASELINE (Parse-Safe Injection)
-> let rawJson = `{}`;
+> let rawJson = String.raw`<%- tp.variables.nexusJson %>`;
 > let baseData = {};
 > if (rawJson && !rawJson.startsWith("<")) {
 >      try { baseData = JSON.parse(rawJson); } catch(e) { console.log("JSON Parse Error", e); }
@@ -571,19 +571,10 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > [!blank]
 > > > ### 🍽️ Planned Menu (Baseline)
 > > > [[2_Areas/1_Selfcare/Nutrition/Meal_Plan|Meal_Plan]]
-> > > - **🌅 Breakfast**
-> > >   - _empty_
-> > > - **🍱 Bento**
-> > >   - _empty_
-> > > - **🥗 Lunch**
-> > >   - _empty_
-> > > - **🍎 Snack**
-> > >   - _empty_
-> > > - **🌙 Dinner**
-> > >   - _empty_
+> > > <%- tp.variables.plannedMealsText.replace(/\n/g, "\n> > > ") %>
 > > > 
 > > > ---
-> > > **Actions:** `BUTTON[add-remove-meal]` `BUTTON[add-remove-alchemy]`
+> > > **Actions:** `BUTTON[add-remove-meal]` `BUTTON[add-remove-alchemy]` `BUTTON[reset-nutri]`
 > >
 > > > [!info] **Live Resonance (Actuals)**
 > > > ```dataviewjs
@@ -622,6 +613,108 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > > - **Magnesium:** Relaxes muscles & CNS.
 > > > > - **Zinc + Selenium:** Immune & hormone repair.
 > > > > - **Glycine:** Lowers core temp for sleep.
+>
+> ## 🛒 Procurement & Supply
+>
+> > [!multi-column]
+> >
+> > > [!info|flat] 🧊 Nutrition Requirements (Batch Calculation)
+> > > ```dataviewjs
+> > > const planPath = "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md";
+> > > const planPage = dv.page(planPath);
+> > > const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
+> > > let Nexus;
+> > > try { Nexus = await (require(enginePath))(app); } catch(e) {}
+> > > 
+> > > if (!planPage) {
+> > >     dv.paragraph("❌ _No meal plan found._");
+> > > } else {
+> > >     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+> > >     const slots = ["brk", "ben", "lun", "snk", "eve"];
+> > >     
+> > >     // 🔱 THE SHOPPING DAY LOGIC (Look-Ahead)
+> > >     const logDate = moment(String(dv.current().cal_date || dv.current().file.name.substring(0, 10)), "YYYY-MM-DD");
+> > >     const referenceDate = logDate.isValid() ? logDate : moment();
+> > >     const todayIdx = referenceDate.day();
+> > >     let lookAhead = (todayIdx === 1) ? 3 : (todayIdx === 4 ? 4 : 1);
+> > >     let periodText = (todayIdx === 1) ? "Mon-Wed (3 Days)" : (todayIdx === 4 ? "Thu-Sun (4 Days)" : "Next 24h");
+> > >     
+> > >     let recipeCounts = {}; 
+> > > 
+> > >     // 1. Calculate Consumption Need for specific period
+> > >     for (let i = 0; i < lookAhead; i++) {
+> > >         const dayStr = days[(todayIdx + i) % 7];
+> > >         for (let slot of slots) {
+> > >             let meals = planPage[`${dayStr}_${slot}`];
+> > >             if (!meals) continue;
+> > >             let mealArray = Array.isArray(meals) ? meals : [meals];
+> > >             for (let m of mealArray) {
+> > >                 const cleanId = String(m).replace(/[\[\]"]/g, "").trim();
+> > >                 recipeCounts[cleanId] = (recipeCounts[cleanId] || 0) + 1;
+> > >             }
+> > >         }
+> > >     }
+> > > 
+> > >     let neededAtoms = {};
+> > > 
+> > >     // 2. Inventory & Batch Calculation
+> > >     for (let [recipeName, neededServings] of Object.entries(recipeCounts)) {
+> > >         const recipe = dv.page(recipeName);
+> > >         if (!recipe) continue;
+> > > 
+> > >         let stored = Number(recipe.portions_stored) || 0;
+> > >         let pDate = recipe.prep_date ? moment(String(recipe.prep_date)) : null;
+> > >         let shelfLife = Number(recipe.prep_shelf_life) || 4; 
+> > >         let isExpired = (stored > 0 && pDate && referenceDate.diff(pDate, 'days') > shelfLife);
+> > >         
+> > >         if (isExpired) stored = 0; // Expired stock is ignored
+> > > 
+> > >         let deficit = neededServings - stored;
+> > >         let rYield = Number(recipe.portions) || 1; 
+> > > 
+> > >         if (deficit > 0) {
+> > >             let batchesToCook = Math.ceil(deficit / rYield);
+> > >             for (let key in recipe) {
+> > >                 if (key.startsWith("amt_")) {
+> > >                     const atomId = key.replace("amt_", "");
+> > >                     const amountPerBatch = Number(recipe[key]) || 0;
+> > >                     neededAtoms[atomId] = (neededAtoms[atomId] || 0) + (amountPerBatch * batchesToCook);
+> > >                 }
+> > >             }
+> > >         }
+> > >     }
+> > > 
+> > >     // 3. UI Generation (Clean Design & English)
+> > >     dv.paragraph(`<div style="font-size: 0.8em; opacity: 0.6; margin-bottom: 8px; text-transform: uppercase;">Scanning: <b>${periodText}</b></div>`);
+> > >     
+> > >     let html = `<div style="display: flex; flex-direction: column; gap: 6px;">`;
+> > >     const sortedAtoms = Object.entries(neededAtoms).sort();
+> > >     
+> > >     if (sortedAtoms.length > 0) {
+> > >         sortedAtoms.forEach(([id, amount]) => {
+> > >             const item = Nexus ? Nexus.find(id) : null;
+> > >             const label = item ? (item.label || id) : id.replace(/_/g, " ");
+> > >             const icon = item ? (item.icon || "📦") : "📦";
+> > >             const unit = "g";
+> > >             const val = Math.round(amount * 1000) / 10;
+> > >             
+> > >             html += `<div style="display: flex; justify-content: space-between; padding: 6px 10px; background: var(--background-secondary-alt); border-radius: 6px; border-left: 3px solid var(--interactive-accent); font-size: 0.9em;">
+> > >                 <span>${icon} <b>${label}</b></span>
+> > >                 <span style="opacity:0.8; font-family: monospace;">${val} ${unit}</span>
+> > >             </div>`;
+> > >         });
+> > >     } else {
+> > >         html += `<div style="padding: 10px; opacity: 0.6; text-align: center; background: var(--background-secondary); border-radius: 6px;">_Inventory stable. No batch ingredients needed._</div>`;
+> > >     }
+> > >     html += `</div>`;
+> > >     dv.paragraph(html);
+> > > }
+> > > ```
+> > > <br>[[2_Areas/4_Organize/Shopping_Hub|➡️ Open Central Procurement Hub]]
+> >
+> > > [!todo|flat] 📝 Household & Quick Extras
+> > > **Household & Quick Extras:**
+> > > `INPUT[inlineListSuggester(optionQuery("")):shopping_extras]`
 
 > [!pink] E - Emotions
 > >[!multi-column]

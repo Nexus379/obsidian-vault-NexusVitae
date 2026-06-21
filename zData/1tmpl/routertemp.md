@@ -10,6 +10,7 @@ const folderPath = tp.file.folder(true);
 let selection = "";
 let subFolderDetected = "";
 let activeTrigger = "";
+let originTrigger = "";
 
 // 🔱 1.1 Extra Stabilization against Banners-Errors
 await new Promise(r => setTimeout(r, 200));
@@ -19,7 +20,9 @@ if (!tp.variables) tp.variables = {};
 // If the title contains a date or calendar trigger, we route it
 // We save the match to remove it precisely later
 const dateMatch = rawTitle.match(/^\d{4}-\d{2}-\d{2}/);
-const detectedCalTrigger = ["plm","pkm","ppm","projectlog","proj","protocol","prot","rev"].find(s => rawTitle.toLowerCase().includes(s));
+const loweredTitle = rawTitle.toLowerCase();
+const calendarTriggerKeys = ["projectlog","protocol","plm","pkm","ppm","proj","prot","rev"];
+const detectedCalTrigger = calendarTriggerKeys.find(key => new RegExp(`(^|[\\s_-])${key}($|[\\s_-])`, "i").test(loweredTitle));
 if (dateMatch || detectedCalTrigger) {
     if (!selection) selection = "0calendarprompt";
     if (!activeTrigger) activeTrigger = detectedCalTrigger || ""; // If only a date was found, let Chronos ask for the module
@@ -47,21 +50,24 @@ const CHRONOS_TRIGGERS = ["cal", "plm", "pkm", "ppm", "jou", "studylog", "log", 
 // 🔱 3. PROMPT-MAPPING
 const promptMap = {
     "c": ARCH.c.prompt, "cal": ARCH.c.prompt, "plm": ARCH.c.prompt, "ppm": ARCH.c.prompt, "pkm": ARCH.c.prompt,
-    "projectlog": ARCH.c.prompt, "log": ARCH.c.prompt, "rev": ARCH.c.prompt, "studylog": ARCH.c.prompt, "jou": ARCH.c.prompt,
+    "projectlog": ARCH.c.prompt, "proj": ARCH.c.prompt, "protocol": ARCH.c.prompt, "prot": ARCH.c.prompt,
+    "log": ARCH.c.prompt, "rev": ARCH.c.prompt, "studylog": ARCH.c.prompt, "jou": ARCH.c.prompt,
     "s": ARCH.s.prompt, "stars": ARCH.s.prompt, "purpose": ARCH.s.prompt, "vision": ARCH.s.prompt, "goal": ARCH.s.prompt, "goals": ARCH.s.prompt,
     "a": ARCH.a.prompt, "areas": ARCH.a.prompt, "selfcare": ARCH.a.prompt, "relation": ARCH.a.prompt, "person": ARCH.a.prompt,
     "mind": ARCH.a.prompt, "organize": ARCH.a.prompt, "creativity": ARCH.a.prompt, "activity": ARCH.a.prompt,
     "entertain": ARCH.a.prompt, "entertainment": ARCH.a.prompt,
     "p": ARCH.p.prompt, "projects": ARCH.p.prompt, "prodo": ARCH.p.prompt, "progo": ARCH.p.prompt, "prostudy": ARCH.p.prompt,
-    "promeet": ARCH.p.prompt, "probuy": ARCH.p.prompt, "propay": ARCH.p.prompt, "procook": ARCH.p.prompt, "procraft": ARCH.p.prompt,
+    "promeet": ARCH.p.prompt, "probuy": ARCH.p.prompt, "propay": ARCH.p.prompt, "procook": ARCH.p.prompt, "procraft": ARCH.p.prompt, "proget": ARCH.p.prompt,
     "t": ARCH.t.prompt, "tasks": ARCH.t.prompt, "todo": ARCH.t.prompt, "togo": ARCH.t.prompt, "tostudy": ARCH.t.prompt,
-    "tomeet": ARCH.t.prompt, "tobuy": ARCH.t.prompt, "topay": ARCH.t.prompt, "tocook": ARCH.t.prompt, "tocraft": ARCH.t.prompt, "toenjoy": ARCH.t.prompt,
+    "tomeet": ARCH.t.prompt, "tobuy": ARCH.t.prompt, "topay": ARCH.t.prompt, "tocook": ARCH.t.prompt, "tocraft": ARCH.t.prompt,
+    "toget": ARCH.t.prompt, "get": ARCH.t.prompt, "toenjoy": ARCH.t.prompt,
     "n": ARCH.n.prompt, "notes": ARCH.n.prompt, "fleet": ARCH.n.prompt, "lit": ARCH.n.prompt, "perma": ARCH.n.prompt,
     "atomic": ARCH.n.prompt, "anki": ARCH.n.prompt, "nutri": ARCH.n.prompt, "ever": ARCH.n.prompt,
     "r": ARCH.r.prompt, "resources": ARCH.r.prompt, "ai": ARCH.r.prompt, "article": ARCH.r.prompt, "book": ARCH.r.prompt,
-    "class": ARCH.r.prompt, "course": ARCH.r.prompt, "film": ARCH.r.prompt, "game": ARCH.r.prompt, "museum": ARCH.r.prompt,
-    "music": ARCH.r.prompt, "paper": ARCH.r.prompt, "recipe": ARCH.r.prompt, "reference": ARCH.r.prompt, "serie": ARCH.r.prompt,
-    "video": ARCH.r.prompt
+    "class": ARCH.r.prompt, "course": ARCH.r.prompt, "film": ARCH.r.prompt, "game": ARCH.r.prompt, "guide": ARCH.r.prompt,
+    "museum": ARCH.r.prompt, "music": ARCH.r.prompt, "paper": ARCH.r.prompt, "recipe": ARCH.r.prompt,
+    "reference": ARCH.r.prompt, "serie": ARCH.r.prompt, "series": ARCH.r.prompt, "video": ARCH.r.prompt,
+    "boardgame": ARCH.r.prompt
 };
 
 // 🔱 4. DETECTION LOGIC
@@ -78,9 +84,13 @@ if (tp.variables.preSelectedSub) {
 
 // B) Trigger from Title
 if (!selection && rawTitle.includes("-")) {
-    // ERKLÄRUNG: .toLowerCase() wurde hier entfernt!
-    let t = rawTitle.split("-")[0].replace(/\s+/g, "");
-    if (promptMap[t]) { selection = promptMap[t]; activeTrigger = t; }
+    const titleParts = rawTitle.split("-").map(part => part.trim().toLowerCase());
+    const routeTrigger = titleParts[0].replace(/\s+/g, "");
+    if (promptMap[routeTrigger]) {
+        selection = promptMap[routeTrigger];
+        activeTrigger = routeTrigger;
+        originTrigger = titleParts[1] || routeTrigger;
+    }
 }
 
 // C) Folder Path Analysis
@@ -120,8 +130,13 @@ if (tp.variables.foundDate && cleanTitle.startsWith(tp.variables.foundDate)) {
 
 // 2. Remove trigger prefix (e.g., "p-" -> "")
 if (activeTrigger && promptMap[activeTrigger]) {
-    const prefix = activeTrigger + "-";
-    if (cleanTitle.toLowerCase().startsWith(prefix.toLowerCase())) {
+    const compoundPrefix = originTrigger && originTrigger !== activeTrigger
+        ? `${activeTrigger}-${originTrigger}`
+        : activeTrigger;
+    const prefix = compoundPrefix + "-";
+    if (cleanTitle.toLowerCase() === compoundPrefix.toLowerCase()) {
+        cleanTitle = "";
+    } else if (cleanTitle.toLowerCase().startsWith(prefix.toLowerCase())) {
         cleanTitle = cleanTitle.substring(prefix.length).trim();
     }
 }
@@ -157,6 +172,7 @@ if (cleanTitle.toLowerCase() === defaultName.toLowerCase()) {
 // 🔱 TRANSFER TO TP.VARIABLES
 tp.variables.title = String(cleanTitle);
 tp.variables.activeTrigger = activeTrigger;
+tp.variables.originTrigger = originTrigger || activeTrigger;
 tp.variables.preSelectedSub = subFolderDetected;
 
 // 🛡️ INTELLIGENT RENAME

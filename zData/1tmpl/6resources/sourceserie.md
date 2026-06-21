@@ -7,9 +7,9 @@ let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 // FALLBACK: Falls du im Ordner auf "Neue Notiz" klickst (Untitled Check)
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
-	    title = await tp.system.prompt("🏫 Class/Subject Name?", "");
+	    title = await tp.system.prompt("🎞️ Series Name?", "");
 }
-if (!title) title = "Class-" + tp.date.now("HH-mm");
+if (!title) title = "Series-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
@@ -67,7 +67,7 @@ else if (p >= 20) bar = "██░░░░░░░░ 20%";
 else if (p >= 10) bar = "█░░░░░░░░░ 10%";
 
 // 7. 🔱 SMART LOGIC (Director & Author Sort)
-let rawDir = await tp.system.prompt("🎬 Director / Creator?", "Unknown");
+let rawDir = await tp.system.prompt("🎬 Director / Creator?", "Unknown") || "Unknown";
 let dirSort = rawDir;
 if (rawDir.includes(" ")) {
     let parts = rawDir.trim().split(/\s+/);
@@ -75,7 +75,8 @@ if (rawDir.includes(" ")) {
     let firstName = parts.join(" ");
     dirSort = lastName + ", " + firstName;
 }
-let rawAuthor = await tp.system.prompt("✍️ Original Author?", "");
+let rawAuthor = await tp.system.prompt("✍️ Original Author?", "") || "Unknown";
+let authorSort = rawAuthor;
 if (rawAuthor.includes(" ")) {
     let parts = rawAuthor.trim().split(/\s+/);
     let lastName = parts.pop();
@@ -83,8 +84,8 @@ if (rawAuthor.includes(" ")) {
     authorSort = lastName + ", " + firstName;
 }
 
-let company = await tp.system.prompt("🏢 Production Company / Studio?", "Unknown");
-let cast = await tp.system.prompt("🎭 Cast (comma separated)?", "Unknown");
+let company = await tp.system.prompt("🏢 Production Company / Studio?", "Unknown") || "Unknown";
+let cast = await tp.system.prompt("🎭 Cast (comma separated)?", "Unknown") || "Unknown";
 
 let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(serie-|r-)/i, "").trim();
 
@@ -108,7 +109,7 @@ author-sort: "<%- authorSort %>"
 director: "<%- rawDir %>" 
 director-sort: "<%- dirSort %>"
 actors: 
-- <%- cast.split(',').map(s => `  - "${s.trim()}"`).join('\n') %>
+<%- cast.split(',').map(s => `  - "${s.trim()}"`).join('\n') %>
 style: "<%- style %>"
 episode-now: <%- epNow %>
 episode-max: <%- epMax %>

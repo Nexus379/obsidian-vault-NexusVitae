@@ -2,33 +2,33 @@
 // 🔱 1. INITIALIZATION & CONTEXT
 const dv = app.plugins.plugins.dataview.api;
 const revModule = tp.variables.revModule || "master";
-const start = tp.variables.revStart; 
-const end = tp.variables.revEnd;
+const end = tp.variables.revEnd || tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
+const start = tp.variables.revStart || moment(end).subtract(180, "days").format("YYYY-MM-DD"); 
 const logConnect = tp.variables.logConnect || ""; 
 const displayTitle = tp.variables.displayTitle || "Half-Year Review";
 
-const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
 const isMaster = (revModule === "master");
-const yy = start.split("-")[0];
-const hNum = moment(start).month() < 6 ? "1" : "2";
+const yy = end.split("-")[0];
+const hNum = moment(end).month() < 6 ? "1" : "2";
 
-// 🔱 2. PATH & TITLE LOGIC
-const targetFolder = `${baseCal}/6_Review/HalfYear/${yy}`;
-const finalTitle = `${yy}-H${hNum} revH - ${displayTitle}`; 
-const finalDest = `${targetFolder}/${finalTitle}.md`;
+// 🔱 2. PATH & TITLE LOGIC (Backsafe for direct template starts)
+if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
+    const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
+    const targetFolder = `${baseCal}/4_Reviews/HalfYear/${yy}`;
+    const finalTitle = `${yy}-H${hNum} revH - ${displayTitle}`;
+    const finalDest = `${targetFolder}/${finalTitle}.md`;
 
-// Ensure folder structure
-let currentPath = "";
-for (const seg of targetFolder.split('/')) {
-    currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;
-    if (!app.vault.getAbstractFileByPath(currentPath)) await app.vault.createFolder(currentPath);
-}
+    let currentPath = "";
+    for (const seg of targetFolder.split('/')) {
+        currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;
+        if (!app.vault.getAbstractFileByPath(currentPath)) await app.vault.createFolder(currentPath);
+    }
 
-// Rename and move
-if (tp.file.title !== finalTitle) await tp.file.rename(finalTitle);
-if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
-    await new Promise(r => setTimeout(r, 200));
-    await tp.file.move(finalDest);
+    if (tp.file.title !== finalTitle) await tp.file.rename(finalTitle);
+    if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
+        await new Promise(r => setTimeout(r, 200));
+        await tp.file.move(finalDest);
+    }
 }
 
 tR += "---";
@@ -100,7 +100,7 @@ status: 1active
 >     colors: { plmPink: ["#f8bbd0", "#f48fb1", "#f06292", "#e91e63", "#c2185b"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>")) {
+> for (let page of dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/1plm"))) {
 >     calendarData.entries.push({ date: page.cal_date, intensity: page.energy || 1 });
 > }
 > renderHeatmapCalendar(this.container, calendarData);
@@ -115,7 +115,7 @@ status: 1active
 >     colors: { ppmBlue: ["#bbdefb", "#90caf9", "#64b5f6", "#2196f3", "#1976d2"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>")) {
+> for (let page of dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/2ppm"))) {
 >     calendarData.entries.push({ date: page.cal_date, intensity: page.energy || 1 });
 > }
 > renderHeatmapCalendar(this.container, calendarData);
@@ -130,7 +130,7 @@ status: 1active
 >     colors: { pkmOrange: ["#ffe0b2", "#ffcc80", "#ffb74d", "#ff9800", "#e65100"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/3_PKM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>")) {
+> for (let page of dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/3pkm"))) {
 >     calendarData.entries.push({ date: page.cal_date, intensity: page['brain-drain'] || 1 });
 > }
 > renderHeatmapCalendar(this.container, calendarData);
@@ -147,9 +147,9 @@ status: 1active
 > > [!info|wide-1] 🌷 PLM: Resilience
 > > <small style="opacity:0.5; text-transform:uppercase;">180-Day Averages</small>
 > >
-> > - **Avg Energy:** `$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
-> > - **Avg Sleep:** `$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
-> > - **Total Fitness:** `$= dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").fitness_revD.sum() || 0` min
+> > - **Avg Energy:** `$= const p = dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/1plm")); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
+> > - **Avg Sleep:** `$= const p = dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/1plm")); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
+> > - **Total Fitness:** `$= dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/1plm")).array().reduce((sum, p) => sum + (Number(p.fitness_am) || 0) + (Number(p.fitness_pm) || 0), 0)` min
 <%* } -%>
 <%* if (isMaster || revModule === "ppm" || revModule === "proj") { -%>
 >
@@ -169,7 +169,7 @@ status: 1active
 > > <small style="opacity:0.5; text-transform:uppercase;">Key Projects Active</small>
 > >
 > > ```dataviewjs
-> > const pr = dv.pages('"0_Calendar/4_Projectlog"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
+> > const pr = dv.pages('"0_Calendar/2_Projectlogs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
 > > let projects = new Set();
 > > pr.forEach(x => { 
 > >     if ("<%- revModule %>" !== "proj" || x.file.name.includes("<%- logConnect.replace(/[\[\]]/g, '') %>") || (x.file.outlinks && String(x.file.outlinks).includes("<%- logConnect.replace(/[\[\]]/g, '') %>"))) {
@@ -186,7 +186,7 @@ status: 1active
 > > <small style="opacity:0.5; text-transform:uppercase;">Time per Subject (Hours)</small>
 > >
 > > ```dataviewjs
-> > const p = dv.pages('"0_Calendar/3_PKM"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
+> > const p = dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/3pkm"));
 > > const subjects = ["english", "german", "math", "latin", "physics", "biology", "chemistry", "history", "philosophy", "politics", "economics", "law", "psychology", "art", "music"];
 > > let totals = {};
 > > p.forEach(x => {

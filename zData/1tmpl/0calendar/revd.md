@@ -2,28 +2,26 @@
 // 🔱 1. INITIALIZATION & DATE
 const dv = app.plugins.plugins.dataview.api;
 const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
-const [yy, mm] = dateStr.split("-");
 
-// 🔱 2. PATH LOGISTICS (Flex & Minimalist)
-const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
-const targetFolder = `${baseCal}/6_Review/Daily/${yy}/${mm}`;
-const finalTitle = `${dateStr} revD`; // Clean & Minimalist
-const finalDest = `${targetFolder}/${finalTitle}.md`;
+// 🔱 2. PATH LOGISTICS (Backsafe for direct template starts)
+if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
+    const [yy, mm] = dateStr.split("-");
+    const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
+    const targetFolder = `${baseCal}/4_Reviews/Daily/${yy}/${mm}`;
+    const finalTitle = `${dateStr} revD`;
+    const finalDest = `${targetFolder}/${finalTitle}.md`;
 
-// Ensure folder structure
-let currentPath = "";
-for (const seg of targetFolder.split('/')) {
-    currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;
-    if (!app.vault.getAbstractFileByPath(currentPath)) await app.vault.createFolder(currentPath);
-}
+    let currentPath = "";
+    for (const seg of targetFolder.split('/')) {
+        currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;
+        if (!app.vault.getAbstractFileByPath(currentPath)) await app.vault.createFolder(currentPath);
+    }
 
-// Rename and move file
-if (tp.file.title !== finalTitle) {
-    await tp.file.rename(finalTitle);
-}
-if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
-    await new Promise(r => setTimeout(r, 200));
-    await tp.file.move(finalDest);
+    if (tp.file.title !== finalTitle) await tp.file.rename(finalTitle);
+    if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
+        await new Promise(r => setTimeout(r, 200));
+        await tp.file.move(finalDest);
+    }
 }
 
 // 🔱 3. DATA AGGREGATION (Meticulous Vacuum Cleaner)
@@ -106,7 +104,7 @@ tR += "---";
 arch:
   - "<%- tp.variables.ARCH?.c?.tag || '#0cal' %>"
 archtype:
-  - "<%- tp.variables.ARCH?.c?.tag || '#0cal' %>/1review"
+  - "<%- tp.variables.ARCH?.c?.tag || '#0cal' %>/1review/daily"
 persona: "#persona/analyst"
 cal_date: <%- dateStr %>
 status: 1active
@@ -148,34 +146,34 @@ sentiment: 3
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_plm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_plm || "..." %>**
 > > ---
-> > - **Energy:** `$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
+> > - **Energy:** `$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
 > > - **Mood:** `<%- tp.variables.mood_plm_revD %>/5`
 > > - **Sleep:** `<%- tp.variables.sleep_revD %>h` | **Fitness:** `<%- tp.variables.fitness_revD %>m`
 > > - **Fuel:** 🔥 `<%- tp.variables.kcal_revD %>` | 💪 `<%- tp.variables.protein_revD %>g`
 > > - **Habits:**
-> > 	- Journal: `$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date === "<%- dateStr %>").first(); p?.journal_revD ? "✅" : "❌"`
-> > 	- Selfcare: `$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date === "<%- dateStr %>").first(); p?.selfcare_revD ? "✅" : "❌"`
+> >     - Journal: <%- tp.variables.journal_revD === "true" ? "✅" : "❌" %>
+> >     - Selfcare: <%- tp.variables.selfcare_revD === "true" ? "✅" : "❌" %>
 >
 > > [!info|wide-1] 🌻 PPM (Strategy)
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_ppm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_ppm || "..." %>**
 > > ---
-> > - **Energy:** `$= const p = dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
+> > - **Energy:** `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
 > > - **Main Execution:**
-> > 	1. `$= const p = dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask1 || "—"`
-> > 	2. `$= const p = dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask2 || "—"`
-> > 	3. `$= const p = dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask3 || "—"`
-> > 	4. `$= const p = dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask4 || "—"`
+> >     1. `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask1 || "—"`
+> >     2. `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask2 || "—"`
+> >     3. `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask3 || "—"`
+> >     4. `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask4 || "—"`
 > > <br>
 > > - **Maintenance:**
-> > 	- 🧹 `$= const p = dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask5 || "—"`
-> > 	- 🧼 `$= const p = dv.pages('"0_Calendar/2_PPM"').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask6 || "—"`
+> >     - 🧹 `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask5 || "—"`
+> >     - 🧼 `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask6 || "—"`
 >
 > > [!info|wide-1] 🌼 PKM (Knowledge)
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_pkm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_pkm || "..." %>**
 > > ---
-> > - **Energy:** `$= const p = dv.pages('"0_Calendar/3_PKM"').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
+> > - **Energy:** `$= const p = dv.pages('#0cal/3pkm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
 > > - **Mindset:** Brain Drain `<%- tp.variables.brainDrain_revD %>/5`
 > > <br>
 > > - **Study Units Logged:**
@@ -185,12 +183,12 @@ sentiment: 3
 
 ## 📝 Activity & Manifestation
 
-> [!multi-column]
+> [!multi-column] 
 >
 > > [!pink|wide-1] 🍽️ PLM: Fuel & Body
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Totals</small>
-> > - 🔥 **`$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_kcal : 0`** kcal
-> > - 💪 **`$= const p = dv.pages('"0_Calendar/1_PLM"').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_protein_g : 0`**g Protein
+> > - 🔥 **`$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_kcal : 0`** kcal
+> > - 💪 **`$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_protein_g : 0`**g Protein
 > > ---
 > > <small style="opacity:0.5; text-transform:uppercase;">Meal Log Details</small>
 > > [[<%- dateStr %> plm|↗️ Open Today's Journal]]
@@ -206,7 +204,7 @@ sentiment: 3
 > > ---
 > > <small style="opacity:0.5; text-transform:uppercase;">Project Nexus Activity</small>
 > > ```dataviewjs
-> > const pr = dv.pages('"0_Calendar/4_Projectlog"').where(p => p.cal_date === "<%- dateStr %>");
+> > const pr = dv.pages('#0cal/4projectlog').where(p => p.cal_date === "<%- dateStr %>");
 > > if(pr.length > 0) dv.list(pr.map(p => "🧩 [[" + p.file.name + "|" + (p.displayTitle || p.file.name) + "]]: " + (p.focus_LOG || "Update")));
 > > else dv.paragraph("_No project logs recorded._");
 > > ```
@@ -214,7 +212,7 @@ sentiment: 3
 > > [!abstract|wide-1] 🎓 PKM: Knowledge Gained
 > > <small style="opacity:0.5; text-transform:uppercase;">Subject Deep-Dive (Min)</small>
 > > ```dataviewjs
-> > const p = dv.pages('"0_Calendar/3_PKM"').where(p => p.cal_date === "<%- dateStr %>").first();
+> > const p = dv.pages('#0cal/3pkm').where(p => p.cal_date === "<%- dateStr %>").first();
 > > if (p) {
 > >     const subjects = ["english", "german", "math", "latin", "physics", "biology", "chemistry", "history", "philosophy", "politics", "economics", "law", "psychology", "art", "music"];
 > >     let learned = [];
@@ -272,8 +270,7 @@ sentiment: 3
 > > [!example|wide-1] The Crucible
 > > <small style="opacity:0.5; text-transform:uppercase;">Overcoming Obstacles</small>
 > >
-> > **The Greatest Challenge:** 
-> > `INPUT[text:challenge_today]`
+> > **The Greatest Challenge:** > > `INPUT[text:challenge_today]`
 > > <br>
 > > **Emotional Balance:**
 > > `INPUT[slider:sentiment]`
@@ -288,5 +285,3 @@ sentiment: 3
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
 `BUTTON[freezer]`
-
-

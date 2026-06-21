@@ -64,7 +64,7 @@ let focusM_pkm = "";
 let focusM_Date = dateStr;
 
 if (dv) {
-    const monthlyLogs = dv.pages(`"0_Calendar/3_PKM/${year}/${month}"`)
+    const monthlyLogs = dv.pages(`"0_Calendar/1_Logs/${year}/${month}"`)
         .where(p => p.focusM_pkm && p.focusM_pkm !== "")
         .sort(p => p.file.name, "desc");
 
@@ -79,11 +79,11 @@ if (tp.frontmatter && tp.frontmatter.focusM_pkm) {
     focusM_pkm = tp.frontmatter.focusM_pkm;
 }
 
-// 🔱 6. LOGISTICS & FOLDER SYNC
+// 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
-const targetFolder = `0_Calendar/3_PKM/${y}/${m}`;
+const targetFolder = `0_Calendar/1_Logs/${y}/${m}`; // 🎯 HIER GEÄNDERT!
 const finalDest = `${targetFolder}/${finalTitle}.md`;
-const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : dateStr;
+const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : focusM_Date;
 
 if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
     let currentPath = "";
@@ -215,8 +215,9 @@ music: ""
 > 
 > > [!quote|flat] 📜 On this day
 > > ```dataview
-> > LIST FROM "0_Calendar/3_PKM"
+> > LIST FROM "0_Calendar/1_Logs"
 > > WHERE file.day.month = this.file.day.month AND file.day.day = this.file.day.day
+> > AND contains(file.name, " pkm")
 > > AND file.name != this.file.name
 > > ```
 
@@ -276,6 +277,12 @@ createDashboardBox("Cognitive Load", bMap, "brain-drain", "#b873f0", "🧠");
 > const c = dv.current();
 > const sessions = [];
 > let totalMin = 0;
+> let disciplineData = {};
+> try {
+>     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/disciplineEngine.js";
+>     const engine = require(enginePath)();
+>     disciplineData = engine.all || {};
+> } catch (e) {}
 > 
 > // Sucht nach allen generierten Schlüsseln, die auf "_min" enden
 > for (let key in c) {
@@ -295,9 +302,9 @@ createDashboardBox("Cognitive Load", bMap, "brain-drain", "#b873f0", "🧠");
 >             // macht Dataview ein Array daraus. Das fangen wir hier sauber ab:
 >             let topic = Array.isArray(rawTopic) ? rawTopic.join(", ") : rawTopic;
 >             
->             // Extrahiert den Namen (z.B. "physics" aus "physics_1234")
->             let subjRaw = baseKey.split("_")[0];
->             let subj = subjRaw.charAt(0).toUpperCase() + subjRaw.slice(1);
+>             // Entfernt nur die Zufalls-ID und übernimmt den Namen aus der Discipline Engine
+>             let subjKey = baseKey.replace(/_\d{4}$/, "");
+>             let subj = disciplineData[subjKey]?.label || subjKey.split("_").map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(" ");
 >             
 >             // Zeigt die Zeit an, oder "---" wenn sie 0 / leer ist
 >             let displayTime = time > 0 ? `${time} min` : `---`;

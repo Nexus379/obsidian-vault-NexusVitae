@@ -60,7 +60,7 @@ cssclasses:
 >     dv.paragraph("❌ _Meal Plan not found._");
 > } else {
 >     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
->     const slots = ["brk", "ben", "snk", "eve"];
+>     const slots = ["brk", "ben", "lun", "snk", "eve"];
 >     
 >     // 🔱 Dynamic Look-Ahead
 >     const todayIdx = moment().day();
@@ -147,8 +147,8 @@ cssclasses:
 >         sortedAtoms.forEach(([id, amount]) => {
 >             const item = Nexus ? Nexus.find(id) : null;
 >             const label = item ? (item.label || id) : id.replace(/_/g, " ");
->             const unit = item ? item.unit : "Stk";
->             const val = Math.round(amount * 10) / 10;
+>             const unit = "g";
+>             const val = Math.round(amount * 1000) / 10;
 >             
 >             html += `<div style="padding: 6px 10px; background: var(--background-secondary-alt); border-radius: 4px; border-left: 3px solid var(--interactive-accent); font-size: 0.9em;">
 >                 <b>${label}</b> <span style="float:right; opacity:0.8; font-family: monospace;">${val} ${unit}</span>

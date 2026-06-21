@@ -2,18 +2,30 @@
 ```dataviewjs
 // 🔱 1. INITIALIZATION & STATE
 if (window.nexusOffset === undefined) window.nexusOffset = 0;
-const allLogs = dv.pages('"0_Calendar"');
+const allLogs = dv.pages('!"zData" AND -"yArchive"')
+    .where(p => p.cal_date || p.rev_end)
+    .where(p => p.file.path.startsWith("0_Calendar/") || String(p.archtype || "").includes("projectlog"));
 
 const config = {
-    jou:   { suffix: "plm",    folder: "0_Calendar/1_PLM",        icon: "🌷", color: "#ff79c6" },
-    log:   { suffix: "ppm",    folder: "0_Calendar/2_PPM",        icon: "🌻", color: "#f1fa8c" },
-    study: { suffix: "pkm",    folder: "0_Calendar/3_PKM",        icon: "🌼", color: "#bd93f9" },
-    prolog:{ suffix: "prjlog", folder: "0_Calendar/4_Projectlog", icon: "🧩", color: "#ffb86c" },
-    proto: { suffix: "prot",   folder: "0_Calendar/5_Protocol",   icon: "📜", color: "#8be9fd" },
-    rev:   { suffix: "rev",    folder: "0_Calendar/6_Review",     icon: "🛰️", color: "#50fa7b" }
+    jou:    { trigger: "plm",  fileSuffix: "plm",  icon: "🌷", color: "#ff79c6" },
+    log:    { trigger: "ppm",  fileSuffix: "ppm",  icon: "🌻", color: "#f1fa8c" },
+    study:  { trigger: "pkm",  fileSuffix: "pkm",  icon: "🌼", color: "#bd93f9" },
+    prolog: { trigger: "proj", fileSuffix: "proj", icon: "🧩", color: "#ffb86c" },
+    proto:  { trigger: "prot", fileSuffix: "prot", icon: "📜", color: "#8be9fd" },
+    rev:    { trigger: "rev",  fileSuffix: "rev",  icon: "🛰️", color: "#50fa7b" }
 };
 
 const routerPath = "zData/1tmpl/0calendarprompt.md";
+const matchesType = (page, type, dateStr) => {
+    const name = page.file.name.toLowerCase();
+    const archtype = String(page.archtype || "").toLowerCase();
+    const pageDate = String(page.cal_date || page.rev_end || "").substring(0, 10);
+    if (pageDate !== dateStr && !name.startsWith(dateStr)) return false;
+    if (type === "prolog") return archtype.includes("projectlog") || name.startsWith(`${dateStr} proj`);
+    if (type === "proto") return archtype.includes("protocol") || name.startsWith(`${dateStr} prot`);
+    if (type === "rev") return archtype.includes("review") || name.includes("rev");
+    return name.startsWith(`${dateStr} ${config[type].fileSuffix}`);
+};
 
 // 🔱 2. NAVIGATION UI
 const navHTML = `
@@ -34,10 +46,10 @@ for (let i = 0; i < 7; i++) {
 
     let files = {};
     for (let key in config) {
-        files[key] = allLogs.find(p => p.file.name.includes(dateStr) && p.file.name.toLowerCase().includes(config[key].suffix.toLowerCase()));
+        files[key] = allLogs.find(p => matchesType(p, key, dateStr));
     }
 
-    dayData.push({ dateStr, mDate });
+    dayData.push({ dateStr, mDate, files });
 
     const getStyle = (exists, color) => exists 
         ? `opacity: 1; filter: drop-shadow(0 0 3px ${color}); cursor: pointer; transform: scale(1.1);` 
@@ -75,41 +87,39 @@ const handleBtnClick = async (type, btn) => {
     try {
         const data = dayData[btn.getAttribute('data-idx')];
         const cfg = config[type];
-        const folderPath = `${cfg.folder}/${data.mDate.format("YYYY")}/${data.mDate.format("MM")}`;
-        const fileName = `${data.dateStr} ${cfg.suffix}.md`; // Dateiname ist hier schon PERFEKT
-        const fullPath = `${folderPath}/${fileName}`;
-
-        let file = app.vault.getAbstractFileByPath(fullPath);
-
-        if (!file) {
-            let curr = "";
-            for (const seg of folderPath.split("/")) {
-                curr = curr === "" ? seg : `${curr}/${seg}`;
-                if (!app.vault.getAbstractFileByPath(curr)) await app.vault.createFolder(curr);
-            }
-            // Wir erstellen die Datei mit einem Marker im Frontmatter
-            file = await app.vault.create(fullPath, "---\nnexus_routed: true\n---\n");
-            await new Promise(r => setTimeout(r, 200));
+        const existing = data.files[type];
+        if (existing) {
+            const file = app.vault.getAbstractFileByPath(existing.file.path);
+            if (file) await app.workspace.getLeaf('tab').openFile(file);
+            return;
         }
 
-        await app.workspace.getLeaf('tab').openFile(file);
-
         const tPlugin = app.plugins.plugins["templater-obsidian"];
-        if (tPlugin) {
-            const tpApi = tPlugin.templater;
-            if (!tpApi.variables) tpApi.variables = {};
-            
-            // 🔱 DAS PREFIX-PAKET
-            tpApi.variables.targetDate = data.dateStr;
-            tpApi.variables.activeTrigger = cfg.suffix; // z.B. "plm"
-            tpApi.variables.title = "";                 // Wichtig: Wir schicken "leer", damit nichts angehängt wird
-            tpApi.variables.isNexusCall = true;         // Das "Halt-Stop"-Signal für den Specialist
+        const templateFile = app.vault.getAbstractFileByPath(routerPath);
+        const inbox = app.vault.getAbstractFileByPath("0_Inbox");
+        if (!tPlugin || !templateFile || !inbox) {
+            new Notice("CalendarLog: Templater, Router oder 0_Inbox fehlt.");
+            return;
+        }
 
-            const templateFile = app.vault.getAbstractFileByPath(routerPath);
-            if (templateFile) {
-                await new Promise(r => setTimeout(r, 400));
-                await tpApi.append_template_to_active_file(templateFile);
-            }
+        const tpApi = tPlugin.templater;
+        const vars = tpApi.variables || (tpApi.variables = {});
+        ['preSelectedSub','customPath','displayTitle','logConnect','finalTitle','targetFolder','revSuffix','revStart','revEnd','revModule','energy']
+            .forEach(key => delete vars[key]);
+        vars.targetDate = data.dateStr;
+        vars.activeTrigger = cfg.trigger;
+        vars.title = "";
+
+        try {
+            await tpApi.create_new_note_from_template(
+                templateFile,
+                inbox,
+                `${data.dateStr} ${cfg.trigger}`,
+                true
+            );
+        } finally {
+            ['targetDate','activeTrigger','title','preSelectedSub','customPath','displayTitle','logConnect','finalTitle','targetFolder','revSuffix','revStart','revEnd','revModule']
+                .forEach(key => delete vars[key]);
         }
     } catch (e) {
         console.error("Nexus Error:", e);

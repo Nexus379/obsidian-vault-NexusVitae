@@ -150,7 +150,7 @@ Everything goes into: `0_Inbox` and sorts through `[[zData/1tmpl/routertemp|rout
 [[zData/yaml tags organization]]
 
 * **0_Atlas** (Bases, Dashboard, MOCs)
-* **0_Calendar** (1_PLM, 2_PPM, 3_PKM, 4_Projectlog, 5_Protocol, 6_Review)
+* **0_Calendar** (1_Logs, 2_Projectlogs, 3_Protocols, 4_Reviews)
 * **0_Inbox** (The central entry point)
 * **1_Stars** (1_Purpose, 2_Vision, 3_Goals)
 * **2_Areas** (1_Selfcare, 2_Relationship, 3_Mind, 4_Organize, 5_Creativity, 6_Activity, 7_Entertainment)

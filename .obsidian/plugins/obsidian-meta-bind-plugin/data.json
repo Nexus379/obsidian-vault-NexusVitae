@@ -183,6 +183,40 @@
       ]
     },
     {
+      "label": "➕ add Nutrient Field",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-nutri-atom",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-nutri-atom.md"
+        }
+      ]
+    },
+    {
+      "label": "➕ add Supplement",
+      "icon": "",
+      "style": "plain",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-atom-synthesis",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-atom-synthesis.md"
+        }
+      ]
+    },
+    {
       "label": "➕ add Tool",
       "icon": "",
       "style": "plain",

@@ -8,19 +8,23 @@
 > {
 >     const logContainer = this.container;
 >     if (logContainer.innerHTML.length < 50) {
->         const allLogs = dv.pages('"0_Calendar"');
+>         const allLogs = dv.pages('!"zData" AND -"yArchive"')
+>             .where(p => p.file.path.startsWith("0_Calendar/") || String(p.archtype || "").includes("projectlog"));
 >         const config = [
->             { label: 'JOURNAL', suffix: 'jou', color: '#ff79c6', icon: '&#127799;' },
->             { label: 'DAILY LOG', suffix: 'log', color: '#f1fa8c', icon: '&#127803;' },
->             { label: 'STUDYLOG', suffix: 'study', color: '#bd93f9', icon: '&#127804;' },
->             { label: 'PROJECTLOG', suffix: 'prolog', color: '#ffb86c', icon: '&#129513;' },
->             { label: 'PROTOCOL', suffix: 'proto', color: '#8be9fd', icon: '&#128220;' },
->             { label: 'REVIEW', suffix: 'rev', color: '#50fa7b', icon: '&#128752;' }
+>             { label: 'JOURNAL', archtype: '1plm', color: '#ff79c6', icon: '&#127799;' },
+>             { label: 'DAILY LOG', archtype: '2ppm', color: '#f1fa8c', icon: '&#127803;' },
+>             { label: 'STUDYLOG', archtype: '3pkm', color: '#bd93f9', icon: '&#127804;' },
+>             { label: 'PROJECTLOG', archtype: 'projectlog', color: '#ffb86c', icon: '&#129513;' },
+>             { label: 'PROTOCOL', archtype: 'protocol', color: '#8be9fd', icon: '&#128220;' },
+>             { label: 'REVIEW', archtype: 'review', color: '#50fa7b', icon: '&#128752;' }
 >         ];
 >
 >         let html = '<div style="display: flex; flex-direction: column; gap: 3px; padding: 5px 0;">';
 >         config.forEach(cfg => {
->             const file = allLogs.filter(p => p.file.name.includes(cfg.suffix)).sort(p => p.file.name, 'desc').first();
+>             const file = allLogs
+>                 .filter(p => String(p.archtype || "").toLowerCase().includes(cfg.archtype))
+>                 .sort(p => p.file.name, 'desc')
+>                 .first();
 >             const exists = !!file;
 >             const auroraBg = exists ? 'linear-gradient(270deg, ' + cfg.color + '1a 0%, transparent 95%)' : 'transparent';
 >             const dotStyle = exists ? 'background: ' + cfg.color + '; box-shadow: 0 0 8px ' + cfg.color + ';' : 'border: 1px solid var(--text-faint); opacity: 0.2;';

@@ -21,7 +21,7 @@ let disc = tp.variables.discTag || "#disc";
 
 
 // 🔱 3. CLASS SPECIFIC PROMPTS
-let rawCreator = await tp.system.prompt("👨‍🏫 Teacher / Lecturer (First Last)?", "Unknown");
+let rawCreator = await tp.system.prompt("👨‍🏫 Teacher / Lecturer (First Last)?", "Unknown") || "Unknown";
 let creatorSort = rawCreator;
 if (rawCreator.includes(" ")) {
     let parts = rawCreator.trim().split(/\s+/);
@@ -29,7 +29,7 @@ if (rawCreator.includes(" ")) {
     let firstName = parts.join(" ");
     creatorSort = lastName + ", " + firstName;
 }
-let room = await tp.system.prompt("📍 Room / Floor?", "Online");
+let room = await tp.system.prompt("📍 Room / Floor?", "Online") || "Online";
 
 let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(class-|r-)/i, "").trim();
 
