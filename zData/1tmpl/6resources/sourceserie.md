@@ -48,11 +48,18 @@ if (style === "Anime") { gOptions = ["Shonen", "Seinen", "Shojo", "Isekai", "Sli
 gOptions.push("[+] Custom...");
 let genre = await tp.system.suggester(gOptions, gOptions);
 if (genre === "[+] Custom...") genre = await tp.system.prompt("Genre?");
+if (!genre) genre = "Unknown"; // Fallback, falls weggedrückt
 
-// 6. 🔱 PROGRESS LOGIC (Current Season & Episodes)
+// 6. 🔱 PROGRESS LOGIC (Current Season & Episodes mit Fallback)
 let vol = await tp.system.prompt("❄️ Current Season (Volume)?", "1");
+if (!vol) vol = "1"; // Fallback auf Staffel 1
+
 let epNow = await tp.system.prompt("📺 Episode Now?", "1");
+if (!epNow) epNow = "1"; // Fallback auf Folge 1
+
 let epMax = await tp.system.prompt("🏁 Episode Max (this Season)?", "12");
+if (!epMax) epMax = "12"; // Fallback auf 12 Folgen
+
 let p = Math.round((parseInt(epNow) / parseInt(epMax)) * 100);
 let bar = "░░░░░░░░░░ 0%";
 if (p >= 100) bar = "✅ Completed";
@@ -67,26 +74,6 @@ else if (p >= 20) bar = "██░░░░░░░░ 20%";
 else if (p >= 10) bar = "█░░░░░░░░░ 10%";
 
 // 7. 🔱 SMART LOGIC (Director & Author Sort)
-let rawDir = await tp.system.prompt("🎬 Director / Creator?", "Unknown") || "Unknown";
-let dirSort = rawDir;
-if (rawDir.includes(" ")) {
-    let parts = rawDir.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    dirSort = lastName + ", " + firstName;
-}
-let rawAuthor = await tp.system.prompt("✍️ Original Author?", "") || "Unknown";
-let authorSort = rawAuthor;
-if (rawAuthor.includes(" ")) {
-    let parts = rawAuthor.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    authorSort = lastName + ", " + firstName;
-}
-
-let company = await tp.system.prompt("🏢 Production Company / Studio?", "Unknown") || "Unknown";
-let cast = await tp.system.prompt("🎭 Cast (comma separated)?", "Unknown") || "Unknown";
-
 let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(serie-|r-)/i, "").trim();
 
 tR += "---"  
@@ -104,25 +91,9 @@ status:
   - "1active"
 priority:
   - "1"
-author: "<%- rawAuthor %>"
-author-sort: "<%- authorSort %>"
-director: "<%- rawDir %>" 
-director-sort: "<%- dirSort %>"
-actors: 
-<%- cast.split(',').map(s => `  - "${s.trim()}"`).join('\n') %>
-style: "<%- style %>"
-episode-now: <%- epNow %>
-episode-max: <%- epMax %>
 progress: <%- p %>
 progressBar: "<%- bar %>"
-volume: <%- vol %>
 persona:
-plattform: ""
-original-title:
-genre:
-- "<%- genre %>"
-publisher: "<%- company %>"
-pub-date:
 rating: 
 ranking:
 LID: "<%- luhmannId %>"
@@ -131,6 +102,23 @@ sibling:
 child:
 summary:
 review:
+# 🔱 Meta Bind Texts (Use comma separation for multiple entries)
+original_title: ""
+author: ""
+director: ""
+publisher: ""
+pub_date: ""
+actors: ""
+genre:
+  - "<%- genre %>"
+style: "<%- style %>"
+plattform: ""
+# 🔱 Dynamic Season Tracking
+season: <%- vol %>
+episode: <%- epNow %>
+ep_rating: 0
+s<%- vol %>_max: <%- epMax %>
+
 ---
 
 # 🎞️ Series: <%- luhmannId %> <%- displayTitle %>
@@ -140,49 +128,63 @@ review:
 > > > [!blank]
 > > > ![[<%- pureCover %>|150]]
 > > > 
-> > >  **Progress:** `$= dv.current().progressBar`
+> > > **Season:** `INPUT[number:season]`
+> > > **Episode:** `INPUT[number:episode]` 
+> > >**Rating:** `INPUT[suggester(option(0, "➖ noch nicht bewertet"), option(1, "⭐ 1"), option(2, "⭐⭐ 2"), option(3, "⭐⭐⭐ 3"), option(4, "⭐⭐⭐⭐ 4"), option(5, "⭐⭐⭐⭐⭐ 5")):ep_rating]`
+> > > `BUTTON[add-episode]` 
 > > 
 > > > [!blank]
 > > > **ID:** <%- luhmannId %> 
+> > > **Style:** `INPUT[suggester(option("🎬 Live-Action"), option("🧧 Anime"), option("✍️ Animation"), option("🎮 CGI-3D"), option("🎥 Documentary")):style]`
 > > > 
-> > > **Season:** `$= dv.current().volume`
-> > > 
-> > > **Director:** `$= dv.current().director` 
-> > >  
-> > > **Stil:** `$= dv.current().style`
-> > > 
-> > >  **Genre:** `$= dv.current().genre`
-
-
-
-## 📺 Season Overview
-
-
-| Season | Progress | Episodes | Status |
-| ------ | -------- | -------- | ------ |
-| S<%- vol.padStart(2, '0') %> | <%- p %>% | <%- epNow %>/<%- epMax %> | 🍿 |
-
-## 📝 Notes
-- 
+> > > **Genre:**
+> > > `INPUT[text:genre]`
+> > > **Director:**
+> > > `INPUT[text:director]`
+> > > **Cast:**
+> > > `INPUT[text:actors]`
 
 ## 🎞️ Episode Log
 
-| Season | Episode | Title/Note | Date |
-| ------- | ----- | ----------- | ----- |
-| <%- vol %> | <%- epNow %> | | <%- tp.date.now("YYYY-MM-DD") %> |
+| Season | Episode | Rating | Title/Note | Date |
+| ------ | ------- | ------ | ---------- | ---- |
+| <%- vol %> | <%- epNow %> | | | <%- tp.date.now("YYYY-MM-DD") %> |
+## 📝 Notes
+- 
 
+## 📺 Season Overview
 
-
-
-
+> [!abstract] Progress
+> ```dataviewjs
+> const c = dv.current();
+> let rows = [];
+> let totalWatched = 0;
+> let totalMax = 0;
+> 
+> for (let i = 1; i <= c.season; i++) {
+>     let max = c[`s${i}_max`] || 0;
+>     let watched = (i < c.season) ? max : c.episode;
+>     
+>     totalWatched += watched;
+>     totalMax += max;
+>     
+>     let p = max > 0 ? Math.round((watched / max) * 100) : 0;
+>     let bar = p >= 100 ? "✅ Completed" : "█".repeat(Math.floor(p/10)) + "░".repeat(10-Math.floor(p/10)) + " " + p + "%";
+>     let maxDisplay = max > 0 ? max : "⚠️ `s" + i + "_max` missing!";
+>     let statusIcon = p >= 100 ? "🏆" : "🍿";
+>     
+>     // Output formatted to match your old aesthetic exactly
+>     rows.push([`S${String(i).padStart(2,'0')}`, bar, `${watched} / ${maxDisplay}`, statusIcon]);
+> }
+> 
+> dv.table(["Season", "Progress", "Episodes", "Status"], rows);
+> ```
 
 
 
 
 ---
 [[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]
-
----
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 

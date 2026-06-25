@@ -527,6 +527,23 @@
           "templateFile": "zData/3snippets/setupFitness.md"
         }
       ]
+    },
+    {
+      "label": "+1 Ep & Log",
+      "icon": "",
+      "style": "default",
+      "class": "",
+      "cssStyle": "",
+      "backgroundImage": "",
+      "tooltip": "",
+      "id": "add-episode",
+      "hidden": false,
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-episode.md"
+        }
+      ]
     }
   ],
   "excludedFolders": []
