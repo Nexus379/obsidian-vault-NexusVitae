@@ -453,7 +453,7 @@ const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 > - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
 > -  **Journal** AM: `INPUT[toggle:journal_am]` 
 > 	- *Gratitude, Fascinating, Braindump*
-> - **Fitness** AM: `INPUT[number:fitness_am]`
+> - **Fitness** AM: `INPUT[number:fitness_am]` min
 > - [ ] 🛏️ Make bed & air out the room
 > - [ ] 🍽️ Empty dishwasher
 > - [ ] 🍵 Make tea
@@ -464,104 +464,109 @@ const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 > <%- tp.variables.routineSync %>
 > 
 > ```dataviewjs
-> const c = dv.current();
-> const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
-> let Nexus = null;
-> try { Nexus = await (require(enginePath))(app); } catch(e) {}
+> // 🔱 START DER BERECHNUNG (Als Promise verpackt, damit andere warten können)
+> window.dailyResonancePromise = (async () => {
+>      const c = dv.current();
+>      const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
+>      let Nexus = null;
+>      try { Nexus = await (require(enginePath))(app); } catch(e) {}
 > 
-> // 🔱 1. LOAD BASELINE (Parse-Safe Injection)
-> let rawJson = String.raw`<%- tp.variables.nexusJson %>`;
-> let baseData = {};
-> if (rawJson && !rawJson.startsWith("<")) {
->      try { baseData = JSON.parse(rawJson); } catch(e) { console.log("JSON Parse Error", e); }
-> }
-> 
-> let totals = {};
-> for(let k in baseData) {
->      let metric = k.replace("nexus_", "");
->      totals[metric] = Number(baseData[k]) || 0;
-> }
-> 
-> for(let k in c) {
->      if(k.startsWith("nexus_")) {
->          let metric = k.replace("nexus_", "");
->          totals[metric] = Number(c[k]) || totals[metric] || 0;
+>      // 🔱 1. LOAD BASELINE (Parse-Safe Injection)
+>      let rawJson = String.raw`<%- tp.variables.nexusJson %>`;
+>      let baseData = {};
+>      if (rawJson && !rawJson.startsWith("<")) {
+>            try { baseData = JSON.parse(rawJson); } catch(e) { console.log("JSON Parse Error", e); }
 >      }
-> }
 > 
-> ["kcal", "protein_g", "fat_total_g", "carbs_total_g", "vit_c_mg", "iron_total_mg", "magnesium_mg", "zinc_mg"].forEach(m => {
->      if(totals[m] === undefined) totals[m] = 0;
-> });
-> 
-> let mealLog = [];
-> let atomLog = [];
-> 
-> // 🔱 2. MEAL MODIFIERS (Spontaneous Add/Remove)
-> const processMeal = async (links, isPlus) => {
->      if(!links) return;
->      let arr = Array.isArray(links) ? links : [links];
->      for(let link of arr) {
->          let pathStr = typeof link === "object" ? link.path : String(link).replace(/[\[\]"]/g, "").split("|")[0].trim();
->          let p = dv.page(pathStr);
->          if(p) { 
->              let portions = Number(p.portions) || 1;
->              for(let k in p) {
->                  if(k.startsWith("recipe_")) {
->                      let metric = k.replace("recipe_", "");
->                      if(!totals[metric]) totals[metric] = 0;
->                      totals[metric] += (Number(p[k]) / portions) * (isPlus ? 1 : -1);
->                  }
->              }
->              mealLog.push((isPlus ? "➕ 🍱 " : "➖ 🍱 ") + " **" + p.file.name + "**");
->          } else if (Nexus && Nexus.calculate) { 
->              let v = Nexus.calculate(pathStr, 1);
->              if(v) {
->                  for(let k in v) {
->                      let metric = k.replace("recipe_", ""); 
->                      if(!totals[metric]) totals[metric] = 0;
->                      totals[metric] += v[k] * (isPlus ? 1 : -1);
->                  }
->                  mealLog.push((isPlus ? "➕ 🍔 " : "➖ 🍔 ") + " **" + (Nexus.find(pathStr)?.label || pathStr) + "**");
->              }
->          }
+>      let totals = {};
+>      for(let k in baseData) {
+>            let metric = k.replace("nexus_", "");
+>            totals[metric] = Number(baseData[k]) || 0;
 >      }
-> };
-> await processMeal(c.meal_spont, true);
-> await processMeal(c.meal_rem, false);
 > 
-> // 🔱 3. ATOM MODIFIERS (Alchemy)
-> if (Nexus && Nexus.calculate) {
->      const processAtom = (links, isPlus) => {
->          if(!links) return;
->          let arr = Array.isArray(links) ? links : [links];
->          arr.forEach(id => {
->              let v = Nexus.calculate(id, 1);
->              if(v) {
->                  for(let k in v) {
->                      let metric = k.replace("recipe_", ""); 
->                      if(!totals[metric]) totals[metric] = 0;
->                      totals[metric] += v[k] * (isPlus ? 1 : -1);
->                  }
->                  atomLog.push((isPlus ? "➕ 🧪 " : "➖ 🧪 ") + " _" + (Nexus.find(id)?.label || id) + "_");
->              }
->          });
+>      for(let k in c) {
+>            if(k.startsWith("nexus_")) {
+>                let metric = k.replace("nexus_", "");
+>                totals[metric] = Number(c[k]) || totals[metric] || 0;
+>            }
+>      }
+> 
+>      ["kcal", "protein_g", "fat_total_g", "carbs_total_g", "vit_c_mg", "iron_total_mg", "magnesium_mg", "zinc_mg"].forEach(m => {
+>            if(totals[m] === undefined) totals[m] = 0;
+>      });
+> 
+>      let mealLog = [];
+>      let atomLog = [];
+> 
+>      // 🔱 2. MEAL MODIFIERS (Spontaneous Add/Remove)
+>      const processMeal = async (links, isPlus) => {
+>            if(!links) return;
+>            let arr = Array.isArray(links) ? links : [links];
+>            for(let link of arr) {
+>                let pathStr = typeof link === "object" ? link.path : String(link).replace(/[\[\]"]/g, "").split("|")[0].trim();
+>                let p = dv.page(pathStr);
+>                if(p) { 
+>                    let portions = Number(p.portions) || 1;
+>                    for(let k in p) {
+>                        if(k.startsWith("recipe_")) {
+>                            let metric = k.replace("recipe_", "");
+>                            if(!totals[metric]) totals[metric] = 0;
+>                            totals[metric] += (Number(p[k]) / portions) * (isPlus ? 1 : -1);
+>                        }
+>                    }
+>                    mealLog.push((isPlus ? "➕ 🍱 " : "➖ 🍱 ") + " **" + p.file.name + "**");
+>                } else if (Nexus && Nexus.calculate) { 
+>                    let v = Nexus.calculate(pathStr, 1);
+>                    if(v) {
+>                        for(let k in v) {
+>                            let metric = k.replace("recipe_", ""); 
+>                            if(!totals[metric]) totals[metric] = 0;
+>                            totals[metric] += v[k] * (isPlus ? 1 : -1);
+>                        }
+>                        mealLog.push((isPlus ? "➕ 🍔 " : "➖ 🍔 ") + " **" + (Nexus.find(pathStr)?.label || pathStr) + "**");
+>                    }
+>                }
+>            }
 >      };
->      processAtom(c.food_add, true);
->      processAtom(c.food_rem, false);
-> }
+>      await processMeal(c.meal_spont, true);
+>      await processMeal(c.meal_rem, false);
 > 
-> window.dailyResonance = totals;
+>      // 🔱 3. ATOM MODIFIERS (Alchemy)
+>      if (Nexus && Nexus.calculate) {
+>            const processAtom = (links, isPlus) => {
+>                if(!links) return;
+>                let arr = Array.isArray(links) ? links : [links];
+>                arr.forEach(id => {
+>                    let v = Nexus.calculate(id, 1);
+>                    if(v) {
+>                        for(let k in v) {
+>                            let metric = k.replace("recipe_", ""); 
+>                            if(!totals[metric]) totals[metric] = 0;
+>                            totals[metric] += v[k] * (isPlus ? 1 : -1);
+>                        }
+>                        atomLog.push((isPlus ? "➕ 🧪 " : "➖ 🧪 ") + " _" + (Nexus.find(id)?.label || id) + "_");
+>                    }
+>                });
+>            };
+>            processAtom(c.food_add, true);
+>            processAtom(c.food_rem, false);
+>      }
+>      
+>      return { totals, mealLog, atomLog };
+> })();
 > 
 > // 🔱 4. VISUAL SYNTHESIS
-> if (mealLog.length === 0 && atomLog.length === 0) {
+> const data = await window.dailyResonancePromise;
+> 
+> if (data.mealLog.length === 0 && data.atomLog.length === 0) {
 >      dv.paragraph("_Following baseline plan..._");
 > } else {
 >      let outHtml = `<div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 10px; padding: 10px; background: var(--background-secondary-alt); border-radius: 8px;">`;
->      if (mealLog.length > 0) {
->          outHtml += `<div><span style="opacity: 0.7; text-transform: uppercase; font-size: 0.8em; font-weight: bold;">🍔 Spontaneous Meals</span><br>` + mealLog.join("<br>") + `</div>`;
+>      if (data.mealLog.length > 0) {
+>          outHtml += `<div><span style="opacity: 0.7; text-transform: uppercase; font-size: 0.8em; font-weight: bold;">🍔 Spontaneous Meals</span><br>` + data.mealLog.join("<br>") + `</div>`;
 >      }
->      if (atomLog.length > 0) {
->          outHtml += `<div><span style="opacity: 0.7; text-transform: uppercase; font-size: 0.8em; font-weight: bold;">🧪 Alchemy (Ingredients)</span><br>` + atomLog.join("<br>") + `</div>`;
+>      if (data.atomLog.length > 0) {
+>          outHtml += `<div><span style="opacity: 0.7; text-transform: uppercase; font-size: 0.8em; font-weight: bold;">🧪 Alchemy (Ingredients)</span><br>` + data.atomLog.join("<br>") + `</div>`;
 >      }
 >      outHtml += `</div>`;
 >      dv.paragraph(outHtml);
@@ -578,7 +583,10 @@ const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 > >
 > > > [!info] **Live Resonance (Actuals)**
 > > > ```dataviewjs
-> > > const r = window.dailyResonance || { kcal:0, protein_g:0, fat_total_g:0 };
+> > > // 🔱 WARTET AUF BLOCK 1, BEVOR ER LOSLEGT
+> > > const data = window.dailyResonancePromise ? await window.dailyResonancePromise : null;
+> > > const r = data ? data.totals : { kcal:0, protein_g:0, fat_total_g:0 };
+> > > 
 > > > const resStr = (r.kcal <= 0) ? "🔥 **0** kcal | 💪 **0**g Pro | 🥑 **0**g Fat" : "🔥 **" + Math.round(r.kcal) + "** kcal | 💪 **" + r.protein_g.toFixed(1) + "**g Pro | 🥑 **" + r.fat_total_g.toFixed(1) + "**g Fat";
 > > > let mList = []; 
 > > > const gaps = { "protein_g": ["💪 Protein", 100, "g"], "vit_c_mg": ["🍊 Vit C", 100, "mg"], "fiber_g": ["🥦 Fiber", 30, "g"], "omega3_total_mg": ["🐟 Omega-3", 1000, "mg"], "magnesium_mg": ["💎 Magnesium", 350, "mg"], "iron_total_mg": ["🩸 Iron", 15, "mg"], "zinc_mg": ["🛡️ Zinc", 10, "mg"] };
@@ -627,87 +635,87 @@ const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 > > > try { Nexus = await (require(enginePath))(app); } catch(e) {}
 > > > 
 > > > if (!planPage) {
-> > >     dv.paragraph("❌ _No meal plan found._");
+> > >      dv.paragraph("❌ _No meal plan found._");
 > > > } else {
-> > >     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-> > >     const slots = ["brk", "ben", "lun", "snk", "eve"];
-> > >     
-> > >     // 🔱 THE SHOPPING DAY LOGIC (Look-Ahead)
-> > >     const logDate = moment(String(dv.current().cal_date || dv.current().file.name.substring(0, 10)), "YYYY-MM-DD");
-> > >     const referenceDate = logDate.isValid() ? logDate : moment();
-> > >     const todayIdx = referenceDate.day();
-> > >     let lookAhead = (todayIdx === 1) ? 3 : (todayIdx === 4 ? 4 : 1);
-> > >     let periodText = (todayIdx === 1) ? "Mon-Wed (3 Days)" : (todayIdx === 4 ? "Thu-Sun (4 Days)" : "Next 24h");
-> > >     
-> > >     let recipeCounts = {}; 
+> > >      const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+> > >      const slots = ["brk", "ben", "lun", "snk", "eve"];
+> > >      
+> > >      // 🔱 THE SHOPPING DAY LOGIC (Look-Ahead)
+> > >      const logDate = moment(String(dv.current().cal_date || dv.current().file.name.substring(0, 10)), "YYYY-MM-DD");
+> > >      const referenceDate = logDate.isValid() ? logDate : moment();
+> > >      const todayIdx = referenceDate.day();
+> > >      let lookAhead = (todayIdx === 1) ? 3 : (todayIdx === 4 ? 4 : 1);
+> > >      let periodText = (todayIdx === 1) ? "Mon-Wed (3 Days)" : (todayIdx === 4 ? "Thu-Sun (4 Days)" : "Next 24h");
+> > >      
+> > >      let recipeCounts = {}; 
 > > > 
-> > >     // 1. Calculate Consumption Need for specific period
-> > >     for (let i = 0; i < lookAhead; i++) {
-> > >         const dayStr = days[(todayIdx + i) % 7];
-> > >         for (let slot of slots) {
-> > >             let meals = planPage[`${dayStr}_${slot}`];
-> > >             if (!meals) continue;
-> > >             let mealArray = Array.isArray(meals) ? meals : [meals];
-> > >             for (let m of mealArray) {
-> > >                 const cleanId = String(m).replace(/[\[\]"]/g, "").trim();
-> > >                 recipeCounts[cleanId] = (recipeCounts[cleanId] || 0) + 1;
-> > >             }
-> > >         }
-> > >     }
+> > >      // 1. Calculate Consumption Need for specific period
+> > >      for (let i = 0; i < lookAhead; i++) {
+> > >          const dayStr = days[(todayIdx + i) % 7];
+> > >          for (let slot of slots) {
+> > >              let meals = planPage[`${dayStr}_${slot}`];
+> > >              if (!meals) continue;
+> > >              let mealArray = Array.isArray(meals) ? meals : [meals];
+> > >              for (let m of mealArray) {
+> > >                  const cleanId = String(m).replace(/[\[\]"]/g, "").trim();
+> > >                  recipeCounts[cleanId] = (recipeCounts[cleanId] || 0) + 1;
+> > >              }
+> > >          }
+> > >      }
 > > > 
-> > >     let neededAtoms = {};
+> > >      let neededAtoms = {};
 > > > 
-> > >     // 2. Inventory & Batch Calculation
-> > >     for (let [recipeName, neededServings] of Object.entries(recipeCounts)) {
-> > >         const recipe = dv.page(recipeName);
-> > >         if (!recipe) continue;
+> > >      // 2. Inventory & Batch Calculation
+> > >      for (let [recipeName, neededServings] of Object.entries(recipeCounts)) {
+> > >          const recipe = dv.page(recipeName);
+> > >          if (!recipe) continue;
 > > > 
-> > >         let stored = Number(recipe.portions_stored) || 0;
-> > >         let pDate = recipe.prep_date ? moment(String(recipe.prep_date)) : null;
-> > >         let shelfLife = Number(recipe.prep_shelf_life) || 4; 
-> > >         let isExpired = (stored > 0 && pDate && referenceDate.diff(pDate, 'days') > shelfLife);
-> > >         
-> > >         if (isExpired) stored = 0; // Expired stock is ignored
+> > >          let stored = Number(recipe.portions_stored) || 0;
+> > >          let pDate = recipe.prep_date ? moment(String(recipe.prep_date)) : null;
+> > >          let shelfLife = Number(recipe.prep_shelf_life) || 4; 
+> > >          let isExpired = (stored > 0 && pDate && referenceDate.diff(pDate, 'days') > shelfLife);
+> > >          
+> > >          if (isExpired) stored = 0; // Expired stock is ignored
 > > > 
-> > >         let deficit = neededServings - stored;
-> > >         let rYield = Number(recipe.portions) || 1; 
+> > >          let deficit = neededServings - stored;
+> > >          let rYield = Number(recipe.portions) || 1; 
 > > > 
-> > >         if (deficit > 0) {
-> > >             let batchesToCook = Math.ceil(deficit / rYield);
-> > >             for (let key in recipe) {
-> > >                 if (key.startsWith("amt_")) {
-> > >                     const atomId = key.replace("amt_", "");
-> > >                     const amountPerBatch = Number(recipe[key]) || 0;
-> > >                     neededAtoms[atomId] = (neededAtoms[atomId] || 0) + (amountPerBatch * batchesToCook);
-> > >                 }
-> > >             }
-> > >         }
-> > >     }
+> > >          if (deficit > 0) {
+> > >              let batchesToCook = Math.ceil(deficit / rYield);
+> > >              for (let key in recipe) {
+> > >                  if (key.startsWith("amt_")) {
+> > >                      const atomId = key.replace("amt_", "");
+> > >                      const amountPerBatch = Number(recipe[key]) || 0;
+> > >                      neededAtoms[atomId] = (neededAtoms[atomId] || 0) + (amountPerBatch * batchesToCook);
+> > >                  }
+> > >              }
+> > >          }
+> > >      }
 > > > 
-> > >     // 3. UI Generation (Clean Design & English)
-> > >     dv.paragraph(`<div style="font-size: 0.8em; opacity: 0.6; margin-bottom: 8px; text-transform: uppercase;">Scanning: <b>${periodText}</b></div>`);
-> > >     
-> > >     let html = `<div style="display: flex; flex-direction: column; gap: 6px;">`;
-> > >     const sortedAtoms = Object.entries(neededAtoms).sort();
-> > >     
-> > >     if (sortedAtoms.length > 0) {
-> > >         sortedAtoms.forEach(([id, amount]) => {
-> > >             const item = Nexus ? Nexus.find(id) : null;
-> > >             const label = item ? (item.label || id) : id.replace(/_/g, " ");
-> > >             const icon = item ? (item.icon || "📦") : "📦";
-> > >             const unit = "g";
-> > >             const val = Math.round(amount * 1000) / 10;
-> > >             
-> > >             html += `<div style="display: flex; justify-content: space-between; padding: 6px 10px; background: var(--background-secondary-alt); border-radius: 6px; border-left: 3px solid var(--interactive-accent); font-size: 0.9em;">
-> > >                 <span>${icon} <b>${label}</b></span>
-> > >                 <span style="opacity:0.8; font-family: monospace;">${val} ${unit}</span>
-> > >             </div>`;
-> > >         });
-> > >     } else {
-> > >         html += `<div style="padding: 10px; opacity: 0.6; text-align: center; background: var(--background-secondary); border-radius: 6px;">_Inventory stable. No batch ingredients needed._</div>`;
-> > >     }
-> > >     html += `</div>`;
-> > >     dv.paragraph(html);
+> > >      // 3. UI Generation (Clean Design & English)
+> > >      dv.paragraph(`<div style="font-size: 0.8em; opacity: 0.6; margin-bottom: 8px; text-transform: uppercase;">Scanning: <b>${periodText}</b></div>`);
+> > >      
+> > >      let html = `<div style="display: flex; flex-direction: column; gap: 6px;">`;
+> > >      const sortedAtoms = Object.entries(neededAtoms).sort();
+> > >      
+> > >      if (sortedAtoms.length > 0) {
+> > >          sortedAtoms.forEach(([id, amount]) => {
+> > >              const item = Nexus ? Nexus.find(id) : null;
+> > >              const label = item ? (item.label || id) : id.replace(/_/g, " ");
+> > >              const icon = item ? (item.icon || "📦") : "📦";
+> > >              const unit = "g";
+> > >              const val = Math.round(amount * 1000) / 10;
+> > >              
+> > >              html += `<div style="display: flex; justify-content: space-between; padding: 6px 10px; background: var(--background-secondary-alt); border-radius: 6px; border-left: 3px solid var(--interactive-accent); font-size: 0.9em;">
+> > >                  <span>${icon} <b>${label}</b></span>
+> > >                  <span style="opacity:0.8; font-family: monospace;">${val} ${unit}</span>
+> > >              </div>`;
+> > >          });
+> > >      } else {
+> > >          html += `<div style="padding: 10px; opacity: 0.6; text-align: center; background: var(--background-secondary); border-radius: 6px;">_Inventory stable. No batch ingredients needed._</div>`;
+> > >      }
+> > >      html += `</div>`;
+> > >      dv.paragraph(html);
 > > > }
 > > > ```
 > > > <br>[[2_Areas/4_Organize/Shopping_Hub|➡️ Open Central Procurement Hub]]
@@ -878,7 +886,7 @@ const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 > > - **Selfcare** PM: `INPUT[toggle:selfcare_pm]`
 > > - **Journal** PM: `INPUT[toggle:journal_pm]` 
 > > 	- *Gratitude, Fascinating, Braindump*
-> > - **Fitness** PM: `INPUT[number:fitness_pm]`
+> > - **Fitness** PM: `INPUT[number:fitness_pm]` min
 > > - [ ] 🍽️ Load & start dishwasher
 > > - [ ] 🗑️ Check trash & take out if needed
 > > - [ ] 🛋️ 5-Minute Reset (clear tables & surfaces)

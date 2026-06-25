@@ -10,7 +10,7 @@ cssclasses:
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
 ---
->[!multi-column]
+> [!multi-column]
 >  
 > > [!blank|wide-0]
 > > ### 🔱 **NEXUS NAVIGATOR**
@@ -22,14 +22,11 @@ cssclasses:
 > >      container.style.margin = "0 auto";
 > > 
 > >      if (!container.querySelector('canvas')) {
-> >          const days = 90; 
-> >          const start = moment().subtract(days, 'days').startOf('day');
-> > 
-> >          // Scan resources (Path & Tag combined)
-> >          const entries = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => 
-> >              String(p.arch || p.file.etags || "").includes("#6") || 
-> >              p.file.path.includes("6_Resources")
-> >          );
+> >          // 🔱 FIX 1: Findet Ressourcen jetzt lückenlos in ALLEN Meta-Feldern
+> >          const entries = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => {
+> >              const allTags = (String(p.arch || "") + " " + String(p.archtype || "") + " " + String(p.file.etags || "")).toLowerCase();
+> >              return allTags.includes("#6") || p.file.path.includes("6_Resources");
+> >          });
 > > 
 > >          const resLabels = ["AI", "Articles", "Boardgames", "Books", "Classes", "Courses", "Films", "Games", "Guides", "Museums", "Music", "Papers", "Recipes", "Reference", "Series", "Videos"];
 > >          const resTags = ["ai", "article", "boardgame", "book", "class", "course", "film", "game", "guide", "museum", "music", "paper", "recipe", "reference", "serie", "video"];
@@ -37,8 +34,14 @@ cssclasses:
 > > 
 > >          const counts = resTags.map(tag => 
 > >              entries.filter(p => {
-> >                  const metadata = String(p.file.path + p.archtype + p.file.tags + p.arch).toLowerCase();
-> >                  return metadata.includes(tag);
+> >                  const meta = (p.file.path + " " + String(p.arch || "") + " " + String(p.archtype || "") + " " + String(p.file.tags || "")).toLowerCase();
+> >                  
+> >                  // 🔱 FIX 2: Die "Fallen" umgehen
+> >                  // '\b' zwingt Dataview, nur nach dem alleinstehenden Wort zu suchen.
+> >                  if (tag === "ai") return meta.match(/\bai\b/) || meta.includes("#6resou/ai"); // Kein Treffer mehr bei "Daily" oder "Email"
+> >                  if (tag === "game") return meta.match(/\bgames?\b/) && !meta.includes("boardgame"); // Trennt normale Games von Boardgames
+> >                  
+> >                  return meta.includes(tag);
 > >              }).length
 > >          );
 > > 
@@ -87,10 +90,11 @@ cssclasses:
 > > > ```dataviewjs
 > > > const recent = dv.pages('!"zData" AND -"yArchive"')
 > > >      .where(p => p.inbox !== true)
-> > >      .where(p => (
-> > >          String(p.arch || "").includes("#6") || 
-> > >          p.file.path.includes("6_Resources")
-> > >      ))
+> > >      .where(p => {
+> > >          // 🔱 FIX 3: Auch hier die Metadaten sicher kombinieren
+> > >          const allTags = (String(p.arch || "") + " " + String(p.archtype || "") + " " + String(p.file.etags || "")).toLowerCase();
+> > >          return allTags.includes("#6") || p.file.path.includes("6_Resources");
+> > >      })
 > > >      .where(p => !p.file.name.toLowerCase().includes("dashboard") && 
 > > >                  !p.file.name.toLowerCase().includes("moc") && 
 > > >                  !p.file.path.includes("y-Archive"))
@@ -98,12 +102,15 @@ cssclasses:
 > > >      .limit(10);
 > > > 
 > > > const getEmoji = (p) => {
-> > >      const meta = String(p.file.path + (p.archtype || "") + (p.file.tags || "")).toLowerCase();
+> > >      const meta = (p.file.path + " " + String(p.archtype || "") + " " + String(p.arch || "") + " " + String(p.file.tags || "")).toLowerCase();
+> > >      
+> > >      // 🔱 Emojis erweitert, damit das Radar noch besser aussieht
 > > >      if (meta.includes("📚") || meta.includes("book")) return "📚";
-> > >      if (meta.includes("🎥") || meta.includes("video")) return "🎥";
-> > >      if (meta.includes("📄") || meta.includes("article")) return "📄";
-> > >      if (meta.includes("🎓") || meta.includes("study") || meta.includes("course")) return "🎓";
-> > >      if (meta.includes("🎙️") || meta.includes("audio") || meta.includes("pod")) return "🎙️";
+> > >      if (meta.includes("🎥") || meta.includes("video") || meta.includes("film") || meta.includes("serie")) return "🎥";
+> > >      if (meta.includes("📄") || meta.includes("article") || meta.includes("paper")) return "📄";
+> > >      if (meta.includes("🎓") || meta.includes("study") || meta.includes("course") || meta.includes("class")) return "🎓";
+> > >      if (meta.includes("🎙️") || meta.includes("audio") || meta.includes("pod") || meta.includes("music")) return "🎙️";
+> > >      if (meta.includes("🎲") || meta.includes("game") || meta.includes("boardgame")) return "🎲";
 > > >      return "🔖"; 
 > > > };
 > > > 

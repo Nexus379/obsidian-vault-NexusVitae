@@ -35,8 +35,7 @@
               "title": "Nexus Vitae Guide"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +109,7 @@
       {
         "id": "7dda4bfe97ef493b",
         "type": "tabs",
-        "dimension": 53.68888888888889,
+        "dimension": 50,
         "children": [
           {
             "id": "feab8170b1408f9c",
@@ -118,25 +117,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2_Areas/6_Activity/Fitness_Routine.md",
+                "file": "zData/1tmpl/0calendar/dailyplm.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Fitness_Routine"
-            }
-          },
-          {
-            "id": "7ab2f0ab66e3a51e",
-            "type": "leaf",
-            "state": {
-              "type": "file-properties",
-              "state": {
-                "file": "zData/3snippets/add-daily-alchemy.md"
-              },
-              "icon": "lucide-info",
-              "title": "File properties for add-daily-alchemy"
+              "title": "Outline of dailyplm"
             }
           },
           {
@@ -150,24 +137,6 @@
             }
           },
           {
-            "id": "3d2fde3a55a9fc17",
-            "type": "leaf",
-            "state": {
-              "type": "chronology-calendar-view",
-              "state": {},
-              "icon": "clock",
-              "title": "Chronology"
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "93fb1a17dccd2f4c",
-        "type": "tabs",
-        "dimension": 46.31111111111111,
-        "children": [
-          {
             "id": "5d8d3e3e2d5a69ad",
             "type": "leaf",
             "state": {
@@ -180,6 +149,26 @@
               "icon": "lucide-file",
               "title": "CalendarMonth"
             }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "93fb1a17dccd2f4c",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "7ab2f0ab66e3a51e",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "README.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for README"
+            }
           },
           {
             "id": "59c1b1a0b136d6e0",
@@ -187,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2_Areas/4_Organize/Routine.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +186,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Routine"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -243,12 +232,11 @@
               "title": "All properties"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 222
+    "width": 271
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -268,9 +256,12 @@
       "flashcards-obsidian:Generate flashcards": false
     }
   },
-  "active": "8b8196953c253bc8",
+  "active": "7019ec2cdfbdedbf",
   "lastOpenFiles": [
+    "0_Atlas/Nexus Vitae Guide.md",
     "README.md",
+    "zData/5design_modul/CalendarMonth.md",
+    "0_Atlas/0_Dashboard/6-Resources.md",
     "zData/1tmpl/0calendar/dailyplm.md",
     "zData/1tmpl/0calendar/dailyppm.md",
     "zData/1tmpl/6resources/sourceserie.md",
@@ -296,9 +287,6 @@
     "zData/3snippets/add-cook-method.md",
     "zData/1tmpl/0calendar/revy.md",
     "zData/1tmpl/0calendar/revw.md",
-    "zData/1tmpl/0calendar/revw 1.md",
-    "zData/1tmpl/0calendar/revq.md",
-    "zData/1tmpl/0calendar/revh.md",
     "2_Areas/1_Selfcare/Nutrition",
     "6_Resources/Recipes/Recipes.base",
     "zData/2scripts/fitnessEngine.js",
