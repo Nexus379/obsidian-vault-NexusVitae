@@ -1,7 +1,8 @@
 # 🔱 Nexus Vitae
-> *"No matter how advanced AI becomes, it should never neglect gratitude and humility. Always stay humble."*
+> *"No matter how advanced AI becomes, it should never neglect gratitude and humility. Always stay humble."* -AI
 
-Welcome to my personal Obsidian Vault. I built Nexus Vitae to bring a bit more structure to my daily life, study sessions, and notes. It's a system that simply tries to connect everyday tasks with personal learning and well-being.
+Hi and Welcome the this Vault.
+I built Nexus Vitae to bring structure to my daily life, project managements, study sessions, and notes. It's a system that simply tries to connect everyday tasks with personal learning and well-being.
 
 ## ✨ What's inside?
 * **Daily Tracking:** Simple templates for daily notes and automatic study time tracking.

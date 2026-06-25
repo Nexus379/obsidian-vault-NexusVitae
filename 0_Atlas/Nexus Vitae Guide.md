@@ -7,7 +7,14 @@
 
 ---
 ## 🚀 Quick-Start
-### 1. Create a File
+### 1. Plan 
+- Fill your Plan
+	- [[2_Areas/4_Organize/Routine-Timeblocking|Routine-Timeblocking]]
+	- [[2_Areas/6_Activity/Fitness_Routine|Fitness_Routine]]
+	- [[2_Areas/1_Selfcare/Nutrition/Meal_Plan|Meal_Plan]]
+	- [[2_Areas/3_Mind/Timetable|Timetable]]
+
+### 2. Create a File
 There are three ways to start a new entry:
 - **The Nexus Way (Recommended):** Press `Ctrl + Alt + N`. This triggers the **Router-Template** immediately. 
 - **The Standard Way:** Press `Ctrl + N` to create a file in the `0_Inbox`.
@@ -16,7 +23,6 @@ There are three ways to start a new entry:
 	2. use "New Note" Symbol
 	3. use shorts to create file 
 		- [[n- new note from arch note]]
-
 
 | **Short** | **Target / Archtype**                                              |
 | --------- | ------------------------------------------------------------------ |
@@ -27,6 +33,12 @@ There are three ways to start a new entry:
 | `a-`      | **Area:** Connect to one of your 7 Life-Areas (Chakras).           |
 | `r-`      | **Resource:** Log books, recipes, or research materials.           |
 | `cal-`    | **Calendar:** Open your Daily Journal (PLM) or Strategy Log (PPM). |
+
+### 3. Log your day
+- create a new note
+- choose calendar for Journal , Log, Studylog 
+	- log your day
+	- have an overview
 
 ## 🌍 The Lineage of Inspiration (Methodology & Philosophy)
 The Nexus system is a synthesis of cognitive science, ancient wisdom, deep psychology, and modern productivity. The journey began long before digital tools, rooted in the realization that while a digital system can hold the overview, the physical hands must execute the work. 

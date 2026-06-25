@@ -352,7 +352,7 @@ const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 > > > **Focus (Monthly):**
 > > > 
 > > > `INPUT[text:focusM_plm]`  
-> > > <small style="opacity:0.5;">Days remaining: `$= Math.max(0,30 - moment().diff(moment(dv.current().focusM_start),"days"))` · Start: `$= dv.current().focusM_start ?? ""`</small>
+> > > <small style="opacity:0.5;">Days remaining: `$= dv.current().focusM_start ? Math.max(0, 30 - moment().startOf('day').diff(moment(String(dv.current().focusM_start)).startOf('day'), 'days')) : 30` · Start: `$= dv.current().focusM_start ? moment(String(dv.current().focusM_start)).format("YYYY-MM-DD") : ""`</small>
 > > > 
 > > > `BUTTON[reset-focus]`
 

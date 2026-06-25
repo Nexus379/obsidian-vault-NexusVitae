@@ -219,7 +219,7 @@ const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 > > > **Strategic Focus**
 > > > 
 > > > <small>Monthly Cycle:</small>
-> > > `INPUT[text:focusM_ppm]` `BUTTON[reset-focus]` <small style="opacity:0.5;">`$= const c = dv.current(); (c.focusM_ppm && c.focusM_start) ? Math.max(0, 30 - moment(c.file.name.substring(0,10)).diff(moment(String(c.focusM_start).substring(0,10)), "days")) + "d left" : ""`</small>
+> > > `INPUT[text:focusM_ppm]` `BUTTON[reset-focus]` <small style="opacity:0.5;">`$= const c = dv.current(); (c.focusM_ppm && c.focusM_start) ? Math.max(0, 30 - moment().startOf('day').diff(moment(String(c.focusM_start)).startOf('day'), 'days')) + "d left" : ""`</small>
 > > > 
 > > > ```dataviewjs
 > > > const curr = dv.current();
