@@ -126,6 +126,7 @@ s<%- vol %>_max: <%- epMax %>
 > [!reference] Details
 > >[!multi-column]
 > > > [!blank]
+> > > **ID:** <%- luhmannId %> 
 > > > ![[<%- pureCover %>|150]]
 > > > 
 > > > **Season:** `INPUT[number:season]`
@@ -134,23 +135,69 @@ s<%- vol %>_max: <%- epMax %>
 > > > `BUTTON[add-episode]` 
 > > 
 > > > [!blank]
-> > > **ID:** <%- luhmannId %> 
 > > > **Style:** `INPUT[suggester(option("🎬 Live-Action"), option("🧧 Anime"), option("✍️ Animation"), option("🎮 CGI-3D"), option("🎥 Documentary")):style]`
 > > > 
 > > > **Genre:**
-> > > `INPUT[text:genre]`
-> > > **Director:**
-> > > `INPUT[text:director]`
+> > > `INPUT[inlineList:genre]`
 > > > **Cast:**
-> > > `INPUT[text:actors]`
+> > > `INPUT[inlineList:actors]`
+> > > **Director:**
+> > > `INPUT[inlineList:director]`
 
 ## 🎞️ Episode Log
+```dataviewjs
+let content = await dv.io.load(dv.current().file.path);
+let lines = content.split('\n');
+let seasons = {};
+let currentSeason = null;
 
-| Season | Episode | Rating | Title/Note | Date |
-| ------ | ------- | ------ | ---------- | ---- |
-| <%- vol %> | <%- epNow %> | | | <%- tp.date.now("YYYY-MM-DD") %> |
+for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+    
+    if (line.startsWith("### 📺 S")) {
+        currentSeason = line.replace("### 📺", "").trim();
+        if (!seasons[currentSeason]) seasons[currentSeason] = [];
+    }
+    
+    // Die neue Logik für deine kompakte Zeile: #### 🎬 E02 ➖ | 2026-06-25
+    if (line.startsWith("#### 🎬 E") && currentSeason) {
+        let cleanLine = line.replace("#### 🎬 E", "").trim();
+        let parts = cleanLine.split("|");
+        
+        // Trennt die Episode (02) von den Sternen (➖ oder ⭐⭐⭐)
+        let epAndRating = parts[0].trim();
+        let ep = epAndRating.split(" ")[0]; 
+        let rating = epAndRating.replace(ep, "").trim() || "➖"; 
+        
+        let date = parts[1] ? parts[1].trim() : "";
+        
+        // Notiz-Vorschau aus der Zeile direkt darunter lesen
+        let note = "";
+        if (lines[i+1] && lines[i+1].startsWith("📝")) {
+            note = lines[i+1].replace("📝", "").trim();
+            if (note.length > 40) note = note.substring(0, 37) + "...";
+        }
+        
+        seasons[currentSeason].push([ep, rating, date, note]);
+    }
+}
+
+let hasEpisodes = false;
+for (let s in seasons) {
+    if (seasons[s].length > 0) {
+        hasEpisodes = true;
+        dv.header(3, "📺 Season " + s);
+        dv.table(["Episode", "Rating", "Date", "Note Preview"], seasons[s]);
+    }
+}
+
+if (!hasEpisodes) {
+    dv.paragraph("No episodes logged yet.");
+}
+```
+
 ## 📝 Notes
-- 
+
 
 ## 📺 Season Overview
 
@@ -179,7 +226,6 @@ s<%- vol %>_max: <%- epMax %>
 > 
 > dv.table(["Season", "Progress", "Episodes", "Status"], rows);
 > ```
-
 
 
 

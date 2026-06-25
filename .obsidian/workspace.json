@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7bf70e7d990693de",
+            "id": "7019ec2cdfbdedbf",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.00499725341797
+    "width": 311.00499725341797,
+    "collapsed": true
   },
   "right": {
     "id": "5234691d1cea0fcc",
@@ -233,7 +234,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222
+    "width": 222,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -253,9 +255,21 @@
       "flashcards-obsidian:Generate flashcards": false
     }
   },
-  "active": "b03e6c11cbf79544",
+  "active": "7019ec2cdfbdedbf",
   "lastOpenFiles": [
+    "zData/1tmpl/6resources/sourceserie.md",
     "README.md",
+    "zData/3snippets/add-episode.md",
+    "6_Resources/Series/Entry-06-25-19.md",
+    "zData/3snippets/add-disc-pkm.md",
+    "zData/1tmpl/6resources/sourceserie 1.md",
+    "6_Resources/Series/Series-13-22.md",
+    "0_Inbox/Untitled 1.md",
+    "0_Inbox/Untitled.md",
+    "zData/1tmpl/0calendar/dailypkm.md",
+    "6_Resources/Series/test seriee.md",
+    "6_Resources/Series/test serie.md",
+    "zData/1tmpl/6resourcesprompt.md",
     "zData/3snippets/NexusFreezer.md",
     "zData/3snippets/add-timetable-slot.md",
     "zData/1tmpl/0calendar/dailyplm.md",
@@ -272,18 +286,6 @@
     "zData/1tmpl/0calendar/revw 1.md",
     "zData/1tmpl/0calendar/revq.md",
     "zData/1tmpl/0calendar/revh.md",
-    "zData/1tmpl/0calendar/revm.md",
-    "zData/1tmpl/0calendar/dailypkm.md",
-    "zData/1tmpl/0calendar/revm 1.md",
-    "zData/1tmpl/0calendar/revd.md",
-    "zData/1tmpl/0calendar/protocol.md",
-    "zData/1tmpl/0calendar/projectlog.md",
-    "zData/1tmpl/0calendarprompt.md",
-    "zData/1tmpl/routertemp.md",
-    "2_Areas/4_Organize/Routine-Timeblocking.md",
-    "0_Calendar/1_Logs/2026/06/2026-06-16 pkm.md",
-    "0_Calendar/1_Logs/2026/06/2026-06-16 plm.md",
-    "0_Calendar/1_Logs/2026/06/2026-06-16 ppm.md.md",
     "2_Areas/1_Selfcare/Nutrition",
     "6_Resources/Recipes/Recipes.base",
     "zData/2scripts/fitnessEngine.js",
