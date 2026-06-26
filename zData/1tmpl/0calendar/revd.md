@@ -7,7 +7,7 @@ const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
 if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
     const [yy, mm] = dateStr.split("-");
     const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
-    const targetFolder = `${baseCal}/4_Reviews/Daily/${yy}/${mm}`;
+    const targetFolder = `${baseCal}/6_Reviews/0_Master/${yy}/${mm}`;
     const finalTitle = `${dateStr} revD`;
     const finalDest = `${targetFolder}/${finalTitle}.md`;
 
@@ -30,16 +30,16 @@ let projFocusList = [];
 let protFocusList = [];
 
 if (dv) {
-    const pages = dv.pages('"0_Calendar"').where(p => p.cal_date === dateStr);
+    const pages = dv.pages().where(p => p.cal_date === dateStr);
     
-    plm = pages.where(p => String(p.archtype).includes("1plm")).first();
-    ppm = pages.where(p => String(p.archtype).includes("2ppm")).first();
-    pkm = pages.where(p => String(p.archtype).includes("3pkm")).first();
+    plm = pages.where(p => String(p.archtype).includes("#0cal/1plm")).first();
+    ppm = pages.where(p => String(p.archtype).includes("#0cal/2ppm")).first();
+    pkm = pages.where(p => String(p.archtype).includes("#0cal/3pkm")).first();
 
-    const projs = pages.where(p => String(p.archtype).includes("projectlog")).array();
+    const projs = pages.where(p => String(p.archtype).includes("#0cal/4projectlog")).array();
     projs.forEach(p => { if (p.focus_LOG) projFocusList.push(p.focus_LOG); });
 
-    const prots = pages.where(p => String(p.archtype).includes("protocol")).array();
+    const prots = pages.where(p => String(p.archtype).includes("#0cal/5protocol")).array();
     prots.forEach(p => { if (p.focusD_prot) protFocusList.push(p.focusD_prot); });
 }
 
@@ -74,7 +74,7 @@ tp.variables.focusM_ppm     = getVal(ppm, "focusM_ppm");
 // --- PKM Sync ---
 tp.variables.focusD_pkm     = getVal(pkm, "focusD_pkm"); 
 tp.variables.focusM_pkm     = getVal(pkm, "focusM_pkm");
-tp.variables.brainDrain_revD = getVal(pkm, "brain-drain", "1");
+tp.variables.brainDrain_revD = getVal(pkm, "brain_drain", "1");
 tp.variables.mood_pkm_revD   = getVal(pkm, "mood", getVal(plm, "mood", "3")); 
 
 // 🎯 DYNAMIC STUDY UNITS EXTRACTOR
@@ -146,7 +146,7 @@ sentiment: 3
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_plm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_plm || "..." %>**
 > > ---
-> > - **Energy:** `$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
+> > - **Energy:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
 > > - **Mood:** `<%- tp.variables.mood_plm_revD %>/5`
 > > - **Sleep:** `<%- tp.variables.sleep_revD %>h` | **Fitness:** `<%- tp.variables.fitness_revD %>m`
 > > - **Fuel:** 🔥 `<%- tp.variables.kcal_revD %>` | 💪 `<%- tp.variables.protein_revD %>g`
@@ -158,22 +158,22 @@ sentiment: 3
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_ppm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_ppm || "..." %>**
 > > ---
-> > - **Energy:** `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
+> > - **Energy:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
 > > - **Main Execution:**
-> >     1. `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask1 || "—"`
-> >     2. `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask2 || "—"`
-> >     3. `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask3 || "—"`
-> >     4. `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask4 || "—"`
+> >     1. `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p?.maintask1 || "—"`
+> >     2. `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p?.maintask2 || "—"`
+> >     3. `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p?.maintask3 || "—"`
+> >     4. `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p?.maintask4 || "—"`
 > > <br>
 > > - **Maintenance:**
-> >     - 🧹 `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask5 || "—"`
-> >     - 🧼 `$= const p = dv.pages('#0cal/2ppm').where(p => p.cal_date === "<%- dateStr %>").first(); p?.maintask6 || "—"`
+> >     - 🧹 `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p?.maintask5 || "—"`
+> >     - 🧼 `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p?.maintask6 || "—"`
 >
 > > [!info|wide-1] 🌼 PKM (Knowledge)
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_pkm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_pkm || "..." %>**
 > > ---
-> > - **Energy:** `$= const p = dv.pages('#0cal/3pkm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
+> > - **Energy:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/3pkm") && p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
 > > - **Mindset:** Brain Drain `<%- tp.variables.brainDrain_revD %>/5`
 > > <br>
 > > - **Study Units Logged:**
@@ -187,8 +187,8 @@ sentiment: 3
 >
 > > [!pink|wide-1] 🍽️ PLM: Fuel & Body
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Totals</small>
-> > - 🔥 **`$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_kcal : 0`** kcal
-> > - 💪 **`$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_protein_g : 0`**g Protein
+> > - 🔥 **`$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_kcal : 0`** kcal
+> > - 💪 **`$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_protein_g : 0`**g Protein
 > > ---
 > > <small style="opacity:0.5; text-transform:uppercase;">Meal Log Details</small>
 > > [[<%- dateStr %> plm|↗️ Open Today's Journal]]
@@ -204,7 +204,7 @@ sentiment: 3
 > > ---
 > > <small style="opacity:0.5; text-transform:uppercase;">Project Nexus Activity</small>
 > > ```dataviewjs
-> > const pr = dv.pages('#0cal/4projectlog').where(p => p.cal_date === "<%- dateStr %>");
+> > const pr = dv.pages().where(p => String(p.archtype).includes("#0cal/4projectlog") && p.cal_date === "<%- dateStr %>");
 > > if(pr.length > 0) dv.list(pr.map(p => "🧩 [[" + p.file.name + "|" + (p.displayTitle || p.file.name) + "]]: " + (p.focus_LOG || "Update")));
 > > else dv.paragraph("_No project logs recorded._");
 > > ```
@@ -212,7 +212,7 @@ sentiment: 3
 > > [!abstract|wide-1] 🎓 PKM: Knowledge Gained
 > > <small style="opacity:0.5; text-transform:uppercase;">Subject Deep-Dive (Min)</small>
 > > ```dataviewjs
-> > const p = dv.pages('#0cal/3pkm').where(p => p.cal_date === "<%- dateStr %>").first();
+> > const p = dv.pages().where(p => String(p.archtype).includes("#0cal/3pkm") && p.cal_date === "<%- dateStr %>").first();
 > > if (p) {
 > >     const subjects = ["english", "german", "math", "latin", "physics", "biology", "chemistry", "history", "philosophy", "politics", "economics", "law", "psychology", "art", "music"];
 > >     let learned = [];

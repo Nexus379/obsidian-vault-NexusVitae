@@ -13,11 +13,15 @@ const yy = end.split("-")[0];
 // 🔱 2. PATH & TITLE LOGIC (Backsafe for direct template starts)
 if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
     const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
-    const targetFolder = `${baseCal}/4_Reviews/Yearly`;
+    const targetFolder = `${baseCal}/6_Reviews/0_Master/${yy}`;
     const finalTitle = `${yy} revY - ${displayTitle}`;
     const finalDest = `${targetFolder}/${finalTitle}.md`;
 
-    if (!app.vault.getAbstractFileByPath(targetFolder)) await app.vault.createFolder(targetFolder);
+    let currentPath = "";
+    for (const seg of targetFolder.split('/')) {
+        currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;
+        if (!app.vault.getAbstractFileByPath(currentPath)) await app.vault.createFolder(currentPath);
+    }
     if (tp.file.title !== finalTitle) await tp.file.rename(finalTitle);
     if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
         await new Promise(r => setTimeout(r, 200));
@@ -92,9 +96,9 @@ status: 1active
 > > [!info|wide-1] 🌷 PLM: Resilience
 > > <small style="opacity:0.5; text-transform:uppercase;">365-Day Averages</small>
 > >
-> > - **Avg Energy:** `$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
-> > - **Avg Sleep:** `$= const p = dv.pages('#0cal/1plm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
-> > - **Total Fitness:** `$= dv.pages('#0cal/1plm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.fitness_am) || 0) + (Number(p.fitness_pm) || 0), 0)` min
+> > - **Avg Energy:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
+> > - **Avg Sleep:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
+> > - **Total Fitness:** `$= dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.fitness_am) || 0) + (Number(p.fitness_pm) || 0), 0)` min
 <%* } -%>
 <%* if (isMaster || revModule === "ppm" || revModule === "proj") { -%>
 >
@@ -114,10 +118,14 @@ status: 1active
 > > <small style="opacity:0.5; text-transform:uppercase;">Key Projects Active</small>
 > >
 >> ```dataviewjs
->> const pr = dv.pages('#0cal/4projectlog').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
+>> const pr = dv.pages().where(p => String(p.archtype).includes("#0cal/4projectlog") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
 >> let projects = new Set();
 >> pr.forEach(x => { 
->>     if ("<%- revModule %>" !== "proj" || x.file.name.includes("<%- logConnect.replace(/[\[\]]/g, '') %>") || (x.file.outlinks && String(x.file.outlinks).includes("<%- logConnect.replace(/[\[\]]/g, '') %>"))) {
+>>     const projName = "<%- logConnect.replace(/[\[\]]/g, '') %>";
+>>     const linkedProject = String(x.project3 || "").includes(projName) || x.file.name.includes(projName) || (x.file.outlinks && String(x.file.outlinks).includes(projName));
+>>     if ("<%- revModule %>" !== "proj" || linkedProject) {
+>>         const projectRefs = Array.isArray(x.project3) ? x.project3 : (x.project3 ? [x.project3] : []);
+>>         projectRefs.forEach(l => projects.add(String(l).replace(/^\[\[/, "").replace(/\]\]$/, "").split("|")[0].split("/").pop().replace(".md", "")));
 >>         if(x.file.outlinks && x.file.outlinks.length > 0) x.file.outlinks.forEach(l => projects.add(l.path.split('/').pop().replace('.md','')));
 >>     }
 >> });
@@ -131,7 +139,7 @@ status: 1active
 > > <small style="opacity:0.5; text-transform:uppercase;">Time per Subject (Hours)</small>
 > >
 >> ```dataviewjs
->> const p = dv.pages('#0cal/3pkm').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
+>> const p = dv.pages().where(p => String(p.archtype).includes("#0cal/3pkm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
 >> const subjects = ["english", "german", "math", "latin", "physics", "biology", "chemistry", "history", "philosophy", "politics", "economics", "law", "psychology", "art", "music"];
 >> let totals = {};
 >> p.forEach(x => {
@@ -157,7 +165,7 @@ status: 1active
 > <small style="opacity:0.5; text-transform:uppercase;">Summarizing your Half-Yearly Reviews</small>
 >
 >> ```dataviewjs
->> const halfyears = dv.pages('#0cal/1review/halfyear').where(p => p.rev_end >= "<%- start %>" && p.rev_end <= "<%- end %>").sort(p => p.rev_end, "asc");
+>> const halfyears = dv.pages().where(p => String(p.archtype).includes("#0cal/1review/halfyear") && p.rev_end >= "<%- start %>" && p.rev_end <= "<%- end %>").sort(p => p.rev_end, "asc");
 >> let filteredH = halfyears;
 >> if ("<%- revModule %>" !== "master") {
 >>     filteredH = halfyears.where(w => w.rev_module === "<%- revModule %>" && w.connected_log === "<%- logConnect %>");

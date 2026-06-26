@@ -47,7 +47,7 @@ cssclasses:
 > >         const getFreshData = () => {
 > >             const start = moment().subtract(7, 'days').startOf('day');
 > >             const entries = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => 
-> >                 p.file.ctime >= start || (p['cal-date'] && moment(p['cal-date'].toString()).isAfter(start))
+> >                 p.file.ctime >= start || (p.cal_date && moment(p.cal_date.toString()).isAfter(start))
 > >             );
 > > 
 > >             const plm = entries.filter(p => 
@@ -238,7 +238,7 @@ cssclasses:
 > >         const getNoteDate = (p) => {
 > >             if (p.file.path.includes("0_Calendar")) {
 > >                 if (/^\d{4}-\d{2}-\d{2}/.test(p.file.name)) return p.file.name.substring(0, 10);
-> >                 if (p['cal-date']) return String(p['cal-date']).substring(0, 10);
+> >                 if (p.cal_date) return String(p.cal_date).substring(0, 10);
 > >             }
 > >             return moment(p.file.cday.toString()).format("YYYY-MM-DD");
 > >         };
@@ -308,7 +308,6 @@ cssclasses:
 > > 
 > > ```
 >   
-
 
 
 

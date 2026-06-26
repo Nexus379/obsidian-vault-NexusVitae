@@ -76,6 +76,6 @@ const tFile = app.vault.getAbstractFileByPath(tPath);
 if (tFile) {
     tR += await tp.file.include(tFile);
 } else {
-    new Notice("❌ Nexus Star-Template fehlt: " + tPath);
+    new Notice("❌ Nexus Star-Template missing: " + tPath);
 }
 -%>

@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # Series Resources
-| [[0_Atlas/0_Dashboard/6-Resources|Resources]] | [[0_Atlas/0_Dashboard/6-Resources/Boardgame|🎲 Boardgame]] | [[0_Atlas/0_Dashboard/6-Resources/Games|🕹️ Games]] | [[0_Atlas/0_Dashboard/6-Resources/Films|🎬 Films]] | [[0_Atlas/0_Dashboard/6-Resources/Series|🎞️ Series]] | [[0_Atlas/0_Dashboard/6-Resources/Music|🎶 Music]] |
+| [[0_Atlas/0_Dashboard/6-Resources|Resources]] | [[0_Atlas/Bases/Resourcebase.base|Resourcebase]] | [[0_Atlas/0_Dashboard/6-Resources/AI|AI]] | [[0_Atlas/0_Dashboard/6-Resources/Articles|Articles]] | [[0_Atlas/0_Dashboard/6-Resources/Boardgame|Boardgame]] | [[0_Atlas/0_Dashboard/6-Resources/Books|Books]] | [[0_Atlas/0_Dashboard/6-Resources/Classes|Classes]] | [[0_Atlas/0_Dashboard/6-Resources/Courses|Courses]] | [[0_Atlas/0_Dashboard/6-Resources/Films|Films]] | [[0_Atlas/0_Dashboard/6-Resources/Games|Games]] | [[0_Atlas/0_Dashboard/6-Resources/Guides|Guides]] | [[0_Atlas/0_Dashboard/6-Resources/Museums|Museums]] | [[0_Atlas/0_Dashboard/6-Resources/Music|Music]] | [[0_Atlas/0_Dashboard/6-Resources/Papers|Papers]] | [[0_Atlas/0_Dashboard/6-Resources/Recipes|Recipes]] | [[0_Atlas/0_Dashboard/6-Resources/Reference|Reference]] | [[0_Atlas/0_Dashboard/6-Resources/Series|Series]] | [[0_Atlas/0_Dashboard/6-Resources/Videos|Videos]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -39,8 +39,11 @@ cssclasses:
 > >     for (let it of activeItems.sort(it => it.file.mtime, 'desc').slice(0, 10)) {
 > >         const meta = it.director || it.author || it.style || "";
 > >         let progress = "";
-> >         if (it.volume) progress += `S${it.volume} `;
-> >         if (it["episode-now"]) progress += `E${it["episode-now"]}` + (it["episode-max"] ? `/${it["episode-max"]}` : "");
+> >         const season = it.season ?? it.volume;
+> >         const episode = it.episode ?? it.episode_now;
+> >         const episodeMax = season ? (it[`s${season}_max`] ?? it.episode_max) : it.episode_max;
+> >         if (season) progress += `S${season} `;
+> >         if (episode) progress += `E${episode}` + (episodeMax ? `/${episodeMax}` : "");
 > >         progress = progress.trim() || it.progressBar || (clean(it.status).includes("0start") ? "Start" : "Active");
 > > 
 > >         html += `<div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:7px 10px; border-bottom:1px solid var(--background-modifier-border);">`;

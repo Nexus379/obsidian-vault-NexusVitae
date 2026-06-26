@@ -14,8 +14,8 @@ dv.header(2, "📦 Household & Manual Extras");
 let extras = [];
 
 // A. Direkt aus dieser Datei (Einkaufsliste.md)
-if (p["shopping-extras"]) {
-    p["shopping-extras"].forEach(item => extras.push(`- [ ] 📦 ${item}`));
+if (p.shopping_extras) {
+    p.shopping_extras.forEach(item => extras.push(`- [ ] 📦 ${item}`));
 }
 
 // B. Spontane Mahlzeiten aus dem heutigen Journal (Falls vorhanden)

@@ -28,13 +28,36 @@ for (const seg of coverFolder.split('/')) {
 }
 
 // Searches for an image named exactly like the recipe (lowercase, no spaces)
-let cleanName = title.toLowerCase().replace(/\s+/g, ""); 
-let pureCover = app.vault.getAbstractFileByPath(`${coverFolder}/${cleanName}-cover.jpg`) ? `${coverFolder}/${cleanName}-cover.jpg` : "";
+function coverSlug(name) {
+    return String(name || "").trim()
+        .replace(/([a-z0-9])([A-Z])/g, "$1_$2")
+        .replace(/['’]/g, "")
+        .replace(/[^A-Za-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "")
+        .toLowerCase();
+}
+function coverCore(name) {
+    return String(name || "").toLowerCase()
+        .replace(/\.[^.]+$/, "")
+        .replace(/[-_\s]*cover$/i, "")
+        .replace(/[^a-z0-9]/g, "");
+}
+function findCover(folder, name) {
+    const dir = app.vault.getAbstractFileByPath(folder);
+    const target = coverCore(name);
+    const exts = ["jpg", "jpeg", "png", "webp"];
+    if (!dir || !dir.children) return "";
+    const hit = dir.children.find(f => f.extension && exts.includes(f.extension.toLowerCase()) && coverCore(f.name) === target);
+    return hit ? hit.path : "";
+}
+
+let cleanName = coverSlug(title); 
+let pureCover = findCover(coverFolder, title);
 
 // Fallback: If no image is found, prompt for one
 if (!pureCover) {
     let manual = await tp.system.prompt("🖼️ Recipe Image Filename (no .jpg)?", cleanName + "-cover");
-    pureCover = `${coverFolder}/${manual}.jpg`;
+    pureCover = manual ? `${coverFolder}/${manual}.jpg` : "";
 }
 
 // Title cleaning for the visual H1 heading

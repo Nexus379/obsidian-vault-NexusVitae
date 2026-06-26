@@ -63,8 +63,8 @@ let aim3Focus = "";
 if (dv) {
     // Wir suchen in den entsprechenden Ordnern nach einer Datei, 
     // die mit dem Datum beginnt, egal was danach im Namen steht.
-    const plmPage = dv.pages(`"0_Calendar/1_Logs/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} plm`));
-    const pkmPage = dv.pages(`"0_Calendar/1_Logs/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} pkm`));
+    const plmPage = dv.pages(`"0_Calendar/1_PLM/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} plm`));
+    const pkmPage = dv.pages(`"0_Calendar/3_PKM/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} pkm`));
     
     aim1Focus = plmPage ? (plmPage.focusD_plm || "") : "";
     aim3Focus = pkmPage ? (pkmPage.focusD_pkm || "") : "";
@@ -76,7 +76,7 @@ let focusM_Date = dateStr; // Fallback auf heute
 
 if (dv) {
     // Suche alle PPMs im aktuellen Monatsordner
-    const monthlyLogs = dv.pages(`"0_Calendar/1_Logs/${year}/${month}"`)
+    const monthlyLogs = dv.pages(`"0_Calendar/2_PPM/${year}/${month}"`)
         .where(p => p.focusM_ppm && p.focusM_ppm !== "")
         .sort(p => p.file.name, "desc");
 
@@ -145,7 +145,7 @@ tp.variables.maintask5 = uniqueWorkTasks[4] || "";
 tp.variables.maintask6 = uniqueWorkTasks[5] || "";
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
-const targetFolder = `0_Calendar/1_Logs/${y}/${m}`;
+const targetFolder = `0_Calendar/2_PPM/${y}/${m}`;
 const finalDest = `${targetFolder}/${finalTitle}.md`;
 
 // Monthly Focus Start (falls nicht gesetzt)
@@ -204,8 +204,8 @@ cal_date: <%- dateStr %>
 // 🔱 3. DYNAMISCHE LINKS ZU DEN ANDEREN LOGS
 
 // Pfade zu den Schwester-Logs (Journal & Study)
-const todayPLM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} plm`;
-const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
+const todayPLM = `0_Calendar/1_PLM/${year}/${month}/${dateStr} plm`;
+const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 %>
 **Selfcare:** [[<%- todayPLM %>|🌷 Go to today's Journal (PLM)]]
 **Knowledge:** [[<%- todayPKM %>|🌼 Go to today's Study-Log (PKM)]]
@@ -227,8 +227,8 @@ const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
 > > > const [yy, mm] = logDate.split("-");
 > > > 
 > > > // Sucht gezielt nach "[Datum] plm" und "[Datum] pkm"
-> > > const plm = dv.pages(`"0_Calendar/1_Logs/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} plm`));
-> > > const pkm = dv.pages(`"0_Calendar/1_Logs/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} pkm`));
+> > > const plm = dv.pages(`"0_Calendar/1_PLM/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} plm`));
+> > > const pkm = dv.pages(`"0_Calendar/3_PKM/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} pkm`));
 > > > 
 > > > dv.paragraph(
 > > >     "<small>🌷 Aim 1: PLM (Selfcare)</small><br>**" + (plm?.focusD_plm || "...") + "**<br><br>" +

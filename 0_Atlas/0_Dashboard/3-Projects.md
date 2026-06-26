@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # 🚧 Projects
-| [[0_Atlas/0_Dashboard/3-Projects/0-Recurring|🔄 Recurring]] | [[0_Atlas/0_Dashboard/3-Projects/1-Active|⚡ Active]] | [[0_Atlas/0_Dashboard/3-Projects/2-Passive|⏳ Passive]] | [[0_Atlas/0_Dashboard/3-Projects/3-Idea|💡 Ideas]] |
+| [[0_Atlas/0_Dashboard/3-Projects|Projects]] | [[0_Atlas/0_Dashboard/3-Projects/0-Recurring|Recurring]] | [[0_Atlas/0_Dashboard/3-Projects/1-Active|Active]] | [[0_Atlas/0_Dashboard/3-Projects/2-Passive|Passive]] | [[0_Atlas/0_Dashboard/3-Projects/3-Idea|Ideas]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -75,7 +75,7 @@ cssclasses:
 > > > const pages = dv.pages('"3_Projects" AND !"zData" AND -"yArchive"')
 > > >      .where(p => p.inbox !== true)
 > > >      .where(p => String(p.status).toLowerCase() === "1active")
-> > >      .where(p => !dv.array(p.status).includes("❇️done"))
+> > >      .where(p => !dv.array(p.status).some(s => ["done", "archived", "bin"].includes(String(s))))
 > > >      .sort(p => p.priority, "desc")
 > > >      .limit(8);
 > > > 

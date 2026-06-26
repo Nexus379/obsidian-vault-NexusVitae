@@ -7,7 +7,7 @@ const SYS = tp.variables.SYS || { tmpl: "zData/1tmpl" };
 let title = tp.variables.title || tp.file.title;
 
 if (!title || title.trim() === "" || title.toLowerCase().includes(defaultName.toLowerCase())) {
-    title = await tp.system.prompt("✏️ Nexus Note: Name der Notiz?", "");
+    title = await tp.system.prompt("✏️ Nexus Note: Note name?", "");
 }
 if (!title || title.trim() === "") title = "Note_" + tp.date.now("HH_mm");
 

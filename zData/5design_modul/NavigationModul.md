@@ -2,13 +2,20 @@
 >>[!overview]- [[0_Atlas/0_Dashboard/0-Dashboard|💫 Dashy]]
 >> - [[0_Atlas/0_Dashboard/0-Inbox|💌 Inbox]] 
 >>
+>> - [[0_Atlas/Bases/Inboxbase.base|Inboxbase]]
+>>
 >> - [[0_Atlas/0_Dashboard/0-Calendar|0-📅 Calendar]] 
+>>
+>> - [[0_Atlas/Bases/Calendarbase.base|Calendarbase]]
 >>
 >> - [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🎓 PKM]]
 >>
 >> - [[0_Atlas/0_Dashboard/y-Archive|📦 Archive]]
+>>
 > 
 >>[!stars]- [[0_Atlas/0_Dashboard/1-Stars|1-Stars]] 
+>> - [[0_Atlas/Bases/1-Stars/Stars.base|Starsbase]]
+>>
 >> - [[0_Atlas/0_Dashboard/1-Stars/1-Purpose|🌟Purpose]]
 >>
 >> - [[0_Atlas/0_Dashboard/1-Stars/2-Vision|🧭Vision]]
@@ -16,6 +23,8 @@
 >> - [[0_Atlas/0_Dashboard/1-Stars/3-Goals|🎯Goals]]
 >
 >>[!pink]- [[0_Atlas/0_Dashboard/2-Areas|💠Areas]] 
+>> - [[0_Atlas/Bases/2-Areas/Areas.base|Areasbase]]
+>>
 >> - [[0_Atlas/0_Dashboard/2-Areas/1-Selfcare|🌸Selfcare]]
 >>
 >> - [[0_Atlas/0_Dashboard/2-Areas/2-Relationship|🦄Relationship]]
@@ -64,6 +73,8 @@
 >> - [[0_Atlas/0_Dashboard/4-Tasks/9-ToGet|ToGet]]
 >
 >>[!literature]- [[0_Atlas/0_Dashboard/5-Notes|✏️Notes]] 
+>> - [[0_Atlas/Bases/5-Notes/Notes.base|Notesbase]]
+>>
 >> - [[0_Atlas/0_Dashboard/5-Notes/1-Fleeting|🍂Fleeting]]
 >>
 >> - [[0_Atlas/0_Dashboard/5-Notes/2-Literature|📘Literatur]]
@@ -76,6 +87,8 @@
 >>
 >
 >> [!source]- [[0_Atlas/0_Dashboard/6-Resources|🔖Resources]]
+>> - [[0_Atlas/Bases/Resourcebase.base|Resourcebase]]
+>>
 >> - [[0_Atlas/0_Dashboard/6-Resources/AI|🤖AI]]
 >>
 >> - [[0_Atlas/0_Dashboard/6-Resources/Articles|📄Articles]]
@@ -110,5 +123,9 @@
 >>
 >
 >>[!archive]- [[0_Atlas/0_Dashboard/y-Archive|📦Archive]]
+>>
+>> - [[0_Atlas/Bases/yArchiveBase.base|Archivebase]]
+>>
+>> - [[0_Atlas/0_Dashboard/yArchive/Statusboard|Statusboard]]
 >>
 > 

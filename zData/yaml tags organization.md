@@ -76,6 +76,7 @@ archtype:
   - "#6resou/serie"
   - "#6resou/video"
 inbox: false
+aliases:
 axis:
   - "PLM"
   - "PPM"
@@ -121,12 +122,11 @@ plattform:
   - Perplexity-AI
   - Local
 author:
+creator_sort:
 artist:
+director_sort:
 publisher:
-pub-date:
-season-max:
-season-now:
-episode-now:
+pub_date:
 genre:
   - Self-Dev
   - Philosophy
@@ -276,13 +276,20 @@ discipline:
   - "#disc/FilmStudies"
   - "#disc/MediaStudies"
 isbn:
-original-title:
+original_title:
 rating:
   - "1"
 ranking:
 chapter:
+chapter_now:
 volume:
-volume-max:
+volume_max:
+season:
+episode:
+episode_max:
+s1_max:
+s2_max:
+s3_max:
 subject:
 due:
 do:
@@ -331,14 +338,14 @@ persona:
 sleep:
 mood:
 energy:
-journal-am:
-journal-pm:
-fitness-am:
-fitness-pm:
-selfcare-am:
-selfcare-pm:
+journal_am:
+journal_pm:
+fitness_am:
+fitness_pm:
+selfcare_am:
+selfcare_pm:
 meal:
-vita-snap:
+vita_snap:
 focus: ""
 aim1: ""
 aim2: ""
@@ -348,27 +355,31 @@ maintask2: ""
 maintask3: ""
 maintask4: ""
 maintask5: ""
-cal-date:
+cal_date:
+rev_start:
+rev_end:
+brain_drain:
+shopping_extras:
 kcal:
-protein-g:
-carbs-g:
-fat-g:
-fiber-g:
-vit-a:
-vit-b1:
-vit-b2:
-vit-b3:
-vit-b5:
-vit-b6:
-vit-b7:
-vit-b9:
-vit-b12:
-vit-c:
-vit-d:
-vit-e:
-vit-k:
-magnesium-mg:
-iron-mg:
+protein_g:
+carbs_g:
+fat_g:
+fiber_g:
+vit_a:
+vit_b1:
+vit_b2:
+vit_b3:
+vit_b5:
+vit_b6:
+vit_b7:
+vit_b9:
+vit_b12:
+vit_c:
+vit_d:
+vit_e:
+vit_k:
+magnesium_mg:
+iron_mg:
 zinc:
 calcium:
 potassium:
@@ -427,12 +438,12 @@ difficulty:
 #0cal/3pkm
 
 #### Review
-#0cal/1review
-#0cal/1review/weekly
-#0cal/1review/monthly
-#0cal/1review/quarterly
-#0cal/1review/halfyear
-#0cal/1review/yearly
+#0cal/6review
+#0cal/6review/weekly
+#0cal/6review/monthly
+#0cal/6review/quarterly
+#0cal/6review/halfyear
+#0cal/6review/yearly
 
 #### Projectlog
 #0cal/4projectlog
@@ -464,6 +475,7 @@ difficulty:
 #3project/propay
 #3project/procook
 #3project/procraft
+#3project/proget
 
 ### 4 Task
 #4task
@@ -480,6 +492,7 @@ difficulty:
 #4task/topay
 #4task/tocook
 #4task/tocraft
+#4task/toget
 
 ### 5 Note
 #5note/1fleeting
@@ -591,38 +604,38 @@ alle nach / sind ausgeschriebene Wörter: ENG = English zb41
 ## Science
 ### Scientiae
 1. Natural Sciences - Naturwissenschaften
-#science/NaturalSci 
+#sci/NaturalSci 
 2. Humanities - Soziale Wissenschaften
-#science/Humanities 
+#sci/Humanities 
 3. Social Sciences - Sozialwissenschaften
-#science/SocialSci 
+#sci/SocialSci 
 4. Engineering - Ingenieurwissenschaften
-#science/Engineering 
+#sci/Engineering 
 5. Medicine_and_Health Sciences - Medizin und Geseundheitswissenschaften
-#science/Med-and-HealthSci 
+#sci/Med-and-HealthSci 
 6. Economics and Business Administration - Wirtschaftswissenschaften
-#science/EcoANDBusiness-Admin 
+#sci/BusinessAdmin 
 7. Law - Rechtswissenschaften
-#science/Law 
+#sci/Law 
 8. Arts - Künste
-#science/Arts 
+#sci/Arts 
 9. Agriculture and Forestry Sciences - Agrar- und Frostwissenschaft
-#science/Agri-and-ForestSci 
+#sci/Agri-and-ForestSci 
 ### weniger gängige
 10. Sport Sciences - Sportwissenschaften
-#science/SportSci 
+#sci/SportSci 
 11. Communication and Media Studies - Kommunikatios-und Medienwissenschaft
-#science/Communic-and-MediaStudies 
+#sci/Communic-and-MediaStudies 
 12. Information Sciences - Informatioswissenschaft
-#science/InformationSci 
+#sci/InformationSci 
 13. Environmental Sciences - Umweltwissenschaft
-#science/EnvironmentalSci 
+#sci/EnvironmentalSci 
 14. Education - Erziehungswissenschaft
-#science/Education 
+#sci/Education 
 15. Theology and Philosophy of Religion - Theologie und Religionsphilosophie
-#science/TheoANDPhilo-of-Religion 
+#sci/TheoANDPhilo-of-Religion 
 16. Library and Information Science - Bibliotheks- und Informationswissenschaft
-#science/Lib-and-InfoSci 
+#sci/Lib-and-InfoSci 
 17. Planning Studies - Planungswissenschaft
-#science/PlanningStudies 
+#sci/PlanningStudies 
 

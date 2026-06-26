@@ -60,19 +60,15 @@ try {
             }
             else if (currentContext === "logs" && dv) {
                 const configs = [
-                    { label: "Journal", folder: '"0_Calendar/1_Logs"', suffix: " plm" },
-                    { label: "Log", folder: '"0_Calendar/1_Logs"', suffix: " ppm" },
-                    { label: "Study", folder: '"0_Calendar/1_Logs"', suffix: " pkm" },
-                    { label: "Project", folder: '!"zData" AND -"yArchive"', archtype: "projectlog" },
-                    { label: "Protocol", folder: '"0_Calendar/3_Protocols"' },
-                    { label: "Review", folder: '"0_Calendar/4_Reviews"' }
+                    { label: "Journal", archtype: "#0cal/1plm" },
+                    { label: "Log", archtype: "#0cal/2ppm" },
+                    { label: "Study", archtype: "#0cal/3pkm" },
+                    { label: "Project", archtype: "#0cal/4projectlog" },
+                    { label: "Protocol", archtype: "#0cal/5protocol" },
+                    { label: "Review", archtype: "#0cal/6review" }
                 ];
                 configs.forEach(cfg => {
-                    const pages = cfg.suffix
-                        ? dv.pages(cfg.folder).where(p => p.file.name.toLowerCase().includes(cfg.suffix))
-                        : cfg.archtype
-                            ? dv.pages(cfg.folder).where(p => String(p.archtype || "").includes(cfg.archtype))
-                        : dv.pages(cfg.folder);
+                    const pages = dv.pages().where(p => String(p.archtype || "").includes(cfg.archtype));
                     const last = pages.sort(p => p.file.name, "desc").first();
                     if (last) finalLines.push(calloutPfx + `- **${cfg.label}:** ${last.file.link}`);
                 });

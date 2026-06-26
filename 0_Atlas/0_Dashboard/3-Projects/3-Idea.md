@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # Idea Projects
-| [[0_Atlas/0_Dashboard/3-Projects|Projects]] | [[0_Atlas/0_Dashboard/3-Projects/0-Recurring|🔄 Recurring]] | [[0_Atlas/0_Dashboard/3-Projects/1-Active|⚡ Active]] | [[0_Atlas/0_Dashboard/3-Projects/2-Passive|⏳ Passive]] | [[0_Atlas/0_Dashboard/3-Projects/3-Idea|💡 Ideas]] |
+| [[0_Atlas/0_Dashboard/3-Projects|Projects]] | [[0_Atlas/0_Dashboard/3-Projects/0-Recurring|Recurring]] | [[0_Atlas/0_Dashboard/3-Projects/1-Active|Active]] | [[0_Atlas/0_Dashboard/3-Projects/2-Passive|Passive]] | [[0_Atlas/0_Dashboard/3-Projects/3-Idea|Ideas]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 

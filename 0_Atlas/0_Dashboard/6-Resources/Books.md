@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # Books Resources
-| [[0_Atlas/0_Dashboard/6-Resources|Resources]] | [[0_Atlas/0_Dashboard/6-Resources/AI|🤖 AI]] | [[0_Atlas/0_Dashboard/6-Resources/Articles|📄 Articles]] | [[0_Atlas/0_Dashboard/6-Resources/Books|📚 Books]] | [[0_Atlas/0_Dashboard/6-Resources/Recipes|🍳 Recipes]] | [[0_Atlas/0_Dashboard/6-Resources/Videos|🎬 Videos]] |
+| [[0_Atlas/0_Dashboard/6-Resources|Resources]] | [[0_Atlas/Bases/Resourcebase.base|Resourcebase]] | [[0_Atlas/0_Dashboard/6-Resources/AI|AI]] | [[0_Atlas/0_Dashboard/6-Resources/Articles|Articles]] | [[0_Atlas/0_Dashboard/6-Resources/Boardgame|Boardgame]] | [[0_Atlas/0_Dashboard/6-Resources/Books|Books]] | [[0_Atlas/0_Dashboard/6-Resources/Classes|Classes]] | [[0_Atlas/0_Dashboard/6-Resources/Courses|Courses]] | [[0_Atlas/0_Dashboard/6-Resources/Films|Films]] | [[0_Atlas/0_Dashboard/6-Resources/Games|Games]] | [[0_Atlas/0_Dashboard/6-Resources/Guides|Guides]] | [[0_Atlas/0_Dashboard/6-Resources/Museums|Museums]] | [[0_Atlas/0_Dashboard/6-Resources/Music|Music]] | [[0_Atlas/0_Dashboard/6-Resources/Papers|Papers]] | [[0_Atlas/0_Dashboard/6-Resources/Recipes|Recipes]] | [[0_Atlas/0_Dashboard/6-Resources/Reference|Reference]] | [[0_Atlas/0_Dashboard/6-Resources/Series|Series]] | [[0_Atlas/0_Dashboard/6-Resources/Videos|Videos]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -64,9 +64,9 @@ cssclasses:
 > > } else {
 > >     for (let b of activeBooks.sort(b => b.file.mtime, 'desc').slice(0, 10)) {
 > >         let progress = "";
-> >         const chapter = (b["chapter-now"] ?? b.chapter);
+> >         const chapter = (b.chapter_now ?? b.chapter);
 > >         if (chapter) progress += `Ch. ${chapter} `;
-> >         if (b.volume) progress += `Vol. ${b.volume}` + (b["volume-max"] ? `/${b["volume-max"]}` : "");
+> >         if (b.volume) progress += `Vol. ${b.volume}` + (b.volume_max ? `/${b.volume_max}` : "");
 > >         progress = progress.trim() || "Reading";
 > >         
 > >         html += `<div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:7px 10px; border-bottom:1px solid var(--background-modifier-border);">`;

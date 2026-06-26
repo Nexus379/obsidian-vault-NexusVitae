@@ -141,7 +141,7 @@ let focusM_plm = "";
 let focusM_Date = dateStr; 
 
 if (dv) {
-    const monthlyLogs = dv.pages(`"0_Calendar/1_Logs/${year}/${month}"`)
+    const monthlyLogs = dv.pages(`"0_Calendar/1_PLM/${year}/${month}"`)
         .where(p => p.focusM_plm && p.focusM_plm !== "")
         .sort(p => p.file.name, "desc");
 
@@ -249,7 +249,7 @@ tp.variables.routineSync = routineBlocks;
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
-const targetFolder = `0_Calendar/1_Logs/${y}/${m}`; // 🎯 HIER GEÄNDERT!
+const targetFolder = `0_Calendar/1_PLM/${y}/${m}`;
 const finalDest = `${targetFolder}/${finalTitle}.md`;
 
 const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : focusM_Date;
@@ -264,8 +264,8 @@ if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
 }
 
 // 🔱 6.5 EAT THE FROG (Path Calculation)
-const ppmPath = `0_Calendar/1_Logs/${year}/${month}/${dateStr} ppm`; // 🎯 HIER GEÄNDERT!
-const pkmPath = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`; // 🎯 HIER GEÄNDERT!
+const ppmPath = `0_Calendar/2_PPM/${year}/${month}/${dateStr} ppm`;
+const pkmPath = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 // 🔱 7. CLEANUP
 if (tp.variables && tp.variables.targetDate) delete tp.variables.targetDate;
@@ -323,8 +323,8 @@ food_rem:
 
 <%-*
 // 🔱 3. DYNAMISCHE LINKS ZU DEN ANDEREN LOGS
-const todayPPM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} ppm`;
-const todayPKM = `0_Calendar/1_Logs/${year}/${month}/${dateStr} pkm`;
+const todayPPM = `0_Calendar/2_PPM/${year}/${month}/${dateStr} ppm`;
+const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 %>
 **Professional:** [[<%- todayPPM %>|🌻 Go to today's Manager-Log (PPM)]]
 **Knowledge:** [[<%- todayPKM %>|🌼 Go to today's Study-Log (PKM)]]

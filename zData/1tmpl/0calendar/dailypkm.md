@@ -64,7 +64,7 @@ let focusM_pkm = "";
 let focusM_Date = dateStr;
 
 if (dv) {
-    const monthlyLogs = dv.pages(`"0_Calendar/1_Logs/${year}/${month}"`)
+    const monthlyLogs = dv.pages(`"0_Calendar/3_PKM/${year}/${month}"`)
         .where(p => p.focusM_pkm && p.focusM_pkm !== "")
         .sort(p => p.file.name, "desc");
 
@@ -81,7 +81,7 @@ if (tp.frontmatter && tp.frontmatter.focusM_pkm) {
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
-const targetFolder = `0_Calendar/1_Logs/${y}/${m}`; // 🎯 HIER GEÄNDERT!
+const targetFolder = `0_Calendar/3_PKM/${y}/${m}`;
 const finalDest = `${targetFolder}/${finalTitle}.md`;
 const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : focusM_Date;
 
@@ -119,16 +119,10 @@ try {
 
         // 4. Wenn wir Fächer gefunden haben, lade die Discipline Engine
         if (dailySubjects.size > 0) {
-            const enginePath = "zData/2scripts/disciplineEngine.js";
-            const eFile = app.vault.getAbstractFileByPath(enginePath);
             let engineData = {};
-            
-            if (eFile) {
-                const code = await app.vault.read(eFile);
-                const module = { exports: {} };
-                new Function("module", "exports", code)(module, module.exports);
-                const engineFn = module.exports;
-                engineData = (typeof engineFn === "function") ? engineFn().all : {};
+            if (typeof tp.user.disciplineEngine === "function") {
+                const engine = tp.user.disciplineEngine();
+                engineData = engine.all || {};
             }
 
             // 5. Baue die Blöcke exakt im Format deines Button-Skripts
@@ -171,7 +165,7 @@ archtype:
 - "#0cal/3pkm"
 persona: student
 energy: "<%- energy %>"
-brain-drain: "<%- drainVal %>"
+brain_drain: "<%- drainVal %>"
 focusD_pkm: "<%- pureFocus %>"
 focusM_pkm: "<%- focusM_pkm %>"
 focusM_start: "<%- focusStart %>"
@@ -215,7 +209,7 @@ music: ""
 > 
 > > [!quote|flat] 📜 On this day
 > > ```dataview
-> > LIST FROM "0_Calendar/1_Logs"
+> > LIST FROM "0_Calendar/3_PKM"
 > > WHERE file.day.month = this.file.day.month AND file.day.day = this.file.day.day
 > > AND contains(file.name, " pkm")
 > > AND file.name != this.file.name
@@ -251,7 +245,7 @@ function createDashboardBox(title, map, fieldName, color, icon) {
 
 // Boxen generieren
 createDashboardBox("System Energy", eMap, "energy", "var(--interactive-accent)", "⚡");
-createDashboardBox("Cognitive Load", bMap, "brain-drain", "#b873f0", "🧠");
+createDashboardBox("Cognitive Load", bMap, "brain_drain", "#b873f0", "🧠");
 ```
 
 
@@ -279,9 +273,10 @@ createDashboardBox("Cognitive Load", bMap, "brain-drain", "#b873f0", "🧠");
 > let totalMin = 0;
 > let disciplineData = {};
 > try {
->     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/disciplineEngine.js";
->     const engine = require(enginePath)();
->     disciplineData = engine.all || {};
+>     if (typeof tp.user.disciplineEngine === "function") {
+>         const engine = tp.user.disciplineEngine();
+>         disciplineData = engine.all || {};
+>     }
 > } catch (e) {}
 > 
 > // Sucht nach allen generierten Schlüsseln, die auf "_min" enden

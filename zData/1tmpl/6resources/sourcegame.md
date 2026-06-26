@@ -34,13 +34,34 @@ for (const seg of coverFolder.split('/')) {
 }
 
 // 🔱 5. AUTO-COVER SCAN
-let cleanName = title.toLowerCase().replace(/\s+/g, ""); 
-let finalImgName = `${cleanName}-cover.jpg`;
-let potentialPath = `${coverFolder}/${finalImgName}`;
-let pureCover = app.vault.getAbstractFileByPath(potentialPath) ? potentialPath : "";
+function coverSlug(name) {
+    return String(name || "").trim()
+        .replace(/([a-z0-9])([A-Z])/g, "$1_$2")
+        .replace(/['’]/g, "")
+        .replace(/[^A-Za-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "")
+        .toLowerCase();
+}
+function coverCore(name) {
+    return String(name || "").toLowerCase()
+        .replace(/\.[^.]+$/, "")
+        .replace(/[-_\s]*cover$/i, "")
+        .replace(/[^a-z0-9]/g, "");
+}
+function findCover(folder, name) {
+    const dir = app.vault.getAbstractFileByPath(folder);
+    const target = coverCore(name);
+    const exts = ["jpg", "jpeg", "png", "webp"];
+    if (!dir || !dir.children) return "";
+    const hit = dir.children.find(f => f.extension && exts.includes(f.extension.toLowerCase()) && coverCore(f.name) === target);
+    return hit ? hit.path : "";
+}
+
+let cleanName = coverSlug(title); 
+let pureCover = findCover(coverFolder, title);
 if (!pureCover) {
     let manual = await tp.system.prompt("🖼️ Game Cover Filename (without .jpg)?", cleanName + "-cover");
-    pureCover = `${coverFolder}/${manual}.jpg`;
+    pureCover = manual ? `${coverFolder}/${manual}.jpg` : "";
 }
 
 // 🔱 6. PLATFORM & GENRE
@@ -102,7 +123,7 @@ priority:
 persona:
 creator:
 director: "<%- rawDir %>" 
-director-sort: "<%- dirSort %>"
+director_sort: "<%- dirSort %>"
 publisher: "<%- studio %>"
 genre:
   - "<%- genre %>"
@@ -112,9 +133,9 @@ plattform:
 progress: <%- p %>
 progressBar: "<%- bar %>"
 playtime: <%- playtime %>
-pub-date:
+pub_date:
 volume:
-volume-max:
+volume_max:
 chapter: ""
 difficulty:
 rating:

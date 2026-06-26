@@ -28,7 +28,7 @@ arch:
 archtype:
   - "#5note/4atomic/nutrition"
 science: 
-  - "#science/Med-Health"
+  - "#sci/Med-and-HealthSci"
 discipline: 
   - "#disc/Biology"
   - "#disc/Chemistry"

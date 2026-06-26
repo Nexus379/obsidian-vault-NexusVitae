@@ -80,18 +80,8 @@ let focus_LOG = await tp.system.prompt(`🎯Focus in '${displayTitle}'?`, "Work 
 if (!focus_LOG) focus_LOG = "Progress Update";
 
 // 🔱 5. ENGINES (Persona & Discipline)
-async function loadEngine(path) {
-  const file = app.vault.getAbstractFileByPath(path);
-  if (!file) return null;
-  const code = await app.vault.read(file);
-  const module = { exports: {} };
-  new Function("module","exports", code)(module, module.exports);
-  const fn = module.exports || module.exports?.default;
-  return typeof fn === "function" ? fn() : null;
-}
-
-const personaEngine = await loadEngine("zData/2scripts/personaEngine.js");
-const discEngineObj = await loadEngine("zData/2scripts/disciplineEngine.js");
+const personaEngine = (typeof tp.user.personaEngine === "function") ? tp.user.personaEngine() : null;
+const discEngineObj = (typeof tp.user.disciplineEngine === "function") ? tp.user.disciplineEngine() : null;
 
 const pLabels = personaEngine ? personaEngine.getPersonaLabels() : [];
 const selP = pLabels.length
@@ -123,7 +113,7 @@ let targetFolder = "";
 if (displayTitle === "General" || displayTitle === "Unlinked") {
     const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
     // 🎯 KORRIGIERT AUF NEUEN ORDNER:
-    targetFolder = `${baseCal}/2_Projectlogs/${yy}/${displayTitle}/${mm}`;
+    targetFolder = `${baseCal}/4_Projectlogs/${yy}/${displayTitle}/${mm}`;
 } else {
     targetFolder = `3_Projects/${selStat}/${displayTitle}/Logs/${yy}/${mm}`;
 }

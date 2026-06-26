@@ -39,7 +39,7 @@ cover: ""
 plattform: ""
 author:
 publisher:
-pub-date:
+pub_date:
 rating: 
 ranking:
 LID: "<%- luhmannId %>"

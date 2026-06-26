@@ -52,7 +52,7 @@ plattform:
 creator: "<%- creator %>"
 artist: "<%- artist %>"
 publisher:
-pub-date:
+pub_date:
 rating: 
 ranking:
 LID: "<%- luhmannId %>"

@@ -48,7 +48,7 @@ priority:
   - "1"
 persona:
 creator: "<%- rawCreator %>"
-creator-sort: "<%- creatorSort %>"
+creator_sort: "<%- creatorSort %>"
 science: ["<%- sci %>"]
 discipline: ["<%- disc %>"]
 subject:

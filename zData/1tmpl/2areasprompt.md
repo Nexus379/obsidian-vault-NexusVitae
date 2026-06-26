@@ -70,7 +70,7 @@ if (typeof tp.user.disciplineEngine === "function") {
         tp.variables.discIcon = "";
     }
 } else {
-    new Notice("⚠️ disciplineEngine.js nicht gefunden!");
+    new Notice("⚠️ disciplineEngine.js not found!");
     tp.variables.sci = "";
     tp.variables.disc = "";
 }

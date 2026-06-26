@@ -7,15 +7,15 @@
 
 > [!multi-column]
 >> [!abstract] 🕒 Chronos Sync
->> **Date:** `VIEW[{cal-date}]`
+>> **Date:** `VIEW[{cal_date}]`
 >> 
 >> **Energy:** `VIEW[{energy}]` / 5
 >> 
->> **Brain-Drain:** `VIEW[{brain-drain}]` / 5
+>> **Brain-Drain:** `VIEW[{brain_drain}]` / 5
 >
 >> [!log]- 📜 On this day
 >> ```dataview
->> LIST FROM "0_Calendar/1_Logs"
+>> LIST FROM "0_Calendar/3_PKM"
 >> WHERE file.day.month = this.file.day.month AND file.day.day = this.file.day.day
 >> AND contains(file.name, " pkm")
 >> AND file.name != this.file.name
@@ -95,7 +95,7 @@ Schwierigkeit (1-5): `INPUT[slider(1, 5):schwierigkeit]`
 TABLE 
   item.name AS "Disziplin-ID",
   item.value AS "Eintrag"
-FROM "0_Calendar/1_Logs"
+FROM "0_Calendar/3_PKM"
 WHERE file.name = this.file.name
 FLATTEN object(file.frontmatter) AS props
 FLATTEN props AS item
@@ -113,7 +113,7 @@ WHERE startswith(item.name, "astro_") OR startswith(item.name, "math_")
 TABLE WITHOUT ID
   L.key AS "Disziplin",
   L.value AS "Eintrag"
-FROM "0_Calendar/1_Logs"
+FROM "0_Calendar/3_PKM"
 WHERE file.name = this.file.name
 FLATTEN file.inline_fields AS L
 WHERE contains(L.key, "astro_") OR contains(L.key, "math_")

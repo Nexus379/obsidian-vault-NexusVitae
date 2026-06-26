@@ -38,7 +38,7 @@ tp.variables.ARCH = {
     c: { label: "Calendar",  folder: "0_Calendar",  icon: "📅", prompt: "0calendarprompt", trigger: ["c","cal"] },
     s: { label: "Stars",     folder: "1_Stars",     icon: "✨", prompt: "1starsprompt", trigger: ["s","stars"] },
     a: { label: "Areas",     folder: "2_Areas",     icon: "💠", prompt: "2areasprompt", trigger: ["a","areas"] },
-    p: { label: "Projects",  folder: "3_Projects",  icon: "🧩", prompt: "3projectesprompt", trigger: ["p","projects"] },
+    p: { label: "Projects",  folder: "3_Projects",  icon: "🧩", prompt: "3projectsprompt", trigger: ["p","projects"] },
     t: { label: "Tasks",     folder: "4_Tasks",     icon: "🛠️", prompt: "4tasksprompt", trigger: ["t","tasks"] },
     n: { label: "Notes",     folder: "5_Notes",     icon: "✏️", prompt: "5notesprompt", trigger: ["n","notes"] },
     r: { label: "Resources", folder: "6_Resources", icon: "🔖", prompt: "6resourcesprompt", trigger: ["r","resources"] }

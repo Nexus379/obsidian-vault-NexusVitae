@@ -40,11 +40,11 @@ plattform: ""
 author:
 genre:
 publisher:
-pub-date:
+pub_date:
 url:
-season-max: 1
-season-now: 1
-episode-now: 1
+season: 1
+episode: 1
+episode_max: 1
 rating: 
 ranking:
 LID: "<%- luhmannId %>"

@@ -22,8 +22,8 @@ banner: "![[xAttachment/Images/Banner/violet sky ocean.jpg]]"
 >> [!construction]+ 🚧 PROJECTS
 >> *Aktive Vorhaben*
 >> ```dataview
->> LIST FROM #3project AND #status/1active
->> WHERE !contains(file.path, "zData")
+>> LIST FROM #3project
+>> WHERE status = "1active" AND !contains(file.path, "zData")
 >> ```
 
 ---
@@ -51,7 +51,7 @@ banner: "![[xAttachment/Images/Banner/violet sky ocean.jpg]]"
 >>   file.link as Titel, 
 >>   Rating as "⭐"
 >> FROM #6resou 
->> WHERE status != "❇️done"
+>> WHERE status != "done" AND status != "archived" AND status != "bin"
 >> LIMIT 5
 >> ```
 
@@ -71,13 +71,13 @@ const content = `
 > [!multi-column]
 >
 >> [!construction] **Aktive Projekte (#3project)**
->> ${dv.pages('#3project').filter(p => p.status == "1⚡active").limit(5).file.link.join("<br>")}
+>> ${dv.pages('#3project').filter(p => p.status == "1active").limit(5).file.link.join("<br>")}
 >
 >> [!edit] **Frisches Wissen (#5note)**
 >> ${dv.pages('#5note').sort(p => p.file.mtime, "desc").limit(5).file.link.join("<br>")}
 >
 >> [!bookmark] **Offene Quellen (#6resou)**
->> ${dv.pages('#6resou').filter(p => p.status != "❇️done").limit(5).file.link.join("<br>")}
+>> ${dv.pages('#6resou').filter(p => !["done", "archived", "bin"].includes(String(p.status))).limit(5).file.link.join("<br>")}
 `;
 
 dv.el("div", content);

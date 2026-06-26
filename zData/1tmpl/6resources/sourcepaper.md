@@ -29,15 +29,36 @@ for (const seg of coverFolder.split('/')) {
 }
 
 // 🔱 4. AUTO-COVER SCAN
-let cleanName = title.toLowerCase().replace(/\s+/g, ""); 
-let finalImgName = `${cleanName}-cover.jpg`;
-let potentialPath = `${coverFolder}/${finalImgName}`;
-let pureCover = app.vault.getAbstractFileByPath(potentialPath) ? potentialPath : "";
+function coverSlug(name) {
+    return String(name || "").trim()
+        .replace(/([a-z0-9])([A-Z])/g, "$1_$2")
+        .replace(/['’]/g, "")
+        .replace(/[^A-Za-z0-9]+/g, "_")
+        .replace(/^_+|_+$/g, "")
+        .toLowerCase();
+}
+function coverCore(name) {
+    return String(name || "").toLowerCase()
+        .replace(/\.[^.]+$/, "")
+        .replace(/[-_\s]*cover$/i, "")
+        .replace(/[^a-z0-9]/g, "");
+}
+function findCover(folder, name) {
+    const dir = app.vault.getAbstractFileByPath(folder);
+    const target = coverCore(name);
+    const exts = ["jpg", "jpeg", "png", "webp"];
+    if (!dir || !dir.children) return "";
+    const hit = dir.children.find(f => f.extension && exts.includes(f.extension.toLowerCase()) && coverCore(f.name) === target);
+    return hit ? hit.path : "";
+}
+
+let cleanName = coverSlug(title); 
+let pureCover = findCover(coverFolder, title);
 
 // If not found, optional prompt:
 if (!pureCover) {
     let manual = await tp.system.prompt("🖼️ Cover Filename (without .jpg)?", cleanName + "-cover");
-    pureCover = `${coverFolder}/${manual}.jpg`;
+    pureCover = manual ? `${coverFolder}/${manual}.jpg` : "";
 }
 
 // 🔱 5. SMART AUTHOR LOGIC (Fixed variables!)
@@ -71,14 +92,14 @@ priority:
   - "1"
 persona:
 creator: "<%- rawCreator %>"
-creator-sort: "<%- creatorSort %>"
+creator_sort: "<%- creatorSort %>"
 doi: "<%- doi %>"
 science: ["<%- sci %>"]
 discipline: ["<%- disc %>"]
 subject: ""
 plattform: ""
 publisher:
-pub-date:
+pub_date:
 chapter: ""
 rating:
 ranking:

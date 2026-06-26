@@ -14,7 +14,7 @@ const hNum = moment(end).month() < 6 ? "1" : "2";
 // 🔱 2. PATH & TITLE LOGIC (Backsafe for direct template starts)
 if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
     const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
-    const targetFolder = `${baseCal}/4_Reviews/HalfYear/${yy}`;
+    const targetFolder = `${baseCal}/6_Reviews/0_Master/${yy}`;
     const finalTitle = `${yy}-H${hNum} revH - ${displayTitle}`;
     const finalDest = `${targetFolder}/${finalTitle}.md`;
 
@@ -100,7 +100,7 @@ status: 1active
 >     colors: { plmPink: ["#f8bbd0", "#f48fb1", "#f06292", "#e91e63", "#c2185b"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/1plm"))) {
+> for (let page of dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm"))) {
 >     calendarData.entries.push({ date: page.cal_date, intensity: page.energy || 1 });
 > }
 > renderHeatmapCalendar(this.container, calendarData);
@@ -115,7 +115,7 @@ status: 1active
 >     colors: { ppmBlue: ["#bbdefb", "#90caf9", "#64b5f6", "#2196f3", "#1976d2"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/2ppm"))) {
+> for (let page of dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/2ppm"))) {
 >     calendarData.entries.push({ date: page.cal_date, intensity: page.energy || 1 });
 > }
 > renderHeatmapCalendar(this.container, calendarData);
@@ -130,8 +130,8 @@ status: 1active
 >     colors: { pkmOrange: ["#ffe0b2", "#ffcc80", "#ffb74d", "#ff9800", "#e65100"] },
 >     entries: []
 > };
-> for (let page of dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/3pkm"))) {
->     calendarData.entries.push({ date: page.cal_date, intensity: page['brain-drain'] || 1 });
+> for (let page of dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/3pkm"))) {
+>     calendarData.entries.push({ date: page.cal_date, intensity: page.brain_drain || 1 });
 > }
 > renderHeatmapCalendar(this.container, calendarData);
 > ```
@@ -147,9 +147,9 @@ status: 1active
 > > [!info|wide-1] 🌷 PLM: Resilience
 > > <small style="opacity:0.5; text-transform:uppercase;">180-Day Averages</small>
 > >
-> > - **Avg Energy:** `$= const p = dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/1plm")); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
-> > - **Avg Sleep:** `$= const p = dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/1plm")); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
-> > - **Total Fitness:** `$= dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/1plm")).array().reduce((sum, p) => sum + (Number(p.fitness_am) || 0) + (Number(p.fitness_pm) || 0), 0)` min
+> > - **Avg Energy:** `$= const p = dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm")); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
+> > - **Avg Sleep:** `$= const p = dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm")); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
+> > - **Total Fitness:** `$= dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm")).array().reduce((sum, p) => sum + (Number(p.fitness_am) || 0) + (Number(p.fitness_pm) || 0), 0)` min
 <%* } -%>
 <%* if (isMaster || revModule === "ppm" || revModule === "proj") { -%>
 >
@@ -169,11 +169,15 @@ status: 1active
 > > <small style="opacity:0.5; text-transform:uppercase;">Key Projects Active</small>
 > >
 > > ```dataviewjs
-> > const pr = dv.pages('"0_Calendar/2_Projectlogs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
+> > const pr = dv.pages().where(p => String(p.archtype).includes("#0cal/4projectlog") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>");
 > > let projects = new Set();
 > > pr.forEach(x => { 
-> >     if ("<%- revModule %>" !== "proj" || x.file.name.includes("<%- logConnect.replace(/[\[\]]/g, '') %>") || (x.file.outlinks && String(x.file.outlinks).includes("<%- logConnect.replace(/[\[\]]/g, '') %>"))) {
-> >         if(x.file.outlinks.length > 0) x.file.outlinks.forEach(l => projects.add(l.path.split('/').pop().replace('.md','')));
+> >     const projName = "<%- logConnect.replace(/[\[\]]/g, '') %>";
+> >     const linkedProject = String(x.project3 || "").includes(projName) || x.file.name.includes(projName) || (x.file.outlinks && String(x.file.outlinks).includes(projName));
+> >     if ("<%- revModule %>" !== "proj" || linkedProject) {
+> >         const projectRefs = Array.isArray(x.project3) ? x.project3 : (x.project3 ? [x.project3] : []);
+> >         projectRefs.forEach(l => projects.add(String(l).replace(/^\[\[/, "").replace(/\]\]$/, "").split("|")[0].split("/").pop().replace(".md", "")));
+> >         if(x.file.outlinks && x.file.outlinks.length > 0) x.file.outlinks.forEach(l => projects.add(l.path.split('/').pop().replace('.md','')));
 > >     }
 > > });
 > > if(projects.size > 0) dv.list(Array.from(projects).slice(0, 10).map(p => "🚧 [[" + p + "]]"));
@@ -186,7 +190,7 @@ status: 1active
 > > <small style="opacity:0.5; text-transform:uppercase;">Time per Subject (Hours)</small>
 > >
 > > ```dataviewjs
-> > const p = dv.pages('"0_Calendar/1_Logs"').where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && p.archtype?.includes("#0cal/3pkm"));
+> > const p = dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/3pkm"));
 > > const subjects = ["english", "german", "math", "latin", "physics", "biology", "chemistry", "history", "philosophy", "politics", "economics", "law", "psychology", "art", "music"];
 > > let totals = {};
 > > p.forEach(x => {
@@ -212,7 +216,7 @@ status: 1active
 > <small style="opacity:0.5; text-transform:uppercase;">Summarizing your Quarterly Reviews</small>
 >
 > ```dataviewjs
-> const quarterlies = dv.pages('#0cal/1review/quarterly').where(p => p.rev_end >= "<%- start %>" && p.rev_end <= "<%- end %>").sort(p => p.rev_end, "asc");
+> const quarterlies = dv.pages().where(p => String(p.archtype).includes("#0cal/1review/quarterly") && p.rev_end >= "<%- start %>" && p.rev_end <= "<%- end %>").sort(p => p.rev_end, "asc");
 > let filteredQ = quarterlies;
 > if ("<%- revModule %>" !== "master") {
 >     filteredQ = quarterlies.where(w => w.rev_module === "<%- revModule %>" && w.connected_log === "<%- logConnect %>");

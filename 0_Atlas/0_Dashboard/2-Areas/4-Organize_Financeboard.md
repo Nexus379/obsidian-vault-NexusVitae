@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # 🪙 Finance Dashboard
-| [[0_Atlas/0_Dashboard/0-Dashboard|💫 Dashy]] | [[0_Atlas/0_Dashboard/0-Inbox|💌 Inbox]] | [[0_Atlas/0_Dashboard/0-Calendar|📅 Calendar]] |[[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard| 🎓Studyboard]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard| 🪙 Finance]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Review|🔭 Reviews]] |
+| [[0_Atlas/0_Dashboard/2-Areas|Areas]] | [[0_Atlas/Bases/2-Areas/Areas.base|Areasbase]] | [[0_Atlas/0_Dashboard/2-Areas/1-Selfcare|Selfcare]] | [[0_Atlas/0_Dashboard/2-Areas/2-Relationship|Relationship]] | [[0_Atlas/0_Dashboard/2-Areas/3-Mind|Mind]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize|Organize]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard|Finance]] | [[0_Atlas/0_Dashboard/2-Areas/5-Creativity|Creativity]] | [[0_Atlas/0_Dashboard/2-Areas/6-Activity|Activity]] | [[0_Atlas/0_Dashboard/2-Areas/7-Entertainment|Entertainment]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 

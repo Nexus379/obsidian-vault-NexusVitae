@@ -24,15 +24,15 @@ if (!SYS) {
 
 // 🔱 3. CALENDAR CONFIGURATION
 tp.variables.ARCHTYPES_CAL = [
-    { id: "plm",  label: "Journal",    icon: "🌷", subfolder: "1_Logs",        tmpl: "dailyplm" },
-    { id: "ppm",  label: "Log",        icon: "🌻", subfolder: "1_Logs",        tmpl: "dailyppm" },
-    { id: "pkm",  label: "Studylog",   icon: "🌼", subfolder: "1_Logs",        tmpl: "dailypkm" },
-    { id: "proj", label: "Projectlog", icon: "🧩", subfolder: "2_Projectlogs", tmpl: "projectlog", connectTo: "p" },
-    { id: "prot", label: "Protocol",   icon: "📜", subfolder: "3_Protocols",   tmpl: "protocol",   connectTo: "c" },
-    { id: "rev",  label: "Review",     icon: "🛰️", subfolder: "4_Reviews",     tmpl: "rev" }
+    { id: "plm",  label: "Journal",    icon: "🌷", subfolder: "1_PLM",         tmpl: "dailyplm" },
+    { id: "ppm",  label: "Log",        icon: "🌻", subfolder: "2_PPM",         tmpl: "dailyppm" },
+    { id: "pkm",  label: "Studylog",   icon: "🌼", subfolder: "3_PKM",         tmpl: "dailypkm" },
+    { id: "proj", label: "Projectlog", icon: "🧩", subfolder: "4_Projectlogs", tmpl: "projectlog", connectTo: "p" },
+    { id: "prot", label: "Protocol",   icon: "📜", subfolder: "5_Protocols",   tmpl: "protocol",   connectTo: "c" },
+    { id: "rev",  label: "Review",     icon: "🛰️", subfolder: "6_Reviews",     tmpl: "rev" }
 ];
 const ARCHTYPES_CAL = tp.variables.ARCHTYPES_CAL;
-const reviewBase = "4_Reviews";
+const reviewBase = "6_Reviews";
 
 const calLabel     = ARCHTYPES_CAL.map(m => `${m.icon || ""} ${m.label}`.trim());
 const calSubfolder = ARCHTYPES_CAL.map(m => m.subfolder);

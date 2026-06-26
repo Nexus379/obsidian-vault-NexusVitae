@@ -51,7 +51,7 @@ plattform:
   - "<%- plat %>"
 publisher:
 url: "<%- chatUrl %>"
-pub-date:
+pub_date:
 rating: 
 ranking:
 LID: "<%- luhmannId %>"
