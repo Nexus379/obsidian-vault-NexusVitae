@@ -2,12 +2,20 @@
 > *"No matter how advanced AI becomes, it should never neglect gratitude and humility. Always stay humble."* -AI
 
 Hi and Welcome the this Vault.
-I built Nexus Vitae to bring structure to my daily life, project managements, study sessions, and notes. It's a system that simply tries to connect everyday tasks with personal learning and well-being.
+This is my "Nexus Vitae" to have an overview of my life and its different spaces.
 
 ## ✨ What's inside?
-* **Daily Tracking:** Simple templates for daily notes and automatic study time tracking.
-* **Structure:** Folders organized by life areas (inspired by the Chakra system and PARA).
-* **Zettelkasten:** A place to store, connect, and review notes for long-term learning.
+- Daily Tracking
+	- a PLM system
+		- for mental and body health
+	- a PPM system
+		- for projectmanagement
+	- a PKM system
+		- with spaced repitition function
+- a Zettelkastensystem
+	- for taking notes
+- a Resourcesystem
+	- to also track games, movies, etc
 
 ## 🚀 How to load it
 1. **Download** the `.zip` from the latest release.
@@ -25,13 +33,14 @@ I built Nexus Vitae to bring structure to my daily life, project managements, st
 * `4_Tasks` - To-Dos
 * `5_Notes` - Zettelkasten
 * `6_Resources` - References & external inputs
+* `xAttachment` - Pictures, PDF, docs, etc.
+* `yArchive` - Everything from the past
 * `zData` - Background system (Scripts & Templates)
 
 ## 🗺️ Roadmap
 Here is what I am currently tinkering with:
 - [ ] Journal Ideas.md
 - [ ] Dashboard Review
-- [ ] Better Dashboard Structure
 - [ ] Create short videos to explain the vault workflows
 - [ ] Fitness to Log
 

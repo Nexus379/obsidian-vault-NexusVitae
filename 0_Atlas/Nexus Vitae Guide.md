@@ -13,6 +13,7 @@
 	- [[2_Areas/6_Activity/Fitness_Routine|Fitness_Routine]]
 	- [[2_Areas/1_Selfcare/Nutrition/Meal_Plan|Meal_Plan]]
 	- [[2_Areas/3_Mind/Timetable|Timetable]]
+- know your data ([[zData/yaml tags organization|yaml tags organization]])
 
 ### 2. Create a File
 There are three ways to start a new entry:
@@ -39,6 +40,7 @@ There are three ways to start a new entry:
 - choose calendar for Journal , Log, Studylog 
 	- log your day
 	- have an overview
+- 0_Atlas gives you an overview about every archtype
 
 ## 🌍 The Lineage of Inspiration (Methodology & Philosophy)
 The Nexus system is a synthesis of cognitive science, ancient wisdom, deep psychology, and modern productivity. The journey began long before digital tools, rooted in the realization that while a digital system can hold the overview, the physical hands must execute the work. 
