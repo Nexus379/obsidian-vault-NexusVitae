@@ -12,13 +12,13 @@ cssclasses:
 
 ```dataviewjs
 const groups = [
-  { title: "Calendar", tag: "#0cal" },
-  { title: "Stars", tag: "#1stars" },
-  { title: "Areas", tag: "#2area" },
-  { title: "Projects", tag: "#3project" },
-  { title: "Tasks", tag: "#4task" },
-  { title: "Notes", tag: "#5note" },
-  { title: "Resources", tag: "#6resou" }
+  { title: "📅 Calendar", tag: "#0cal" },
+  { title: "✨ Stars", tag: "#1stars" },
+  { title: "💠 Areas", tag: "#2area" },
+  { title: "🧩 Projects", tag: "#3project" },
+  { title: "🛠️ Tasks", tag: "#4task" },
+  { title: "✏️ Notes", tag: "#5note" },
+  { title: "🔖 Resources", tag: "#6resou" }
 ];
 
 const pages = dv.pages('!"zData" AND -"yArchive" AND -"xAttachment"')

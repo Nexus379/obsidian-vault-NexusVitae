@@ -5,22 +5,22 @@ banner: "![[xAttachment/Images/Banner/violet sky ocean.jpg]]"
 
 > [!multi-column]
 >
->> [!star]+ ✨ STELLAE (Sterne)
->> *Vision & Ziele*
+>> [!star]+ ✨ STELLAE (Stars)
+>> *Vision & Goals*
 >> ```dataview
 >> LIST FROM #1stars AND !"zData"
 >> SORT file.name ASC
 >> ```
 >
->> [!layers]+ 💠 AREAS (Chakren)
->> *Lebensbereiche*
+>> [!layers]+ 💠 AREAS (Chakras)
+>> *Life Areas*
 >> ```dataview
 >> LIST FROM #2area AND !"zData"
 >> SORT file.name ASC
 >> ```
 >
 >> [!construction]+ 🚧 PROJECTS
->> *Aktive Vorhaben*
+>> *Active Projects*
 >> ```dataview
 >> LIST FROM #3project
 >> WHERE status = "1active" AND !contains(file.path, "zData")
@@ -30,22 +30,22 @@ banner: "![[xAttachment/Images/Banner/violet sky ocean.jpg]]"
 
 > [!multi-column]
 >
->> [!todo]+ 🛠️ TASKS (Nächste Schritte)
+>> [!todo]+ 🛠️ TASKS (Next Steps)
 >> ```dataview
 >> TASK FROM #4task
 >> WHERE !completed AND priority = "🔴"
 >> LIMIT 5
 >> ```
 >
->> [!edit]+ ✏️ NOTES (Wissens-Garten)
->> *Zuletzt bearbeitet*
+>> [!edit]+ ✏️ NOTES (Knowledge Garden)
+>> *Recently edited*
 >> ```dataview
 >> LIST FROM #5note 
 >> SORT file.mtime DESC
 >> LIMIT 8
 >> ```
 >
->> [!bookmark]+ 🔖 SOURCES (Mediathek)
+>> [!bookmark]+ 🔖 SOURCES (Media Library)
 >> ```dataview
 >> TABLE without ID 
 >>   file.link as Titel, 
@@ -56,8 +56,8 @@ banner: "![[xAttachment/Images/Banner/violet sky ocean.jpg]]"
 >> ```
 
 ---
-## 🕸️ System-Health (Unverknüpft)
-> [!info]- Orphaned Notes (Verwaist)
+## 🕸️ System Health (Unlinked)
+> [!info]- Orphaned Notes
 > ```dataview
 > LIST FROM !"zData"
 > WHERE length(file.inlinks) = 0 
@@ -70,13 +70,13 @@ banner: "![[xAttachment/Images/Banner/violet sky ocean.jpg]]"
 const content = `
 > [!multi-column]
 >
->> [!construction] **Aktive Projekte (#3project)**
+>> [!construction] **Active Projects (#3project)**
 >> ${dv.pages('#3project').filter(p => p.status == "1active").limit(5).file.link.join("<br>")}
 >
->> [!edit] **Frisches Wissen (#5note)**
+>> [!edit] **Recent Knowledge (#5note)**
 >> ${dv.pages('#5note').sort(p => p.file.mtime, "desc").limit(5).file.link.join("<br>")}
 >
->> [!bookmark] **Offene Quellen (#6resou)**
+>> [!bookmark] **Open Sources (#6resou)**
 >> ${dv.pages('#6resou').filter(p => !["done", "archived", "bin"].includes(String(p.status))).limit(5).file.link.join("<br>")}
 `;
 

@@ -26,42 +26,42 @@ const countTag = (tag) => allPages.where(p =>
 // --- 1. DATA GATHERING ---
 // Master Architectures
 const archData = [
-    { label: "Calendar", count: countTag("#0cal"), color: "#b4befe" },
-    { label: "Stars", count: countTag("#1stars"), color: "#f9e2af" },
-    { label: "Areas", count: countTag("#2area"), color: "#a6e3a1" },
-    { label: "Projects", count: countTag("#3project"), color: "#fab387" },
-    { label: "Tasks", count: countTag("#4task"), color: "#f38ba8" },
-    { label: "Notes", count: countTag("#5note"), color: "#74c7ec" },
-    { label: "Resources", count: countTag("#6resou"), color: "#cba6f7" }
+    { label: "📅 Calendar", count: countTag("#0cal"), color: "#b4befe" },
+    { label: "✨ Stars", count: countTag("#1stars"), color: "#f9e2af" },
+    { label: "💠 Areas", count: countTag("#2area"), color: "#a6e3a1" },
+    { label: "🧩 Projects", count: countTag("#3project"), color: "#fab387" },
+    { label: "🛠️ Tasks", count: countTag("#4task"), color: "#f38ba8" },
+    { label: "✏️ Notes", count: countTag("#5note"), color: "#74c7ec" },
+    { label: "🔖 Resources", count: countTag("#6resou"), color: "#cba6f7" }
 ];
 
 // Areas Detail
 const areasData = [
-    { label: "Selfcare", count: countTag("#2area/1selfcare"), color: "#f38ba8" },
-    { label: "Relation", count: countTag("#2area/2relationship"), color: "#fab387" },
-    { label: "Mind", count: countTag("#2area/3mind"), color: "#f9e2af" },
-    { label: "Organize", count: countTag("#2area/4organize"), color: "#a6e3a1" },
-    { label: "Creativity", count: countTag("#2area/5creativity"), color: "#74c7ec" },
-    { label: "Activity", count: countTag("#2area/6activity"), color: "#89b4fa" },
-    { label: "Entertain", count: countTag("#2area/7entertain"), color: "#cba6f7" }
+    { label: "🌸 Selfcare", count: countTag("#2area/1selfcare"), color: "#f38ba8" },
+    { label: "🦄 Relation", count: countTag("#2area/2relationship"), color: "#fab387" },
+    { label: "🧠 Mind", count: countTag("#2area/3mind"), color: "#f9e2af" },
+    { label: "🧩 Organize", count: countTag("#2area/4organize"), color: "#a6e3a1" },
+    { label: "🎨 Creativity", count: countTag("#2area/5creativity"), color: "#74c7ec" },
+    { label: "🚵🏽 Activity", count: countTag("#2area/6activity"), color: "#89b4fa" },
+    { label: "🕹️ Entertain", count: countTag("#2area/7entertain"), color: "#cba6f7" }
 ];
 
 // Notes Detail
 const notesData = [
-    { label: "Fleeting", count: countTag("#5note/1fleeting"), color: "#bac2de" },
-    { label: "Literature", count: countTag("#5note/2literature"), color: "#89b4fa" },
-    { label: "Permanent", count: countTag("#5note/3permanent"), color: "#cba6f7" },
-    { label: "Atomic", count: countTag("#5note/4atomic"), color: "#f38ba8" },
-    { label: "Evergreen", count: countTag("#5note/5evergreen"), color: "#a6e3a1" }
+    { label: "🍂 Fleeting", count: countTag("#5note/1fleeting"), color: "#bac2de" },
+    { label: "📘 Literature", count: countTag("#5note/2literature"), color: "#89b4fa" },
+    { label: "📜 Permanent", count: countTag("#5note/3permanent"), color: "#cba6f7" },
+    { label: "⚛️ Atomic", count: countTag("#5note/4atomic"), color: "#f38ba8" },
+    { label: "🌳 Evergreen", count: countTag("#5note/5evergreen"), color: "#a6e3a1" }
 ];
 
 // Project Status
 const p = allPages.where(page => page.arch && String(page.arch).includes("#3project"));
 const projectData = [
-    { label: "Active", count: p.where(x => x.status === "1active").length, color: "#a6e3a1" },
-    { label: "Passive", count: p.where(x => x.status === "2passive").length, color: "#89b4fa" },
-    { label: "Idea", count: p.where(x => x.status === "3idea").length, color: "#cba6f7" },
-    { label: "Done", count: p.where(x => x.status === "done").length, color: "#bac2de" }
+    { label: "🟢 Active", count: p.where(x => x.status === "1active").length, color: "#a6e3a1" },
+    { label: "🟡 Passive", count: p.where(x => x.status === "2passive").length, color: "#89b4fa" },
+    { label: "💡 Idea", count: p.where(x => x.status === "3idea").length, color: "#cba6f7" },
+    { label: "✅ Done", count: p.where(x => x.status === "done").length, color: "#bac2de" }
 ];
 
 // Task Stats (Real Tasks in Checkboxes)
