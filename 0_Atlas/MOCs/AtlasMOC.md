@@ -5,10 +5,17 @@ cssclasses:
 ---
 
 # Atlas
-
+```dataviewjs
+const links = dv.pages('"0_Atlas/MOCs"').file.sort(f => f.name).map(f => {
+    let name = f.name.replace(/ ?MOC/g, "");
+    if(f.name.includes("Atlas")) name = "🗺️ " + name;
+    if(f.name.includes("Resources")) name = "🔖 " + name;
+    return `[[${f.path}|${name}]]`;
+});
+dv.paragraph(links.join(" &nbsp;|&nbsp; "));
+```
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
----
 
 ```dataviewjs
 const groups = [

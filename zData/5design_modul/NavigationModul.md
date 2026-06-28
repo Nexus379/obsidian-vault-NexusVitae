@@ -1,12 +1,12 @@
 >[!multi-column]
->>[!overview]- [[0_Atlas/0_Dashboard/0-Dashboard|💫 Dashy]]
+>>[!overview]- [[0_Atlas/0_Dashboard/0-Dashboard|💫 Dashy]]-[[0_Atlas/MOCs/AtlasMOC|🗺️ Atlas]]
 >> - [[0_Atlas/0_Dashboard/0-Inbox|💌 Inbox]] 
 >>
 >> - [[0_Atlas/Bases/Inboxbase.base|Inboxbase]]
 >>
->> - [[0_Atlas/0_Dashboard/0-Calendar|0-📅 Calendar]] 
+>> - [[0_Atlas/0_Dashboard/0-Calendar|📅 Calendar]] 
 >>
->> - [[0_Atlas/Bases/Calendarbase.base|Calendarbase]]
+>> - [[0_Atlas/Bases/Calendarbase.base|📆 Calendarbase]]
 >>
 >> - [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🌼 PKM]]
 >>
@@ -15,7 +15,7 @@
 >> - [[0_Atlas/0_Dashboard/y-Archive|📦 Archive]]
 >>
 > 
->>[!stars]- [[0_Atlas/0_Dashboard/1-Stars|1-Stars]] 
+>>[!stars]- [[0_Atlas/0_Dashboard/1-Stars|✨ Stars]] 
 >> - [[0_Atlas/Bases/1-Stars/Stars.base|Starsbase]]
 >>
 >> - [[0_Atlas/0_Dashboard/1-Stars/1-Purpose|🌟Purpose]]

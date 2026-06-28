@@ -83,13 +83,60 @@ const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
     title = await tp.system.prompt("💠 Area Name?", "");
 }
+    aIdx = await tp.system.suggester(areaOptions, Array.from(areaOptions.keys()));
+}
+
+// Wenn ESC gedrückt wurde: Abbruch statt 'undefined' Fehler
+if (aIdx === null || aIdx === -1) {
+    new Notice("Selection cancelled. No changes made.");
+    return; 
+}
+
+const targetArea = areaFolders[aIdx];
+const contentTemplate = areaTemplates[aIdx];
+
+// 🔱 3. DISCIPLINE ENGINE (Erst JETZT, mit der Area im Gepäck)
+// Wir speichern die Area vorab in tp.variables, damit spätere Templates sie "sehen" können
+tp.variables.area = targetArea;
+tp.variables.currentArea = targetArea;
+
+// Die Engine abfragen statt altem Inline-Modul
+if (typeof tp.user.disciplineEngine === "function") {
+    const engine = tp.user.disciplineEngine();
+    const discList = engine.getDisciplineLabels();
+    const displayList = discList.map(d => `${d.icon} ${d.label}`);
+    
+    const selectedDisc = await tp.system.suggester(displayList, discList);
+    
+    if (selectedDisc) {
+        tp.variables.sci = selectedDisc.sci.join('", "');
+        tp.variables.disc = selectedDisc.disc;
+        tp.variables.discIcon = selectedDisc.icon;
+    } else {
+        tp.variables.sci = "";
+        tp.variables.disc = "";
+        tp.variables.discIcon = "";
+    }
+} else {
+    new Notice("⚠️ disciplineEngine.js not found!");
+    tp.variables.sci = "";
+    tp.variables.disc = "";
+}
+
+// 🔱 4. TITLE & LOGISTICS
+const { SYS, ARCH } = tp.variables; // Holt die dynamischen Pfade vom Master-Router
+let title = tp.variables.title || tp.file.title;
+const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
+
+if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
+    title = await tp.system.prompt("💠 Area Name?", "");
+}
 if (!title) title = "Area-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) await tp.file.rename(title);
 
 // Dynamischer Pfad durch ARCH.a.folder
 const fullPath = `${ARCH.a.folder}/${targetArea}`;
-
 // Folder-Bot (Ensures folder exists)
 if (!app.vault.getAbstractFileByPath(fullPath)) {
     await app.vault.createFolder(fullPath);
@@ -97,6 +144,62 @@ if (!app.vault.getAbstractFileByPath(fullPath)) {
 
 await tp.file.move(`${fullPath}/${title}.md`);
 await new Promise(r => setTimeout(r, 400)); 
+
+// 🔱 4.5 MOC AUTO-GENERATOR
+try {
+    let subfolderName = "";
+    if (title.includes("/")) {
+        subfolderName = title.substring(0, title.lastIndexOf("/"));
+    } else {
+        subfolderName = targetArea; 
+    }
+
+    let mocTitleName = subfolderName;
+    if (mocTitleName.includes("/")) {
+        mocTitleName = mocTitleName.substring(mocTitleName.lastIndexOf("/") + 1);
+    }
+    mocTitleName = mocTitleName.replace(/^[0-9]+_/, "");
+
+    const mocFolderPath = "0_Atlas/MOCs";
+    const mocFilePath = `${mocFolderPath}/${mocTitleName} MOC.md`;
+
+    if (!app.vault.getAbstractFileByPath(mocFolderPath)) {
+        await app.vault.createFolder(mocFolderPath);
+    }
+
+    if (!app.vault.getAbstractFileByPath(mocFilePath)) {
+        let targetFolderForMOC = `${fullPath}`;
+        if (title.includes("/")) {
+            targetFolderForMOC += `/${subfolderName}`;
+        }
+        
+        let mocContent = "---\narch:\n  - \"#moc\"\n---\n# 🗺️ " + mocTitleName + " MOC\n";
+        mocContent += "```dataviewjs\n";
+        mocContent += "const links = dv.pages('\"0_Atlas/MOCs\"').file.sort(f => f.name).map(f => {\n";
+        mocContent += "    let name = f.name.replace(/ ?MOC/g, \"\");\n";
+        mocContent += "    if(f.name.includes(\"Atlas\")) name = \"🗺️ \" + name;\n";
+        mocContent += "    if(f.name.includes(\"Resources\")) name = \"🔖 \" + name;\n";
+        mocContent += "    return \"[[\" + f.path + \"|\" + name + \"]]\";\n";
+        mocContent += "});\n";
+        mocContent += "dv.paragraph(links.join(\" &nbsp;|&nbsp; \"));\n";
+        mocContent += "```\n";
+        mocContent += "![[zData/5design_modul/NavigationModul|NavigationModul]]\n\n";
+        mocContent += `> [!multi-column]\n>\n>> [!abstract] ${mocTitleName} Index\n`;
+        mocContent += ">> ```dataview\n";
+        mocContent += ">> TABLE without ID\n";
+        mocContent += ">>   file.link as \"Item\",\n";
+        mocContent += ">>   archtype as \"Typ\",\n";
+        mocContent += ">>   status as \"Status\"\n";
+        mocContent += `>> FROM "${targetFolderForMOC}"\n`;
+        mocContent += ">> SORT archtype ASC, file.mtime DESC\n";
+        mocContent += ">> ```\n";
+
+        await app.vault.create(mocFilePath, mocContent);
+        new Notice(`🌟 Auto-Generated MOC: ${mocTitleName} MOC`);
+    }
+} catch (e) {
+    console.error("MOC Generator Error:", e);
+}
 
 // 🔱 5. FINAL HANDOVER
 const tPath = `${SYS.tmpl}/2areas/${contentTemplate}.md`;
