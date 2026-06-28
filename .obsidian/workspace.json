@@ -258,6 +258,11 @@
   },
   "active": "7019ec2cdfbdedbf",
   "lastOpenFiles": [
+    "0_Atlas/MOCs/AtlasMOC.md",
+    "README.md",
+    "0_Atlas/MOCs/ResourcesMOC.md",
+    "0_Atlas/MOCs/MasterMOC.md",
+    "0_Atlas/Atlas.md",
     "0_Atlas/Nexus Vitae Guide.md",
     "zData/1tmpl/6resources/sourcemuseum.md",
     "0_Atlas/0_Dashboard/7-Reviews.md",
@@ -288,11 +293,6 @@
     "zData/4values/TaskCache.md",
     "zData/4values/MantraListe.md",
     "zData/4values/FocusListe.md",
-    "zData/4values/Fitness_Profile.md",
-    "zData/3snippets/sortName.md",
-    "zData/3snippets/setupTimetable.md",
-    "zData/3snippets/setupRoutine.md",
-    "zData/3snippets/setupFitness.md",
-    "zData/3snippets/resetSchedule.md"
+    "zData/4values/Fitness_Profile.md"
   ]
 }
