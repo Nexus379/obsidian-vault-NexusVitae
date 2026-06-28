@@ -23,7 +23,9 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. TITEL-CLEANING
-let displayTitle = title.replace(/^(fleet-|n-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(fleet-|n-|r-)/i, "").trim();
 
 tR += "---"  
 %>

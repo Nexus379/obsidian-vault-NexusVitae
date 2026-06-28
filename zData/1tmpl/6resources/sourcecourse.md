@@ -79,7 +79,9 @@ else if (p >= 10) bar = "█░░░░░░░░░ 10%";
 let instructor = await tp.system.prompt("👨‍🏫 Instructor / Organization?", "Unknown");
 
 // 🔱 6. TITLE CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(course-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(course-|r-)/i, "").trim();
 
 tR += "---"  
 %>

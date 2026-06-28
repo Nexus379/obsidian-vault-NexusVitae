@@ -49,22 +49,22 @@ if (pID) {
 }
 
 // 🔱 4. TYP-AUSWAHL
-const nOptions = ["🍂 1_Fleeting", "📘 2_Literature", "📜 3_Permanent", "🗃️ 4_Atomic...", "🌳 5_Evergreen"];
-const nVals = ["1fleet", "2lit", "3perma", "atomic_sub", "5ever"];
-const nFolders = ["1_Fleeting", "2_Literature", "3_Permanent", "4_Atomic", "5_Evergreen"];
+const nOptions = ["🍂 1_Fleeting", "📘 2_Literature", "📜 4_Permanent", "🗃️ 3_Atomic...", "🌳 5_Evergreen"];
+const nVals = ["1fleet", "2lit", "4perma", "atomic_sub", "5ever"];
+const nFolders = ["1_Fleeting", "2_Literature", "4_Permanent", "3_Atomic", "5_Evergreen"];
 const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
 const noteTriggerMap = {
     fleet: "1fleet",
     fleeting: "1fleet",
     lit: "2lit",
     literature: "2lit",
-    perma: "3perma",
-    permanent: "3perma",
-    atomic: "4atomic",
-    nutri: "4atomic_ingredients",
-    nutrition: "4atomic_ingredients",
-    anki: "4atomic_anki",
-    ankicloze: "4atomic_ankicloze",
+    perma: "4perma",
+    permanent: "4perma",
+    atomic: "3atomic",
+    nutri: "3atomic_ingredients",
+    nutrition: "3atomic_ingredients",
+    anki: "3atomic_anki",
+    ankicloze: "3atomic_ankicloze",
     ever: "5ever",
     evergreen: "5ever"
 };
@@ -81,11 +81,11 @@ if (!nChoice) {
     const directFolders = {
         "1fleet": "1_Fleeting",
         "2lit": "2_Literature",
-        "3perma": "3_Permanent",
-        "4atomic": "4_Atomic",
-        "4atomic_ingredients": "4_Atomic/Nutrition/Ingredients",
-        "4atomic_anki": "4_Atomic/anki",
-        "4atomic_ankicloze": "4_Atomic/anki",
+        "4perma": "4_Permanent",
+        "3atomic": "3_Atomic",
+        "3atomic_ingredients": "3_Atomic/Nutrition/Ingredients",
+        "3atomic_anki": "3_Atomic/anki",
+        "3atomic_ankicloze": "3_Atomic/anki",
         "5ever": "5_Evergreen"
     };
     targetFolder = `5_Notes/${directFolders[nChoice]}`;
@@ -93,8 +93,8 @@ if (!nChoice) {
 
 if (nChoice === "atomic_sub") {
     const aOptions = ["🗃️ Standard Atomic", "⚛️ Nutrition", "🎴 Anki-Basic", "🧠 Anki-Cloze"];
-    const aVals = ["4atomic", "4atomic_ingredients", "4atomic_anki", "4atomic_ankicloze"];
-    const aFolders = ["4_Atomic", "4_Atomic/Nutrition/Ingredients", "4_Atomic/anki", "4_Atomic/anki"];
+    const aVals = ["3atomic", "3atomic_ingredients", "3atomic_anki", "3atomic_ankicloze"];
+    const aFolders = ["3_Atomic", "3_Atomic/Nutrition/Ingredients", "3_Atomic/anki", "3_Atomic/anki"];
     let aIdx = await tp.system.suggester(aOptions, Array.from(aOptions.keys()));
     if (aIdx === null) return;
     nChoice = aVals[aIdx];
@@ -102,7 +102,7 @@ if (nChoice === "atomic_sub") {
 }
 
 // 🔱 5. SCIENCE-MODULE INTEGRATION (Delegiert die Abfrage!)
-const needsScience = ["3perma", "2lit", "4atomic", "4atomic_ingredients", "4atomic_anki", "4atomic_ankicloze", "5ever"];
+const needsScience = ["4perma", "2lit", "3atomic", "3atomic_ingredients", "3atomic_anki", "3atomic_ankicloze", "5ever"];
 if (needsScience.includes(nChoice)) {
     if (typeof tp.user.disciplineEngine === "function") {
         const engine = tp.user.disciplineEngine();

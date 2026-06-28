@@ -61,7 +61,9 @@ if (!pureCover) {
 }
 
 // Title cleaning for the visual H1 heading
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(recipe-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(recipe-|r-)/i, "").trim();
 
 tR += "---"  
 %>

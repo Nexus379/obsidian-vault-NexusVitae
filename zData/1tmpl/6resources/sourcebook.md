@@ -16,7 +16,7 @@ if (!title || title.trim() === "") title = "Book-" + tp.date.now("HH-mm");
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); // Short stabilization
-}
+
 
 // 🔱 3. AUTO-COVER SCAN (With Folder-Bot Safety)
 const coverFolder = "xAttachment/Cover/Bookcover";
@@ -52,21 +52,16 @@ function findCover(folder, name) {
 let cleanName = coverSlug(title); 
 let pureCover = findCover(coverFolder, title);
 
+
 // If not found, optional prompt:
 if (!pureCover) {
     let manual = await tp.system.prompt("🖼️ Cover Filename (without .jpg)?", cleanName + "-cover");
     pureCover = manual ? `${coverFolder}/${manual}.jpg` : "";
 }
 
-// 🔱 4. SMART AUTHOR LOGIC (Lastname, Firstname Auto-Sort)
-let rawCreator = await tp.system.prompt("✍️ Author (Firstname Lastname)?", "Unknown");
-let creatorSort = rawCreator;
-if (rawCreator && rawCreator.includes(" ")) {
-    let parts = rawCreator.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    creatorSort = lastName + ", " + firstName;
-}
+// 🔱 4. ADDITIONAL METADATA
+let vol = await tp.system.prompt("🔢 Volume / Part (e.g. 1)?", "") || "";
+let volTitle = await tp.system.prompt("🏷️ Name of this Part / Subtitle? (optional)", "") || "";
 
 // 🔱 5. GENRE-SELECTION
 const gOptions = ["🌱 Self-Dev", "🧘 Philosophy", "🛐 Spirit", "📜 Bio", "🌍 Advent", "🐉 Fantasy", "🚀 Sci-Fi", "🕵️ Thriller", "🎭 Drama", "💖 Romance", "👻 Horror", "🏛️ Classic", "🎨 Manga", "💰 Business", "🥘 Cook", "💡 Guide", "🧩 Other", "[+] custom..."];
@@ -77,7 +72,9 @@ if (genre === "custom") genre = await tp.system.prompt("✨ Genre?", "Mystery");
 if (!genre) genre = "General";
 
 // 🔱 6. TITLE CLEANING (Nexus Standard)
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(book-|n-|r-|s-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(book-|n-|r-|s-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -95,51 +92,52 @@ status:
 priority:
   - "1"
 persona:
-creator: "<%- rawCreator %>"
-creator_sort: "<%- creatorSort %>"
-isbn:
-original_title:
+# 🔱 Meta Bind Texts (Use comma separation for multiple entries)
+author: ""
+original_title: ""
+publisher: ""
+pub_date: ""
+isbn: ""
 genre: 
   - "<%- genre %>" 
-publisher:
-pub_date:
 subject: ""
 plattform: ""
-volume:
+# 🔱 Dynamic Details
+volume: <%- vol %>
+volume_title: "<%- volTitle %>"
 chapter_now: ""
 volume_max:
-rating:
-ranking:
-LID: "<%- luhmannId %>"
-parent: "<%- pLink %>"
-sibling:
-child:
-summary:
-review:
----
-# 📔 <%- luhmannId %> <%- displayTitle %>
 
-> [!reference] Resource Details
+
+
+
+
+
+---
+
+# 📔 Book: <%- luhmannId %> <%- displayTitle %>
+
+> [!reference] Book Details
 > >[!multi-column]
 > > > [!blank]
 > > > ![[<%- pureCover %>|150]]
 > > 
 > > > [!blank]
-> > > **ID:** <%- luhmannId %> 
+> > > **ID:** <%- luhmannId %> `$= dv.current().volume ? '| **Volume:** ' + dv.current().volume : ''` `$= dv.current().volume_title ? '- ' + dv.current().volume_title : ''`
 > > > 
-> > > **Author:** `$= dv.current().creator`
+> > > **Author:**
+> > > `INPUT[inlineList:author]`
 > > > 
-> > > **Genre:** `$= dv.current().genre`
+> > > **Genre:**
+> > > `INPUT[inlineList:genre]`
+> > > 
+> > > **Publisher:**
+> > > `INPUT[inlineList:publisher]`
 
+<%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
 
-## 🔖 Key Takeaways
+## 🔖 Quotes & Thoughts
 - 
-
-
-
-
-
-
 
 ---
 [[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]

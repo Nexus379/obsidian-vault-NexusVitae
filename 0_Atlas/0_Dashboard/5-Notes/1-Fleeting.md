@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # Fleeting Notes Central
-| [[0_Atlas/0_Dashboard/5-Notes|Notes]] | [[0_Atlas/Bases/5-Notes/Notes.base|Notesbase]] | [[0_Atlas/0_Dashboard/5-Notes/1-Fleeting|Fleeting]] | [[0_Atlas/0_Dashboard/5-Notes/2-Literature|Literature]] | [[0_Atlas/0_Dashboard/5-Notes/3-Permanent|Permanent]] | [[0_Atlas/0_Dashboard/5-Notes/4-Atomic|Atomic]] | [[0_Atlas/0_Dashboard/5-Notes/5-Evergreen|Evergreen]] |
+| [[0_Atlas/0_Dashboard/5-Notes|✏️Notes]] | [[0_Atlas/Bases/5-Notes/Notes.base|⚙️Notesbase]] | [[0_Atlas/0_Dashboard/5-Notes/1-Fleeting|🍂Fleeting]] | [[0_Atlas/0_Dashboard/5-Notes/2-Literature|📘Literatur]] | [[0_Atlas/0_Dashboard/5-Notes/4-Permanent|📜Permanent]] | [[0_Atlas/0_Dashboard/5-Notes/3-Atomic|🗃️Atomic]] | [[0_Atlas/0_Dashboard/5-Notes/5-Evergreen|📗Evergreen]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 

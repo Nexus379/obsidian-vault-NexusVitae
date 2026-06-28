@@ -31,7 +31,9 @@ if (plat === "custom") plat = await tp.system.prompt("✨ New AI Platform?");
 if (!plat) plat = "AI-General";
 
 // 🔱 4. CLEANING (Nexus Standard)
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(ai-|ki-|n-|r-|s-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(ai-|ki-|n-|r-|s-)/i, "").trim();
 
 tR += "---"  
 %>

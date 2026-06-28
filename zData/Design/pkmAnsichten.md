@@ -247,7 +247,7 @@ WHERE contains(L.key, "astro_") OR contains(L.key, "math_")
 ### 🎓 Daily Study Tracker
 `BUTTON[add-disc-pkm]`
 **Select Discipline:**
-`INPUT[inlineListSuggester(optionQuery("5_Notes/4_Atomic/")):study_disc]`
+`INPUT[inlineListSuggester(optionQuery("5_Notes/3_Atomic/")):study_disc]`
 
 **Add Topics (Matching Order):**
 `INPUT[text:study_topics]`

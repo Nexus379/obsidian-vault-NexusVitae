@@ -50,8 +50,8 @@ const areasData = [
 const notesData = [
     { label: "🍂 Fleeting", count: countTag("#5note/1fleeting"), color: "#bac2de" },
     { label: "📘 Literature", count: countTag("#5note/2literature"), color: "#89b4fa" },
-    { label: "📜 Permanent", count: countTag("#5note/3permanent"), color: "#cba6f7" },
-    { label: "⚛️ Atomic", count: countTag("#5note/4atomic"), color: "#f38ba8" },
+    { label: "📜 Permanent", count: countTag("#5note/4permanent"), color: "#cba6f7" },
+    { label: "⚛️ Atomic", count: countTag("#5note/3atomic"), color: "#f38ba8" },
     { label: "🌳 Evergreen", count: countTag("#5note/5evergreen"), color: "#a6e3a1" }
 ];
 
@@ -161,7 +161,7 @@ html += `
     <div style="margin: 12px 0; border-top: 1px dashed var(--background-modifier-border);"></div>
     ${bar("Active Projects", projectData[0].count, totalProjects || 1, "#fab387")}
     ${bar("Passive Projects / Ideas", projectData[1].count + projectData[2].count, totalProjects || 1, "#89b4fa")}
-    ${bar("Notes: Permanent & Evergreen", countTag("#5note/3permanent") + countTag("#5note/5evergreen"), totalNotes || 1, "#cba6f7")}
+    ${bar("Notes: Permanent & Evergreen", countTag("#5note/4permanent") + countTag("#5note/5evergreen"), totalNotes || 1, "#cba6f7")}
 </div>
 `;
 html += `</div>`;

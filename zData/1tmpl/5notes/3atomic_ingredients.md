@@ -19,14 +19,16 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. TITEL-CLEANING für die H1
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(nutrition-|n-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(nutrition-|n-)/i, "").trim();
 
 tR += "---"  
 %>
 arch:
   - "#5note"
 archtype:
-  - "#5note/4atomic/nutrition"
+  - "#5note/3atomic/nutrition"
 science: 
   - "#sci/Med-and-HealthSci"
 discipline: 

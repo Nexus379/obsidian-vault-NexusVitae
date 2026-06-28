@@ -15,7 +15,7 @@ const isPlaceholder = currentFileTitle.toLowerCase().includes(defaultName.toLowe
 let cleanPart = "";
 
 if (tp.variables.title && !tp.variables.title.includes("Entry-")) {
-    cleanPart = tp.variables.title; // Taken from Router/Prompt
+    cleanPart = tp.variables.title.replace(/plm/i, "").replace(/ppm/i, "").replace(/pkm/i, "").replace(/^- /, "").trim(); // Taken from Router/Prompt
 } else {
     const untitledPattern = new RegExp(defaultName + "(\\s\\d+)?", "i");
     // Manual Fallback: Filter placeholders, "plm" and the date
@@ -24,6 +24,8 @@ if (tp.variables.title && !tp.variables.title.includes("Entry-")) {
                                 .replace(new RegExp(defaultName, "i"), "")
                                 .replace(/^\d{4}-\d{2}-\d{2}/, "")
                                 .replace(/plm/i, "")
+                                .replace(/ppm/i, "")
+                                .replace(/pkm/i, "")
                                 .replace(/^- /, "")
                                 .trim();
 }

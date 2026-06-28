@@ -1,30 +1,25 @@
 <%-*
-// 🔱 1. NEXUS-DATA-SYNC
-let luhmannId = tp.variables.luhmannId || "R" + tp.date.now("YYYYMMDDHHmm");
-let title = tp.variables.title || tp.file.title;
+// 🔱 1. DATA-RECOVERY & SAFE VARIABLES
+if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
+
+let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
+let luhmannId = (tp.variables && tp.variables.luhmannId) ? tp.variables.luhmannId : "R" + tp.date.now("YYYYMMDDHHmm");
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 
-// FALLBACK: Untitled Check
+// 🔱 2. FALLBACK: Untitled Check
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
-    title = await tp.system.prompt("Film Name?", "");
+    title = await tp.system.prompt("🎬 Film Name?", "");
 }
-if (!title) title = "film-" + tp.date.now("HH-mm");
+if (!title || title.trim() === "") title = "Film-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
-    await new Promise(r => setTimeout(r, 200)); // Kurze Stabilisierung
+    await new Promise(r => setTimeout(r, 200)); // Short stabilization
 }
 
-// 🔱 2. STYLE-SELECTION
-const sOpt = ["🎬 Live-Action", "🧧 Anime", "✍️ Animation", "🎮 CGI / 3D", "🎥 Documentary", "[+] Custom Style..."];
-const sVal = ["Live-Action", "Anime", "Animation", "CGI-3D", "Documentary", "custom"];
-let style = await tp.system.suggester(sOpt, sVal);
-if (style === "custom") style = await tp.system.prompt("Style Name?");
-if (!style) style = "Live-Action";
-
-// 🔱 3. HIERARCHISCHER FOLDER-BOT (Cover/Film/Stil)
-const coverFolder = `xAttachment/Cover/Film/${style}`;
+// 🔱 3. FOLDER-BOT (Film Cover)
+const coverFolder = "xAttachment/Cover/Filmcover";
 let current = "";
 for (const seg of coverFolder.split('/')) {
     current = current === "" ? seg : `${current}/${seg}`;
@@ -57,47 +52,34 @@ function findCover(folder, name) {
 
 let cleanName = coverSlug(title); 
 let pureCover = findCover(coverFolder, title);
+
 if (!pureCover) {
-    let manual = await tp.system.prompt("🖼️ Poster Filename?", cleanName + "-cover");
+    let manual = await tp.system.prompt("🖼️ Cover Filename (without .jpg)?", cleanName + "-cover");
     pureCover = manual ? `${coverFolder}/${manual}.jpg` : "";
 }
 
-// 🔱 5. GENRE-SELECTION (Style-aware)
-let gOptions = ["Action", "Sci-Fi", "Thriller", "Comedy", "Drama", "Horror", "Adventure", "Classic"];
-if (style === "Anime") { gOptions = ["Shonen", "Seinen", "Shojo", "Isekai", "Slice of Life", "Mecha", "Fantasy"]; }
-gOptions.push("[+] Custom...");
+// 🔱 5. STYLE & GENRE SELECTION
+const sOpt = ["🎬 Realfilm", "🎨 Animation", "🇯🇵 Anime", "🎭 Theater/Musical", "🎥 Doku", "[+] custom..."];
+const sVal = ["Realfilm", "Animation", "Anime", "Theater", "Documentary", "custom"];
+let style = await tp.system.suggester(sOpt, sVal);
+if (style === "custom") style = await tp.system.prompt("✨ Style Name?");
+
+const gOptions = ["💥 Action", "😹 Comedy", "🎭 Drama", "🚀 Sci-Fi", "🐉 Fantasy", "👻 Horror", "🕵️ Thriller", "💖 Romance", "[+] Custom..."];
 let genre = await tp.system.suggester(gOptions, gOptions);
 if (genre === "[+] Custom...") genre = await tp.system.prompt("Genre?");
 
-// 🔱 6. SMART LOGIC (Director & Author Sort)
-let rawDir = await tp.system.prompt("🎬 Director / Regisseur?", "Unknown") || "Unknown";
-let dirSort = rawDir;
-if (rawDir.includes(" ")) {
-    let parts = rawDir.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    dirSort = lastName + ", " + firstName;
-}
-
-let rawCreator = await tp.system.prompt("Author?", "Unknown") || "Unknown";
-let creatorSort = rawCreator;
-if (rawCreator.includes(" ")) {
-    let parts = rawCreator.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    creatorSort = lastName + ", " + firstName;
-}
-
-// 🔱 7. ADDITIONAL METADATA
-let company = await tp.system.prompt("🏢 Production Company / Studio?", "Unknown") || "Unknown";
-let cast = await tp.system.prompt("🎭 Actors / Cast (comma separated)?", "Unknown") || "Unknown";
+// 🔱 6. ADDITIONAL METADATA
 let vol = await tp.system.prompt("🔢 Volume / Part?", "1") || "1";
+let volTitle = await tp.system.prompt("🏷️ Name of this Part / Subtitle? (optional)", "") || "";
 
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(film-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(film-|r-)/i, "").trim();
 
 tR += "---"  
 %>
-banner: "![[xAttachment/Images/Banner/aesthetic-anime-character-gaming.jpg]]"
+banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
+banner_y: 0.4
 banner_icon: 🎬
 cover: "[[<%- pureCover %>]]"
 inbox: true
@@ -110,21 +92,6 @@ status:
 priority:
   - "1"
 persona:
-plattform: ""
-creator: "<%- rawCreator %>"
-creator_sort: "<%- creatorSort %>"
-director: "<%- rawDir %>"
-director_sort: "<%- dirSort %>"
-actors: 
-<%- cast.split(',').map(s => `  - "${s.trim()}"`).join('\n') %>
-original_title:
-style: "<%- style %>"
-genre:
-- "<%- genre %>"
-publisher: "<%- company %>"
-pub_date:
-volume: <%- vol %>
-volume_max:
 rating: 
 ranking:
 LID: "<%- luhmannId %>"
@@ -133,6 +100,21 @@ sibling:
 child:
 summary:
 review:
+# 🔱 Meta Bind Texts (Use comma separation for multiple entries)
+original_title: ""
+author: ""
+director: ""
+publisher: ""
+pub_date: ""
+actors: ""
+genre:
+  - "<%- genre %>"
+style: "<%- style %>"
+plattform: ""
+# 🔱 Dynamic Details
+volume: <%- vol %>
+volume_title: "<%- volTitle %>"
+volume_max:
 ---
 
 # 🎬 Film: <%- luhmannId %> <%- displayTitle %>
@@ -143,16 +125,20 @@ review:
 > > > ![[<%- pureCover %>|150]]
 > > 
 > > > [!blank]
-> > > **ID:** <%- luhmannId %> | **Part:** `$= dv.current().volume`
+> > > **ID:** <%- luhmannId %> | **Part:** `$= dv.current().volume` `$= dv.current().volume_title ? '- ' + dv.current().volume_title : ''`
 > > > 
-> > > **Director:** `$= dv.current().director` 
+> > > **Director:** 
+> > > `INPUT[inlineList:director]`
 > > > 
-> > > **Genre:** `$= dv.current().genre`
+> > > **Cast:**
+> > > `INPUT[inlineList:actors]`
+> > > 
+> > > **Genre:**
+> > > `INPUT[inlineList:genre]`
 > > > 
 > > > **Style:** `$= dv.current().style`
 
-
-
+<%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
 
 ## 🎞️ Analyse & Notizen
 - 
@@ -163,12 +149,9 @@ review:
 
 
 
-
-
 ---
 [[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]
 
 ---
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-

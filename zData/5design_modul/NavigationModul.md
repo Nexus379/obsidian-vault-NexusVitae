@@ -8,7 +8,9 @@
 >>
 >> - [[0_Atlas/Bases/Calendarbase.base|Calendarbase]]
 >>
->> - [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🎓 PKM]]
+>> - [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🌼 PKM]]
+>>
+>> - [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|🎓 Studyboard]]
 >>
 >> - [[0_Atlas/0_Dashboard/y-Archive|📦 Archive]]
 >>
@@ -79,9 +81,9 @@
 >>
 >> - [[0_Atlas/0_Dashboard/5-Notes/2-Literature|📘Literatur]]
 >>
->> - [[0_Atlas/0_Dashboard/5-Notes/3-Permanent|📜Permanent]]
+>> - [[0_Atlas/0_Dashboard/5-Notes/4-Permanent|📜Permanent]]
 >>
->> - [[0_Atlas/0_Dashboard/5-Notes/4-Atomic|🗃️Atomic]]
+>> - [[0_Atlas/0_Dashboard/5-Notes/3-Atomic|🗃️Atomic]]
 >>
 >> - [[0_Atlas/0_Dashboard/5-Notes/5-Evergreen|📗Evergreen]]
 >>
@@ -120,6 +122,11 @@
 >> - [[0_Atlas/0_Dashboard/6-Resources/Series|🎞️Series]]
 >>
 >> - [[0_Atlas/0_Dashboard/6-Resources/Videos|🎬Videos]]
+>>
+>
+>>[!success]- [[0_Atlas/0_Dashboard/7-Reviews|🛰️Reviews]]
+>>
+>> - [[0_Atlas/Bases/Calendarbase.base|Reviewbase]]
 >>
 >
 >>[!archive]- [[0_Atlas/0_Dashboard/y-Archive|📦Archive]]

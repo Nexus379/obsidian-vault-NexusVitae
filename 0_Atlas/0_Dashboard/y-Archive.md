@@ -5,7 +5,7 @@ cssclasses:
 ---
 
 # 📦 Archive
-| [[0_Atlas/0_Dashboard/y-Archive|Archive]] | [[0_Atlas/Bases/yArchiveBase.base|Archivebase]] | [[0_Atlas/0_Dashboard/yArchive/Statusboard|Statusboard]] |
+| [[0_Atlas/0_Dashboard/y-Archive|📦Archive]] | [[0_Atlas/Bases/yArchiveBase.base|⚙️Archivebase]] | [[0_Atlas/0_Dashboard/yArchive/Statusboard|📊Statusboard]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 

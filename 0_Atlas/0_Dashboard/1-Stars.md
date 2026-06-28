@@ -7,7 +7,7 @@ banner_y: 0
 ---
 
 # 💫 Celestial Navigation (Stars)
-| [[0_Atlas/0_Dashboard/1-Stars|Stars]] | [[0_Atlas/Bases/1-Stars/Stars.base|Starsbase]] | [[0_Atlas/0_Dashboard/1-Stars/1-Purpose|Purpose]] | [[0_Atlas/0_Dashboard/1-Stars/2-Vision|Vision]] | [[0_Atlas/0_Dashboard/1-Stars/3-Goals|Goals]] |
+| [[0_Atlas/0_Dashboard/1-Stars|🌟Stars]] | [[0_Atlas/Bases/1-Stars/Stars.base|⚙️Starsbase]] | [[0_Atlas/0_Dashboard/1-Stars/1-Purpose|🌟Purpose]] | [[0_Atlas/0_Dashboard/1-Stars/2-Vision|🧭Vision]] | [[0_Atlas/0_Dashboard/1-Stars/3-Goals|🎯Goals]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 

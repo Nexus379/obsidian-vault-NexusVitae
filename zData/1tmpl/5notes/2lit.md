@@ -42,7 +42,9 @@ if (rawCreator !== "Unknown" && rawCreator.includes(" ")) {
 }
 
 // 🔱 4. CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(ref-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(ref-|r-)/i, "").trim();
 
 tR += "---"  
 %>

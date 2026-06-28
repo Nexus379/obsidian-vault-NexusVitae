@@ -1,3 +1,6 @@
+---
+frozen: true
+---
 # 🔱 Nexus Vitae Guide (System & Language Independent)
 
 ---
@@ -13,7 +16,6 @@
 	- [[2_Areas/6_Activity/Fitness_Routine|Fitness_Routine]]
 	- [[2_Areas/1_Selfcare/Nutrition/Meal_Plan|Meal_Plan]]
 	- [[2_Areas/3_Mind/Timetable|Timetable]]
-- know your data ([[zData/yaml tags organization|yaml tags organization]])
 
 ### 2. Create a File
 There are three ways to start a new entry:
@@ -40,7 +42,6 @@ There are three ways to start a new entry:
 - choose calendar for Journal , Log, Studylog 
 	- log your day
 	- have an overview
-- 0_Atlas gives you an overview about every archtype
 
 ## 🌍 The Lineage of Inspiration (Methodology & Philosophy)
 The Nexus system is a synthesis of cognitive science, ancient wisdom, deep psychology, and modern productivity. The journey began long before digital tools, rooted in the realization that while a digital system can hold the overview, the physical hands must execute the work. 
@@ -170,7 +171,7 @@ Everything goes into: `0_Inbox` and sorts through `[[zData/1tmpl/routertemp|rout
 * **2_Areas** (1_Selfcare, 2_Relationship, 3_Mind, 4_Organize, 5_Creativity, 6_Activity, 7_Entertainment)
 * **3_Projects** (0_Recurring, 1_Active, 2_Passive, 3_Idea)
 * **4_Tasks** (GTD-Contexts)
-* **5_Notes** (1_Fleeting, 2_Literature, 3_Permanent, 4_Atomic, 5_Evergreen)
+* **5_Notes** (1_Fleeting, 2_Literature, 4_Permanent, 3_Atomic, 5_Evergreen)
 * **6_Resources** (Nutrition, Recipes, Books, Films, Courses)
 * **xAttachment** / **yArchive**
 * **zData** (Templates, Scripts, Snippets, Values, JSON items)

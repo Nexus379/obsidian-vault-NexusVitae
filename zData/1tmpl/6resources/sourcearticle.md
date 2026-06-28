@@ -67,7 +67,9 @@ let creator = await tp.system.prompt("✍️ Author / Creator?", "Unknown");
 let url = await tp.system.prompt("🔗 URL?", "https://");
 
 // 🔱 4. TITLE CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(article-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(article-|r-)/i, "").trim();
 
 tR += "---"  
 %>

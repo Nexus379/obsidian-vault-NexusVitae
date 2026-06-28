@@ -95,7 +95,9 @@ else if (p >= 20) bar = "██░░░░░░░░ 20%";
 else if (p >= 10) bar = "█░░░░░░░░░ 10%";
 
 // 7. 🔱 SMART LOGIC (Director & Author Sort)
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(serie-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(serie-|r-)/i, "").trim();
 
 tR += "---"  
 %>

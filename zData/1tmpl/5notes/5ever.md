@@ -24,7 +24,9 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. CLEANING (Nexus Standard)
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(ever-|n-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(ever-|n-)/i, "").trim();
 
 tR += "---"  
 %>

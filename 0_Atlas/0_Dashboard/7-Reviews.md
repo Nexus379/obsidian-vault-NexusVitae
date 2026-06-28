@@ -3,13 +3,13 @@ cssclasses:
   - dashboard-no-border
   - wide-page
 ---
-# 🏛️ Review Command Center
-| [[0_Atlas/0_Dashboard/0-Calendar|Calendar]] | [[0_Atlas/Bases/Calendarbase.base|Calendarbase]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PLM|PLM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM|PPM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|PKM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|Studyboard]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Review|Reviews]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard|Finance]] |
+# 🛰️ Review Command Center
+| [[0_Atlas/0_Dashboard/0-Calendar|📅Calendar]] | [[0_Atlas/Bases/Calendarbase.base|⚙️Calendarbase]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PLM|🌷PLM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM|🌻PPM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🌼PKM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|🎓Studyboard]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/7-Reviews|🛰️Reviews]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
 ---
->[!multi-column]
+> [!multi-column]
 >
 > > [!blank|wide-0]
 > > ### 💹 **REVIEW DISTRIBUTION**
@@ -55,8 +55,6 @@ cssclasses:
 > >      setTimeout(() => clearInterval(renderInterval), 5000);
 > > }
 > > ```
->
-> > ![[zData/5design_modul/QuickCaptureModul|QuickCaptureModul]]
 >
 > > [!blank|wide-5]
 > > ### 📈 **VITALITY ARC (30D)**
@@ -175,5 +173,3 @@ cssclasses:
 > >     }
 > > }
 > > ```
-
----

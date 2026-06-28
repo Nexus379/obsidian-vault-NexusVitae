@@ -19,19 +19,12 @@ if (tp.file.title !== title) {
 let sci = tp.variables.sciTag || "#science";
 let disc = tp.variables.discTag || "#disc";
 
-
 // 🔱 3. CLASS SPECIFIC PROMPTS
-let rawCreator = await tp.system.prompt("👨‍🏫 Teacher / Lecturer (First Last)?", "Unknown") || "Unknown";
-let creatorSort = rawCreator;
-if (rawCreator.includes(" ")) {
-    let parts = rawCreator.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    creatorSort = lastName + ", " + firstName;
-}
 let room = await tp.system.prompt("📍 Room / Floor?", "Online") || "Online";
 
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(class-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(class-|r-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -47,12 +40,6 @@ status:
 priority:
   - "1"
 persona:
-creator: "<%- rawCreator %>"
-creator_sort: "<%- creatorSort %>"
-science: ["<%- sci %>"]
-discipline: ["<%- disc %>"]
-subject:
-- "<%- room %>"
 rating: 
 ranking:
 LID: "<%- luhmannId %>"
@@ -61,6 +48,16 @@ sibling:
 child:
 summary:
 review:
+# 🔱 Meta Bind Texts (Use comma separation for multiple entries)
+author: ""
+original_title: ""
+publisher: ""
+pub_date: ""
+# 🔱 Dynamic Details
+science: ["<%- sci %>"]
+discipline: ["<%- disc %>"]
+subject:
+- "<%- room %>"
 ---
 
 # 🏫 Class: <%- luhmannId %> <%- displayTitle %>
@@ -68,13 +65,16 @@ review:
 > [!reference] Class Details
 > **ID:** <%- luhmannId %> 
 > 
-> **Teacher:** `$= dv.current().creator` 
+> **Teacher:** 
+> `INPUT[inlineList:author]` 
 > 
 > **Discipline:** `$= dv.current().discipline`
 > 
 >  **Science:** `$= dv.current().science`
 > 
 > **Subject:** `$= dv.current().subject`
+
+<%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
 
 ## 📝 Mitschrift
 - 

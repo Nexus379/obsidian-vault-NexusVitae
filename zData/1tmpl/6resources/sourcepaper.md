@@ -61,20 +61,11 @@ if (!pureCover) {
     pureCover = manual ? `${coverFolder}/${manual}.jpg` : "";
 }
 
-// 🔱 5. SMART AUTHOR LOGIC (Fixed variables!)
-let rawCreator = await tp.system.prompt("✍️ First Author (Firstname Lastname)?", "Unknown");
-let creatorSort = rawCreator; 
-
-if (rawCreator && rawCreator.includes(" ") && rawCreator !== "Unknown") {
-    let parts = rawCreator.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    creatorSort = lastName + ", " + firstName;
-}
-
-// 🔱 6. DOI & CLEANING
+// 🔱 5. DOI & CLEANING
 let doi = await tp.system.prompt("🧬 DOI Number?", "10.xxxx/xxxx");
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(paper-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(paper-|r-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -91,16 +82,6 @@ status:
 priority:
   - "1"
 persona:
-creator: "<%- rawCreator %>"
-creator_sort: "<%- creatorSort %>"
-doi: "<%- doi %>"
-science: ["<%- sci %>"]
-discipline: ["<%- disc %>"]
-subject: ""
-plattform: ""
-publisher:
-pub_date:
-chapter: ""
 rating:
 ranking:
 LID: "<%- luhmannId %>"
@@ -109,6 +90,18 @@ sibling:
 child:
 summary:
 review:
+# 🔱 Meta Bind Texts (Use comma separation for multiple entries)
+author: ""
+original_title: ""
+publisher: ""
+pub_date: ""
+# 🔱 Dynamic Details
+doi: "<%- doi %>"
+science: ["<%- sci %>"]
+discipline: ["<%- disc %>"]
+subject: ""
+plattform: ""
+chapter: ""
 ---
 
 # 📃 Paper: <%- luhmannId %> <%- displayTitle %>
@@ -123,16 +116,12 @@ review:
 > > > 
 > > > **Science:** `$= dv.current().science`
 > > > 
-> > > **Author:** `$= dv.current().creator` 
+> > > **Author:** 
+> > > `INPUT[inlineList:author]` 
 > > > 
 > > > **DOI:** [Link via DOI](https://doi.org/<%- doi %>)
 
-
-
-
-
-
-
+<%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
 
 ---
 [[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]

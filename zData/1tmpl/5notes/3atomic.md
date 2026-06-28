@@ -25,7 +25,9 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. TITEL-CLEANING (displayTitle statt dTitle!)
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(atomic-|n-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(atomic-|n-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -36,7 +38,7 @@ inbox: true
 arch:
   - "#5note"
 archtype:
-  - "#5note/4atomic"
+  - "#5note/3atomic"
 status: 1active
 priority:
   - "1"

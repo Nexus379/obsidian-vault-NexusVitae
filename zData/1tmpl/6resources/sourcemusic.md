@@ -23,12 +23,10 @@ const pOptions = ["Spotify 🟢", "YouTube 🔴", "Soundcloud 🟠", "Apple Musi
 const pValues = ["Spotify", "YouTube", "Soundcloud", "AppleMusic", "Physical"];
 let plat = await tp.system.suggester(pOptions, pValues) || "Unknown";
 
-// Creator = Composer/Band | Artist = Singer/Performer
-let creator = await tp.system.prompt("✍️ Creator (Band/Composer)?", "Unknown");
-let artist = await tp.system.prompt("🎤 Artist (Performer/Singer)?", creator);
-
 // 🔱 4. TITLE CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(music-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(music-|r-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -49,8 +47,8 @@ cover: ""
 url: ""
 plattform: 
   - "<%- plat %>"
-creator: "<%- creator %>"
-artist: "<%- artist %>"
+creator: ""
+artist: ""
 publisher:
 pub_date:
 rating: 
@@ -66,17 +64,21 @@ review:
 
 
 > [!abstract] Audio Resonance
-> **Creator:** <%- creator %> 
+> **Creator:** 
+> `INPUT[inlineList:creator]`
 > 
-> **Artist:** <%- artist %>
+> **Artist:** 
+> `INPUT[inlineList:artist]`
 > 
 > **Source:** `$= dv.current().plattform`
 
+<%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
 
 ## 🎧 Focus & Notes
-- **Why this music?** ## 🖇️ Connections
-- Linked to Project/Area: <%- pLink %>
+- **Why this music?** 
 
+## 🖇️ Connections
+- Linked to Project/Area: <%- pLink %>
 
 
 

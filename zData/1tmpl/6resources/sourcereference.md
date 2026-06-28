@@ -61,18 +61,10 @@ if (!pureCover) {
     pureCover = manual ? `${coverFolder}/${manual}.jpg` : "";
 }
 
-// 🔱 3. AUTHOR LOGIC
-let rawCreator = await tp.system.prompt("✍️ Author / Professor / Editor?", "Unknown") || "Unknown";
-let creatorSort = rawCreator;
-if (rawCreator && rawCreator.includes(" ") && rawCreator !== "Unknown") {
-    let parts = rawCreator.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    creatorSort = lastName + ", " + firstName;
-}
-
-// 🔱 4. CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(ref-|r-)/i, "").trim();
+// 🔱 3. CLEANING
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(ref-|r-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -89,19 +81,6 @@ status:
 priority:
   - "1"
 persona:
-creator: "<%- rawCreator %>"
-creator_sort: "<%- creatorSort %>"
-science: ["<%- sci %>"]
-discipline: ["<%- disc %>"]
-genre:
-  - "Reference"
-subject: "<%- sub %>"
-plattform: ""
-publisher:
-pub_date:
-volume:
-volume_max:
-chapter: ""
 rating:
 ranking:
 LID: "<%- luhmannId %>"
@@ -110,6 +89,21 @@ sibling:
 child:
 summary:
 review:
+# 🔱 Meta Bind Texts (Use comma separation for multiple entries)
+author: ""
+original_title: ""
+publisher: ""
+pub_date: ""
+# 🔱 Dynamic Details
+science: ["<%- sci %>"]
+discipline: ["<%- disc %>"]
+genre:
+  - "Reference"
+subject: "<%- sub %>"
+plattform: ""
+volume:
+volume_max:
+chapter: ""
 ---
 
 # 📚 Reference: <%- luhmannId %> <%- displayTitle %>
@@ -122,18 +116,15 @@ review:
 > > > [!blank]
 > > > **ID:** <%- luhmannId %> 
 > > > 
-> > > **Author:** `$= dv.current().creator`
+> > > **Discipline:** `$= dv.current().discipline`
 > > > 
-> > > **Science:** <%- sci %>
-> > > 
-> > > **Discipline**: <%- disc %>
+> > > **Author:** 
+> > > `INPUT[inlineList:author]`
 
-## 📑 Core Theses & Research Notes
+<%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
+
+## 🔖 Key Takeaways
 - 
-
-
-
-
 
 ---
 [[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]

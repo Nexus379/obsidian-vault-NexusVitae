@@ -54,10 +54,10 @@ archtype:
   - "#4task/toget"
   - "#5note/1fleeting"
   - "#5note/2literature"
-  - "#5note/3permanent"
-  - "#5note/4atomic"
-  - "#5note/4atomic/anki"
-  - "#5note/4atomic/nutrition"
+  - "#5note/4permanent"
+  - "#5note/3atomic"
+  - "#5note/3atomic/anki"
+  - "#5note/3atomic/nutrition"
   - "#5note/5evergreen"
   - "#6resou/ai"
   - "#6resou/article"
@@ -497,10 +497,10 @@ difficulty:
 ### 5 Note
 #5note/1fleeting
 #5note/2literature
-#5note/3permanent
-#5note/4atomic
-#5note/4atomic/anki
-#5note/4atomic/nutrition
+#5note/4permanent
+#5note/3atomic
+#5note/3atomic/anki
+#5note/3atomic/nutrition
 #5note/5evergreen
 
 ### 6 Source

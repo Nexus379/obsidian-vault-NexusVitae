@@ -90,20 +90,15 @@ else if (p >= 30) bar = "███░░░░░░░ 30%";
 else if (p >= 20) bar = "██░░░░░░░░ 20%";
 else if (p >= 10) bar = "█░░░░░░░░░ 10%";
 
-// 🔱 8. STUDIO & DIRECTOR
+// 🔱 8. ADDITIONAL METADATA
 let playtime = await tp.system.prompt("🕒 Playtime (Hours)?", "0");
-let studio = await tp.system.prompt("🏢 Developer Studio?", "Unknown");
-let rawDir = await tp.system.prompt("🎬 Game Director?", "Unknown");
-let dirSort = rawDir;
-if (rawDir && rawDir.includes(" ")) {
-    let parts = rawDir.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    dirSort = lastName + ", " + firstName;
-}
+let vol = await tp.system.prompt("🔢 Volume / Part?", "1") || "1";
+let volTitle = await tp.system.prompt("🏷️ Name of this Part / Subtitle? (optional)", "") || "";
 
 // 🔱 9. TITLE CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(game-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(game-|r-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -121,23 +116,6 @@ status:
 priority:
   - "1"
 persona:
-creator:
-director: "<%- rawDir %>" 
-director_sort: "<%- dirSort %>"
-publisher: "<%- studio %>"
-genre:
-  - "<%- genre %>"
-style: "<%- style %>"
-plattform: 
-  - "<%- plat %>"
-progress: <%- p %>
-progressBar: "<%- bar %>"
-playtime: <%- playtime %>
-pub_date:
-volume:
-volume_max:
-chapter: ""
-difficulty:
 rating:
 ranking:
 LID: "<%- luhmannId %>"
@@ -146,10 +124,30 @@ sibling:
 child:
 summary:
 review:
+# 🔱 Meta Bind Texts (Use comma separation for multiple entries)
+original_title: ""
+author: ""
+director: ""
+publisher: ""
+pub_date: ""
+actors: ""
+genre:
+  - "<%- genre %>"
+style: "<%- style %>"
+plattform: 
+  - "<%- plat %>"
+# 🔱 Dynamic Details
+progress: <%- p %>
+progressBar: "<%- bar %>"
+playtime: <%- playtime %>
+volume: <%- vol %>
+volume_title: "<%- volTitle %>"
+volume_max:
+chapter: ""
+difficulty:
 ---
 
 # 🕹️ Game: <%- luhmannId %> <%- displayTitle %>
-
 
 > [!terminal] System Status
 > **Progress:** `$= const p = dv.current().progress; const filled = Math.round(p / 10); "🎮".repeat(filled) + "⏺️".repeat(10 - filled) + " **" + p + "%**"`
@@ -158,10 +156,14 @@ review:
 > 
 > **Platform:** <%- plat %>
 > 
-> **Developer:** <%- studio %> 
+> **ID:** <%- luhmannId %> `$= dv.current().volume ? '| **Part:** ' + dv.current().volume : ''` `$= dv.current().volume_title ? '- ' + dv.current().volume_title : ''`
+> 
+> **Developer:**
+> `INPUT[inlineList:publisher]`
 > 
 > **Style:** <%- style %>
 
+<%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
 
 ## ⚔️ Quests & Milestones
 - [ ] Main Story

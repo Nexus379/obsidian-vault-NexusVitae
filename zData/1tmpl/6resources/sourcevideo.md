@@ -19,7 +19,9 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. TITLE CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(video-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(video-|r-)/i, "").trim();
 
 tR += "---"  
 %>

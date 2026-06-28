@@ -4,7 +4,7 @@ cssclasses:
   - wide-page
 ---
 # 🎓 Studyboard
-| [[0_Atlas/0_Dashboard/0-Calendar|Calendar]] | [[0_Atlas/Bases/Calendarbase.base|Calendarbase]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PLM|PLM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM|PPM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|PKM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|Studyboard]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Review|Reviews]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard|Finance]] |
+| [[0_Atlas/0_Dashboard/0-Calendar|📅Calendar]] | [[0_Atlas/Bases/Calendarbase.base|⚙️Calendarbase]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PLM|🌷PLM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM|🌻PPM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🌼PKM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|🎓Studyboard]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/7-Reviews|🛰️Reviews]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -112,7 +112,7 @@ cssclasses:
 > >          { label: "Future", days: 30, color: "var(--text-muted)" }
 > >     ];
 > > 
-> >     const allPages = dv.pages('"4_Tasks" OR "5_Notes"')
+> >     const allPages = dv.pages('"4_Tasks/3-ToStudy" OR "5_Notes"')
 > >          .where(p => p.status !== "done" && (p.nextstudy || p.due));
 > > 
 > >     let html = '<div style="display: flex; gap: 15px; overflow-x: auto; padding: 10px; align-items: flex-start; background: var(--background-secondary); border-radius: 8px;">';

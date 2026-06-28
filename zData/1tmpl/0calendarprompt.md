@@ -248,9 +248,17 @@ else if (tp.variables.displayTitle !== undefined && tp.variables.displayTitle !=
 else if (tp.variables.title && !tp.variables.title.includes("Entry-")) {
     cleanTitle = tp.variables.title;
 } else {
-    cleanTitle = rawTitle.replace(/^\d{4}-\d{2}-\d{2}/, "")
-                         .replace(new RegExp(`^${activeTrigger}-?`, "i"), "")
-                         .trim();
+    let tempTitle = rawTitle.replace(/^\d{4}-\d{2}-\d{2}/, "").trim();
+    const triggerRegex = new RegExp(`^(${calSuffix.join('|')})\\s*-?\\s*`, "i");
+    cleanTitle = tempTitle.replace(triggerRegex, "").trim();
+}
+
+// Zusätzliche iterative Bereinigung von übriggebliebenen Präfixen (z.B. "ppm - - ppm")
+let previousCleanTitle = "";
+const cleanupRegex = new RegExp(`^\\s*(-|\\b(?:${calSuffix.join('|')})\\b)\\s*`, "i");
+while (cleanTitle !== previousCleanTitle) {
+    previousCleanTitle = cleanTitle;
+    cleanTitle = cleanTitle.replace(cleanupRegex, "");
 }
 
 // Systemunabhängige Eliminierung des lokalen Standardnamens (inklusive inkrementeller Ziffern)

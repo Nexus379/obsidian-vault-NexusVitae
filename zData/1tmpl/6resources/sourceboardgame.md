@@ -69,20 +69,14 @@ if (!genre) genre = "Boardgame";
 let players = await tp.system.prompt("👥 Player Count (e.g. 1-4)?", "1-4");
 let playtime = await tp.system.prompt("⏳ Playtime in minutes?", "60");
 
-// 🔱 7. SMART LOGIC (Designer)
-let rawCreator = await tp.system.prompt("✍️ Game Designer?", "Unknown");
-let creatorSort = rawCreator;
-if (rawCreator && rawCreator.includes(" ") && rawCreator !== "Unknown") {
-    let parts = rawCreator.trim().split(/\s+/);
-    let lastName = parts.pop();
-    let firstName = parts.join(" ");
-    creatorSort = lastName + ", " + firstName;
-}
-
-let publisher = await tp.system.prompt("🏢 Publisher?", "Unknown");
+// 🔱 7. ADDITIONAL METADATA
+let vol = await tp.system.prompt("🔢 Expansion / Volume?", "") || "";
+let volTitle = await tp.system.prompt("🏷️ Subtitle / Expansion Name?", "") || "";
 
 // 🔱 8. TITLE CLEANING
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(boardgame-|bg-|r-)/i, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(boardgame-|bg-|r-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -100,14 +94,6 @@ status:
 priority:
   - "1"
 persona:
-creator: "<%- rawCreator %>"
-creator_sort: "<%- creatorSort %>"
-publisher: "<%- publisher %>"
-genre:
-  - "<%- genre %>"
-players: "<%- players %>"
-playtime: <%- playtime %>
-weight:
 rating: 
 ranking:
 LID: "<%- luhmannId %>"
@@ -116,6 +102,19 @@ sibling:
 child:
 summary:
 review:
+# 🔱 Meta Bind Texts (Use comma separation for multiple entries)
+author: ""
+original_title: ""
+publisher: ""
+pub_date: ""
+genre:
+  - "<%- genre %>"
+players: "<%- players %>"
+# 🔱 Dynamic Details
+playtime: <%- playtime %>
+weight:
+volume: <%- vol %>
+volume_title: "<%- volTitle %>"
 ---
 
 # 🎲 Boardgame: <%- luhmannId %> <%- displayTitle %>
@@ -126,13 +125,15 @@ review:
 > > > ![[<%- pureCover %>|150]]
 > > 
 > > > [!blank]
-> > > **ID:** <%- luhmannId %> 
+> > > **ID:** <%- luhmannId %> `$= dv.current().volume ? '| **Expansion:** ' + dv.current().volume : ''` `$= dv.current().volume_title ? '- ' + dv.current().volume_title : ''`
 > > > 
-> > > **Designer:** `$= dv.current().creator`
+> > > **Designer:** `$= dv.current().author`
 > > > 
-> > > **Players:** `$= dv.current().players` | **Time:** `$= dv.current().playtime` min
+> > > **Genre:** `$= dv.current().genre`
 > > > 
-> > > **Mechanic:** `$= dv.current().genre`
+> > > **Players:** `$= dv.current().players` | **Playtime:** `$= dv.current().playtime` min
+
+<%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
 
 ## ⚔️ Setup & Rules Notes
 - 

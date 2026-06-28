@@ -25,7 +25,9 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. CLEANING (H1 Anzeige)
-let displayTitle = title.replace(/^([a-zA-Z0-9.]+)/, "").trim();
+let displayTitle = title;
+if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(perma-|n-|r-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -36,7 +38,7 @@ inbox: true
 arch:
   - "#5note"
 archtype:
-  - "#5note/3permanent"
+  - "#5note/4permanent"
 status: 1active
 persona: "<%- persona %>"
 priority:
@@ -78,8 +80,8 @@ review:
 
 ## 🔗 Connectiones (Verknüpfungen)
 - **Up (Parent):** <%- pLink %>
-- **Sideways (Siblings):** `$= dv.list(dv.pages("#5note/3permanent").filter(p => p.LID && p.LID.length === dv.current().LID.length && p.LID.startsWith(dv.current().LID.slice(0,-1)) && p.file.name != dv.current().file.name).file.link)`
-- **Down (Children):** `$= dv.list(dv.pages("#5note/3permanent").filter(p => p.LID && p.LID.length > dv.current().LID.length && p.LID.startsWith(dv.current().LID)).file.link)`
+- **Sideways (Siblings):** `$= dv.list(dv.pages("#5note/4permanent").filter(p => p.LID && p.LID.length === dv.current().LID.length && p.LID.startsWith(dv.current().LID.slice(0,-1)) && p.file.name != dv.current().file.name).file.link)`
+- **Down (Children):** `$= dv.list(dv.pages("#5note/4permanent").filter(p => p.LID && p.LID.length > dv.current().LID.length && p.LID.startsWith(dv.current().LID)).file.link)`
 
 
 
