@@ -2,7 +2,7 @@
 banner: "![[xAttachment/Images/Banner/street gif.gif]]"
 banner_y: 0.5
 banner_icon: 🚵🏽
-inbox: true
+inbox: false
 persona: ""
 arch:
   - "#2area"
@@ -29,6 +29,8 @@ sibling: []
 child: []
 summary:
 review:
+cssclasses:
+  - wide-page
 ---
 
 # 💪 Nexus Fitness Routine

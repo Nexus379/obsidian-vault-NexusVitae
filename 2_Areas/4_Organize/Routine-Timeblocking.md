@@ -2,7 +2,7 @@
 banner: "![[xAttachment/Images/Banner/anime-style-cozy-home-interior-with-furnishings.jpg]]"
 banner_y: 0.5
 banner_icon: 🧩
-inbox: true
+inbox: false
 persona: ""
 arch:
   - "#2area"

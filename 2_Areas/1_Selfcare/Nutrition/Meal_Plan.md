@@ -44,6 +44,8 @@ sun_eve: []
 mon_add: []
 fri_rem: []
 wed_add: []
+cssclasses:
+  - wide-page
 ---
 
 # 🍱 Nexus Weekly Meal Architect

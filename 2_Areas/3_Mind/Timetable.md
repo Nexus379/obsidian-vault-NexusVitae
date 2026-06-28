@@ -2,7 +2,7 @@
 banner: "![[xAttachment/Images/Banner/kachelschwarz-lichtblau.jpg]]"
 banner_y: 0.35
 banner_icon: 🧠
-inbox: true
+inbox: false
 persona: ""
 arch:
   - "#2area"
@@ -20,6 +20,8 @@ tt_duration: 45
 tt_periods: 16
 tt_breaks: 2:15, 4:15, 6:30
 tt_wed_3: german_studies
+cssclasses:
+  - wide-page
 ---
 
 # 🗓️ Nexus Timetable
