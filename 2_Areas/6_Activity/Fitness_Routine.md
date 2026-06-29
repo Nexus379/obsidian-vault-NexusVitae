@@ -91,7 +91,10 @@ if (profile) {
 const c = dv.current();
 const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
 let engine = null;
-try { engine = require(enginePath)(); } catch(e) {}
+try { 
+    delete require.cache[require.resolve(enginePath)];
+    engine = require(enginePath)(); 
+} catch(e) {}
 
 const getD = (key) => {
     if (!key || key === "free" || key.length === 0) return "—";

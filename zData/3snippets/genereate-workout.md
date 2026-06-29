@@ -17,6 +17,7 @@ try {
 
     // Load Engine
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
+    try { delete require.cache[require.resolve(enginePath)]; } catch(e) {}
     const engine = require(enginePath)();
 
     const currentFm = app.metadataCache.getFileCache(file)?.frontmatter || {};
@@ -29,12 +30,13 @@ try {
         
         return shuffled.slice(0, volume).map(ex => {
             let metric = defaultSets; 
-            if (region === "mobility") metric = "Dynamic Warmup";
-            else if (ex.key.includes("plank") || ex.key.includes("hold") || ex.key.includes("isometric") || ex.key.includes("stance")) {
-                metric = "3x45s Hold";
-            } else if (ex.baseTime) {
+            if (ex.baseTime) {
                 let extraTime = (tWeek - 1) * 2; // Steigerung: 2 Min pro Woche
                 metric = `${ex.baseTime + extraTime} Min.`;
+            } else if (region === "mobility") {
+                metric = "Dynamic Warmup";
+            } else if (ex.key.includes("plank") || ex.key.includes("hold") || ex.key.includes("isometric") || ex.key.includes("stance")) {
+                metric = "3x45s Hold";
             }
             return `${ex.key}|${metric}`;
         });

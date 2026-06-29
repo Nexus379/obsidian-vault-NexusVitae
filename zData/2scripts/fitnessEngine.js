@@ -1,4 +1,4 @@
-function fitnessEngine() {
+﻿function fitnessEngine() {
     const EXERCISES = {
         // ==========================================
         // 🏃‍♀️ GENERAL ACTIVITIES & SPORTS
@@ -82,22 +82,22 @@ function fitnessEngine() {
         // ==========================================
         // 🔥 CARDIO & ENDURANCE (Conditioning)
         // ==========================================
-        jumping_jacks: { label: "Jumping Jacks", icon: "🤸‍♀️", regions: ["cardio", "upper", "lower"], persona: "warrior" },
-        mountain_climbers: { label: "Mountain Climbers", icon: "🏔️", regions: ["cardio", "core", "upper"], persona: "warrior" },
-        jump_rope: { label: "Jump Rope", icon: "🪢", regions: ["cardio", "lower", "core"], persona: "warrior" },
-        burpee: { label: "Burpees", icon: "🔥", regions: ["cardio", "upper", "lower", "core"], persona: "warrior" },
-        sprints: { label: "High-Intensity Sprints", icon: "⚡", regions: ["cardio", "lower"], persona: "warrior" },
-        kettlebell_swing: { label: "Kettlebell Swings", icon: "🪨", regions: ["cardio", "lower", "core", "back"], persona: "warrior" },
-        farmers_walk: { label: "Farmer's Walk (Heavy Carry)", icon: "🚶‍♂️", regions: ["cardio", "core", "upper", "lower"], persona: "warrior" },
+        jumping_jacks: { label: "Jumping Jacks", icon: "🤸‍♀️", regions: ["cardio", "upper", "lower"], persona: "warrior", baseTime: 5 },
+        mountain_climbers: { label: "Mountain Climbers", icon: "🏔️", regions: ["cardio", "core", "upper"], persona: "warrior", baseTime: 5 },
+        jump_rope: { label: "Jump Rope", icon: "🪢", regions: ["cardio", "lower", "core"], persona: "warrior", baseTime: 10 },
+        burpee: { label: "Burpees", icon: "🔥", regions: ["cardio", "upper", "lower", "core"], persona: "warrior", baseTime: 5 },
+        sprints: { label: "High-Intensity Sprints", icon: "⚡", regions: ["cardio", "lower"], persona: "warrior", baseTime: 10 },
+        kettlebell_swing: { label: "Kettlebell Swings", icon: "🪨", regions: ["cardio", "lower", "core", "back"], persona: "warrior", baseTime: 10 },
+        farmers_walk: { label: "Farmer's Walk (Heavy Carry)", icon: "🚶‍♂️", regions: ["cardio", "core", "upper", "lower"], persona: "warrior", baseTime: 10 },
 
         // ==========================================
         // 🤸 WARMUP & MOBILITY (Dynamic Stretching)
         // ==========================================
-        dynamic_lunge: { label: "Dynamic Lunges", icon: "🩰", regions: ["mobility", "lower"], persona: "healer" },
-        arm_swings: { label: "Arm Swings & Rotations", icon: "🚁", regions: ["mobility", "upper"], persona: "healer" },
-        cat_cow: { label: "Cat-Cow Stretch", icon: "🐈", regions: ["mobility", "core", "back"], persona: "healer" },
-        worlds_greatest: { label: "World's Greatest Stretch", icon: "🌍", regions: ["mobility", "lower", "upper", "core"], persona: "healer" },
-        foam_rolling: { label: "Foam Rolling / Tissue Prep", icon: "🧻", regions: ["mobility", "lower", "upper", "back"], persona: "healer" }
+        dynamic_lunge: { label: "Dynamic Lunges", icon: "🩰", regions: ["mobility", "lower"], persona: "healer", baseTime: 5 },
+        arm_swings: { label: "Arm Swings & Rotations", icon: "🚁", regions: ["mobility", "upper"], persona: "healer", baseTime: 5 },
+        cat_cow: { label: "Cat-Cow Stretch", icon: "🐈", regions: ["mobility", "core", "back"], persona: "healer", baseTime: 5 },
+        worlds_greatest: { label: "World's Greatest Stretch", icon: "🌍", regions: ["mobility", "lower", "upper", "core"], persona: "healer", baseTime: 5 },
+        foam_rolling: { label: "Foam Rolling / Tissue Prep", icon: "🧻", regions: ["mobility", "lower", "upper", "back"], persona: "healer", baseTime: 5 }
     };
 
     return {
