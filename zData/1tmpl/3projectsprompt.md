@@ -67,6 +67,7 @@ if (typeof tp.user.disciplineEngine === "function") {
         tp.variables.discIcon = selectedDisc.icon;
         tp.variables.area = selectedDisc.area; // Direkt für die Projekte sichern!
         tp.variables.currentArea = selectedDisc.area;
+        tp.variables.persona = selectedDisc.persona;
     } else {
         tp.variables.sci = "";
         tp.variables.disc = "";

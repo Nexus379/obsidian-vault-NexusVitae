@@ -21,10 +21,9 @@ if (tp.file.title !== title) {
     await new Promise(r => setTimeout(r, 200)); 
 }
 
-// 🔱 3. FINANCIAL PROMPTS (Universal)
-let payee = await tp.system.prompt("👤 Contact (Person/Company)?", "Name");
-let amount = await tp.system.prompt("💰 Estimated Amount?", "0.00");
-let account = await tp.system.suggester(["💳 Visa", "🔵 PayPal", "🏦 Bank", "💵 Cash"], ["Visa", "PayPal", "Bank", "Cash"]) || "TBD";
+// 🔱 3. SHOPPING PROMPTS
+let amount = await tp.system.prompt("💰 Estimated Budget/Price?", "0.00");
+let vendor = await tp.system.prompt("🛒 Vendor or Link?", "Amazon");
 let deadline = await tp.system.prompt("📅 Acquisition Deadline?", tp.date.now("YYYY-MM-DD", 14)) || tp.date.now("YYYY-MM-DD", 14);
 
 // 🔱 4. CLEANING
@@ -46,9 +45,7 @@ priority:
   - "3"
 due: <%- deadline %>
 amount: <%- amount %>
-payee: "<%- payee %>"
-account: "<%- account %>"
-flow: "out"
+vendor: "<%- vendor %>"
 cal0:
 stars1:
 area2: "<%- area %>"
@@ -76,8 +73,7 @@ review:
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 
-- 💵 Budget: `INPUT[number:amount]` € via <%- account %>
--  **Contact:** `<%- payee %>`
+- 💵 Price: `INPUT[number:amount]` € at <%- vendor %>
 
 ---
 ## 🛒 Purchase Blueprint

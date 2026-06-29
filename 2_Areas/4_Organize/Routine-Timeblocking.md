@@ -2,7 +2,7 @@
 banner: "![[xAttachment/Images/Banner/anime-style-cozy-home-interior-with-furnishings.jpg]]"
 banner_y: 0.5
 banner_icon: 🧩
-inbox: false
+inbox: true
 persona: ""
 arch:
   - "#2area"
@@ -40,9 +40,7 @@ cssclasses:
 
 # 🧩 Nexus Timeblocking (Routines)
 
-`BUTTON[setup-routine]` `BUTTON[edit-routine]`
-
-`BUTTON[reset-schedule]`
+`BUTTON[setup-routine]` `BUTTON[edit-routine]` `BUTTON[sync-timetable]`
 
 ```dataviewjs
 const c = dv.current();
@@ -124,4 +122,4 @@ dv.table(headers, rows);
 ```
 
 
-
+`BUTTON[reset-schedule]`

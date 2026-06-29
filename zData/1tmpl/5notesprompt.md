@@ -117,6 +117,7 @@ if (needsScience.includes(nChoice)) {
             tp.variables.sciTag = selectedDisc.sci.join('", "');
             tp.variables.discTag = selectedDisc.disc;
             tp.variables.subText = selectedDisc.label;
+            tp.variables.persona = selectedDisc.persona;
         }
     }
 }

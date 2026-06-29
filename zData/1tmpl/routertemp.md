@@ -89,7 +89,7 @@ if (!selection && rawTitle.includes("-")) {
     if (promptMap[routeTrigger]) {
         selection = promptMap[routeTrigger];
         activeTrigger = routeTrigger;
-        originTrigger = titleParts[1] || routeTrigger;
+        originTrigger = promptMap[titleParts[1]] ? titleParts[1] : routeTrigger;
     }
 }
 

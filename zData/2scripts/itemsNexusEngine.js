@@ -2,8 +2,13 @@
  * 🔱 NEXUS MASTER ENGINE (Alpha v1.0)
  * Central Intelligence for all Silos (Food, Tools, Maintenance)
  */
-async function itemsNexusEngine(app) {
-    const allFiles = app.vault.getFiles().filter(f => f.path.includes("zData/6items/") && f.extension === "json");
+async function itemsNexusEngine(app, domainFilter = "ALL") {
+    const allFiles = app.vault.getFiles().filter(f => {
+        if (!f.path.includes("zData/6items/") || f.extension !== "json") return false;
+        if (domainFilter === "FOOD" && !f.name.startsWith("ingre_")) return false;
+        if (domainFilter === "MAINTENANCE" && !f.name.startsWith("item_")) return false;
+        return true;
+    });
     const DATABASE = {};
 
     for (let file of allFiles) {
@@ -70,6 +75,22 @@ async function itemsNexusEngine(app) {
             if (!item) return `[[${key}]]`;
             const name = item.lang[targetLang] || item.label || key;
             return `[[${key}|${item.icon || "📦"} ${name}]]`;
+        },
+
+        // 💰 Errechnet den Preis beim günstigsten/bevorzugten Laden
+        getBestPrice: (key, amount = 1.0) => {
+            const item = DATABASE[key];
+            if (!item) return null;
+            if (!item.prices) {
+                return { vendor: "unknown", total: item.unit_price ? parseFloat((item.unit_price * amount).toFixed(2)) : 0 };
+            }
+            const vendor = item.pref_vendor || Object.keys(item.prices)[0];
+            const price = item.prices[vendor] || item.unit_price || 0;
+            return {
+                vendor: vendor,
+                unit_price: price,
+                total: parseFloat((price * amount).toFixed(2))
+            };
         },
 
         // 🧪 Dynamische Nährwert-Rechnung für ALLE Variablen (kcal, vit_c, quercetin, etc.)

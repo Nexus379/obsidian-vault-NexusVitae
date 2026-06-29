@@ -20,10 +20,9 @@ if (tp.file.title !== title) {
     await new Promise(r => setTimeout(r, 200)); 
 }
 
-// 🔱 3. FINANCIAL PROMPTS (Universal)
-let payee = await tp.system.prompt("👤 Contact (Person/Company)?", "Name");
-let amount = await tp.system.prompt("💰 Estimated Amount?", "0.00");
-let account = await tp.system.suggester(["💳 Visa", "🔵 PayPal", "🏦 Bank", "💵 Cash"], ["Visa", "PayPal", "Bank", "Cash"]) || "TBD";
+// 🔱 3. SHOPPING PROMPTS
+let amount = await tp.system.prompt("💰 Estimated Budget/Price?", "0.00");
+let vendor = await tp.system.prompt("🛒 Vendor or Link?", "Amazon");
 
 // 🔱 3. CLEANING
 let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(5tobuy-|t-|4task-)/i, "").trim();
@@ -43,9 +42,7 @@ priority:
 persona: "<%- persona %>"
 due: <%- deadline %>
 amount: <%- amount %>
-payee: "<%- payee %>"
-account: "<%- account %>"
-flow: "out"
+vendor: "<%- vendor %>"
 cal0:
 stars1:
 area2: "<%- area %>"
@@ -67,14 +64,14 @@ review:
 > > > **Item:** <%- displayTitle %>
 > > > **Project:** <%- pLink || "None" %>
 > > > **Deadline:** `<%- deadline %>`
-> > > **Payee:** <%- payee %>
+> > > **Vendor/Link:** <%- vendor %>
 > > 
 > > >[!blank|wide-0]
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 
 - [ ] <%- displayTitle %>
-- 💵 Budget: `INPUT[number:amount]` € via <%- account %>
+- 💵 Price: `INPUT[number:amount]` € at <%- vendor %>
 
 ---
 [[p-active|+ Create Project]] 

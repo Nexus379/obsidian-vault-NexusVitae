@@ -1,5 +1,5 @@
-{
-  "kitchen_cleaning_matrix_v2": {
+﻿{
+"kitchen_cleaning_matrix_v2": {
     "--- THE_DISH_SOAP_TITANS ---": "Geschirrspülmittel (Handspül-Chemie)",
     "cleaning_pril_kraft_gel": {
       "unit_price": 3.00,
@@ -613,5 +613,9 @@
       "props": ["Technologischer Quellschutz für Echtholz", "Hinterlässt einen seidenmatten Glanz", "Verhindert Grauschleier"],
       "lang": { "de": "dm Parkettpflege", "en": "dm Wood Floor Care" }
     }
+  },
+  "diy_cleaning_raw": {
+    "washing_soda": { "unit_price": 2.00, "unit_type": "500g", "label": "Washing Soda", "icon": "ðŸ§¼", "val": { "ph_level": 11.0, "power": "High" }, "meta": { "locations": ["dm", "rossmann"] }, "props": ["Stark fettlÃ¶send", "WasserenthÃ¤rter", "Perfekt fÃ¼r DIY-Waschmittel"], "lang": { "de": "Waschsoda", "en": "Washing Soda" }, "prices": { "dm": 1.50, "rossmann": 1.50 }, "pref_vendor": "dm" },
+    "citric_acid": { "unit_price": 2.50, "unit_type": "500g", "label": "Citric Acid", "icon": "ðŸ‹", "val": { "ph_level": 2.0, "power": "High" }, "meta": { "locations": ["dm", "rossmann"] }, "props": ["KalklÃ¶ser Nummer 1", "NatÃ¼rlicher WeichspÃ¼ler-Ersatz", "Vorsicht bei Marmor"], "lang": { "de": "ZitronensÃ¤ure", "en": "Citric Acid" }, "prices": { "dm": 2.50, "rossmann": 2.50 }, "pref_vendor": "dm" }
   }
 }

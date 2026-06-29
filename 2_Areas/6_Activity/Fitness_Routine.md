@@ -2,7 +2,7 @@
 banner: "![[xAttachment/Images/Banner/street gif.gif]]"
 banner_y: 0.5
 banner_icon: 🚵🏽
-inbox: false
+inbox: true
 persona: ""
 arch:
   - "#2area"
@@ -29,13 +29,10 @@ sibling: []
 child: []
 summary:
 review:
-cssclasses:
-  - wide-page
+training_week: 1
 ---
 
 # 💪 Nexus Fitness Routine
-
-`BUTTON[setup-fitness]`  `BUTTON[generate-workout]` `BUTTON[edit-fitness]` `BUTTON[reset-schedule]`
 
 ```dataviewjs
 // 🎒 NEXUS ARSENAL CALLOUT
@@ -60,6 +57,26 @@ if (profile) {
     dv.paragraph(callout);
 }
 ```
+
+> [!info] 📈 **Progressive Overload Tracker**
+> **Current Cycle Week:** `INPUT[number:training_week]`
+> ```dataviewjs
+> const w = dv.current().training_week || 1;
+> const cycleWeek = ((w - 1) % 4) + 1; // 4-Week Cycles
+> 
+> let status = "";
+> let intensity = "";
+> let setsReps = "";
+> 
+> if (cycleWeek === 1) { status = "🌱 Foundation Phase"; intensity = "70% (RIR: 3)"; setsReps = "3 sets x 8-10 reps"; }
+> else if (cycleWeek === 2) { status = "⚙️ Volume Phase"; intensity = "80% (RIR: 2)"; setsReps = "4 sets x 8-10 reps"; }
+> else if (cycleWeek === 3) { status = "🔥 Overreach Phase"; intensity = "90% (RIR: 1)"; setsReps = "4 sets x 10-12 reps"; }
+> else if (cycleWeek === 4) { status = "🔋 Deload Phase"; intensity = "60% (RIR: 4)"; setsReps = "2 sets x 10 reps (Recovery)"; }
+> 
+> dv.paragraph(`**Phase:** ${status} &nbsp;&nbsp;|&nbsp;&nbsp; **Intensity:** ${intensity} &nbsp;&nbsp;|&nbsp;&nbsp; **Target:** ${setsReps}`);
+> ```
+
+`BUTTON[setup-fitness]`  `BUTTON[generate-workout]` `BUTTON[edit-fitness]` `BUTTON[reset-schedule]`
 
 ```dataviewjs
 const c = dv.current();
@@ -104,8 +121,6 @@ const rows = regions.map(r => [
 
 dv.table(headers, rows);
 ```
-
-
 
 ### The 3 Pillars of Training
 

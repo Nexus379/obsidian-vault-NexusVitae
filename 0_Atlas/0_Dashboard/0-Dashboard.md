@@ -51,17 +51,17 @@ cssclasses:
 > >             );
 > > 
 > >             const plm = entries.filter(p => 
-> >                 dv.array(p.persona).some(m => ["guardian", "warrior", "nurturer", "parent", "child", "sibling", "partner", "friend", "lover", "host", "traveler", "player", "monk_nun"].some(tag => String(m).toLowerCase().includes(tag))) || 
+> >                 dv.array(p.persona).some(m => ["guardian", "warrior", "nurturer", "parent", "child", "sibling", "partner", "friend", "lover", "host", "traveler", "player", "monk_nun", "caretaker"].some(tag => String(m).toLowerCase().includes(tag))) || 
 > >                 dv.array(p.archtype).some(t => ["1plm", "plm"].some(tag => String(t).toLowerCase().includes(tag)))
 > >             ).length;
 > > 
 > >             const ppm = entries.filter(p => 
-> >                 dv.array(p.persona).some(m => ["worker", "trainer", "strategist", "organizer", "healer", "queen_king", "diplomat", "visionary", "architect", "entrepreneur", "mentor", "critic"].some(tag => String(m).toLowerCase().includes(tag))) || 
+> >                 dv.array(p.persona).some(m => ["worker", "trainer", "strategist", "organizer", "healer", "queen_king", "diplomat", "visionary", "architect", "entrepreneur", "mentor", "critic", "engineer", "advocate", "artisan"].some(tag => String(m).toLowerCase().includes(tag))) || 
 > >                 dv.array(p.archtype).some(t => ["2ppm", "ppm"].some(tag => String(t).toLowerCase().includes(tag)))
 > >             ).length;
 > > 
 > >             const pkm = entries.filter(p => 
-> >                 dv.array(p.persona).some(m => String(m).toLowerCase().includes("student") || String(m).toLowerCase().includes("analyst") || String(m).toLowerCase().includes("creator") || String(m).toLowerCase().includes("teacher") || String(m).toLowerCase().includes("author") || String(m).toLowerCase().includes("speaker") || String(m).toLowerCase().includes("explorer") || String(m).toLowerCase().includes("alchemist") || String(m).toLowerCase().includes("seeker") || String(m).toLowerCase().includes("mystic") || String(m).toLowerCase().includes("researcher") || String(m).toLowerCase().includes("archivist") || String(m).toLowerCase().includes("technician")) || 
+> >                 dv.array(p.persona).some(m => ["student", "analyst", "creator", "teacher", "author", "speaker", "explorer", "alchemist", "seeker", "mystic", "researcher", "archivist", "technician", "scholar", "philosopher"].some(tag => String(m).toLowerCase().includes(tag))) || 
 > >                 dv.array(p.archtype).some(t => ["3pkm", "pkm", "study"].some(tag => String(t).toLowerCase().includes(tag)))
 > >             ).length;
 > >             
@@ -122,7 +122,7 @@ cssclasses:
 > > > >     const container = this.container;
 > > > >     if (container.innerHTML.length < 50) {
 > > > >         const pages = dv.pages('!"zData" and !"0_Calendar" and -"yArchive"').where(p => p.inbox !== true)
-> > > >             .where(p => dv.array(p.persona).some(m => ["guardian", "warrior", "nurturer", "parent", "child", "sibling", "partner", "friend", "lover", "host", "traveler", "player", "monk_nun"].some(tag => String(m).includes(tag))) 
+> > > >             .where(p => dv.array(p.persona).some(m => ["guardian", "warrior", "nurturer", "parent", "child", "sibling", "partner", "friend", "lover", "host", "traveler", "player", "monk_nun", "caretaker"].some(tag => String(m).toLowerCase().includes(tag))) 
 > > > >                      || dv.array(p.archtype).some(t => String(t).toLowerCase().includes("plm")))
 > > > >             .sort(p => p.file.mtime, "desc").limit(5);
 > > > > 
@@ -153,7 +153,7 @@ cssclasses:
 > > > >     const container = this.container;
 > > > >     if (container.innerHTML.length < 50) {
 > > > >         const pages = dv.pages('!"zData" and !"0_Calendar" and -"yArchive"').where(p => p.inbox !== true)
-> > > >             .where(p => dv.array(p.persona).some(m => ["worker", "trainer", "strategist", "organizer", "healer", "queen_king", "diplomat", "visionary", "architect", "entrepreneur", "mentor", "critic"].some(tag => String(m).includes(tag))) 
+> > > >             .where(p => dv.array(p.persona).some(m => ["worker", "trainer", "strategist", "organizer", "healer", "queen_king", "diplomat", "visionary", "architect", "entrepreneur", "mentor", "critic", "engineer", "advocate", "artisan"].some(tag => String(m).toLowerCase().includes(tag))) 
 > > > >                      || (dv.array(p.archtype).some(t => String(t).toLowerCase().includes("ppm") && !String(t).toLowerCase().includes("study"))))
 > > > >             .where(p => !dv.array(p.status).includes("done"))
 > > > >             .sort(p => p.file.mtime, "desc").limit(5);
@@ -185,10 +185,10 @@ cssclasses:
 > > > >     const container = this.container;
 > > > >     if (container.innerHTML.length < 50) {
 > > > >         const pages = dv.pages('!"zData" and !"0_Calendar" and -"yArchive"').where(p => p.inbox !== true)
-> > > >             .where(p => dv.array(p.persona).some(m => String(m).includes("study")) 
+> > > >             .where(p => dv.array(p.persona).some(m => ["student", "analyst", "creator", "teacher", "author", "speaker", "explorer", "alchemist", "seeker", "mystic", "researcher", "archivist", "technician", "study", "scholar", "philosopher"].some(tag => String(m).toLowerCase().includes(tag))) 
 > > > >                      || (p.discipline && dv.array(p.discipline).length > 0) 
 > > > >                      || dv.array(p.archtype).some(t => ["3pkm", "pkm", "study"].some(tag => String(t).toLowerCase().includes(tag)))
-> > > >                      || dv.array(p.arch).includes("#5✏"))
+> > > >                      || dv.array(p.arch).some(a => String(a).includes("#5note")))
 > > > >             .sort(p => p.file.mtime, "desc").limit(5);
 > > > > 
 > > > >         let html = `<div style="display: flex; flex-direction: column; gap: 4px; padding: 5px 0;">`;
@@ -266,11 +266,16 @@ cssclasses:
 > >             tableHTML += `<div style='font-size: 0.5em; color: var(--text-muted);'>${mDate.format("ddd")}</div>`;
 > >             tableHTML += `<div style='font-size: 0.75em; font-weight: 800; margin-bottom: 2px;'>${mDate.format("DD.MM.")}</div>`;
 > >             
-> >             // ROW 1: CALENDAR (Journal, Log, Study)
+> >             // Hilfsfunktionen für die korrekten Persona-Achsen (PLM, PPM, PKM)
+> >             const isPLM = p => dv.array(p.persona).some(m => ["guardian", "warrior", "nurturer", "parent", "child", "sibling", "partner", "friend", "lover", "host", "traveler", "player", "monk_nun", "caretaker"].some(tag => String(m).toLowerCase().includes(tag))) || checkYaml(p, 'archtype', 'plm');
+> >             const isPPM = p => dv.array(p.persona).some(m => ["worker", "trainer", "strategist", "organizer", "healer", "queen_king", "diplomat", "visionary", "architect", "entrepreneur", "mentor", "critic", "engineer", "advocate", "artisan"].some(tag => String(m).toLowerCase().includes(tag))) || checkYaml(p, 'archtype', 'ppm');
+> >             const isPKM = p => dv.array(p.persona).some(m => ["student", "analyst", "creator", "teacher", "author", "speaker", "explorer", "alchemist", "seeker", "mystic", "researcher", "archivist", "technician", "study", "scholar", "philosopher"].some(tag => String(m).toLowerCase().includes(tag))) || checkYaml(p, 'archtype', 'pkm') || checkYaml(p, 'archtype', 'study');
+> >
+> >             // ROW 1: CALENDAR (PLM, PPM, PKM)
 > >             tableHTML += "<div>" + 
-> >                 getIcon("🌷", dayPages.some(p => checkYaml(p, 'archtype', 'plm'))) + 
-> >                 getIcon("🌻", dayPages.some(p => checkYaml(p, 'archtype', 'ppm') && !checkYaml(p, 'archtype', 'studylog'))) + 
-> >                 getIcon("🌼", dayPages.some(p => checkYaml(p, 'archtype', 'pkm'))) + 
+> >                 getIcon("🌷", dayPages.some(p => isPLM(p))) + 
+> >                 getIcon("🌻", dayPages.some(p => isPPM(p) && !checkYaml(p, 'archtype', 'studylog'))) + 
+> >                 getIcon("🌼", dayPages.some(p => isPKM(p))) + 
 > >             "</div>";
 > > 
 > >             // ROW 2: STARS (Purpose, Vision, Goals)

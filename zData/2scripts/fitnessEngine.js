@@ -1,5 +1,18 @@
-function fitnessEngine() {
+﻿function fitnessEngine() {
     const EXERCISES = {
+        // ==========================================
+        // 🏃‍♀️ GENERAL ACTIVITIES & SPORTS
+        // ==========================================
+        walking: { label: "Walking", icon: "🚶‍♀️", regions: ["cardio", "lower"], persona: "traveler" },
+        hiking: { label: "Hiking", icon: "🥾", regions: ["cardio", "lower"], persona: "traveler" },
+        running: { label: "Jogging / Running", icon: "🏃‍♀️", regions: ["cardio", "lower"], persona: "warrior" },
+        cycling: { label: "Cycling", icon: "🚴‍♀️", regions: ["cardio", "lower"], persona: "traveler" },
+        swimming: { label: "Swimming", icon: "🏊‍♀️", regions: ["cardio", "upper", "lower", "core"], persona: "warrior" },
+        dancing: { label: "Dancing", icon: "💃", regions: ["cardio", "lower", "core", "mobility"], persona: "creator" },
+        yoga_practice: { label: "Yoga Practice", icon: "🧘‍♀️", regions: ["mobility", "core", "upper", "lower"], persona: "monk_nun" },
+        bouldering: { label: "Bouldering", icon: "🧗‍♀️", regions: ["upper", "back", "core", "lower"], persona: "warrior" },
+        team_sports: { label: "Team Sports (Soccer, etc.)", icon: "⚽", regions: ["cardio", "lower", "core"], persona: "player" },
+
         // ==========================================
         // 💪 UPPER BODY (Pull / Push / Functional)
         // ==========================================
@@ -29,6 +42,7 @@ function fitnessEngine() {
         pistol_squat: { label: "Pistol Squats", icon: "🔫", regions: ["lower", "core", "mobility"], persona: "trainer" },
         box_jump: { label: "Explosive Box Jumps", icon: "📦", regions: ["lower", "cardio"], persona: "warrior" },
         broad_jump: { label: "Broad Jumps", icon: "🐸", regions: ["lower", "cardio"], persona: "warrior" },
+        calf_raises: { label: "Calf Raises", icon: "🩰", regions: ["lower"], persona: "healer" },
         
         // --- Weighted / Heavy ---
         barbell_squat: { label: "Heavy Squats (Front/Back)", icon: "🏋️", regions: ["lower", "core"], persona: "warrior" },
@@ -45,8 +59,10 @@ function fitnessEngine() {
         side_plank: { label: "Side Plank", icon: "📐", regions: ["core", "upper"], persona: "warrior" },
         hollow_hold: { label: "Hollow Body Hold", icon: "🛶", regions: ["core"], persona: "trainer" },
         l_sit: { label: "L-Sit Hold", icon: "🪑", regions: ["core", "upper"], persona: "trainer" },
+        glute_bridge: { label: "Glute Bridges", icon: "🌉", regions: ["core", "lower"], persona: "healer" },
         
         // --- Dynamic Core ---
+        crunches: { label: "Crunches / Sit-ups", icon: "💥", regions: ["core"], persona: "warrior" },
         leg_raises: { label: "Hanging Leg Raises", icon: "🦇", regions: ["core", "upper"], persona: "trainer" },
         ab_wheel: { label: "Ab Wheel Rollouts", icon: "🎡", regions: ["core", "upper"], persona: "warrior" },
         woodchopper: { label: "Functional Woodchoppers", icon: "🪓", regions: ["core", "upper"], persona: "warrior" },
@@ -66,7 +82,9 @@ function fitnessEngine() {
         // ==========================================
         // 🔥 CARDIO & ENDURANCE (Conditioning)
         // ==========================================
-        jump_rope: { label: "Jump Rope (Seilspringen)", icon: "🪢", regions: ["cardio", "lower", "core"], persona: "warrior" },
+        jumping_jacks: { label: "Jumping Jacks", icon: "🤸‍♀️", regions: ["cardio", "upper", "lower"], persona: "warrior" },
+        mountain_climbers: { label: "Mountain Climbers", icon: "🏔️", regions: ["cardio", "core", "upper"], persona: "warrior" },
+        jump_rope: { label: "Jump Rope", icon: "🪢", regions: ["cardio", "lower", "core"], persona: "warrior" },
         burpee: { label: "Burpees", icon: "🔥", regions: ["cardio", "upper", "lower", "core"], persona: "warrior" },
         sprints: { label: "High-Intensity Sprints", icon: "⚡", regions: ["cardio", "lower"], persona: "warrior" },
         kettlebell_swing: { label: "Kettlebell Swings", icon: "🪨", regions: ["cardio", "lower", "core", "back"], persona: "warrior" },

@@ -1,4 +1,4 @@
-// zData/2scripts/cookEngine.js
+﻿// zData/2scripts/cookEngine.js
 function cookEngine() {
     const lifeData = {
         // --- 1. ERNÄHRUNG (Persona: Nurturer 🍲) ---

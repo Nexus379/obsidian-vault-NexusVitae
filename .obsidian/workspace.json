@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "2_Areas/6_Activity/Fitness_Routine.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Fitness_Routine"
             }
           },
           {
@@ -164,10 +164,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "README.md"
+                "file": "2_Areas/6_Activity/Fitness_Routine.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for README"
+              "title": "File properties for Fitness_Routine"
             }
           },
           {
@@ -258,6 +258,25 @@
   },
   "active": "7019ec2cdfbdedbf",
   "lastOpenFiles": [
+    "2_Areas/4_Organize/Routine-Timeblocking.md",
+    "zData/3snippets/syncTimetable.md",
+    "2_Areas/6_Activity/Fitness_Routine.md",
+    "0_Atlas/0_Dashboard/0-Dashboard.md",
+    "zData/6items/item_tech_office.json",
+    "zData/6items/item_personal.json",
+    "zData/6items/item_leisure.json",
+    "zData/6items/item_household.json",
+    "zData/6items/ingre_pantry.json",
+    "zData/6items/ingre_fresh.json",
+    "zData/6items/ingre_consumables.json",
+    "zData/1tmpl/3projectsprompt.md",
+    "zData/1tmpl/5notesprompt.md",
+    "zData/1tmpl/3projectesprompt.md",
+    "zData/1tmpl/4tasks/5tobuy.md",
+    "zData/1tmpl/3projects/5probuy.md",
+    "README.md",
+    "zData/1tmpl/4tasksprompt.md",
+    "zData/1tmpl/routertemp.md",
     "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md",
     "0_Atlas/0_Dashboard/1-Stars.md",
     "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM.md",
@@ -272,27 +291,8 @@
     "0_Atlas/0_Dashboard/4-Tasks.md",
     "0_Atlas/0_Dashboard/3-Projects.md",
     "0_Atlas/0_Dashboard/2-Areas.md",
-    "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard.md",
-    "2_Areas/3_Mind/Spaced_Repitition.md",
-    "2_Areas/4_Organize/Shopping_Hub.md",
-    "2_Areas/3_Mind/Timetable.md",
-    "2_Areas/6_Activity/Fitness_Routine.md",
-    "2_Areas/4_Organize/Routine-Timeblocking.md",
-    "README.md",
-    "0_Atlas/MOCs/AtlasMOC.md",
-    "0_Atlas/MOCs/ResourcesMOC.md",
-    "0_Atlas/MOCs/MasterMOC.md",
-    "0_Atlas/Atlas.md",
-    "0_Atlas/Nexus Vitae Guide.md",
     "zData/tasksCalendar/view.js",
     "zData/tasksCalendar/view.css",
-    "zData/6items/item_3_1arts.json",
-    "zData/6items/item_2_1selfcare.json",
-    "zData/6items/item_1_1cleaning.json",
-    "zData/6items/inhalt.txt",
-    "zData/6items/ingre_6_4supplements.json",
-    "zData/6items/ingre_5_5fix_tk.json",
-    "zData/6items/ingre_5_4sweet.json",
-    "zData/6items/ingre_4_2backing_noodles.json"
+    "zData/6items/item_3_1arts.json"
   ]
 }

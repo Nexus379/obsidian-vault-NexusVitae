@@ -42,8 +42,7 @@ const triggerMap = {
     "toget": "9toget",
     "9toget": "9toget",
     "receive": "9toget",
-    "income": "9toget",
-    "t": "1todo" // Expliziter t-Fallback
+    "income": "9toget"
 };
 
 // Wenn kein Trigger
