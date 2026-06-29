@@ -1,17 +1,17 @@
-﻿function fitnessEngine() {
+function fitnessEngine() {
     const EXERCISES = {
         // ==========================================
         // 🏃‍♀️ GENERAL ACTIVITIES & SPORTS
         // ==========================================
-        walking: { label: "Walking", icon: "🚶‍♀️", regions: ["cardio", "lower"], persona: "traveler" },
-        hiking: { label: "Hiking", icon: "🥾", regions: ["cardio", "lower"], persona: "traveler" },
-        running: { label: "Jogging / Running", icon: "🏃‍♀️", regions: ["cardio", "lower"], persona: "warrior" },
-        cycling: { label: "Cycling", icon: "🚴‍♀️", regions: ["cardio", "lower"], persona: "traveler" },
-        swimming: { label: "Swimming", icon: "🏊‍♀️", regions: ["cardio", "upper", "lower", "core"], persona: "warrior" },
-        dancing: { label: "Dancing", icon: "💃", regions: ["cardio", "lower", "core", "mobility"], persona: "creator" },
-        yoga_practice: { label: "Yoga Practice", icon: "🧘‍♀️", regions: ["mobility", "core", "upper", "lower"], persona: "monk_nun" },
-        bouldering: { label: "Bouldering", icon: "🧗‍♀️", regions: ["upper", "back", "core", "lower"], persona: "warrior" },
-        team_sports: { label: "Team Sports (Soccer, etc.)", icon: "⚽", regions: ["cardio", "lower", "core"], persona: "player" },
+        walking: { label: "Walking", icon: "🚶‍♀️", regions: ["cardio", "lower"], persona: "traveler", baseTime: 20 },
+        hiking: { label: "Hiking", icon: "🥾", regions: ["cardio", "lower"], persona: "traveler", baseTime: 30 },
+        running: { label: "Jogging / Running", icon: "🏃‍♀️", regions: ["cardio", "lower"], persona: "warrior", baseTime: 10 },
+        cycling: { label: "Cycling", icon: "🚴‍♀️", regions: ["cardio", "lower"], persona: "traveler", baseTime: 20 },
+        swimming: { label: "Swimming", icon: "🏊‍♀️", regions: ["cardio", "upper", "lower", "core"], persona: "warrior", baseTime: 15 },
+        dancing: { label: "Dancing", icon: "💃", regions: ["cardio", "lower", "core", "mobility"], persona: "creator", baseTime: 15 },
+        yoga_practice: { label: "Yoga Practice", icon: "🧘‍♀️", regions: ["mobility", "core", "upper", "lower"], persona: "monk_nun", baseTime: 15 },
+        bouldering: { label: "Bouldering", icon: "🧗‍♀️", regions: ["upper", "back", "core", "lower"], persona: "warrior", baseTime: 20 },
+        team_sports: { label: "Team Sports (Soccer, etc.)", icon: "⚽", regions: ["cardio", "lower", "core"], persona: "player", baseTime: 30 },
 
         // ==========================================
         // 💪 UPPER BODY (Pull / Push / Functional)
@@ -76,8 +76,8 @@
         horse_stance: { label: "Horse Stance (Ma Bu)", icon: "🐎", regions: ["lower", "core", "mobility"], persona: "monk_nun" },
         front_kick: { label: "Martial Arts Front Kicks", icon: "🥋", regions: ["lower", "core", "cardio"], persona: "warrior" },
         side_kick: { label: "Martial Arts Side Kicks", icon: "🌪️", regions: ["lower", "core", "mobility"], persona: "warrior" },
-        shadow_boxing: { label: "Shadow Boxing", icon: "🥊", regions: ["cardio", "upper", "core", "lower"], persona: "warrior" },
-        tai_chi_flow: { label: "Tai Chi / Qi Gong Flow", icon: "☯️", regions: ["mobility", "lower", "core"], persona: "monk_nun" },
+        shadow_boxing: { label: "Shadow Boxing", icon: "🥊", regions: ["cardio", "upper", "core", "lower"], persona: "warrior", baseTime: 10 },
+        tai_chi_flow: { label: "Tai Chi / Qi Gong Flow", icon: "☯️", regions: ["mobility", "lower", "core"], persona: "monk_nun", baseTime: 15 },
 
         // ==========================================
         // 🔥 CARDIO & ENDURANCE (Conditioning)

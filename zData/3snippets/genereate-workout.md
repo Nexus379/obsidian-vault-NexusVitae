@@ -19,6 +19,9 @@ try {
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
     const engine = require(enginePath)();
 
+    const currentFm = app.metadataCache.getFileCache(file)?.frontmatter || {};
+    const tWeek = currentFm.training_week || 1;
+
     // 🧠 SMART HELPER: Exercise logic (Sets vs Seconds)
     const getWorkout = (region, volume, defaultSets) => {
         let available = engine.getByRegion(region);
@@ -27,8 +30,11 @@ try {
         return shuffled.slice(0, volume).map(ex => {
             let metric = defaultSets; 
             if (region === "mobility") metric = "Dynamic Warmup";
-            if (ex.key.includes("plank") || ex.key.includes("hold") || ex.key.includes("isometric") || ex.key.includes("stance")) {
+            else if (ex.key.includes("plank") || ex.key.includes("hold") || ex.key.includes("isometric") || ex.key.includes("stance")) {
                 metric = "3x45s Hold";
+            } else if (ex.baseTime) {
+                let extraTime = (tWeek - 1) * 2; // Steigerung: 2 Min pro Woche
+                metric = `${ex.baseTime + extraTime} Min.`;
             }
             return `${ex.key}|${metric}`;
         });

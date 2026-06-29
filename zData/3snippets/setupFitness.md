@@ -25,6 +25,15 @@ try {
     const newFocus = await tp.system.prompt("🔬 Current Focus:", currentFocus);
     if (newFocus === null) return;
 
+    // 2.5 Update Body Metrics
+    const currentWeight = fm.weight || "70";
+    const newWeight = await tp.system.prompt("⚖️ Body Weight (kg):", String(currentWeight));
+    if (newWeight === null) return;
+
+    const currentHeight = fm.height || "175";
+    const newHeight = await tp.system.prompt("📏 Height (cm):", String(currentHeight));
+    if (newHeight === null) return;
+
     // 3. Update Wearables (comma separated)
     const currentWearables = Array.isArray(fm.equipment_wearable) ? fm.equipment_wearable.join(", ") : (fm.equipment_wearable || "");
     const newWearablesStr = await tp.system.prompt("🥋 Wearables (comma separated, leave blank for none):", currentWearables);
@@ -43,6 +52,8 @@ try {
     await app.fileManager.processFrontMatter(profileFile, (frontmatter) => {
         frontmatter.training_phase = newPhase;
         frontmatter.focus_metric = newFocus;
+        frontmatter.weight = Number(newWeight) || frontmatter.weight || 70;
+        frontmatter.height = Number(newHeight) || frontmatter.height || 175;
         frontmatter.equipment_wearable = wearablesArray;
         frontmatter.equipment_weights = weightsArray;
     });

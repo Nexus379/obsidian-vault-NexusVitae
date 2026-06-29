@@ -34,6 +34,8 @@ training_week: 1
 
 # 💪 Nexus Fitness Routine
 
+`BUTTON[setup-fitness]`  `BUTTON[generate-workout]` `BUTTON[edit-fitness]` `BUTTON[reset-schedule]`
+
 ```dataviewjs
 // 🎒 NEXUS ARSENAL CALLOUT
 const profile = dv.page("zData/4values/Fitness_Profile.md");
@@ -41,6 +43,14 @@ const profile = dv.page("zData/4values/Fitness_Profile.md");
 if (profile) {
     const phase = profile.training_phase || "Unknown";
     const focus = profile.focus_metric || "Flow";
+    const weight = profile.weight;
+    const height = profile.height;
+    
+    let bmiStr = "";
+    if (weight && height) {
+        let bmi = (weight / Math.pow(height / 100, 2)).toFixed(1);
+        bmiStr = ` | **BMI:** ${bmi}`;
+    }
     
     const getList = (key) => Array.isArray(profile[key]) ? profile[key] : (profile[key] ? [profile[key]] : []);
     
@@ -48,7 +58,7 @@ if (profile) {
     const weights = getList("equipment_weights").map(w => `> - 🪨 ${w}`).join("\n");
     
     let callout = `> [!abstract] 🎒 **NEXUS ARSENAL & STATUS**\n`;
-    callout += `> **Phase:** ${phase} | **Focus:** ${focus}\n>\n`;
+    callout += `> **Phase:** ${phase} | **Focus:** ${focus}${bmiStr}\n>\n`;
     if (wearables) callout += `> **Wearables (On Body):**\n${wearables}\n>\n`;
     if (weights) callout += `> **External Weights:**\n${weights}`;
     
@@ -76,7 +86,6 @@ if (profile) {
 > dv.paragraph(`**Phase:** ${status} &nbsp;&nbsp;|&nbsp;&nbsp; **Intensity:** ${intensity} &nbsp;&nbsp;|&nbsp;&nbsp; **Target:** ${setsReps}`);
 > ```
 
-`BUTTON[setup-fitness]`  `BUTTON[generate-workout]` `BUTTON[edit-fitness]` `BUTTON[reset-schedule]`
 
 ```dataviewjs
 const c = dv.current();
@@ -121,6 +130,8 @@ const rows = regions.map(r => [
 
 dv.table(headers, rows);
 ```
+
+
 
 ### The 3 Pillars of Training
 
