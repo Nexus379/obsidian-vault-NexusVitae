@@ -3,8 +3,17 @@
  * 🧩 NEXUS ROUTINE EDITOR (Multi-Day Edition)
  */
 try {
-    const file = app.workspace.getActiveFile();
+    let file = app.workspace.getActiveFile();
     if (!file) return;
+
+    // If the current file isn't the routine plan, target the Routine Plan directly
+    if (!file.name.includes("Routine-Timeblocking")) {
+        file = app.vault.getAbstractFileByPath("2_Areas/4_Organize/Routine-Timeblocking.md");
+        if (!file) {
+            new Notice("Routine-Timeblocking.md not found!");
+            return;
+        }
+    }
 
     // --- 1. READ PARAMETERS FROM FILE ---
     const cache = app.metadataCache.getFileCache(file);

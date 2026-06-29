@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_Areas/6_Activity/Fitness_Routine.md",
+                "file": "2_Areas/4_Organize/Shopping_Hub.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fitness_Routine"
+              "title": "Shopping_Hub"
             }
           },
           {
@@ -164,10 +164,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2_Areas/6_Activity/Fitness_Routine.md"
+                "file": "2_Areas/4_Organize/Shopping_Hub.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Fitness_Routine"
+              "title": "File properties for Shopping_Hub"
             }
           },
           {
@@ -236,7 +236,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271
+    "width": 271,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -258,9 +259,16 @@
   },
   "active": "7019ec2cdfbdedbf",
   "lastOpenFiles": [
+    "README.md",
+    "zData/3snippets/add-timetable-slot.md",
+    "zData/1tmpl/0calendar/dailyplm.md",
+    "zData/3snippets/add-routine-slot.md",
+    "zData/2scripts/archive-routine.md",
+    "0_Atlas/Bases/6-Resources/Series.base",
+    "0_Atlas/Bases/Resourcebase.base",
+    "2_Areas/6_Activity/Fitness_Routine.md",
     "2_Areas/4_Organize/Routine-Timeblocking.md",
     "zData/3snippets/syncTimetable.md",
-    "2_Areas/6_Activity/Fitness_Routine.md",
     "0_Atlas/0_Dashboard/0-Dashboard.md",
     "zData/6items/item_tech_office.json",
     "zData/6items/item_personal.json",
@@ -274,7 +282,6 @@
     "zData/1tmpl/3projectesprompt.md",
     "zData/1tmpl/4tasks/5tobuy.md",
     "zData/1tmpl/3projects/5probuy.md",
-    "README.md",
     "zData/1tmpl/4tasksprompt.md",
     "zData/1tmpl/routertemp.md",
     "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md",
@@ -287,12 +294,6 @@
     "zData/1tmpl/2areas/3mind.md",
     "zData/1tmpl/2areas/2relation.md",
     "zData/1tmpl/2areas/1selfcare.md",
-    "0_Atlas/0_Dashboard/5-Notes.md",
-    "0_Atlas/0_Dashboard/4-Tasks.md",
-    "0_Atlas/0_Dashboard/3-Projects.md",
-    "0_Atlas/0_Dashboard/2-Areas.md",
-    "zData/tasksCalendar/view.js",
-    "zData/tasksCalendar/view.css",
-    "zData/6items/item_3_1arts.json"
+    "zData/tasksCalendar/view.js"
   ]
 }

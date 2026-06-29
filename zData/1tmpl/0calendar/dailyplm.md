@@ -838,6 +838,69 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >[!multi-column]
 > > 
 > > > [!blank]
+> > > **Spontaneous / Free Blocks (Today)**
+> > > ```dataviewjs
+> > > const dStr = dv.current().file.name.substring(0, 10);
+> > > const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
+> > > const dObj = moment(dStr, "YYYY-MM-DD");
+> > > const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
+> > > 
+> > > const rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > if (rPage) {
+> > >     const rStart = rPage.rt_start || "07:00";
+> > >     const rDur = Number(rPage.rt_duration) || 60;
+> > >     const rTotal = Number(rPage.rt_periods) || 14;
+> > >     
+> > >     let current = moment(rStart, ["HH:mm", "h:mm A", "h:mma"]);
+> > >     let freeBlocks = [];
+> > >     
+> > >     const breaksStr = String(rPage.rt_breaks || "");
+> > >     const customBreaks = {};
+> > >     if (breaksStr) {
+> > >         breaksStr.split(",").forEach(b => {
+> > >             let parts = b.split(":");
+> > >             if(parts.length === 2) customBreaks[parseInt(parts[0].trim())] = parseInt(parts[1].trim());
+> > >         });
+> > >     }
+> > > 
+> > >     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
+> > >     let eng = null; try { eng = require(enginePath)(); } catch(e){}
+> > >     const relaxedKeys = ["social", "rest", "meditation", "plants", "entertain"];
+> > > 
+> > >     for (let i = 1; i <= rTotal; i++) {
+> > >         let end = moment(current).add(rDur, 'minutes');
+> > >         let key = `rt_${todayStr}_${i}`;
+> > >         let val = rPage[key];
+> > >         
+> > >         if (!val || val === "free") {
+> > >             freeBlocks.push(`- **${current.format("HH:mm")} - ${end.format("HH:mm")}** (Block ${i})`);
+> > >         } else if (String(val).startsWith("custom|")) {
+> > >             freeBlocks.push(`- **${current.format("HH:mm")} - ${end.format("HH:mm")}**: 🔸 _${String(val).split("|")[1]}_`);
+> > >         } else {
+> > >             let base = String(val).split("|")[0];
+> > >             if (relaxedKeys.includes(base)) {
+> > >                 let lbl = (eng && eng.all && eng.all[base]) ? eng.all[base].icon + " " + eng.all[base].label : base;
+> > >                 freeBlocks.push(`- **${current.format("HH:mm")} - ${end.format("HH:mm")}**: ${lbl}`);
+> > >             }
+> > >         }
+> > >         
+> > >         current = end;
+> > >         if (customBreaks[i] && i !== rTotal) {
+> > >             current.add(customBreaks[i], 'minutes');
+> > >         }
+> > >     }
+> > >     if (freeBlocks.length > 0) {
+> > >         dv.paragraph(freeBlocks.join("\n"));
+> > >     } else {
+> > >         dv.paragraph("_No free blocks available today._");
+> > >     }
+> > > } else {
+> > >     dv.paragraph("_Routine plan not found._");
+> > > }
+> > > ```
+> > > `BUTTON[edit-routine]`
+> > > 
+> > > ---
 > > > **Active Enjoyment**
 > > > > [!blank]
 > > > > **🏃🏽‍♀️ Activity**
