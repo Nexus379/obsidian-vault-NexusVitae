@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_Areas/4_Organize/Shopping_Hub.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Shopping_Hub"
+              "title": "README"
             }
           },
           {
@@ -164,10 +164,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "2_Areas/4_Organize/Shopping_Hub.md"
+                "file": "README.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Shopping_Hub"
+              "title": "File properties for README"
             }
           },
           {
@@ -236,8 +236,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271,
-    "collapsed": true
+    "width": 271
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -259,6 +258,7 @@
   },
   "active": "7019ec2cdfbdedbf",
   "lastOpenFiles": [
+    "2_Areas/4_Organize/Shopping_Hub.md",
     "README.md",
     "zData/3snippets/add-timetable-slot.md",
     "zData/1tmpl/0calendar/dailyplm.md",
@@ -293,7 +293,6 @@
     "zData/1tmpl/4tasks/1todo.md",
     "zData/1tmpl/2areas/3mind.md",
     "zData/1tmpl/2areas/2relation.md",
-    "zData/1tmpl/2areas/1selfcare.md",
     "zData/tasksCalendar/view.js"
   ]
 }
