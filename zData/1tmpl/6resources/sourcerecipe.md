@@ -4,6 +4,7 @@ if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
 let title = tp.variables.title || tp.file.title;
 let pLink = tp.variables.pLink || "";
+let luhmannId = tp.variables.luhmannId || "";
 
 // FALLBACK: Untitled Check (Prevents anonymous files)
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
