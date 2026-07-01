@@ -1,7 +1,7 @@
 ---
 banner: "![[anime-style-cozy-home-interior-with-furnishings.jpg]]"
 banner_y: 0.5
-banner_icon: ðŸ›’
+banner_icon: 🛒
 arch:
   - "#2area"
 archtype:
@@ -32,23 +32,23 @@ cssclasses:
   - dashboard-no-border
 ---
 
-# ðŸ›°ï¸ Nexus Central Procurement Hub
+# 🛠️ Nexus Central Procurement Hub
 
 > [!multi-column]
 >
-> > [!info] ðŸ§Š Inventory & Strategy
+> > [!info] 🧊 Inventory & Strategy
 > > **Look-Ahead Mode:** `$= (moment().day() === 1) ? "3 Days (Mon-Wed)" : (moment().day() === 4 ? "4 Days (Thu-Sun)" : "24h Focus")`
 > > ---
 > > **Status:** Data-sync active with [[2_Areas/1_Selfcare/Nutrition/Meal_Plan]] & [[6_Resources/Recipes/Recipes | Recipes Database]].
 >
-> > [!todo] âž• Quick Actions
+> > [!todo] ➕ Quick Actions
 > > [[t-buy|+ New To-Buy (Horizon 0)]]
 > > [[p-buy|+ New Pro-Buy (Horizon 1)]]
 
 ---
 
-## ðŸ¥— 1. Atomic Need (Nutrition & Supps)
-> [!abstract]- ðŸ§Š Batch Calculation & Strategy Log
+## 🥗 1. Atomic Need (Nutrition & Supps)
+> [!abstract]- 🧊 Batch Calculation & Strategy Log
 > ```dataviewjs
 > const planPath = "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md";
 > const planPage = dv.page(planPath);
@@ -57,12 +57,12 @@ cssclasses:
 > try { Nexus = await (require(enginePath))(app); } catch(e) {}
 > 
 > if (!planPage) {
->     dv.paragraph("âŒ _Meal Plan not found._");
+>     dv.paragraph("❌ _Meal Plan not found._");
 > } else {
 >     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 >     const slots = ["brk", "ben", "lun", "snk", "eve"];
 >     
->     // ðŸ”± Dynamic Look-Ahead
+>     // ⚡ Dynamic Look-Ahead
 >     const todayIdx = moment().day();
 >     let lookAhead = (todayIdx === 1) ? 3 : (todayIdx === 4 ? 4 : 1);
 >     let periodText = (todayIdx === 1) ? "Mon-Wed (3 Days)" : (todayIdx === 4 ? "Thu-Sun (4 Days)" : "Next 24h");
@@ -77,7 +77,9 @@ cssclasses:
 >             if (!meals) continue;
 >             let mealArray = Array.isArray(meals) ? meals : [meals];
 >             for (let m of mealArray) {
->                 const cleanId = String(m).replace(/[\[\]"]/g, "").trim();
+>                 if (!m) continue;
+>                 let linkStr = (typeof m === "object" && m.path) ? m.path : String(m);
+>                 const cleanId = linkStr.replace(/[\[\]"]/g, "").split("|")[0].trim();
 >                 recipeCounts[cleanId] = (recipeCounts[cleanId] || 0) + 1;
 >             }
 >         }
@@ -101,9 +103,9 @@ cssclasses:
 >             if (daysOld > shelfLife) {
 >                 isExpired = true;
 >                 stored = 0; 
->                 prepStatus.push(`ðŸš¨ <span style="color:var(--text-error)">**${recipeName}** expired!</span> (${daysOld} days old)`);
+>                 prepStatus.push(`🚨 <span style="color:var(--text-error)">**${recipeName}** expired!</span> (${daysOld} days old)`);
 >             } else {
->                 prepStatus.push(`ðŸ§Š **${recipeName}**: ${stored} portions stored (good for ${shelfLife - daysOld} days)`);
+>                 prepStatus.push(`🧊 **${recipeName}**: ${stored} portions stored (good for ${shelfLife - daysOld} days)`);
 >             }
 >         }
 > 
@@ -115,9 +117,9 @@ cssclasses:
 >             let newPortions = batchesToCook * rYield;
 > 
 >             if (stored > 0 && !isExpired) {
->                 prepStatus.push(`ðŸ›’ **${recipeName}**: Need ${neededServings}, have ${stored} -> Cook ${batchesToCook}x Batch (+${newPortions} port.)`);
+>                 prepStatus.push(`🛒 **${recipeName}**: Need ${neededServings}, have ${stored} -> Cook ${batchesToCook}x Batch (+${newPortions} port.)`);
 >             } else {
->                 prepStatus.push(`ðŸ›’ **${recipeName}**: Need ${neededServings} -> Cook ${batchesToCook}x Batch (+${newPortions} port.)`);
+>                 prepStatus.push(`🛒 **${recipeName}**: Need ${neededServings} -> Cook ${batchesToCook}x Batch (+${newPortions} port.)`);
 >             }
 >             
 >             for (let key in recipe) {
@@ -128,12 +130,12 @@ cssclasses:
 >                 }
 >             }
 >         } else {
->             prepStatus.push(`âœ… **${recipeName}**: Covered by stock (${neededServings} needed).`);
+>             prepStatus.push(`✅ **${recipeName}**: Covered by stock (${neededServings} needed).`);
 >         }
 >     }
 > 
 >     // 3. UI GENERATION
->     dv.header(4, `ðŸ“‹ Strategy Log (${periodText})`);
+>     dv.header(4, `📋 Strategy Log (${periodText})`);
 >     if (prepStatus.length > 0) {
 >         dv.paragraph(prepStatus.map(s => "- " + s).join("\n"));
 >     } else {
@@ -159,31 +161,31 @@ cssclasses:
 >     }
 >     html += `</div>`;
 >     
->     dv.header(4, "ðŸ§º Required Ingredients (Atoms)");
+>     dv.header(4, "🧼 Required Ingredients (Atoms)");
 >     dv.paragraph(html);
 > }
 > ```
 
 ---
 
-## ðŸ›’ 2. Consensus Emptio (Manual Procurement)
+## 🛒 2. Consensus Emptio (Manual Procurement)
 
 > [!multi-column]
 >
-> > [!danger|flat] ðŸ’¸ Horizon 0: To-Buy (Daily)
+> > [!danger|flat] 💸 Horizon 0: To-Buy (Daily)
 > > ```dataview
 > > TABLE WITHOUT ID 
-> >   ("ðŸ”— " + file.link) AS "Item",
+> >   ("🔗 " + file.link) AS "Item",
 > >   due AS "Deadline"
 > > FROM #4task/tobuy
 > > WHERE !completed
 > > SORT due ASC
 > > ```
 >
-> > [!money|flat] ðŸ’Ž Horizon 1: Pro-Buy (Acquisitions)
+> > [!money|flat] 💎 Horizon 1: Pro-Buy (Acquisitions)
 > > ```dataview
 > > TABLE WITHOUT ID
-> >   ("ðŸ—ï¸ " + file.link) AS "Project",
+> >   ("🏗️ " + file.link) AS "Project",
 > >   cost AS "Price"
 > > FROM #3project/probuy
 > > WHERE status = "1active"
@@ -192,7 +194,7 @@ cssclasses:
 
 ---
 
-## ðŸ“¦ 3. Household & Supply (Extras)
+## 📦 3. Household & Supply (Extras)
 > [!todo] Quick-Add Household Extras
 > `INPUT[inlineListSuggester(optionQuery("")):shopping_extras]`
 > `BUTTON[reset-household]`
@@ -211,20 +213,30 @@ GROUP BY file.link
 > [!info] Items marked for refill in the Nexus Matrix
 
 ```dataviewjs
-const pages = dv.pages('#5note/3atomic').where(p => p.refill_me || p.refill_partner || p.refill_household || p.refill_custom);
+const pages = dv.pages('#5note/3atomic').where(p => {
+    for (let key in p) {
+        if (key.startsWith("refill_") && p[key] === true) return true;
+    }
+    return false;
+});
+
 if(pages.length > 0) {
     dv.table(['Item', 'Refill For', 'Done?'], pages.map(p => {
         let targets = [];
-        if(p.refill_me) targets.push('👩 Me');
-        if(p.refill_partner) targets.push('👨 Partner');
-        if(p.refill_household) targets.push('🏠 Household');
-        if(p.refill_custom) targets.push('👤 Custom');
-        
         let toggles = [];
-        if(p.refill_me) toggles.push(`\`INPUT[toggle:${p.file.path}#refill_me]\``);
-        if(p.refill_partner) toggles.push(`\`INPUT[toggle:${p.file.path}#refill_partner]\``);
-        if(p.refill_household) toggles.push(`\`INPUT[toggle:${p.file.path}#refill_household]\``);
-        if(p.refill_custom) toggles.push(`\`INPUT[toggle:${p.file.path}#refill_custom]\``);
+        for (let key in p) {
+            if (key.startsWith("refill_") && p[key] === true) {
+                let name = key.replace("refill_", "");
+                // format name beautifully
+                if (name === "me") name = "👩 Me";
+                else if (name === "partner") name = "👨 Partner";
+                else if (name === "household") name = "🏠 Household";
+                else name = `👤 ${name.charAt(0).toUpperCase() + name.slice(1)}`;
+                
+                targets.push(name);
+                toggles.push(`\`INPUT[toggle:${p.file.path}#${key}]\``);
+            }
+        }
         
         return [
             p.file.link, 
