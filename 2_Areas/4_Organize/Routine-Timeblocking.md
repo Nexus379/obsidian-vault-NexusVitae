@@ -42,6 +42,8 @@ cssclasses:
 
 `BUTTON[setup-routine]` `BUTTON[edit-routine]` `BUTTON[sync-timetable]`
 
+
+
 ```dataviewjs
 const c = dv.current();
 
@@ -120,6 +122,7 @@ const rows = slots.map(s => {
 
 dv.table(headers, rows);
 ```
+
 
 
 `BUTTON[reset-schedule]`

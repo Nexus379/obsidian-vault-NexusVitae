@@ -45,6 +45,13 @@ priority:
 subject: "Nutrition"
 persona: "alchemist"
 status: 1active
+entity_class: "ingredient"
+ingre_type: "staple_pantry"
+pref_vendor: ""
+vendors: []
+state: "pantry"
+needs_refill: false
+shelf_life_months: 12
 # --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0
@@ -190,6 +197,8 @@ omega3_dha_mg: 0
 ## 🧪 Micronutrient Lab (65)
 | 🧪 Nutrient    | ⚖️ Value (per 100g)             |     |
 | :------------- | :------------------------------ | --- |
+| 🥗 **Type** | `INPUT[suggester(option(staple_pantry, 🥫 Staple/Pantry), option(fresh_produce, 🥦 Fresh Produce), option(frozen, ❄️ Frozen), option(supplement, 💊 Supplement), option(consumable, 🍽️ Consumable)):ingre_type]` |     |
+| 🏪 **Vendor** | `INPUT[text:pref_vendor]` |     |
 | ⚡ **Energy** | `INPUT[number:kcal]` kcal       |     |
 | 🥩 **Protein** | `INPUT[number:protein_g]` g     |     |
 | 🍞 **Carbs** | `INPUT[number:carbs_total_g]` g |     |

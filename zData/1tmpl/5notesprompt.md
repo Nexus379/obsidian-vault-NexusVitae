@@ -63,6 +63,9 @@ const noteTriggerMap = {
     atomic: "3atomic",
     nutri: "3atomic_ingredients",
     nutrition: "3atomic_ingredients",
+    art: "3atomic_art",
+    tech: "3atomic_tech",
+    music: "3atomic_music",
     anki: "3atomic_anki",
     ankicloze: "3atomic_ankicloze",
     ever: "5ever",
@@ -92,9 +95,9 @@ if (!nChoice) {
 }
 
 if (nChoice === "atomic_sub") {
-    const aOptions = ["🗃️ Standard Atomic", "⚛️ Nutrition", "🎴 Anki-Basic", "🧠 Anki-Cloze"];
-    const aVals = ["3atomic", "3atomic_ingredients", "3atomic_anki", "3atomic_ankicloze"];
-    const aFolders = ["3_Atomic", "3_Atomic/Nutrition/Ingredients", "3_Atomic/anki", "3_Atomic/anki"];
+    const aOptions = ["🗃️ Standard Atomic", "⚛️ Nutrition", "🎨 Art & Stationery", "🔌 Electronics & Tech", "🎵 Music & Audio", "🎴 Anki-Basic", "🧠 Anki-Cloze"];
+    const aVals = ["3atomic", "3atomic_ingredients", "3atomic_art", "3atomic_tech", "3atomic_music", "3atomic_anki", "3atomic_ankicloze"];
+    const aFolders = ["3_Atomic", "3_Atomic/Entities/Nutrition/Ingredients", "3_Atomic/Entities/Stationery_Art", "3_Atomic/Entities/Electronics_Tech", "3_Atomic/Entities/Music_Audio", "3_Atomic/anki", "3_Atomic/anki"];
     let aIdx = await tp.system.suggester(aOptions, Array.from(aOptions.keys()));
     if (aIdx === null) return;
     nChoice = aVals[aIdx];

@@ -1,44 +1,67 @@
 /**
- * 🔱 NEXUS MASTER ENGINE (Alpha v1.0)
+ * 🔱 NEXUS MASTER ENGINE (Alpha v2.0 - Markdown/Dataview Edition)
  * Central Intelligence for all Silos (Food, Tools, Maintenance)
  */
 async function itemsNexusEngine(app, domainFilter = "ALL") {
-    const allFiles = app.vault.getFiles().filter(f => {
-        if (!f.path.includes("zData/6items/") || f.extension !== "json") return false;
-        if (domainFilter === "FOOD" && !f.name.startsWith("ingre_")) return false;
-        if (domainFilter === "MAINTENANCE" && !f.name.startsWith("item_")) return false;
-        return true;
-    });
+    // 1. Hole die Dataview API
+    const dv = app.plugins.plugins.dataview?.api;
+    if (!dv) {
+        console.error("[Nexus Engine] Fehler: Dataview Plugin ist nicht aktiv oder API nicht verfügbar.");
+        return { all: {} };
+    }
+
     const DATABASE = {};
+    
+    // 2. Lade alle Entities aus dem neuen atomaren Ordner (oder überall wo entity_class existiert)
+    const pages = dv.pages().where(p => p.entity_class != null);
 
-    for (let file of allFiles) {
+    for (let p of pages) {
         try {
-            const isFood = file.name.startsWith("ingre_");
+            const fm = p.file.frontmatter || {};
+            const key = p.file.name;
+            const isFood = fm.entity_class === "ingredient";
             const domain = isFood ? "FOOD" : "MAINTENANCE";
-            const content = JSON.parse(await app.vault.read(file));
 
-            for (let cat in content) {
-                const items = content[cat];
-                if (typeof items !== 'object') continue; // Überspringt Header-Strings
+            // 3. Optionaler Filter
+            if (domainFilter === "FOOD" && !isFood) continue;
+            if (domainFilter === "MAINTENANCE" && isFood) continue;
 
-                for (let key in items) {
-                    const item = items[key];
-                    if (typeof item === 'object') {
-                        DATABASE[key] = {
-                            ...item,
-                            id: key,
-                            domain: domain,
-                            isFood: isFood,
-                            silo: file.basename.replace(/^(ingre_|item_)/, "").toUpperCase(),
-                            // Sicherstellung, dass lang und val Objekte existieren
-                            lang: item.lang || {},
-                            val: item.val || {},
-                            meta: item.meta || {}
-                        };
-                    }
+            // 4. Rekonstruktion des `val` Objekts (für Nährwerte/Macros)
+            const val = {};
+            const valKeys = ['kcal', 'protein_g', 'carbs_total_g', 'carbs_sugar_g', 'fat_total_g', 'fat_sat_g', 'fiber_g', 'sodium_mg', 'calcium_mg', 'iron_mg', 'zinc_mg', 'vit_c_mg', 'vit_d_µg', 'vit_b12_µg'];
+            for (let vk of valKeys) {
+                if (fm[vk] !== undefined && typeof fm[vk] === 'number') {
+                    val[vk] = fm[vk];
                 }
             }
-        } catch (e) { console.error(`[Nexus Engine] Load Error in ${file.name}:`, e); }
+
+            // 5. Ermittle das Silo (Sub-Kategorie)
+            let silo = fm.ingre_type || fm.tech_type || fm.household_type || fm.personal_type || fm.art_type || "UNKNOWN";
+            silo = silo.toUpperCase();
+
+            // 6. Prices Rekonstruktion
+            const prices = {};
+            if (fm.pref_vendor && fm.unit_price) {
+                prices[fm.pref_vendor] = fm.unit_price;
+            }
+
+            // 7. Baue den Datenbank-Eintrag exakt so auf, wie die Dashboards ihn erwarten
+            DATABASE[key] = {
+                ...fm, // Fügt alle YAML Metadaten als flache Keys hinzu
+                id: key,
+                domain: domain,
+                isFood: isFood,
+                silo: silo,
+                lang: fm.lang || {}, // Das Python-Skript wird lang{} als Objekt anlegen
+                val: val,
+                meta: fm.meta || {},
+                prices: prices,
+                label: (fm.lang && fm.lang.de) ? fm.lang.de : (fm.aliases && fm.aliases[0] ? fm.aliases[0] : key),
+                icon: fm.icon || (isFood ? "🥗" : "📦")
+            };
+        } catch (e) {
+            console.error(`[Nexus Engine] Load Error for page ${p.file.name}:`, e);
+        }
     }
 
     return {
@@ -49,7 +72,7 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             return Object.fromEntries(Object.entries(DATABASE).filter(([k, v]) => v.domain === domainName));
         },
 
-        // 🌐 Die ultimative Sprach-Suche (Sucht in ALLEN Sprachen gleichzeitig)
+        // 🌐 Die ultimative Sprach-Suche
         find: (input) => {
             if (!input) return null;
             const search = input.toLowerCase().replace(/[\s-]/g, '_');
@@ -61,7 +84,7 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
                 const searchPool = [
                     item.latin?.toLowerCase(),
                     item.label?.toLowerCase(),
-                    ...Object.values(item.lang).map(v => String(v).toLowerCase())
+                    ...Object.values(item.lang || {}).map(v => String(v).toLowerCase())
                 ].map(v => v?.replace(/[\s-]/g, '_')).filter(Boolean);
                 
                 if (searchPool.includes(search)) return item;
@@ -69,11 +92,12 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             return null;
         },
 
-        // 📝 Obsidian Link Generator (Icon + Name in Wunschsprache)
+        // 📝 Obsidian Link Generator (Linkt jetzt auf die echte MD Datei!)
         getLink: (key, targetLang = "de") => {
             const item = DATABASE[key];
             if (!item) return `[[${key}]]`;
-            const name = item.lang[targetLang] || item.label || key;
+            const name = (item.lang && item.lang[targetLang]) || item.label || key;
+            // Wir linken auf die tatsächliche Markdown-Datei (key ist der Dateiname)
             return `[[${key}|${item.icon || "📦"} ${name}]]`;
         },
 
@@ -81,11 +105,9 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
         getBestPrice: (key, amount = 1.0) => {
             const item = DATABASE[key];
             if (!item) return null;
-            if (!item.prices) {
-                return { vendor: "unknown", total: item.unit_price ? parseFloat((item.unit_price * amount).toFixed(2)) : 0 };
-            }
-            const vendor = item.pref_vendor || Object.keys(item.prices)[0];
-            const price = item.prices[vendor] || item.unit_price || 0;
+            
+            const vendor = item.pref_vendor || "unknown";
+            const price = item.unit_price || 0;
             return {
                 vendor: vendor,
                 unit_price: price,
@@ -93,13 +115,12 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             };
         },
 
-        // 🧪 Dynamische Nährwert-Rechnung für ALLE Variablen (kcal, vit_c, quercetin, etc.)
+        // 🧪 Dynamische Nährwert-Rechnung für ALLE Variablen
         calculate: (key, amount = 1.0) => {
             const item = DATABASE[key];
             if (!item || !item.val) return null;
             
             let results = {};
-            // Geht dynamisch durch alle Schlüssel in "val" (egal ob 5 oder 50 Variablen)
             for (let stat in item.val) {
                 const value = item.val[stat];
                 if (typeof value === 'number') {

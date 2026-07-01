@@ -600,6 +600,12 @@ alle nach / sind ausgeschriebene Wörter: ENG = English zb41
 #persona/entrepreneur
 #persona/mentor
 #persona/critic
+#persona/caretaker
+#persona/engineer
+#persona/advocate
+#persona/artisan
+#persona/scholar
+#persona/philosopher
 
 ## Science
 ### Scientiae
