@@ -9,7 +9,13 @@
   "accessibility": {
     "highTextContrast": false
   },
-  "knownTags": {},
+  "knownTags": {
+    "art_supply": 1,
+    "entity": 4,
+    "guide": 2,
+    "pc_building": 3,
+    "entity/tech_gear": 1
+  },
   "tagColors": {},
   "_version": 4
 }
