@@ -1,49 +1,150 @@
 <%-*
 /**
- * 👕 NEXUS WARDROBE/INVENTORY: ADD OWNER INJECTION
- * Path: zData/3snippets/add-wardrobe-owner.md
+ * 👑 NEXUS TIMETABLE MULTI-EDITOR (Bulk Fill Edition)
+ * Writes granular routines flexibly into multiple slots and days simultaneously.
  */
+try {
+    let file = app.workspace.getActiveFile();
+    if (!file) return;
 
-// 1. Fetch the Persons from the Family folder
-const familyFiles = app.vault.getFiles().filter(f => f.path.includes("2_Areas/2_Relationship/Family") && f.extension === "md");
-let options = [];
+    // If the current file isn't the Timetable, target the Timetable directly
+    if (!file.name.includes("Timetable")) {
+        file = app.vault.getAbstractFileByPath("2_Areas/3_Mind/Timetable.md");
+        if (!file) {
+            new Notice("Timetable.md not found!");
+            return;
+        }
+    }
 
-// Add files found in the folder
-familyFiles.forEach(f => {
-    let name = f.basename.replace(/^(Person_|Persona_|User_)/i, "").trim();
-    let safeKey = name.toLowerCase().replace(/[^a-z0-9]/g, '');
-    options.push({ display: `👤 ${name}`, value: safeKey, label: name });
-});
+    // --- ⚙️ READ PARAMETERS FROM TIMETABLE ---
+    const cache = app.metadataCache.getFileCache(file);
+    const fm = cache?.frontmatter || {};
 
-// Add static options
-options.push({ display: "🏠 Household (Shared)", value: "household", label: "Household" });
-options.push({ display: "➕ Custom Person...", value: "custom", label: "Custom" });
+    const startTime = fm.tt_start || "08:00";     
+    const classDuration = Number(fm.tt_duration) || 45;      
+    const totalPeriods = Number(fm.tt_periods) || 8;        
+    const breaksStr = fm.tt_breaks || "";
+    
+    const customBreaks = {};
+    if (breaksStr) {
+        breaksStr.split(",").forEach(b => {
+            let parts = b.split(":");
+            if(parts.length === 2) {
+                let pIdx = parseInt(parts[0].trim());
+                let pDur = parseInt(parts[1].trim());
+                if(!isNaN(pIdx) && !isNaN(pDur)) customBreaks[pIdx] = pDur;
+            }
+        });
+    }
 
-// 2. Select the Person
-const selectedObj = await tp.system.suggester(options.map(o => o.display), options, false, "👤 Who owns this item?");
-if (!selectedObj) return;
+    // Calculate time slots for display (Only numeric periods for block selection)
+    let current = moment(startTime, "HH:mm");
+    let numericSlots = [];
 
-let personKey = selectedObj.value;
-let personDisplay = selectedObj.label;
+    for (let i = 1; i <= totalPeriods; i++) {
+        let end = moment(current).add(classDuration, 'minutes');
+        numericSlots.push({
+            id: i,
+            label: `Slot ${i} (${current.format("HH:mm")} - ${end.format("HH:mm")})`
+        });
+        current = end;
+        if (customBreaks[i] && i !== totalPeriods) {
+            current = moment(current).add(customBreaks[i], 'minutes');
+        }
+    }
 
-if (personKey === "custom") {
-    const customName = await tp.system.prompt("Enter name of the person:");
-    if (!customName) return;
-    personDisplay = customName;
-    personKey = customName.toLowerCase().replace(/[^a-z0-9]/g, '');
-}
+    // 🔱 1. CHOOSE DAY OR DAY-BLOCK
+    const dayOptions = [
+        { l: "Monday", v: ["mon"] },
+        { l: "Tuesday", v: ["tue"] },
+        { l: "Wednesday", v: ["wed"] },
+        { l: "Thursday", v: ["thu"] },
+        { l: "Friday", v: ["fri"] },
+        { l: "Saturday", v: ["sat"] },
+        { l: "Sunday", v: ["sun"] },
+        { l: "🔄 All Weekdays (Mon-Fri)", v: ["mon", "tue", "wed", "thu", "fri"] },
+        { l: "🌴 Weekend (Sat-Sun)", v: ["sat", "sun"] },
+        { l: "🌍 Whole Week (Mon-Sun)", v: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"] }
+    ];
+    
+    const selectedDayGroup = await tp.system.suggester(dayOptions.map(d => d.l), dayOptions, false, "🗓️ Choose target Day(s):");
+    if(!selectedDayGroup) return;
 
-// 3. The Output Format (Meta Bind Injection)
-const output = `\n### 👤 ${personDisplay}\n📦 Quantity: \`INPUT[number:qty_${personKey}]\` | 📏 Size: \`INPUT[text:size_${personKey}]\` | 🔄 Refill: \`INPUT[toggle:refill_${personKey}]\`\n`;
+    // 🔱 2. CHOOSE START SLOT
+    const startSlot = await tp.system.suggester(numericSlots.map(s => s.label), numericSlots, false, "🛫 Select START Slot:");
+    if(!startSlot) return;
 
-// 4. Insert into the Editor at Cursor
-const activeView = app.workspace.activeLeaf?.view;
-if (activeView && activeView.editor) {
-    const editor = activeView.editor;
-    const cursor = editor.getCursor();
-    editor.replaceRange(output, cursor);
-    new Notice(`✅ Owner Meta Bind Inputs injected for ${personDisplay}`);
-} else {
-    new Notice("❌ Editor not found.");
+    // 🔱 3. CHOOSE END SLOT (Automatically filters valid endpoints)
+    const validEndSlots = numericSlots.filter(s => s.id >= startSlot.id);
+    const endSlot = await tp.system.suggester(validEndSlots.map(s => s.label), validEndSlots, false, "🛬 Select END Slot:");
+    if(!endSlot) return;
+
+    // 🔱 4. LOAD DISCIPLINE ENGINE
+    const enginePath = app.vault.adapter.basePath + "/zData/2scripts/disciplineEngine.js";
+    let engine;
+    try { engine = require(enginePath)(); } catch(e) { new Notice("❌ disciplineEngine.js not found!"); return; }
+
+    const routineList = engine.getDisciplineLabels ? engine.getDisciplineLabels() : Object.keys(engine.all).map(k => ({key: k, ...engine.all[k]}));
+    routineList.unshift({key: "custom", icon: "✍️", label: "Custom Block..."});
+    routineList.unshift({key: "free", icon: "➖", label: "Free Period (Clear entry)"});
+    routineList.unshift({key: "break", icon: "☕", label: "Mark as Pause/Break"});
+
+    // 🔱 5. CHOOSE ROUTINE
+    const routine = await tp.system.suggester(routineList.map(r => `${r.icon || ''} ${r.label}`), routineList, false, "🧹 Select Subject/Block to deploy:");
+    if(!routine) return;
+
+    // Optional detail addition
+    let finalKey = routine.key;
+    if (routine.key === "custom") {
+        const customTxt = await tp.system.prompt("Enter custom block text:");
+        if (!customTxt) return;
+        finalKey = `custom|${customTxt}`;
+    } else if (routine.key !== "free" && routine.key !== "break") {
+        const detail = await tp.system.prompt(`📝 Optional text details for this block? (Leave empty for standard ${routine.label})`, "");
+        if (detail && detail.trim() !== "") {
+            finalKey = `${routine.key}|${detail.trim()}`;
+        }
+    }
+
+    // 🔱 6. FRONTMATTER BULK SYNC
+    let mode = "overwrite";
+    if (finalKey !== "free" && finalKey !== "break") {
+        let hasExisting = false;
+        outer: for (let dayPrefix of selectedDayGroup.v) {
+            for (let slotId = startSlot.id; slotId <= endSlot.id; slotId++) {
+                if (fm[`tt_${dayPrefix}_${slotId}`]) { hasExisting = true; break outer; }
+            }
+        }
+        
+        if (hasExisting) {
+            const choice = await tp.system.suggester(["♻️ Overwrite existing blocks", "➕ Stack (Add alongside existing blocks)"], ["overwrite", "add"], false, "⚠️ Some slots already have entries. Do you want to Overwrite or Stack?");
+            if (!choice) return;
+            mode = choice;
+        }
+    }
+
+    await app.fileManager.processFrontMatter(file, (frontmatter) => {
+        selectedDayGroup.v.forEach(dayPrefix => {
+            for (let slotId = startSlot.id; slotId <= endSlot.id; slotId++) {
+                const yamlKey = `tt_${dayPrefix}_${slotId}`;
+                if (finalKey === "free") {
+                    delete frontmatter[yamlKey];
+                } else {
+                    if (mode === "add" && frontmatter[yamlKey]) {
+                        let arr = Array.isArray(frontmatter[yamlKey]) ? frontmatter[yamlKey] : [frontmatter[yamlKey]];
+                        arr.push(finalKey);
+                        frontmatter[yamlKey] = arr;
+                    } else {
+                        frontmatter[yamlKey] = finalKey;
+                    }
+                }
+            }
+        });
+    });
+
+    new Notice(`⚡ Deploy complete! Filled Slots ${startSlot.id} to ${endSlot.id}.`);
+
+} catch(e) {
+    new Notice("🔥 Error: " + e.message, 10000);
 }
 -%>

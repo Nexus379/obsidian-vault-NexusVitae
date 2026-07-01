@@ -54,10 +54,18 @@ let engine = null;
 try { engine = require(enginePath)(); } catch(e) {}
 
 const getD = (key) => {
+    if (Array.isArray(key)) return key.map(k => getD(k)).join("<br>");
     if (!key || key === "free") return "—";
     if (key === "break") return "☕ **BREAK**";
-    if (engine && engine.all && engine.all[key]) {
-        return `${engine.all[key].icon} ${engine.all[key].label}`;
+    
+    let parts = String(key).split("|");
+    let baseKey = parts[0];
+    let detail = parts.length > 1 ? ` _(${parts.slice(1).join(" ")})_` : "";
+
+    if (baseKey === "custom") return `🔸 ${parts.slice(1).join(" ")}`;
+    
+    if (engine && engine.all && engine.all[baseKey]) {
+        return `${engine.all[baseKey].icon} ${engine.all[baseKey].label}${detail}`;
     }
     return `❓ ${key}`;
 };

@@ -87,14 +87,15 @@ try {
         }
     }
 
-    // --- 3. SELECT SLOT ---
-    const slot = await tp.system.suggester(slots.map(s => s.label), slots, false, `⌚ Which block?`);
-    if(!slot) return;
+    // --- 3. SELECT START AND END SLOTS ---
+    const numericSlots = slots.filter(s => !s.id.startsWith("break"));
 
-    if (slot.id.startsWith("break")) {
-        new Notice("☕ This is a fixed buffer.", 3000);
-        return;
-    }
+    const startSlot = await tp.system.suggester(numericSlots.map(s => s.label), numericSlots, false, `🛫 Select START Block:`);
+    if(!startSlot) return;
+
+    const validEndSlots = numericSlots.filter(s => Number(s.id) >= Number(startSlot.id));
+    const endSlot = await tp.system.suggester(validEndSlots.map(s => s.label), validEndSlots, false, "🛬 Select END Block:");
+    if(!endSlot) return;
 
     // --- 4. LOAD ENGINE & CHOOSE ROUTINE ---
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
@@ -130,18 +131,42 @@ try {
     }
 
     // --- 6. BATCH SAVE TO YAML ---
-    await app.fileManager.processFrontMatter(file, (fm) => {
+    let mode = "overwrite";
+    if (finalValue !== "free" && finalValue !== "break" && finalValue !== "custom") {
+        let hasExisting = false;
+        outer: for (let d of selectedDays) {
+            for (let slotId = Number(startSlot.id); slotId <= Number(endSlot.id); slotId++) {
+                if (fm[`rt_${d}_${slotId}`]) { hasExisting = true; break outer; }
+            }
+        }
+        
+        if (hasExisting) {
+            const choice = await tp.system.suggester(["♻️ Overwrite existing block(s)", "➕ Stack (Add alongside existing blocks)"], ["overwrite", "add"], false, "⚠️ One or more slots already have an entry. Overwrite or Stack?");
+            if (!choice) return;
+            mode = choice;
+        }
+    }
+
+    await app.fileManager.processFrontMatter(file, (frontmatter) => {
         for (let d of selectedDays) {
-            const yamlKey = `rt_${d}_${slot.id}`;
-            if (subj.key === "free") {
-                delete fm[yamlKey];
-            } else {
-                fm[yamlKey] = finalValue;
+            for (let slotId = Number(startSlot.id); slotId <= Number(endSlot.id); slotId++) {
+                const yamlKey = `rt_${d}_${slotId}`;
+                if (finalValue === "free") {
+                    delete frontmatter[yamlKey];
+                } else {
+                    if (mode === "add" && frontmatter[yamlKey]) {
+                        let arr = Array.isArray(frontmatter[yamlKey]) ? frontmatter[yamlKey] : [frontmatter[yamlKey]];
+                        arr.push(finalValue);
+                        frontmatter[yamlKey] = arr;
+                    } else {
+                        frontmatter[yamlKey] = finalValue;
+                    }
+                }
             }
         }
     });
 
-    new Notice(`🧩 Routine successfully applied to ${selectedDays.length} day(s)!`, 4000);
+    new Notice(`🧩 Routine successfully applied to ${selectedDays.length} day(s) from block ${startSlot.id} to ${endSlot.id}!`, 4000);
 
 } catch(e) {
     new Notice("🔥 Error: " + e.message, 10000);

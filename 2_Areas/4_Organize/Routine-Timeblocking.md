@@ -70,6 +70,7 @@ try { engine = require(enginePath)(); } catch(e) {}
 
 // --- SMART GET-D FUNCTION (With Details Integration) ---
 const getD = (key) => {
+    if (Array.isArray(key)) return key.map(k => getD(k)).join("<br>");
     if (!key || key === "free") return "—";
     if (key === "break") return "☕ **BUFFER**";
     
