@@ -187,19 +187,5 @@ is_foam_weapon: false
 
 ---
 
-```meta-bind-button
-label: "Archivieren"
-icon: "archive"
-style: primary
-actions:
-  - type: runTemplaterFile
-    # Nutze den kompletten Pfad ohne führenden Slash
-    templateFile: "zData/2scripts/archiveall.md" 
-
-```
-
-
-
-
-
-
+``
+`

@@ -1,102 +1,82 @@
 # 📦 Nexus Inventory Matrix
 
 > [!info] 💡 System Workflow
-> 1. Erstelle ein Item (z.B. "Shampoo").
-> 2. Klicke im Item auf **`BUTTON[add-wardrobe-owner]`** und wähle die Person.
-> 3. Die Person taucht hier in der Matrix auf! Aktiviere `🔄` (Refill), damit es im Shopping Hub landet!
+> 1. Create an item (e.g., "Shampoo").
+> 2. Click on **`BUTTON[add-wardrobe-owner]`** inside the item and select the person.
+> 3. The person will appear here in the matrix! Toggle `🔄` (Refill) to add it to the Shopping Hub!
+> **`BUTTON[add-wardrobe-owner]`** ⬅️ **Click here to assign an item from the Vault to a person!**
 
-## 👕 Wardrobe (Kleidung & Schuhe)
 ```dataviewjs
-dv.table(["Item", "👩 Me", "👨 Partner", "🏠 Household"], 
-    dv.pages("#5note/3atomic/clothing").map(p => [
-        p.file.link,
-        p.qty_me !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_me]\` 📏 \`INPUT[text:${p.file.path}#size_me]\`<br>🔄 \`INPUT[toggle:${p.file.path}#refill_me]\`` : "",
-        p.qty_partner !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_partner]\` 📏 \`INPUT[text:${p.file.path}#size_partner]\`<br>🔄 \`INPUT[toggle:${p.file.path}#refill_partner]\`` : "",
-        p.qty_household !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_household]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_household]\`` : ""
-    ])
-);
+const categories = [
+    { title: "👕 Wardrobe (Clothing & Footwear)", tag: "#5note/3atomic/clothing" },
+    { title: "🧴 Selfcare & Personal", tag: "#5note/3atomic/personal_care" },
+    { title: "🏠 Household & Cleaning", tag: "#5note/3atomic/household" },
+    { title: "🏋️ Fitness & Sport", tag: "#5note/3atomic/fitness" },
+    { title: "🎧 Music & Audio", tag: "#5note/3atomic/music" },
+    { title: "💻 Tech & Devices", tag: "#5note/3atomic/tech" },
+    { title: "⚔️ LARP & Cosplay", tag: "#5note/3atomic/larp" },
+    { title: "⛺ Camping & Outdoor", tag: "#5note/3atomic/camping" }
+];
+
+for (let cat of categories) {
+    dv.header(2, cat.title);
+    const pages = dv.pages(cat.tag);
+    
+    // Find all unique owners dynamically
+    let owners = new Set();
+    for (let p of pages) {
+        for (let k in p) {
+            if (k.startsWith("qty_") && p[k] !== undefined) {
+                owners.add(k.replace("qty_", ""));
+            }
+        }
+    }
+    
+    let ownerArr = Array.from(owners).sort();
+    
+    if (ownerArr.length === 0) {
+        dv.paragraph("_No items assigned yet._");
+        continue;
+    }
+    
+    // Format headers
+    let headers = ["Item"].concat(ownerArr.map(o => {
+        if (o === "me") return "👩 Me";
+        if (o === "partner") return "👨 Partner";
+        if (o === "household") return "🏠 Household";
+        return `👤 ${o.charAt(0).toUpperCase() + o.slice(1)}`;
+    }));
+
+    // Filter pages that actually have an owner
+    const ownedPages = pages.where(p => ownerArr.some(o => p[`qty_${o}`] !== undefined));
+
+    let rows = ownedPages.map(p => {
+        let row = [p.file.link];
+        for (let o of ownerArr) {
+            if (p[`qty_${o}`] !== undefined) {
+                // Clothing uses sizes, other categories usually don't need it
+                if (cat.tag === "#5note/3atomic/clothing") {
+                    row.push(`📦 \`INPUT[number:${p.file.path}#qty_${o}]\` 📏 \`INPUT[text:${p.file.path}#size_${o}]\`<br>🔄 \`INPUT[toggle:${p.file.path}#refill_${o}]\``);
+                } else {
+                    row.push(`📦 \`INPUT[number:${p.file.path}#qty_${o}]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_${o}]\``);
+                }
+            } else {
+                row.push("");
+            }
+        }
+        return row;
+    });
+
+    dv.table(headers, rows);
+}
 ```
 
-## 🧴 Selfcare & Personal
-```dataviewjs
-dv.table(["Item", "👩 Me", "👨 Partner", "🏠 Household"], 
-    dv.pages("#5note/3atomic/personal_care").map(p => [
-        p.file.link,
-        p.qty_me !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_me]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_me]\`` : "",
-        p.qty_partner !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_partner]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_partner]\`` : "",
-        p.qty_household !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_household]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_household]\`` : ""
-    ])
-);
-```
-
-## 🏠 Household & Cleaning
-```dataviewjs
-dv.table(["Item", "👩 Me", "👨 Partner", "🏠 Household"], 
-    dv.pages("#5note/3atomic/household").map(p => [
-        p.file.link,
-        p.qty_me !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_me]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_me]\`` : "",
-        p.qty_partner !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_partner]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_partner]\`` : "",
-        p.qty_household !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_household]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_household]\`` : ""
-    ])
-);
-```
-
-## 🏋️ Fitness & Sport
-```dataviewjs
-dv.table(["Item", "👩 Me", "👨 Partner", "🏠 Household"], 
-    dv.pages("#5note/3atomic/fitness").map(p => [
-        p.file.link,
-        p.qty_me !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_me]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_me]\`` : "",
-        p.qty_partner !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_partner]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_partner]\`` : "",
-        p.qty_household !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_household]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_household]\`` : ""
-    ])
-);
-```
-
-## 🎧 Music & Audio
-```dataviewjs
-dv.table(["Item", "👩 Me", "👨 Partner", "🏠 Household"], 
-    dv.pages("#5note/3atomic/music").map(p => [
-        p.file.link,
-        p.qty_me !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_me]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_me]\`` : "",
-        p.qty_partner !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_partner]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_partner]\`` : "",
-        p.qty_household !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_household]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_household]\`` : ""
-    ])
-);
-```
-
-## 💻 Tech & Devices
-```dataviewjs
-dv.table(["Item", "👩 Me", "👨 Partner", "🏠 Household"], 
-    dv.pages("#5note/3atomic/tech").map(p => [
-        p.file.link,
-        p.qty_me !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_me]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_me]\`` : "",
-        p.qty_partner !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_partner]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_partner]\`` : "",
-        p.qty_household !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_household]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_household]\`` : ""
-    ])
-);
-```
-
-## ⚔️ LARP & Cosplay
-```dataviewjs
-dv.table(["Item", "👩 Me", "👨 Partner", "🏠 Household"], 
-    dv.pages("#5note/3atomic/larp").map(p => [
-        p.file.link,
-        p.qty_me !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_me]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_me]\`` : "",
-        p.qty_partner !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_partner]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_partner]\`` : "",
-        p.qty_household !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_household]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_household]\`` : ""
-    ])
-);
-```
-
-## ⛺ Camping & Outdoor
-```dataviewjs
-dv.table(["Item", "👩 Me", "👨 Partner", "🏠 Household"], 
-    dv.pages("#5note/3atomic/camping").map(p => [
-        p.file.link,
-        p.qty_me !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_me]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_me]\`` : "",
-        p.qty_partner !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_partner]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_partner]\`` : "",
-        p.qty_household !== undefined ? `📦 \`INPUT[number:${p.file.path}#qty_household]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_household]\`` : ""
-    ])
-);
+```meta-bind-button
+label: "➕ Assign Item from Vault"
+id: "add-wardrobe-owner"
+icon: "plus-circle"
+style: primary
+actions:
+  - type: runTemplaterFile
+    templateFile: "zData/3snippets/add-wardrobe-owner.md"
 ```

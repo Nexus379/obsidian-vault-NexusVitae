@@ -574,6 +574,23 @@
           "templateFile": "zData/2scripts/archive-routine.md"
         }
       ]
+    },
+    {
+      "cssStyle": "",
+      "hidden": false,
+      "id": "add-wardrobe-owner",
+      "style": "primary",
+      "label": "add-wardrobe",
+      "icon": "sync",
+      "backgroundImage": "",
+      "actions": [
+        {
+          "templateFile": "zData/3snippets/add-wardrobe-owner.md",
+          "type": "runTemplaterFile"
+        }
+      ],
+      "class": "",
+      "tooltip": ""
     }
   ],
   "excludedFolders": [

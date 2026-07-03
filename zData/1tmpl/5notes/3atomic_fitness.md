@@ -87,12 +87,15 @@ pl_score: 0
 - 
 - 
 
+> [!info] ðŸ‘¤ Ownership & Inventory
+> Click here to add an owner to this item:
+> `BUTTON[add-wardrobe-owner]`
+
+
+`
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
 ---
 
-> [!info] ðŸ‘¤ Ownership & Inventory
-> Click here to add an owner to this item:
-> `BUTTON[add-wardrobe-owner]`
-
+`

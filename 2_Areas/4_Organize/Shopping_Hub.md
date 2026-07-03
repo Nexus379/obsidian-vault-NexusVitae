@@ -214,34 +214,47 @@ GROUP BY file.link
 
 ```dataviewjs
 const pages = dv.pages('#5note/3atomic').where(p => {
+    // 1. Manual Refill Toggle
     for (let key in p) {
         if (key.startsWith("refill_") && p[key] === true) return true;
+    }
+    // 2. Numeric Stock Level Check
+    if (p.stock_level !== undefined && p.min_stock !== undefined) {
+        if (p.stock_level <= p.min_stock) return true;
     }
     return false;
 });
 
 if(pages.length > 0) {
-    dv.table(['Item', 'Refill For', 'Done?'], pages.map(p => {
+    dv.table(['Item', 'Refill For / Stock', 'Action'], pages.map(p => {
         let targets = [];
-        let toggles = [];
+        let actions = [];
+        
+        // 1. Handle manual refill toggles
         for (let key in p) {
             if (key.startsWith("refill_") && p[key] === true) {
                 let name = key.replace("refill_", "");
-                // format name beautifully
                 if (name === "me") name = "👩 Me";
                 else if (name === "partner") name = "👨 Partner";
                 else if (name === "household") name = "🏠 Household";
+                else if (name === "medical") name = "💊 Medical";
                 else name = `👤 ${name.charAt(0).toUpperCase() + name.slice(1)}`;
                 
                 targets.push(name);
-                toggles.push(`\`INPUT[toggle:${p.file.path}#${key}]\``);
+                actions.push(`\`INPUT[toggle:${p.file.path}#${key}]\``);
             }
+        }
+        
+        // 2. Handle stock levels
+        if (p.stock_level !== undefined && p.min_stock !== undefined && p.stock_level <= p.min_stock) {
+            targets.push(`📉 Low Stock (${p.stock_level} / ${p.min_stock})`);
+            actions.push(`Stock: \`INPUT[number:${p.file.path}#stock_level]\``);
         }
         
         return [
             p.file.link, 
-            targets.join(', '),
-            toggles.join(' | ')
+            targets.join('<br>'),
+            actions.join('<br>')
         ];
     }));
 } else {

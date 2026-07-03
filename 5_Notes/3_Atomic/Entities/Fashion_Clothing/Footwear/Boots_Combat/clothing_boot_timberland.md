@@ -119,3 +119,9 @@ is_waterproof: true
 
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
+
+> [!info] 💡 Ownership & Inventory
+> Click here to add an owner to this item:
+> `BUTTON[add-wardrobe-owner]`
+`
+`

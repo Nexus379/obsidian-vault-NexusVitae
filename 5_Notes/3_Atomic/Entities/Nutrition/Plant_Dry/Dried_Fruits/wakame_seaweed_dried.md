@@ -387,20 +387,5 @@ omega3_dha_mg: 0
 
 ---
 
-```meta-bind-button
-label: "Archivieren"
-icon: "archive"
-style: primary
-actions:
-  - type: runTemplaterFile
-    # Nutze den kompletten Pfad ohne fÃ¼hrenden Slash
-    templateFile: "zData/2scripts/archiveall.md" 
-
-```
-
-
-
-
-
-
-
+``
+`

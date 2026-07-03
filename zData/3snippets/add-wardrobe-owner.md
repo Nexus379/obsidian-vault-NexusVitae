@@ -33,17 +33,50 @@ if (personKey === "custom") {
     personKey = customName.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
-// 3. The Output Format (Meta Bind Injection)
-const output = `\n### 👤 ${personDisplay}\n📦 Menge: \`INPUT[number:qty_${personKey}]\` | 📏 Größe: \`INPUT[text:size_${personKey}]\` | 🔄 Refill: \`INPUT[toggle:refill_${personKey}]\`\n`;
+const activeFile = app.workspace.getActiveFile();
+const isDashboard = activeFile && activeFile.basename === "Wardrobe_Inventory";
 
-// 4. Insert into the Editor at Cursor
-const activeView = app.workspace.activeLeaf?.view;
-if (activeView && activeView.editor) {
-    const editor = activeView.editor;
-    const cursor = editor.getCursor();
-    editor.replaceRange(output, cursor);
-    new Notice(`✅ Owner Meta Bind Inputs injected for ${personDisplay}`);
+let targetFile = activeFile;
+
+if (isDashboard) {
+    // Dashboard mode: Select an item from the vault
+    const entityFiles = app.vault.getFiles().filter(f => f.path.includes("5_Notes/3_Atomic/Entities") && f.extension === "md");
+    const itemOptions = entityFiles.map(f => f.basename);
+    
+    const selectedItemName = await tp.system.suggester(itemOptions, itemOptions, false, "📦 Which item are you assigning?");
+    if (!selectedItemName) return;
+    
+    targetFile = entityFiles.find(f => f.basename === selectedItemName);
+    if (!targetFile) return;
+}
+
+// 3. Always inject frontmatter directly so Dataview can see it immediately
+await app.fileManager.processFrontMatter(targetFile, (fm) => {
+    fm[`qty_${personKey}`] = 0;
+    fm[`size_${personKey}`] = "";
+    fm[`refill_${personKey}`] = false;
+});
+
+// 4. The Output Format (Meta Bind Injection)
+const output = `\n### 👤 ${personDisplay}\n📦 Quantity: \`INPUT[number:qty_${personKey}]\` | 📏 Size: \`INPUT[text:size_${personKey}]\` | 🔄 Refill: \`INPUT[toggle:refill_${personKey}]\`\n`;
+
+// 5. Insert into the file
+if (isDashboard) {
+    // Background append
+    const content = await app.vault.read(targetFile);
+    await app.vault.modify(targetFile, content + output);
+    new Notice(`✅ Assigned ${personDisplay} to ${targetFile.basename}`);
 } else {
-    new Notice("❌ Editor not found.");
+    // Standard Editor insertion
+    const activeView = app.workspace.activeLeaf?.view;
+    if (activeView && activeView.editor) {
+        const editor = activeView.editor;
+        const cursor = editor.getCursor();
+        editor.replaceRange(output, cursor);
+        new Notice(`✅ Owner Inputs injected for ${personDisplay}`);
+    } else {
+        new Notice("❌ Editor not found.");
+    }
 }
 -%>
+
