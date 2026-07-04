@@ -581,7 +581,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > <%- tp.variables.plannedMealsText.replace(/\n/g, "\n> > > ") %>
 > > > 
 > > > ---
-> > > **Actions:** `BUTTON[add-remove-meal]` `BUTTON[add-remove-alchemy]` `BUTTON[reset-nutri]`
+> > > **Actions:** `BUTTON[sync-fridge-meals]` `BUTTON[add-remove-meal]` `BUTTON[add-remove-alchemy]` `BUTTON[reset-nutri]`
 > >
 > > > [!info] **Live Resonance (Actuals)**
 > > > ```dataviewjs
@@ -789,6 +789,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 
 > > > dv.paragraph(`🏃🏽 **Status:** ${gesamt} / ${ziel} min ${icon}${flair}`);
 > > > ```
+> > > `BUTTON[sync-fitness]`
 > > > 
 > > > ```dataviewjs
 > > > // 🏋️ NEXUS FITNESS SYNC

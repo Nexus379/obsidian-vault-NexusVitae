@@ -94,6 +94,17 @@
       "id": "stars-btn"
     },
     {
+      "label": "📅",
+      "style": "default",
+      "action": {
+        "type": "templaterCreateNote",
+        "templateFile": "zData/1tmpl/routertemp.md",
+        "folderPath": "0_Inbox",
+        "fileName": "cal-"
+      },
+      "id": "c-btn"
+    },
+    {
       "label": "💠",
       "style": "default",
       "action": {
@@ -576,21 +587,63 @@
       ]
     },
     {
-      "cssStyle": "",
-      "hidden": false,
-      "id": "add-wardrobe-owner",
+      "id": "sync-fridge-meals",
+      "label": "Sync Fridge / Meals",
+      "icon": "refresh-cw",
       "style": "primary",
-      "label": "add-wardrobe",
-      "icon": "sync",
-      "backgroundImage": "",
       "actions": [
         {
-          "templateFile": "zData/3snippets/add-wardrobe-owner.md",
-          "type": "runTemplaterFile"
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/sync-fridge-meals.md"
         }
-      ],
-      "class": "",
-      "tooltip": ""
+      ]
+    },
+    {
+      "id": "add-wardrobe-owner",
+      "label": "➕ Add Owner",
+      "icon": "plus-circle",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/add-wardrobe-owner.md"
+        }
+      ]
+    },
+    {
+      "label": "🧭 Create Weekly Plan",
+      "style": "primary",
+      "action": {
+        "type": "templaterCreateNote",
+        "templateFile": "zData/1tmpl/routertemp.md",
+        "folderPath": "0_Inbox",
+        "fileName": "plan-"
+      },
+      "id": "create-weekly-plan"
+    },
+    {
+      "id": "sync-fitness",
+      "label": "🏋️ Sync Fitness",
+      "icon": "activity",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/sync-fitness.md"
+        }
+      ]
+    },
+    {
+      "id": "freeze-week",
+      "label": "❄️ Freeze Week",
+      "icon": "archive",
+      "style": "destructive",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/NexusFreezerWeekly.md"
+        }
+      ]
     }
   ],
   "excludedFolders": [

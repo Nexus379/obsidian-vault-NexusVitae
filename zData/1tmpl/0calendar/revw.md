@@ -314,6 +314,12 @@ status: 1active
 > > `INPUT[text:next_week_focus]`
 
 ---
+## 🚀 Look Ahead
+
+> [!abstract] **Plan Next Week**
+> `BUTTON[create-weekly-plan]`
+
+---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
 `BUTTON[freezer]`
