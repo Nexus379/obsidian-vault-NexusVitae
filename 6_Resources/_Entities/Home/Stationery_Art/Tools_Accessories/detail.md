@@ -29,6 +29,14 @@ shelf_life_months: 60
 icon: "💎"
 synergy_with_castle: "Perfect for adding sharp details over soft Castle Arts layers."
 tech_reason: "Oil-based core allows for sharp points and prevents wax bloom."
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 0.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

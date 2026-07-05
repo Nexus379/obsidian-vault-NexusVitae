@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "BeQuiet!"
 core: "Power Delivery"
 room: "studio"
-unit_price: 120.00
 de: "BeQuiet Pure Power 12 M Netzteil"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 120.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

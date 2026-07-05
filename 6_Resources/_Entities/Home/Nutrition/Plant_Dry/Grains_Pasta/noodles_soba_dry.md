@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ latin: "Fagopyrum esculentum (Soba)"
 rutin_mg: 15.0
 en: "Soba Noodles"
 hi: "सोबा नूडल्स"
-unit_price: 4.00
 props: 
   - "Traditionelle japanische Nudeln aus Buchweizenmehl (oft mit Weizen gemischt für bessere Bindung)"
   - "Reich an Rutin (Antioxidans)"
@@ -69,6 +67,14 @@ props:
 denns: 4.00
 label: "Soba Nudeln (Buchweizen)"
 ru: "Гречневая лапша Соба"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

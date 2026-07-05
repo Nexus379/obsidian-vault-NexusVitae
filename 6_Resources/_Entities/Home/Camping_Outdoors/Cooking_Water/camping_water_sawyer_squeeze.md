@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 8.0
 brand: "Sawyer"
-unit_price: 50.00
 de: "Sawyer Squeeze (Wasserfilter)"
 locations: 
   - "outdoor_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 50.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ•ï¸ OUTDOOR SPECS ---
 pref_vendor: "Decathlon / Amazon"
 vendors: []

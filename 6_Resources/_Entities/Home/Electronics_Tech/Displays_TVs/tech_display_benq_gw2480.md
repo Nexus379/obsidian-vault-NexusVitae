@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "BenQ"
 core: "IPS Panel"
 room: "studio"
-unit_price: 110.00
 de: "BenQ GW2480 Office 24 Zoll"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 110.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

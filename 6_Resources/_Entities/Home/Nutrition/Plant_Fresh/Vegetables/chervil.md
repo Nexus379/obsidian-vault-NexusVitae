@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "weekly_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 en: "Chervil"
 iron_plant_mg: 31.9
 hi: "चर्विल"
-unit_price: 2.00
 benefit: "Blood circulation"
 props: 
   - "Part of 'Frankfurter Grie Soß'"
@@ -65,6 +63,14 @@ label: "Chervil"
 ru: "Кервель"
 de: "Kerbel"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "weekly_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

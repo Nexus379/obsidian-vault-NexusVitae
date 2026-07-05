@@ -40,7 +40,6 @@ sci:
   - "#sci/MaterialsScience"
   - "#sci/Physics"
 es: "Papel de aluminio"
-unit_price: 2.00
 de: "Kaufland Alufolie"
 locations: 
   - "kaufland"
@@ -48,6 +47,14 @@ props:
   - "Technologisch die absolut dichteste Barriere gegen Aromaverlust"
   - "Ideal zum Grillen oder Backen (hitzestabil)"
   - "Vorsicht bei säurehaltigen Lebensmitteln (Zitronen/Tomaten)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

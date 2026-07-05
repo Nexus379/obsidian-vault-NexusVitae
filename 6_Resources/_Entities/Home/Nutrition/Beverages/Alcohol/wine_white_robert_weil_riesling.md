@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe_feinkost"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,13 +49,20 @@ fr: "Robert Weil Riesling"
 ja: "ロバート・ヴァイル リースリング"
 wine_specialist: 20.00
 fa: "روبرت وایل ریسلینگ"
-unit_price: 20.00
 de: "Robert Weil Riesling"
 locations: 
   - "rewe_feinkost"
   - "edeka_premium"
   - "wine_specialist"
 hi: "रॉबर्ट वेइल रिसलिंग"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 20.00
+vendor_value: "rewe_feinkost"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

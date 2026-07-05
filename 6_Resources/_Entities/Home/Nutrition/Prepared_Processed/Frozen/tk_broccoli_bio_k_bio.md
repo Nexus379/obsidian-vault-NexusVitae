@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 2.5
 latin: "Brassica oleracea italica"
 en: "Organic Broccoli"
 hi: "जैविक ब्रोकोली"
-unit_price: 3.00
 props: 
   - "Einzeln entnehmbare Röschen in Bio-Qualität"
   - "Hoher Sulforaphan-Gehalt (Antioxidans)"
@@ -62,6 +60,14 @@ label: "K-Bio Broccoli Röschen"
 ru: "Био брокколи"
 brand: "K-Bio"
 purity: "Florets only (no stems)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

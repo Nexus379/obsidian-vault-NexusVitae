@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 4.00
 latin: "Fructus tritus roseus"
 en: "true fruits pink"
 hi: "ट्रू फ्रूट्स पिंक"
-unit_price: 4.00
 color_source: "Natural Pink Dragonfruit"
 props: 
   - "Pink Dragonfruit (Pitaya), Guanabana, Banana"
@@ -66,6 +64,14 @@ props:
 label: "true fruits pink"
 ru: "true fruits розовый"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

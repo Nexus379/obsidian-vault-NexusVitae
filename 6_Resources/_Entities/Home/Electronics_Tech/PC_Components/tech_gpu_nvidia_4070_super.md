@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "NVIDIA"
 core: "Silicon (Ada Lovelace)"
 room: "studio"
-unit_price: 600.00
 de: "RTX 4070 Super Grafikkarte"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 600.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

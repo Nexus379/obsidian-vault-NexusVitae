@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
 en: "Sage"
 iron_plant_mg: 28.1
 hi: "ऋषि"
-unit_price: 2.00
 benefit: "Hormonal balance"
 props: 
   - "Antisudorific (reduces sweating)"
@@ -67,6 +65,14 @@ ru: "Шалфей"
 de: "Salbei"
 thujone_mg: 30.0
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

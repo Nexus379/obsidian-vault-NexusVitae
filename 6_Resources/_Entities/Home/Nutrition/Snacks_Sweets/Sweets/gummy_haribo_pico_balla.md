@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,13 +55,20 @@ carbs_total_g: 82.0
 latin: "Globuli multicolor (Haribo)"
 en: "Pico-Balla"
 hi: "पिको-बाला"
-unit_price: 1.50
 props: 
   - "Kleines, buntes Konfekt mit Fruchtgummi- und Schaumzucker-Elementen"
   - "Technologisch extrem aufwendige Extrusion"
   - "Höherer Kalorienwert durch den Konfekt-Anteil im Vergleich zu Goldbären"
 label: "Haribo Pico-Balla"
 brand: "Haribo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 27.0
 en: "Pizza Baguette"
 crunch_factor: "High (Stone oven style)"
 hi: "पिज्जा बैगूएट"
-unit_price: 3.00
 props: 
   - "Der deutsche Standard für TK-Baguettes"
   - "Technologisch optimierte Krume, die Saucen aufnimmt, ohne durchzuweichen"
@@ -61,6 +59,14 @@ label: "Dr. Oetker Bistro Baguette (Salami)"
 ru: "Пицца-багет"
 de: "Bistro Baguette"
 brand: "Dr. Oetker"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

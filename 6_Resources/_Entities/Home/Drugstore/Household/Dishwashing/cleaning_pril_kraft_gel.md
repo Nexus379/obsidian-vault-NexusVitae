@@ -41,7 +41,6 @@ brand: "Henkel / Pril"
 room: "kitchen"
 skin_tolerance: "Dermatologically tested"
 icon: "💧"
-unit_price: 3.00
 de: "Pril Kraft Gel"
 locations: 
   - "everywhere"
@@ -49,6 +48,14 @@ props:
   - "Der deutsche Goldstandard für hartnäckiges Fett"
   - "Technologisch optimiert für Kaltwasser-Löslichkeit"
   - "Hohe Viskosität: Maximale Ergiebigkeit pro Tropfen"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

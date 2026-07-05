@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ components: "Cauliflower, Broccoli, Carrots"
 latin: "Mistura vegetabilis regia"
 en: "King's Vegetables (Creamed)"
 hi: "शाही सब्जियां"
-unit_price: 3.00
 props: 
   - "Die beliebteste Gemüsemischung Deutschlands"
   - "Technologisch perfekt abgestimmte Garzeiten der drei Gemüsesorten"
@@ -62,6 +60,14 @@ props:
 label: "Iglo Königsgemüse (Rahm-Version)"
 ru: "Королевская овощная смесь"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

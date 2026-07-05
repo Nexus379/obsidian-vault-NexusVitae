@@ -29,7 +29,6 @@ icon: "🛒"
 label: "W5 Weichspüler (Diverse Düfte)"
 brand: "W5"
 room: "laundry"
-unit_price: 2.00
 locations: 
   - "lidl"
 en: "Lidl Fabric Softener"
@@ -39,6 +38,14 @@ props:
   - "Der Preis-Leistungs-Sieger für weiche Wäsche"
   - "Technologisch solide Grundrezeptur ohne teuren Markenzusatz"
   - "Gute statische Entladung für Synthetik-Fasern"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

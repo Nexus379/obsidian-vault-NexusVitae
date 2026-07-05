@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 2.00
 latin: "Potio carbonata (fritz Aurantium)"
 en: "fritz-limo Orange"
 hi: "फ्रिट्ज़-लिमो ऑरेंज"
-unit_price: 2.00
 props: 
   - "Premium indie lemonade"
   - "Massive 17% real juice content makes it vastly superior in natural taste"
@@ -66,6 +64,14 @@ props:
 label: "fritz-limo Orange"
 ru: "Фриц-Лимо Апельсин"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

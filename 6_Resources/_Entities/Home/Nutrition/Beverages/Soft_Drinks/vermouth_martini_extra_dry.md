@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,11 +49,18 @@ fr: "Martini Extra Dry"
 ja: "マティーニ エクストラドライ"
 label: "Martini Extra Dry"
 fa: "مارتینی اکسترا درای"
-unit_price: 12.00
 de: "Martini Extra Dry"
 locations: 
   - "everywhere"
 hi: "मार्टिनी एक्स्ट्रा ड्राई"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

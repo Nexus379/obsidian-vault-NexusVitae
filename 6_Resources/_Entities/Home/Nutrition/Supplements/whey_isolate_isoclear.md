@@ -42,10 +42,17 @@ latin: "Lactoserum purissimum"
 protein_g: 26.0
 brand: "ESN/More"
 kcal: 105
-unit_price: 40.00
 vegan: false
 locations: 
   - "online"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 40.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

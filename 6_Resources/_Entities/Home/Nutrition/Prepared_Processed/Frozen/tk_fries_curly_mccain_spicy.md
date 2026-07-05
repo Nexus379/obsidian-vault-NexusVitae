@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ carbs_total_g: 27.0
 en: "Curly Fries"
 shape: "Spiral"
 coating: "Seasoned Flour Coating (Paprika/Onion/Garlic)"
-unit_price: 4.00
 capsaicin_level: "Low-Mid"
 props: 
   - "Der technologische Endgegner für Geschmack"
@@ -62,6 +60,14 @@ ru: "Картофель фри спиральки"
 de: "Locken-Pommes / Curly Fries"
 brand: "McCain"
 hi: "कर्ली फ्राइज़"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

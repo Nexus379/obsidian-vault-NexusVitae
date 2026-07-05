@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 7.0
 en: "Organic Dill (Frozen)"
 hi: "जैविक फ्रोजन डिल"
-unit_price: 2.00
 props: 
   - "Lidls Standard für Fischgerichte und Gurkensalate"
   - "Behält durch die Kälte die feine, farnartige Struktur"
@@ -60,6 +58,14 @@ ru: "Био укроп замороженный"
 de: "Bio Dill (TK)"
 brand: "Bio Organic"
 lidl: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

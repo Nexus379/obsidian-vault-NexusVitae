@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ latin: "Aqua vitae (Orcadensis)"
 specialist: 45.00
 en: "Highland Park 12"
 hi: "हाइलैंड पार्क 12"
-unit_price: 45.00
 props: 
   - "The 'Highlander' from the far north (Orkney Islands)"
   - "Perfect balance of honey sweetness and aromatic peat smoke"
@@ -63,6 +61,14 @@ ru: "Хайленд Парк 12"
 aging_years: 12
 vol_pct: 40.0
 rewe: 45.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 45.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

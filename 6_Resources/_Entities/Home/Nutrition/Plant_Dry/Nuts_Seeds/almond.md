@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 en: "Almond"
 vit_e_mg: 25.6
 hi: "à¤¬à¤¾à¤¦à¤¾à¤®"
-unit_price: 3.00
 nutrient_focus: "Vitamin E Champion"
 props: 
   - "Botanically a seed of a drupe, not a true nut"
@@ -69,6 +67,14 @@ ru: "ÐœÐ¸Ð½Ð´Ð°Ð»ÑŒ"
 de: "Mandel"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

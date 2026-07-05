@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 82.0
 latin: "Persica gelata"
 en: "Peaches"
 coating: "Fine sugar dusting"
-unit_price: 1.50
 props: 
   - "Sehr weiches Fruchtgummi mit intensivem Pfirsicharoma"
   - "Einer der Klassiker im Bereich der gezuckerten Fruchtgummis"
@@ -61,6 +59,14 @@ label: "Haribo Pfirsiche"
 ru: "Персики"
 brand: "Haribo"
 hi: "आड़ू"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

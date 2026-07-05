@@ -40,11 +40,18 @@ sci:
 latin: "Withania somnifera"
 brand: "Doppelherz"
 kcal: 0
-unit_price: 10.00
 vit_b6_mg: 1.4
 locations: 
   - "rossmann"
   - "dm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

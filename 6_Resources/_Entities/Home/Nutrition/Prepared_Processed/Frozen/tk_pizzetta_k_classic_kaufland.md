@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,7 +48,6 @@ sci:
 carbs_total_g: 26.8
 en: "Kaufland Pizzetta"
 hi: "के-क्लासिक पिज़ेटा"
-unit_price: 3.00
 props: 
   - "Kauflands preiswerte Snack-Option"
   - "Ideal für Kindergeburtstage oder als Beilage"
@@ -60,6 +58,14 @@ de: "Kaufland Pizzetta"
 variety: "Mixed packs often available"
 brand: "K-Classic"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ latin: "Salmo salar (Curata)"
 delicatessen: 6.00
 en: "Gravlax (Cured Salmon)"
 hi: "ग्रेवलैक्स"
-unit_price: 6.00
 props: 
   - "Nordic dish of salmon cured in salt, sugar, and fresh dill"
   - "Is never smoked, resulting in a cleaner, less woody taste than smoked salmon"
@@ -69,6 +67,14 @@ label: "Graved Lachs (Gravlax)"
 ru: "Гравлакс"
 rewe: 6.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
   - "#sci/Nutrition"
 en: "Cod"
 hi: "कॉड"
-unit_price: 3.00
 nutrient_focus: "Pure Protein & High Iodine"
 props: 
   - "Extremely low fat, perfect for calorie-controlled diets"
@@ -64,6 +62,14 @@ ru: "Треска"
 de: "Kabeljau / Dorsch"
 fish_market: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

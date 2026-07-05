@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 50.0
 en: "Rose Rolls"
 hi: "गुलाब रोल्स"
-unit_price: 1.00
 crumb_texture: "Fluffy / Soft"
 props: 
   - "Technologisch optimiert für maximale Splitter-Kruste"
@@ -61,6 +59,14 @@ ru: "Булочки-розочки"
 de: "Rosenbrötchen"
 brand: "Grafschafter"
 lidl: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

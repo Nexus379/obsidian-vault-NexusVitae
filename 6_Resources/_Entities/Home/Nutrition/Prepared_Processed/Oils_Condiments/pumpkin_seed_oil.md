@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -63,7 +62,6 @@ latin: "Cucurbita pepo"
 en: "Pumpkin Seed Oil"
 vit_e_mg: 29.0
 hi: "कद्दू के बीज का तेल"
-unit_price: 12.00
 props: 
   - "Styrian specialty ('Green Gold')"
   - "Intense nutty, roasted flavor"
@@ -72,6 +70,14 @@ denns: 12.00
 label: "Pumpkin Seed Oil"
 ru: "Тыквенное масло"
 rewe: 12.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

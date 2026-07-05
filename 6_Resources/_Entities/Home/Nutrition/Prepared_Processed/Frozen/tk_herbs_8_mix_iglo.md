@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 components: "Parsley, Chives, Chervil, Borage, Pimpernel, Sorrel, Cress, Dill"
 en: "8-Herb Mix"
 hi: "8-हर्ब मिक्स"
-unit_price: 2.00
 props: 
   - "Die technologische Wunderwaffe für Frankfurter Grüne Soße oder Dressings"
   - "Ätherische Öle bleiben durch die Kälte fast zu 100% erhalten"
@@ -62,6 +60,14 @@ label: "Iglo 8-Kräuter Mix"
 ru: "Смесь из 8 трав"
 de: "8-Kräuter Mix"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

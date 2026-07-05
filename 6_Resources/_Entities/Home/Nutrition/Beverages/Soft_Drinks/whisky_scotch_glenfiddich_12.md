@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,11 +49,18 @@ fr: "Glenfiddich 12"
 ja: "グレンフィディック 12年"
 kcal: 222
 fa: "گلنفیدیک ۱۲"
-unit_price: 35.00
 de: "Glenfiddich 12"
 locations: 
   - "everywhere"
 hi: "ग्लेनफिडिच 12"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 35.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -44,10 +44,17 @@ protection: "Caries prophylaxis"
 brand: "Cien"
 room: "bathroom"
 stiftung_warentest: "Very Good (1.2 - 1.5)"
-unit_price: 1.00
 de: "Lidl Cien Zahnpasta"
 locations: 
   - "lidl"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

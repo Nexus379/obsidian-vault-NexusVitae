@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 10.0
 latin: "Fructus tritus viridis (REWE)"
 en: "REWE to go Green Smoothie"
 hi: "रीवे हरा स्मूदी"
-unit_price: 2.00
 props: 
   - "Balanced green smoothie profile"
   - "Less sweet than pure fruit variants"
@@ -62,6 +60,14 @@ flavor_profile: "Balanced Green"
 label: "REWE to go Smoothie Apfel-Kiwi-Spinat"
 ru: "Зеленый смузи REWE"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

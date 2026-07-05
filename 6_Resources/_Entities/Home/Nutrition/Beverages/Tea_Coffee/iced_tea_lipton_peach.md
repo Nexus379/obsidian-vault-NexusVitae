@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 7.3
 latin: "Thea frigida (Lipton Persica)"
 en: "Lipton Peach"
 hi: "लिप्टन पीच"
-unit_price: 2.00
 props: 
   - "The global benchmark for peach iced tea"
   - "Uses tea extract rather than brewed tea for extreme consistency"
@@ -64,6 +62,14 @@ process: "Water, Sugar, Black Tea Extract"
 label: "Lipton Ice Tea Peach"
 ru: "Липтон Персик"
 brand: "PepsiCo / Unilever"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

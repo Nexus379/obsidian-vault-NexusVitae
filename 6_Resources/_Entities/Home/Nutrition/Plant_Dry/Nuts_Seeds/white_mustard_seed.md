@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
   - "#sci/Pharmacology"
 en: "White Mustard Seed"
 hi: "à¤¸à¤«à¥‡à¤¦ à¤¸à¤°à¤¸à¥‹à¤‚"
-unit_price: 2.00
 benefit: "Metabolism & Digestion"
 props: 
   - "Contains sinalbin (mild heat)"
@@ -67,6 +65,14 @@ orient_market: 2.00
 ru: "Ð“Ð¾Ñ€Ñ‡Ð¸Ñ†Ð° Ð±ÐµÐ»Ð°Ñ"
 de: "Senfsaat (Gelb)"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

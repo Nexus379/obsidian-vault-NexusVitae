@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ carbs_total_g: 30.0
 latin: "Saccharomyces cerevisiae"
 en: "Yeast Extract"
 hi: "खमीर का अर्क"
-unit_price: 6.00
 benefit: "Massive B-Vitamin Complex"
 props: 
   - "By-product of beer brewing"
@@ -71,6 +69,14 @@ label: "Yeast Extract (Marmite/Vegemite)"
 ru: "Дрожжевой экстракт"
 rewe: 6.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ glycemic_index: 47.0
 en: "Date Syrup"
 minerals: "Retains Potassium"
 hi: "खजूर का सिरप"
-unit_price: 5.00
 benefit: "Whole Fruit Sweetener"
 props: 
   - "Made from pureed and strained dates"
@@ -70,6 +68,14 @@ orient_market: 5.00
 ru: "Финиковый сироп"
 de: "Dattelsirup"
 dm: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 26.0
 latin: "Solanum frictum classicum"
 en: "Standard Oven Fries"
 coating: "Light starch for oven-crispiness"
-unit_price: 4.00
 props: 
   - "Der deutsche Goldstandard für den Backofen"
   - "Technologisch optimierte Garzeit (ca. 18-22 Min)"
@@ -62,6 +60,14 @@ label: "McCain 1-2-3 Fries (Original)"
 ru: "Картофель фри для духовки"
 brand: "McCain"
 hi: "ओवन फ्राइज़"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

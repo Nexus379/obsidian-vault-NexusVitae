@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 gingerol_mg: 150.0
 en: "Ginger Powder"
 hi: "सोंठ (अदरक पाउडर)"
-unit_price: 2.00
 props: 
   - "Potent anti-nausea effect"
   - "Contains shogaols when dried"
@@ -63,6 +61,14 @@ ru: "Имбирь (порошок)"
 de: "Ingwer (Pulver)"
 lidl: 2.00
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

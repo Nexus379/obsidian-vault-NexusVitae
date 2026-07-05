@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Philips"
 core: "VA Panel"
 room: "studio"
-unit_price: 850.00
 de: "Philips 499P9H 49 Zoll"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 850.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

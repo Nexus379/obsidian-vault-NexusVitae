@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
 en: "New Zealand Spinach"
 iron_plant_mg: 0.8
 hi: "न्यूजीलैंड पालक"
-unit_price: 2.00
 props: 
   - "Heat-tolerant summer alternative to spinach"
   - "Thick succulent leaves"
@@ -65,6 +63,14 @@ denns: 2.00
 label: "New Zealand Spinach"
 ru: "Тетрагония"
 de: "Neuseeländer Spinat"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

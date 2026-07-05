@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 iron_heme_mg: 6.7
 en: "Mussels"
 hi: "मसल"
-unit_price: 10.00
 props: 
   - "Unbelievably high B12 and iron content"
   - "Filter feeders (highly sustainable)"
@@ -66,6 +64,14 @@ de: "Miesmuscheln"
 fish_market: 10.00
 rewe: 10.00
 superfood: "Iron & B12 Bomb"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

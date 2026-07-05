@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 5.0
 brand: "Pull&Bear"
-unit_price: 60.00
 de: "Pull&Bear Cowboy Boots (Herren)"
 locations: 
   - "fashion_boutique"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 60.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ‘• WARDROBE SPECS ---
 pref_vendor: "Online / Brand Store"
 vendors: []

@@ -41,12 +41,19 @@ latin: "Acidum cloacae"
 brand: "W5"
 room: "bathroom"
 icon: "🚽"
-unit_price: 2.00
 de: "W5 WC-Reiniger"
 locations: 
   - "lidl"
 fragrance: "Ocean / Forest"
 es: "Gel de baño W5"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

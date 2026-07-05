@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ en: "Kudzu Starch"
 denns: 15.00
 hi: "कुडज़ू starach"
 reformhaus: 15.00
-unit_price: 15.00
 props: 
   - "Highly revered in macrobiotics"
   - "Produces brilliantly clear sauces"
@@ -64,6 +62,14 @@ props:
 label: "Kudzu Root Starch (Kuzu)"
 ru: "Крахмал кудзу"
 de: "Kuzu (Kudzu-Stärke)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

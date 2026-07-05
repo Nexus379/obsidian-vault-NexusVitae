@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -65,7 +64,6 @@ fat_total_g: 0.1
 en: "Watercress"
 alnatura: 2.00
 hi: "जलकुंभी"
-unit_price: 2.00
 props: 
   - "Contains PEITC for cancer prevention"
   - "Sharp mustard-like bite"
@@ -75,6 +73,14 @@ label: "Watercress"
 ru: "Водяной кресс"
 de: "Brunnenkresse"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

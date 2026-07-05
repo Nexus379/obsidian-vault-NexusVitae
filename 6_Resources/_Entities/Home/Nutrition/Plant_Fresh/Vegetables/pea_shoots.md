@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ carbs_total_g: 4.5
 latin: "Pisum sativum (Germinatus)"
 en: "Pea Shoots"
 hi: "मटर के अंकुर"
-unit_price: 2.00
 props: 
   - "Sweet pea flavor"
   - "Denser nutrients than mature peas"
@@ -70,6 +68,14 @@ denns: 2.00
 label: "Pea Shoots"
 ru: "Побеги гороха"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

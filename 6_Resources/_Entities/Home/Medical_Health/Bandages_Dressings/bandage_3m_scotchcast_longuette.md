@@ -32,7 +32,6 @@ icon: "🩹"
 label: "3M Scotchcast Longuette (Gießharz-Schiene)"
 brand: "3M"
 room: "backpack"
-unit_price: 8.50
 locations: 
   - "praxisdienst"
 en: "Fiberglass Splint"
@@ -44,6 +43,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: "Polyurethanharz (Fiberglas)"
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.50
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🩹  N20260703153901   3M Scotchcast Longuette (Gießharz-Schiene)

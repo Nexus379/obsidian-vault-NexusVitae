@@ -38,8 +38,6 @@ props:
   - "Leak-proof due to gel granules"
   - "Perfekt fürs Zelt bei Regen/Nacht"
 # --- 🏕️ OUTDOOR SPECS ---
-unit_price: 12.00
-pref_vendor: "Hygiene-Shop"
 vendors: []
 weight_g: 50
 capacity_persons: 1
@@ -48,6 +46,14 @@ season_rating: 4
 pack_size_cm: "12x5"
 material: "Plastik/Gel"
 pl_score: 9.0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: "Hygiene-Shop"
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🚽  N20260703102009   TravelJohn Emergency Toilet (Disposable)

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ latin: "Prunus mume"
 en: "Umeboshi Paste"
 hi: "उमेबोशी पेस्ट"
 reformhaus: 8.00
-unit_price: 8.00
 benefit: "Alkalizing effect"
 props: 
   - "Pureed pickled Japanese ume plums"
@@ -70,6 +68,14 @@ denns: 8.00
 label: "Umeboshi Paste"
 ru: "Паста умэбоси"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

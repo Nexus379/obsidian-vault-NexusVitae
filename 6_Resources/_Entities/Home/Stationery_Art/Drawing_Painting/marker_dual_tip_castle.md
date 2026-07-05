@@ -40,8 +40,15 @@ room: "studio"
 brand: "Castle Arts"
 ink_type: "Water-based / Alcohol-based"
 tips: "Brush & Fine"
-unit_price: 40.00
 de: "Castle Arts Marker"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 40.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

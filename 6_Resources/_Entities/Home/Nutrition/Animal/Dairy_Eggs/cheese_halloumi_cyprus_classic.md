@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ edeka: 4.00
 latin: "Caseus cyprius"
 en: "Halloumi"
 hi: "हलौमी पनीर"
-unit_price: 4.00
 props: 
   - "Traditionell aus Schaf- und Ziegenmilch (oder Mischung)"
   - "Schmilzt nicht dank des Kochvorgangs des Bruchs (Denaturierung der Proteine)"
@@ -67,6 +65,14 @@ pdo_status: "Protected Designation of Origin"
 brand: "Gazi / Alis"
 rewe: 4.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 16.0
 latin: "Arachis pasta (Lidl)"
 en: "Lidl Peanut Butter"
 hi: "लिडल मूंगफली मक्खन"
-unit_price: 3.00
 props: 
   - "Lidls Eigenmarken-Benchmark"
   - "Etwas höherer Proteingehalt als Barney's"
@@ -62,6 +60,14 @@ label: "Vita D'Or Erdnussbutter (Lidl)"
 ru: "Арахисовое масло Лидл"
 brand: "Vita D'Or"
 lidl: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

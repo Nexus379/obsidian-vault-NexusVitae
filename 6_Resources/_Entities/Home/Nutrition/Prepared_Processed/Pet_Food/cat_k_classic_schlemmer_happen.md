@@ -30,7 +30,6 @@ brand: "K-Classic"
 label: "K-Classic Schlemmerhappen (Kaufland)"
 meat_content: "High"
 room: "pantry"
-unit_price: 1.00
 locations: 
   - "kaufland"
 en: "Kaufland Gourmet Tins"
@@ -40,6 +39,14 @@ sugar_free: "Yes"
 props: 
   - "Kauflands Antwort auf teure Gourmet-Dosen"
   - "Sehr hohe Akzeptanz durch technologisch optimierte Lockstoffe (natürlich)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 80.0
 latin: "Althaea gelata (Haribo)"
 en: "Marshmallows"
 hi: "मार्शमैलो"
-unit_price: 2.00
 props: 
   - "Der Klassiker für Lagerfeuer und Kakao-Toppings"
   - "Besteht primär aus aufgeschlagenem Zucker und Gelatine"
@@ -63,6 +61,14 @@ props:
 label: "Haribo Chamallows (Pink & White)"
 ru: "Маршмэллоу"
 brand: "Haribo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

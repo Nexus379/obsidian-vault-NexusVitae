@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "online_specialty"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,12 +59,19 @@ carbs_total_g: 67.0
 latin: "Acacia senegal (Gum Arabic)"
 en: "Gomme Syrup"
 hi: "गोम सिरप"
-unit_price: 8.00
 props: 
   - "Simple syrup infused with Gum Arabic"
   - "Prevents sugar crystallization in high-concentration syrups"
   - "Gives classic cocktails (like the Old Fashioned) a velvety, thick mouthfeel"
 label: "Gomme Syrup"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "online_specialty"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

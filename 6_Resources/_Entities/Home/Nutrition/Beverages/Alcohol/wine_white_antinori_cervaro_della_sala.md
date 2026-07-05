@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "feinkost_kaefer"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,13 +48,20 @@ fr: "Cervaro della Sala"
 ja: "チェルヴァロ・デラ・サラ"
 high_end_shops: 60.00
 fa: "سروارو دلا سالا"
-unit_price: 60.00
 de: "Antinori Cervaro della Sala"
 locations: 
   - "feinkost_kaefer"
   - "high_end_shops"
 style: "Oaked (Barrique aged)"
 hi: "सर्वारो डेला साला"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 60.00
+vendor_value: "feinkost_kaefer"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 en: "Black Chickpeas"
 iron_plant_mg: 6.0
 hi: "काला चना"
-unit_price: 3.00
 benefit: "Low Glycemic Index"
 props: 
   - "Ancient Indian variety"
@@ -62,6 +60,14 @@ orient_market: 3.00
 label: "Black Chickpeas (Kala Chana)"
 ru: "Черный нут"
 de: "Schwarze Kichererbsen / Kala Chana"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 en: "Sheep Milk"
 denns: 4.00
 hi: "भेड़ का दूध"
-unit_price: 4.00
 props: 
   - "Remarkably high calcium and phosphorus content"
   - "Rich, creamy texture due to high solids"
@@ -62,6 +60,14 @@ props:
 label: "Sheep Milk"
 ru: "Овечье молоко"
 de: "Schafmilch"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

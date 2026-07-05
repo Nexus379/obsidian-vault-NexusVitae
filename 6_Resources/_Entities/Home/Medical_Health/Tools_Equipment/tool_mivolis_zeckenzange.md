@@ -31,7 +31,6 @@ icon: "🛠️"
 label: "Mivolis Tick Tweezers"
 brand: "Mivolis"
 room: "backpack"
-unit_price: 2.95
 locations: 
   - "dm"
 en: "Tick Tweezers"
@@ -43,6 +42,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.95
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🛠️  N20260703100006   Mivolis Tick Tweezers

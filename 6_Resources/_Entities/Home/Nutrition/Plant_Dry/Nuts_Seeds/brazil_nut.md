@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
   - "#sci/Nutrition"
 en: "Brazil Nut"
 hi: "à¤¬à¥à¤°à¤¾à¤œà¥€à¤² à¤¨à¤Ÿ"
-unit_price: 4.00
 props: 
   - "The most concentrated dietary source of Selenium on earth"
   - "Crucial for thyroid function"
@@ -68,6 +66,14 @@ ru: "Ð‘Ñ€Ð°Ð·Ð¸Ð»ÑŒÑÐºÐ¸Ð¹ Ð¾Ñ€ÐµÑ…"
 de: "Paranuss"
 dm: 4.00
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

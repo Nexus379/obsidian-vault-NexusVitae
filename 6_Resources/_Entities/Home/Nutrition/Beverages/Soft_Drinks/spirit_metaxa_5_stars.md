@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,11 +51,18 @@ components: "Wine distillates, Muscat wine, Mediterranean botanicals"
 ja: "メタクサ 5スター"
 kcal: 215
 fa: "متاکسا ۵ ستاره"
-unit_price: 15.00
 de: "Metaxa 5 Sterne"
 locations: 
   - "everywhere"
 hi: "मेटैक्सा 5 स्टार"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

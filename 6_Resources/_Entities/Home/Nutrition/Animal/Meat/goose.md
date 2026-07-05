@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "butcher"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,12 +52,19 @@ ja: "ガチョウ"
 kcal: 300
 ar: "وزة"
 fa: "غاز"
-unit_price: 10.00
 vegan: false
 locations: 
   - "butcher"
   - "rewe"
 hi: "हंस"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "butcher"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ carbs_total_g: 67.0
 latin: "Punica granatum (Historically)"
 en: "Grenadine"
 hi: "ग्रेनेडाइन"
-unit_price: 4.00
 props: 
   - "Historically made from pomegranate juice and sugar"
   - "Provides the signature red color in a Tequila Sunrise"
@@ -69,6 +67,14 @@ props:
 label: "Grenadine"
 ru: "Гренадин"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

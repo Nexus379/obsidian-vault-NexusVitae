@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
 carbs_total_g: 24.0
 en: "Steakhouse Fries"
 hi: "स्टीकहाउस फ्राइज़"
-unit_price: 2.00
 props: 
   - "Kauflands 'fleischige' Pommes-Variante"
   - "Weniger Fettanteil pro Gramm Kartoffel durch geringere Oberfläche"
@@ -60,6 +58,14 @@ label: "K-Classic Steakhouse Pommes"
 ru: "Стейкхаус картофель"
 de: "Steakhouse Pommes"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

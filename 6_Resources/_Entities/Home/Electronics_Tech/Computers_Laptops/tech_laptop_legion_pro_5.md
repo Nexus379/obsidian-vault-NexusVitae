@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Lenovo"
 core: "AMD Ryzen / NVIDIA RTX"
 room: "studio"
-unit_price: 1300.00
 de: "Lenovo Legion Pro 5"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1300.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

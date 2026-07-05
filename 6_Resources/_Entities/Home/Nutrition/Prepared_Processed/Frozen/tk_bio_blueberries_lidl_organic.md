@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 8.1
 latin: "Vaccinium lidlianum bio"
 en: "Lidl Organic Blueberries"
 hi: "लिडल जैविक ब्लूबेरी"
-unit_price: 4.00
 props: 
   - "Lidls Preis-Leistungs-Sieger im TK-Bio-Bereich"
   - "Gleichbleibende Größe der Beeren durch Sortierung"
@@ -61,6 +59,14 @@ label: "Lidl Bio Organic Heidelbeeren"
 ru: "Био черника Лидл"
 brand: "Bio Organic"
 lidl: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -39,10 +39,17 @@ latin: "Cholecalciferol & MK-7"
 vit_d_mcg: 62.5
 brand: "Sunday Natural"
 kcal: 0
-unit_price: 30.00
 vegan: true
 locations: 
   - "online"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 30.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ edeka: 1.00
 latin: "Aqua mineralis carbonata (Vilsa)"
 en: "Vilsa Medium"
 hi: "विल्सा मीडियम"
-unit_price: 1.00
 props: 
   - "Very balanced, mild mineral profile from Northern Germany"
   - "Gentle carbonation ideal for everyday hydration"
@@ -70,6 +68,14 @@ ru: "Вильза Медиум"
 purity: "Naturally low in sodium"
 rewe: 1.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

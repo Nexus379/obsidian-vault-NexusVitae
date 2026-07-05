@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ en: "Dill"
 digestive_status: "Anti-flatulent"
 iron_plant_mg: 6.6
 hi: "सोया"
-unit_price: 1.00
 props: 
   - "Supports digestion"
   - "High mineral density for a herb"
@@ -70,6 +68,14 @@ ru: "Укроп"
 de: "Dill"
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

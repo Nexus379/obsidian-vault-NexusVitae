@@ -37,11 +37,18 @@ sci:
 pl_score: 7.5
 brand: "Dr. Beckmann"
 room: "kitchen"
-unit_price: 4.00
 de: "Glaskeramik Putzstein"
 locations: 
   - "dm"
   - "rewe"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

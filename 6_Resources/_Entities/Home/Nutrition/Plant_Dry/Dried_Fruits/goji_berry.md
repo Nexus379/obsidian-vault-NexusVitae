@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 en: "Goji Berry"
 iron_plant_mg: 6.8
 hi: "à¤—à¥‹à¤œà¥€ à¤¬à¥‡à¤°à¥€"
-unit_price: 5.00
 benefit: "Eye health (Zeaxanthin Champion)"
 props: 
   - "Traditional Chinese Medicine staple"
@@ -68,6 +66,14 @@ label: "Goji Berry (Dried)"
 ru: "Ð“Ð¾Ð´Ð¶Ð¸"
 de: "Goji-Beere (getrocknet)"
 dm: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

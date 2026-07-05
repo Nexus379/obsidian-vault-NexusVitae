@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ gut_health: "Extremely high fiber"
 latin: "Secale cereale (Caryopsis sicca)"
 en: "Rye"
 hi: "राई"
-unit_price: 1.00
 props: 
   - "Rich in non-cellulose polysaccharides (Pentosans)"
   - "Key for sourdough bread"
@@ -65,6 +63,14 @@ denns: 1.00
 label: "Rye"
 ru: "Рожь"
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -33,7 +33,6 @@ props:
 label: "Rinti Kennerfleisch"
 brand: "Rinti"
 room: "pantry"
-unit_price: 3.00
 locations: 
   - "everywhere"
 en: "Rinti Real Meat"
@@ -41,6 +40,14 @@ unit_type: "piece"
 pl_score: 7.5
 grain_free: "Yes"
 meat_quality: "Whole meat chunks"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

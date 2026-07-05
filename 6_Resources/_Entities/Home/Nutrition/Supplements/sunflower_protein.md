@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 en: "Sunflower Protein"
 denns: 12.00
 hi: "सूरजमुखी प्रोटीन"
-unit_price: 12.00
 props: 
   - "Made from de-oiled sunflower seeds"
   - "High fiber content"
@@ -63,6 +61,14 @@ label: "Sunflower Protein"
 ru: "Белок подсолнечника"
 de: "Sonnenblumenprotein"
 dm: 12.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -41,10 +41,17 @@ tear_resistance: "Excellent"
 pl_score: 9.5
 brand: "Floralys"
 room: "bathroom"
-unit_price: 6.00
 de: "Lidl Floralys 4-lagig"
 locations: 
   - "lidl"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

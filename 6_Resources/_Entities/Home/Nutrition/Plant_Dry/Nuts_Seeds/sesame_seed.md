@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 en: "Sesame Seed"
 iron_plant_mg: 14.6
 hi: "à¤¤à¤¿à¤²"
-unit_price: 2.00
 benefit: "Massive Plant Calcium"
 props: 
   - "Unhulled seeds contain 10x more calcium"
@@ -68,6 +66,14 @@ label: "Sesame Seed (Unhulled)"
 ru: "ÐšÑƒÐ½Ð¶ÑƒÑ‚"
 de: "Sesam (UngeschÃ¤lt)"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

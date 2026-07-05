@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
 omega3_ala_g: 17.8
 en: "White Chia Seed"
 hi: "à¤¸à¤«à¥‡à¤¦ à¤šà¤¿à¤¯à¤¾ à¤¬à¥€à¤œ"
-unit_price: 4.00
 props: 
   - "Nutritionally identical to black chia"
   - "Chosen for lighter puddings"
@@ -65,6 +63,14 @@ label: "White Chia Seed"
 ru: "Ð‘ÐµÐ»Ñ‹Ðµ ÑÐµÐ¼ÐµÐ½Ð° Ñ‡Ð¸Ð°"
 de: "WeiÃŸe Chiasamen"
 dm: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

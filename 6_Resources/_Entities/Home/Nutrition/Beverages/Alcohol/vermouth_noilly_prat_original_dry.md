@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,13 +50,20 @@ ar: "نويلي برات"
 fr: "Noilly Prat Original Dry"
 ja: "ノイリー・プラット"
 fa: "نویلی پرات"
-unit_price: 18.00
 de: "Noilly Prat Dry"
 locations: 
   - "rewe"
   - "edeka"
   - "kaufland"
 hi: "नोइली प्रैट"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 18.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

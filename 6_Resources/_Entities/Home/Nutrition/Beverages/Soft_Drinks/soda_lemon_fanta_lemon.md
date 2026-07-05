@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ carbs_total_g: 8.0
 latin: "Potio carbonata (Fanta Limon)"
 en: "Fanta Lemon"
 hi: "फैंटा लेमन"
-unit_price: 2.00
 props: 
   - "Cloudy lemon soda (unlike clear Sprite)"
   - "Tart and less sweet profile"
@@ -64,6 +62,14 @@ props:
 label: "Fanta Lemon"
 ru: "Фанта Лимон"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

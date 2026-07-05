@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ ingredient: "Contains egg/milk for browning"
 en: "Duchess Potatoes"
 shape: "Swirled / Rosette"
 hi: "डचेस आलू"
-unit_price: 2.00
 props: 
   - "Edel-Optik zum Discounter-Preis"
   - "Extrem hohe Maillard-Reaktion an den Zacken der Rosette"
@@ -60,6 +58,14 @@ ru: "Картофель герцогиня"
 de: "Herzoginkartoffeln"
 brand: "Harvest Basket"
 lidl: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

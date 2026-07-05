@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ sci:
 en: "Cherry Tomato"
 hi: "चेरी टमाटर"
 lycopene_mg: 4.5
-unit_price: 3.00
 props: 
   - "Highest lycopene density among fresh tomatoes"
   - "Thick skin rich in flavonoids"
@@ -72,6 +70,14 @@ ru: "Помидор черри"
 de: "Cherry-Tomate, Kirschtomate"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

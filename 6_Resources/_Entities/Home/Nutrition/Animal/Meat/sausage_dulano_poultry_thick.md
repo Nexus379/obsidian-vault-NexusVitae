@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ carbs_total_g: 1.5
 latin: "Aves farcimen (Lidl)"
 en: "Dulano Poultry Sausage"
 hi: "डुलानो पोल्ट्री सॉसेज"
-unit_price: 3.00
 props: 
   - "Lidl's high-volume private label answer to Gutfried"
   - "Very similar nutritional profile, slightly higher fat content"
@@ -66,6 +64,14 @@ ru: "Колбаса из птицы Dulano"
 brand: "Dulano"
 lidl: 3.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

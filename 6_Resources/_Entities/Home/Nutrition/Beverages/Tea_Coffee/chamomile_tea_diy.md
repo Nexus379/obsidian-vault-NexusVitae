@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -32,7 +31,6 @@ lidl: 0.99
 label: "Chamomile Tea"
 de: "Kamillentee"
 icon: "ðŸŒ¼"
-unit_price: 1.50
 locations: 
   - "dm"
   - "rossmann"
@@ -44,6 +42,14 @@ props:
   - "Hellt Haare in der Sonne natÃ¼rlich auf"
   - "Beruhigt gereizte Kopfhaut"
   - "EntzÃ¼ndungshemmend beim Trinken"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

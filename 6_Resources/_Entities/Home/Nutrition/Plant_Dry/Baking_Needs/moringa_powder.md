@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ en: "Moringa Powder"
 iron_plant_mg: 28.0
 vit_e_mg: 113.0
 hi: "सहजन पाउडर"
-unit_price: 10.00
 afro_market: 10.00
 props: 
   - "Complete amino acid profile"
@@ -67,6 +65,14 @@ denns: 10.00
 label: "Moringa Powder"
 ru: "Моринга (порошок)"
 de: "Moringa Pulver"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

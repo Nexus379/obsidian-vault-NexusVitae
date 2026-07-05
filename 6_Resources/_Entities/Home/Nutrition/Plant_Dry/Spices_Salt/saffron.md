@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 gourmet_market: 10.00
 en: "Saffron"
 hi: "केसर"
-unit_price: 10.00
 props: 
   - "Hand-picked stigmas"
   - "Studied for antidepressant effects"
@@ -62,6 +60,14 @@ label: "Saffron (Threads)"
 ru: "Шафран"
 de: "Safran (Fäden)"
 rewe: 10.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

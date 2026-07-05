@@ -30,7 +30,6 @@ icon: "🦋"
 label: "Facelle Natur Ultra-Binden Flügel (Rossmann)"
 de: "Facelle Flügelbinden"
 room: "bathroom"
-unit_price: 3.00
 en: "Facelle Wings Pads"
 unit_type: "piece"
 pl_score: 9.0
@@ -38,6 +37,14 @@ props:
   - "Flügel sorgen technologisch für fixierten Sitz bei Bewegung"
   - "Extra weiche Oberfläche aus Bio-Baumwolle"
   - "Saugkern aus FSC-zertifizierter Zellulose"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

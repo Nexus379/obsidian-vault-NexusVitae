@@ -41,9 +41,16 @@ pl_score: 8.5
 brand: "Vileda"
 room: "utility"
 mop_type: "Microfiber"
-unit_price: 35.00
 de: "Vileda Ultramat"
 handle: "Telescopic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 35.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

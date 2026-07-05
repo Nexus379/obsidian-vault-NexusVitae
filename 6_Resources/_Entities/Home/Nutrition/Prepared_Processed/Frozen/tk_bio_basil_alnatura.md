@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "alnatura"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 1.1
 edeka: 2.00
 en: "Organic Basil (Frozen)"
 hi: "जैविक फ्रोजन तुलसी"
-unit_price: 2.00
 props: 
   - "Vorgeschnitten und streufähig"
   - "Technologisch überlegen gegenüber getrocknetem Basilikum (behält das typische Aroma)"
@@ -66,6 +64,14 @@ ru: "Био базилик замороженный"
 de: "Bio Basilikum (TK)"
 brand: "Alnatura"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "alnatura"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

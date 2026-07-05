@@ -40,8 +40,15 @@ brand: "Winsor & Newton"
 room: "studio"
 sci: 
   - "#sci/OrganicChemistry"
-unit_price: 15.00
 de: "Geruchloser Verdünner"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 en: "Anise"
 iron_plant_mg: 37.0
 hi: "à¤…à¤¨à¥€à¤¸"
-unit_price: 2.00
 benefit: "Respiratory & Digestive health"
 props: 
   - "Sweet licorice aroma"
@@ -65,6 +63,14 @@ ru: "ÐÐ½Ð¸Ñ"
 de: "Anis"
 denns: 2.00
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

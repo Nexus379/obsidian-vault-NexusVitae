@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
   - "#sci/Botany"
 en: "Sticky Rice"
 hi: "चिपचिपा चावल"
-unit_price: 1.00
 props: 
   - "Nearly 100% amylopectin starch"
   - "Essential for Mango Sticky Rice and Mochi"
@@ -59,6 +57,14 @@ props:
 label: "Gluten-free despite its name"
 ru: "Клейкий рис"
 de: "Klebreis"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

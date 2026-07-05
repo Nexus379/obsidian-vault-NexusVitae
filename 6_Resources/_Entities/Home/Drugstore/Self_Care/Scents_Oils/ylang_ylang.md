@@ -41,12 +41,19 @@ effect: "Euphoric / Relaxing"
 latin: "Cananga odorata"
 brand: "Primavera / Alverde"
 room: "bathroom"
-unit_price: 8.00
 de: "Ylang-Ylang Öl"
 locations: 
   - "budni"
   - "dm"
   - "health_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

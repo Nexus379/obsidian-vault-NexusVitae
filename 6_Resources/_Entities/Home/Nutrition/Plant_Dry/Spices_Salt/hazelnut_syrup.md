@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 78.0
 latin: "Corylus avellana infused"
 en: "Hazelnut Syrup"
 hi: "हेज़लनट सिरप"
-unit_price: 5.00
 props: 
   - "One of the 'Big Three' coffee syrups alongside vanilla and caramel"
   - "Pairs perfectly with chocolate-based drinks"
@@ -68,6 +66,14 @@ props:
 label: "Hazelnut Syrup"
 ru: "Ореховый сироп"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 usage: "Salads, Fine stir-fry"
 en: "Savoy Cabbage (Heart)"
 hi: "सावॉय गोभी का दिल"
-unit_price: 0.00
 props: 
   - "Sweetest part of the cabbage head"
   - "Low chlorophyll, high water content"
@@ -64,6 +62,14 @@ label: "Savoy Cabbage (Heart)"
 ru: "Сердце савойской капусты"
 de: "Wirsing (Herz)"
 vit_c_mg: 25.0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 0.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

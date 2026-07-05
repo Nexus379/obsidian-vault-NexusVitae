@@ -39,10 +39,17 @@ coating: "Silicone-based"
 pl_score: 9.0
 brand: "K-Classic"
 room: "kitchen"
-unit_price: 2.00
 de: "Kaufland Backpapier"
 locations: 
   - "kaufland"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

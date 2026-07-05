@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 78.0
 latin: "Oryza sativa (Longissima)"
 en: "Super Kernel Basmati"
 hi: "सुपर कर्नल बासमती"
-unit_price: 3.00
 props: 
   - "Die Königsklasse des Reises, oft 'Alt' (aged) verkauft, um Feuchtigkeit zu verlieren"
   - "Körner verlängern sich beim Kochen massiv ohne breiter zu werden"
@@ -67,6 +65,14 @@ orient_market: 3.00
 label: "Super Kernel Basmati (Extra Long Grain)"
 ru: "Басмати Супер Кернел"
 brand: "Aahu Barah, Tilda"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

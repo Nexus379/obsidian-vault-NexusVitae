@@ -35,7 +35,6 @@ fragrance_free: "Yes"
 brand: "Alverde"
 room: "bathroom"
 silicone_free: "Yes"
-unit_price: 4.00
 de: "Alverde Ultra Sensitiv Lotion"
 locations: 
   - "budni"
@@ -44,6 +43,14 @@ props:
   - "Technologisch perfekte Leinwand für eigene Düfte"
   - "Keine Eigen-Parfümierung, die mit Aroma-Ölen kollidiert"
   - "Zieht schnell ein ohne Fettfilm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

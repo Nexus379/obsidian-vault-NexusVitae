@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ carbs_total_g: 10.5
 edeka: 2.00
 en: "fritz-kola"
 caffeine_mg: 25.0
-unit_price: 2.00
 benefit: "Vielviel Koffein (25mg/100ml)"
 props: 
   - "Hamburg indie brand classic"
@@ -67,6 +65,14 @@ label: "fritz-kola"
 ru: "Фриц-Кола"
 de: "fritz-kola"
 hi: "फ्रिट्ज़-कोला"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "fish_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 gourmet_market: 3.00
 en: "Oyster"
 hi: "कस्तूरी"
-unit_price: 3.00
 nutrient_focus: "Zinc Champion of the World"
 props: 
   - "Highest natural source of Zinc (essential for testosterone and immunity)"
@@ -64,6 +62,14 @@ label: "Oyster"
 ru: "Устрица"
 de: "Auster"
 fish_market: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "fish_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "liquor_store"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 81.0
 latin: "Passiflora edulis extract"
 en: "Passion Fruit Syrup"
 hi: "पैशन फ्रूट सिरप"
-unit_price: 5.00
 props: 
   - "Core ingredient for the Hurricane and Pornstar Martini"
   - "Brings intense tropical acidity and sweetness"
@@ -67,6 +65,14 @@ props:
 label: "Passion Fruit Syrup"
 ru: "Сироп маракуйи"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "liquor_store"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

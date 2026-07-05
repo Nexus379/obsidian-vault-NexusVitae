@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 62.5
 latin: "Tamarindus indica"
 en: "Tamarind Paste"
 hi: "इमली का पेस्ट"
-unit_price: 3.00
 props: 
   - "Essential sour note in Pad Thai and Indian curries"
   - "Made from the fibrous fruit of the tamarind pod"
@@ -67,6 +65,14 @@ props:
 label: "Tamarind Paste"
 ru: "Тамариндовая паста"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

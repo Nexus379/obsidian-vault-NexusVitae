@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 9.0
 brand: "Mytholon"
-unit_price: 70.00
 de: "Mytholon Priester/Engel Robe"
 locations: 
   - "hobby_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 70.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ§â€â™€ï¸ LARP SPECS ---
 store_online: "mytholon.com"
 store_local: "Mytholon Stores"

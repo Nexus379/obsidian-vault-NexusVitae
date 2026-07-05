@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Samsung"
 core: "QD-OLED Panel"
 room: "studio"
-unit_price: 1200.00
 de: "Samsung Odyssey OLED G9"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1200.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ edeka: 1.00
 latin: "Solanum lycopersicum (Concentratum)"
 en: "Tomato Paste"
 lycopene_mg: 45.0
-unit_price: 1.00
 props: 
   - "Extrem hohe Lycopin-Dichte durch starke Reduktion"
   - "Hält sich geöffnet im Kühlschrank sehr lange"
@@ -64,6 +62,14 @@ label: "Tomatenmark (2-fach/3-fach konzentriert)"
 dm: 1.00
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

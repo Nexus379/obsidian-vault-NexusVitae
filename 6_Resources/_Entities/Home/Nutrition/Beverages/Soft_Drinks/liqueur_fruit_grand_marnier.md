@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,13 +50,20 @@ ar: "غراند مارنييه"
 fr: "Grand Marnier"
 ja: "グラン・マルニエ"
 fa: "گراند مارنیه"
-unit_price: 30.00
 de: "Grand Marnier"
 locations: 
   - "rewe"
   - "edeka"
   - "kaufland"
 hi: "ग्रैंड मार्नियर"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 30.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

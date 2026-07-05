@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ rossmann: 1.00
 rutin_mg: 30.0
 en: "Buckwheat"
 hi: "कुट्टू"
-unit_price: 1.00
 benefit: "Vascular protection (Rutin)"
 props: 
   - "Related to rhubarb, not wheat"
@@ -68,6 +66,14 @@ ru: "Гречиха"
 de: "Buchweizen"
 dm: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

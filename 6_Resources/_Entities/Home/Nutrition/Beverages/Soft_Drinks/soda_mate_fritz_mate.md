@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 2.00
 latin: "Potio carbonata (Fritz Ilex)"
 en: "fritz-mate"
 caffeine_mg: 25.0
-unit_price: 2.00
 props: 
   - "fritz-kola's entry into the mate market"
   - "Hits the absolute legal ceiling for caffeine in lemonades"
@@ -68,6 +66,14 @@ ru: "Фриц-Мате"
 brand: "fritz-kola"
 caffeine: "Maximum legal limit for sodas (25mg/100ml)"
 hi: "फ्रिट्ज़ मेट"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

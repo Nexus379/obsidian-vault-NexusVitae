@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 8.0
 brand: "Etsy (Various)"
-unit_price: 250.00
 de: "Etsy Leder-Korsett (MaÃŸanfertigung)"
 locations: 
   - "hobby_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 250.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ§â€â™€ï¸ LARP SPECS ---
 store_online: "etsy.com"
 store_local: "Custom Tailor"

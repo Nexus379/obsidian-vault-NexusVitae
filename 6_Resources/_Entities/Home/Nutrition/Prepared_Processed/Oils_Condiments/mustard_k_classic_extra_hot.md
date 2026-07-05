@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 4.5
 latin: "Brassica nigra (Kaufland)"
 en: "K-Classic Hot Mustard"
 hi: "के-क्लासिक तीखी सरसों"
-unit_price: 1.00
 ar: "خردل حار ك-كلاسيك"
 props: 
   - "High proportion of black mustard seeds for stinging heat"
@@ -62,6 +60,14 @@ label: "K-Classic Senf (Scharf/Extra)"
 ru: "Горчица острая K-Classic"
 price: "Extreme Budget"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -31,7 +31,6 @@ icon: "🧴"
 label: "Bepanthen Wound and Healing Ointment"
 brand: "Bepanthen"
 room: "bathroom"
-unit_price: 5.00
 locations: 
   - "apotheke"
   - "docmorris"
@@ -44,6 +43,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: "Dexpanthenol"
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧴  N20260703102005   Bepanthen Wound and Healing Ointment

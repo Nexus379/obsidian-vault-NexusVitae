@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 18.0
 latin: "Prunus dulcis paste"
 en: "Brown Almond Butter"
 hi: "ब्राउन बादाम का मक्खन"
-unit_price: 10.00
 benefit: "Higher fiber and antioxidants from skins"
 props: 
   - "Made from whole, unpeeled, roasted almonds"
@@ -71,6 +69,14 @@ label: "Almond Butter (Brown/Roasted)"
 ru: "Миндальная паста (коричневая)"
 dm: 10.00
 rewe: 10.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

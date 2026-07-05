@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 2.5
 latin: "Gallus gallus (Veru marinatum)"
 en: "Chicken Skewers (Paprika)"
 hi: "चिकन स्क्युअर्स"
-unit_price: 6.00
 props: 
   - "Lean breast meat threaded onto wooden skewers"
   - "Prone to drying out quickly on a hot grill if unattended"
@@ -69,6 +67,14 @@ ru: "Куриные шашлычки (с паприкой)"
 lidl: 6.00
 rewe: 6.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

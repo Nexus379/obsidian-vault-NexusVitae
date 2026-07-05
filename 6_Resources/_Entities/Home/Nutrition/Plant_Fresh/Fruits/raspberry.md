@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ sci:
 latin: "Rubus idaeus (Fructus recens)"
 en: "Raspberry"
 hi: "रसभरी"
-unit_price: 3.00
 props: 
   - "Hollow core when picked"
   - "Contains raspberry ketones"
@@ -70,6 +68,14 @@ ketones_mg: 4.0
 ru: "Малина"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

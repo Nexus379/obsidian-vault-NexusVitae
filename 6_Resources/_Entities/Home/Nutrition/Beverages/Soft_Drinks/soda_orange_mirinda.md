@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 7.8
 latin: "Potio carbonata (Mirinda)"
 en: "Mirinda"
 hi: "मिरिंडा"
-unit_price: 2.00
 props: 
   - "PepsiCo's direct answer to Fanta"
   - "Often uses sweetener blends in the EU to reduce calories (hence only 31 kcal)"
@@ -66,6 +64,14 @@ ru: "Миринда"
 brand: "PepsiCo"
 lidl: 2.00
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

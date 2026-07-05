@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
   - "#sci/Microbiology"
 en: "Gorgonzola"
 hi: "गॉर्गन्ज़ोला"
-unit_price: 4.00
 props: 
   - "Internal blue mold veins"
   - "Sharp, piquant flavor"
@@ -61,6 +59,14 @@ ru: "Горгонзола"
 de: "Gorgonzola"
 rewe: 4.00
 italian_market: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

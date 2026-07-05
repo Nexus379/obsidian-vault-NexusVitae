@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -32,7 +31,6 @@ sugar_g: 82
 label: "Raw Honey"
 de: "Honig"
 icon: "ðŸ¯"
-unit_price: 5.00
 locations: 
   - "dm"
   - "rewe"
@@ -43,6 +41,14 @@ props:
   - "NatÃ¼rlicher Feuchtigkeitsspender"
   - "Sanftes Aufhellen der Haare"
   - "EnthÃ¤lt natÃ¼rliche Enzyme"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

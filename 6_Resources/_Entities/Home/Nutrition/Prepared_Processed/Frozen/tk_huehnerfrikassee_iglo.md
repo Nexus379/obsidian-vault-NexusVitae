@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
 components: "Chicken, Peas, Carrots, Rice, Cream Sauce"
 en: "Chicken Fricassee"
 hi: "चिकन फ्रिकैसी"
-unit_price: 4.00
 props: 
   - "Deutscher Hausmannskost-Klassiker technologisch konserviert"
   - "Sehr mild gewürzt, ideal für empfindliche Mägen"
@@ -60,6 +58,14 @@ label: "Iglo Hühnerfrikassee (mit Reis)"
 ru: "Куриное фрикасе"
 de: "Hühnerfrikassee"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

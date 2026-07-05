@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,13 +55,20 @@ carbs_total_g: 8.9
 latin: "Potio carbonata amara (Cinchona)"
 en: "Schweppes Tonic Water"
 hi: "श्वेप्स टॉनिक"
-unit_price: 3.00
 props: 
   - "The global benchmark for Tonic Water"
   - "Glows blue under UV light due to quinine"
   - "Crisp, bitter profile engineered specifically for mixing with Gin"
 label: "Schweppes Indian Tonic Water"
 ru: "Швепс Тоник"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

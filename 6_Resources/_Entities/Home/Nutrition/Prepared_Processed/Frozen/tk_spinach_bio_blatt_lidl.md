@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 0.6
 latin: "Spinacia oleracea (Bio)"
 en: "Organic Leaf Spinach"
 hi: "जैविक पालक के पत्ते"
-unit_price: 2.00
 props: 
   - "Reiner Blattspinat ohne Zusätze"
   - "Höchste Nährstoffdichte bei minimalen Kalorien"
@@ -62,6 +60,14 @@ origin: "Controlled Organic"
 ru: "Био шпинат в листьях"
 brand: "Bio Organic"
 purity: "100% Leaf (no stems)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

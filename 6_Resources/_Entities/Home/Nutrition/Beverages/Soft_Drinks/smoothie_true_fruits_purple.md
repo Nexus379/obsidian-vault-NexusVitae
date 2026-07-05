@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,13 +58,20 @@ edeka: 4.00
 latin: "Fructus tritus purpureus"
 en: "true fruits purple"
 hi: "ट्रू फ्रूट्स पर्पल"
-unit_price: 4.00
 props: 
   - "Apple, Banana, Orange, Blackcurrant, Blueberry"
   - "High in natural antioxidants"
 label: "true fruits purple"
 ru: "true fruits фиолетовый"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

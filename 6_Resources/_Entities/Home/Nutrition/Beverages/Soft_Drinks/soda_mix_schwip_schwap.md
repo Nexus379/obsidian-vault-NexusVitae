@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 6.7
 latin: "Potio carbonata (Schwip)"
 en: "Schwip Schwap"
 hi: "श्विप श्वाप"
-unit_price: 2.00
 props: 
   - "PepsiCo's Cola-Mix"
   - "Lowest calorie count of the big three due to sweetener blend"
@@ -62,6 +60,14 @@ flavor_profile: "Citrus-heavy Cola mix"
 label: "Schwip Schwap"
 ru: "Швип Швап"
 brand: "PepsiCo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

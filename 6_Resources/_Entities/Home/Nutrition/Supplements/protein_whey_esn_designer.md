@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "online"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 6.0
 edeka: 35.00
 en: "ESN Whey Protein"
 hi: "ESN व्हे प्रोटीन"
-unit_price: 35.00
 type: "Whey Concentrate & Isolate blend"
 props: 
   - "Deutscher Marktführer im Premium-Segment"
@@ -66,6 +64,14 @@ de: "ESN Proteinpulver"
 brand: "ESN"
 rewe: 35.00
 online: 35.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 35.00
+vendor_value: "online"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

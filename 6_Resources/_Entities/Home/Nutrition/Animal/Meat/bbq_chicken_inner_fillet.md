@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 1.0
 latin: "Gallus gallus (Pectus minor)"
 en: "Chicken Inner Fillets / Tenders"
 hi: "चिकन इनर फिलेट"
-unit_price: 6.00
 props: 
   - "The 'Pectus minor' muscle, loosely attached to the underside of the breast"
   - "The absolute most tender part of the chicken"
@@ -70,6 +68,14 @@ ru: "Куриное внутреннее филе"
 de: "Hähnchen-Innenfilets"
 lidl: 6.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

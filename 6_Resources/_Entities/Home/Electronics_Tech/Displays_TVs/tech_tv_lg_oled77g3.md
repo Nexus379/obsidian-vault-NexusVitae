@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "LG"
 core: "MLA-OLED"
 room: "living_room"
-unit_price: 3200.00
 de: "LG G3 OLED 77 Zoll"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3200.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

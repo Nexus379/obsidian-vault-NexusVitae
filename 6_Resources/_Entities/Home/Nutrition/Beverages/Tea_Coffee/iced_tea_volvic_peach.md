@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 2.00
 latin: "Aqua theae (Volvic Persica)"
 en: "Volvic Tea Peach"
 hi: "वोल्विक टी पीच"
-unit_price: 2.00
 benefit: "Low Sugar Hydration (approx. 50% less sugar than Lipton)"
 props: 
   - "Marketed as tea-infused water rather than heavy iced tea"
@@ -69,6 +67,14 @@ ru: "Вольвик Чай Персик"
 dm: 2.00
 rewe: 2.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

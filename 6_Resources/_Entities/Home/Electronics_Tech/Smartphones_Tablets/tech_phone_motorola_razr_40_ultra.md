@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Motorola"
 core: "Snapdragon 8+ Gen 1"
 room: "backpack"
-unit_price: 800.00
 de: "Motorola Razr 40 Ultra"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 800.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

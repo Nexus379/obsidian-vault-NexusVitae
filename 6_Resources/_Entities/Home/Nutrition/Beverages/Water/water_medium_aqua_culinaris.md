@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "aldi_süd"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 0.0
 latin: "Aqua culinaris carbonata"
 en: "Aqua Culinaris Medium"
 hi: "एक्वा कुलिनारिस मीडियम"
-unit_price: 1.00
 nutrient_focus: "High Calcium Discounter"
 props: 
   - "Surprisingly high calcium content for a budget brand"
@@ -67,6 +65,14 @@ props:
 label: "Aqua Culinaris Medium (Aldi Süd)"
 ru: "Аква Кулинарис Медиум"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "aldi_süd"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

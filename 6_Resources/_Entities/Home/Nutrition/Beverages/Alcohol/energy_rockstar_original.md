@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 3.00
 latin: "Potio excitans (Rockstar)"
 en: "Rockstar Original"
 caffeine_mg: 32.0
-unit_price: 3.00
 props: 
   - "PepsiCo's major competitor to Monster"
   - "Slightly sweeter and fruitier than Monster Original"
@@ -67,6 +65,14 @@ label: "Rockstar Energy Original"
 ru: "Рокстар"
 brand: "PepsiCo"
 hi: "रॉकस्टार"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

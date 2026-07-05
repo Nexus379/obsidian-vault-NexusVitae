@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -48,11 +47,18 @@ ar: "ليدل آيريش كريم"
 fr: "Crème de whisky Lidl"
 ja: "リドル アイリッシュクリーム"
 fa: "آیریش کرم لیدل"
-unit_price: 10.00
 de: "Queen Margot Irish Cream"
 locations: 
   - "lidl"
 hi: "लिल आयरिश क्रीम"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

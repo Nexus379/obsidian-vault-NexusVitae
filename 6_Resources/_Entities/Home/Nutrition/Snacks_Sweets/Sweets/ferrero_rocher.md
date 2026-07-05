@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 44.4
 latin: "Socolata aurata (Rocher)"
 en: "Ferrero Rocher"
 hi: "फेरेरो रोचर"
-unit_price: 5.00
 props: 
   - "Ganze Haselnuss in feiner Haselnuss-Creme"
   - "Umhüllt von einer knusprigen Waffel und Milchschokolade mit gehackten Haselnüssen"
@@ -63,6 +61,14 @@ props:
 label: "Ferrero Rocher"
 ru: "Ферреро Роше"
 brand: "Ferrero"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

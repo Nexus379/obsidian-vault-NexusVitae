@@ -40,13 +40,19 @@ props:
   - "Classic, warm and windproof"
   - "Für den Weg zur Arbeit und formelle Anlässe"
 # --- 👕 CLOTHING SPECS ---
-unit_price: 60.00
-pref_vendor: "Zalando"
 vendors: []
 weight_g: 150
 care_instructions: "Nur Handwäsche / Lederpflege"
 condition_score: 9
 pl_score: 8.5
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 60.00
+vendor_value: "Zalando"
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧤  N20260703153003   Black Winter Leather Gloves

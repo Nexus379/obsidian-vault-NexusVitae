@@ -31,7 +31,6 @@ icon: "🩹"
 label: "Mivolis Sterile Compresses"
 brand: "Mivolis"
 room: "bathroom"
-unit_price: 2.00
 locations: 
   - "dm"
 en: "Sterile Compresses"
@@ -43,6 +42,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🩹  N20260703102003   Mivolis Sterile Compresses

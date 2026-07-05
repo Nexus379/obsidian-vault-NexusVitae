@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ usage: "Gourmet standard"
 quercetin_mg: 28.0
 en: "Banana Shallot"
 hi: "केला शालोट"
-unit_price: 2.00
 props: 
   - "Hybrid of onion and shallot"
   - "Easier to peel than small shallots"
@@ -66,6 +64,14 @@ label: "Banana Shallot (Eschalion)"
 ru: "Лук-шалот Банановый"
 de: "Bananenschalotte, Eschalotte"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

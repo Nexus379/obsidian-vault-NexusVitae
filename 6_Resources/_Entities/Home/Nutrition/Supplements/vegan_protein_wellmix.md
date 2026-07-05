@@ -40,10 +40,17 @@ latin: "Proteinum vegetabile"
 protein_g: 21.0
 brand: "WellMix"
 kcal: 110
-unit_price: 15.00
 vegan: true
 locations: 
   - "rossmann"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

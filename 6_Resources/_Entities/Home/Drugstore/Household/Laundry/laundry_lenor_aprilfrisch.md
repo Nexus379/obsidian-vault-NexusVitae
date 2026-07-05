@@ -38,10 +38,17 @@ pl_score: 6.0
 brand: "P&G / Lenor"
 room: "laundry"
 scent_tech: "Capsule-technology"
-unit_price: 4.00
 de: "Lenor Aprilfrisch"
 locations: 
   - "everywhere"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

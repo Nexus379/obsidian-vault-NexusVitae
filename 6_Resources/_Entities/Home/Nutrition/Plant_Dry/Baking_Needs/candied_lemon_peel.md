@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 70.0
 preservation: "High sugar crystallization"
 en: "Candied Lemon Peel"
 hi: "कैंडीड नींबू का छिलका"
-unit_price: 2.00
 props: 
   - "Kandierte Schale der dickschaligen Cedrat-Zitrone"
   - "Klassische Backzutat für Christstollen und Früchtebrot"
@@ -69,6 +67,14 @@ ru: "Цукаты из лимона"
 de: "Zitronat (Sukkade)"
 lidl: 2.00
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

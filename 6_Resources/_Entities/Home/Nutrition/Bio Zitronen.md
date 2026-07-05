@@ -21,7 +21,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: ""
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,6 +54,14 @@ tryptophan_mg: 0
 leucine_mg: 0
 omega3_epa_mg: 0
 omega3_dha_mg: 0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 0.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🥗 Bio Zitronen

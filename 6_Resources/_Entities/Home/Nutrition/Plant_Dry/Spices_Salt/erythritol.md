@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -63,7 +62,6 @@ latin: "Erythritol (Fermented)"
 glycemic_index: 0.0
 en: "Erythritol"
 hi: "एरिथ्रिटोल"
-unit_price: 10.00
 props: 
   - "Sugar alcohol that is not metabolized (excreted in urine)"
   - "Has a distinct 'cooling' effect on the tongue"
@@ -72,6 +70,14 @@ label: "Erythritol"
 ru: "Эритрит"
 dm: 10.00
 rewe: 10.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

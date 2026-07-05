@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ rossmann: 3.00
 en: "GF Oats"
 beta_glucan_g: 4.5
 hi: "ग्लूटेन मुक्त जई"
-unit_price: 3.00
 props: 
   - "Strictly separated during processing"
   - "Safe for most Celiacs"
@@ -66,6 +64,14 @@ ru: "Овсянка без глютена"
 de: "Glutenfreie Haferflocken"
 dm: 3.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

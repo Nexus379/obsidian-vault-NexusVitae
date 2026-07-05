@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 95.0
 glycemic_index: 54.0
 en: "Coconut Sugar"
 hi: "नारियल की चीनी"
-unit_price: 6.00
 benefit: "Lower Glycemic Index"
 props: 
   - "Made from the sap of coconut flower buds"
@@ -72,6 +70,14 @@ de: "Kokosblütenzucker"
 fiber: "Contains Inulin"
 dm: 6.00
 rewe: 6.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

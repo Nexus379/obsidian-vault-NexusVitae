@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 carbs_total_g: 42.0
 en: "World Champion Rolls"
 hi: "विश्व चैंपियन रोल्स"
-unit_price: 1.00
 props: 
   - "Technologische Fusion aus Weizen-, Roggen- und Malzmehl"
   - "Die Unterseite ist meistens massiv mit Mohn belegt"
@@ -62,6 +60,14 @@ label: "K-Classic Weltmeisterbrötchen"
 ru: "Многозерновые булочки"
 de: "Weltmeisterbrötchen"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

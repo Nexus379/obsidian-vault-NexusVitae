@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 latin: "Brassica oleracea var. gemmifera (Inflorescentia)"
 en: "Brussels Sprouts"
 hi: "ब्रसेल्स स्प्राउट्स"
-unit_price: 1.00
 benefit: "DNA protection"
 props: 
   - "Highest protein content in cabbage family"
@@ -68,6 +66,14 @@ label: "Brussels Sprouts"
 ru: "Брюссельская капуста"
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

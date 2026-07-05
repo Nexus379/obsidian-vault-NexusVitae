@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 46.5
 latin: "Panis planus lidlianus completus"
 en: "Lidl Whole Wheat Wraps"
 hi: "लिडल होल व्हीट टॉर्टिला"
-unit_price: 2.00
 props: 
   - "Die 'gesunde' Variante für langanhaltende Sättigung"
   - "Technologisch etwas dunkler und fester im Biss"
@@ -61,6 +59,14 @@ label: "McEnnandy Whole Wheat Tortillas"
 ru: "Цельнозерновые тортильи Лидл"
 brand: "McEnnandy"
 lidl: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

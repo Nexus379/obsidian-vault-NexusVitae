@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 usage: "TCM Skin Health"
 en: "Job's Tears"
 hi: "जॉब्स टियर्स"
-unit_price: 3.00
 props: 
   - "Large teardrop seeds"
   - "Used in TCM to drain dampness"
@@ -61,6 +59,14 @@ props:
 label: "Job's Tears (Hatomugi)"
 ru: "Иовлевы слёзы"
 de: "Hiobsträne"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "feinkost_kaefer"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,12 +48,19 @@ ar: "ماكالان 12"
 fr: "The Macallan 12"
 ja: "ザ・マッカラン 12年"
 fa: "مک‌کالن ۱۲"
-unit_price: 100.00
 de: "The Macallan 12"
 locations: 
   - "feinkost_kaefer"
   - "specialist"
 hi: "मैकलान 12"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 100.00
+vendor_value: "feinkost_kaefer"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

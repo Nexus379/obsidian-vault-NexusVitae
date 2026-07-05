@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ edeka: 2.00
 latin: "Triticum durum (Tubuli magni striati)"
 en: "Rigatoni"
 hi: "रिगाटोनी"
-unit_price: 2.00
 props: 
   - "Breiter und gerader geschnitten als Penne, mit stark ausgeprägten Rillen"
   - "Die großen Röhren kollabieren beim Kochen nicht und fangen stückige Fleischsaucen (Ragù) und Gemüse massiv auf"
@@ -68,6 +66,14 @@ props:
 label: "Rigatoni"
 ru: "Ригатони"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

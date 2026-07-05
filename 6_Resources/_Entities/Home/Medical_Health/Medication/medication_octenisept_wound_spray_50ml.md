@@ -31,7 +31,6 @@ icon: "🧴"
 label: "Octenisept Wound Disinfection (50ml)"
 brand: "Schülke"
 room: "bathroom"
-unit_price: 6.45
 locations: 
   - "shop_apotheke"
   - "docmorris"
@@ -45,6 +44,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: "Octenidin"
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.45
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧴  N20260703100002   Octenisept Wound Disinfection (50ml)

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ carbs_total_g: 27.6
 latin: "Anacardium occidentale paste"
 en: "Cashew Butter"
 hi: "काजू का मक्खन"
-unit_price: 8.00
 props: 
   - "Naturally sweeter than peanut or almond butter"
   - "Blends perfectly into vegan cheese sauces"
@@ -71,6 +69,14 @@ label: "Cashew Butter"
 ru: "Паста из кешью"
 dm: 8.00
 rewe: 8.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

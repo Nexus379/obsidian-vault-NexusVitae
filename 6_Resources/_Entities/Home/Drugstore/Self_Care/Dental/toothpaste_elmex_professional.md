@@ -42,11 +42,18 @@ active_ing: "Amine Fluoride (Olaflur)"
 latin: "Pasta dentaria premium"
 brand: "Elmex (CP)"
 room: "bathroom"
-unit_price: 5.00
 de: "Elmex Professional"
 locations: 
   - "everywhere"
   - "budni"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "penny"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 25.0
 en: "Filled Potato Pockets"
 hi: "भरे हुए आलू पॉकेट"
-unit_price: 2.00
 props: 
   - "Pennys legendärer Snack-König"
   - "Die Füllung bleibt technologisch auch bei 200°C stabil (kein Auslaufen)"
@@ -61,6 +59,14 @@ de: "Kartoffeltaschen (Penny)"
 brand: "Penny"
 penny: 2.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "penny"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

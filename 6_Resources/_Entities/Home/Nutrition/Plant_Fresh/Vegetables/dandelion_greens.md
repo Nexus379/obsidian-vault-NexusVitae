@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ sci:
 en: "Dandelion"
 iron_plant_mg: 3.1
 hi: "सिंहपर्णी"
-unit_price: 2.00
 props: 
   - "Liver & gallbladder support"
   - "Strong diuretic properties"
@@ -68,6 +66,14 @@ denns: 2.00
 label: "Dandelion Greens"
 ru: "Одуванчик"
 de: "Löwenzahn"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

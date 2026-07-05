@@ -41,7 +41,6 @@ pl_score: 8.5
 latin: "Stilus oculorum naturalis"
 brand: "Alverde"
 room: "bathroom"
-unit_price: 2.00
 de: "Alverde Kajal"
 locations: 
   - "budni"
@@ -50,6 +49,14 @@ props:
   - "Technologisch auf Bienenwachs-Basis für weichen Auftrag"
   - "Keine synthetischen Konservierungsstoffe"
   - "Ideal für sensible Augen und Kontaktlinsenträger"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

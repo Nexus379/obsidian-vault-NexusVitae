@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "edeka"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ edeka: 2.00
 latin: "Brassica oleracea italica (Standard)"
 en: "Broccoli Florets"
 hi: "ब्रोकोली फ्लोरेट्स"
-unit_price: 2.00
 props: 
   - "Edekas Preis-Leistungs-Standard für Brokkoli"
   - "Hält durch Schockfrostung die grüne Farbe extrem stabil"
@@ -62,6 +60,14 @@ label: "Gut & Günstig Broccoli (Röschen)"
 ru: "Соцветия брокколи"
 size_calibration: "Uniform for even cooking"
 brand: "Gut & Günstig"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "edeka"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

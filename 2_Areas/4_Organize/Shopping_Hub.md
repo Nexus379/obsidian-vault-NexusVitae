@@ -27,6 +27,7 @@ sibling: []
 child: []
 summary:
 review:
+shopping_strategy: value
 shopping_extras: []
 cssclasses:
   - dashboard-no-border
@@ -47,124 +48,21 @@ cssclasses:
 
 ---
 
-## 🥗 1. Atomic Need (Nutrition & Supps)
-> [!abstract]- 🧊 Batch Calculation & Strategy Log
-> ```dataviewjs
-> const planPath = "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md";
-> const planPage = dv.page(planPath);
-> const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
-> let Nexus;
-> try { Nexus = await (require(enginePath))(app); } catch(e) {}
+## 🥗 1. Atomic Need & Generator
+> [!info] 🛒 Automatische Einkaufsliste
+> Die Einkaufsliste generiert sich **vollautomatisch**, wenn du morgens dein Daily Log erstellst und an dem Tag im Timeblocking `groceries` ausgewählt hast! 
+> Das System berechnet dann den Bedarf anhand der Dauer bis zum nächsten Einkauf (Lookahead) und speichert die fertige Einkaufsliste statisch in `0_Calendar/4_Projectlogs/Utilities`.
 > 
-> if (!planPage) {
->     dv.paragraph("❌ _Meal Plan not found._");
-> } else {
->     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
->     const slots = ["brk", "ben", "lun", "snk", "eve"];
->     
->     // ⚡ Dynamic Look-Ahead
->     const todayIdx = moment().day();
->     let lookAhead = (todayIdx === 1) ? 3 : (todayIdx === 4 ? 4 : 1);
->     let periodText = (todayIdx === 1) ? "Mon-Wed (3 Days)" : (todayIdx === 4 ? "Thu-Sun (4 Days)" : "Next 24h");
->     
->     let recipeCounts = {}; 
->     
->     // 1. Scan Meal Plan for specific period
->     for (let i = 0; i < lookAhead; i++) {
->         const dayStr = days[(todayIdx + i) % 7];
->         for (let slot of slots) {
->             let meals = planPage[`${dayStr}_${slot}`];
->             if (!meals) continue;
->             let mealArray = Array.isArray(meals) ? meals : [meals];
->             for (let m of mealArray) {
->                 if (!m) continue;
->                 let linkStr = (typeof m === "object" && m.path) ? m.path : String(m);
->                 const cleanId = linkStr.replace(/[\[\]"]/g, "").split("|")[0].trim();
->                 recipeCounts[cleanId] = (recipeCounts[cleanId] || 0) + 1;
->             }
->         }
->     }
-> 
->     let neededAtoms = {};
->     let prepStatus = [];
-> 
->     // 2. Inventory & Batch Calculation
->     for (let [recipeName, neededServings] of Object.entries(recipeCounts)) {
->         const recipe = dv.page(recipeName);
->         if (!recipe) continue;
-> 
->         let stored = Number(recipe.portions_stored) || 0;
->         let pDate = recipe.prep_date ? moment(String(recipe.prep_date)) : null;
->         let shelfLife = Number(recipe.prep_shelf_life) || 4; 
->         let isExpired = false;
-> 
->         if (stored > 0 && pDate) {
->             let daysOld = moment().diff(pDate, 'days');
->             if (daysOld > shelfLife) {
->                 isExpired = true;
->                 stored = 0; 
->                 prepStatus.push(`🚨 <span style="color:var(--text-error)">**${recipeName}** expired!</span> (${daysOld} days old)`);
->             } else {
->                 prepStatus.push(`🧊 **${recipeName}**: ${stored} portions stored (good for ${shelfLife - daysOld} days)`);
->             }
->         }
-> 
->         let deficit = neededServings - stored;
->         let rYield = Number(recipe.portions) || 1;
-> 
->         if (deficit > 0) {
->             let batchesToCook = Math.ceil(deficit / rYield);
->             let newPortions = batchesToCook * rYield;
-> 
->             if (stored > 0 && !isExpired) {
->                 prepStatus.push(`🛒 **${recipeName}**: Need ${neededServings}, have ${stored} -> Cook ${batchesToCook}x Batch (+${newPortions} port.)`);
->             } else {
->                 prepStatus.push(`🛒 **${recipeName}**: Need ${neededServings} -> Cook ${batchesToCook}x Batch (+${newPortions} port.)`);
->             }
->             
->             for (let key in recipe) {
->                 if (key.startsWith("amt_")) {
->                     const atomId = key.replace("amt_", "");
->                     const amountPerBatch = Number(recipe[key]) || 0;
->                     neededAtoms[atomId] = (neededAtoms[atomId] || 0) + (amountPerBatch * batchesToCook);
->                 }
->             }
->         } else {
->             prepStatus.push(`✅ **${recipeName}**: Covered by stock (${neededServings} needed).`);
->         }
->     }
-> 
->     // 3. UI GENERATION
->     dv.header(4, `📋 Strategy Log (${periodText})`);
->     if (prepStatus.length > 0) {
->         dv.paragraph(prepStatus.map(s => "- " + s).join("\n"));
->     } else {
->         dv.paragraph("_No meals planned for this period._");
->     }
-> 
->     let html = `<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 15px;">`;
->     const sortedAtoms = Object.entries(neededAtoms).sort();
->     
->     if (sortedAtoms.length > 0) {
->         sortedAtoms.forEach(([id, amount]) => {
->             const item = Nexus ? Nexus.find(id) : null;
->             const label = item ? (item.label || id) : id.replace(/_/g, " ");
->             const unit = "g";
->             const val = Math.round(amount * 1000) / 10;
->             
->             html += `<div style="padding: 6px 10px; background: var(--background-secondary-alt); border-radius: 4px; border-left: 3px solid var(--interactive-accent); font-size: 0.9em;">
->                 <b>${label}</b> <span style="float:right; opacity:0.8; font-family: monospace;">${val} ${unit}</span>
->             </div>`;
->         });
->     } else {
->         html += `<div style="grid-column: span 2; opacity: 0.6; padding: 10px; text-align: center; background: var(--background-secondary); border-radius: 6px;">_Inventory stable. No batch ingredients needed._</div>`;
->     }
->     html += `</div>`;
->     
->     dv.header(4, "🧼 Required Ingredients (Atoms)");
->     dv.paragraph(html);
-> }
-> ```
+> *Alternativ kannst du sie hier jederzeit manuell generieren:*
+
+> [!multi-column]
+>
+> > [!todo] 1. Choose Strategy
+> > `INPUT[inlineSelect(option(value, "💎 Value / Price-Perf."), option(budget, "💸 Budget / Discount"), option(pure, "🌿 Pure / Organic"), option(market, "🍎 Local Market")):shopping_strategy]`
+>
+> > [!todo] 2. Generate Manual List
+> > `BUTTON[generate-shopping-list]`
+
 
 ---
 
@@ -213,7 +111,7 @@ GROUP BY file.link
 > [!info] Items marked for refill in the Nexus Matrix
 
 ```dataviewjs
-const pages = dv.pages('#5note/3atomic').where(p => {
+const pages = dv.pages('#6resource/entity').where(p => {
     // 1. Manual Refill Toggle
     for (let key in p) {
         if (key.startsWith("refill_") && p[key] === true) return true;

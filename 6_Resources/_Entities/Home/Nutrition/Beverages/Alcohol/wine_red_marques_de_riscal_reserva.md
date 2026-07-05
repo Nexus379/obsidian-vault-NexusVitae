@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe_feinkost"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ latin: "Vinum rubrum (Rioja Reserva)"
 en: "Marqués de Riscal"
 wine_specialist: 25.00
 hi: "मार्केस डी रिस्कल"
-unit_price: 25.00
 props: 
   - "The legendary gold-netted bottle (original protection against counterfeiting)"
   - "Aged to perfection with balsamic and spicy notes"
@@ -61,6 +59,14 @@ origin: "Spain (Rioja)"
 ru: "Маркиз де Рискаль"
 vol_pct: 14.5
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 25.00
+vendor_value: "rewe_feinkost"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 en: "Thai Basil"
 iron_plant_mg: 3.1
 hi: "थाई तुलसी"
-unit_price: 2.00
 props: 
   - "Essential for Pho and Red Curry"
   - "Sturdier leaves than Italian basil"
@@ -60,6 +58,14 @@ props:
 label: "Thai Basil"
 ru: "Тайский базилик"
 de: "Thai-Basilikum"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

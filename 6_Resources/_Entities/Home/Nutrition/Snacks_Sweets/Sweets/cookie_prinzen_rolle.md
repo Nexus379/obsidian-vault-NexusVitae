@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ en: "Prince Polo / Prince Cookie"
 latin: "Bisctoctum nobile (DeBeukelaer)"
 heritage: "German Tradition since 1955"
 hi: "प्रिंस कुकी"
-unit_price: 2.00
 props: 
   - "Der deutsche Inbegriff des Doppelkekses"
   - "Ikonische Rollen-Verpackung"
@@ -61,6 +59,14 @@ props:
 label: "Prinzen Rolle"
 ru: "Принцен Ролле"
 brand: "Griesson-de Beukelaer"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

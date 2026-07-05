@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
 quercetin_mg: 10.0
 en: "White Onion"
 hi: "سफेद प्याज"
-unit_price: 1.00
 props: 
   - "Standard in Mexican cuisine"
   - "Milder aftertaste than yellow onions"
@@ -65,6 +63,14 @@ label: "White Onion"
 ru: "Белый лук"
 de: "Weiße Zwiebel"
 lidl: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

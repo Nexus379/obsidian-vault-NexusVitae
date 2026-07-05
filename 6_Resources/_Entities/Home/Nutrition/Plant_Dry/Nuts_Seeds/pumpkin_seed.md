@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
   - "#sci/Nutrition"
 en: "Pumpkin Seed"
 hi: "à¤•à¤¦à¥à¤¦à¥‚ à¤•à¥‡ à¤¬à¥€à¤œ"
-unit_price: 3.00
 benefit: "Zinc & Prostate Health"
 props: 
   - "Styrian seeds have no hard outer shell"
@@ -69,6 +67,14 @@ denns: 3.00
 lidl: 3.00
 rewe: 3.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

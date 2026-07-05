@@ -30,13 +30,20 @@ icon: "🧪"
 label: "Lukas Acryl-Reiniger (Flüssig)"
 de: "Acryl-Entferner"
 room: "studio"
-unit_price: 12.00
 en: "Acrylic Remover"
 unit_type: "piece"
 pl_score: 8.0
 props: 
   - "Die technologische Rettung für bereits angetrocknete Pinsel"
   - "Löst ausgehärtete Polymerschichten molekular auf"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

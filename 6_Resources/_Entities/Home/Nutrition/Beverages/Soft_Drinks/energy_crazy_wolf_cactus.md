@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 10.2
 latin: "Potio excitans (Kauflandia Opuntia)"
 en: "Crazy Wolf Cactus"
 caffeine_mg: 30.0
-unit_price: 1.00
 props: 
   - "Unique floral-sweet flavor of prickly pear (Kaktusfeige)"
   - "Extremely popular and trendy summer edition flavor"
@@ -64,6 +62,14 @@ ru: "Крейзи Вульф Кактус"
 color: "Light Green"
 brand: "Crazy Wolf"
 hi: "क्रेज़ी वुल्फ कैक्टस"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

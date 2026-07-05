@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "weekly_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 en: "Good King Henry"
 iron_plant_mg: 1.5
 hi: "गुड़ किंग हेनरी"
-unit_price: 2.00
 props: 
   - "Ancient European wild spinach"
   - "Rich in minerals"
@@ -61,6 +59,14 @@ props:
 label: "Good King Henry"
 ru: "Марь цельнолистная"
 de: "Guter Heinrich"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "weekly_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

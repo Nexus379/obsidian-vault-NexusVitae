@@ -32,7 +32,6 @@ icon: "🦴"
 label: "SAM Splint (Universal-Schiene 36 Zoll)"
 brand: "SAM Medical"
 room: "backpack"
-unit_price: 15.00
 locations: 
   - "praxisdienst"
 en: "SAM Splint (Universal Splint)"
@@ -44,6 +43,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🦴  N20260703153601   SAM Splint (Universal-Schiene 36 Zoll)

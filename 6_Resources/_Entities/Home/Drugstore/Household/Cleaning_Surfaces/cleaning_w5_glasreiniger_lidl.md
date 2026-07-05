@@ -41,11 +41,18 @@ latin: "Spiritus vitri lidlianus"
 brand: "W5"
 room: "bathroom"
 price: "Extreme budget"
-unit_price: 1.00
 de: "Lidl W5 Glasreiniger"
 locations: 
   - "lidl"
 cleaning_power: "High"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

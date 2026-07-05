@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 5.0
 latin: "Rubus idaeus (Frozen)"
 en: "Organic Raspberries (Frozen)"
 hi: "जैविक फ्रोजन रास्पबेरी"
-unit_price: 5.00
 props: 
   - "Kauflands Bio-Himbeeren für Desserts und Backen"
   - "Technologisch schwierig zu frosten, da die Frucht sehr wasserreich ist"
@@ -62,6 +60,14 @@ props:
 label: "K-Bio Himbeeren (TK)"
 ru: "Био малина замороженная"
 brand: "K-Bio"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

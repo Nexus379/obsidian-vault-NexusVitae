@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 usage: "Micro-dosed Binder"
 en: "Xanthan Gum"
 hi: "ज़ांथन गम"
-unit_price: 10.00
 props: 
   - "Bacterial fermentation product"
   - "Prevents crumbling in GF baking"
@@ -62,6 +60,14 @@ label: "Xanthan Gum"
 ru: "Ксантановая камедь"
 de: "Xanthan"
 rewe: 10.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

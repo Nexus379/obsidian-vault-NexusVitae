@@ -29,7 +29,6 @@ icon: "🧪"
 label: "W5 Waschmaschinen- / Spülmaschinenpfleger"
 brand: "W5"
 room: "laundry"
-unit_price: 3.00
 locations: 
   - "lidl"
 en: "Machine Cleaner"
@@ -39,6 +38,14 @@ props:
   - "Entfernt Biofilme und Kalkablagerungen in Schläuchen und Pumpen"
   - "Technologisch wichtig zur Vermeidung von Gerüchen"
   - "Erhöht die Lebensdauer der Heizstäbe"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

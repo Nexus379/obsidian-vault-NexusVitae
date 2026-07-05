@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,13 +53,20 @@ carbs_total_g: 11.0
 latin: "Fructus tritus ruber (Solevita)"
 en: "Solevita Red Smoothie"
 hi: "सोलेविटा लाल स्मूदी"
-unit_price: 1.00
 props: 
   - "Deep red berry blend with a tart pomegranate finish"
 flavor_profile: "Tart Berry"
 label: "Solevita Smoothie Granatapfel-Beere (Lidl)"
 ru: "Красный смузи Solevita"
 lidl: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

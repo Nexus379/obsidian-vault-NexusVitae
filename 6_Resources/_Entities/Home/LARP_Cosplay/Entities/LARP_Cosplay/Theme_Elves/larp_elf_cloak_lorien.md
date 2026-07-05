@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 9.0
 brand: "Burgschneider"
-unit_price: 60.00
 de: "Burgschneider Elben-Umhang 'Lorien'"
 locations: 
   - "hobby_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 60.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ§â€â™€ï¸ LARP SPECS ---
 store_online: "burgschneider.com"
 store_local: "LARP Events"

@@ -31,7 +31,6 @@ icon: "🛡️"
 label: "Mivolis First Aid Rescue Blanket"
 brand: "Mivolis"
 room: "backpack"
-unit_price: 1.95
 locations: 
   - "dm"
 en: "Rescue Blanket"
@@ -43,6 +42,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.95
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🛡️  N20260703100005   Mivolis First Aid Rescue Blanket

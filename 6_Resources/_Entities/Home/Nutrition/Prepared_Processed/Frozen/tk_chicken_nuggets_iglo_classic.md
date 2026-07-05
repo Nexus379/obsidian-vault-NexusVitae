@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
 carbs_total_g: 18.0
 en: "Chicken Nuggets"
 hi: "चिकन नगेट्स"
-unit_price: 5.00
 props: 
   - "Der Benchmark für Geflügel-Snacks"
   - "Kein Formfleisch (Separatorenfleisch), sondern echtes Filet"
@@ -60,6 +58,14 @@ label: "Iglo Chicken Nuggets"
 ru: "Чикен наггетсы"
 de: "Chicken Nuggets"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

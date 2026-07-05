@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ latin: "Acer saccharum"
 glycemic_index: 54.0
 en: "Maple Syrup"
 hi: "मेपल सिरप"
-unit_price: 8.00
 nutrient_focus: "High in Manganese"
 props: 
   - "Boiled sap of the sugar maple tree"
@@ -73,6 +71,14 @@ manganese_mg: 2.9
 denns: 8.00
 dm: 8.00
 rewe: 8.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

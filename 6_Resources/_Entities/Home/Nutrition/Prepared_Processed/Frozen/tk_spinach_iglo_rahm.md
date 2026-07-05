@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 carbs_total_g: 3.2
 en: "Creamed Spinach"
 hi: "क्रीमयुक्त पालक"
-unit_price: 2.00
 props: 
   - "Der deutsche Benchmark für TK-Gemüse"
   - "Technologisch perfektionierte Sahne-Emulsion"
@@ -64,6 +62,14 @@ vitamin_a_re: 500.0
 ru: "Шпинат со сливками"
 de: "Rahmspinat"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

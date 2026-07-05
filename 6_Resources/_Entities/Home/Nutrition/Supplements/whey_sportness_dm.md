@@ -40,10 +40,17 @@ latin: "Lactoserum"
 protein_g: 23.0
 brand: "Sportness"
 kcal: 112
-unit_price: 15.00
 vegan: false
 locations: 
   - "dm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

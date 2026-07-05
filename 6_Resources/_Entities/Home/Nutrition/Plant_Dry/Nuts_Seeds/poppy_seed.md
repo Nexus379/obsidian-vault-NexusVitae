@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
 fiber_g: 19.5
 en: "Poppy Seed"
 hi: "à¤–à¤¸à¤–à¤¸"
-unit_price: 2.00
 props: 
   - "Highest calcium content of any culinary seed"
   - "Derived from opium poppy"
@@ -67,6 +65,14 @@ ru: "ÐœÐ°Ðº"
 de: "Mohnsamen"
 manganese_mg: 6.7
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

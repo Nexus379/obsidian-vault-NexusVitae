@@ -32,13 +32,20 @@ icon: "📄"
 label: "Canson Mixed Media (200g+)"
 de: "Mixed Media Papier"
 room: "studio"
-unit_price: 20.00
 en: "Mixed Media Paper"
 unit_type: "piece"
 acid_free: "Yes"
 props: 
   - "Bietet technologisch den nötigen 'Grip' für Wachsstifte"
   - "Kein Vergilben durch säurefreie Archiv-Qualität"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 20.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

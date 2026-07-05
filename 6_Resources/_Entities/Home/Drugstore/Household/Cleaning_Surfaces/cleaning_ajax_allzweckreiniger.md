@@ -36,6 +36,14 @@ pl_score: 7.0
 props: 
   - "Klassische Tensid-Mischung mit starkem Fokus auf Raumduft"
   - "Technologisch unkompliziert für Fliesen und Stein"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 0.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

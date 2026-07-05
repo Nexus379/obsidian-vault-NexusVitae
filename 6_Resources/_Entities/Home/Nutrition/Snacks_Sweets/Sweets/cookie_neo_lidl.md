@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 67.0
 latin: "Bisctoctum lidlianum nigrum"
 en: "Neo Cookie"
 hi: "नियो कुकी"
-unit_price: 1.50
 props: 
   - "Lidls direkter Gegenspieler zu Oreo"
   - "Fast identisches Design der Keks-Prägung"
@@ -61,6 +59,14 @@ label: "Sondey Neo (Lidl)"
 ru: "Печенье Нео"
 brand: "Sondey"
 lidl: 1.50
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

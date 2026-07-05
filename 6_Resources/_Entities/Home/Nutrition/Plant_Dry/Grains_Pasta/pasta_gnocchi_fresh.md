@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,12 +56,19 @@ sci:
 carbs_total_g: 34.0
 edeka: 2.00
 en: "Potato Gnocchi"
-unit_price: 2.00
 cooking_time: "Very short (2-3 min)"
 label: "Gnocchi (Frisch/Kühlregal)"
 de: "Gnocchi"
 lidl: 2.00
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

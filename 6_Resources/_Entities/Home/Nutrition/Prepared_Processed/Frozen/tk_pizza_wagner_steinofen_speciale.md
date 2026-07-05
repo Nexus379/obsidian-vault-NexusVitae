@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,7 +48,6 @@ sci:
 carbs_total_g: 25.0
 en: "Wagner Stone Oven Speciale"
 hi: "वैगनर स्टोन ओवन स्पेशल"
-unit_price: 4.00
 props: 
   - "Wagners Flaggschiff mit dem 'Steinofen-Versprechen'"
   - "Der Teig ist etwas rustikaler und weniger 'keksig' als bei Ristorante"
@@ -60,6 +58,14 @@ ru: "Вагнер Спечиале"
 de: "Wagner Steinofen Speciale"
 brand: "Wagner (Nestlé)"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

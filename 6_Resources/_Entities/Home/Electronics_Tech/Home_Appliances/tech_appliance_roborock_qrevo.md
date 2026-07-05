@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Roborock"
 core: "LiDAR"
 room: "living_room"
-unit_price: 650.00
 de: "Roborock Qrevo (Saugroboter)"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 650.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Amazon"
 vendors: []

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,13 +54,20 @@ carbs_total_g: 98.0
 latin: "Saccharum vanillatum (Bourbon)"
 en: "Bourbon Vanilla Sugar"
 hi: "बोर्बोन वेनिला शुगर"
-unit_price: 3.00
 props: 
   - "The highest quality tier under German food law"
   - "Must come from the 'Bourbon' islands (Madagascar, Comoros, Réunion)"
   - "Complex aroma profile with over 200 natural compounds"
 label: "Bourbon-Vanillezucker (Gemahlene Schote)"
 ru: "Ванильный сахар Бурбон"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

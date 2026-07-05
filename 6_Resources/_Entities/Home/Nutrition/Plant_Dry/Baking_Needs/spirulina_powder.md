@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rossmann"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ rossmann: 12.00
 iron_plant_mg: 28.5
 hi: "स्पिरुलिना पाउडर"
 reformhaus: 12.00
-unit_price: 12.00
 props: 
   - "Micro-algae superfood"
   - "Highest plant protein %"
@@ -67,6 +65,14 @@ denns: 12.00
 label: "Spirulina Powder"
 ru: "Спирулина (порошок)"
 de: "Spirulina Pulver"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: "rossmann"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

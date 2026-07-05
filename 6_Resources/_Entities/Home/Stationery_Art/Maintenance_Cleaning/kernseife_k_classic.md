@@ -30,7 +30,6 @@ icon: "🛒"
 label: "K-Classic Kernseife (Universal)"
 brand: "K-Classic"
 room: "studio"
-unit_price: 1.00
 locations: 
   - "kaufland"
   - "lidl"
@@ -41,6 +40,14 @@ props:
   - "Technologisch unschlagbar günstig für die Grundreinigung"
   - "Löst Fett und Farbpigmente mechanisch hervorragend"
   - "Pur und ohne Duftstoffe, schont die Pinselhaare"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

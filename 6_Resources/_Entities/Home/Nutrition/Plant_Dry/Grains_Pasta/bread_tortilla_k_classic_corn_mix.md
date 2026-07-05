@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 48.0
 en: "Kaufland Corn Wraps"
 hi: "के-क्लासिक मक्का टॉर्टिला"
-unit_price: 2.00
 props: 
   - "Kombiniert die Flexibilität von Weizen mit dem Geschmack von Mais"
   - "Technologisch stabiler als reine Mais-Tortillas"
@@ -60,6 +58,14 @@ ru: "Кукурузные тортильи Кауфланд"
 de: "Kaufland Mais Tortillas"
 color: "Yellow / Golden"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "butcher"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 iron_heme_mg: 4.5
 en: "Venison"
 hi: "हिरन का मांस"
-unit_price: 4.00
 props: 
   - "Higher iron and less fat than beef"
   - "Completely free of antibiotics and industrial feed"
@@ -64,6 +62,14 @@ label: "Venison (Deer)"
 ru: "Оленина"
 de: "Wildfleisch / Hirsch"
 purity: "Wild-foraged, Hormone-free"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "butcher"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

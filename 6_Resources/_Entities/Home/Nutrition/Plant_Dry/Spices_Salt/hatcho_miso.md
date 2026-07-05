@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 15.0
 latin: "Fermented Glycine max (No Grain)"
 en: "Hatcho Miso"
 hi: "हचो मिसो"
-unit_price: 10.00
 props: 
   - "The emperor of miso, fermented for up to 3 years"
   - "Intensely savory, almost chocolate-like earthy depth"
@@ -67,6 +65,14 @@ label: "Hatcho Miso (100% Soy)"
 ru: "Хатчо мисо"
 purity: "No rice or barley added"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

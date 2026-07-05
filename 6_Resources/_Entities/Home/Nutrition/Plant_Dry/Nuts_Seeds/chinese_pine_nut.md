@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
   - "#sci/Toxicology"
 en: "Chinese Pine Nut"
 hi: "à¤šà¥€à¤¨à¥€ à¤šà¤¿à¤²à¤—à¥‹à¤œà¤¾"
-unit_price: 3.00
 props: 
   - "Short, triangular kernels"
   - "May cause bitter metallic taste (dysgeusia)"
@@ -62,6 +60,14 @@ ru: "ÐšÐ¸Ñ‚Ð°Ð¹ÑÐºÐ¸Ð¹ ÐºÐµÐ´Ñ€Ð¾Ð²Ñ‹Ð¹ Ð
 de: "Chinesische Pinienkerne"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

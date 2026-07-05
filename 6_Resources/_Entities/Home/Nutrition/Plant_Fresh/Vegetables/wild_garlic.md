@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "weekly_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ en: "Wild Garlic"
 iron_plant_mg: 2.9
 allicin_mg: 150.0
 hi: "जंगली लहसुन"
-unit_price: 3.00
 props: 
   - "Intense natural garlic aroma without the long-lasting odor"
   - "Extremely high in Vitamin C and Magnesium"
@@ -68,6 +66,14 @@ denns: 3.00
 label: "Wild Garlic"
 ru: "Черемша"
 de: "Bärlauch"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "weekly_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

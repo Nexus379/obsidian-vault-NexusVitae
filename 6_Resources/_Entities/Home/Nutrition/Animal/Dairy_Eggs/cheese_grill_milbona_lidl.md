@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 1.8
 latin: "Caseus frictis lidlianus"
 en: "Milbona Grill Cheese"
 hi: "लिडल ग्रिल पनीर"
-unit_price: 3.00
 props: 
   - "Lidls preiswerte Antwort auf Gazi"
   - "Sehr stabile Proteinmatrix, hält die Form auf dem Grill perfekt"
@@ -64,6 +62,14 @@ label: "Milbona Grillkäse (Lidl)"
 ru: "Сыр для гриля Милбона"
 brand: "Milbona"
 lidl: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

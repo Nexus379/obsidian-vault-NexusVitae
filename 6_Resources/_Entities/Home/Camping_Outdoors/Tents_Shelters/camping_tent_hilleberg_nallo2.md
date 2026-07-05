@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 8.0
 brand: "Hilleberg"
-unit_price: 1050.00
 de: "Hilleberg Nallo 2 (4-Season)"
 locations: 
   - "outdoor_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1050.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ•ï¸ OUTDOOR SPECS ---
 pref_vendor: "Decathlon / Amazon"
 vendors: []

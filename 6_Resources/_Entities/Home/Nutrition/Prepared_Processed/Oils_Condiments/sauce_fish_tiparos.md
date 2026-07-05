@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ carbs_total_g: 1.5
 latin: "Liquamen (Tiparos)"
 en: "Fish Sauce"
 hi: "फिश सॉस"
-unit_price: 3.00
 props: 
   - "Pure Umami liquid made from salted and fermented anchovies"
   - "Extreme sodium content, used as a salt substitute"
@@ -68,6 +66,14 @@ brand: "Tiparos / Squid Brand"
 purity: "First press quality"
 rewe: 3.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

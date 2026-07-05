@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 11.0
 latin: "Potio excitans (Lidl Baccae)"
 en: "Kong Strong Wild Berry"
 caffeine_mg: 32.0
-unit_price: 1.00
 props: 
   - "Lidl's answer to colorful 'Blue' energy editions"
   - "Strong artificial berry aroma, deep blue color"
@@ -63,6 +61,14 @@ ru: "Конг Стронг Ягода"
 color: "Deep Blue/Neon"
 lidl: 1.00
 hi: "कोंग स्ट्रॉन्ग बेरी"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

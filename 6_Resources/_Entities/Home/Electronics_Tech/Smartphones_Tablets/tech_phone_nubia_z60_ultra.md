@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Nubia"
 core: "Snapdragon 8 Gen 3"
 room: "backpack"
-unit_price: 680.00
 de: "Nubia Z60 Ultra"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 680.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

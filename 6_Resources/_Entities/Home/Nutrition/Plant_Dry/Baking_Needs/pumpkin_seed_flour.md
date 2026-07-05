@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
 usage: "Green Baking"
 en: "Pumpkin Seed Flour"
 hi: "कद्दू के बीज का आटा"
-unit_price: 6.00
 props: 
   - "Intense green color"
   - "Massive protein content (55%)"
@@ -64,6 +62,14 @@ denns: 6.00
 label: "Pumpkin Seed Flour"
 ru: "Тыквенная мука"
 de: "Kürbiskernmehl"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

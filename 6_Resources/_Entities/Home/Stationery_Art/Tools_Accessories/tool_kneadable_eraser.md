@@ -30,12 +30,19 @@ icon: "🧶"
 label: "Knetradiergummi (Professional)"
 de: "Knetradierer"
 room: "studio"
-unit_price: 2.00
 en: "Kneadable Eraser"
 unit_type: "piece"
 props: 
   - "Technologisch wichtig zum 'Lupfen' von Pigmenten"
   - "Hinterlässt keine mechanischen Schäden an der Papierfaser"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

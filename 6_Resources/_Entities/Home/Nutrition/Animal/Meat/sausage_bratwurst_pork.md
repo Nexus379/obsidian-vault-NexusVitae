@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -62,7 +61,6 @@ casing: "Natural pork casing (Naturdarm)"
 latin: "Farcimen assum (Sus scrofa)"
 en: "Bratwurst (Coarse Pork)"
 hi: "ब्रैटवर्स्ट"
-unit_price: 5.00
 props: 
   - "The absolute standard German BBQ sausage"
   - "High fat content ensures juiciness over open charcoal"
@@ -72,6 +70,14 @@ ru: "Братвурст (крупной рубки)"
 lidl: 5.00
 rewe: 5.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

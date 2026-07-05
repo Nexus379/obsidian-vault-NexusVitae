@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 10.4
 latin: "Potio excitans (Kauflandia Cola)"
 en: "Crazy Wolf Cola"
 caffeine_mg: 30.0
-unit_price: 1.00
 props: 
   - "Hybrid between traditional cola and an energy drink"
   - "Darker color, caramel notes mixed with taurine bite"
@@ -64,6 +62,14 @@ label: "Crazy Wolf Cola-Energy"
 ru: "Крейзи Вульф Кола"
 brand: "Crazy Wolf"
 hi: "क्रेज़ी वुल्फ कोला"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

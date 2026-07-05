@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ edeka: 3.00
 latin: "Solanum conditum (Werder)"
 en: "Werder Tomato Ketchup"
 hi: "वरदेर केचप"
-unit_price: 3.00
 props: 
   - "The cult ketchup of East Germany"
   - "Known for a much milder acidity and a more pronounced natural tomato flavor than Heinz"
@@ -67,6 +65,14 @@ ru: "Кетчуп Вердер"
 tomato_intensity: "Fruitier / Less Vinegar"
 brand: "Werder"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

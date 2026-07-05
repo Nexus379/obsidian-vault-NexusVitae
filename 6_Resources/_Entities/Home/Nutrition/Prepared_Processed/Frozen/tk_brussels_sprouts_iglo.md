@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,13 +54,20 @@ carbs_total_g: 3.5
 latin: "Brassica oleracea gemmifera"
 en: "Brussels Sprouts"
 hi: "ब्रसेल्स स्प्राउट्स"
-unit_price: 3.00
 props: 
   - "Der Winter-Klassiker technologisch perfekt schockgefrostet"
   - "Verliert durch Frost einen Teil der Bitterstoffe (wird süßer)"
   - "Extrem hoher Gehalt an Vitamin C (mehr als Orangen!)"
 label: "Iglo Rosenkohl"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

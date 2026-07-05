@@ -644,6 +644,30 @@
           "templateFile": "zData/3snippets/NexusFreezerWeekly.md"
         }
       ]
+    },
+    {
+      "id": "generate-shopping-list",
+      "label": "🛒 Generate List (Manual)",
+      "icon": "shopping-cart",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/generate-grocery-list.md"
+        }
+      ]
+    },
+    {
+      "id": "generate-workout-log",
+      "label": "🏋️‍♂️ Generate Workout Log (Manual)",
+      "icon": "dumbbell",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/generate-workout-log.md"
+        }
+      ]
     }
   ],
   "excludedFolders": [

@@ -42,11 +42,18 @@ latin: "Surfactantus lidlianus"
 brand: "W5"
 room: "kitchen"
 icon: "🛒"
-unit_price: 1.00
 de: "Lidl W5 Spülmittel"
 locations: 
   - "lidl"
 fragrance: "Lemon / Aloe Vera"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 19.0
 latin: "Vinegar / Molasses / Anchovy blend"
 en: "Worcestershire Sauce"
 hi: "वॉर्सेस्टरशायर सॉस"
-unit_price: 3.00
 props: 
   - "Complex fermented liquid condiment"
   - "Essential for Bloody Marys and Caesar Salad"
@@ -69,6 +67,14 @@ ru: "Вустерширский соус"
 lidl: 3.00
 rewe: 3.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

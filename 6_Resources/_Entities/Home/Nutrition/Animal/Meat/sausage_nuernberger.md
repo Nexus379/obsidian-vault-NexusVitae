@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,13 +60,20 @@ sci:
 latin: "Farcimen norimbergense"
 en: "Nuremberg Sausage"
 hi: "नूर्नबर्ग सॉसेज"
-unit_price: 4.00
 marjoram_extract_mg: 5.0
 flavor_profile: "Heavy Marjoram"
 label: "Nürnberger Rostbratwurst"
 ru: "Нюрнбергские колбаски"
 lidl: 4.00
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

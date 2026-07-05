@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 72.0
 latin: "Hypercaloricum mammutium"
 en: "Mammut Weight Gainer"
 hi: "मैमथ वेट गेनर"
-unit_price: 35.00
 props: 
   - "Die Geheimwaffe für Hardgainer (Menschen, die schwer zunehmen)"
   - "Massive Kohlenhydrat-Matrix für den Kalorienüberschuss"
@@ -63,6 +61,14 @@ label: "Mammut Weight Gainer Crash 5000"
 ru: "Гейнер Маммут"
 carb_source: "Maltodextrin / Dextrose / Oat flour"
 brand: "Mammut Nutrition"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 35.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

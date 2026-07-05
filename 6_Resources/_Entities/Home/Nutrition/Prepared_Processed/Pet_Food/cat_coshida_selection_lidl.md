@@ -39,10 +39,17 @@ meat_content: "approx. 60%"
 test_result: "Very Good"
 brand: "Coshida"
 room: "pantry"
-unit_price: 6.00
 de: "Coshida Selection"
 locations: 
   - "lidl"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -30,7 +30,6 @@ de: "Purina ONE Adult"
 label: "Purina ONE Adult"
 brand: "Purina"
 room: "pantry"
-unit_price: 5.00
 protein_source: "Chicken/Salmon"
 en: "Purina ONE Dry Food"
 unit_type: "piece"
@@ -40,6 +39,14 @@ locations:
 props: 
   - "Technologisch führend bei der Darmgesundheit"
   - "Hoher Proteinanteil für Wohnungskatzen"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

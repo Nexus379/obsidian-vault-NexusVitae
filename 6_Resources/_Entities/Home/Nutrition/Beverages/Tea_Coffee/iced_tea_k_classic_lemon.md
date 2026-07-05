@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,13 +55,20 @@ carbs_total_g: 7.0
 latin: "Thea frigida (K-Classic Limon)"
 en: "K-Classic Lemon Tea"
 hi: "के-क्लासिक लेमन टी"
-unit_price: 1.00
 props: 
   - "Kaufland's budget response to Lipton Lemon"
   - "High acidity, very sweet"
   - "Usually extract-based"
 label: "K-Classic Eistee Zitrone (Kaufland)"
 ru: "K-Classic Чай Лимон"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

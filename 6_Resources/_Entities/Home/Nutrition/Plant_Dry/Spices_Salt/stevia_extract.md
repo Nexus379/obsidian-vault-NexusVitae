@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ glycemic_index: 0.0
 en: "Stevia Extract"
 hi: "स्टेविया एक्सट्रैक्ट"
 steviol_glycosides_mg: 300.0
-unit_price: 6.00
 props: 
   - "200-300x sweeter than table sugar"
   - "Completely stable at high baking temperatures"
@@ -70,6 +68,14 @@ label: "Stevia Extract (Powder/Liquid)"
 ru: "Экстракт стевии"
 dm: 6.00
 rewe: 6.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,13 +51,20 @@ fr: "Talisker 10"
 ja: "タリスカー 10年"
 kcal: 250
 fa: "تالیسکر ۱۰"
-unit_price: 45.00
 de: "Talisker 10"
 locations: 
   - "rewe"
   - "edeka"
   - "kaufland"
 hi: "टालिस्कर 10"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 45.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

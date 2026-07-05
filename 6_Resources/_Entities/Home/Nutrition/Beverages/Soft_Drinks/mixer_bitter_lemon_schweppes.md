@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,13 +55,20 @@ carbs_total_g: 12.6
 latin: "Potio carbonata amara (Limon)"
 en: "Schweppes Bitter Lemon"
 hi: "श्वेप्स बिटर लेमन"
-unit_price: 3.00
 props: 
   - "Cloudy lemon drink with added quinine"
   - "Significantly higher sugar content to balance the extreme sour/bitter mix"
   - "Classic mixer for Vodka"
 label: "Schweppes Original Bitter Lemon"
 ru: "Швепс Биттер Лемон"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

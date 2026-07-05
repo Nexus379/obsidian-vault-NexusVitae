@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "farm_shop"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 iron_heme_mg: 3.5
 en: "Ostrich Egg"
 hi: "शुतुरमुर्ग का अंडा"
-unit_price: 30.00
 props: 
   - "The largest bird egg in existence"
   - "Thick shell requires power tools to open"
@@ -62,6 +60,14 @@ label: "Ostrich Egg"
 ru: "Страусиное яйцо"
 de: "Straußenei"
 delicatessen: 30.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 30.00
+vendor_value: "farm_shop"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

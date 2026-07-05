@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,13 +49,20 @@ fr: "Tanqueray London Dry"
 ja: "タンカレー ロンドンドライ"
 label: "Tanqueray London Dry Gin"
 fa: "جین تنکره"
-unit_price: 25.00
 de: "Tanqueray London Dry"
 locations: 
   - "rewe"
   - "edeka"
   - "kaufland"
 hi: "टैन्केरे लंदन ड्राई"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 25.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

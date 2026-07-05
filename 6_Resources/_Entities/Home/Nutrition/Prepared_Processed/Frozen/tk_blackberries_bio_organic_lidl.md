@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 6.2
 latin: "Rubus fruticosus (Bio)"
 en: "Organic Blackberries"
 hi: "जैविक ब्लैकबेरी"
-unit_price: 4.00
 props: 
   - "Besonders ballaststoffreich durch die vielen kleinen Kerne"
   - "Enthalten signifikante Mengen an Eisen und Magnesium"
@@ -62,6 +60,14 @@ origin: "Controlled Organic"
 ru: "Био ежевика"
 brand: "Bio Organic"
 lidl: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

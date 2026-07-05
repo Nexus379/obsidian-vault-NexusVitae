@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere_online"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
 carbs_total_g: 0.0
 en: "Mammut Creatine"
 hi: "मैमथ क्रिएटिन"
-unit_price: 15.00
 props: 
   - "Erhöht die körperliche Leistung bei Schnellkrafttraining"
   - "Geschmacksneutral und perfekt mischbar in Shakes"
@@ -63,6 +61,14 @@ de: "Mammut Creatin"
 creatine_per_serving_mg: 3000.0
 brand: "Mammut Nutrition"
 purity: "Ultra-fine Powder"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "everywhere_online"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

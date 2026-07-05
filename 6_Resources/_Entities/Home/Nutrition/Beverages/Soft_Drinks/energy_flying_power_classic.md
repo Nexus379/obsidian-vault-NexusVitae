@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "aldi_nord"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 11.0
 latin: "Potio excitans (Aldia)"
 en: "Flying Power"
 caffeine_mg: 32.0
-unit_price: 1.00
 props: 
   - "Traditional Aldi energy brand"
   - "Classic Red Bull clone profile"
@@ -65,6 +63,14 @@ label: "Flying Power (Aldi)"
 ru: "Флайинг Пауэр"
 brand: "Flying Power"
 hi: "फ्लाइंग पावर"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "aldi_nord"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

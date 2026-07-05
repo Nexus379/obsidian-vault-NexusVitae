@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "gourmet_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ specialty_butcher: 30.00
 gourmet_market: 30.00
 en: "Wagyu / Kobe Beef"
 hi: "कोबे बीफ"
-unit_price: 30.00
 props: 
   - "Highest marbling of any beef in the world"
   - "Fat has a lower melting point than human body temperature"
@@ -62,6 +60,14 @@ props:
 label: "Wagyu / Kobe Beef (A5)"
 ru: "Вагю / Кобе"
 de: "Wagyu / Kobe Rind"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 30.00
+vendor_value: "gourmet_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "weekly_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 rutin_mg: 150.0
 en: "Rue"
 hi: "रू"
-unit_price: 2.00
 props: 
   - "Source of Rutin (vascular health)"
   - "Strong bitter taste"
@@ -62,6 +60,14 @@ props:
 label: "Rue"
 ru: "Рута"
 de: "Weinraute"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "weekly_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

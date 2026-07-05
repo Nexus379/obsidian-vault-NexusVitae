@@ -43,10 +43,17 @@ latin: "Natriumcarbonat"
 brand: "Denkmit"
 room: "kitchen"
 icon: "🧼"
-unit_price: 2.00
 de: "dm Denkmit Reine Soda"
 locations: 
   - "dm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 en: "Foxtail Millet"
 iron_plant_mg: 2.8
 hi: "कंगनी"
-unit_price: 2.00
 benefit: "Low Glycemic Index"
 props: 
   - "Ancient staple in China and India"
@@ -63,6 +61,14 @@ denns: 2.00
 label: "Foxtail Millet"
 ru: "Чумиза"
 de: "Kolbenhirse"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

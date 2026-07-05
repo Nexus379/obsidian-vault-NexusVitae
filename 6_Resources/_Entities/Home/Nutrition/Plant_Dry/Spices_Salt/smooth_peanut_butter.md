@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 20.0
 latin: "Arachis hypogaea paste"
 en: "Smooth Peanut Butter"
 hi: "चिकना पीनट बटर"
-unit_price: 4.00
 props: 
   - "Standard staple for sandwiches and Asian peanut sauces"
   - "High satiety factor"
@@ -70,6 +68,14 @@ ru: "Арахисовая паста (однородная)"
 dm: 4.00
 purity: "100% Peanuts (No added oil/sugar)"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

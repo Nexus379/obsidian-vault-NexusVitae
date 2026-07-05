@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ latin: "Carnis concisae veru (Adana)"
 specialty_butcher: 8.00
 en: "Adana Kebab Skewer"
 hi: "अडाना कबाब"
-unit_price: 8.00
 props: 
   - "Breiter, flacher Hackfleischspieß (oft Rind/Lamm-Mix)"
   - "Erhält seine Saftigkeit durch gehacktes Lamm-Schwanzfett"
@@ -68,6 +66,14 @@ label: "Adana Kebab (Grillspieß)"
 ru: "Адана Кебаб"
 fat_source: "Often contains lamb tail fat (Kuyruk yağı)"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ latin: "Aqua mineralis (Schwarzwald)"
 fiber_g: 0.0
 en: "Black Forest Still"
 hi: "ब्लैक फॉरेस्ट स्टिल"
-unit_price: 1.00
 props: 
   - "One of the softest mineral waters in Germany"
   - "Highly recommended for preparing baby food due to minimal sodium"
@@ -70,6 +68,14 @@ ru: "Блэк Форест Стиль"
 dm: 1.00
 rewe: 1.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

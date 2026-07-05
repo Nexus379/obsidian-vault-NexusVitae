@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ latin: "Fermented Glycine max (No Wheat)"
 en: "Tamari"
 gluten_status: "100% Gluten-Free"
 hi: "तामरी"
-unit_price: 6.00
 props: 
   - "By-product of miso production"
   - "Darker and richer flavor than Shoyu"
@@ -69,6 +67,14 @@ denns: 6.00
 label: "Tamari (Gluten-Free Soy Sauce)"
 ru: "Тамари"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

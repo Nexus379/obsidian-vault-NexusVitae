@@ -31,7 +31,6 @@ icon: "ðŸ§´"
 label: "Speick Natural Seife"
 brand: "Speick"
 room: "bathroom"
-unit_price: 3.00
 locations: 
   - "budni"
   - "dm"
@@ -40,6 +39,14 @@ unit_type: "piece"
 pl_score: 9.0
 props:
   - "Ofuro / Entspannung (Premium)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ§´ MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

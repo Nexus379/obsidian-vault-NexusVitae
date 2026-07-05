@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 54.0
 latin: "Socolata cum bisctoctum"
 en: "Ritter Sport Butter Biscuit"
 hi: "रिट्टर स्पोर्ट बटर बिस्किट"
-unit_price: 2.00
 props: 
   - "Ein quadratischer Butterkeks, der exakt in die Schokoladenhülle passt"
   - "Technologisch optimiert, um auch bei unterschiedlichen Temperaturen knusprig zu bleiben"
@@ -62,6 +60,14 @@ props:
 label: "Ritter Sport Knusperkeks"
 ru: "Риттер Спорт Печенье"
 brand: "Ritter Sport"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

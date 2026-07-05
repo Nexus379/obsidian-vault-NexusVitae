@@ -40,10 +40,17 @@ pl_score: 7.0
 brand: "SC Johnson / WC-Ente"
 room: "bathroom"
 duration: "Up to 700 flushes"
-unit_price: 4.00
 de: "WC-Ente Siegel"
 locations: 
   - "everywhere"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

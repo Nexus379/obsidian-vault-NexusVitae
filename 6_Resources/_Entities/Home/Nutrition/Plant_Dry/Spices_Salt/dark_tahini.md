@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ latin: "Sesamum indicum paste"
 en: "Tahini (Dark)"
 hi: "डार्क ताहिनी"
 reformhaus: 6.00
-unit_price: 6.00
 benefit: "Massive Plant Calcium"
 props: 
   - "Made from whole, unhulled sesame seeds"
@@ -69,6 +67,14 @@ process: "Unhulled seeds"
 label: "Tahini (Dark/Unhulled)"
 ru: "Тахини (тёмная)"
 denns: 6.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

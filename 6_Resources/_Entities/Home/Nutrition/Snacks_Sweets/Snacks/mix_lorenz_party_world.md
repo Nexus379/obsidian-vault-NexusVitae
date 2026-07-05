@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 65.0
 latin: "Varietas salis (Lorenz)"
 en: "Party Mix / Savory Mix"
 hi: "नमकीन मिक्स"
-unit_price: 3.00
 props: 
   - "Bunte Mischung aus verschiedenen Laugen- und Mürbegebäckformen"
   - "Enthält teilweise Käse- oder Sesam-Elemente"
@@ -60,6 +58,14 @@ props:
 label: "Lorenz Party World (Mischung)"
 ru: "Снэк-микс"
 brand: "Lorenz"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

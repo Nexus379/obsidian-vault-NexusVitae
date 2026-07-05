@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ carbs_total_g: 68.0
 edeka: 3.00
 latin: "Triticum spelta"
 en: "Spelt Pasta"
-unit_price: 3.00
 props: 
   - "Dinkel ist ein Urkorn und oft verträglicher als hochgezüchteter moderner Weizen"
   - "Reich an Kieselsäure (gut für Haut/Haare)"
@@ -65,6 +63,14 @@ label: "Dinkel Spirelli (Type 630/Vollkorn)"
 ru: "Макароны из полбы"
 dm: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

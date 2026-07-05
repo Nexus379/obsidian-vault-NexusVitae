@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 en: "Pea Protein Isolate"
 iron_plant_mg: 25.0
 hi: "मटर प्रोटीन"
-unit_price: 15.00
 benefit: "Hypoallergenic Muscle Building"
 props: 
   - "Rich in Arginine and Lysine"
@@ -68,6 +66,14 @@ label: "Pea Protein Isolate"
 ru: "Изолят горохового белка"
 de: "Erbsenprotein Isolat"
 dm: 15.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

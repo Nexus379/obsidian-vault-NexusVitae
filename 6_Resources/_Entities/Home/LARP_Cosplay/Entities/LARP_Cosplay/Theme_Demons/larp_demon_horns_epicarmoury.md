@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 10.0
 brand: "Epic Armoury"
-unit_price: 25.00
 de: "Epic Armoury DÃ¤monenhÃ¶rner"
 locations: 
   - "hobby_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 25.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ§â€â™€ï¸ LARP SPECS ---
 store_online: "epicarmoury.com"
 store_local: "Elbenwald"

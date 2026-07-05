@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -63,7 +62,6 @@ digestive_status: "High Bitter Principle (Intybin)"
 vit_b9_mcg: 142.0
 en: "Endive"
 hi: "कासनी"
-unit_price: 2.00
 props: 
   - "Stimulates appetite and digestion"
   - "Robust winter salad"
@@ -75,6 +73,14 @@ de: "Endivie"
 intybin_mg: 10.0
 lidl: 2.00
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

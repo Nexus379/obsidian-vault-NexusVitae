@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 7.0
 brand: "Etsy (Various)"
-unit_price: 150.00
 de: "Riesige EngelsflÃ¼gel"
 locations: 
   - "hobby_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 150.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ§â€â™€ï¸ LARP SPECS ---
 store_online: "etsy.com"
 store_local: "Cosplay Makers"

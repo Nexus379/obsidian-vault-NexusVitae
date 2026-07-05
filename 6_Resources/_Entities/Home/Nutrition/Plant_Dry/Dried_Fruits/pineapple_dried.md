@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,7 +48,6 @@ sci:
   - "#sci/Enzymology"
 en: "Dried Pineapple"
 hi: "à¤¸à¥‚à¤–à¤¾ à¤…à¤¨à¤¾à¤¨à¤¾à¤¸"
-unit_price: 4.00
 props: 
   - "Very high in manganese for bone health"
   - "Intense sweet-tart balance"
@@ -61,6 +59,14 @@ de: "Ananas (getrocknet)"
 manganese_mg: 1.5
 dm: 4.00
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

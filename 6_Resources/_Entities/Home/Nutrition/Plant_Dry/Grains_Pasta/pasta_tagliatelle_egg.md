@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ edeka: 3.00
 latin: "Triticum durum et ovum"
 en: "Egg Tagliatelle"
 hi: "एग टैगलीटेल"
-unit_price: 3.00
 ar: "تاجلياتيل بالبيض"
 props: 
   - "Klassische Bandnudeln, oft in Nestern getrocknet"
@@ -69,6 +67,14 @@ props:
 label: "Tagliatelle / Bandnudeln (Mit Ei)"
 ru: "Тальятелле яичные"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

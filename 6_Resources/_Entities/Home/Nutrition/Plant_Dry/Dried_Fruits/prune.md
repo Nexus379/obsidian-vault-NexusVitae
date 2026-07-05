@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ vit_k_mcg: 59.5
 sorbitol_g: 14.7
 en: "Prune"
 hi: "à¤¸à¥‚à¤–à¤¾ à¤¬à¥‡à¤°"
-unit_price: 3.00
 benefit: "Bone Density & Digestion"
 props: 
   - "Standard remedy for constipation (Sorbitol + Fiber)"
@@ -65,6 +63,14 @@ ru: "Ð§ÐµÑ€Ð½Ð¾ÑÐ»Ð¸Ð²"
 de: "Pflaume (getrocknet) / Backpflaume"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

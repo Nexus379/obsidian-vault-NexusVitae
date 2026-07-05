@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 88.0
 latin: "Manihot esculenta (Granula)"
 en: "Tapioca Pearls"
 hi: "साबूदाना"
-unit_price: 2.00
 props: 
   - "Spheres made from cassava starch"
   - "Turn translucent and chewy when boiled"
@@ -68,6 +66,14 @@ props:
 label: "Tapioca Pearls (Sago substitute)"
 ru: "Шарики тапиоки"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

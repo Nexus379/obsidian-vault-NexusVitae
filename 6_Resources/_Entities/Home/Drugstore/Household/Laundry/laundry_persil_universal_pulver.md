@@ -44,10 +44,17 @@ latin: "Detergens universalis premium"
 bleach: "Oxygen-based"
 brand: "Henkel / Persil"
 room: "laundry"
-unit_price: 15.00
 de: "Persil Universal"
 locations: 
   - "everywhere"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

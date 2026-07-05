@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -62,7 +61,6 @@ latin: "Cannabis sativa"
 gla_g: 3.0
 en: "Hemp Oil"
 hi: "भांग के बीज का तेल"
-unit_price: 8.00
 omega3_ala_g: 17.0
 props: 
   - "Contains rare Gamma-Linolenic Acid (GLA) great for skin health"
@@ -73,6 +71,14 @@ label: "Hemp Seed Oil"
 ru: "Конопляное масло"
 thc_cbd: "Zero"
 dm: 8.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

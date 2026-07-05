@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 beta_carotene_mcg: 8300.0
 en: "Carrot"
 hi: "गाजर"
-unit_price: 1.00
 benefit: "Eye health (Vitamin A precursor)"
 props: 
   - "Highest beta-carotene source"
@@ -69,6 +67,14 @@ ru: "Морковь"
 de: "Karotte (Orange)"
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

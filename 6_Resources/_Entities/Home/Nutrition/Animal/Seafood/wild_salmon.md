@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
 edeka: 5.00
 en: "Wild Salmon"
 hi: "जंगली सैल्मन"
-unit_price: 5.00
 benefit: "Brain & Heart Health (DHA/EPA)"
 props: 
   - "Rich in astaxanthin (powerful antioxidant)"
@@ -70,6 +68,14 @@ de: "Wildlachs"
 fish_market: 5.00
 es: "Salmón salvaje"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

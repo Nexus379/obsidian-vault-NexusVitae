@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,12 +54,19 @@ carbs_total_g: 9.8
 latin: "Fructus tritus viridis (Kauflandia)"
 en: "K-to-go Apple Mint Smoothie"
 hi: "के-टू-गो एप्पल मिंट स्मूदी"
-unit_price: 2.00
 props: 
   - "Unique refreshing profile with a hint of mint"
 flavor_profile: "Minty / Refreshing"
 label: "K-to-go Smoothie Apfel-Minze (Kaufland)"
 ru: "K-to-go Яблоко-мята смузи"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -25,7 +25,6 @@ state: "storage"
 needs_refill: false
 shelf_life_months: 24
 # en: "dm Dishwasher Tabs"
-unit_price: 5.00
 silver_protection: "Active"
 unit_type: "piece"
 icon: "🧼"
@@ -46,6 +45,14 @@ de: "dm Denkmit Tabs"
 locations: 
   - "dm"
 cleaning_power: "9/10"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

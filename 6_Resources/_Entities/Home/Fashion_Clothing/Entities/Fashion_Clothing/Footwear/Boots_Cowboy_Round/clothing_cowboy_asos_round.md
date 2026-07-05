@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 6.0
 brand: "ASOS Design"
-unit_price: 60.00
 de: "ASOS Design Roper (Runde Kappe)"
 locations: 
   - "fashion_boutique"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 60.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ‘• WARDROBE SPECS ---
 pref_vendor: "Online / Brand Store"
 vendors: []

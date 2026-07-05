@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 54.0
 latin: "Globuli casei kauflandii"
 en: "Chili Cheese Nuggets Snack"
 hi: "मिर्च पनीर नगेट्स स्नैक"
-unit_price: 1.50
 props: 
   - "Extrudierter Mais-Snack mit Käse-Chili-Füllung oder -Aroma"
   - "Kauflands Antwort auf den Fast-Food-Trend"
@@ -61,6 +59,14 @@ props:
 label: "K-Classic Chili Cheese Nuggets (Snack)"
 ru: "Чили-чиз наггетсы (закуска)"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

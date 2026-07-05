@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 26.0
 latin: "Pizza texana mexicana"
 en: "Tex-Mex Pizza"
 hi: "टेक्स-मेक्स पिज्जा"
-unit_price: 3.00
 props: 
   - "Der Inbegriff der Crossover-Pizza"
   - "Technologisch ausgewogene Feuchtigkeit durch das Gemüse"
@@ -61,6 +59,14 @@ label: "REWE Beste Wahl Pizza Tex-Mex"
 ru: "Пицца Текс-Мекс"
 brand: "REWE Beste Wahl"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

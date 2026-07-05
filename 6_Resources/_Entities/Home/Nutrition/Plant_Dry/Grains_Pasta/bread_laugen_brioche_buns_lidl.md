@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ latin: "Panis briochius lixivius"
 en: "Pretzel Brioche Buns"
 dough: "Enriched with eggs and butter"
 hi: "प्रेट्ज़ेल ब्रियोच बन्स"
-unit_price: 3.00
 props: 
   - "Die technologische Krönung für Gourmet-Burger"
   - "Kombiniert die Süße von Brioche mit der herzhaften Kruste von Laugengebäck"
@@ -62,6 +60,14 @@ label: "Laugen-Brioche Burger Buns (Lidl)"
 ru: "Булочки Бриошь Лауген"
 brand: "McEnnandy / Trattoria Alfredo"
 lidl: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

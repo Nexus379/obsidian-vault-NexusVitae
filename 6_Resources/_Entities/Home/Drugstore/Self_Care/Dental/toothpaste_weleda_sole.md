@@ -40,12 +40,19 @@ pl_score: 8.5
 cleaning_agent: "Salt (Sodium Bicarbonate)"
 brand: "Weleda"
 room: "bathroom"
-unit_price: 6.00
 de: "Weleda Sole"
 locations: 
   - "budni"
   - "dm"
   - "pharmacy"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

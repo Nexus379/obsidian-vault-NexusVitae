@@ -39,11 +39,18 @@ magnesium_mg: 400.0
 latin: "Magnesium citricum"
 brand: "Mivolis/WellMix"
 kcal: 5
-unit_price: 8.00
 vegan: true
 locations: 
   - "dm"
   - "rossmann"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

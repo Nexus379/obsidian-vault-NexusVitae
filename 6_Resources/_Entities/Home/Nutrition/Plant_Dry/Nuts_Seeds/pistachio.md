@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
   - "#sci/Phytochemistry"
 en: "Pistachio"
 hi: "à¤ªà¤¿à¤¸à¥à¤¤à¤¾"
-unit_price: 4.00
 benefit: "Eye health & Sleep"
 props: 
   - "Green color from chlorophyll and lutein"
@@ -67,6 +65,14 @@ de: "Pistazie"
 lutein_zeaxanthin_mcg: 2903.0
 lidl: 4.00
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

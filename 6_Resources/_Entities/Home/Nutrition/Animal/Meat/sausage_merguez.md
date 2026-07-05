@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 1.0
 latin: "Farcimen picante (Ovis/Bos)"
 en: "Merguez"
 hi: "मर्गेज़"
-unit_price: 6.00
 props: 
   - "Maghrebi origin, heavily spiced with harissa, cumin, and fennel"
   - "Strictly made from beef and/or lamb (Halal compatible)"
@@ -69,6 +67,14 @@ label: "Merguez"
 ru: "Мергез"
 rewe: 6.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

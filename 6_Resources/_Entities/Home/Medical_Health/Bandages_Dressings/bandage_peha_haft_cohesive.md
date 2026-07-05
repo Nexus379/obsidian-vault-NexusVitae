@@ -32,7 +32,6 @@ icon: "🩹"
 label: "Peha-haft (Selbsthaftende Fixierbinde)"
 brand: "Hartmann"
 room: "backpack"
-unit_price: 3.50
 locations: 
   - "praxisdienst"
   - "apotheke"
@@ -45,6 +44,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.50
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🩹  N20260703153602   Peha-haft (Selbsthaftende Fixierbinde)

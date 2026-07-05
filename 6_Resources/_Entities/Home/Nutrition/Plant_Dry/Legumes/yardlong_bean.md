@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
   - "#sci/Botany"
 en: "Yardlong Bean"
 hi: "बरबटी"
-unit_price: 2.00
 props: 
   - "Can grow up to a meter long"
   - "Essential for Thai Som Tum"
@@ -62,6 +60,14 @@ props:
 label: "Yardlong Bean"
 ru: "Спаржевая фасоль вигна"
 de: "Schlangenbohne, Spargelbohne"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

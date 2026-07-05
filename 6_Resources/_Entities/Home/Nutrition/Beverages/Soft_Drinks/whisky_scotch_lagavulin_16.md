@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ latin: "Aqua vitae (Islaia Regalis)"
 specialist: 90.00
 en: "Lagavulin 16"
 hi: "लागावलिन 16"
-unit_price: 90.00
 props: 
   - "The 'King of Islay' - legendary for its intense, dried-fruit peat smoke"
   - "Slowest distillation process in Scotland, allowing maximum copper contact"
@@ -63,6 +61,14 @@ ru: "Лагавулин 16"
 aging_years: 16
 vol_pct: 43.0
 rewe: 90.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 90.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

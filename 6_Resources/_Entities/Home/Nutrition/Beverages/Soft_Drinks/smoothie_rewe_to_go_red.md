@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,12 +54,19 @@ carbs_total_g: 11.5
 latin: "Fructus tritus ruber (REWE)"
 en: "REWE to go Red Smoothie"
 hi: "रीवे लाल स्मूदी"
-unit_price: 2.00
 props: 
   - "Classic, very sweet strawberry-banana mix"
 label: "REWE to go Smoothie Erdbeer-Banane"
 ru: "Красный смузи REWE"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

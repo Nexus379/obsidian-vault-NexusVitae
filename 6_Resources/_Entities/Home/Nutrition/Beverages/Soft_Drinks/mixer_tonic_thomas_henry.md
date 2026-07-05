@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ edeka: 2.00
 latin: "Potio carbonata amara (Thomas Henry)"
 en: "Thomas Henry Tonic"
 hi: "थॉमस हेनरी टॉनिक"
-unit_price: 2.00
 props: 
   - "Berlin-based premium mixer brand"
   - "Slightly higher quinine content for a more pronounced, dry bitterness"
@@ -68,6 +66,14 @@ props:
 bars: 2.00
 label: "Thomas Henry Tonic Water"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

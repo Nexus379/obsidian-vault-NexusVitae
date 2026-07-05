@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "penny"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,7 +48,6 @@ sci:
 carbs_total_g: 27.0
 en: "Penny Mini Pizzas"
 hi: "पेनी मिनी पिज्जा"
-unit_price: 3.00
 props: 
   - "Pennys Antwort auf den Picolini-Hype"
   - "Oft in Sorten wie Salami oder Margherita erhältlich"
@@ -60,6 +58,14 @@ de: "Penny Mini-Pizzen"
 topping_density: "High for the size"
 brand: "San Fabio"
 penny: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "penny"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -31,7 +31,6 @@ icon: "🍃"
 label: "Alverde Zahncreme Bio-Minze (Fluoridfrei)"
 brand: "Alverde"
 room: "bathroom"
-unit_price: 2.00
 locations: 
   - "budni"
   - "dm"
@@ -42,6 +41,14 @@ props:
   - "Für Anhänger der 100% fluoridfreien Philosophie"
   - "Reinigt technologisch durch Kieselsäure-Putzkörper ($Silica$)"
   - "Setzt auf Kräuterextrakte zur Zahnfleischstärkung"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

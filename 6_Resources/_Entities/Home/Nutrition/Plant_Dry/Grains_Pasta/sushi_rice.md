@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 77.0
 latin: "Oryza sativa japonica"
 en: "Sushi Rice"
 hi: "सुशी चावल"
-unit_price: 1.00
 props: 
   - "Specially cultivated for its ability to cling together"
   - "Must be washed thoroughly to control surface starch"
@@ -68,6 +66,14 @@ label: "Sushi Rice (Short Grain)"
 ru: "Рис для суши"
 dm: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

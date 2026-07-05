@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "alnatura"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ edeka: 5.00
 latin: "Vaccinium myrtillus (Frozen)"
 en: "Organic Blueberries (Frozen)"
 hi: "जैविक फ्रोजन ब्लूबेरी"
-unit_price: 5.00
 anthocyanins_mg: 300.0
 props: 
   - "Wildwuchs-Qualität oder kontrollierter Bio-Anbau"
@@ -68,6 +66,14 @@ origin: "EU-Agriculture (Organic)"
 ru: "Био черника замороженная"
 brand: "Alnatura"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "alnatura"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

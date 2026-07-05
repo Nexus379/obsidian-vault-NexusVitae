@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "LG"
 core: "Nano-IPS Panel"
 room: "studio"
-unit_price: 1000.00
 de: "LG 49WQ95C-W 49 Zoll"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1000.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

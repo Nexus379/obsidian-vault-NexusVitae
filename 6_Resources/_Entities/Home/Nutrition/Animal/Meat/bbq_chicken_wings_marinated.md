@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ carbs_total_g: 2.0
 latin: "Gallus gallus (Ala marinata)"
 en: "Marinated Chicken Wings"
 hi: "मैरिनेटेड चिकन विंग्स"
-unit_price: 8.00
 props: 
   - "High skin-to-meat ratio makes them incredibly crispy on the open grill"
   - "Often sold in split 'flats' and 'drumettes'"
@@ -72,6 +70,14 @@ marinade: "BBQ/Paprika or Buffalo"
 lidl: 8.00
 rewe: 8.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

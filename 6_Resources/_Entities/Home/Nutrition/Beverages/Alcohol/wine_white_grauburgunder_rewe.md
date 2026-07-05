@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,11 +49,18 @@ fr: "Pinot Gris REWE"
 ja: "REWE グラウブルグンダー"
 kcal: 75
 fa: "پینو گری ریوه"
-unit_price: 6.00
 de: "REWE Grauburgunder"
 locations: 
   - "rewe"
 hi: "रीवे पिनो ग्रिस"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

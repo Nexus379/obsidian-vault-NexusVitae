@@ -32,7 +32,6 @@ icon: "🧰"
 label: "Car First Aid Kit DIN 13164:2022"
 brand: "Leina-Werke"
 room: "car"
-unit_price: 14.95
 locations: 
   - "praxisdienst"
   - "baumarkt"
@@ -45,6 +44,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 14.95
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧰  N20260703100004   Car First Aid Kit DIN 13164:2022

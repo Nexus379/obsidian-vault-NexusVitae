@@ -31,7 +31,6 @@ icon: "🩹"
 label: "Mivolis Waterproof Plasters (Strips)"
 brand: "Mivolis"
 room: "bathroom"
-unit_price: 1.25
 locations: 
   - "dm"
 en: "Waterproof Plasters"
@@ -43,6 +42,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.25
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🩹  N20260703100003   Mivolis Waterproof Plasters (Strips)

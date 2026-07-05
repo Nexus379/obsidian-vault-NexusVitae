@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ crust: "Thin & Crispy"
 carbs_total_g: 23.5
 en: "Inferno Pizza"
 hi: "इन्फर्नो पिज्जा"
-unit_price: 4.00
 props: 
   - "Lidls Antwort auf scharfe Marken-Pizzen (wie Die Ofenfrische Peperoni-Diavolo)"
   - "Technologisch hoher Capsaicin-Gehalt für den 'Kick'"
@@ -61,6 +59,14 @@ ru: "Пицца Инферно"
 de: "Pizza Inferno"
 brand: "Trattoria Alfredo"
 lidl: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

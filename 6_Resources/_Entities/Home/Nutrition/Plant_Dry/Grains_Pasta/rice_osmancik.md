@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 78.0
 latin: "Oryza sativa (Osmancik)"
 en: "Osmancik Rice"
 hi: "ओस्मानिक चावल"
-unit_price: 1.00
 absorbency: "High liquid uptake"
 props: 
   - "Der meistgenutzte Reis für türkischen Pilav"
@@ -69,6 +67,14 @@ label: "Osmancık Reis (Türkischer Standard)"
 ru: "Рис Османчик"
 brand: "Yayla, Reis, Baktat"
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

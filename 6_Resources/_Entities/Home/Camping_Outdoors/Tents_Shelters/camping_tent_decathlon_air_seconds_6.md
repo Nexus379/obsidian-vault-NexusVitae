@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 8.0
 brand: "Quechua"
-unit_price: 750.00
 de: "Quechua Air Seconds 6.3 F&B"
 locations: 
   - "outdoor_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 750.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ•ï¸ OUTDOOR SPECS ---
 pref_vendor: "Decathlon / Amazon"
 vendors: []

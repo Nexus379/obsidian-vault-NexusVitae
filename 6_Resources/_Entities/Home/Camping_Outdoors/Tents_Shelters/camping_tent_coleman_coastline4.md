@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 8.0
 brand: "Coleman"
-unit_price: 280.00
 de: "Coleman Coastline 4 Deluxe"
 locations: 
   - "outdoor_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 280.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ•ï¸ OUTDOOR SPECS ---
 pref_vendor: "Decathlon / Amazon"
 vendors: []

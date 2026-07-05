@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ anatomy: "No juice, 100% rind and pith"
 gourmet_market: 10.00
 en: "Buddha's Hand"
 hi: "बुद्ध का हाथ"
-unit_price: 10.00
 props: 
   - "Shaped like a multi-fingered hand"
   - "Contains zero juice or pulp"
@@ -63,6 +61,14 @@ props:
 label: "Buddha's Hand"
 ru: "Рука Будды"
 de: "Buddhas Hand"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

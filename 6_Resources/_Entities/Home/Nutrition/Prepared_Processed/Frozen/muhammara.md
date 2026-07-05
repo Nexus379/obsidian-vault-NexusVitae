@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,13 +59,20 @@ latin: "Juglans / Capsicum blend"
 delicatessen: 5.00
 en: "Muhammara"
 hi: "मुहम्मरा"
-unit_price: 5.00
 props: 
   - "Complex, slightly spicy dip made from red peppers and walnuts"
   - "Often contains pomegranate molasses for tart sweetness"
   - "Syrian origin, very popular in Levantine cuisine"
 orient_market: 5.00
 label: "Muhammara"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

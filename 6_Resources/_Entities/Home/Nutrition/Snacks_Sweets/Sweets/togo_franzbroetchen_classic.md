@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "backhus"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -37,10 +36,17 @@ backhus: 2.00
 bakery: 2.00
 protein_g: 5.0
 kcal: 420
-unit_price: 2.00
 locations: 
   - "backhus"
   - "bakery"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "backhus"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

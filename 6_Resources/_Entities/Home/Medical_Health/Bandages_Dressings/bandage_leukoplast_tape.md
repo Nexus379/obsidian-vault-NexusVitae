@@ -31,7 +31,6 @@ icon: "🩹"
 label: "Leukoplast Fixation Tape (Roll)"
 brand: "Leukoplast"
 room: "bathroom"
-unit_price: 2.50
 locations: 
   - "apotheke"
   - "dm"
@@ -44,6 +43,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.50
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🩹  N20260703102002   Leukoplast Fixation Tape (Roll)

@@ -22,13 +22,11 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl_backtheke"
 vendors: []
 state: "pantry"
 needs_refill: false
 shelf_life_months: 12
 # carbs_total_g: 54.0
-unit_price: 1.00
 lidl_backtheke: 1.00
 unit_type: "piece"
 fat_total_g: 3.0
@@ -43,6 +41,14 @@ locations:
   - "lidl_backtheke"
   - "kaufland"
   - "bakery"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl_backtheke"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

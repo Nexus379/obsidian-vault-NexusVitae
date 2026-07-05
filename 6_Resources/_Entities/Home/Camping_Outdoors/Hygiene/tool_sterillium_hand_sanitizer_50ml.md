@@ -39,8 +39,6 @@ props:
   - "Bactericidal and virucidal"
   - "Kleine 50ml Flasche fürs EDC"
 # --- 🏕️ OUTDOOR SPECS ---
-unit_price: 2.50
-pref_vendor: "DM"
 vendors: []
 weight_g: 55
 capacity_persons: 1
@@ -49,6 +47,14 @@ season_rating: 4
 pack_size_cm: "10x4"
 material: "Alkohol/Pflegestoffe"
 pl_score: 9.0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.50
+vendor_value: "DM"
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧴  N20260703102010   Sterillium Hand Sanitizer (50ml)

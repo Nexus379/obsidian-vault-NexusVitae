@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "XGIMI"
 core: "LED Projector"
 room: "living_room"
-unit_price: 750.00
 de: "XGIMI Halo+ (Portabel)"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 750.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

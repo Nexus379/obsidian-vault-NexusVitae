@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ components: "Soy, Milk, Whey"
 amazon: 30.00
 en: "Mammut Formula 90"
 hi: "मैमथ फॉर्मूला 90"
-unit_price: 30.00
 props: 
   - "Der Preis-Leistungs-König unter den Mehrkomponenten-Proteinen"
   - "Sorgt durch den Mix für eine schnelle und langanhaltende Aminosäure-Versorgung"
@@ -65,6 +63,14 @@ label: "Mammut Formel 90 (Protein-Mix)"
 ru: "Маммут Формула 90"
 de: "Mammut Formel 90"
 brand: "Mammut Nutrition"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 30.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

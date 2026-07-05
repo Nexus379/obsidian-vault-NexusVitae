@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
 carbs_total_g: 12.0
 en: "Mammut Whey"
 hi: "मैमथ व्हे प्रोटीन"
-unit_price: 25.00
 type: "Concentrate"
 props: 
   - "Konzentriert sich auf das Wesentliche ohne unnötigen Schnickschnack"
@@ -61,6 +59,14 @@ label: "Mammut Whey Protein"
 ru: "Сывороточный протеин Маммут"
 de: "Mammut Whey Protein"
 brand: "Mammut Nutrition"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 25.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

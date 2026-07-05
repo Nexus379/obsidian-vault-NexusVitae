@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ edeka: 2.00
 latin: "Zea mays salsa"
 en: "Chio Salted Tortilla"
 hi: "चियो साल्टेड टॉर्टिला"
-unit_price: 2.00
 props: 
   - "Die ideale Basis für Dips"
   - "Weniger Eigengeschmack als Doritos, Fokus auf die Mais-Note"
@@ -65,6 +63,14 @@ ru: "Чио Тортилья Соленая"
 brand: "Chio"
 purity: "Classic Corn & Salt"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

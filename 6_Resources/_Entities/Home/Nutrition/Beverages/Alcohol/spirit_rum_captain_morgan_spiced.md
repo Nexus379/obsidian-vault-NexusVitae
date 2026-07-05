@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,11 +48,18 @@ fr: "Captain Morgan Spiced"
 ja: "キャプテン・モルガン"
 label: "Captain Morgan Spiced Gold"
 fa: "کاپیتان مورگان"
-unit_price: 15.00
 de: "Captain Morgan Spiced"
 locations: 
   - "everywhere"
 hi: "कैप्टन मॉर्गन"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ latin: "Pasta amygdalae"
 en: "Raw Marzipan Paste"
 sugar_content: "Lower than modeling marzipan"
 hi: "कच्चा मारजिपन"
-unit_price: 3.00
 props: 
   - "Das reine Ausgangsprodukt (Verhältnis Mandeln zu Zucker ist ca. 2:1)"
   - "Persipan ist das billigere Äquivalent aus Aprikosenkernen"
@@ -68,6 +66,14 @@ label: "Marzipanrohmasse"
 ru: "Сырой марципан"
 purity: "High almond ratio (Unlike Persipan)"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

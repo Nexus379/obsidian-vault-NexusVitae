@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 quercetin_mg: 22.0
 en: "Red Onion"
 hi: "लाल प्याज"
-unit_price: 1.00
 anthocyanins_mg: 40.0
 props: 
   - "Double the antioxidants of white onions"
@@ -64,6 +62,14 @@ ru: "Красный лук"
 de: "Rote Zwiebel"
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

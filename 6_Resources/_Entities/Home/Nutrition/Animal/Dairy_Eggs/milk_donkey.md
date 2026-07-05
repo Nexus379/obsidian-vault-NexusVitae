@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "specialty_store"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
   - "#sci/Nutrition"
 en: "Donkey Milk"
 hi: "गधी का दूध"
-unit_price: 15.00
 props: 
   - "Historical luxury (Cleopatra's bath)"
   - "Very low fat, high lactose"
@@ -63,6 +61,14 @@ label: "Donkey Milk"
 ru: "Ослиное молоко"
 de: "Eselsmilch"
 online: 15.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "specialty_store"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

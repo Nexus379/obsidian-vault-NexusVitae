@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,12 +48,19 @@ fr: "Jack Daniel's"
 ja: "ジャックダニエル"
 kcal: 222
 fa: "جک دنیلز"
-unit_price: 25.00
 de: "Jack Daniel's"
 locations: 
   - "everywhere"
 vol_pct: 40.0
 hi: "जैक डेनियल्स"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 25.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

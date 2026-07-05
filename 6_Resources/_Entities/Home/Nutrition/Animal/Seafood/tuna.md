@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
   - "#sci/SportsMedicine"
 en: "Tuna"
 hi: "टूना"
-unit_price: 4.00
 props: 
   - "High-protein staple for athletes"
   - "Meaty texture, often eaten as steaks"
@@ -65,6 +63,14 @@ ru: "Тунец"
 de: "Thunfisch"
 fish_market: 4.00
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

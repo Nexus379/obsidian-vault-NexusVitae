@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -63,7 +62,6 @@ sfa_g: 82.0
 latin: "Cocos nucifera"
 en: "Coconut Oil"
 hi: "नारियल का तेल"
-unit_price: 6.00
 props: 
   - "Solid at room temperature (melts at ~24°C)"
   - "Rich in lauric acid (Medium-Chain Triglycerides)"
@@ -74,6 +72,14 @@ label: "Coconut Oil"
 ru: "Кокосовое масло"
 dm: 6.00
 rewe: 6.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

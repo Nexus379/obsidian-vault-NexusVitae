@@ -29,13 +29,20 @@ shelf_life_months: 12
 label: "Jessa Nature (dm)"
 de: "dm Jessa Nature"
 icon: "🍃"
-unit_price: 3.00
 en: "dm Jessa Nature"
 unit_type: "piece"
 pl_score: 9.0
 props: 
   - "Nutzt chlorfrei gebleichten Zellstoff und Bio-Baumwolle"
   - "Verpackung aus Recycling-Karton"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ sci:
 fat_total_g: 1.3
 en: "Chestnut"
 hi: "à¤šà¥‡à¤¸à¥à¤Ÿà¤¨à¤Ÿ"
-unit_price: 1.00
 props: 
   - "Unique among nuts: rich in Vitamin C"
   - "Must be roasted or boiled"
@@ -67,6 +65,14 @@ label: "Chestnut"
 ru: "ÐšÐ°ÑˆÑ‚Ð°Ð½"
 de: "Esskastanie, Marone"
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

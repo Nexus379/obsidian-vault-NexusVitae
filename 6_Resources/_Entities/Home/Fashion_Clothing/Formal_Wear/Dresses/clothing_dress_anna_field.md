@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 8.0
 brand: "Anna Field"
-unit_price: 40.00
 de: "Anna Field Cocktailkleid"
 locations: 
   - "fashion_boutique"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 40.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ‘• WARDROBE SPECS ---
 pref_vendor: "Online / Brand Store"
 vendors: []

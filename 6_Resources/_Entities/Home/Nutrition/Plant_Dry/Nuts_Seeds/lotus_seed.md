@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
   - "#sci/Nutrition"
 en: "Lotus Seed"
 hi: "à¤®à¤–à¤¾à¤¨à¤¾"
-unit_price: 4.00
 benefit: "TCM Kidney/Spleen support"
 props: 
   - "Often popped like popcorn"
@@ -63,6 +61,14 @@ orient_market: 4.00
 label: "Lotus Seed (Makhana)"
 ru: "Ð¡ÐµÐ¼ÐµÐ½Ð° Ð»Ð¾Ñ‚Ð¾ÑÐ°"
 de: "Lotussamen"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
   - "#sci/Nutrition"
 en: "Fresh Goat Cheese"
 hi: "ताजा बकरी पनीर"
-unit_price: 3.00
 props: 
   - "Naturally pure white color (no beta-carotene in goat milk)"
   - "Tart, earthy flavor that intensifies with age"
@@ -65,6 +63,14 @@ ru: "Свежий козий сыр"
 de: "Ziegenfrischkäse"
 purity: "100% Goat milk"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

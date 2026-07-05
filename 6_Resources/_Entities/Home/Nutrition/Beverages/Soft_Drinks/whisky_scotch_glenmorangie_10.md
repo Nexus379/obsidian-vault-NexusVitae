@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,11 +48,18 @@ ar: "غلينمورانجي 10"
 fr: "Glenmorangie 10"
 ja: "グレンモーレンジィ 10年"
 distillation: "Tallest copper stills in Scotland (Giraffe Stills)"
-unit_price: 40.00
 de: "Glenmorangie 10"
 locations: 
   - "everywhere"
 hi: "ग्लेनमोरंगी 10"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 40.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

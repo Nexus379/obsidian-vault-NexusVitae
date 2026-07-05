@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 carbs_total_g: 51.5
 en: "Kaufland Pretzels"
 hi: "के-क्लासिक प्रेट्ज़ेल"
-unit_price: 3.00
 props: 
   - "Die Vorratspackung für Laugen-Fans"
   - "Hält technologisch die Feuchtigkeit im Inneren extrem gut"
@@ -61,6 +59,14 @@ label: "K-Classic Laugenbrezeln"
 ru: "Брецели Кауфланд"
 de: "K-Classic Brezeln"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

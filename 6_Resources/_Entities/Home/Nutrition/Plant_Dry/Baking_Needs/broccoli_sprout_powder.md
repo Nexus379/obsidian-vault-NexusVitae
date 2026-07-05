@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "online_specialty"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
 en: "Broccoli Sprout Powder"
 hi: "ब्रोकोली स्प्राउट पाउडर"
 sulforaphane_mg: 1200.0
-unit_price: 20.00
 benefit: "Sulforaphane Champion"
 props: 
   - "Concentrated sulforaphane for DNA protection"
@@ -61,6 +59,14 @@ label: "Broccoli Sprout Powder"
 ru: "Порошок проростков брокколи"
 de: "Brokkolisprossen Pulver"
 reformhaus: 20.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 20.00
+vendor_value: "online_specialty"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

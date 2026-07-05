@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
   - "#sci/Phytochemistry"
 en: "Blue Potato"
 hi: "नीला आलू"
-unit_price: 2.00
 anthocyanins_mg: 20.0
 props: 
   - "Deep purple flesh"
@@ -65,6 +63,14 @@ ru: "Синий картофель"
 de: "Blaue Annerose / Vitelotte"
 vit_c_mg: 15.0
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

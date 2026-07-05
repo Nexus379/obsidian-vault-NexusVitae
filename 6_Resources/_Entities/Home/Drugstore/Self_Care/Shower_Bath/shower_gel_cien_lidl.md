@@ -31,7 +31,6 @@ icon: "🌊"
 label: "Cien Family Duschgel"
 brand: "Cien"
 room: "bathroom"
-unit_price: 1.00
 locations: 
   - "lidl"
 en: "Lidl Cien Shower Gel"
@@ -41,6 +40,14 @@ props:
   - "Maximale Effizienz für den ganzen Körper"
   - "Technologisch ausgewogener pH-Wert"
   - "Hinterlässt einen klassischen Frischeduft"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

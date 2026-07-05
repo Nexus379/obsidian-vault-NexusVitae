@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ carbs_total_g: 82.0
 latin: "Fructus tropici gelati"
 en: "Tropifrutti"
 hi: "ट्रॉपीफ्रूटी"
-unit_price: 1.50
 props: 
   - "Einzigartige Konsistenz: Außen fest, innen weich"
   - "Verwendet tropische Fruchtaromen"
@@ -65,6 +63,14 @@ props:
 label: "Haribo Tropifrutti"
 ru: "Тропифрутти"
 brand: "Haribo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

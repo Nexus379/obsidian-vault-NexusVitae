@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ edeka: 4.00
 vit_b3_mg: 2.4
 en: "Innocent Blue Spark"
 hi: "इनोसेंट ब्लू स्पार्क"
-unit_price: 4.00
 color_source: "Natural Phycocyanin"
 props: 
   - "Contains Spirulina extract giving it a natural bright blue color"
@@ -69,6 +67,14 @@ label: "Innocent Super Smoothie Blue Spark"
 ru: "Innocent Голубая искра"
 es: "Innocent Blue Spark"
 fortification: "Vitamins"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

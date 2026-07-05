@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -64,7 +63,6 @@ sfa_g: 39.0
 latin: "Sus scrofa domesticus"
 en: "Lard"
 hi: "सूअर की चर्बी"
-unit_price: 2.00
 props: 
   - "Yields extremely flaky pastry crusts"
   - "High smoke point, excellent for frying"
@@ -72,6 +70,14 @@ props:
 label: "Lard (Pork Fat)"
 ru: "Смалец"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

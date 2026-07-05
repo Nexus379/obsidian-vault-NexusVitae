@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 7.0
 brand: "Zara"
-unit_price: 90.00
 de: "Zara Western Boot (Runde Kappe)"
 locations: 
   - "fashion_boutique"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 90.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ‘• WARDROBE SPECS ---
 pref_vendor: "Online / Brand Store"
 vendors: []

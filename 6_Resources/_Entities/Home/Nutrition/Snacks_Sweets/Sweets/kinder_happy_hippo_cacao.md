@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 carbs_total_g: 53.6
 en: "Kinder Happy Hippo"
 hi: "किंडर हैप्पी हिप्पो"
-unit_price: 3.00
 props: 
   - "Knusper-Waffel-Spezialität mit Milch- und Kakaocremefüllung"
   - "Gehört technologisch zu den aufwendigsten Waffelformen"
@@ -62,6 +60,14 @@ ru: "Киндер Хэппи Хиппо"
 de: "Kinder Happy Hippo"
 brand: "Kinder"
 bottom: "Meringue/Cocoa sprinkles"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

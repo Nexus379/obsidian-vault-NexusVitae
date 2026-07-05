@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 4.00
 latin: "Fragaria conserve (Schwartau)"
 en: "Schwartau Strawberry Jam"
 hi: "श्वार्टौ स्ट्रॉबेरी जैm"
-unit_price: 4.00
 props: 
   - "Der deutsche Marken-Benchmark"
   - "Höherer Fruchtanteil als Standard-Konfitüre"
@@ -67,6 +65,14 @@ label: "Schwartau Extra Erdbeere"
 ru: "Джем Швартау"
 brand: "Schwartau"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

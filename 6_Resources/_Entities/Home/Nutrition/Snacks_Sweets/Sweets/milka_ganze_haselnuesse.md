@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 47.0
 latin: "Lactis alpina cum corylis integris"
 en: "Milka Whole Hazelnuts"
 hi: "मिल्का होल हेज़लनट"
-unit_price: 1.50
 props: 
   - "Kombination aus Alpenmilchschokolade und ganzen, gerösteten Haselnüssen"
   - "Guter Ballaststofflieferant durch die Nüsse"
@@ -62,6 +60,14 @@ props:
 label: "Milka Ganze Haselnüsse"
 ru: "Милка Цельный фундук"
 brand: "Milka"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

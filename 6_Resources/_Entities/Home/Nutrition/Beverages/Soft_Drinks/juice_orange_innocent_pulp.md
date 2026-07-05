@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 4.00
 latin: "Succus aurantii directus (Innocent)"
 en: "Innocent Orange with Pulp"
 hi: "इनोसेंट ऑरेंज पल्प के साथ"
-unit_price: 4.00
 props: 
   - "Premium chilled juice segment"
   - "Retains pulp for added fiber and natural texture"
@@ -67,6 +65,14 @@ process: "Cold-pressed / Never from concentrate"
 label: "Innocent Orange (Mit viel Fruchtfleisch)"
 ru: "Инносент Апельсин с мякотью"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

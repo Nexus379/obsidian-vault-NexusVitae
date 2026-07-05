@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
   - "#sci/Endocrinology"
 en: "Camel Milk"
 hi: "ऊंटनी का दूध"
-unit_price: 12.00
 benefit: "No Beta-Lactoglobulin (Allergy-friendly)"
 props: 
   - "Three times higher Vitamin C than cow milk"
@@ -62,6 +60,14 @@ orient_market: 12.00
 label: "Camel Milk"
 ru: "Верблюжье молоко"
 de: "Kamelmilch"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

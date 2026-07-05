@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
   - "#sci/Phytochemistry"
 en: "Black Seed / Nigella"
 hi: "à¤•à¤²à¥Œà¤‚à¤œà¥€"
-unit_price: 2.00
 benefit: "Panacea (Thymoquinone)"
 props: 
   - "Not related to black sesame or cumin"
@@ -66,6 +64,14 @@ label: "Black Seed (Nigella)"
 ru: "Ð§ÐµÑ€Ð½Ñ‹Ð¹ Ñ‚Ð¼Ð¸Ð½"
 de: "SchwarzkÃ¼mmel"
 denns: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

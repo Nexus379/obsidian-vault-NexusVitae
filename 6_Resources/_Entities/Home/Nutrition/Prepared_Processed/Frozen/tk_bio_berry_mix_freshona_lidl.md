@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ carbs_total_g: 8.0
 latin: "Mistura lidliana bio"
 en: "Lidl Organic Berry Mix"
 hi: "लिडल जैविक बेरी मिक्स"
-unit_price: 4.00
 ar: "مزيج توت ليدل العضوي"
 props: 
   - "Günstige Alternative für den täglichen Smoothie-Bedarf"
@@ -61,6 +59,14 @@ label: "Freshona Bio Beerenmischung (Lidl)"
 ru: "Ягодный микс Лидл"
 brand: "Freshona / Bio Organic"
 lidl: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

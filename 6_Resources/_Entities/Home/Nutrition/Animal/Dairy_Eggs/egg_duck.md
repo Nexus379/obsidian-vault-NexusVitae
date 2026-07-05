@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,13 +56,20 @@ sci:
 latin: "Ovum anatis (Anas platyrhynchos)"
 en: "Duck Egg"
 hi: "बत्तخ का अंडा"
-unit_price: 1.00
 props: 
   - "Thicker shell allows longer storage"
   - "Higher concentration of Omega-3 and B12"
   - "Prized for baking due to fat content"
 label: "Duck Egg"
 ru: "Утиное яйцо"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

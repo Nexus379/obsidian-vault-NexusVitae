@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ rossmann: 3.00
 omega3_ala_g: 17.8
 en: "Chia Seed"
 hi: "à¤šà¤¿à¤¯à¤¾ à¤¬à¥€à¤œ"
-unit_price: 3.00
 props: 
   - "Ancient Aztec energy fuel"
   - "Forms a thick gel (vegan egg substitute)"
@@ -70,6 +68,14 @@ de: "Chiasamen"
 hydration: "Absorbs 10x its weight in water"
 dm: 3.00
 lidl: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

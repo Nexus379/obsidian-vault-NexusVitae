@@ -31,7 +31,6 @@ icon: "📐"
 label: "Zeichenblock A3 (120g/m²)"
 brand: "United Office / K-Classic"
 room: "studio"
-unit_price: 5.00
 locations: 
   - "lidl"
   - "kaufland"
@@ -41,6 +40,14 @@ pl_score: 9.5
 props: 
   - "Technologisch stabil genug für Castle Arts Layering"
   - "Großformat für perspektivisches Zeichnen"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 en: "Dried Apricot"
 iron_plant_mg: 2.7
 hi: "à¤¸à¥‚à¤–à¥€ à¤–à¥à¤¬à¤¾à¤¨à¥€"
-unit_price: 3.00
 props: 
   - "Massive potassium content for blood pressure"
   - "High Beta-Carotene (Vitamin A precursor)"
@@ -64,6 +62,14 @@ ru: "ÐšÑƒÑ€Ð°Ð³Ð°"
 de: "Aprikose (getrocknet)"
 dm: 3.00
 lidl: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

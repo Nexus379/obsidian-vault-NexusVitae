@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Anker"
 core: "GaN"
 room: "living_room"
-unit_price: 60.00
 de: "Anker Prime 100W (LadegerÃ¤t)"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 60.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Amazon"
 vendors: []

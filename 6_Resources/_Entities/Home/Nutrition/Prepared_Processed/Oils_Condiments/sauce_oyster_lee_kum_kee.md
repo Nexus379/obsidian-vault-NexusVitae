@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 4.00
 latin: "Ostrea extractum salsa"
 en: "Oyster Sauce"
 hi: "ऑयस्टर सॉस"
-unit_price: 4.00
 props: 
   - "Made from concentrated oyster extracts"
   - "Used as an umami-booster for stir-fries (Wok)"
@@ -68,6 +66,14 @@ ru: "Устричный соус"
 brand: "Lee Kum Kee"
 rewe: 4.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ gut_health: "High Pectin (Prebiotic)"
 quercetin_mg: 4.0
 en: "Apple"
 hi: "सेब"
-unit_price: 1.00
 props: 
   - "Most nutrients (quercetin) are in the skin"
   - "Pectin feeds the gut microbiome"
@@ -72,6 +70,14 @@ ru: "Яблоko"
 de: "Apfel"
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

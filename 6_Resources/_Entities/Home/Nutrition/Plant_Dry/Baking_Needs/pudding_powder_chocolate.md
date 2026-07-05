@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 75.0
 latin: "Pulvis amyli (Cacao)"
 en: "Chocolate Pudding Powder"
 hi: "चॉकलेट पुडिंग पाउडर"
-unit_price: 1.00
 props: 
   - "Enthält echten, stark entölten Kakao"
   - "Dickt etwas stärker an als die Vanille-Variante, da Kakao selbst stärkeähnliche Eigenschaften hat"
@@ -63,6 +61,14 @@ sweetness: "Unsweetened"
 ru: "Пудинг шоколадный (порошок)"
 brand: "Dr. Oetker, Ruf"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

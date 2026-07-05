@@ -8,14 +8,14 @@
 
 ```dataviewjs
 const categories = [
-    { title: "👕 Wardrobe (Clothing & Footwear)", tag: "#5note/3atomic/clothing" },
-    { title: "🧴 Selfcare & Personal", tag: "#5note/3atomic/personal_care" },
-    { title: "🏠 Household & Cleaning", tag: "#5note/3atomic/household" },
-    { title: "🏋️ Fitness & Sport", tag: "#5note/3atomic/fitness" },
-    { title: "🎧 Music & Audio", tag: "#5note/3atomic/music" },
-    { title: "💻 Tech & Devices", tag: "#5note/3atomic/tech" },
-    { title: "⚔️ LARP & Cosplay", tag: "#5note/3atomic/larp" },
-    { title: "⛺ Camping & Outdoor", tag: "#5note/3atomic/camping" }
+    { title: "👕 Wardrobe (Clothing & Footwear)", tag: "#6resource/entity/clothing" },
+    { title: "🧴 Selfcare & Personal", tag: "#6resource/entity/personal_care" },
+    { title: "🏠 Household & Cleaning", tag: "#6resource/entity/household" },
+    { title: "🏋️ Fitness & Sport", tag: "#6resource/entity/fitness" },
+    { title: "🎧 Music & Audio", tag: "#6resource/entity/music" },
+    { title: "💻 Tech & Devices", tag: "#6resource/entity/tech" },
+    { title: "⚔️ LARP & Cosplay", tag: "#6resource/entity/larp" },
+    { title: "⛺ Camping & Outdoor", tag: "#6resource/entity/camping" }
 ];
 
 for (let cat of categories) {
@@ -55,7 +55,7 @@ for (let cat of categories) {
         for (let o of ownerArr) {
             if (p[`qty_${o}`] !== undefined) {
                 // Clothing uses sizes, other categories usually don't need it
-                if (cat.tag === "#5note/3atomic/clothing") {
+                if (cat.tag === "#6resource/entity/clothing") {
                     row.push(`📦 \`INPUT[number:${p.file.path}#qty_${o}]\` 📏 \`INPUT[text:${p.file.path}#size_${o}]\`<br>🔄 \`INPUT[toggle:${p.file.path}#refill_${o}]\``);
                 } else {
                     row.push(`📦 \`INPUT[number:${p.file.path}#qty_${o}]\` 🔄 \`INPUT[toggle:${p.file.path}#refill_${o}]\``);

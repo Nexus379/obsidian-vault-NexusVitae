@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ en: "Turmeric Powder"
 latin: "Curcuma longa (Rhizoma pulvis)"
 iron_plant_mg: 55.0
 hi: "हल्दी पाउडर"
-unit_price: 2.00
 benefit: "Master Anti-inflammatory"
 props: 
   - "Concentrated Curcumin"
@@ -66,6 +64,14 @@ ru: "Куркума (порошок)"
 manganese_mg: 20.0
 lidl: 2.00
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

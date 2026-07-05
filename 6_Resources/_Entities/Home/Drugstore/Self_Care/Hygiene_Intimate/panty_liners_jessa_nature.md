@@ -33,7 +33,6 @@ icon: "☁️"
 label: "Jessa Nature Slipeinlagen (dm/Budni)"
 de: "Jessa Bio-Slipeinlagen"
 room: "bathroom"
-unit_price: 2.00
 en: "Jessa Organic Liners"
 unit_type: "piece"
 pl_score: 9.5
@@ -41,6 +40,14 @@ props:
   - "Technologisch atmungsaktiv ohne Plastikfolie"
   - "Ideal für die tägliche Frische, verhindert Feuchtigkeitsstau"
   - "Ohne Duftstoffe molekular rein für die Schleimhäute"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

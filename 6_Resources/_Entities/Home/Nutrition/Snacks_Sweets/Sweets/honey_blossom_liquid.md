@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 82.0
 latin: "Mel flos"
 en: "Blossom Honey"
 hi: "फूलों का शहद"
-unit_price: 6.00
 props: 
   - "Mischung aus verschiedenen Blütenpollen"
   - "Hoher Fructoseanteil hält ihn länger flüssig"
@@ -70,6 +68,14 @@ label: "Blütenhonig (Flüssig)"
 ru: "Цветочный мёд"
 purity: "100% Bee Honey"
 rewe: 6.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

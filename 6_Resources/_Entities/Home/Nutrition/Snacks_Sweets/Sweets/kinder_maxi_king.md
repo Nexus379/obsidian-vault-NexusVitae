@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "fridge_section"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 38.2
 core: "Liquid Caramel Center"
 en: "Kinder Maxi King"
 coating: "Hazelnut and Chocolate"
-unit_price: 3.00
 props: 
   - "Der 'König' der Kühlschrank-Snacks"
   - "Kombiniert Waffel, Milchcreme, flüssiges Karamell und Erdnüsse/Haselnüsse"
@@ -61,6 +59,14 @@ label: "Kinder Maxi King"
 ru: "Киндер Макси Кинг"
 brand: "Kinder"
 hi: "किंडर मैक्सी किंग"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "fridge_section"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -39,11 +39,18 @@ tech: "Oscillating-Rotating"
 pl_score: 9.0
 brand: "Dontodent"
 room: "bathroom"
-unit_price: 20.00
 de: "Dontodent Elektro-Bürste"
 locations: 
   - "budni"
   - "dm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 20.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

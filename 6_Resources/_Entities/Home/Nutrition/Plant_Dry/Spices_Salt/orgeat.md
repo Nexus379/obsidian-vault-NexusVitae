@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "liquor_store"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,13 +58,20 @@ carbs_total_g: 68.0
 latin: "Prunus dulcis extract"
 en: "Orgeat"
 hi: "ऑर्गीट सिरप"
-unit_price: 6.00
 props: 
   - "Milky, sweet almond syrup often containing orange flower water"
   - "The absolute backbone of the classic Mai Tai"
   - "Rich, marzipan-like flavor profile"
 label: "Orgeat (Almond Syrup)"
 ru: "Оршад"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "liquor_store"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

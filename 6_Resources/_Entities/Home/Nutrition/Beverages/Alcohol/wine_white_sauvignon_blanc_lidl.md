@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -48,11 +47,18 @@ ar: "ليدل سوفينيون بلان"
 fr: "Sauvignon Blanc Lidl"
 ja: "リドル ソーヴィニヨン・ブラン"
 fa: "سوویینیون بلان لیدل"
-unit_price: 6.00
 de: "Lidl Sauvignon Blanc"
 locations: 
   - "lidl"
 hi: "लिल सॉविनन ब्लैंक"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

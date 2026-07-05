@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 78.0
 latin: "Zea mays et Oryza sativa (Fila)"
 en: "Gluten-Free Pasta (Corn/Rice)"
 hi: "ग्लूटेन-फ्री पास्ता (मक्का/चावल)"
-unit_price: 3.00
 props: 
   - "Die Standard-Alternative für Zöliakie-Patienten im Supermarkt (z.B. Barilla Senza Glutine)"
   - "Oft eine Mischung aus Mais- und Reismehl (manchmal mit Emulgatoren zur Formstabilität)"
@@ -70,6 +68,14 @@ ru: "Безглютеновые макароны (Кукуруза/Рис)"
 dm: 3.00
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

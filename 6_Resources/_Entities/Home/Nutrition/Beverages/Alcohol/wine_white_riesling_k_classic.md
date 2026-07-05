@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,11 +49,18 @@ fr: "Riesling K-Classic"
 ja: "K-Classic リースリング"
 kcal: 70
 fa: "ریسلینگ کا-کلاسیک"
-unit_price: 5.00
 de: "K-Classic Riesling"
 locations: 
   - "kaufland"
 hi: "के-क्लासिक रिसलिंग"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

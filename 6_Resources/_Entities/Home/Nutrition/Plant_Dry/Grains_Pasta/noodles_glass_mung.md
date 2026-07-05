@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ latin: "Vigna radiata (Amylum fila)"
 en: "Glass Noodles / Cellophane Noodles"
 gluten_status: "100% Gluten-Free"
 hi: "ग्लास नूडल्स"
-unit_price: 2.00
 props: 
   - "Bestehen fast ausschließlich aus reiner Stärke (Erbsen- oder Mungbohnenstärke)"
   - "Werden nach dem Einweichen komplett durchsichtig (Glass Noodles)"
@@ -68,6 +66,14 @@ props:
 label: "Glasnudeln (Mungbohnenstärke)"
 ru: "Стеклянная лапша (Фунчоза)"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

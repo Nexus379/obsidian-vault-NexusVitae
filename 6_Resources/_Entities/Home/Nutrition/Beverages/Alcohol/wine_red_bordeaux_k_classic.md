@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -48,11 +47,18 @@ ar: "بوردو"
 fr: "Bordeaux K-Classic"
 ja: "ボルドー"
 fa: "بوردو"
-unit_price: 6.00
 de: "K-Classic Bordeaux"
 locations: 
   - "kaufland"
 hi: "बोर्डो"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

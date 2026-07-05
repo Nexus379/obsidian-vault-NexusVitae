@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ fish_content: "65% Pollock (MSC)"
 carbs_total_g: 18.0
 en: "Iglo Fish Fingers"
 hi: "इग्लो फिश फिंगर्स"
-unit_price: 5.00
 props: 
   - "Der deutsche Goldstandard seit 1959"
   - "Besteht aus 100% Filet (kein Formfleisch)"
@@ -62,6 +60,14 @@ label: "Iglo Fischstäbchen (15er Pack)"
 ru: "Рыбные палочки Игло"
 de: "Iglo Fischstäbchen"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

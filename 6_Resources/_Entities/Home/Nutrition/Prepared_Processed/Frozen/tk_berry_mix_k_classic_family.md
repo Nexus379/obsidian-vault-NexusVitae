@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 6.8
 latin: "Mistura fructus (Family Pack)"
 en: "K-Classic Berry Mix"
 hi: "के-क्लासिक बेरी मिक्स"
-unit_price: 4.00
 props: 
   - "Maximale Wirtschaftlichkeit für tägliche Nutzer"
   - "Enthält technologisch bedingt oft mehr Johannisbeeren zur Säureregulierung"
@@ -61,6 +59,14 @@ label: "K-Classic Beerenmischung (750g)"
 ru: "Ягодный микс К-Классик"
 variety: "Sour cherries, Raspberries, Blueberries, Currants"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

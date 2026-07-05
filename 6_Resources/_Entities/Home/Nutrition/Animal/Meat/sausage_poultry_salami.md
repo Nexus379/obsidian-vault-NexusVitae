@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 1.0
 latin: "Salumen siccum (Aves)"
 en: "Poultry Salami"
 hi: "पोल्ट्री सलामी"
-unit_price: 3.00
 props: 
   - "Made primarily from turkey or chicken (sometimes mixed with plant oils for texture)"
   - "Significantly lower in calories and fat than classic pork salami"
@@ -71,6 +69,14 @@ fr: "Salami de volaille"
 lidl: 3.00
 rewe: 3.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Honor"
 core: "Snapdragon 8 Gen 2"
 room: "backpack"
-unit_price: 1400.00
 de: "Honor Magic V2 (Foldable)"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1400.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

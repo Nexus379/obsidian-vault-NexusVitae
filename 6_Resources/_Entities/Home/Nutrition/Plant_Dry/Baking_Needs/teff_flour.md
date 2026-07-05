@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "afro_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ en: "Teff Flour"
 iron_plant_mg: 7.6
 hi: "टेफ का आटा"
 reformhaus: 6.00
-unit_price: 6.00
 afro_market: 6.00
 props: 
   - "Essential for fermented Injera flatbread"
@@ -64,6 +62,14 @@ denns: 6.00
 label: "Teff Flour"
 ru: "Мука из теффа"
 de: "Teffmehl"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "afro_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

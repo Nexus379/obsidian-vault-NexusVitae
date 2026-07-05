@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 fat_total_g: 36.0
 en: "Black Mustard Seed"
 hi: "à¤•à¤¾à¤²à¥€ à¤¸à¤°à¤¸à¥‹à¤‚"
-unit_price: 2.00
 props: 
   - "Hotter than yellow mustard"
   - "Essential for Indian Tadka"
@@ -64,6 +62,14 @@ label: "Black Mustard Seed"
 ru: "Ð“Ð¾Ñ€Ñ‡Ð¸Ñ†Ð° Ñ‡ÐµÑ€Ð½Ð°Ñ"
 de: "Schwarzer Senf"
 denns: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "reformhaus"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 en: "Sea Buckthorn"
 hi: "सी बकथॉर्न"
 reformhaus: 4.00
-unit_price: 4.00
 props: 
   - "Plant source of Omega-7"
   - "Vitamin C up to 10x an orange"
@@ -64,6 +62,14 @@ label: "Sea Buckthorn"
 ru: "Облепиха"
 de: "Sanddorn"
 superfood: "Omega-7 & Extreme Vit C"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "reformhaus"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

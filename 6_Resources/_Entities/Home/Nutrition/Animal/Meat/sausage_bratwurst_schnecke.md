@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 1.0
 latin: "Farcimen assum spirale"
 en: "Sausage Snail / Spiral Sausage"
 hi: "सर्पिल सॉसेज"
-unit_price: 4.00
 props: 
   - "Eine extrem lange, dünne Bratwurst, die zu einer Spirale gewickelt und mit einem Holzspieß fixiert wird"
   - "Optischer Hingucker, backt durch die große Oberfläche sehr knusprig"
@@ -69,6 +67,14 @@ ru: "Колбаска-улитка"
 lidl: 4.00
 rewe: 4.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

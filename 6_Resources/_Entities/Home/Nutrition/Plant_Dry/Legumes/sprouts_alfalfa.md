@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ en: "Alfalfa Sprouts"
 phytoestrogens_mg: 5.0
 denns: 2.00
 hi: "अल्फला अंकुर"
-unit_price: 2.00
 props: 
   - "Member of the legume family (Lucerne)"
   - "Rich in saponins and chlorophyll"
@@ -62,6 +60,14 @@ ru: "Проростки люцерны"
 de: "Alfalfa-Sprossen (Luzerne)"
 dm: 2.00
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

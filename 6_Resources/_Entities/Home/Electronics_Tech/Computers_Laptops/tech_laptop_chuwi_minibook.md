@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Chuwi"
 core: "Intel N100"
 room: "studio"
-unit_price: 300.00
 de: "Chuwi MiniBook X"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 300.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

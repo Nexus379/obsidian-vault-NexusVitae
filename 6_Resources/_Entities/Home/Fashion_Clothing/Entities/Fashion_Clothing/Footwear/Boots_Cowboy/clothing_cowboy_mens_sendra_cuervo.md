@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 10.0
 brand: "Sendra"
-unit_price: 320.00
 de: "Sendra Cuervo (Klassisch Spitz)"
 locations: 
   - "fashion_boutique"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 320.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ‘• WARDROBE SPECS ---
 pref_vendor: "Online / Brand Store"
 vendors: []

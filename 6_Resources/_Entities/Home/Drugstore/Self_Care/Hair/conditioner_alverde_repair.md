@@ -41,11 +41,18 @@ brand: "Alverde"
 room: "bathroom"
 exposure_time: "2-3 min"
 repair_tech: "Plant-based keratin complex"
-unit_price: 3.00
 de: "Alverde Spülung"
 locations: 
   - "budni"
   - "dm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

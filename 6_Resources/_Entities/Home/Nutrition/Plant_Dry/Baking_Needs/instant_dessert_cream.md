@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ edeka: 2.00
 latin: "Spuma dulcis instantanea"
 en: "Instant Dessert Cream"
 hi: "इंस्टेंट डेजर्ट क्रीम"
-unit_price: 2.00
 props: 
   - "Muss nicht gekocht werden; enthält kaltquellende modifizierte Stärke"
   - "Schlägt sich in 3 Minuten zu einer extrem luftigen Creme auf"
@@ -67,6 +65,14 @@ ru: "Инстант-крем для десерта"
 brand: "Dr. Oetker"
 rewe: 2.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

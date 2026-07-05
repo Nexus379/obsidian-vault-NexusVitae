@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,13 +54,20 @@ carbs_total_g: 99.8
 latin: "Saccharum officinarum (Pulvis)"
 en: "Powdered Sugar / Icing Sugar"
 hi: "पिसी हुई चीनी"
-unit_price: 1.00
 props: 
   - "Feinst vermahlener weißer Zucker"
   - "Löst sich sofort ohne Hitze auf (ideal für Glasuren und Buttercreme)"
   - "Enthält industriell oft ca. 3% Maisstärke, um Verklumpen zu verhindern"
 label: "Puderzucker (Staubzucker)"
 ru: "Сахарная пудра"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

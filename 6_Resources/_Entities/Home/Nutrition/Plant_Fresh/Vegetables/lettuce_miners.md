@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ en: "Miner's Lettuce"
 iron_plant_mg: 1.2
 alnatura: 2.00
 hi: "माइनर्स लेट्यूस"
-unit_price: 2.00
 props: 
   - "High Vitamin C for winter"
   - "Fleshy tender leaves"
@@ -69,6 +67,14 @@ label: "Miner's Lettuce"
 ru: "Клайтония"
 de: "Postelein, Winterportulak"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

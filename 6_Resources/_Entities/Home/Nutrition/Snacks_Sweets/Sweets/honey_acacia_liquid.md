@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ edeka: 8.00
 fructose_glucose_ratio: 1.5
 en: "Acacia Honey"
 hi: "बबूल का शहद"
-unit_price: 8.00
 props: 
   - "Höchster Fructose-Gehalt aller Honigsorten, bleibt daher extrem lange flüssig"
   - "Sehr mildes, liebliches Aroma, ideal zum Süßen von Tee ohne Eigengeschmack"
@@ -69,6 +67,14 @@ label: "Akazienhonig (Glasklar)"
 ru: "Акациевый мёд"
 color: "Pale Amber / Transparent"
 rewe: 8.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

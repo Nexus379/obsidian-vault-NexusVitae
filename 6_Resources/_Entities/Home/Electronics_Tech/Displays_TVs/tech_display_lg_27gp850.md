@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "LG"
 core: "Nano-IPS Panel"
 room: "studio"
-unit_price: 300.00
 de: "LG 27GP850-B 27 Zoll"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 300.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

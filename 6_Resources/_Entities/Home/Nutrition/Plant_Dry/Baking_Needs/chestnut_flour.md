@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
 en: "Chestnut Flour"
 hi: "चेस्टनट का आटा"
 reformhaus: 8.00
-unit_price: 8.00
 props: 
   - "Classic ingredient in Castagnaccio"
   - "Naturally very sweet"
@@ -65,6 +63,14 @@ label: "Chestnut Flour"
 ru: "Каштановая мука"
 de: "Kastanienmehl"
 italian_delicatessen: 8.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

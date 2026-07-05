@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,13 +53,20 @@ carbs_total_g: 53.5
 latin: "Bacilli lactei kauflandii"
 en: "K-Classic Milk Bars"
 hi: "के-क्लासिक मिल्क बार्स"
-unit_price: 2.00
 props: 
   - "Die Kaufland-Alternative im Riegelformat"
   - "Gute Löslichkeit im Mund, keine sandige Textur"
   - "Beliebte Vorratspackung für Familien"
 label: "K-Classic Milch-Riegel"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

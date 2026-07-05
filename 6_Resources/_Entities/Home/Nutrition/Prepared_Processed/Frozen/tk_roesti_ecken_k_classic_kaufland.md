@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ carbs_total_g: 22.0
 en: "Rösti Triangles"
 shape: "Triangular (Ecken)"
 hi: "रोस्टी ट्राएंगल्स"
-unit_price: 3.00
 props: 
   - "Kauflands massiver Beutel für die ganze Familie"
   - "Röstis haben technologisch keinen Teig (Mehl/Ei), sondern halten durch die eigene Stärke"
@@ -60,6 +58,14 @@ label: "K-Classic Rösti-Ecken"
 ru: "Картофельные рости"
 de: "Rösti-Ecken"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

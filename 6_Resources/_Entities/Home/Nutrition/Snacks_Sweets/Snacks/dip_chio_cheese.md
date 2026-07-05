@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 8.0
 latin: "Emulsio casei (Chio)"
 en: "Chio Cheese Dip"
 hi: "चियो चीज़ डिप"
-unit_price: 3.00
 props: 
   - "Der Kino-Klassiker für zu Hause"
   - "Cremige Käse-Emulsion mit leichter Jalapeño-Schärfe"
@@ -61,6 +59,14 @@ props:
 label: "Chio Dip! Cheese"
 ru: "Сырный соус Чио"
 brand: "Chio"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 17.0
 acetic_acid_g: 6.0
 en: "Balsamic Vinegar"
 hi: "बाल्सामिक सिरका"
-unit_price: 6.00
 props: 
   - "Made from grape must and wine vinegar"
   - "Sweet and tart flavor profile"
@@ -71,6 +69,14 @@ ru: "Бальзамический уксус"
 de: "Aceto Balsamico"
 purity: "Look for 'Aceto Balsamico di Modena IGP'"
 rewe: 6.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -31,17 +31,23 @@ shelf_life_months: 24
 unit_type: "500g"
 ph_level: 2.0
 en: "Citric Acid"
-pref_vendor: "dm"
 label: "Citric Acid"
 icon: "ðŸ‹"
 rossmann: 2.50
 power: "High"
 dm: 2.50
-unit_price: 2.50
 de: "ZitronensÃ¤ure"
 locations: 
   - "dm"
   - "rossmann"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.50
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

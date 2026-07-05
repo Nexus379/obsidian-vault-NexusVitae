@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ en: "Beetroot"
 latin: "Beta vulgaris subsp. vulgaris (Radix recens)"
 iron_plant_mg: 0.8
 hi: "चुकंदर"
-unit_price: 1.00
 props: 
   - "Boosts nitric oxide production"
   - "High folate for cell repair"
@@ -69,6 +67,14 @@ ru: "Свекла"
 performance: "Nitrate for blood flow (VO2 max)"
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

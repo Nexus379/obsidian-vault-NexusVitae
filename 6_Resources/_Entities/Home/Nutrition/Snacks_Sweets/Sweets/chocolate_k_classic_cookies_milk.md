@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 55.0
 latin: "Socolata crustulum kauflandia"
 en: "K-Classic Cookies & Milk"
 hi: "के-क्लासिक कुकीज़ और मिल्क"
-unit_price: 1.50
 props: 
   - "Schokolade mit Milchcremefüllung und Kakaokeksstückchen"
   - "Kauflands technologische Antwort auf Milka Oreo"
@@ -61,6 +59,14 @@ label: "K-Classic Cookies & Milk"
 ru: "К-Классик Печенье и молоко"
 de: "K-Classic Cookies & Milk"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

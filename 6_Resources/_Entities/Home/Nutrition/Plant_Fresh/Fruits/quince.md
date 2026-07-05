@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "weekly_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 usage: "Must be cooked (high tannins)"
 en: "Quince"
 hi: "श्रीफल"
-unit_price: 2.00
 props: 
   - "Extreme pectin content"
   - "Intensely aromatic when ripe"
@@ -67,6 +65,14 @@ label: "Quince"
 ru: "Айва"
 de: "Quitte"
 denns: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "weekly_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

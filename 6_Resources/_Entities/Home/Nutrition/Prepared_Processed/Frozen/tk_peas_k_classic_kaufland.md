@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ calibration: "Mixed sizes"
 latin: "Pisum sativum kauflandia"
 en: "Kaufland Peas"
 hi: "के-क्लासिक मटर"
-unit_price: 2.00
 props: 
   - "Kauflands Preis-Leistungs-Sieger für die Vorratskammer"
   - "Etwas größere Sortierung als die 'extra feinen' Marken-Erbsen"
@@ -61,6 +59,14 @@ props:
 label: "K-Classic Erbsen (Junge Erbsen)"
 ru: "Горошек К-Классик"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

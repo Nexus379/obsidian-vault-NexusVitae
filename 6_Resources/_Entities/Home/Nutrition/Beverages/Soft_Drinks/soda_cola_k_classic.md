@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 11.0
 latin: "Potio carbonata (K-Classic)"
 en: "K-Classic Cola"
 caffeine_mg: 10.0
-unit_price: 1.00
 props: 
   - "Kaufland budget equivalent"
   - "Slightly higher sugar content than Coke"
@@ -63,6 +61,14 @@ label: "K-Classic Cola (Kaufland)"
 sweetness: "High"
 ru: "K-Classic Кола"
 hi: "के-क्लासिक कोला"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

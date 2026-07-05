@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ carbs_total_g: 85.0
 latin: "Gelatina clara"
 en: "Clear Cake Glaze"
 hi: "क्लियर केक ग्लेज़"
-unit_price: 1.00
 props: 
   - "Verleiht Obstkuchen einen spiegelnden Glanz und schützt das Obst vor dem Austrocknen"
   - "Basiert technologisch meist auf Carrageen (aus Rotalgen) und Stärke"
@@ -67,6 +65,14 @@ brand: "Dr. Oetker, Ruf"
 lidl: 1.00
 rewe: 1.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

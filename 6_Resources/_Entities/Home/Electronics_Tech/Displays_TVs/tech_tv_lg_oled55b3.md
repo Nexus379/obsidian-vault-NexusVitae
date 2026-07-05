@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "LG"
 core: "OLED"
 room: "living_room"
-unit_price: 950.00
 de: "LG B3 OLED 55 Zoll"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 950.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

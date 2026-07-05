@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 15.0
 latin: "Capsicum / Cymbopogon blend"
 en: "Green Curry Paste"
 hi: "ग्रीन करी पेस्ट"
-unit_price: 3.00
 color_source: "Fresh green chilies"
 props: 
   - "Must be fried in coconut cream or oil before adding liquid to release essential oils"
@@ -69,6 +67,14 @@ label: "Green Curry Paste"
 ru: "Зеленая паста карри"
 rewe: 3.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

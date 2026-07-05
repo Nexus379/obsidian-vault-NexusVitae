@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ carbs_total_g: 22.0
 latin: "Arachis melle lidliana"
 en: "Lidl Honey & Salt Peanuts"
 coating: "Consistent sugar-honey layer"
-unit_price: 2.00
 props: 
   - "Lidls Antwort auf ültje"
   - "Oft etwas 'fettiger' im Mundgefühl bei identischer Knusprigkeit"
@@ -61,6 +59,14 @@ ru: "Арахис Лидл в меду"
 brand: "Alesto"
 lidl: 2.00
 hi: "लिडल शहद और नमक वाली मूंगफली"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

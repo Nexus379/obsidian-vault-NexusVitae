@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 23.0
 latin: "Solanum conditum organicum"
 en: "K-Classic Organic Ketchup"
 hi: "के-क्लासिक जैविक केचप"
-unit_price: 3.00
 props: 
   - "Extreme price-performance winner in the organic segment"
   - "Higher dry matter content of tomatoes compared to the standard line"
@@ -63,6 +61,14 @@ label: "K-Classic Bio Tomaten Ketchup"
 ru: "Био-кетчуп K-Classic"
 brand: "K-Classic Bio"
 purity: "Organic (Naturland/EU-Bio)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

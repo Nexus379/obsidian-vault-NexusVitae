@@ -31,13 +31,20 @@ icon: "🖋️"
 label: "Staedtler Triplus Fineliner"
 brand: "Staedtler"
 room: "studio"
-unit_price: 15.00
 en: "Staedtler Fineliners"
 unit_type: "piece"
 pl_score: 8.5
 props: 
   - "Technologischer 'Dry Safe' Schutz (kann Tage offen liegen)"
   - "Ergonomische Dreikantform für ermüdungsfreies Arbeiten"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ sfa_g: 21.0
 perishability: "Extremely high"
 en: "Fish Oil"
 hi: "मछली का तेल"
-unit_price: 15.00
 benefit: "Direct EPA & DHA Source"
 props: 
   - "Primarily consumed as a dietary supplement, not a cooking oil"
@@ -72,6 +70,14 @@ label: "Fish Oil"
 ru: "Рыбий жир"
 dm: 15.00
 es: "Aceite de pescado"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

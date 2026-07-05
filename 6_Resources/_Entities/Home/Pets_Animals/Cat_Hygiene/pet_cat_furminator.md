@@ -37,10 +37,17 @@ sci:
   - "#sci/Biology"
 pl_score: 8.0
 brand: "Furminator"
-unit_price: 25.00
 de: "Furminator fÃ¼r Katzen (BÃ¼rste)"
 locations: 
   - "pet_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 25.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ¾ PET SPECS ---
 pref_vendor: "Fressnapf / Zooplus"
 vendors: []

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 62.0
 latin: "Lactis alpina et bisctoctum LU"
 en: "Milka & LU"
 hi: "मिल्का और एलयू"
-unit_price: 1.50
 props: 
   - "Kollaboration zwischen Milka und der französischen Keksmarke LU"
   - "Vier kleine Butterkekse thronen auf der Schokolade"
@@ -65,6 +63,14 @@ ru: "Милка и LU"
 brand: "Milka / LU"
 lidl: 1.50
 rewe: 1.50
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

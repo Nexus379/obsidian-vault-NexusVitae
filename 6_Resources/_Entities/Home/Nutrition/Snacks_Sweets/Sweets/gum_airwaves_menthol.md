@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 60.0
 sorbitol_g: 58.0
 en: "Airwaves Gum"
 hi: "एयरवेव्स च्युइंग गम"
-unit_price: 1.00
 props: 
   - "Extremer Frische-Kick für die Atemwege"
   - "Nutzt ätherische Öle zur nasalen Befreiung"
@@ -63,6 +61,14 @@ label: "Airwaves Menthol & Eukalyptus"
 ru: "Жвачка Эйрвейвс"
 de: "Airwaves Kaugummi"
 brand: "Wrigley's / Mars"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

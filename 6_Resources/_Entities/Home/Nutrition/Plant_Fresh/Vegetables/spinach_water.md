@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 en: "Water Spinach"
 iron_plant_mg: 1.7
 hi: "कलमी साग"
-unit_price: 2.00
 props: 
   - "Hollow stems"
   - "Rich in amino acids"
@@ -65,6 +63,14 @@ props:
 label: "Water Spinach"
 ru: "Водяной шпинат"
 de: "Wasserspinat"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

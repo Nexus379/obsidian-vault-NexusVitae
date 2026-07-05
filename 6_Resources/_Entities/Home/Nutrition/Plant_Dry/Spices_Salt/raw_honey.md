@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ latin: "Apis mellifera (Producer)"
 glycemic_index: 58.0
 en: "Raw Honey"
 hi: "शहद"
-unit_price: 8.00
 benefit: "Antibacterial / Enzymatic"
 props: 
   - "Raw honey contains natural enzymes and pollen"
@@ -70,6 +68,14 @@ label: "Honey (Raw)"
 ru: "Мёд"
 es: "Miel cruda"
 rewe: 8.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

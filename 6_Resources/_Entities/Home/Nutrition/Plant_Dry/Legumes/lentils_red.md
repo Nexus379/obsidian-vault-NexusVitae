@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ en: "Red Lentils"
 latin: "Lens culinaris (Semen decorticatum)"
 iron_plant_mg: 7.4
 hi: "लाल मसूर"
-unit_price: 2.00
 props: 
   - "Hulled lentils (skin removed)"
   - "Dissolve when cooked (perfect for Dal/Soups)"
@@ -65,6 +63,14 @@ orient_market: 2.00
 label: "Red Lentils"
 ru: "Красная чечевица"
 lidl: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -31,7 +31,6 @@ icon: "🧴"
 label: "Alverde Bodylotion Bio-Olive"
 brand: "Alverde"
 room: "bathroom"
-unit_price: 3.00
 locations: 
   - "budni"
   - "dm"
@@ -42,6 +41,14 @@ props:
   - "Maximale Rückfettung durch technologisch wertvolles Olivenöl"
   - "Langzeit-Feuchtigkeitsschutz (24h)"
   - "Ideal als Basis für deine Ylang-Ylang Aroma-Hacks"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

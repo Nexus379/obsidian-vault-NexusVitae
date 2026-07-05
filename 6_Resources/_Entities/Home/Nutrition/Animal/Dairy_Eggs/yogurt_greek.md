@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
   - "#sci/Microbiology"
 en: "Greek Yogurt"
 hi: "ग्रीक योगर्ट"
-unit_price: 3.00
 benefit: "Probiotic cultures"
 props: 
   - "Strained to remove whey, resulting in higher protein density"
@@ -64,6 +62,14 @@ ru: "Греческий йогурт"
 de: "Griechischer Joghurt"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

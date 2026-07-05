@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 18.0
 latin: "Bacillus proteinus lidlianus"
 en: "Lidl Protein Bar"
 polyols_g: 15.0
-unit_price: 2.00
 props: 
   - "Der Preis-Leistungs-Killer im Fitness-Sektor"
   - "Extrem hoher Proteingehalt (22,5g pro 45g Riegel)"
@@ -63,6 +61,14 @@ ru: "Протеиновый батончик Лидл"
 brand: "Enery / High Protein"
 lidl: 2.00
 hi: "लिडल प्रोटीन बार"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

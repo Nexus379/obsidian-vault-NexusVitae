@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -48,7 +47,6 @@ edeka: 40.00
 latin: "Aqua vitae (Islaia amara)"
 en: "Laphroaig 10"
 hi: "लाफ्रोइग 10"
-unit_price: 40.00
 props: 
   - "The most polarizing 'medicinal' malt from the island of Islay"
   - "Extreme peat smoke levels from burning local moss"
@@ -60,6 +58,14 @@ ru: "Лафройг 10"
 aging_years: 10
 vol_pct: 40.0
 rewe: 40.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 40.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

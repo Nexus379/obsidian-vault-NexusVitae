@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
 usage: "Mexican staple"
 en: "Pinto Beans"
 hi: "पिंटो बीन्स"
-unit_price: 2.00
 props: 
   - "Mottled skin"
   - "Extremely creamy texture"
@@ -65,6 +63,14 @@ label: "Pinto Beans"
 ru: "Фасоль пинто"
 de: "Wachtelbohnen, Pintobohnen"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

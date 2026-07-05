@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 vit_b3_mg: 4.0
 en: "Masa Harina"
 hi: "मासा एरिना"
-unit_price: 5.00
 props: 
   - "Traditional flour for tortillas and tamales"
   - "Nixtamalization unlocks Vitamin B3 (Niacin)"
@@ -62,6 +60,14 @@ process: "Nixtamalization (Lime water treatment)"
 label: "Masa Harina (Nixtamalized)"
 ru: "Маса harina"
 de: "Masa Harina"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

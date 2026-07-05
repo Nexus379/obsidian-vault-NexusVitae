@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ edeka: 2.00
 latin: "Ammonii hydrogenocarbonas"
 en: "Ammonium Bicarbonate / Baker's Ammonia"
 hi: "अमोनियम बाइकार्बोनेट"
-unit_price: 2.00
 props: 
   - "Traditionelles Triebmittel für flaches Gebäck (Lebkuchen, Spekulatius, Amerikaner)"
   - "Zersetzt sich bei Hitze in Ammoniak, CO2 und Wasser (darf nicht in hohen Kuchen verwendet werden, da das Gas entweichen muss)"
@@ -68,6 +66,14 @@ props:
 label: "Hirschhornsalz (Ammoniumhydrogencarbonat)"
 ru: "Гидрокарбонат аммония"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

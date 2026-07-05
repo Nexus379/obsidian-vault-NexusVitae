@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 46.0
 en: "Whole Wheat Tortilla"
 fiber_density: "High"
-unit_price: 3.00
 props: 
   - "Die ballaststoffreiche Alternative für bewusste Ernährung"
   - "Technologisch etwas spröder als die Weizen-Variante"
@@ -61,6 +59,14 @@ de: "Vollkorn Tortilla"
 brand: "Bio Organic"
 lidl: 3.00
 hi: "होल व्हीट टॉर्टिला"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

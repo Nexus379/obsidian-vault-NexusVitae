@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,13 +50,20 @@ ar: "مونكي 47"
 fr: "Monkey 47"
 ja: "モンキー 47"
 fa: "مانکی ۴۷"
-unit_price: 40.00
 de: "Monkey 47"
 locations: 
   - "rewe"
   - "edeka"
   - "kaufland"
 hi: "मंकी 47"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 40.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 12.0
 latin: "Lactis emulsio (Miracle)"
 en: "Miracle Whip"
 hi: "मिरेकल व्हिप"
-unit_price: 4.00
 props: 
   - "Technically a 'Salatcreme', not a Mayonnaise due to lower fat"
   - "High vinegar and sugar content for 'tangy' profile"
@@ -63,6 +61,14 @@ props:
 label: "Miracle Whip (Classic)"
 ru: "Миракл Вип"
 brand: "Miracle Whip"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

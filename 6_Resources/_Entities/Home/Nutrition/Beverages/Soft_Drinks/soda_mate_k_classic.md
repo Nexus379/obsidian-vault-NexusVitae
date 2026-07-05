@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 carbs_total_g: 5.2
 en: "K-Classic Mate"
 caffeine_mg: 20.0
-unit_price: 1.00
 props: 
   - "Kaufland's budget clone of the classic mate profile"
   - "Priced significantly lower than the branded glass bottles"
@@ -63,6 +61,14 @@ label: "K-Classic Mate (Kaufland)"
 ru: "K-Classic Мате"
 de: "K-Classic Mate"
 hi: "के-क्लासिक मेट"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

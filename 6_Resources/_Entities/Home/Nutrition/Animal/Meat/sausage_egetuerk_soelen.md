@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 2.0
 latin: "Farcimen allium craticula (Egetürk)"
 en: "Egetürk Grilled Sucuk"
 hi: "एगेटर्क ग्रिल सजुक"
-unit_price: 5.00
 props: 
   - "Deutschlands bekannteste Sucuk-Marke"
   - "Die 'Şölen'-Variante ist speziell für den Grill gemacht (läuft weniger aus)"
@@ -70,6 +68,14 @@ ru: "Суджук для гриля Egetürk"
 brand: "Egetürk"
 rewe: 5.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

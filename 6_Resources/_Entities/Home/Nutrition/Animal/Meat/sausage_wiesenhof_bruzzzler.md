@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ edeka: 5.00
 latin: "Farcimen assum aves (Wiesenhof)"
 en: "Bruzzzler Poultry Sausage"
 hi: "ब्रूज़लर पोल्ट्री सॉसेज"
-unit_price: 5.00
 props: 
   - "Die dominierende Marken-Geflügelbratwurst in Deutschland"
   - "Fettreduziert im Vergleich zur Schweinebratwurst"
@@ -71,6 +69,14 @@ brand: "Wiesenhof"
 fr: "Saucisse de volaille Bruzzzler"
 rewe: 5.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

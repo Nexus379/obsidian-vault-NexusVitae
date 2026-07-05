@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 63.0
 latin: "Socolata alba alpina"
 en: "Milka White Chocolate"
 hi: "मिल्का व्हाइट चॉकलेट"
-unit_price: 1.50
 props: 
   - "Besteht rein aus Kakaobutter, Milchpulver und Zucker"
   - "Sehr hoher Zuckergehalt, liefert sofortige Energie"
@@ -62,6 +60,14 @@ base: "Cocoa butter, sugar, milk"
 ru: "Милка Белый шоколаad"
 brand: "Milka"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

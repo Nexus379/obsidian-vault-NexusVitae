@@ -39,10 +39,17 @@ pl_score: 7.0
 brand: "Korg"
 core: "Analog Circuitry / Digital Control"
 room: "studio"
-unit_price: 500.00
 de: "Korg Minilogue"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 500.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

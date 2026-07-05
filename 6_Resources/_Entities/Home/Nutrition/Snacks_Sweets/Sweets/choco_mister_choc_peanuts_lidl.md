@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ carbs_total_g: 58.0
 latin: "Arachis lidliana socolata"
 en: "Lidl Choco Peanuts"
 hi: "लिडल चोको मूंगफली"
-unit_price: 2.00
 color_source: "Plant concentrates"
 props: 
   - "Lidls Antwort auf M&M's"
@@ -61,6 +59,14 @@ label: "Mister Choc Choco-Linsen (Erdnuss)"
 ru: "Шоколадный арахис Лидл"
 brand: "Mister Choc"
 lidl: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

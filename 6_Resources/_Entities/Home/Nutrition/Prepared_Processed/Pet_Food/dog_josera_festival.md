@@ -30,7 +30,6 @@ quality: "Human Grade"
 label: "Josera Festival"
 brand: "Josera"
 room: "pantry"
-unit_price: 20.00
 locations: 
   - "specialty stores"
 en: "Josera Festival"
@@ -40,6 +39,14 @@ extra: "With Sauce Powder"
 props: 
   - "Gourmet-Trockenfutter (wird mit Wasser zur Sauce)"
   - "Technologisch extrem hochwertiges Familienunternehmen"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 20.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

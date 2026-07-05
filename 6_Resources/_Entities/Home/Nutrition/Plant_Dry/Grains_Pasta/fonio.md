@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "afro_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ en: "Fonio"
 iron_plant_mg: 8.0
 hi: "फोनियो"
 reformhaus: 3.00
-unit_price: 3.00
 afro_market: 3.00
 benefit: "High Sulfur Amino Acids"
 props: 
@@ -66,6 +64,14 @@ denns: 3.00
 label: "Fonio (Acha)"
 ru: "Фонио"
 de: "Fonio Hirse"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "afro_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

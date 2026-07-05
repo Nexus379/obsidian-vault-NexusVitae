@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ en: "Anise Leaves"
 anethole_mg: 15.0
 iron_plant_mg: 37.0
 hi: "सौंफ के पत्ते"
-unit_price: 2.00
 benefit: "Expectorant"
 props: 
   - "Sweet licorice flavor"
@@ -62,6 +60,14 @@ orient_market: 2.00
 label: "Anise Leaves"
 ru: "Листья аниса"
 de: "Anisblätter"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

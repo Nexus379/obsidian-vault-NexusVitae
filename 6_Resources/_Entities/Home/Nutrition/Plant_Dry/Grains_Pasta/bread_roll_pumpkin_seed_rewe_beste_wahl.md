@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 41.0
 en: "Pumpkin Seed Rolls"
 hi: "कद्दू के बीज वाले रोल्स"
-unit_price: 1.00
 props: 
   - "Nussiges Aroma durch geröstete Kürbiskerne"
   - "Technologisch reich an Magnesium und Zink"
@@ -60,6 +58,14 @@ ru: "Булочки с тыквенными семечками"
 de: "Kürbiskernbrötchen"
 brand: "REWE Beste Wahl"
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

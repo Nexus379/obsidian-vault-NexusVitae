@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ latin: "Oryza sativa (Fila)"
 en: "Rice Noodles"
 gluten_status: "100% Gluten-Free"
 hi: "चावल के नूडल्स"
-unit_price: 3.00
 props: 
   - "Bestehen nur aus Reismehl und Wasser"
   - "Werden durch Einweichen in heißem Wasser gegart, nicht kochend"
@@ -68,6 +66,14 @@ props:
 label: "Reisnudeln (Getrocknet)"
 ru: "Рисовая лапша"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

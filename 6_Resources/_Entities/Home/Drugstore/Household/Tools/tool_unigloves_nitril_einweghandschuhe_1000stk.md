@@ -38,14 +38,20 @@ props:
   - "Für Kochen (Fleisch), Putzen & Erste-Hilfe"
   - "Puderfrei und reißfest"
 # --- 🏠 HOUSEHOLD SPECS ---
-unit_price: 45.00
-pref_vendor: "Praxisdienst"
 vendors: []
 weight_g: 500
 volume_ml: 0
 hazardous: "No"
 eco_friendly: "No"
 pl_score: 9.5
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 45.00
+vendor_value: "Praxisdienst"
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧤  N20260703153001   Nitril Einweghandschuhe (1000 Stk. Großpackung)

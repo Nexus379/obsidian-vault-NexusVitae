@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,7 +48,6 @@ sci:
 carbs_total_g: 4.0
 en: "Parsley (Frozen)"
 hi: "फ्रोजन पार्सले"
-unit_price: 1.00
 type: "Curly or Flat leaf"
 props: 
   - "Kauflands Basis-Kraut für jede Küche"
@@ -60,6 +58,14 @@ ru: "Петрушка замороженная"
 de: "Petersilie (TK)"
 brand: "K-Classic"
 purity: "No added salt"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

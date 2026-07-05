@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rossmann"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 52.0
 latin: "Globuli fructosi cacao"
 en: "Rossmann Energy Balls"
 hi: "रॉसमैन एनर्जी बॉल्स"
-unit_price: 2.00
 props: 
   - "Natürlicher Energiekick ohne Zusatz von Industriezucker"
   - "Die Süße kommt zu 100% aus der Fruchtmatrix"
@@ -62,6 +60,14 @@ base: "Dates (Datteln)"
 ru: "Энергетические шарики Россманн"
 brand: "EnerBiO"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rossmann"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

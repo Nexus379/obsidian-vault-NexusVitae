@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "reformhaus"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ usage: "Protein fortification & Egg replacer"
 en: "Defatted Soy Flour"
 hi: "सोया का आटा"
 reformhaus: 4.00
-unit_price: 4.00
 props: 
   - "Defatted version has over 50% protein"
   - "Excellent binder in vegan baking"
@@ -64,6 +62,14 @@ denns: 4.00
 label: "Soy Flour (Defatted)"
 ru: "Соевая мука"
 de: "Sojamehl (Entfettet)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "reformhaus"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

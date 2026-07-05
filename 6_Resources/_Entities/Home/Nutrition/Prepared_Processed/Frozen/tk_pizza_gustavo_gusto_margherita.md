@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ carbs_total_g: 28.0
 dough_rest: "Extra long (min. 24h)"
 en: "Gustavo Gusto Margherita"
 hi: "गुस्तावो गुस्टो मार्गेरिटा"
-unit_price: 5.00
 props: 
   - "Technologisch der Benchmark: Handgeformter Teigrand"
   - "Verwendet echten laktosefreien Mozzarella"
@@ -66,6 +64,14 @@ ru: "Пицца Маргарита Густаво Густо"
 de: "Gustavo Gusto Margherita"
 brand: "Gustavo Gusto"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

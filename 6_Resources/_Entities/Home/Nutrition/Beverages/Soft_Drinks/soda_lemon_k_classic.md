@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,13 +54,20 @@ carbs_total_g: 9.8
 latin: "Potio carbonata (K-Classic Lymon)"
 en: "K-Classic Lemon"
 hi: "के-क्लासिक लेमन"
-unit_price: 1.00
 props: 
   - "Kaufland's clear lemon soda"
   - "Slightly higher calorie density than 7UP"
   - "Refreshing high carbonation"
 label: "K-Classic Zitrone (Kaufland)"
 ru: "Лимонад K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

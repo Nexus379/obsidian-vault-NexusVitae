@@ -44,13 +44,20 @@ vit_b1_mg: 1.1
 vit_b3_mg: 16.0
 vit_b5_mg: 6.0
 kcal: 0
-unit_price: 5.00
 vegan: true
 locations: 
   - "rossmann"
   - "dm"
   - "budni"
 vit_b7_mcg: 50.0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

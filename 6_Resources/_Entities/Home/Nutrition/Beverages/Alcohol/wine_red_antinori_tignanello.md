@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "feinkost_kaefer"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,12 +50,19 @@ ja: "アンティノリ ティニャネロ"
 label: "Antinori Tignanello (Super Tuscan)"
 high_end_wine_shops: 180.00
 fa: "آنتینوری تینیانلو"
-unit_price: 180.00
 de: "Antinori Tignanello"
 locations: 
   - "feinkost_kaefer"
   - "high_end_wine_shops"
 hi: "एंटीनोरी टिग्नैनेलो"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 180.00
+vendor_value: "feinkost_kaefer"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

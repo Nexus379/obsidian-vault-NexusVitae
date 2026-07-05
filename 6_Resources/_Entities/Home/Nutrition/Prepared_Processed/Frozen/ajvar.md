@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 9.0
 latin: "Capsicum / Solanum blend"
 en: "Ajvar"
 hi: "अजवर"
-unit_price: 3.00
 props: 
   - "Staple condiment for grilled meats (Cevapcici)"
   - "Rich, sweet, and smoky flavor from roasted red bell peppers"
@@ -68,6 +66,14 @@ process: "Roasted peppers and eggplant"
 label: "Ajvar"
 ru: "Айвар"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

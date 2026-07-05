@@ -37,11 +37,18 @@ vit_c_mg: 500.0
 latin: "Acidum ascorbicum"
 brand: "Altapharma"
 kcal: 0
-unit_price: 5.00
 vegan: true
 locations: 
   - "rossmann"
   - "dm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

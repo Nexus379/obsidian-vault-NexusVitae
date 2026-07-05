@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ latin: "Aqua mineralis (Lüneburger Heide)"
 fiber_g: 0.0
 en: "ViO Still Water"
 hi: "वीओ स्टिल"
-unit_price: 2.00
 props: 
   - "Exceptionally soft and easy to drink"
   - "Extremely popular in German modern gastronomy"
@@ -70,6 +68,14 @@ brand: "Apollinaris / Coca-Cola"
 purity: "High"
 rewe: 2.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

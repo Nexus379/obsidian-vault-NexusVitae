@@ -30,7 +30,6 @@ de: "Coshida Knuspermix"
 label: "Coshida Knuspermix (Lidl)"
 brand: "Coshida"
 room: "pantry"
-unit_price: 3.00
 locations: 
   - "lidl"
 en: "Lidl Crunchy Mix"
@@ -39,6 +38,14 @@ pl_score: 9.0
 props: 
   - "Die ökonomische Basis-Versorgung"
   - "Technologisch solide Vitamingrundlage"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

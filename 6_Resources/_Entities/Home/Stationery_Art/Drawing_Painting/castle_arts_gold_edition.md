@@ -43,11 +43,18 @@ brand: "Castle Arts"
 core: "Soft-Wax-Based"
 room: "studio"
 blending: "Seamless"
-unit_price: 80.00
 de: "Castle Arts Gold"
 locations: 
   - "online"
   - "special_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 80.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

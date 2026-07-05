@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,12 +52,19 @@ ja: "黒マスタードパウダー"
 kcal: 508
 ar: "خردل أسود مطحون"
 fa: "پودر خردل سیاه"
-unit_price: 3.00
 vegan: true
 locations: 
   - "asia_market"
   - "orient_market"
 es: "Mostaza negra molida"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

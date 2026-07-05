@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -48,7 +47,6 @@ brand: "dmBio"
 fr: "Farine de pois chiche"
 kcal: 346
 dm: 2.45
-unit_price: 2.45
 vegan: true
 locations: 
   - "dm"
@@ -56,6 +54,14 @@ props:
   - "High protein, perfect for vegan omelettes (Socca, Farinata)"
   - "Earthy, nutty flavor"
   - "Acts as an excellent binder in GF cooking"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.45
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

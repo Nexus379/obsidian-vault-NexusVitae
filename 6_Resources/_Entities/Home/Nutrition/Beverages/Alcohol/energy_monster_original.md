@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ latin: "Potio excitans (Monster Original)"
 taurine_mg: 400.0
 en: "Monster Original"
 caffeine_mg: 32.0
-unit_price: 3.00
 props: 
   - "Sweet, salty, and citrus flavor profile"
   - "Contains Ginseng and Guarana extracts"
@@ -64,6 +62,14 @@ label: "Monster Energy (Green)"
 ru: "Монстр Энерджи"
 botanicals: "Ginseng & Guarana extracts added"
 hi: "मॉन्स्टर"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

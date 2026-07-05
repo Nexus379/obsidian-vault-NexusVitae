@@ -39,10 +39,17 @@ pl_score: 9.5
 brand: "Floralys"
 room: "kitchen"
 absorbency: "High"
-unit_price: 4.00
 de: "Floralys Küchentücher"
 locations: 
   - "lidl"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

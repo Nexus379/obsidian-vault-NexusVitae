@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
   - "#sci/Botany"
 en: "Asian Eggplant"
 hi: "लंبا बैंगन"
-unit_price: 2.00
 anthocyanins_mg: 18.0
 props: 
   - "Long and slender shape"
@@ -62,6 +60,14 @@ orient_market: 2.00
 label: "Asian Eggplant"
 ru: "Азиатский баклажан"
 de: "Chinesische/Japanische Aubergine"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

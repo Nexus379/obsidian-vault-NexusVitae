@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "fish_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
   - "#sci/Nutrition"
 en: "Sea Bass"
 hi: "सी बास"
-unit_price: 10.00
 props: 
   - "The 'Loup de Mer' of French cuisine"
   - "Fine-textured, mild-flavored white fish"
@@ -61,6 +59,14 @@ ru: "Сибас"
 de: "Wolfsbarsch / Loup de Mer"
 fish_market: 10.00
 rewe: 10.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "fish_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

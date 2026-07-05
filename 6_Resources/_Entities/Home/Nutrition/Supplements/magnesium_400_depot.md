@@ -42,12 +42,19 @@ latin: "Magnesium oxidum"
 vit_b1_mg: 1.1
 brand: "Standard"
 kcal: 0
-unit_price: 6.00
 vegan: true
 locations: 
   - "rossmann"
   - "dm"
   - "budni"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

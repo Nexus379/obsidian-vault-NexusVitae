@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -62,7 +61,6 @@ fish_source: "Clupea harengus (Herring)"
 latin: "Salsa harengi rubra"
 en: "Red Herring Salad"
 hi: "लाल हेरिंग सलाद"
-unit_price: 4.00
 color_source: "Natural Betanin (Beetroot)"
 props: 
   - "Klassische Kombination aus gesalzenem Hering, Äpfeln, Zwiebeln und Rote Bete"
@@ -72,6 +70,14 @@ label: "Roter Heringssalat (mit Rote Bete)"
 ru: "Селедочный салат (красный)"
 lidl: 4.00
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

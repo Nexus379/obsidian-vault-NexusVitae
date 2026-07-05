@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 en: "Mulberry"
 iron_plant_mg: 9.7
 hi: "à¤¶à¤¹à¤¤à¥‚à¤¤"
-unit_price: 4.00
 benefit: "Plant Iron Powerhouse"
 props: 
   - "Naturally honey-sweet with a crunchy texture"
@@ -65,6 +63,14 @@ orient_market: 4.00
 ru: "Ð¨ÐµÐ»ÐºÐ¾Ð²Ð¸Ñ†Ð°"
 de: "Maulbeere (getrocknet)"
 dm: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

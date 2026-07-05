@@ -31,12 +31,19 @@ icon: "🦢"
 label: "Origami-Papier (Quadratisch)"
 de: "Origami-Papier"
 room: "studio"
-unit_price: 8.00
 en: "Origami Paper"
 unit_type: "piece"
 props: 
   - "Technologisch extrem faltstabil, bricht nicht an den Kanten"
   - "Dünn genug für komplexe Falt-Sequenzen (Tessellations)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

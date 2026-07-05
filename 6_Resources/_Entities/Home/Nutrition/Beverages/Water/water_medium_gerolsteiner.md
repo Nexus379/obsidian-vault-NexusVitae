@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -64,7 +63,6 @@ latin: "Aqua mineralis carbonata (Gerolstein)"
 fiber_g: 0.0
 en: "Gerolsteiner Medium"
 hi: "गेरोलस्टीनर मीडियम"
-unit_price: 1.00
 props: 
   - "Germany's most exported mineral water"
   - "Exceptionally high natural calcium and magnesium content"
@@ -73,6 +71,14 @@ label: "Gerolsteiner Medium"
 ru: "Герольштайнер Медиум"
 rewe: 1.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

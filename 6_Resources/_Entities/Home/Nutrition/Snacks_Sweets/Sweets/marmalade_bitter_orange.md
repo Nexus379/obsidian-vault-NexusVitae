@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ latin: "Citrus aurantium conserve"
 gourmet_market: 4.00
 en: "Orange Marmalade"
 hi: "नारंगी का मुरब्बा"
-unit_price: 4.00
 props: 
   - "Echte 'Marmelade' (darf laut EU-Recht nur aus Zitrusfrüchten bestehen)"
   - "Enthält feine Streifen der Orangenschale"
@@ -67,6 +65,14 @@ origin: "UK / Spain"
 ru: "Апельсиновый джем"
 de: "Bitterorangen-Marmelade"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

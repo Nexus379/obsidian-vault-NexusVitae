@@ -31,7 +31,6 @@ icon: "🌙"
 label: "Alverde Bio-Binden Nacht"
 de: "Alverde Nachtbinden"
 room: "bathroom"
-unit_price: 3.00
 en: "Alverde Night Pads"
 unit_type: "piece"
 absorption: "Heavy Duty"
@@ -41,6 +40,14 @@ props:
   - "Technologisch verlängerte Rückseite für Schutz im Liegen"
   - "Maximale Kapillarwirkung für die Nachtruhe"
   - "Sicherer Auslaufschutz ohne synthetische Superabsorber"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

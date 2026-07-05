@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 2.3
 latin: "Brassica oleracea botrytis"
 en: "Cauliflower (Frozen)"
 hi: "फ्रोजन फूलगोभी"
-unit_price: 2.00
 props: 
   - "Vielseitiger Low-Carb-Champion"
   - "Technologisch überlegen, da kein Geruch beim Schneiden in der Küche"
@@ -62,6 +60,14 @@ label: "K-Classic Blumenkohl (TK)"
 ru: "Цветная капуста замороженная"
 color: "Pure white (no browning)"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

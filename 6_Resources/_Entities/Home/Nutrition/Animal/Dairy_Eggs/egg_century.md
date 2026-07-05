@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
   - "#sci/FoodScience"
 en: "Century Egg"
 hi: "सेंचुरी एग"
-unit_price: 6.00
 props: 
   - "Chinese delicacy: egg cured for weeks in alkaline mixture"
   - "Yolk becomes creamy/dark green, white becomes dark brown jelly"
@@ -60,6 +58,14 @@ label: "Century Egg (Pidan)"
 ru: "Столетнее яйцо"
 de: "Tausendjährige Eier"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 15.0
 latin: "Arachis hypogaea pasta"
 en: "Peanut Butter (Creamy)"
 hi: "मूंगफली का मक्खन"
-unit_price: 4.00
 props: 
   - "Amerikanischer Stil mit zugesetztem Zucker und Salz"
   - "Stabilisiert durch gehärtete Fette (verhindert Ölabsetzung)"
@@ -63,6 +61,14 @@ props:
 label: "Barney's Best Peanut Butter (Creamy)"
 ru: "Арахисовое масло"
 brand: "Barney's Best"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

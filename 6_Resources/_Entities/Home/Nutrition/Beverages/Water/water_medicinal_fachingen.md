@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -62,7 +61,6 @@ latin: "Aqua medicinalis (Fachingen)"
 fiber_g: 0.0
 en: "Staatl. Fachingen"
 hi: "फैचिंगेन"
-unit_price: 2.00
 benefit: "Acid-base balance (High Bicarbonate)"
 props: 
   - "Famous for its extremely high natural bicarbonate (Hydrogencarbonat) content"
@@ -73,6 +71,14 @@ medical_use: true
 ru: "Фахинген"
 rewe: 2.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

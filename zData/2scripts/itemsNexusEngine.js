@@ -101,15 +101,32 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             return `[[${key}|${item.icon || "📦"} ${name}]]`;
         },
 
-        // 💰 Errechnet den Preis beim günstigsten/bevorzugten Laden
-        getBestPrice: (key, amount = 1.0) => {
+        // 💰 Errechnet den Preis nach ausgewählter Strategie
+        getStrategicPrice: (key, strategy = "value", amount = 1.0) => {
             const item = DATABASE[key];
             if (!item) return null;
             
-            const vendor = item.pref_vendor || "unknown";
-            const price = item.unit_price || 0;
+            const stratKeys = ["pure", "budget", "value", "market"];
+            let s = stratKeys.includes(strategy) ? strategy : "value";
+            
+            let price = Number(item[`price_${s}`]) || 0;
+            let vendor = item[`vendor_${s}`] || "";
+            
+            // Fallback auf 'value', falls die gewählte Strategie leer ist
+            if (price === 0 && s !== "value") {
+                price = Number(item[`price_value`]) || 0;
+                vendor = item[`vendor_value`] || "";
+            }
+            
+            // Fallback auf Legacy, falls noch gar keine neuen Felder befüllt wurden
+            if (price === 0) {
+                price = Number(item.unit_price) || 0;
+                vendor = item.pref_vendor || "unknown";
+            }
+            
             return {
-                vendor: vendor,
+                strategy: price === 0 ? "fallback" : s,
+                vendor: vendor || "unknown",
                 unit_price: price,
                 total: parseFloat((price * amount).toFixed(2))
             };

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ carbs_total_g: 1.5
 latin: "Farcimen coctum"
 en: "Bologna / Lyoner Slices"
 hi: "बोलोग्ना स्लाइस"
-unit_price: 2.00
 props: 
   - "Classic German finely emulsified pork sausage"
   - "Often features added pistachios or bell peppers (Paprikalyoner)"
@@ -66,6 +64,14 @@ ru: "Лионская колбаса / Мортаделла"
 brand: "Dulano"
 lidl: 2.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

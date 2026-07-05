@@ -30,7 +30,6 @@ brand: "Sheba (Mars)"
 label: "Sheba Selection in Sauce"
 meat_content: "4% named source (standard)"
 room: "pantry"
-unit_price: 1.00
 locations: 
   - "everywhere"
 sugar: "Often included"
@@ -41,6 +40,14 @@ props:
   - "Marketing-Goliath"
   - "Technologisch auf maximale 'Human-Appeal' Optik getrimmt"
   - "Preislich deutlich über der Leistung"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

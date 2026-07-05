@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ carbs_total_g: 80.0
 latin: "Varietas gelata (Haribo)"
 en: "Haribo Color-Rado"
 hi: "हारिबो कलर-राडो"
-unit_price: 1.50
 props: 
   - "Die beliebteste Mischung Deutschlands"
   - "Enthält Schaumzucker-Elemente und Lakritz-Kombinationen"
@@ -61,6 +59,14 @@ complexity: "Multi-texture production"
 label: "Haribo Color-Rado"
 ru: "Харибо Колор-Радо"
 brand: "Haribo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,7 +48,6 @@ sci:
 carbs_total_g: 19.5
 en: "Lidl Nasi Goreng"
 hi: "लिडल नासी गोरेंग"
-unit_price: 3.00
 props: 
   - "Lidls Antwort auf den asiatischen Hunger"
   - "Hoher Sättigungsgrad durch Reis-Fleisch-Verhältnis"
@@ -60,6 +58,14 @@ ru: "Наси Горенг Лидл"
 de: "Nasi Goreng (Lidl)"
 brand: "Vitasia"
 lidl: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

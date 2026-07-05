@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 en: "Rice Protein Isolate"
 hi: "चावल प्रोटीन"
 reformhaus: 15.00
-unit_price: 15.00
 benefit: "Fast Absorption / Leucine rich"
 props: 
   - "Often combined with pea protein for full amino acid profile"
@@ -64,6 +62,14 @@ label: "Rice Protein Isolate"
 ru: "Изолят рисового белка"
 de: "Reisprotein Isolat"
 dm: 15.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

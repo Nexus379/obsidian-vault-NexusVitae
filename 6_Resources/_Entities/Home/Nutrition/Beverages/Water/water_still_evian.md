@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -62,7 +61,6 @@ latin: "Aqua alpina (Evian)"
 fiber_g: 0.0
 en: "Evian Water"
 hi: "एवियन"
-unit_price: 2.00
 props: 
   - "Naturally filtered through glacial rocks for 15 years"
   - "Very balanced, neutral and crisp taste"
@@ -71,6 +69,14 @@ label: "Evian (Still)"
 ru: "Эвиан"
 rewe: 2.00
 mineral_balance: "Neutral/Alkaline"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

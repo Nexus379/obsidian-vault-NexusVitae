@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "pharmacy"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ latin: "Aqua medicinalis (Donat)"
 fiber_g: 0.0
 en: "Donat Mg"
 hi: "डोनट एमजी"
-unit_price: 3.00
 props: 
   - "The most magnesium-rich natural mineral water in the world (>1000mg/L)"
   - "Acts as an osmotic laxative in larger amounts; consumed in 'shot' sizes"
@@ -70,6 +68,14 @@ online: 3.00
 label: "Donat Mg (Rogaska)"
 ru: "Донат Магний"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "pharmacy"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

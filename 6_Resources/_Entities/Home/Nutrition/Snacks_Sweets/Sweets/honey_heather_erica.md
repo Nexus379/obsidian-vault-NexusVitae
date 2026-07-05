@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ latin: "Mel calluna"
 en: "Heather Honey"
 hi: "हीदर शहद"
 reformhaus: 15.00
-unit_price: 15.00
 props: 
   - "Technologische Besonderheit: Er ist thixotrop (gelartig im Glas, wird unter Bewegung kurz flüssig)"
   - "Sehr kräftiges, fast herbes Aroma"
@@ -68,6 +66,14 @@ props:
 denns: 15.00
 label: "Heidehonig (Gelierend)"
 ru: "Вересковый мёд"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -41,10 +41,17 @@ latin: "Detergens coloris"
 brand: "P&G / Ariel"
 room: "laundry"
 color_protection: "High"
-unit_price: 10.00
 de: "Ariel Color"
 locations: 
   - "everywhere"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

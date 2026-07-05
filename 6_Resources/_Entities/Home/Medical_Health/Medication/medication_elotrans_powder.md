@@ -31,7 +31,6 @@ icon: "🧂"
 label: "Elotrans (Electrolyte Powder)"
 brand: "Stada"
 room: "bathroom"
-unit_price: 8.50
 locations: 
   - "apotheke"
   - "shop_apotheke"
@@ -44,6 +43,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: "Glucose, Natriumchlorid, Kaliumchlorid"
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.50
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧂  N20260703103601   Elotrans (Electrolyte Powder)

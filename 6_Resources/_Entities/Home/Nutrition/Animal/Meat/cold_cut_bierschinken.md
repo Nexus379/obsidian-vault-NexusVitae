@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ carbs_total_g: 1.0
 latin: "Farcimen perna"
 en: "Bierschinken (Ham Sausage)"
 hi: "बीयरशिंकन"
-unit_price: 2.00
 props: 
   - "Fine sausage emulsion (Brät) embedded with large, lean chunks of cured pork or beef"
   - "Does not actually contain beer (named because it was traditionally eaten with beer)"
@@ -71,6 +69,14 @@ ru: "Биршинкен (Ветчинная колбаса)"
 lidl: 2.00
 rewe: 2.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

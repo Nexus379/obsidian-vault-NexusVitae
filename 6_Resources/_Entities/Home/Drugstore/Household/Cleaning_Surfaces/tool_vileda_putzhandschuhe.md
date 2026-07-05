@@ -39,14 +39,20 @@ props:
   - "Wiederverwendbar für grobe Putzarbeiten / Abwasch"
   - "Hält deutlich länger als die Eigenmarken"
 # --- 🏠 HOUSEHOLD SPECS ---
-unit_price: 2.50
-pref_vendor: "DM"
 vendors: []
 weight_g: 50
 volume_ml: 0
 hazardous: "No"
 eco_friendly: "No"
 pl_score: 9.0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.50
+vendor_value: "DM"
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧤  N20260703153002   Vileda Rubber Cleaning Gloves

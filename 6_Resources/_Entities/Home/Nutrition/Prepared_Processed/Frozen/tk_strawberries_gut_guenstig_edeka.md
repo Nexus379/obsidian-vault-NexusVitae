@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "edeka"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ edeka: 3.00
 latin: "Fragaria ananassa (Frozen)"
 en: "G&G Strawberries"
 hi: "जी एंड जी स्ट्रॉबेरी"
-unit_price: 3.00
 props: 
   - "Edekas Preis-Hammer für Erdbeer-Liebhaber"
   - "Technologisch bedingt beim Auftauen oft weicher als Heidelbeeren"
@@ -61,6 +59,14 @@ label: "Gut & Günstig Erdbeeren (EDEKA)"
 ru: "Клубника Г&Г"
 fruit_size: "Large (Whole fruits)"
 brand: "Gut & Günstig"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "edeka"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

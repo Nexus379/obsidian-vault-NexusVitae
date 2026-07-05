@@ -29,7 +29,6 @@ icon: "⚡"
 label: "K-Classic Rohrreiniger (Granulat)"
 brand: "K-Classic"
 room: "kitchen"
-unit_price: 3.00
 locations: 
   - "kaufland"
 reactivity: "Extreme"
@@ -40,6 +39,14 @@ props:
   - "Technologisch gefährlich, aber effektiv: Erzeugt Hitze (Exotherm)"
   - "Löst versteinertes Fett in der Küche"
   - "Achtung: Nur mit kaltem Wasser nachspülen!"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

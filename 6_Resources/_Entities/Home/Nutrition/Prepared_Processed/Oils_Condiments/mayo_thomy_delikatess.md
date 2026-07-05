@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 0.9
 latin: "Emulsio ovi (Thomy)"
 en: "Thomy Delicacy Mayo"
 hi: "थॉमी मेयोनेज़"
-unit_price: 3.00
 props: 
   - "Pure oil-in-water emulsion with highest legal fat content for Mayo"
   - "Classic aluminum tube prevents oxidation of sensitive oils"
@@ -63,6 +61,14 @@ props:
 label: "Thomy Delikatess Mayonnaise"
 ru: "Майонез Томи"
 brand: "Thomy"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "supplement"
-pref_vendor: "sunday_natural"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -36,6 +35,14 @@ brand: "Sunday Natural"
 de: "Vitamin B12"
 props: 
   - "Health & Optimization"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 0.00
+vendor_value: "sunday_natural"
+price_market: 0.00
+vendor_market: ""
 ---
 
 # ðŸ©¸ N202607010916175   Vitamin B12

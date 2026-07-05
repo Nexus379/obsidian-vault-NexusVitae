@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ latin: "Aves farcimen (Gutfried)"
 en: "Poultry Sausage (Bologna style)"
 processing: "Emulsified cooked sausage (Brühwurst)"
 hi: "पोल्ट्री सॉसेज"
-unit_price: 4.00
 props: 
   - "The market leader for thick poultry sausages in Germany"
   - "Significantly lower fat than pork Fleischwurst (~15% vs ~25%)"
@@ -70,6 +68,14 @@ fat_source: "Poultry skin/fat"
 brand: "Gutfried"
 rewe: 4.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

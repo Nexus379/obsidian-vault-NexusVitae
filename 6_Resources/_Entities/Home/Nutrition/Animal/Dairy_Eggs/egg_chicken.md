@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
 protein_quality: "Biological Value 100 (Gold Standard)"
 en: "Chicken Egg"
 hi: "अंडा"
-unit_price: 4.00
 benefit: "High Choline for Brain Health"
 props: 
   - "Contains every nutrient needed to create life (except Vit C)"
@@ -67,6 +65,14 @@ ru: "Яйцо"
 de: "Hühnerei (Größe L)"
 es: "Huevo"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

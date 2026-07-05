@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "ASRock"
 core: "PCB"
 room: "studio"
-unit_price: 140.00
 de: "ASRock B650M Mainboard"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 140.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

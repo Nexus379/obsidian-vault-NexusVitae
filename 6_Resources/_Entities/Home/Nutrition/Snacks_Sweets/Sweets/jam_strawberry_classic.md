@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 58.0
 latin: "Fragaria conserve"
 en: "Strawberry Jam"
 hi: "स्ट्रॉबेरी जैम"
-unit_price: 3.00
 props: 
   - "Der deutsche Frühstücksklassiker"
   - "Geliert durch Pektin und Zitronensäure"
@@ -68,6 +66,14 @@ gelling_agent: "Pectin"
 ru: "Клубничное варенье"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

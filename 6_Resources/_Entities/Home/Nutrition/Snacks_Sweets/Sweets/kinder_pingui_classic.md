@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "fridge_section"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 37.8
 latin: "Spheniscidae socolata"
 en: "Kinder Pingui"
 coating: "Darker cocoa glaze"
-unit_price: 3.00
 props: 
   - "Gekühlter Snack mit einer dünnen Schokoladenhülle"
   - "In der Mitte befindet sich eine Schicht aus knackiger Schokolade zwischen der Milchcreme"
@@ -62,6 +60,14 @@ label: "Kinder Pingui"
 ru: "Киндер Пингви"
 brand: "Kinder"
 hi: "किंडर पिंगुई"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "fridge_section"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

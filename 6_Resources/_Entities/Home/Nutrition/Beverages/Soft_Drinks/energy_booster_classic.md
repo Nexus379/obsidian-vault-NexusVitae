@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "edeka"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ edeka: 1.00
 latin: "Potio excitans (Edeka)"
 en: "Booster Energy"
 caffeine_mg: 32.0
-unit_price: 1.00
 props: 
   - "The private label energy drink of the Edeka Group"
   - "Slightly fruitier and more acidic than Kong Strong"
@@ -65,6 +63,14 @@ ru: "Бустер"
 netto: 1.00
 brand: "Booster"
 hi: "बूस्टर एनर्जी"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "edeka"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

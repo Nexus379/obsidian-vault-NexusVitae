@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ latin: "Aqua vitae (Dalwhinnie)"
 specialist: 50.00
 en: "Dalwhinnie 15"
 hi: "डलविनी 15"
-unit_price: 50.00
 props: 
   - "Known as 'The Gentle Dram' from Scotland's highest and coldest distillery"
   - "Extremely long aging (15 years) for a standard malt, creating immense smoothness"
@@ -63,6 +61,14 @@ ru: "Далвинни 15"
 aging_years: 15
 vol_pct: 43.0
 rewe: 50.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 50.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

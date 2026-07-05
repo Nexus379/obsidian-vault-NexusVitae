@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "LG"
 core: "VA Panel"
 room: "studio"
-unit_price: 130.00
 de: "LG 24GQ50F 24 Zoll"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 130.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 0.5
 latin: "Amorphophallus konjac (Fila)"
 en: "Shirataki Noodles (Konjac)"
 hi: "शिराताकी नूडल्स"
-unit_price: 3.00
 glucomannan_g: 3.0
 props: 
   - "Bestehen zu 97% aus Wasser und 3% unverdaulicher Konjak-Wurzelfaser (Glucomannan)"
@@ -69,6 +67,14 @@ props:
 label: "Shirataki Nudeln (Konjak)"
 ru: "Лапша Ширатаки"
 fr: "Nouilles Shirataki"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

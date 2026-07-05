@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "penny"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,7 +48,6 @@ sci:
 carbs_total_g: 25.5
 en: "Penny San Fabio"
 hi: "पेनी सैन फैबियो पिज्जा"
-unit_price: 2.00
 props: 
   - "Pennys Antwort auf Wagner"
   - "Oft etwas großzügiger belegt als die 3er-Packs von Lidl"
@@ -60,6 +58,14 @@ de: "Penny San Fabio Pizza"
 brand: "San Fabio"
 penny: 2.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "penny"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

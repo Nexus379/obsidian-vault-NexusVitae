@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ en: "Sacha Inchi"
 vit_e_mg: 17.0
 hi: "à¤¸à¤šà¤¾ à¤‡à¤‚à¤šà¥€"
 reformhaus: 6.00
-unit_price: 6.00
 props: 
   - "Star-shaped pod from the Amazon"
   - "One of the highest plant sources of Omega-3"
@@ -64,6 +62,14 @@ denns: 6.00
 label: "Sacha Inchi (Inca Peanut)"
 ru: "Ð¡Ð°Ñ‡Ð° Ð˜Ð½Ñ‡Ð¸"
 de: "Sacha Inchi, Inka-Erdnuss"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -43,11 +43,18 @@ latin: "Spiritus vitri premium"
 brand: "Henkel / Sidolin"
 room: "bathroom"
 anti_fog: "Medium"
-unit_price: 3.00
 de: "Sidolin Glasreiniger"
 locations: 
   - "everywhere"
 streak_free: "Excellent"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

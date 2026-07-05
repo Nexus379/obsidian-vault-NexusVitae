@@ -31,7 +31,6 @@ icon: "💊"
 label: "Lopedium Akut (Loperamide)"
 brand: "Hexal"
 room: "bathroom"
-unit_price: 3.50
 locations: 
   - "apotheke"
   - "shop_apotheke"
@@ -44,6 +43,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: "Loperamid"
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.50
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 💊  N20260703102007   Lopedium Akut (Loperamide)

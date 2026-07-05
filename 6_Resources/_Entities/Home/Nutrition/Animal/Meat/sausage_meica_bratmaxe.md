@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ edeka: 6.00
 latin: "Farcimen assum (Meica)"
 en: "Meica Bratmaxe"
 hi: "माइका ब्रैटमैक्स"
-unit_price: 6.00
 props: 
   - "Eine der bekanntesten Marken-Bratwürste Deutschlands"
   - "Feines Brät, extrem knackiger Biss durch speziellen Saitling"
@@ -71,6 +69,14 @@ ru: "Братмаксе (Meica)"
 brand: "Meica"
 rewe: 6.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

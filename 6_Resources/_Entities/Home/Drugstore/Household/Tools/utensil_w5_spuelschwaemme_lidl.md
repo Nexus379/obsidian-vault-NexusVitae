@@ -29,7 +29,6 @@ icon: "🛒"
 label: "W5 Spülschwämme (Lidl 6er Pack)"
 brand: "W5"
 room: "kitchen"
-unit_price: 1.00
 locations: 
   - "lidl"
 en: "Lidl Sponges"
@@ -39,6 +38,14 @@ props:
   - "Der Preis-Leistungs-Killer"
   - "Ideal für den häufigen Wechsel (Hygiene-Vorteil)"
   - "Technologisch simpler Aufbau, aber effektiv"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

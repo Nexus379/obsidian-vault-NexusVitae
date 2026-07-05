@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Samsung"
 core: "Snapdragon 8 Gen 3 for Galaxy"
 room: "backpack"
-unit_price: 1300.00
 de: "Samsung Galaxy S24 Ultra"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1300.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

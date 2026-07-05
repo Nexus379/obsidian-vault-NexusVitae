@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 24.0
 latin: "Pulvis fermentans (Oetkerus)"
 en: "Dr. Oetker Baking Powder"
 hi: "बेकिंग पाउडर"
-unit_price: 2.00
 props: 
   - "The 1891 benchmark for chemical leavening"
   - "Combination of sodium bicarbonate and acidifying agents"
@@ -63,6 +61,14 @@ props:
 label: "Dr. Oetker Original Backin"
 ru: "Разрыхлитель Dr. Oetker"
 brand: "Dr. Oetker"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 9.5
 latin: "Potio carbonata (Freeway Lymon)"
 en: "Freeway UP"
 hi: "फ्रीवे अप"
-unit_price: 1.00
 props: 
   - "Lidl's Sprite/7UP clone"
   - "Classic green bottle design"
@@ -62,6 +60,14 @@ props:
 label: "Freeway UP (Lidl)"
 ru: "Фривей Ап"
 caffeine: "Zero"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
 en: "Tiger Nut"
 hi: "à¤Ÿà¤¾à¤‡à¤—à¤° à¤¨à¤Ÿ"
 reformhaus: 4.00
-unit_price: 4.00
 props: 
   - "Botanically a tiny tuber/rhizome"
   - "Naturally sweet, almond-like flavor"
@@ -65,6 +63,14 @@ denns: 4.00
 label: "Tiger Nut"
 ru: "Ð§ÑƒÑ„Ð°"
 de: "Erdmandel, Tigernuss"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

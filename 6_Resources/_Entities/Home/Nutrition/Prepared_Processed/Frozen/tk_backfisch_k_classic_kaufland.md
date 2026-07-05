@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ fish_type: "Alaska Pollock (MSC)"
 carbs_total_g: 18.5
 en: "Kaufland Battered Fish"
 hi: "के-क्लासिक बैटर्ड फिश"
-unit_price: 3.00
 props: 
   - "Kauflands Standard für Fans von flüssiger Panade"
   - "Hält die Form im Backofen extrem stabil"
@@ -60,6 +58,14 @@ label: "K-Classic Backfisch-Stäbchen"
 ru: "Рыбные палочки Кауфланд"
 de: "Kaufland Backfischstäbchen"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

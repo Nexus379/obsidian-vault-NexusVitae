@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 19.0
 en: "Lidl Battered Fish"
 hi: "लिडल बैटर्ड फिश"
-unit_price: 3.00
 props: 
   - "Lidls direkte Antwort auf den Iglo Backfisch"
   - "Die Kruste ist oft etwas dicker, was für mehr Crunch sorgt"
@@ -60,6 +58,14 @@ ru: "Рыбные палочки в кляре Лидл"
 de: "Lidl Backfischstäbchen"
 brand: "Ocean Sea"
 lidl: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -31,7 +31,6 @@ icon: "🌈"
 label: "Fotokarton / Tonkarton (Bunt)"
 de: "Bunter Fotokarton"
 room: "studio"
-unit_price: 5.00
 en: "Colored Cardstock"
 unit_type: "piece"
 pl_score: 10.0
@@ -39,6 +38,14 @@ thickness: "220g-300g/m²"
 props: 
   - "Hohe Biegesteifigkeit für 3D-Konstruktionen"
   - "Vollständig durchgefärbt (Schnittkanten bleiben farbig)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

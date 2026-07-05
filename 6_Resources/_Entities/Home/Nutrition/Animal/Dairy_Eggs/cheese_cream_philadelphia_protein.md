@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 edeka: 3.00
 en: "Philadelphia Protein"
 hi: "फिलाडेल्फिया प्रोटीन"
-unit_price: 3.00
 nutrient_focus: "Maximum Protein / Minimum Fat"
 props: 
   - "Optimized for muscle recovery and dieting"
@@ -63,6 +61,14 @@ label: "Philadelphia Protein (3% Fat)"
 ru: "Филадельфия Протеин"
 de: "Philadelphia Protein"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

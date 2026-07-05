@@ -31,7 +31,6 @@ form: "Star-profile"
 label: "Orlando Dental Sticks"
 active_ing: "Hexametaphosphate"
 room: "pantry"
-unit_price: 2.00
 locations: 
   - "lidl"
 en: "Lidl Dental Sticks"
@@ -40,6 +39,14 @@ pl_score: 10.0
 props: 
   - "Mechanische Zahnreinigung durch Kauen"
   - "Viel günstiger als Marken-Originale"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

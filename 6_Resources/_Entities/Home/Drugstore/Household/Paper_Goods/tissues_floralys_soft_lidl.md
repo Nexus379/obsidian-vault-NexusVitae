@@ -29,7 +29,6 @@ icon: "🛒"
 label: "Floralys Soft Taschentücher"
 brand: "Floralys"
 room: "bathroom"
-unit_price: 2.00
 layers: 4
 en: "Lidl Tissues"
 unit_type: "piece"
@@ -39,6 +38,14 @@ locations:
 props: 
   - "Technologisch auf Augenhöhe mit Markenprodukten zum Bruchteil des Preises"
   - "Sehr weich an der Nase, ideal für Allergiker"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

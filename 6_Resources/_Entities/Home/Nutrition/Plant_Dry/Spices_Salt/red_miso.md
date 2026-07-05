@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 20.0
 latin: "Fermented Glycine max"
 en: "Red Miso"
 hi: "लाल मिसो"
-unit_price: 6.00
 props: 
   - "Darker, saltier, and more pungent than white miso"
   - "Undergoes Maillard reaction during long fermentation"
@@ -67,6 +65,14 @@ denns: 6.00
 label: "Aka Miso (Red Miso)"
 ru: "Красная мисо-паста"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

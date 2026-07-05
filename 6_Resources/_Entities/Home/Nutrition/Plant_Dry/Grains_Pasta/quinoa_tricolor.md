@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ en: "Quinoa"
 latin: "Chenopodium quinoa (Semen siccum variegatum)"
 iron_plant_mg: 4.6
 hi: "क्विनोआ"
-unit_price: 2.00
 props: 
   - "Contains all 9 essential amino acids"
   - "Inca called it 'Chisaya Mama'"
@@ -69,6 +67,14 @@ dm: 2.00
 lidl: 2.00
 rewe: 2.00
 lysine_mg: 700.0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

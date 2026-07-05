@@ -30,7 +30,6 @@ icon: "🧵"
 label: "Cien Interdental-Sticks"
 brand: "Cien"
 room: "bathroom"
-unit_price: 3.00
 locations: 
   - "lidl"
 size_range: "ISO 0 - ISO 3"
@@ -41,6 +40,14 @@ props:
   - "Technologisch essenziell für die Reinigung der Zahnzwischenräume"
   - "Viel effektiver als normale Zahnseide"
   - "Gummierte Struktur schont das Zahnfleisch"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

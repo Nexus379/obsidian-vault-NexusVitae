@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,7 +48,6 @@ sci:
 carbs_total_g: 26.0
 en: "Lidl French Fries"
 hi: "लिडल फ्रेंच फ्राइज़"
-unit_price: 2.00
 props: 
   - "Lidls zuverlässiger Standard-Sack (oft 1kg oder 2,5kg)"
   - "Bestehen aus ausgesuchten Kartoffelsorten mit hohem Stärkegehalt"
@@ -60,6 +58,14 @@ de: "Lidl Pommes"
 variety: "Standard Cut"
 brand: "Harvest Basket"
 lidl: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

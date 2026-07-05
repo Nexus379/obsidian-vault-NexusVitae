@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ protein_quality: "Complete Amino Acid Profile"
 en: "Hemp Seed"
 iron_plant_mg: 7.9
 hi: "à¤­à¤¾à¤‚à¤— à¤•à¥‡ à¤¬à¥€à¤œ"
-unit_price: 5.00
 props: 
   - "Perfect 3:1 ratio of Omega-6 to Omega-3"
   - "Contains easily digestible Edestin protein"
@@ -68,6 +66,14 @@ ru: "ÐšÐ¾Ð½Ð¾Ð¿Ð»ÑÐ½Ð¾Ðµ ÑÐµÐ¼Ñ"
 de: "Hanfsamen (GeschÃ¤lt)"
 dm: 5.00
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

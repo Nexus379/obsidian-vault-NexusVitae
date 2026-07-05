@@ -40,11 +40,18 @@ pl_score: 9.5
 active_ing: "Natural Hyaluron"
 brand: "Alverde"
 room: "bathroom"
-unit_price: 4.00
 de: "Alverde Aqua Gesichtscreme"
 locations: 
   - "budni"
   - "dm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

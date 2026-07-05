@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "reformhaus"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ en: "Canihua"
 iron_plant_mg: 12.0
 hi: "कनिवा"
 reformhaus: 3.00
-unit_price: 3.00
 props: 
   - "Smaller than Quinoa, no bitter saponins"
   - "Significantly higher iron and fiber than Quinoa"
@@ -63,6 +61,14 @@ label: "Canihua (Baby Quinoa)"
 ru: "Канива"
 de: "Canihua, Baby-Quinoa"
 superfood: "Iron Champion"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "reformhaus"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

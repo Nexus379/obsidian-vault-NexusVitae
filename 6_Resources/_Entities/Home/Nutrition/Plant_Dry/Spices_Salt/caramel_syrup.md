@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 77.0
 latin: "Saccharum caramelised"
 en: "Caramel Syrup"
 hi: "कैरामेल सिरप"
-unit_price: 5.00
 props: 
   - "Made from caramelized sugar"
   - "Deep, rich roasted notes"
@@ -68,6 +66,14 @@ process: "Maillard/Caramelization"
 label: "Caramel Syrup"
 ru: "Карамельный сироп"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

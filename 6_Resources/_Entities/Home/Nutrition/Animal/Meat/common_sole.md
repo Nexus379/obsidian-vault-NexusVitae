@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "fish_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,12 +53,19 @@ ja: "シタビラメ"
 kcal: 91
 ar: "سمک موسی"
 fa: "کفشک‌ماهی"
-unit_price: 12.00
 vegan: false
 locations: 
   - "fish_market"
   - "rewe"
 hi: "सोल"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: "fish_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

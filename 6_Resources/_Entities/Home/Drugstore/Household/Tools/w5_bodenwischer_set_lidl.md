@@ -29,7 +29,6 @@ icon: "🛒"
 label: "W5 Bodenwischer-System (Lidl)"
 brand: "W5"
 room: "utility"
-unit_price: 15.00
 locations: 
   - "lidl"
 en: "Lidl Floor Mop"
@@ -39,6 +38,14 @@ props:
   - "Der Preis-Leistungs-Killer für die schnelle Reinigung"
   - "Kompatibel mit feuchten Bodentüchern"
   - "Leichtbauweise für maximale Agilität"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

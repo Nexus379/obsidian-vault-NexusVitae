@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "gourmet_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ latin: "Pistacia vera paste"
 gourmet_market: 15.00
 en: "Pistachio Butter"
 hi: "पिस्ता बटर"
-unit_price: 15.00
 props: 
   - "Luxury nut butter, extremely expensive"
   - "Staple in Italian pastry making (Cannoli fillings, Gelato)"
@@ -67,6 +65,14 @@ props:
 label: "Pistachio Cream/Butter"
 ru: "Фисташковая паста"
 lutein_zeaxanthin_mcg: 2900.0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "gourmet_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "weekly_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
 en: "Nasturtium"
 benzyl_isothiocyanate_mg: 100.0
 hi: "나स्टर्टियम"
-unit_price: 2.00
 benefit: "Natural antibiotic"
 props: 
   - "Intense peppery flavor"
@@ -65,6 +63,14 @@ denns: 2.00
 label: "Nasturtium Leaves"
 ru: "Настурция"
 de: "Kapuzinerkresse (Blätter)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "weekly_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

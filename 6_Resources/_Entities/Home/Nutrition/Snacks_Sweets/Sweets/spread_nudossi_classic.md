@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ edeka: 5.00
 protein_g: 7.5
 en: "Nudossi (36% Hazelnuts)"
 hi: "नुडोसी"
-unit_price: 5.00
 props: 
   - "Der 'Haselnuss-König' unter den Aufstrichen"
   - "Fast dreimal so hoher Nussanteil wie Nutella oder Nuspli"
@@ -66,6 +64,14 @@ label: "Nudossi (Das Original mit 36% Nuss)"
 ru: "Нудосси"
 brand: "Nudossi"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ sci:
   - "#sci/Nutrition"
 en: "Lemon Balm"
 hi: "लेमन बाम"
-unit_price: 2.00
 benefit: "Calming / Antiviral"
 props: 
   - "Refreshing citrus scent from Citral and Citronellal"
@@ -68,6 +66,14 @@ denns: 2.00
 label: "Lemon Balm"
 ru: "Мелисса"
 de: "Zitronenmelisse"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

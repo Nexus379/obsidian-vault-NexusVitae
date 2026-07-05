@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "penny"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 23.5
 en: "Penny Potato Pancakes"
 hi: "पेनी आलू पेनकेक्स"
-unit_price: 2.00
 props: 
   - "Pennys Antwort auf den hausgemachten Klassiker"
   - "Wird oft in der 600g-Packung verkauft"
@@ -60,6 +58,14 @@ ru: "Драники Пенни"
 de: "Penny Reibekuchen"
 brand: "Penny"
 penny: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "penny"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ carbs_total_g: 12.0
 latin: "Lens culinaris blend"
 en: "Vegan Lentil Spread"
 hi: "शाकाहारी मसूर स्प्रेड"
-unit_price: 3.00
 props: 
   - "Typical German 'Bio-Markt' staple based on lentils"
   - "Blended with sunflower oil, yeast extract, and various herbs/spices"
@@ -70,6 +68,14 @@ denns: 3.00
 label: "Lentil / Bean Spread (Vegan Pate)"
 ru: "Веганский паштет из чечевицы"
 dm: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

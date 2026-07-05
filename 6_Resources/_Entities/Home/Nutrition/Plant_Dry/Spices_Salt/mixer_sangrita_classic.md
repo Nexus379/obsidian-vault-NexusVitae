@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 4.00
 latin: "Succus lycopersici conditus"
 en: "Sangrita (Tomato Mixer)"
 hi: "सांग्रिटा"
-unit_price: 4.00
 label: "Sangrita Classico / Picante"
 props: 
   - "The essential non-alcoholic mixer for the 'Mexikaner' shot"
@@ -68,6 +66,14 @@ base: "Tomato, Orange & Lemon juice mix"
 ru: "Сангрита"
 rewe: 4.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

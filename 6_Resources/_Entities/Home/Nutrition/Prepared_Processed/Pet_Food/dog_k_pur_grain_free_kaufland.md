@@ -32,7 +32,6 @@ props:
 label: "K-Pur Getreidefrei (Kaufland)"
 brand: "K-Pur"
 room: "pantry"
-unit_price: 15.00
 locations: 
   - "kaufland"
 en: "Kaufland Grain Free"
@@ -40,6 +39,14 @@ unit_type: "piece"
 pl_score: 9.5
 grain_free: "Yes"
 main_ingredient: "Potato/Beef"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🎨 ART SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -30,13 +30,20 @@ icon: "🥑"
 label: "Alverde Locken-Spülung"
 de: "Alverde Locken-Spülung"
 room: "bathroom"
-unit_price: 3.00
 en: "Alverde Curl Conditioner"
 unit_type: "piece"
 pl_score: 9.0
 props: 
   - "Sorgt für die Bündelung der Locken durch Faserglättung"
   - "Extreme Kämmbarkeit ohne chemische Weichmacher"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

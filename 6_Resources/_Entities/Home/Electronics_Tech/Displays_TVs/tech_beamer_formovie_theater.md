@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Formovie"
 core: "Triple Laser"
 room: "living_room"
-unit_price: 3000.00
 de: "Formovie Theater (Laser TV)"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3000.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

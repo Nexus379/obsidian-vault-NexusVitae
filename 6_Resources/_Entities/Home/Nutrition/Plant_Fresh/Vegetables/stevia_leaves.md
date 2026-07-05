@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ en: "Stevia"
 denns: 3.00
 hi: "स्टेविया"
 vegan_status: "100% Plant-based"
-unit_price: 3.00
 props: 
   - "30-40x sweeter than sugar"
   - "Zero impact on blood sugar"
@@ -63,6 +61,14 @@ label: "Stevia Leaves"
 sweetness: "Natural non-glycemic"
 ru: "Стевия"
 de: "Stevia, Süßkraut"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

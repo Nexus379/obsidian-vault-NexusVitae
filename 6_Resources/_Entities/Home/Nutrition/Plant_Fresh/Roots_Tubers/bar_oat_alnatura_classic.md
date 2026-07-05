@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "alnatura"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ edeka: 1.00
 latin: "Avena sativa crustum (Alnatura)"
 en: "Alnatura Oat Bar"
 hi: "अल्नातुरा ओट बार"
-unit_price: 1.00
 props: 
   - "Der Bio-Standard für langanhaltende Sättigung"
   - "Hoher Ballaststoffanteil für stabilen Blutzuckerspiegel"
@@ -69,6 +67,14 @@ brand: "Alnatura"
 dm: 1.00
 rewe: 1.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "alnatura"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

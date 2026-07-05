@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ sci:
 omega3_ala_g: 9.1
 en: "Walnut"
 hi: "à¤…à¤–à¤°à¥‹à¤Ÿ"
-unit_price: 3.00
 benefit: "Brain shape, Brain food (ALA)"
 props: 
   - "Highest Omega-3 (ALA) content of any tree nut"
@@ -71,6 +69,14 @@ ru: "Ð“Ñ€ÐµÑ†ÐºÐ¸Ð¹ Ð¾Ñ€ÐµÑ…"
 de: "Walnuss"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

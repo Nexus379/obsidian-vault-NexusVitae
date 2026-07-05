@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 carbs_total_g: 10.6
 en: "Freeway Cola"
 caffeine_mg: 10.0
-unit_price: 1.00
 props: 
   - "Lidl's flagship private label"
   - "Matches Coca-Cola's nutritional profile almost exactly"
@@ -63,6 +61,14 @@ de: "Freeway Cola"
 sweetener: "100% Sugar"
 lidl: 1.00
 hi: "फ्रीवे कोला"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

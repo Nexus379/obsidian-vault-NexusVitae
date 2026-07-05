@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ latin: "Sus scrofa (Farcimen Bononiense)"
 delicatessen: 5.00
 en: "Mortadella Bologna"
 hi: "मोर्टाडेला बोलोग्ना"
-unit_price: 5.00
 props: 
   - "Authentic Italian cold cut with visible cubes of throat fat (lardons)"
   - "Protected Geographical Indication (IGP) ensures high quality standards"
@@ -70,6 +68,14 @@ origin: "Bologna, Italy"
 ru: "Мортаделла (Болонья)"
 rewe: 5.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

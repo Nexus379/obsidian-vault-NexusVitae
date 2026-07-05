@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "mcdonalds"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ carbs_total_g: 43.0
 latin: "Emulsio dulcamara (McD)"
 en: "McDonald's Sweet 'N Sour"
 hi: "मैकडोनल्ड्स खट्टा-मीठा सॉस"
-unit_price: 1.00
 props: 
   - "Der ikonische Dip für Chicken McNuggets"
   - "Basiert technologisch eher auf Aprikosenmark als auf Tomaten"
@@ -66,6 +64,14 @@ label: "McDonald's Süßsauer Sauce (Dip)"
 ru: "Кисло-сладкий соус Макдоналдс"
 brand: "McDonald's"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "mcdonalds"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

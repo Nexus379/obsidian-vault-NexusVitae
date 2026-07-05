@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 60.2
 latin: "Socolata arachidis (Mars)"
 en: "Snickers"
 hi: "स्निकर्स"
-unit_price: 1.00
 props: 
   - "Der meistverkaufte Schokoriegel der Welt"
   - "Technologisch perfektionierte Balance aus zähem Karamell und knackigen Erdnüssen"
@@ -62,6 +60,14 @@ props:
 label: "Snickers (Mars)"
 ru: "Сникерс"
 brand: "Mars"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

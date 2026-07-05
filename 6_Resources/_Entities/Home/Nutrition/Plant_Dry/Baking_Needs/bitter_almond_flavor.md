@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
 carbs_total_g: 0.0
 en: "Bitter Almond Extract/Flavor"
 hi: "कड़वा बादाम अर्क"
-unit_price: 2.00
 props: 
   - "Hochkonzentrierte Öl/Wasser-Emulsion"
   - "Basiert technologisch fast immer auf künstlichem Benzaldehyd, nicht auf echten Bittermandeln (frei von Blausäure)"
@@ -65,6 +63,14 @@ dosage: "Drops (Extreme concentration)"
 ru: "Ароматизатор горький миндаль"
 de: "Bittermandel-Aroma"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

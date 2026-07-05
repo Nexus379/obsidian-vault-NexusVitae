@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
   - "#sci/Phytochemistry"
 en: "Cranberry"
 hi: "क्रैनबेरी"
-unit_price: 3.00
 benefit: "UTI Prevention (A-type PACs)"
 props: 
   - "Stops bacteria adhering to bladder walls"
@@ -66,6 +64,14 @@ label: "Cranberry"
 ru: "Клюква"
 de: "Cranberry, Moosbeere"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

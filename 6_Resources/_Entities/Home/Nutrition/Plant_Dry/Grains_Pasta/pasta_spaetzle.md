@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ sci:
 latin: "Triticum et ovum (Spätzle)"
 en: "Spätzle (German Egg Noodles)"
 hi: "स्पाएत्ज़ल"
-unit_price: 3.00
 props: 
   - "Süddeutscher Klassiker mit extrem hohem Eigehalt"
   - "Flüssiger Teig wird geschabt oder gepresst, was die unregelmäßige Form erzeugt"
@@ -69,6 +67,14 @@ label: "Spätzle (Schwäbische Eiernudeln)"
 ru: "Шпецле"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -48,11 +47,18 @@ ar: "ليكور 43"
 fr: "Licor 43"
 ja: "リコール 43"
 fa: "لیکور ۴۳"
-unit_price: 18.00
 de: "Licor 43"
 locations: 
   - "everywhere"
 hi: "लिकर 43"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 18.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

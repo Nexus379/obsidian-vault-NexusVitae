@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "specialist"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,13 +49,20 @@ ar: "شارتوز أخضر"
 fr: "Chartreuse Verte"
 ja: "シャルトルーズ ヴェール"
 fa: "شارتوز سبز"
-unit_price: 50.00
 de: "Grüne Chartreuse"
 locations: 
   - "specialist"
   - "rewe_feinkost"
 rewe_feinkost: 50.00
 hi: "ग्रीन चार्टreuse"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 50.00
+vendor_value: "specialist"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

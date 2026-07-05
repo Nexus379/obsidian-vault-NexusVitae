@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ gourmet_market: 5.00
 en: "Yuzu"
 yuzunone_mg: 2.5
 hi: "युज़ू"
-unit_price: 5.00
 props: 
   - "Complex aroma (lemon/mandarin/grapefruit blend)"
   - "Prized for its zest"
@@ -62,6 +60,14 @@ props:
 label: "Yuzu"
 ru: "Юдзу"
 de: "Yuzu"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

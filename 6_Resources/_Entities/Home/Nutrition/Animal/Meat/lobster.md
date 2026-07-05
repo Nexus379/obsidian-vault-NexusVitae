@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "fish_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 gourmet_market: 30.00
 en: "Lobster"
 hi: "झींगा मछली"
-unit_price: 30.00
 props: 
   - "High in selenium for thyroid support"
   - "Meat is incredibly lean despite its 'rich' reputation (often served with butter)"
@@ -61,6 +59,14 @@ label: "Lobster"
 ru: "Лобстер / Омар"
 de: "Hummer"
 fish_market: 30.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 30.00
+vendor_value: "fish_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

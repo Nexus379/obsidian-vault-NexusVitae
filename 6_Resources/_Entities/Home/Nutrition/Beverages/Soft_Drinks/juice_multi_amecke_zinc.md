@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ edeka: 3.00
 latin: "Succus multifructus (Amecke + Zincum)"
 en: "Amecke Raspberry + Zinc"
 hi: "अमेके रास्पबेरी + जिंक"
-unit_price: 3.00
 benefit: "Immune system support"
 props: 
   - "Functional multi-fruit blend focused on immune health"
@@ -68,6 +66,14 @@ zinc_mg: 1.5
 label: "Amecke Apfel-Traube-Himbeere + Zink"
 ru: "Амеке Малина + Цинк"
 fortification: "Zinc + Vit C"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

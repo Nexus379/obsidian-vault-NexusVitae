@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -66,7 +65,6 @@ gourmet_market: 4.00
 en: "Goose Fat"
 vit_e_mg: 2.7
 hi: "हंस की चर्बी"
-unit_price: 4.00
 props: 
   - "Essential for traditional German red cabbage (Rotkohl) and roasted potatoes"
   - "Melts at a very low temperature (approx. 25°C) but handles roasting heat perfectly"
@@ -74,6 +72,14 @@ props:
 label: "Goose Fat"
 ru: "Гусиный жир"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

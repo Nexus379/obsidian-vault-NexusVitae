@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -62,7 +61,6 @@ latin: "Oryza sativa (Jasmimum aromaticum)"
 glycemic_index: 70.0
 en: "Jasmine Rice"
 hi: "चमेली चावल"
-unit_price: 1.00
 props: 
   - "Long-grain rice with a flowery aroma"
   - "High amylopectin content makes it stickier than Basmati"
@@ -71,6 +69,14 @@ label: "Jasmine Rice (Thai Fragrant)"
 ru: "Рис жасмин"
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,13 +54,20 @@ carbs_total_g: 9.6
 latin: "Potio carbonata (K-Classic Aurantium)"
 en: "K-Classic Orange"
 hi: "के-क्लासिक ऑरेंज"
-unit_price: 1.00
 props: 
   - "Kaufland's standard orange soda"
   - "Very similar nutritional profile to Freeway"
   - "Available in large bulk PET bottles"
 label: "K-Classic Orange (Kaufland)"
 ru: "K-Classic Апельсин"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

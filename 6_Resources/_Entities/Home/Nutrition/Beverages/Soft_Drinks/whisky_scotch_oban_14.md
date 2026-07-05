@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,13 +49,20 @@ ar: "أوبان 14"
 fr: "Oban 14"
 ja: "オーバン 14年"
 fa: "اوبان ۱۴"
-unit_price: 70.00
 de: "Oban 14"
 locations: 
   - "rewe"
   - "edeka"
   - "kaufland"
 hi: "ओबन 14"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 70.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

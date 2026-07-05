@@ -362,7 +362,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 ## 🌿Consuetudo
 ```dataviewjs
-(function(){ 
+(async function(){ 
     const c = dv.current(); 
     const v = dv.page("zData/4values/VitaminTracker.md"); 
     
@@ -406,18 +406,44 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     const compAlchemy = vitaminTasks.filter(t => isAlchemy(t) && t.completed).length;
     bonus += (compAlchemy * 2.5); // Bio-Hacks
 
+    // Workout-Log Bonus
+    const dStr = c["cal_date"] ? moment(String(c["cal_date"])).format("YYYY-MM-DD") : moment(c.file.name.substring(0,10), "YYYY-MM-DD").format("YYYY-MM-DD");
+    const wPage = dv.page(`0_Calendar/4_Projectlogs/Workouts/Workout_${dStr}.md`);
+    if (wPage) {
+        bonus += 5; // Er hat das Workout-Log gestartet! (+5%)
+        try {
+            const wFile = app.vault.getAbstractFileByPath(wPage.file.path);
+            if (wFile) {
+                const content = await app.vault.read(wFile);
+                let setsFilled = 0;
+                let targetCount = 0;
+                let rows = content.split('\n').filter(r => r.includes('| `'));
+                rows.forEach(r => {
+                    targetCount++;
+                    let cells = r.split('|').slice(2, -1);
+                    if (cells.filter(cell => /[a-zA-Z0-9]/.test(cell)).length >= 3) setsFilled++;
+                });
+                
+                if (targetCount > 0 && setsFilled >= targetCount) {
+                    bonus += 10; // FULL COMPLETION BONUS (+10%)
+                } else if (setsFilled > 0) {
+                    bonus += 5; // PARTIAL COMPLETION (+5%)
+                }
+            }
+        } catch(e) {}
+    }
+
     // 🔱 THE CAP (Max 120%)
     const totalPercent = Math.min(basePercent + bonus, 120);
 
     // --- 4. VISUAL EVOLUTION (Strict Logic) ---
     let icon = "🌸"; let status = "BUILDING FOUNDATION"; let color = "var(--text-faint)";
 
-    if (baseMet) {
+    // Der neue Gatekeeper: Du hast alle 5 Pillars ODER du hast es mit Boni ausgeglichen!
+    if (totalPercent >= 100) {
         icon = "💖"; status = "SYNC COMPLETE"; color = "var(--interactive-accent)";
         if (totalPercent >= 110) { icon = "🔥"; status = "OVERCHARGE"; color = "#ff7b00"; }
         if (totalPercent >= 120) { icon = "🐦‍🔥"; status = "PHOENIX ASCENSION"; color = "#ff4500"; }
-    } else if (totalPercent >= 100) {
-        status = "BASICS PENDING"; 
     }
     
     // --- 5. UI OUTPUT ---
@@ -430,8 +456,8 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     for (let i = 1; i <= 12; i++) {
         bar += (totalPercent >= i * 10) ? `<span style='${sFlower}'>🌸</span>` : `<span style='${sHeart}'>🤍</span>`;
     }
-    if (baseMet && totalPercent >= 110 && totalPercent < 120) bar += `<span style='${sFire}'>🔥</span>`;
-    if (baseMet && totalPercent >= 120) bar += `<span style='${sPhoenix}'>🐦‍🔥</span>`;
+    if (totalPercent >= 110 && totalPercent < 120) bar += `<span style='${sFire}'>🔥</span>`;
+    if (totalPercent >= 120) bar += `<span style='${sPhoenix}'>🐦‍🔥</span>`;
 
     dv.paragraph("<div style='font-family: var(--font-interface); padding: 10px 0;'>" +
         "<div style='display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: bold; color: " + color + ";'>" +
@@ -445,7 +471,11 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
         let open = [];
         if(!p1) open.push(`L (${compBase}/${reqBase})`); if(p2 < 1) open.push("E"); 
         if(!p3) open.push("B"); if(!p4) open.push("E"); if(!p5) open.push("N");
-        dv.paragraph("> [!caution] **Pending Pillars:** " + open.join(" • "));
+        if (totalPercent >= 100) {
+            dv.paragraph("> [!success] **Pillars balanced out by pure Effort!** (Missed: " + open.join(" • ") + ")");
+        } else {
+            dv.paragraph("> [!caution] **Pending Pillars:** " + open.join(" • "));
+        }
     }
 })()
 ```
@@ -455,7 +485,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
 > -  **Journal** AM: `INPUT[toggle:journal_am]` 
 > 	- *Gratitude, Fascinating, Braindump*
-> - **Fitness** AM: `INPUT[number:fitness_am]` min
+> - **Fitness** AM: `INPUT[number:fitness_am]` min *(inkl. Spazieren)*
 > - [ ] 🛏️ Make bed & air out the room
 > - [ ] 🍽️ Empty dishwasher
 > - [ ] 🍵 Make tea
@@ -628,96 +658,38 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 >
 > > [!multi-column]
 > >
-> > > [!info|flat] 🧊 Nutrition Requirements (Batch Calculation)
+> > > [!info|flat] 🛒 Automated Grocery Sync
 > > > ```dataviewjs
-> > > const planPath = "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md";
-> > > const planPage = dv.page(planPath);
-> > > const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
-> > > let Nexus;
-> > > try { Nexus = await (require(enginePath))(app); } catch(e) {}
-> > > 
-> > > if (!planPage) {
-> > >      dv.paragraph("❌ _No meal plan found._");
-> > > } else {
-> > >      const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-> > >      const slots = ["brk", "ben", "lun", "snk", "eve"];
-> > >      
-> > >      // 🔱 THE SHOPPING DAY LOGIC (Look-Ahead)
-> > >      const logDate = moment(String(dv.current().cal_date || dv.current().file.name.substring(0, 10)), "YYYY-MM-DD");
-> > >      const referenceDate = logDate.isValid() ? logDate : moment();
-> > >      const todayIdx = referenceDate.day();
-> > >      let lookAhead = (todayIdx === 1) ? 3 : (todayIdx === 4 ? 4 : 1);
-> > >      let periodText = (todayIdx === 1) ? "Mon-Wed (3 Days)" : (todayIdx === 4 ? "Thu-Sun (4 Days)" : "Next 24h");
-> > >      
-> > >      let recipeCounts = {}; 
-> > > 
-> > >      // 1. Calculate Consumption Need for specific period
-> > >      for (let i = 0; i < lookAhead; i++) {
-> > >          const dayStr = days[(todayIdx + i) % 7];
-> > >          for (let slot of slots) {
-> > >              let meals = planPage[`${dayStr}_${slot}`];
-> > >              if (!meals) continue;
-> > >              let mealArray = Array.isArray(meals) ? meals : [meals];
-> > >              for (let m of mealArray) {
-> > >                  const cleanId = String(m).replace(/[\[\]"]/g, "").trim();
-> > >                  recipeCounts[cleanId] = (recipeCounts[cleanId] || 0) + 1;
-> > >              }
-> > >          }
-> > >      }
-> > > 
-> > >      let neededAtoms = {};
-> > > 
-> > >      // 2. Inventory & Batch Calculation
-> > >      for (let [recipeName, neededServings] of Object.entries(recipeCounts)) {
-> > >          const recipe = dv.page(recipeName);
-> > >          if (!recipe) continue;
-> > > 
-> > >          let stored = Number(recipe.portions_stored) || 0;
-> > >          let pDate = recipe.prep_date ? moment(String(recipe.prep_date)) : null;
-> > >          let shelfLife = Number(recipe.prep_shelf_life) || 4; 
-> > >          let isExpired = (stored > 0 && pDate && referenceDate.diff(pDate, 'days') > shelfLife);
-> > >          
-> > >          if (isExpired) stored = 0; // Expired stock is ignored
-> > > 
-> > >          let deficit = neededServings - stored;
-> > >          let rYield = Number(recipe.portions) || 1; 
-> > > 
-> > >          if (deficit > 0) {
-> > >              let batchesToCook = Math.ceil(deficit / rYield);
-> > >              for (let key in recipe) {
-> > >                  if (key.startsWith("amt_")) {
-> > >                      const atomId = key.replace("amt_", "");
-> > >                      const amountPerBatch = Number(recipe[key]) || 0;
-> > >                      neededAtoms[atomId] = (neededAtoms[atomId] || 0) + (amountPerBatch * batchesToCook);
-> > >                  }
-> > >              }
-> > >          }
-> > >      }
-> > > 
-> > >      // 3. UI Generation (Clean Design & English)
-> > >      dv.paragraph(`<div style="font-size: 0.8em; opacity: 0.6; margin-bottom: 8px; text-transform: uppercase;">Scanning: <b>${periodText}</b></div>`);
-> > >      
-> > >      let html = `<div style="display: flex; flex-direction: column; gap: 6px;">`;
-> > >      const sortedAtoms = Object.entries(neededAtoms).sort();
-> > >      
-> > >      if (sortedAtoms.length > 0) {
-> > >          sortedAtoms.forEach(([id, amount]) => {
-> > >              const item = Nexus ? Nexus.find(id) : null;
-> > >              const label = item ? (item.label || id) : id.replace(/_/g, " ");
-> > >              const icon = item ? (item.icon || "📦") : "📦";
-> > >              const unit = "g";
-> > >              const val = Math.round(amount * 1000) / 10;
-> > >              
-> > >              html += `<div style="display: flex; justify-content: space-between; padding: 6px 10px; background: var(--background-secondary-alt); border-radius: 6px; border-left: 3px solid var(--interactive-accent); font-size: 0.9em;">
-> > >                  <span>${icon} <b>${label}</b></span>
-> > >                  <span style="opacity:0.8; font-family: monospace;">${val} ${unit}</span>
-> > >              </div>`;
-> > >          });
-> > >      } else {
-> > >          html += `<div style="padding: 10px; opacity: 0.6; text-align: center; background: var(--background-secondary); border-radius: 6px;">_Inventory stable. No batch ingredients needed._</div>`;
-> > >      }
-> > >      html += `</div>`;
-> > >      dv.paragraph(html);
+> > > const rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > if (rPage) {
+> > >     const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
+> > >     const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
+> > >     const dObj = moment(dStr, "YYYY-MM-DD");
+> > >     const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
+> > >     
+> > >     let hasGroceries = false;
+> > >     for (let i = 1; i <= 21; i++) {
+> > >         let slotVal = rPage[`rt_${todayStr}_${i}`];
+> > >         if (!slotVal) continue;
+> > >         let arr = Array.isArray(slotVal) ? slotVal : [slotVal];
+> > >         for (let v of arr) {
+> > >             if (String(v).startsWith("groceries")) hasGroceries = true;
+> > >         }
+> > >     }
+> > >     
+> > >     if (hasGroceries) {
+> > >         const enginePath = app.vault.adapter.basePath + "/zData/2scripts/generateShoppingList.js";
+> > >         let generator;
+> > >         try { 
+> > >             delete require.cache[require.resolve(enginePath)]; 
+> > >             generator = require(enginePath); 
+> > >             generator(app, dv, moment).then(link => {
+> > >                 dv.paragraph(`🛒 **Today is Shopping Day!**<br>Your list is ready:<br>➤ ${link}`);
+> > >             });
+> > >         } catch(e) { dv.paragraph("🔥 Error loading generator: " + e.message); }
+> > >     } else {
+> > >         dv.paragraph("_No groceries scheduled for today._");
+> > >     }
 > > > }
 > > > ```
 > > > <br>[[2_Areas/4_Organize/Shopping_Hub|➡️ Open Central Procurement Hub]]
@@ -793,45 +765,40 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 
 > > > ```dataviewjs
 > > > // 🏋️ NEXUS FITNESS SYNC
-> > > const dStr = dv.current().file.name.substring(0, 10);
-> > > const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
-> > > const dObj = moment(dStr, "YYYY-MM-DD");
-> > > const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
-> > > 
-> > > const fitPlan = dv.page("2_Areas/6_Activity/Fitness_Routine");
-> > > if (fitPlan) {
-> > >     const regions = [
-> > >         {l: "🤸 Warmup", v: "mobility"},
-> > >         {l: "💪 Upper Body", v: "upper"},
-> > >         {l: "🦵 Lower Body", v: "lower"},
-> > >         {l: "🪨 Core", v: "core"},
-> > >         {l: "🔥 Cardio", v: "cardio"}
-> > >     ];
+> > > const rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > if (rPage) {
+> > >     const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
+> > >     const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
+> > >     const dObj = moment(dStr, "YYYY-MM-DD");
+> > >     const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
 > > >     
-> > >     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
-> > >     let engine = null;
-> > >     try { engine = require(enginePath)(); } catch(e) {}
-> > >     
-> > >     let todaysWorkout = [];
-> > >     regions.forEach(r => {
-> > >         let exKey = fitPlan[`fit_${todayStr}_${r.v}`];
-> > >         if (exKey && exKey !== "free") {
-> > >             if (engine && engine.all[exKey]) {
-> > >                 todaysWorkout.push(`> - **${r.l}**: ${engine.all[exKey].icon} ${engine.all[exKey].label}`);
-> > >             } else {
-> > >                 todaysWorkout.push(`> - **${r.l}**: ${exKey}`);
-> > >             }
+> > >     let hasWorkout = false;
+> > >     for (let i = 1; i <= 21; i++) {
+> > >         let slotVal = rPage[`rt_${todayStr}_${i}`];
+> > >         if (!slotVal) continue;
+> > >         let arr = Array.isArray(slotVal) ? slotVal : [slotVal];
+> > >         for (let v of arr) {
+> > >             if (String(v).startsWith("workout_")) hasWorkout = true;
 > > >         }
-> > >     });
-> > >     
-> > >     if (todaysWorkout.length > 0) {
-> > >         dv.header(4, "🏋️ Today's Training Protocol");
-> > >         dv.paragraph(todaysWorkout.join("\n"));
-> > >     } else {
-> > >         dv.paragraph("> [!info|clean] 🧘 **Rest Day.** Recover and flow like water.");
 > > >     }
-> > > } else {
-> > >     dv.paragraph("⚠️ FitnessPlan missing.");
+> > >     
+> > >     if (hasWorkout) {
+> > >         const enginePath = app.vault.adapter.basePath + "/zData/2scripts/generateWorkoutLog.js";
+> > >         let generator;
+> > >         try { 
+> > >             delete require.cache[require.resolve(enginePath)]; 
+> > >             generator = require(enginePath); 
+> > >             generator(app, dv, moment).then(link => {
+> > >                 if (link) {
+> > >                     dv.paragraph(`🏋️‍♂️ **Workout Time!**<br>Your log is ready:<br>➤ ${link}`);
+> > >                 } else {
+> > >                     dv.paragraph("> [!info|clean] 🧘 **Rest Day.** Recover and flow like water.");
+> > >                 }
+> > >             });
+> > >         } catch(e) { dv.paragraph("🔥 Error loading generator: " + e.message); }
+> > >     } else {
+> > >         dv.paragraph("_No workout scheduled for today._");
+> > >     }
 > > > }
 > > > ```
 
@@ -952,7 +919,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > - **Selfcare** PM: `INPUT[toggle:selfcare_pm]`
 > > - **Journal** PM: `INPUT[toggle:journal_pm]` 
 > > 	- *Gratitude, Fascinating, Braindump*
-> > - **Fitness** PM: `INPUT[number:fitness_pm]` min
+> > - **Fitness** PM: `INPUT[number:fitness_pm]` min *(inkl. Spazieren)*
 > > - [ ] 🍽️ Load & start dishwasher
 > > - [ ] 🗑️ Check trash & take out if needed
 > > - [ ] 🛋️ 5-Minute Reset (clear tables & surfaces)

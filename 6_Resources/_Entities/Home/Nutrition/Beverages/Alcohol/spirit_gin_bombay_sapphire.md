@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -48,12 +47,19 @@ ar: "بومباي سافير"
 fr: "Bombay Sapphire"
 ja: "ボンベイ・サファイア"
 fa: "بمبی سفایر"
-unit_price: 25.00
 de: "Bombay Sapphire"
 locations: 
   - "everywhere"
 vol_pct: 40.0
 hi: "बॉम्बे सैफायर"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 25.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

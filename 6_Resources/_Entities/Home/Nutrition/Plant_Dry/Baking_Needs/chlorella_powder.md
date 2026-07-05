@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rossmann"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ chlorophyll_mg: 2500.0
 en: "Chlorella Powder"
 iron_plant_mg: 120.0
 hi: "क्लोरेला पाउडर"
-unit_price: 15.00
 props: 
   - "Single-celled green algae"
   - "Chelating agent for detox"
@@ -69,6 +67,14 @@ label: "Chlorella Powder"
 ru: "Хлорелла (порошок)"
 de: "Chlorella Pulver"
 denns: 15.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "rossmann"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

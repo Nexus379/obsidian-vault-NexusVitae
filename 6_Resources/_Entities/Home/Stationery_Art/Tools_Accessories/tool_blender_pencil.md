@@ -29,12 +29,19 @@ shelf_life_months: 60
 label: "Colorless Blender (Wachs-Stift)"
 de: "Blender-Stift"
 room: "studio"
-unit_price: 3.00
 en: "Colorless Blender"
 unit_type: "piece"
 props: 
   - "Vermengt Pigmente molekular auf dem Papier"
   - "Erzeugt einen glatten, fotorealistischen Look"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

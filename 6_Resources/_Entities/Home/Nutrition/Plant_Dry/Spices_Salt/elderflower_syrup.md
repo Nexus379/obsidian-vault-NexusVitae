@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -63,7 +62,6 @@ carbs_total_g: 71.0
 latin: "Sambucus nigra extract"
 en: "Elderflower Syrup"
 hi: "एल्डरफ्लावर सिरप"
-unit_price: 5.00
 props: 
   - "Floral, sweet, and slightly musky aroma"
   - "Absolute necessity for the famous 'Hugo' spritz"
@@ -72,6 +70,14 @@ label: "Elderflower Syrup"
 ru: "Сироп из бузины"
 dm: 5.00
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

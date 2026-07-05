@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 0.0
 latin: "Potio excitans (Wolf acalorica)"
 en: "Crazy Wolf Sugarfree"
 caffeine_mg: 30.0
-unit_price: 1.00
 props: 
   - "The low-budget diet energy staple at Kaufland"
   - "Slightly more acidic bite than the classic version"
@@ -64,6 +62,14 @@ ru: "Крейзи Вульф без сахара"
 brand: "Crazy Wolf"
 caffeine: "30mg/100ml"
 hi: "क्रेज़ी वुल्फ शुगरफ्री"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

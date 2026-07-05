@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 en: "Green Banana Flour"
 hi: "कच्चे केले का आटा"
 reformhaus: 8.00
-unit_price: 8.00
 benefit: "Type 2 Resistant Starch"
 props: 
   - "Supreme prebiotic food"
@@ -64,6 +62,14 @@ denns: 8.00
 label: "Green Banana Flour"
 ru: "Мука из зеленых бананов"
 de: "Grünes Bananenmehl"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

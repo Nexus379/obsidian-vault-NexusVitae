@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
   - "#sci/Nutrition"
 en: "Lotus Root Starch"
 hi: "कमल जड़ स्टार्च"
-unit_price: 6.00
 benefit: "TCM Spleen Health"
 props: 
   - "Highly digestible starch"
@@ -59,6 +57,14 @@ props:
 label: "Lotus Root Starch"
 ru: "Крахмал из корня лотоса"
 de: "Lotuswurzelstärke"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 6.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 9.8
 latin: "Potio carbonata (Freeway Aurantium)"
 en: "Freeway Orange"
 hi: "फ्रीवे ऑरेंज"
-unit_price: 1.00
 props: 
   - "Lidl's budget alternative to Fanta"
   - "Full sugar profile (no artificial sweeteners in the classic version)"
@@ -62,6 +60,14 @@ label: "Freeway Orange (Lidl)"
 ru: "Фривей Апельсин"
 sweetener: "100% Sugar"
 lidl: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

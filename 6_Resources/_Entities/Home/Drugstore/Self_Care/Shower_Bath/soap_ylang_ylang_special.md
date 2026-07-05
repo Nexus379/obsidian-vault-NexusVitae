@@ -31,7 +31,6 @@ icon: "🟡"
 label: "Alverde Pflanzenölseife (Exotisch - Ylang-Ylang Mix)"
 brand: "Alverde / Naturkind"
 room: "bathroom"
-unit_price: 2.00
 locations: 
   - "budni"
   - "dm"
@@ -42,6 +41,14 @@ props:
   - "Seltener Fund: Ylang-Ylang sorgt für ein sinnliches Aroma-Profil"
   - "Technologisch rückfettend durch pflanzliches Glycerin"
   - "Oft in Kombination mit Malve oder Rose"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

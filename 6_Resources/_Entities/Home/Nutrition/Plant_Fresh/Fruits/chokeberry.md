@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "reformhaus"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
 en: "Chokeberry"
 hi: "चोकबेरी"
 reformhaus: 3.00
-unit_price: 3.00
 anthocyanins_mg: 1480.0
 props: 
   - "Extremely astringent raw"
@@ -65,6 +63,14 @@ ru: "Черноплодная рябина"
 de: "Aroniabeere, Apfelbeere"
 dm: 3.00
 superfood: "Unmatched ORAC value"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "reformhaus"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

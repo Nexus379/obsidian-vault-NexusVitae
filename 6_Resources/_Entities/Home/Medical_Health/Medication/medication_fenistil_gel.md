@@ -31,7 +31,6 @@ icon: "🧴"
 label: "Fenistil Gel"
 brand: "Fenistil"
 room: "bathroom"
-unit_price: 5.50
 locations: 
   - "apotheke"
   - "shop_apotheke"
@@ -44,6 +43,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: "Dimetindenmaleat"
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.50
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧴  N20260703102004   Fenistil Gel

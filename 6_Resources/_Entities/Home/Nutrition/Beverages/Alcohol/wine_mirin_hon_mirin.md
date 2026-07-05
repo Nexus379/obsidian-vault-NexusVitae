@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe_feinkost"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ benefit: "Glossy shine (Teriyaki Effect)"
 latin: "Oryzae vinum culinarium (Hon-Mirin)"
 en: "Hon-Mirin"
 hi: "होन-मिरिन"
-unit_price: 15.00
 ar: "هون ميرين"
 props: 
   - "The 'gold standard' for Japanese cuisine"
@@ -62,6 +60,14 @@ process: "Naturally fermented glutinous rice"
 label: "Hon-Mirin (Echter Koch-Reiswein)"
 origin: "Japan"
 ru: "Хон-Мирин"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "rewe_feinkost"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

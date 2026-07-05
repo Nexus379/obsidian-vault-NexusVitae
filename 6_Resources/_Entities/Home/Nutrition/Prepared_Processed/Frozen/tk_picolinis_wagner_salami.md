@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 26.5
 en: "Picolinis / Mini Pizzas"
 hi: "पिकोलीनी"
-unit_price: 4.00
 props: 
   - "Der Inbegriff der Mini-Pizza"
   - "Technologisch perfektioniert für den 'One-Bite'-Verzehr"
@@ -60,6 +58,14 @@ ru: "Пиколини"
 de: "Picolinis"
 brand: "Wagner (Nestlé)"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

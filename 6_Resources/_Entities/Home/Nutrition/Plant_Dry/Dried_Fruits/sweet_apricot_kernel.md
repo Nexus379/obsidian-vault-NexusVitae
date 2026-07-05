@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 en: "Sweet Apricot Kernel"
 hi: "à¤–à¥à¤¬à¤¾à¤¨à¥€ à¤•à¥‡ à¤¬à¥€à¤œ"
 reformhaus: 3.00
-unit_price: 3.00
 props: 
   - "Looks like small almonds"
   - "Marzipan-like aroma"
@@ -64,6 +62,14 @@ label: "Sweet Apricot Kernel"
 orient_market: 3.00
 ru: "Ð¯Ð´Ñ€Ð° Ð°Ð±Ñ€Ð¸ÐºÐ¾ÑÐ°"
 de: "SÃ¼ÃŸe Aprikosenkerne"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe_feinkost"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,13 +49,20 @@ fr: "Patrón Silver"
 ja: "パトロン シルバー"
 label: "Patrón Silver Tequila"
 fa: "پاترون سیلور"
-unit_price: 55.00
 de: "Patrón Silver"
 locations: 
   - "rewe_feinkost"
   - "edeka_premium"
   - "kaufland_specialty"
 hi: "पैट्रॉन सिल्वर"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 55.00
+vendor_value: "rewe_feinkost"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

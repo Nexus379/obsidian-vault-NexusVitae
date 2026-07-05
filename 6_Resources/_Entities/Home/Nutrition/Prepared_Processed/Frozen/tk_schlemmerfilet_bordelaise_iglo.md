@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 carbs_total_g: 4.5
 en: "Gourmet Fish Filet"
 hi: "पेटू मछली फ़िलेट"
-unit_price: 4.00
 props: 
   - "Der Inbegriff des schnellen TK-Mittagessens"
   - "Technologisch getrennte Schichten: Unten saftiges Filet, oben knusprige Kruste"
@@ -61,6 +59,14 @@ label: "Iglo Schlemmerfilet Bordelaise"
 ru: "Рыбное филе Бордолез"
 de: "Schlemmerfilet Bordelaise"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

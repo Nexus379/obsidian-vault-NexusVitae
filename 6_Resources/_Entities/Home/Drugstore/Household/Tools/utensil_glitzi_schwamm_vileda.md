@@ -40,10 +40,17 @@ antibacterial: "Silver ions in foam"
 brand: "Vileda"
 room: "kitchen"
 durability: "High"
-unit_price: 3.00
 abrasive_layer: "Very strong"
 locations: 
   - "everywhere"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

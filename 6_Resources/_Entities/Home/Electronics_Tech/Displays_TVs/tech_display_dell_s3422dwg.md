@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Dell"
 core: "VA Panel"
 room: "studio"
-unit_price: 400.00
 de: "Dell S3422DWG 34 Zoll Curved"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 400.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

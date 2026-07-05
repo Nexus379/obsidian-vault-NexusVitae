@@ -39,10 +39,17 @@ pl_score: 7.0
 brand: "Caran d'Ache"
 core: "Wax-based (Soft, UV-Resistant)"
 room: "studio"
-unit_price: 3.50
 de: "Caran d'Ache Luminance"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.50
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "butcher"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
   - "#sci/Culinary"
 en: "Beef Tongue"
 hi: "गाय की जीभ"
-unit_price: 3.00
 props: 
   - "High-fat muscle meat"
   - "Incredibly tender texture once the outer skin is removed"
@@ -61,6 +59,14 @@ zinc_mg: 3.5
 label: "Beef Tongue"
 ru: "Говяжий язык"
 de: "Rinderzunge"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "butcher"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

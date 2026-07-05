@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "liquor_store"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,13 +58,20 @@ carbs_total_g: 70.0
 latin: "Zingiber / Citrus / Syzygium blend"
 en: "Falernum Syrup"
 hi: "फलेर्नम सिरप"
-unit_price: 8.00
 props: 
   - "Complex blend of ginger, lime, almond, and cloves"
   - "Can be alcoholic (liqueur) or non-alcoholic (syrup)"
   - "Absolutely essential for the Zombie and Corn 'n' Oil cocktails"
 label: "Falernum (Syrup)"
 ru: "Фалернум (сироп)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "liquor_store"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

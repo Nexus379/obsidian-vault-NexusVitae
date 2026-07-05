@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -63,7 +62,6 @@ carbs_total_g: 4.5
 fat_total_g: 0.2
 en: "Radicchio"
 hi: "रेडिकियो"
-unit_price: 1.00
 props: 
   - "Italian chicory variety"
   - "Intense bitter-spicy profile"
@@ -74,6 +72,14 @@ ru: "Радиккьо"
 de: "Radicchio"
 vit_c_mg: 8.0
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

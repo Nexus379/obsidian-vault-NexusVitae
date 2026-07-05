@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 10.5
 edeka: 4.00
 en: "true fruits green"
 hi: "ट्रू फ्रूट्स ग्रीन"
-unit_price: 4.00
 props: 
   - "Contains Spinach, Kale, Matcha"
   - "Earthy, sweet green classic"
@@ -66,6 +64,14 @@ label: "true fruits green"
 ru: "true fruits зеленый"
 de: "true fruits green"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

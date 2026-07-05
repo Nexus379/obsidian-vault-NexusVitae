@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 usage: "Wheat Substitute"
 en: "Light Spelt Flour"
 hi: "स्पेल्ट का आटा"
-unit_price: 3.00
 props: 
   - "Slightly nuttier flavor than wheat"
   - "Gluten structure is more fragile"
@@ -65,6 +63,14 @@ ru: "Спельтовая мука"
 de: "Dinkelmehl (Type 630)"
 dm: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

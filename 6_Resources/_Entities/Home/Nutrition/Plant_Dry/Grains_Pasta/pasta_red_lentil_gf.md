@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -61,7 +60,6 @@ latin: "Lens culinaris (Fila)"
 iron_plant_mg: 5.5
 gluten_status: "100% Gluten-Free"
 hi: "लाल मसूर का पास्ता"
-unit_price: 4.00
 props: 
   - "Moderner Superfood-Standard aus 100% Rotem Linsenmehl"
   - "Sättigt durch massiven Protein- und Ballaststoffgehalt enorm schnell"
@@ -71,6 +69,14 @@ label: "Rote Linsen Nudeln (Fusilli/Penne)"
 ru: "Макароны из красной чечевицы"
 dm: 4.00
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

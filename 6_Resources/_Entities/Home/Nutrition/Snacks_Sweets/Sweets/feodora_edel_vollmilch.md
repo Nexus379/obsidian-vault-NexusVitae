@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ edeka: 3.00
 latin: "Socolata lactea (Feodora)"
 en: "Feodora Milk Chocolate"
 hi: "फियोडोरा मिल्क चॉकलेट"
-unit_price: 3.00
 props: 
   - "Klassische Hochfein-Milchschokolade"
   - "Deutlich weniger süß als Milka oder Kinder Schokolade"
@@ -65,6 +63,14 @@ label: "Feodora Edel-Vollmilch (Hochfein)"
 ru: "Феодора Молочный"
 brand: "Feodora"
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

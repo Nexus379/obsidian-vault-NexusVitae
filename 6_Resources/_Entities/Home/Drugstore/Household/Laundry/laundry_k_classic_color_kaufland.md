@@ -30,7 +30,6 @@ icon: "🧱"
 label: "K-Classic Colorwaschmittel"
 brand: "K-Classic"
 room: "laundry"
-unit_price: 5.00
 locations: 
   - "kaufland"
 en: "Kaufland Color Detergent"
@@ -40,6 +39,14 @@ props:
   - "Kauflands Massen-Waffe für die tägliche Buntwäsche"
   - "Sehr gute Faserglättung zur Vermeidung von Pilling"
   - "Unschlagbar günstig im 1,5L-Format"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

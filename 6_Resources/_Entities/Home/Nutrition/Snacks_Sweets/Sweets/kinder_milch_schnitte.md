@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "fridge_section"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 34.0
 latin: "Lactis segmentum"
 en: "Milk Slice"
 hi: "मिल्क स्लाइस"
-unit_price: 3.00
 props: 
   - "Die erste Zwischenmahlzeit aus dem Kühlregal"
   - "Besteht aus zwei dünnen Kakaobiskuit-Schichten und einer Milchcreme-Füllung"
@@ -63,6 +61,14 @@ props:
 label: "Kinder Milch-Schnitte"
 ru: "Милок-Ломтик"
 brand: "Kinder"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "fridge_section"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

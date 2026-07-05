@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ edeka: 5.00
 latin: "Fructus tritus albus"
 en: "true fruits white"
 hi: "ट्रू फ्रूट्स व्हाइट"
-unit_price: 5.00
 props: 
   - "Coconut milk, Vanilla, Banana, Apple"
   - "Very creamy, dessert-like profile"
@@ -65,6 +63,14 @@ label: "true fruits white"
 ru: "true fruits белый"
 fat_source: "Coconut milk"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

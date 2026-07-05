@@ -37,11 +37,18 @@ label: "Sanft & Sicher Recycling (3-lagig)"
 pl_score: 9.0
 brand: "Sanft & Sicher"
 room: "bathroom"
-unit_price: 5.00
 de: "Recycling Toilettenpapier"
 locations: 
   - "budni"
   - "dm"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

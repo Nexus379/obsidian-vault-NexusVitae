@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 68.0
 latin: "Galium odoratum extract"
 en: "Woodruff Syrup"
 hi: "वुडरफ सिरप"
-unit_price: 3.00
 props: 
   - "Intense, unique green color"
   - "The classic addition to 'Berliner Weiße mit Schuss'"
@@ -69,6 +67,14 @@ ru: "Сироп ясменника"
 color: "Intense Green"
 coumarin_mg: 2.5
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

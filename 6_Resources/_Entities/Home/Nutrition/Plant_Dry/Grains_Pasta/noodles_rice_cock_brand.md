@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ carbs_total_g: 80.0
 latin: "Oryza sativa (Cock Brand)"
 en: "Cock Brand Rice Noodles"
 hi: "कॉक ब्रांड राइस नूडल्स"
-unit_price: 4.00
 props: 
   - "Der absolute globale Goldstandard für authentisches thailändisches Pad Thai"
   - "Extrem reißfest nach dem Einweichen in lauwarmem Wasser"
@@ -68,6 +66,14 @@ label: "Cock Brand Reisnudeln (Pad Thai / 5mm)"
 ru: "Рисовая лапша Cock Brand"
 brand: "Cock Brand (Thailand)"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

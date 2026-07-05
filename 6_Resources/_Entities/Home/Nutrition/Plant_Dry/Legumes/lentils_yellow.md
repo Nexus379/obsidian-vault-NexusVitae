@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ en: "Yellow Lentils"
 molybdenum_mg: 1.4
 iron_plant_mg: 7.0
 hi: "पीली मसूर"
-unit_price: 2.00
 props: 
   - "Hulled and split (like red lentils, but sweeter)"
   - "Staple for Turkish soups"
@@ -65,6 +63,14 @@ orient_market: 2.00
 label: "Yellow Lentils"
 ru: "Желтая чечевица"
 de: "Gelbe Linsen"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

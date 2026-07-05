@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 52.0
 latin: "Socolata cum amygdalis pasta"
 en: "Ritter Sport Marzipan"
 hi: "रिट्टर स्पोर्ट मार्जिपन"
-unit_price: 2.00
 props: 
   - "Kombination aus halbbitterer Schokolade und feinstem Edel-Marzipan"
   - "Eine der wenigen klassischen Sorten, die von Natur aus vegan sind"
@@ -63,6 +61,14 @@ label: "Ritter Sport Marzipan"
 ru: "Риттер Спорт Марципан"
 brand: "Ritter Sport"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

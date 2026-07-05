@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "aldi_nord"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ carbs_total_g: 7.4
 latin: "Thea frigida (Aldia Persica)"
 en: "Trader Joe's Peach"
 hi: "ट्रेडर जोस पीच"
-unit_price: 1.00
 props: 
   - "Aldi's classic iced tea standard"
   - "Available in both Peach and Lemon"
@@ -65,6 +63,14 @@ props:
 flavor_profile: "Classic Sweet Peach"
 label: "Trader Joe's Eistee Pfirsich (Aldi)"
 ru: "Трейдер Джо Персик"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "aldi_nord"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

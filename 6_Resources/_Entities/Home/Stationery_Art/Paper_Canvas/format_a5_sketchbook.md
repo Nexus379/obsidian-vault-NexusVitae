@@ -30,12 +30,19 @@ icon: "📓"
 label: "Skizzenbuch A5 (Hardcover)"
 de: "A5 Skizzenbuch"
 room: "studio"
-unit_price: 10.00
 en: "A5 Sketchbook"
 unit_type: "piece"
 props: 
   - "Mobile Datenaufnahme (Skizzen) mit hoher Papierstabilität"
   - "Hält technologisch auch leichten Markereinsatz aus"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

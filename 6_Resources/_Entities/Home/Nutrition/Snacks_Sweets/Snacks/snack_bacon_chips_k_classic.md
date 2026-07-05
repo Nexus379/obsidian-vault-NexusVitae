@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 62.0
 latin: "Triticum crustum fumosum"
 en: "Bacon Snacks"
 hi: "बेकन चिप्स"
-unit_price: 1.50
 props: 
   - "Mais-Weizen-Snack mit intensivem Raucharoma"
   - "Trotz des Namens meistens vegan (Raucharoma statt Fleisch)"
@@ -64,6 +62,14 @@ label: "K-Classic Bacon Snacks"
 ru: "Чипсы со вкусом бекона"
 brand: "K-Classic / funny-frisch"
 rewe: 1.50
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

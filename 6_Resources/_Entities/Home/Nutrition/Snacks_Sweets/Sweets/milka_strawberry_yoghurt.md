@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 54.0
 latin: "Lactis alpina fragaria coagulata"
 en: "Milka Strawberry Yoghurt"
 hi: "मिल्का स्ट्रॉबेरी दही"
-unit_price: 1.50
 props: 
   - "Alpenmilchschokolade mit einer Füllung aus Erdbeer-Magermilchjoghurt-Creme"
   - "Besonders beliebt im Frühjahr und Sommer"
@@ -61,6 +59,14 @@ props:
 label: "Milka Erdbeer-Joghurt"
 ru: "Милка Клубника и Йогурт"
 brand: "Milka"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

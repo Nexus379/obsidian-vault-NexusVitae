@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "wild_foraging"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
   - "#sci/Toxicology"
 en: "Sloe"
 hi: "स्लो"
-unit_price: 1.00
 anthocyanins_mg: 100.0
 props: 
   - "Wild ancestor of plum"
@@ -65,6 +63,14 @@ props:
 label: "Sloe (Blackthorn)"
 ru: "Тёрн"
 de: "Schlehe, Schwarzdorn"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "wild_foraging"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

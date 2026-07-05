@@ -40,8 +40,6 @@ props:
   - "Reusable and boilable"
   - "Lifesaving while standing or in the tent"
 # --- 🏕️ OUTDOOR SPECS ---
-unit_price: 15.00
-pref_vendor: "Hygiene-Shop"
 vendors: []
 weight_g: 15
 capacity_persons: 1
@@ -50,6 +48,14 @@ season_rating: 4
 pack_size_cm: "10x3"
 material: "Silikon/Plastik"
 pl_score: 9.5
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "Hygiene-Shop"
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🏕️  N20260703102008   Pibella Travel (Urintrichter)

@@ -29,13 +29,20 @@ shelf_life_months: 12
 label: "Facelle Natur (Rossmann)"
 de: "Rossmann Bio-Hygiene"
 icon: "🌿"
-unit_price: 3.00
 en: "Rossmann Organic Hygiene"
 unit_type: "piece"
 pl_score: 9.0
 props: 
   - "Technologisch gleichwertig zu Alverde"
   - "Sehr gute Passform bei den Flügel-Binden"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -38,11 +38,18 @@ zinc_mg: 15.0
 latin: "Zincum picolinicum"
 brand: "Pure"
 kcal: 0
-unit_price: 20.00
 vegan: true
 locations: 
   - "pharmacy"
   - "online"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 20.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

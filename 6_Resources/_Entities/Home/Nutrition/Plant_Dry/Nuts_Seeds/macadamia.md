@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
   - "#sci/Nutrition"
 en: "Macadamia"
 hi: "à¤®à¥ˆà¤•à¤¾à¤¡à¤¾à¤®à¤¿à¤¯à¤¾"
-unit_price: 5.00
 props: 
   - "Highest fat and lowest protein of all nuts"
   - "Incredible source of monounsaturated fats (MUFA)"
@@ -65,6 +63,14 @@ ru: "ÐœÐ°ÐºÐ°Ð´Ð°Ð¼Ð¸Ñ"
 de: "Macadamianuss"
 manganese_mg: 4.1
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ sci:
 latin: "Citrus sinensis var. sanguinea (Fructus recens)"
 en: "Blood Orange"
 hi: "رक्त संतरा"
-unit_price: 1.00
 anthocyanins_mg: 45.0
 props: 
   - "Requires cold nights to develop red pigments"
@@ -65,6 +63,14 @@ denns: 1.00
 label: "Blood Orange"
 ru: "Кровавый апельсин"
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

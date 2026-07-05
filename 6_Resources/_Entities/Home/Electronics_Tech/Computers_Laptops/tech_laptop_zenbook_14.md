@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "ASUS"
 core: "Intel Core Ultra / AMD Ryzen"
 room: "studio"
-unit_price: 900.00
 de: "Zenbook 14 OLED"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 900.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

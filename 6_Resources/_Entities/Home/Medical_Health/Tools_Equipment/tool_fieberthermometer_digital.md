@@ -31,7 +31,6 @@ icon: "🌡️"
 label: "Domotherm Digital Clinical Thermometer"
 brand: "Domotherm"
 room: "bathroom"
-unit_price: 5.00
 locations: 
   - "apotheke"
   - "shop_apotheke"
@@ -44,6 +43,14 @@ props:
 # --- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🌡️  N20260703103607   Domotherm Digital Clinical Thermometer

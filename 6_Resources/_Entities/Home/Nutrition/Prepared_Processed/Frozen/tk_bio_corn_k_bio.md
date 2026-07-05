@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 16.0
 latin: "Zea mays (Bio Frozen)"
 en: "Organic Sweetcorn (Frozen)"
 hi: "जैविक फ्रोजन स्वीटकॉर्न"
-unit_price: 2.00
 props: 
   - "Kauflands Bio-Standard für Mais-Fans"
   - "Deutlich knackiger als Mais aus der Dose"
@@ -62,6 +60,14 @@ label: "K-Bio Junger Zuckermais (TK)"
 sweetness: "Natural (no added sugar)"
 ru: "Био кукуруза замороженная"
 brand: "K-Bio"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -62,7 +61,6 @@ latin: "Aqua mineralis (Gerolstein - Naturelle)"
 fiber_g: 0.0
 en: "Gerolsteiner Naturelle"
 hi: "गेरोलस्टीनर स्टिल"
-unit_price: 1.00
 props: 
   - "Comes from a different, softer spring than Gerolsteiner Sparkling"
   - "Mild and balanced compared to their highly mineralized carbonated versions"
@@ -71,6 +69,14 @@ label: "Gerolsteiner Naturelle"
 ru: "Герольштайнер Натюрель"
 rewe: 1.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

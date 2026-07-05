@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 edeka: 3.00
 en: "Mixed Peppercorns"
 hi: "मिश्रित मिर्च"
-unit_price: 3.00
 props: 
   - "Blend of black, white, green, and pink"
   - "Broad spectrum of terpenes"
@@ -62,6 +60,14 @@ ru: "Смесь перцев"
 de: "Bunter Pfeffer"
 manganese_mg: 12.0
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 usage: "Indian household staple"
 en: "Pigeon Peas"
 hi: "तूर दाल"
-unit_price: 3.00
 afro_market: 3.00
 props: 
   - "Most consumed yellow Dal in India"
@@ -62,6 +60,14 @@ props:
 label: "Pigeon Peas (Toor Dal)"
 ru: "Голубиный горох"
 de: "Straucherbse / Toor Dal"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

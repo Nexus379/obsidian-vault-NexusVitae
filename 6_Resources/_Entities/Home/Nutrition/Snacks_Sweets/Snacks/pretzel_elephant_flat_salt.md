@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ latin: "Anulus planus (Elephant)"
 en: "Flat Pretzels"
 shape: "Flat-Pressed"
 hi: "फ्लैट प्रेट्ज़ेल"
-unit_price: 2.00
 props: 
   - "Moderne Interpretation: Die Brezel, die flach gedrückt wurde"
   - "Ideal zum Dippen, da mehr Fläche vorhanden ist"
@@ -66,6 +64,14 @@ label: "Elephant Pretzel Chips (Gesalzen)"
 ru: "Плоские претцели"
 brand: "Elephant / Alka"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

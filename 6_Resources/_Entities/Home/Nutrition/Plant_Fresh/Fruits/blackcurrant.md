@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "weekly_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ sci:
   - "#sci/SportsMedicine"
 en: "Blackcurrant"
 hi: "काले करंट"
-unit_price: 2.00
 anthocyanins_mg: 250.0
 props: 
   - "Massive Vitamin C content"
@@ -64,6 +62,14 @@ ru: "Черная смородина"
 de: "Schwarze Johannisbeere"
 rewe: 2.00
 superfood: "Vitamin C Titan"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "weekly_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

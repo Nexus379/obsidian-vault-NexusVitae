@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ en: "Guarana Powder"
 denns: 10.00
 hi: "गुआराना पाउडर"
 reformhaus: 10.00
-unit_price: 10.00
 benefit: "Slow-release Caffeine"
 props: 
   - "Caffeine is bound to tannins (longer effect than coffee)"
@@ -65,6 +63,14 @@ label: "Guarana Powder"
 ru: "Гуарана (порошок)"
 de: "Guarana Pulver"
 dm: 10.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

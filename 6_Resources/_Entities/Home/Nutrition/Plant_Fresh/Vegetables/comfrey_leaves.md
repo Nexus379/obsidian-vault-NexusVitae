@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "weekly_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
   - "#sci/Toxicology"
 en: "Comfrey"
 hi: "कॉमफ्रे"
-unit_price: 2.00
 props: 
   - "Rich in Allantoin (cell-regenerating)"
   - "High protein for a leaf"
@@ -64,6 +62,14 @@ props:
 label: "Comfrey Leaves"
 ru: "Окопник"
 de: "Beinwell (Blätter)"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "weekly_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

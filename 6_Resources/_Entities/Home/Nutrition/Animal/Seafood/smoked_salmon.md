@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 0.0
 latin: "Salmo salar (Fumigata)"
 en: "Smoked Salmon"
 hi: "स्मोक्ड सैल्मन"
-unit_price: 5.00
 benefit: "Preserved Omega-3"
 props: 
   - "Raw salmon cured with salt and cold-smoked to preserve a silky texture"
@@ -72,6 +70,14 @@ ru: "Копченый лосось"
 lidl: 5.00
 rewe: 5.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

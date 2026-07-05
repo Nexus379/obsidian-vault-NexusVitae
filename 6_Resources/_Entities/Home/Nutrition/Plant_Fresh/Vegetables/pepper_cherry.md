@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,7 +55,6 @@ sci:
 usage: "Perfect for stuffing"
 en: "Cherry Pepper"
 hi: "चेरी मिर्च"
-unit_price: 2.00
 props: 
   - "Small, round and thick-walled"
   - "Mild to medium heat"
@@ -65,6 +63,14 @@ orient_market: 2.00
 label: "Cherry Pepper (Kirschpaprika)"
 ru: "Вишневый перец"
 de: "Kirschpaprika"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

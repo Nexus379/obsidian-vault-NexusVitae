@@ -29,8 +29,15 @@ shelf_life_months: 60
 label: "Prismacolor Premier"
 synergy_with_castle: "Extends the blending range for smooth skin tones."
 icon: "🎨"
-unit_price: 3.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ⚙️ TECH SPECS ---
 unit_price: 0
 pref_vendor: ""

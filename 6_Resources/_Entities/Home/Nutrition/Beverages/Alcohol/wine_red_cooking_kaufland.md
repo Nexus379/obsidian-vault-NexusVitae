@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -48,11 +47,18 @@ ar: "نبيذ أحمر للطبخ"
 fr: "Vin rouge de cuisine"
 ja: "料理用赤ワイン"
 fa: "شراب قرمز مخصوص پخت و پز"
-unit_price: 3.00
 packaging: "Tetra Pak"
 locations: 
   - "kaufland"
 hi: "कुकिंग के लिए रेड वाइन"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

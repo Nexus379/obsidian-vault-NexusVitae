@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 77.0
 latin: "Ursuli gelati (Haribo)"
 en: "Haribo Goldbears"
 hi: "हारिबो गोल्डबियर्स"
-unit_price: 1.50
 props: 
   - "Das Original seit 1922"
   - "Basiert auf Schweinegelatine für den charakteristischen Biss"
@@ -63,6 +61,14 @@ props:
 label: "Haribo Goldbären"
 ru: "Золотые мишки Харибо"
 brand: "Haribo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.50
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

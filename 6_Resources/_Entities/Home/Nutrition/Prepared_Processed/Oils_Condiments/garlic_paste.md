@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ carbs_total_g: 12.0
 preservation: "Usually preserved in oil"
 en: "Garlic Paste"
 hi: "लहसुन का पेस्ट"
-unit_price: 2.00
 props: 
   - "Time-saving foundational aromatic"
   - "Often blended with ginger (Ginger-Garlic Paste) in Indian cooking"
@@ -68,6 +66,14 @@ label: "Garlic Paste"
 ru: "Чесночная паста"
 de: "Knoblauchpaste"
 rewe: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

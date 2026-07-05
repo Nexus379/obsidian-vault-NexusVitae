@@ -44,11 +44,18 @@ vit_d_mcg: 20.0
 brand: "Norsan"
 vit_e_mg: 3.0
 kcal: 72
-unit_price: 35.00
 vegan: false
 locations: 
   - "pharmacy"
   - "online"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 35.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
 unit_price: 0
 pref_vendor: ""

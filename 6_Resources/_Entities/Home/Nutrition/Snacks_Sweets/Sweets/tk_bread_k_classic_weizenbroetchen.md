@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,7 +49,6 @@ sci:
 carbs_total_g: 49.0
 en: "Kaufland Wheat Rolls"
 hi: "के-क्लासिक रोल्स"
-unit_price: 2.00
 props: 
   - "Der Preis-Leistungs-Anker im Kaufland-Sortiment"
   - "Technologisch stabilisierte Teigführung für gleichmäßiges Aufgehen"
@@ -60,6 +58,14 @@ ru: "Булочки Кауфланд"
 de: "K-Classic Brötchen"
 brand: "K-Classic"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

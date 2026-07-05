@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ sci:
 usage: "Turkish table spice"
 en: "Chili Flakes"
 hi: "चिली फ्लेक्स"
-unit_price: 3.00
 props: 
   - "Coarsely ground with seeds"
   - "Often slightly oiled and salted (Pul Biber)"
@@ -62,6 +60,14 @@ label: "Chili Flakes (Pul Biber)"
 ru: "Хлопья чили"
 de: "Chiliflocken / Pul Biber"
 lidl: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

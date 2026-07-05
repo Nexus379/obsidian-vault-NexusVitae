@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -63,7 +62,6 @@ latin: "Aqua mineralis carbonata (Bismarck)"
 fiber_g: 0.0
 en: "Bismarck Classic"
 hi: "बिस्मार्क क्लासिक"
-unit_price: 1.00
 type: "High Carbonation"
 props: 
   - "The classic Northern German sparkling water"
@@ -73,6 +71,14 @@ label: "Fürst Bismarck Classic"
 ru: "Бисмарк Классик"
 rewe: 1.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

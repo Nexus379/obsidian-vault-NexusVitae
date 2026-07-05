@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "asia_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ sci:
 en: "Dragon Fruit"
 iron_plant_mg: 0.6
 hi: "ड्रैगन फ्रूट"
-unit_price: 4.00
 props: 
   - "Night-blooming cactus fruit"
   - "Subtly sweet taste"
@@ -66,6 +64,14 @@ label: "Dragon Fruit (Pitaya)"
 ru: "Питахайя"
 de: "Drachenfrucht"
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "asia_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

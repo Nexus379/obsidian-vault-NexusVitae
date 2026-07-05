@@ -41,11 +41,18 @@ latin: "Tabula premium finishia"
 brand: "Finish (Reckitt)"
 room: "kitchen"
 shine: "Diamond Standard"
-unit_price: 10.00
 de: "Finish Ultimate Plus"
 locations: 
   - "everywhere"
 fragrance: "Lemon / Fresh"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
 unit_price: 0
 pref_vendor: ""

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "fish_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ sci:
 latin: "Anguilla anguilla"
 en: "Smoked Eel"
 hi: "स्मोक्ड ईल"
-unit_price: 8.00
 props: 
   - "Incredibly rich in Vitamin A and D"
   - "High fat content provides an intense smoky flavor"
@@ -64,6 +62,14 @@ ru: "Копченый угорь"
 fish_market: 8.00
 es: "Anguila ahumada"
 rewe: 8.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "fish_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

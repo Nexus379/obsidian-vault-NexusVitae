@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -57,7 +56,6 @@ usage: "Vegan cheese/cream base"
 en: "Cashew"
 iron_plant_mg: 6.7
 hi: "à¤•à¤¾à¤œà¥‚"
-unit_price: 3.00
 props: 
   - "Grows at the bottom of the 'cashew apple'"
   - "Softer texture, blends perfectly into vegan creams"
@@ -68,6 +66,14 @@ ru: "ÐšÐµÑˆÑŒÑŽ"
 de: "Cashewkern"
 lidl: 3.00
 rewe: 3.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- âš¡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

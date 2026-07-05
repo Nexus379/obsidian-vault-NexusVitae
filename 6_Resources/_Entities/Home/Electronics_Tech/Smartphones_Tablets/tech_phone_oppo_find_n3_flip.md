@@ -40,10 +40,17 @@ pl_score: 8.0
 brand: "Oppo"
 core: "Dimensity 9200"
 room: "backpack"
-unit_price: 1000.00
 de: "Oppo Find N3 Flip"
 locations: 
   - "specialty_stores"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1000.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- âš™ï¸ TECH SPECS ---
 pref_vendor: "Mindfactory"
 vendors: []

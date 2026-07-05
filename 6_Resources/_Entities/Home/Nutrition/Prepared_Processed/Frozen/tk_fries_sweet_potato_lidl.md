@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ sci:
 carbs_total_g: 28.0
 en: "Sweet Potato Fries"
 hi: "शकरकंद फ्राइज़"
-unit_price: 4.00
 props: 
   - "Lidls Trend-Snack für das Restaurant-Feeling"
   - "Technologisch anspruchsvoller als Kartoffel-Pommes, da Süßkartoffeln schneller weich werden"
@@ -62,6 +60,14 @@ ru: "Картофель фri из батата"
 de: "Süßkartoffel Pommes"
 brand: "Harvest Basket"
 lidl: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

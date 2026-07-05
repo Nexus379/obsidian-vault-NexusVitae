@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 10.0
 latin: "Pisum sativum (Iglo)"
 en: "Garden Peas"
 hi: "हरी मटर"
-unit_price: 3.00
 props: 
   - "Technologisch extrem schnell verarbeitet, um den Zucker nicht in Stärke umzuwandeln"
   - "Knackige Textur und süßlicher Geschmack"
@@ -63,6 +61,14 @@ process: "IQF (Individually Quick Frozen)"
 label: "Iglo Gartenerbsen (Extra fein)"
 ru: "Зеленый горошек"
 brand: "Iglo"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 3.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

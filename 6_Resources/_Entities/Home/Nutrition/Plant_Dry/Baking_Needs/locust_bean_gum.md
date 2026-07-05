@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "reformhaus"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -52,7 +51,6 @@ en: "Locust Bean Gum"
 denns: 8.00
 hi: "लोकल बीन गम"
 reformhaus: 8.00
-unit_price: 8.00
 props: 
   - "Extracted from carob seeds"
   - "Prevents ice crystals in vegan ice cream"
@@ -60,6 +58,14 @@ props:
 label: "Locust Bean Gum"
 ru: "Камедь рожкового дерева"
 de: "Johannisbrotkernmehl"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 8.00
+vendor_value: "reformhaus"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

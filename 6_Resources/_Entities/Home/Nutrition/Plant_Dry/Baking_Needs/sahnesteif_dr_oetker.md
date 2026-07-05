@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ carbs_total_g: 92.0
 latin: "Stabilisator lactis (Oetker)"
 en: "Cream Stiffener"
 hi: "क्रीम स्टिफनर"
-unit_price: 2.00
 props: 
   - "Prevents syneresis in whipped cream"
   - "Maintains structure of toppings"
@@ -63,6 +61,14 @@ base: "Modified starch + Glucose syrup"
 ru: "Закрепитель сливок"
 brand: "Dr. Oetker"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

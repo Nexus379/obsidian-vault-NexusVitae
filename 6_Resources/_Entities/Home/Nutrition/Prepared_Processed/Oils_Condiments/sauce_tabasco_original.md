@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -55,7 +54,6 @@ carbs_total_g: 0.8
 latin: "Capsicum frutescens emulsio"
 en: "Tabasco Sauce"
 hi: "तबास्को सॉस"
-unit_price: 5.00
 props: 
   - "Fermented tabasco peppers with salt and vinegar"
   - "Essential heat source for Mexikaner shots and Bloody Marys"
@@ -64,6 +62,14 @@ label: "Tabasco Original Red Pepper Sauce"
 ru: "Табаско"
 brand: "McIlhenny Co."
 fa: "سس تاباسکو"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

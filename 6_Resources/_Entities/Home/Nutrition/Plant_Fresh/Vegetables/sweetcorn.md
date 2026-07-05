@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -59,7 +58,6 @@ sci:
 latin: "Zea mays var. saccharata (Caryopsis recens)"
 en: "Sweetcorn"
 hi: "स्वीट कॉर्न"
-unit_price: 1.00
 type: "Energy-dense vegetable"
 props: 
   - "Botanically a grain, consumed as a vegetable"
@@ -69,6 +67,14 @@ label: "Sweetcorn"
 ru: "Сахарная кукуруза"
 lidl: 1.00
 rewe: 1.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

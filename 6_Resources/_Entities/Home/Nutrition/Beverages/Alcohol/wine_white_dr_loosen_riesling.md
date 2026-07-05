@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ latin: "Vinum album (Dr. Loosen)"
 en: "Dr. Loosen Blue Slate"
 wine_specialist: 15.00
 hi: "डॉ. लूसेन रिसलिंग"
-unit_price: 15.00
 ar: "دكتور لوزن ريسلينج"
 props: 
   - "The global face of Mosel Riesling"
@@ -63,6 +61,14 @@ ru: "Доктор Лоозен Рислинг"
 vol_pct: 10.5
 fr: "Dr. Loosen Riesling"
 rewe: 15.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -64,7 +63,6 @@ carbs_total_g: 3.4
 fat_total_g: 0.1
 en: "Purslane"
 hi: "कुलफा"
-unit_price: 2.00
 props: 
   - "Succulent leaves with lemony taste"
   - "Massive plant-based Omega-3 source"
@@ -74,6 +72,14 @@ omega_source: "Highest ALA among greens"
 ru: "Портулак"
 de: "Portulak"
 unit_type: "100g"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

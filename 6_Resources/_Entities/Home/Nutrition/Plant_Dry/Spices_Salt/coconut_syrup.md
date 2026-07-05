@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -60,7 +59,6 @@ carbs_total_g: 80.0
 latin: "Cocos nucifera infused"
 en: "Coconut Syrup"
 hi: "नारियल का सिरप"
-unit_price: 5.00
 props: 
   - "Intense, sweet coconut flavor"
   - "Often used as a dairy-free or shelf-stable alternative to Cream of Coconut in some bars"
@@ -68,6 +66,14 @@ props:
 label: "Coconut Syrup (Bar)"
 ru: "Кокосовый сироп"
 rewe: 5.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

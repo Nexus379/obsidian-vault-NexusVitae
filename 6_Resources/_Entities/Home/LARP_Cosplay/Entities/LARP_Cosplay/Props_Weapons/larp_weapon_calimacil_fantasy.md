@@ -37,10 +37,17 @@ sci:
   - "#sci/Physics"
 pl_score: 9.0
 brand: "Calimacil"
-unit_price: 180.00
 de: "Calimacil Premium Schwert"
 locations: 
   - "hobby_store"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 180.00
+vendor_value: ""
+price_market: 0.00
+vendor_market: ""
 --- ðŸ§â€â™€ï¸ LARP SPECS ---
 store_online: "calimacil.com"
 store_local: "Specialty LARP Shops"

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -64,7 +63,6 @@ carbs_total_g: 3.2
 fat_total_g: 0.7
 en: "Sorrel"
 hi: "चुका"
-unit_price: 2.00
 props: 
   - "High Vitamin C content"
   - "Contains oxalic acid (refreshing tartness)"
@@ -73,6 +71,14 @@ denns: 2.00
 label: "Sorrel"
 ru: "Щавель"
 de: "Sauerampfer"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

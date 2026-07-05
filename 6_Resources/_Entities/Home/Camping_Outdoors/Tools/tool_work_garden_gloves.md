@@ -39,8 +39,6 @@ props:
   - "Für grobe Arbeiten im Garten oder beim Campen"
   - "Schützt vor Dornen, Holzsplittern und Dreck"
 # --- 🏕️ OUTDOOR SPECS ---
-unit_price: 15.00
-pref_vendor: "OBI"
 vendors: []
 weight_g: 120
 capacity_persons: 1
@@ -49,6 +47,14 @@ season_rating: 4
 pack_size_cm: "20x10"
 material: "Leder & Textil"
 pl_score: 9.0
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 15.00
+vendor_value: "OBI"
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧤  N20260703153004   Robuste Garten- & Arbeitshandschuhe

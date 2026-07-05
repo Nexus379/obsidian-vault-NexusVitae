@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "dm"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -63,7 +62,6 @@ sfa_g: 9.0
 latin: "Linum usitatissimum"
 en: "Flaxseed Oil"
 hi: "अलसी का तेल"
-unit_price: 4.00
 omega3_ala_g: 53.0
 props: 
   - "Must NEVER be heated"
@@ -74,6 +72,14 @@ label: "Flaxseed Oil (Linseed)"
 ru: "Льняное масло"
 dm: 4.00
 rewe: 4.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 4.00
+vendor_value: "dm"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

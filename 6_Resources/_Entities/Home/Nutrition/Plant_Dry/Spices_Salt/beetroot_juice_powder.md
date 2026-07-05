@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "denns"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -56,13 +55,20 @@ en: "Beetroot Juice Powder"
 iron_plant_mg: 8.0
 hi: "चुकंदर का पाउडर"
 reformhaus: 12.00
-unit_price: 12.00
 benefit: "Nitric Oxide Booster (Pump)"
 nitrates_mg: 2500.0
 denns: 12.00
 label: "Beetroot Juice Powder"
 ru: "Свекольный порошок"
 de: "Rote Bete Saftpulver"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 12.00
+vendor_value: "denns"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

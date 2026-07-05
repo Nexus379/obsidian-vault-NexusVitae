@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ sci:
 carbs_total_g: 1.5
 en: "Bacon-wrapped Cheese Sausage"
 hi: "बेकन-रैप्ड चीज़ सॉसेज"
-unit_price: 5.00
 props: 
   - "Der absolute Endgegner: Ein Käsewürstchen, das komplett in geräucherten Bacon eingewickelt ist"
   - "Erfunden in Österreich (Zell am See), heute ein Lidl-Standard"
@@ -70,6 +68,14 @@ de: "Berner Würstel"
 lidl: 5.00
 rewe: 5.00
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 5.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

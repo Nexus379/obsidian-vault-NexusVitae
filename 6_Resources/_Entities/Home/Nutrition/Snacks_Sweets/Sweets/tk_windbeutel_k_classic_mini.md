@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "kaufland"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -51,7 +50,6 @@ carbs_total_g: 22.5
 en: "Kaufland Cream Puffs"
 dough: "Choux Pastry (Brandteig)"
 hi: "के-क्लासिक क्रीम पफ्स"
-unit_price: 2.00
 props: 
   - "Kauflands Antwort auf den süßen Hunger"
   - "Technologisch optimierte Sahnefüllung (bleibt beim Antauen fest)"
@@ -60,6 +58,14 @@ label: "K-Classic Mini-Windbeutel"
 ru: "Профитроли Кауфланд"
 de: "K-Classic Windbeutel"
 brand: "K-Classic"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "kaufland"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

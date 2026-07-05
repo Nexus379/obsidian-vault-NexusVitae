@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -50,13 +49,20 @@ ar: "كاسيليرو ديل ديابلو"
 fr: "Casillero del Diablo"
 ja: "红魔鬼"
 fa: "کازیرو دل دیابلو"
-unit_price: 10.00
 de: "Casillero del Diablo"
 locations: 
   - "rewe"
   - "kaufland"
   - "edeka"
 hi: "कैसिलरो डेल डियाब्लो"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 10.00
+vendor_value: "rewe"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "everywhere"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -53,7 +52,6 @@ carbs_total_g: 85.0
 latin: "Pulvis amyli (Vanilla)"
 en: "Vanilla Pudding Powder"
 hi: "वैनिला पुडिंग पाउडर"
-unit_price: 1.00
 props: 
   - "Technologisch fast reine Maisstärke mit Farbstoff (Beta-Carotin) und Aroma"
   - "Benötigt kochende Milch, um die Stärkekörner aufquellen zu lassen (Verkleisterung)"
@@ -63,6 +61,14 @@ sweetness: "Unsweetened (Requires sugar)"
 ru: "Пудинг ванильный (порошок)"
 brand: "Dr. Oetker, Ruf"
 unit_type: "piece"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 1.00
+vendor_value: "everywhere"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

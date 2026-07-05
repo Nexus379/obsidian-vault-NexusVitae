@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "orient_market"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -58,7 +57,6 @@ latin: "Oryza sativa (Sella)"
 glycemic_index: 50.0
 en: "Sella Rice"
 hi: "सेला चावल"
-unit_price: 2.00
 props: 
   - "Der Standard für Kabuli Pulao und Biryani"
   - "Durch das Dämpfen in der Schale werden Vitamine ins Innere gepresst und die Stärke modifiziert"
@@ -68,6 +66,14 @@ process: "Parboiled in husk (Sella process)"
 label: "Basmati Sella (Golden / Parboiled)"
 ru: "Рис Селла"
 brand: "Mahmood, Royal, Shahrzad"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "orient_market"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

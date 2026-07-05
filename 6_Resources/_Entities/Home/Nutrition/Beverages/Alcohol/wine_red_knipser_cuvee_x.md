@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "rewe_feinkost"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -49,13 +48,20 @@ specialized_shops: 50.00
 fr: "Knipser"
 ja: "クニプサー"
 fa: "نیپسر"
-unit_price: 50.00
 de: "Knipser Cuvée X"
 locations: 
   - "rewe_feinkost"
   - "specialized_shops"
 style: "Bordeaux-Blend in Germany"
 hi: "निप्सर"
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 50.00
+vendor_value: "rewe_feinkost"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0

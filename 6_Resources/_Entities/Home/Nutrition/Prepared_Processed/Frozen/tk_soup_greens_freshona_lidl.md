@@ -22,7 +22,6 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: "lidl"
 vendors: []
 state: "pantry"
 needs_refill: false
@@ -54,7 +53,6 @@ components: "Carrots, Leek, Celeriac, Parsley"
 latin: "Mistura holeribus suppae"
 en: "Soup Vegetables (Mix)"
 hi: "सूप वाली सब्जियां"
-unit_price: 2.00
 props: 
   - "Die technologische Wunderwaffe für Saucenansätze (Soßenspiegel)"
   - "Perfekt ausbalanciertes Verhältnis der Aromageber"
@@ -63,6 +61,14 @@ label: "Freshona Suppengrün (TK)"
 ru: "Суповой набор (овощи)"
 brand: "Freshona"
 lidl: 2.00
+price_pure: 0.00
+vendor_pure: ""
+price_budget: 0.00
+vendor_budget: ""
+price_value: 2.00
+vendor_value: "lidl"
+price_market: 0.00
+vendor_market: ""
 --- ⚡ MACROS (per 100g/ml) ---
 kcal: 0
 protein_g: 0
