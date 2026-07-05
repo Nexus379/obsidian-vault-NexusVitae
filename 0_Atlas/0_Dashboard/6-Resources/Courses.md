@@ -1,4 +1,4 @@
----
+﻿---
 cssclasses:
   - wide-page
   - dashboard-no-border
@@ -15,7 +15,7 @@ cssclasses:
 > > [!blank|wide-0]
 > > ### NEXUS NAVIGATOR
 > > ```dataviewjs
-> > const pages = dv.pages('("6_Resources/Courses" OR #6resou/course) AND -"zData" AND -"yArchive"').where(p => p.inbox !== true);
+> > const pages = dv.pages('("6_Resources/Courses" OR #6resource/course) AND -"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > > const values = [pages.length, pages.where(p => p.cover).length, pages.where(p => p.plattform).length, pages.where(p => p.rating).length];
 > > const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
 > > window.renderChart && window.renderChart({ type: 'doughnut', data: { labels: ['Courses', 'Cover', 'Platform', 'Rated'], datasets: [{ data: values.some(v => v > 0) ? values : [1], backgroundColor: ['#74c7ec', '#cba6f7', '#89dceb', '#a6e3a1'], borderWidth: 0 }] }, options: { cutout: '80%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } }, this.container);
@@ -28,7 +28,7 @@ cssclasses:
 > > ```dataviewjs
 > > const clean = value => String(value ?? "").toLowerCase();
 > > const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-> > const activeItems = dv.pages('("6_Resources/Courses" OR #6resou/course) AND -"zData" AND -"yArchive"')
+> > const activeItems = dv.pages('("6_Resources/Courses" OR #6resource/course) AND -"zData" AND -"yArchive"')
 > >     .where(p => p.inbox !== true)
 > >     .where(p => clean(p.status).includes("1active") || clean(p.status).includes("0start"));
 > > 

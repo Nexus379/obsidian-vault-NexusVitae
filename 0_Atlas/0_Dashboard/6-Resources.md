@@ -1,4 +1,4 @@
----
+﻿---
 cssclasses:
   - dashboard-no-border
   - wide-page
@@ -38,7 +38,7 @@ cssclasses:
 > >                  
 > >                  // 🔱 FIX 2: Die "Fallen" umgehen
 > >                  // '\b' zwingt Dataview, nur nach dem alleinstehenden Wort zu suchen.
-> >                  if (tag === "ai") return meta.match(/\bai\b/) || meta.includes("#6resou/ai"); // Kein Treffer mehr bei "Daily" oder "Email"
+> >                  if (tag === "ai") return meta.match(/\bai\b/) || meta.includes("#6resource/ai"); // Kein Treffer mehr bei "Daily" oder "Email"
 > >                  if (tag === "game") return meta.match(/\bgames?\b/) && !meta.includes("boardgame"); // Trennt normale Games von Boardgames
 > >                  
 > >                  return meta.includes(tag);

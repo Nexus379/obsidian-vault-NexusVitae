@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 // 🔱 1. INITIALIZATION & NEXUS-SYNC
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
@@ -75,9 +75,9 @@ cover: "[[<%- pureCover %>]]"
 aliases: ["<%- displayTitle %>"]
 inbox: true
 arch:
-  - "#6resou"
+  - "#6resource"
 archtype:
-  - "#6resou/recipe"
+  - "#6resource/recipe"
 status:
   - 1active
 priority: 

@@ -1,4 +1,4 @@
-
+﻿
 
 # 🎓 StudyLog: 2026-03-11 pkm
 
@@ -503,7 +503,7 @@ The mind is not a vessel to be filled, but a fire to be kindled. 🎻🌊
 >> ```dataview
 >> TABLE without ID
 >> ("![|60](" + Cover + ")") as Cover, file.link as Title, Author as Author, Rating as Rating
->> FROM #6resou AND (outgoing([[#]]) OR [[#]])
+>> FROM #6resource AND (outgoing([[#]]) OR [[#]])
 >> ```
 >
 >>[!multi-column]

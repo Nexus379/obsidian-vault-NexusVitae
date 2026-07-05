@@ -1,4 +1,4 @@
----
+﻿---
 cssclasses:
   - wide-page
   - dashboard-no-border
@@ -15,7 +15,7 @@ cssclasses:
 > > [!blank|wide-0]
 > > ### 🔱 NEXUS NAVIGATOR
 > > ```dataviewjs
-> > const pages = dv.pages('("6_Resources/Books" OR #6resou/book) AND -"zData" AND -"yArchive"').where(p => p.inbox !== true);
+> > const pages = dv.pages('("6_Resources/Books" OR #6resource/book) AND -"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > > const genreCounts = {};
 > > pages.forEach(p => {
 > >     if (!p.genre) return;
@@ -54,7 +54,7 @@ cssclasses:
 > > ```dataviewjs
 > > const clean = value => String(value ?? "").toLowerCase();
 > > const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-> > const activeBooks = dv.pages('("6_Resources/Books" OR #6resou/book) AND -"zData" AND -"yArchive"')
+> > const activeBooks = dv.pages('("6_Resources/Books" OR #6resource/book) AND -"zData" AND -"yArchive"')
 > >     .where(p => p.inbox !== true)
 > >     .where(p => clean(p.status).includes("1active") || clean(p.status).includes("0start"));
 > > 

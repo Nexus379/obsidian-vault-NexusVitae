@@ -1,4 +1,4 @@
-
+﻿
 ---
 #### 🔱 Connexio
 > [!link]- 🔗 Nexus
@@ -40,7 +40,7 @@
 >> ```dataview
 >> TABLE without ID
 >> ("![|60](" + Cover + ")") as Cover, file.link as Title, Author as Author, Rating as Rating
->> FROM #6resou AND (outgoing([[#]]) OR [[#]])
+>> FROM #6resource AND (outgoing([[#]]) OR [[#]])
 >> ```
 >
 >>[!multi-column]

@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 // 🔱 1. INITIALIZATION & DATA SYNC
 if (!tp.variables) tp.variables = {};
 const dv = app.plugins.plugins.dataview.api;
@@ -296,7 +296,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >    if (dv.viewCount && dv.viewCount > 1) return; // ruhig bleiben
 > >    const hours = ['08','09','10','11','12','13','14','15','16','17','18','19','20'];
 > >    const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || dv.current().file.name;
-> >    const archIcons = { "#0cal":"📅", "#1stars":"✨", "#2area":"💠", "#3project":"🚧", "#4task":"🛠️", "#5note":"✏️", "#6resou":"🔖" };
+> >    const archIcons = { "#0cal":"📅", "#1stars":"✨", "#2area":"💠", "#3project":"🚧", "#4task":"🛠️", "#5note":"✏️", "#6resource":"🔖" };
 > >    const items = [];
 > >    
 > >    // Logische Exklusion von archivierten, stornierten oder gelöschten Elementen

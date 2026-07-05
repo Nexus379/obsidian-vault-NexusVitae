@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
@@ -29,9 +29,9 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 banner_icon: 🖼️
 inbox: true
 arch:
-  - "#6resou"
+  - "#6resource"
 archtype:
-  - "#6resou/museum"
+  - "#6resource/museum"
 status:
   - "1active"
 priority:

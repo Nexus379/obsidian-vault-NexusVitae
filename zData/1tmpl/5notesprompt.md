@@ -61,11 +61,6 @@ const noteTriggerMap = {
     perma: "4perma",
     permanent: "4perma",
     atomic: "3atomic",
-    nutri: "3atomic_ingredients",
-    nutrition: "3atomic_ingredients",
-    art: "3atomic_art",
-    tech: "3atomic_tech",
-    music: "3atomic_music",
     anki: "3atomic_anki",
     ankicloze: "3atomic_ankicloze",
     ever: "5ever",
@@ -82,30 +77,29 @@ if (!nChoice) {
     targetFolder = `5_Notes/${nFolders[nIdx]}`;
 } else {
     const directFolders = {
-        "1fleet": "1_Fleeting",
-        "2lit": "2_Literature",
-        "4perma": "4_Permanent",
-        "3atomic": "3_Atomic",
-        "3atomic_ingredients": "3_Atomic/Nutrition/Ingredients",
-        "3atomic_anki": "3_Atomic/anki",
-        "3atomic_ankicloze": "3_Atomic/anki",
-        "5ever": "5_Evergreen"
+        "1fleet": "5_Notes/1_Fleeting",
+        "2lit": "5_Notes/2_Literature",
+        "4perma": "5_Notes/4_Permanent",
+        "3atomic": "5_Notes/3_Atomic",
+        "3atomic_anki": "5_Notes/3_Atomic/anki",
+        "3atomic_ankicloze": "5_Notes/3_Atomic/anki",
+        "5ever": "5_Notes/5_Evergreen"
     };
-    targetFolder = `5_Notes/${directFolders[nChoice]}`;
+    targetFolder = directFolders[nChoice];
 }
 
 if (nChoice === "atomic_sub") {
-    const aOptions = ["🗃️ Standard Atomic", "⚛️ Nutrition", "🎨 Art & Stationery", "🔌 Electronics & Tech", "🎵 Music & Audio", "🎴 Anki-Basic", "🧠 Anki-Cloze"];
-    const aVals = ["3atomic", "3atomic_ingredients", "3atomic_art", "3atomic_tech", "3atomic_music", "3atomic_anki", "3atomic_ankicloze"];
-    const aFolders = ["3_Atomic", "3_Atomic/Entities/Nutrition/Ingredients", "3_Atomic/Entities/Stationery_Art", "3_Atomic/Entities/Electronics_Tech", "3_Atomic/Entities/Music_Audio", "3_Atomic/anki", "3_Atomic/anki"];
+    const aOptions = ["🗃️ Standard Atomic", "🎴 Anki-Basic", "🧠 Anki-Cloze"];
+    const aVals = ["3atomic", "3atomic_anki", "3atomic_ankicloze"];
+    const aFoldersFull = ["5_Notes/3_Atomic", "5_Notes/3_Atomic/anki", "5_Notes/3_Atomic/anki"];
     let aIdx = await tp.system.suggester(aOptions, Array.from(aOptions.keys()));
     if (aIdx === null) return;
     nChoice = aVals[aIdx];
-    targetFolder = `5_Notes/${aFolders[aIdx]}`;
+    targetFolder = aFoldersFull[aIdx];
 }
 
 // 🔱 5. SCIENCE-MODULE INTEGRATION (Delegiert die Abfrage!)
-const needsScience = ["4perma", "2lit", "3atomic", "3atomic_ingredients", "3atomic_anki", "3atomic_ankicloze", "5ever"];
+const needsScience = ["4perma", "2lit", "3atomic", "3atomic_anki", "3atomic_ankicloze", "5ever"];
 if (needsScience.includes(nChoice)) {
     if (typeof tp.user.disciplineEngine === "function") {
         const engine = tp.user.disciplineEngine();

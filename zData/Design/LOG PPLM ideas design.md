@@ -1,4 +1,4 @@
-
+﻿
 
 # ⚜️🔱⚡ 2026-03-14 ⚡🔱⚜️
 
@@ -575,7 +575,7 @@ printList(radar, "Radar", "📅");
 > > ```dataviewjs
 > > const hours = ['08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
 > > const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || dv.current().file.name;
-> > const archIcons = { "#0cal": "📅", "#1stars": "✨", "#2area": "💠", "#3project": "🚧", "#4task": "🛠️", "#5note": "✏️", "#6resou": "🔖" };
+> > const archIcons = { "#0cal": "📅", "#1stars": "✨", "#2area": "💠", "#3project": "🚧", "#4task": "🛠️", "#5note": "✏️", "#6resource": "🔖" };
 > > 
 > > let items = [];
 > > dv.pages('"4_Tasks"').forEach(p => {
@@ -753,7 +753,7 @@ dv.paragraph(hubContent);
 > > const hours = ['08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
 > > const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || dv.current().file.name; 
 > >
-> > const archIcons = { "#0cal": "📅", "#1stars": "✨", "#2area": "💠", "#3project": "🚧", "#4task": "🛠️", "#5note": "✏️", "#6resou": "🔖" };
+> > const archIcons = { "#0cal": "📅", "#1stars": "✨", "#2area": "💠", "#3project": "🚧", "#4task": "🛠️", "#5note": "✏️", "#6resource": "🔖" };
 > > 
 > > let source = dv.pages('"4_Tasks"');
 > > let items = [];
@@ -1010,7 +1010,7 @@ dv.paragraph(hubContent);
 >> ```dataview
 >> TABLE without ID
 >> ("![|60](" + Cover + ")") as Cover, file.link as Title, Author as Author, Rating as Rating
->> FROM #6resou AND (outgoing([[#]]) OR [[#]])
+>> FROM #6resource AND (outgoing([[#]]) OR [[#]])
 >> ```
 >
 >>[!multi-column]

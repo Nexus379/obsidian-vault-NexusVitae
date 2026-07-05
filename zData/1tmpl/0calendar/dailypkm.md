@@ -104,7 +104,10 @@ try {
     const dayPrefix = ttDate.locale('en').format("ddd").toLowerCase(); 
 
     // 2. Lade die Timetable-Datei (Sucht die Datei im Vault)
-    const ttPage = dv.page("2_Areas/3_Mind/Timetable");// Geht davon aus, dass deine Datei "Timetable.md" heißt
+    let sKw = ttDate.format("YYYY-[W]WW");
+    if (ttDate.day() === 0) sKw = ttDate.clone().add(1, 'days').format("YYYY-[W]WW");
+    let ttPage = dv.page(`0_Calendar/7_Plan/Study/Weekly/${sKw}.md`);
+    if (!ttPage) ttPage = dv.page("2_Areas/3_Mind/Timetable");
 
     if (ttPage && ["mon", "tue", "wed", "thu", "fri"].includes(dayPrefix)) {
         let dailySubjects = new Set(); // Set verhindert doppelte Einträge bei Doppelstunden

@@ -15,13 +15,13 @@ archtype:
 frozen: false
 plan_year: "<%- year %>"
 plan_kw: "<%- kw %>"
-mon_topic: ""
-tue_topic: ""
-wed_topic: ""
-thu_topic: ""
-fri_topic: ""
-sat_topic: ""
-sun_topic: ""
+tt_mon_1: ""
+tt_tue_1: ""
+tt_wed_1: ""
+tt_thu_1: ""
+tt_fri_1: ""
+tt_sat_1: ""
+tt_sun_1: ""
 ---
 
 # 📚 Study & PKM Plan: <%- kwMatch %>
@@ -40,13 +40,13 @@ sun_topic: ""
 >
 > | Day | 🧠 Focus Topic |
 > |---|---|
-> | **Mon** | `INPUT[text:mon_topic]` |
-> | **Tue** | `INPUT[text:tue_topic]` |
-> | **Wed** | `INPUT[text:wed_topic]` |
-> | **Thu** | `INPUT[text:thu_topic]` |
-> | **Fri** | `INPUT[text:fri_topic]` |
-> | **Sat** | `INPUT[text:sat_topic]` |
-> | **Sun** | `INPUT[text:sun_topic]` |
+> | **Mon** | `INPUT[text:tt_mon_1]` |
+> | **Tue** | `INPUT[text:tt_tue_1]` |
+> | **Wed** | `INPUT[text:tt_wed_1]` |
+> | **Thu** | `INPUT[text:tt_thu_1]` |
+> | **Fri** | `INPUT[text:tt_fri_1]` |
+> | **Sat** | `INPUT[text:tt_sat_1]` |
+> | **Sun** | `INPUT[text:tt_sun_1]` |
 
 ---
 ## 📝 References

@@ -1,4 +1,4 @@
----
+﻿---
 cssclasses:
   - wide-page
   - dashboard-no-border
@@ -25,7 +25,7 @@ const groups = [
   { title: "🧩 Projects", tag: "#3project" },
   { title: "🛠️ Tasks", tag: "#4task" },
   { title: "✏️ Notes", tag: "#5note" },
-  { title: "🔖 Resources", tag: "#6resou" }
+  { title: "🔖 Resources", tag: "#6resource" }
 ];
 
 const pages = dv.pages('!"zData" AND -"yArchive" AND -"xAttachment"')

@@ -1,4 +1,4 @@
----
+﻿---
 cssclasses:
   - wide-page
   - dashboard-no-border
@@ -71,7 +71,7 @@ dv.table(["status", "count", "latest"], rows);
 
 ## Special Status by Arch
 ```dataviewjs
-const archTags = ["#0cal", "#1stars", "#2area", "#3project", "#4task", "#5note", "#6resou"];
+const archTags = ["#0cal", "#1stars", "#2area", "#3project", "#4task", "#5note", "#6resource"];
 const special = ["archive", "archived", "bin", "canceled", "done", "review"];
 
 const pages = dv.pages('"yArchive" AND !"zData"').where(p => p.status);

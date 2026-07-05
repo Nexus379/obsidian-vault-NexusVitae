@@ -6,7 +6,7 @@ arch:
   - "#3project"
   - "#4task"
   - "#5note"
-  - "#6resou"
+  - "#6resource"
 archtype:
   - "#0cal/1plm"
   - "#0cal/2ppm"
@@ -57,24 +57,36 @@ archtype:
   - "#5note/4permanent"
   - "#5note/3atomic"
   - "#5note/3atomic/anki"
-  - "#5note/3atomic/nutrition"
   - "#5note/5evergreen"
-  - "#6resou/ai"
-  - "#6resou/article"
-  - "#6resou/boardgame"
-  - "#6resou/book"
-  - "#6resou/class"
-  - "#6resou/course"
-  - "#6resou/film"
-  - "#6resou/game"
-  - "#6resou/guide"
-  - "#6resou/museum"
-  - "#6resou/music"
-  - "#6resou/paper"
-  - "#6resou/recipe"
-  - "#6resou/reference"
-  - "#6resou/serie"
-  - "#6resou/video"
+  - "#6resource/ai"
+  - "#6resource/article"
+  - "#6resource/boardgame"
+  - "#6resource/book"
+  - "#6resource/class"
+  - "#6resource/course"
+  - "#6resource/film"
+  - "#6resource/game"
+  - "#6resource/guide"
+  - "#6resource/museum"
+  - "#6resource/music"
+  - "#6resource/paper"
+  - "#6resource/recipe"
+  - "#6resource/reference"
+  - "#6resource/serie"
+  - "#6resource/video"
+  - "#6resource/entity"
+  - "#6resource/entity/ingredients"
+  - "#6resource/entity/camping"
+  - "#6resource/entity/tech"
+  - "#6resource/entity/art"
+  - "#6resource/entity/clothing"
+  - "#6resource/entity/fitness"
+  - "#6resource/entity/household"
+  - "#6resource/entity/medical"
+  - "#6resource/entity/music"
+  - "#6resource/entity/personal_care"
+  - "#6resource/entity/pet"
+  - "#6resource/entity/larp"
 inbox: false
 aliases:
 axis:
@@ -424,7 +436,7 @@ difficulty:
 #3project p- = projects
 #4task t- = tasks
 #5note n- = notes
-#6resou r- = resource
+#6resource r- = resource
 
 ### 0 Calendar
 
@@ -500,27 +512,41 @@ difficulty:
 #5note/4permanent
 #5note/3atomic
 #5note/3atomic/anki
-#5note/3atomic/nutrition
 #5note/5evergreen
 
-### 6 Source
-#6resou
-#6resou/ai
-#6resou/article
-#6resou/boardgame
-#6resou/book
-#6resou/class
-#6resou/course
-#6resou/film
-#6resou/game
-#6resou/guide
-#6resou/museum
-#6resou/music
-#6resou/paper
-#6resou/recipe
-#6resou/reference
-#6resou/serie
-#6resou/video
+### 6 Resource
+#6resource
+#### Sources
+#6resource/ai
+#6resource/article
+#6resource/boardgame
+#6resource/book
+#6resource/class
+#6resource/course
+#6resource/film
+#6resource/game
+#6resource/guide
+#6resource/museum
+#6resource/music
+#6resource/paper
+#6resource/recipe
+#6resource/reference
+#6resource/serie
+#6resource/video
+#### Entities
+#6resource/entity
+#6resource/entity/ingredients
+#6resource/entity/camping
+#6resource/entity/tech
+#6resource/entity/art
+#6resource/entity/clothing
+#6resource/entity/fitness
+#6resource/entity/household
+#6resource/entity/medical
+#6resource/entity/music
+#6resource/entity/personal_care
+#6resource/entity/pet
+#6resource/entity/larp
 #### Class
 alle nach / sind ausgeschriebene Wörter: ENG = English zb41
 #disc

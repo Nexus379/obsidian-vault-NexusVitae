@@ -1,4 +1,4 @@
----
+﻿---
 cssclasses:
   - wide-page
   - dashboard-no-border
@@ -32,7 +32,7 @@ const archData = [
     { label: "🧩 Projects", count: countTag("#3project"), color: "#fab387" },
     { label: "🛠️ Tasks", count: countTag("#4task"), color: "#f38ba8" },
     { label: "✏️ Notes", count: countTag("#5note"), color: "#74c7ec" },
-    { label: "🔖 Resources", count: countTag("#6resou"), color: "#cba6f7" }
+    { label: "🔖 Resources", count: countTag("#6resource"), color: "#cba6f7" }
 ];
 
 // Areas Detail

@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 // 🔱 1. NEXUS-DATA-SYNC
 let luhmannId = tp.variables.luhmannId || "R" + tp.date.now("YYYYMMDDHHmm");
 let title = tp.variables.title || tp.file.title;
@@ -32,9 +32,9 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 banner_icon: 🏫
 inbox: true
 arch:
-  - "#6resou"
+  - "#6resource"
 archtype:
-  - "#6resou/class"
+  - "#6resource/class"
 status:
   - 1active
 priority:

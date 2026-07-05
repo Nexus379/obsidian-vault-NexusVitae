@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
@@ -86,9 +86,9 @@ banner_icon: 🎲
 cover: "[[<%- pureCover %>]]"
 inbox: true
 arch:
-  - "#6resou"
+  - "#6resource"
 archtype:
-  - "#6resou/boardgame"
+  - "#6resource/boardgame"
 status:
   - "1active"
 priority:

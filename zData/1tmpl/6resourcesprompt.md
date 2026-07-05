@@ -28,7 +28,19 @@ const resources = [
     { label: "Reference 📚", val: "sourcereference", folder: "Reference" },
     { label: "Serie 🎞️", val: "sourceserie", folder: "Series" },
     { label: "Video 💻", val: "sourcevideo", folder: "Videos" },
-    { label: "Boardgame 🎲", val: "sourceboardgame", folder: "Boardgame" }
+    { label: "Boardgame 🎲", val: "sourceboardgame", folder: "Boardgame" },
+    { label: "Ingredient 🥦", val: "sourceentities_ingredients", folder: "_Entities/Nutrition/Ingredients" },
+    { label: "Camping Gear ⛺", val: "sourceentities_camping", folder: "_Entities/Camping_Outdoors" },
+    { label: "Tech & Electronics 🔌", val: "sourceentities_tech", folder: "_Entities/Electronics_Tech" },
+    { label: "Art & Stationery 🎨", val: "sourceentities_art", folder: "_Entities/Stationery_Art" },
+    { label: "Clothing 👕", val: "sourceentities_clothing", folder: "_Entities/Clothing" },
+    { label: "Fitness Gear 🏋️", val: "sourceentities_fitness", folder: "_Entities/Fitness" },
+    { label: "Household Item 🧹", val: "sourceentities_household", folder: "_Entities/Home/Drugstore/Household" },
+    { label: "Medical 💊", val: "sourceentities_medical", folder: "_Entities/Medical" },
+    { label: "Music Gear 🎵", val: "sourceentities_music", folder: "_Entities/Music_Audio" },
+    { label: "Personal Care 🧴", val: "sourceentities_personal", folder: "_Entities/Personal" },
+    { label: "Pet Item 🐕", val: "sourceentities_pet", folder: "_Entities/Pets" },
+    { label: "LARP Gear ⚔️", val: "sourceentities_larp", folder: "_Entities/LARP" }
 ];
 
 let nIdx = null;
@@ -51,7 +63,19 @@ const resourceTriggerMap = {
     serie: "sourceserie",
     series: "sourceserie",
     video: "sourcevideo",
-    boardgame: "sourceboardgame"
+    boardgame: "sourceboardgame",
+    ingredient: "sourceentities_ingredients",
+    camping: "sourceentities_camping",
+    tech: "sourceentities_tech",
+    art: "sourceentities_art",
+    clothing: "sourceentities_clothing",
+    fitness: "sourceentities_fitness",
+    household: "sourceentities_household",
+    medical: "sourceentities_medical",
+    music: "sourceentities_music",
+    personal: "sourceentities_personal",
+    pet: "sourceentities_pet",
+    larp: "sourceentities_larp"
 };
 
 if (preSub) {

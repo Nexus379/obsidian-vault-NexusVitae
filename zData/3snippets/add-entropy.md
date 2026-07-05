@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 /**
  * 🧘 NEXUS ENTROPY MASTER INJECTOR - Dynamic Persona Edition
  */
@@ -18,7 +18,7 @@ try {
         { 
             display: "🎭 Entertainment", 
             type: "entertain_link", 
-            arch: ["#6resou"], 
+            arch: ["#6resource"], 
             query: '"6_Resources/Books" or "6_Resources/Films" or "6_Resources/Series" or "6_Resources/Games"',
             baseFolder: "6_Resources",
             subTypes: [
@@ -105,7 +105,7 @@ try {
         if (mode.type === "entertain_link") {
             const sType = await tp.system.suggester(mode.subTypes.map(s => s.icon + " " + s.label), mode.subTypes, false, "Type:");
             if (sType) {
-                subTag = `#6resou/${sType.id}`;
+                subTag = `#6resource/${sType.id}`;
                 subFolder = `${mode.baseFolder}/${sType.label}s`;
             } else {
                 return;

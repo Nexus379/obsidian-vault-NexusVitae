@@ -1,4 +1,4 @@
----
+﻿---
 cssclasses:
   - wide-page
   - dashboard-no-border
@@ -31,7 +31,7 @@ const groups = [
   { title: "🌍 Orte & Sonstiges", tag: ["place", "event", "object", "image"] }
 ];
 
-const pages = dv.pages('!"zData" AND -"yArchive" AND -"xAttachment" AND #6resou')
+const pages = dv.pages('!"zData" AND -"yArchive" AND -"xAttachment" AND #6resource')
   .where(p => p.inbox !== true);
 
 const hasTag = (page, tags) => {
