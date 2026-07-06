@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 /**
  * 🍔 NEXUS DAILY MODIFIER: MEAL INJECTOR (Add/Remove)
  * Path: zData/3snippets/add-remove-meal.md
@@ -65,10 +65,10 @@ await app.fileManager.processFrontMatter(tp.config.active_file, (fm) => {
         fm[targetProperty].push(selected.value);
     }
 
-    // Falls ADD und Datenbank-Item -> Mengen-Variable (amt_) initialisieren
+    // Falls ADD und Datenbank-Item -> Mengen-Variable (qty_) initialisieren
     if (type === "add" && selected.isDb) {
         const safeKey = selected.value.toLowerCase().replace(/[^a-z0-9]/g, '_');
-        const propertyName = `amt_${safeKey}`;
+        const propertyName = `qty_${safeKey}`;
         if (fm[propertyName] === undefined) {
             fm[propertyName] = 1.0;
         }

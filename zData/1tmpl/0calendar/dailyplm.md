@@ -403,6 +403,12 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     if (sport >= 60) bonus += 5;
     if (Number(c.mood) >= 4) bonus += 5;
     if (Number(c.energy) >= 4) bonus += 5;
+    
+    // Music Bonus
+    const musicTime = Number(c["play_instrum_time"]) || 0;
+    if (musicTime >= 15) bonus += 5;
+    if (musicTime >= 30) bonus += 5;
+
     const compAlchemy = vitaminTasks.filter(t => isAlchemy(t) && t.completed).length;
     bonus += (compAlchemy * 2.5); // Bio-Hacks
 

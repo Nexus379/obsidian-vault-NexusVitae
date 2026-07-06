@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 /**
  * 🧪 Nexus Lab: Spontaneous Alchemy (Engine-Sync Edition)
  */
@@ -34,7 +34,7 @@ if (!selected) return;
 const selectedId = selected.id;
 const targetProperty = mode === "plus" ? "food_add" : "food_rem";
 const safeKey = selectedId.toLowerCase().replace(/[^a-z0-9]/g, '_');
-const amountProperty = `amt_${safeKey}`;
+const amountProperty = `qty_${safeKey}`;
 
 // 🔱 5. FRONTMATTER SYNC
 await app.fileManager.processFrontMatter(tp.config.active_file, (fm) => {

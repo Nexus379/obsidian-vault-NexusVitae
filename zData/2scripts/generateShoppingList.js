@@ -1,4 +1,4 @@
-async function generateShoppingList(app, dv, moment) {
+﻿async function generateShoppingList(app, dv, moment) {
     let logDateStr = dv.current().cal_date;
     
     // Wenn manuell aus dem Shopping Hub gestartet, frage nach dem Datum!
@@ -74,8 +74,8 @@ async function generateShoppingList(app, dv, moment) {
         if (deficit > 0) {
             let batchesToCook = Math.ceil(deficit / rYield);
             for (let key in recipe) {
-                if (key.startsWith("amt_")) {
-                    const atomId = key.replace("amt_", "");
+                if (key.startsWith("qty_")) {
+                    const atomId = key.replace("qty_", "");
                     const amountPerBatch = Number(recipe[key]) || 0;
                     neededAtoms[atomId] = (neededAtoms[atomId] || 0) + (amountPerBatch * batchesToCook);
                 }

@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 const activeFile = app.workspace.getActiveFile();
 if (!activeFile) return;
 
@@ -21,7 +21,7 @@ await app.fileManager.processFrontMatter(activeFile, frontmatter => {
     frontmatter.food_add = [];
     frontmatter.food_rem = [];
     Object.keys(frontmatter).forEach(key => {
-        if (key.startsWith("amt_")) delete frontmatter[key];
+        if (key.startsWith("qty_")) delete frontmatter[key];
     });
 });
 

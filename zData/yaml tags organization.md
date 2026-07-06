@@ -356,6 +356,8 @@ fitness_am:
 fitness_pm:
 selfcare_am:
 selfcare_pm:
+play_instrum:
+play_instrum_time:
 meal:
 vita_snap:
 focus: ""
@@ -370,6 +372,12 @@ maintask5: ""
 cal_date:
 rev_start:
 rev_end:
+journal_revD:
+fitness_revD:
+music_revD:
+selfcare_revD:
+kcal_revD:
+protein_revD:
 brain_drain:
 shopping_extras:
 kcal:
@@ -398,7 +406,10 @@ potassium:
 iodine:
 omega3:
 ingredients:
-amounts:
+qty:
+qty_:
+amount:
+unit_price:
 mealtime:
   - "breakfast"    # Der energetische Start
   - "lunch"        # Die Mittagssynthese

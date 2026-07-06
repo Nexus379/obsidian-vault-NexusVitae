@@ -186,7 +186,7 @@ if (ingredients.length === 0) {
 
     ingredients.forEach(ing => {
         const safeKey = String(ing).toLowerCase().replace(/[^a-z0-9]/g, '_').replace(/^_+|_+$/g, '');
-        const factor = p["amt_" + safeKey] || 0;
+        const factor = p["qty_" + safeKey] || 0;
         const atom = masterCatalog[ing] || Nexus.find(ing);
         
         if (atom && atom.val) {
@@ -346,22 +346,22 @@ if (ingredients.length === 0) {
 > >              const blocks = section.split(/#### \*\*([^*]+):\*\*/);
 > >              
 > >              if (blocks.length < 2) {
-> >                  const keys = section.match(/amt_[a-z0-9_]+/g) || [];
+> >                  const keys = section.match(/qty_[a-z0-9_]+/g) || [];
 > >                  keys.forEach(k => {
 > >                      const val = p[k] || 0;
-> >                      const name = k.replace("amt_", "").replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+> >                      const name = k.replace("qty_", "").replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
 > >                      if (val > 0) html += `• <b>${Math.round(val * 100)}g</b> ${name}<br>`;
 > >                  });
 > >              } else {
 > >                  for (let i = 1; i < blocks.length; i += 2) {
 > >                      const catName = blocks[i].trim();
-> >                      const keys = blocks[i+1].match(/amt_[a-z0-9_]+/g);
+> >                      const keys = blocks[i+1].match(/qty_[a-z0-9_]+/g);
 > >                      
 > >                      if (keys) {
 > >                          html += `<div style='margin-top:6px; color:var(--text-accent); border-bottom:1px solid var(--background-modifier-border); font-weight:bold;'>${catName}</div>`;
 > >                          keys.forEach(k => {
 > >                              const val = p[k] || 0;
-> >                              const name = k.replace("amt_", "").replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+> >                              const name = k.replace("qty_", "").replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
 > >                              if (val > 0) html += `• <b>${Math.round(val * 100)}g</b> ${name}<br>`;
 > >                          });
 > >                      }

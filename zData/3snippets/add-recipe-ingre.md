@@ -1,4 +1,4 @@
-<%-*
+﻿<%-*
 /**
  * 🏗️ NEXUS ARCHITECT v5.0 (Pure Recipe Builder)
  * Callout-Safe, Marker-Safe, 100% Recipe-Focused.
@@ -20,7 +20,7 @@ const selected = await tp.system.suggester(options.map(o => o.display), options,
 if (!selected) return;
 
 const safeKey = selected.value.toLowerCase().replace(/[^a-z0-9]/g, '_').replace(/^_+|_+$/g, '');
-const propName = `amt_${safeKey}`;
+const propName = `qty_${safeKey}`;
 
 const editor = app.workspace.activeLeaf.view.editor;
 const content = editor.getValue();

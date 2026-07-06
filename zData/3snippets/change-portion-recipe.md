@@ -1,4 +1,4 @@
-<%*
+﻿<%*
 /**
  * 🧪 NEXUS SCALE ENGINE: Ultimate Fix
  */
@@ -25,9 +25,9 @@ let changedItems = [];
 await app.fileManager.processFrontMatter(activeFile, (fm) => {
     fm.portions = newP; // Portionen updaten
     
-    // Alle amt_ Felder durchsuchen und umrechnen
+    // Alle qty_ Felder durchsuchen und umrechnen
     Object.keys(fm).forEach(key => {
-        if (key.startsWith("amt_")) {
+        if (key.startsWith("qty_")) {
             let val = Number(fm[key]);
             
             if (val > 0) {
@@ -46,6 +46,6 @@ if (changedItems.length > 0) {
     new Notice(`✅ SUCCESS!\nScaled ${changedItems.length} ingredients.`);
     console.log("Nexus Scale Details:\n" + changedItems.join("\n"));
 } else {
-    new Notice("❌ No active 'amt_' values found to scale.");
+    new Notice("❌ No active 'qty_' values found to scale.");
 }
 -%>
