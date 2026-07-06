@@ -41,7 +41,9 @@ pl_score: 8.5
 props: 
   - "Painless wound disinfection"
   - "Broad spectrum of activity"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Octenidin"
 prescription_required: "No"
 price_pure: 0.00
@@ -82,3 +84,4 @@ vendor_market: ""
 ---
 
 `
+

@@ -40,7 +40,9 @@ pl_score: 9.0
 props: 
   - "Gegen Übelkeit und Erbrechen"
   - "Prevents motion sickness"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Dimenhydrinat"
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

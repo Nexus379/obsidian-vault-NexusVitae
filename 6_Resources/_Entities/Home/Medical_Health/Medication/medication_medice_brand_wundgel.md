@@ -40,7 +40,9 @@ pl_score: 9.0
 props: 
   - "Kühlt sofort bei Verbrennungen (Gaskocher, Lagerfeuer)"
   - "Schützt vor Infektionen"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Benzethoniumchlorid, Harnstoff"
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

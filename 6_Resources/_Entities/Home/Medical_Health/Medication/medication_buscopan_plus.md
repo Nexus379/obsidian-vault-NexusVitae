@@ -40,7 +40,9 @@ pl_score: 9.0
 props: 
   - "Krampflösend bei Magen-Darm-Beschwerden"
   - "Plus = mit zusätzlichem Schmerzmittel (Paracetamol)"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Butylscopolamin, Paracetamol"
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

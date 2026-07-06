@@ -24,6 +24,7 @@ status: 1active
 entity_class: "outdoor_gear"
 camping_type: "hygiene"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 120
 icon: "🚽"
@@ -38,7 +39,6 @@ props:
   - "Leak-proof due to gel granules"
   - "Perfekt fürs Zelt bei Regen/Nacht"
 # --- 🏕️ OUTDOOR SPECS ---
-vendors: []
 weight_g: 50
 capacity_persons: 1
 water_column_mm: 0
@@ -89,3 +89,5 @@ vendor_market: ""
 ---
 
 `
+
+

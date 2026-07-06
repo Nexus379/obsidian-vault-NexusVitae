@@ -49,10 +49,10 @@ status: 1active
 entity_class: "larp_gear"
 larp_type: "costume"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 60
 # --- 🧝‍♀️ LARP SPECS ---
-unit_price: 0
 store_online: ""
 store_local: ""
 brand: ""
@@ -60,6 +60,16 @@ material: ""
 authenticity_lvl: 5
 is_foam_weapon: false
 pl_score: 0
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧝‍♀️  <%- luhmannId %>   <%- displayTitle %>
@@ -77,6 +87,16 @@ pl_score: 0
 | 🎭 **Authenticity**| `INPUT[number:authenticity_lvl]` / 10 |     |
 | ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 ## 📝 Source & Notes
 - Review: LARP Forums / Local Guilds
@@ -88,9 +108,32 @@ pl_score: 0
 > `BUTTON[add-wardrobe-owner]`
 
 `
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 `
+
+
+

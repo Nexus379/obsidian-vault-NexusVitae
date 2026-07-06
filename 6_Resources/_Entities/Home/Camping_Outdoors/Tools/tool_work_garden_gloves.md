@@ -25,6 +25,7 @@ status: 1active
 entity_class: "outdoor_gear"
 camping_type: "tool"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 120
 icon: "🧤"
@@ -39,7 +40,6 @@ props:
   - "Für grobe Arbeiten im Garten oder beim Campen"
   - "Schützt vor Dornen, Holzsplittern und Dreck"
 # --- 🏕️ OUTDOOR SPECS ---
-vendors: []
 weight_g: 120
 capacity_persons: 1
 water_column_mm: 0
@@ -90,3 +90,5 @@ vendor_market: ""
 ---
 
 `
+
+

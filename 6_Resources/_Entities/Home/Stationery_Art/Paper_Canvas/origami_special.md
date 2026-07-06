@@ -23,6 +23,7 @@ status: 1active
 entity_class: "tech_gear"
 tech_type: "component"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 60
 # weight: "60g-80g/m²"
@@ -38,16 +39,15 @@ props:
   - "Dünn genug für komplexe Falt-Sequenzen (Tessellations)"
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 8.00
 vendor_value: ""
 price_market: 0.00
 vendor_market: ""
 --- ⚙️ TECH SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 ghz: 0
 ram_gb: 0
@@ -162,3 +162,6 @@ pl_score: 0
 
 ``
 `
+
+
+

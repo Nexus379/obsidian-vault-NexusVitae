@@ -40,7 +40,9 @@ pl_score: 9.5
 props: 
   - "Fast relief for allergies and hay fever"
   - "Geringes Müdigkeitsrisiko"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Cetirizindihydrochlorid"
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

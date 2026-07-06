@@ -23,6 +23,7 @@ status: 1active
 entity_class: "personal_care"
 personal_type: "skincare"
 state: "bathroom"
+qty: 0
 needs_refill: false
 shelf_life_months: 12
 # props: 
@@ -49,16 +50,15 @@ locations:
   - "lidl"
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 1.00
 vendor_value: ""
 price_market: 0.00
 vendor_market: ""
 --- 🧴 MATERIAL SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 material: ""
 chlorine_free: "Yes"
@@ -172,6 +172,9 @@ actions:
     templateFile: "zData/2scripts/archiveall.md" 
 
 ```
+
+
+
 
 
 

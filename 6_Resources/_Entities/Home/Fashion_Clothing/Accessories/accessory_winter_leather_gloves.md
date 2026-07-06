@@ -39,8 +39,9 @@ unit_type: "pair"
 props: 
   - "Classic, warm and windproof"
   - "Für den Weg zur Arbeit und formelle Anlässe"
-# --- 👕 CLOTHING SPECS ---
-vendors: []
+#
+qty: 0
+--- 👕 CLOTHING SPECS ---
 weight_g: 150
 care_instructions: "Nur Handwäsche / Lederpflege"
 condition_score: 9
@@ -87,3 +88,5 @@ vendor_market: ""
 ---
 
 `
+
+

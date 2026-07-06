@@ -23,6 +23,7 @@ status: 1active
 entity_class: "larp_gear"
 larp_type: "prop"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 60
 # props: 
@@ -42,8 +43,10 @@ locations:
   - "hobby_store"
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 50.00
 vendor_value: ""
 price_market: 0.00
@@ -154,3 +157,5 @@ is_foam_weapon: false
 
 ``
 `
+
+

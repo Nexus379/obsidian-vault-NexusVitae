@@ -48,17 +48,25 @@ status: 1active
 entity_class: "musical_instrument"
 tech_type: "analog"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 120
 # --- 🎵 MUSIC SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 material: ""
 is_digital: false
 requires_power: false
 pl_score: 0
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🎵  <%- luhmannId %>   <%- displayTitle %>
@@ -75,6 +83,16 @@ pl_score: 0
 | 🎛️ **Digital**       | `INPUT[toggle:is_digital]`                                                                                                                                     |     |
 | ⭐ **PL Score**       | `INPUT[number:pl_score]` / 10                                                                                                                                  |     |
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 ## 📝 Source & Notes
 - 
@@ -86,9 +104,32 @@ pl_score: 0
 > `BUTTON[add-wardrobe-owner]`
 
 `
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 `
+
+
+

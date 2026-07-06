@@ -40,7 +40,9 @@ pl_score: 9.5
 props: 
   - "Compensates for salt and water loss"
   - "Lebensrettend bei Durchfall oder Hitzeerschöpfung"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Glucose, Natriumchlorid, Kaliumchlorid"
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

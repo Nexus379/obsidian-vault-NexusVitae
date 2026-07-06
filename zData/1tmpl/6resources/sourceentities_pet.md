@@ -48,16 +48,24 @@ entity_class: "pet_supply"
 pet_type: "cat"
 item_type: "toy"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 24
 # --- 🐾 PET SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 material: ""
 durability: 5
 pl_score: 0
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🐾  <%- luhmannId %>   <%- displayTitle %>
@@ -74,6 +82,16 @@ pl_score: 0
 | 🛡️ **Durability**| `INPUT[number:durability]` / 10 |     |
 | ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 ## 📝 Source & Notes
 - 
@@ -85,9 +103,32 @@ pl_score: 0
 > `BUTTON[add-wardrobe-owner]`
 
 `
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 `
+
+
+

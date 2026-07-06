@@ -23,6 +23,7 @@ status: 1active
 entity_class: "outdoor_gear"
 camping_type: "tent"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 120
 # props: 
@@ -42,15 +43,15 @@ locations:
   - "outdoor_store"
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 550.00
 vendor_value: ""
 price_market: 0.00
 vendor_market: ""
 --- ðŸ•ï¸ OUTDOOR SPECS ---
-pref_vendor: "Decathlon / Amazon"
-vendors: []
 weight_g: 8700
 capacity_persons: 4
 water_column_mm: 5000
@@ -90,3 +91,6 @@ material: "Nylon/Polyester"
 > `BUTTON[add-wardrobe-owner]`
 `
 `
+
+
+

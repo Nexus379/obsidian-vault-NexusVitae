@@ -39,7 +39,9 @@ pl_score: 8.0
 props: 
   - "Simple leverage"
   - "Wichtig für Wald-Trips"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
 price_pure: 0.00
@@ -80,3 +82,4 @@ vendor_market: ""
 ---
 
 `
+

@@ -24,6 +24,7 @@ status: 1active
 entity_class: "outdoor_gear"
 camping_type: "hygiene"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 60
 icon: "🧴"
@@ -39,7 +40,6 @@ props:
   - "Bactericidal and virucidal"
   - "Kleine 50ml Flasche fürs EDC"
 # --- 🏕️ OUTDOOR SPECS ---
-vendors: []
 weight_g: 55
 capacity_persons: 1
 water_column_mm: 0
@@ -90,3 +90,5 @@ vendor_market: ""
 ---
 
 `
+
+

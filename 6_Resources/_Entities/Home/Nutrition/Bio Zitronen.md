@@ -21,8 +21,8 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-vendors: []
 state: "pantry"
+qty: 0
 needs_refill: false
 shelf_life_months: 12
 price: 0
@@ -67,3 +67,5 @@ vendor_market: ""
 # 🥗 Bio Zitronen
 
 Ich brauche vor allem die Schale für meinen Kuchen, deshalb ist es extrem wichtig, dass sie Bio und ungespritzt sind!
+
+

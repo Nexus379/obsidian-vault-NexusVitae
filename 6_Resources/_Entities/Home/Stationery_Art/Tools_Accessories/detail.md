@@ -23,6 +23,7 @@ status: 1active
 entity_class: "tech_gear"
 tech_type: "component"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 60
 # label: "Faber-Castell Polychromos"
@@ -31,16 +32,15 @@ synergy_with_castle: "Perfect for adding sharp details over soft Castle Arts lay
 tech_reason: "Oil-based core allows for sharp points and prevents wax bloom."
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 0.00
 vendor_value: ""
 price_market: 0.00
 vendor_market: ""
 --- ⚙️ TECH SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 ghz: 0
 ram_gb: 0
@@ -155,3 +155,6 @@ pl_score: 0
 
 ``
 `
+
+
+

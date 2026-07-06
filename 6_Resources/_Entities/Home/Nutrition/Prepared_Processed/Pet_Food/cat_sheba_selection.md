@@ -23,6 +23,7 @@ status: 1active
 entity_class: "art_supply"
 art_type: "medium_dry"
 state: "studio"
+qty: 0
 needs_refill: false
 shelf_life_months: 60
 # de: "Sheba Selektion"
@@ -42,16 +43,15 @@ props:
   - "Preislich deutlich über der Leistung"
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 1.00
 vendor_value: ""
 price_market: 0.00
 vendor_market: ""
 --- 🎨 ART SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 core_type: ""
 ink_type: ""
@@ -157,3 +157,6 @@ pl_score: 0
 
 ``
 `
+
+
+

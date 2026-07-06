@@ -52,13 +52,20 @@ stock_level: 0
 min_stock: 1
 shelf_life_months: 24
 # --- 💊 MEDICAL SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 active_ingredient: ""
 prescription_required: "No"
 pl_score: 0
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 💊  <%- luhmannId %>   <%- displayTitle %>
@@ -74,6 +81,16 @@ pl_score: 0
 | 🧬 **Active Ingredient**| `INPUT[text:active_ingredient]` |     |
 | ⚕️ **Prescription**| `INPUT[suggester(option("No", 🟢 No), option("Yes", 🔴 Yes)):prescription_required]` |     |
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 ## 📝 Source & Notes
 - 
@@ -85,9 +102,32 @@ pl_score: 0
 > `BUTTON[add-wardrobe-owner]`
 
 `
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 `
+
+
+

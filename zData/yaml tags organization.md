@@ -409,7 +409,16 @@ ingredients:
 qty:
 qty_:
 amount:
-unit_price:
+price_cheap:
+vendor_cheap:
+price_value:
+vendor_value:
+price_pure_cheap:
+vendor_pure_cheap:
+price_pure:
+vendor_pure:
+price_market:
+vendor_market:
 mealtime:
   - "breakfast"    # Der energetische Start
   - "lunch"        # Die Mittagssynthese

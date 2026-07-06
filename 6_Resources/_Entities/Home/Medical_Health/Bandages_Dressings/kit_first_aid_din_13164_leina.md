@@ -41,7 +41,9 @@ pl_score: 9.5
 props: 
   - "Nylon bag instead of hard plastic (space-saving)"
   - "According to current standard incl. 2 masks"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
 price_pure: 0.00
@@ -82,3 +84,4 @@ vendor_market: ""
 ---
 
 `
+

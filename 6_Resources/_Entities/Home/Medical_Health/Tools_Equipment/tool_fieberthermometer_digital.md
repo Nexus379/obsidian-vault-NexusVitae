@@ -40,7 +40,9 @@ pl_score: 9.0
 props: 
   - "Waterproof and fast measurement"
   - "Basis für jede Hausapotheke"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

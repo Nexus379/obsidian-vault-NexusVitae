@@ -40,7 +40,9 @@ pl_score: 9.0
 props: 
   - "Zuverlässige Hilfe bei Reisedurchfall"
   - "Gehört in jedes Notfall-Kit im Ausland"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Loperamid"
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

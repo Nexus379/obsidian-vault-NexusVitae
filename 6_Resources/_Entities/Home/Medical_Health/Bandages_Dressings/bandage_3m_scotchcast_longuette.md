@@ -40,7 +40,9 @@ pl_score: 9.0
 props: 
   - "Halboffene Schiene (härtet durch Wasser aus)"
   - "Wird mit der Peha-haft Binde am Arm fixiert"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Polyurethanharz (Fiberglas)"
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

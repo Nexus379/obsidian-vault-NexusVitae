@@ -48,17 +48,25 @@ status: 1active
 entity_class: "personal_care"
 personal_type: "skincare"
 state: "bathroom"
+qty: 0
 needs_refill: false
 shelf_life_months: 12
 # --- 🧴 MATERIAL SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 material: ""
 chlorine_free: "Yes"
 absorption: ""
 pl_score: 0
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🧴  <%- luhmannId %>   <%- displayTitle %>
@@ -75,6 +83,16 @@ pl_score: 0
 | 🌿 **Chlorine Free** | `INPUT[text:chlorine_free]` |     |
 | ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 ## 📝 Source & Notes
 - 
@@ -86,9 +104,32 @@ pl_score: 0
 > `BUTTON[add-wardrobe-owner]`
 
 `
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 `
+
+
+

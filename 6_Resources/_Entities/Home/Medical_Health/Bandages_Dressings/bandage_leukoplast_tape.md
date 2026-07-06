@@ -40,7 +40,9 @@ pl_score: 9.0
 props: 
   - "Extremely strong adhesion"
   - "For fixing compresses or taping"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

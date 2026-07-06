@@ -40,7 +40,9 @@ pl_score: 9.5
 props: 
   - "Zur Ruhigstellung von Brüchen und Verstauchungen"
   - "Leicht, röntgendurchlässig und wiederverwendbar"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

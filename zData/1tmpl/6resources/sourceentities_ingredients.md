@@ -47,9 +47,8 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-pref_vendor: ""
-vendors: []
 state: "pantry"
+qty: 0
 needs_refill: false
 shelf_life_months: 12
 # --- ⚡ MACROS (per 100g/ml) ---
@@ -80,6 +79,16 @@ tryptophan_mg: 0
 leucine_mg: 0
 omega3_epa_mg: 0
 omega3_dha_mg: 0
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # 🥗  <%- luhmannId %>   <%- displayTitle %>
@@ -188,6 +197,16 @@ omega3_dha_mg: 0
 >> LIST FROM #6resource/recipe
 >> WHERE contains(ingredients, link(this.file.name))
 >> ```
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 ## 🔬 Micronutrient Lab
@@ -206,6 +225,16 @@ omega3_dha_mg: 0
 | 🥑 **Fat** | `INPUT[number:fat_total_g]` g   |     |
 %%END_OF_MICROS%%
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 ## 📝 Source & Notes
 - 
@@ -214,6 +243,16 @@ omega3_dha_mg: 0
 
 
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 > [!multi-column]
@@ -249,11 +288,44 @@ omega3_dha_mg: 0
 >     
 > 3. **Zero-Value Policy:** If a nutrient is not present, leave it at `0` or empty. Do not use strings like "none" or "trace".
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 ### 🌑 Metabolism Optimized; Data Rooted 🌑
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 [[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
+
+
+

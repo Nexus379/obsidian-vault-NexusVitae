@@ -25,6 +25,7 @@ status: 1active
 entity_class: "outdoor_gear"
 camping_type: "hygiene"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 120
 icon: "🏕️"
@@ -40,7 +41,6 @@ props:
   - "Reusable and boilable"
   - "Lifesaving while standing or in the tent"
 # --- 🏕️ OUTDOOR SPECS ---
-vendors: []
 weight_g: 15
 capacity_persons: 1
 water_column_mm: 0
@@ -91,3 +91,5 @@ vendor_market: ""
 ---
 
 `
+
+

@@ -106,7 +106,7 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             const item = DATABASE[key];
             if (!item) return null;
             
-            const stratKeys = ["pure", "budget", "value", "market"];
+            const stratKeys = ["cheap", "value", "pure_cheap", "pure", "market"];
             let s = stratKeys.includes(strategy) ? strategy : "value";
             
             let price = Number(item[`price_${s}`]) || 0;

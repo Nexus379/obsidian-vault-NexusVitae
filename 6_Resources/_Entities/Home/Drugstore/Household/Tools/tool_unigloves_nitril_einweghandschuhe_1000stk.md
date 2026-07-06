@@ -25,6 +25,7 @@ entity_class: "household_goods"
 household_type: "tool"
 room: "bathroom"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 60
 icon: "🧤"
@@ -38,7 +39,6 @@ props:
   - "Für Kochen (Fleisch), Putzen & Erste-Hilfe"
   - "Puderfrei und reißfest"
 # --- 🏠 HOUSEHOLD SPECS ---
-vendors: []
 weight_g: 500
 volume_ml: 0
 hazardous: "No"
@@ -85,3 +85,5 @@ vendor_market: ""
 ---
 
 `
+
+

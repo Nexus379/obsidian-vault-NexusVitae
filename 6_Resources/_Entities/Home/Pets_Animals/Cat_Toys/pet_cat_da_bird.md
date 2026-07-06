@@ -23,6 +23,7 @@ entity_class: "pet_supply"
 pet_type: "cat"
 item_type: "toy"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 24
 # props: 
@@ -42,15 +43,15 @@ locations:
   - "pet_store"
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 15.00
 vendor_value: ""
 price_market: 0.00
 vendor_market: ""
 --- ðŸ¾ PET SPECS ---
-pref_vendor: "Fressnapf / Zooplus"
-vendors: []
 material: "Feathers / Fiberglass"
 durability: 5
 ---
@@ -152,3 +153,6 @@ durability: 5
 
 ``
 `
+
+
+

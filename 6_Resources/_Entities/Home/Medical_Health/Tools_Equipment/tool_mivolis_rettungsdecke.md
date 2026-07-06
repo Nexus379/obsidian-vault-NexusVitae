@@ -39,7 +39,9 @@ pl_score: 9.0
 props: 
   - "Gold/Silber für Wärme/Kälteschutz"
   - "Extremely compact packaging"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: ""
 prescription_required: "No"
 price_pure: 0.00
@@ -80,3 +82,4 @@ vendor_market: ""
 ---
 
 `
+

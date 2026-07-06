@@ -40,7 +40,9 @@ pl_score: 9.0
 props: 
   - "Kühlt und hemmt Juckreiz"
   - "Perfekt für Mückenstiche und Sonnenbrand"
-# --- 💊 MEDICAL SPECS ---
+#
+qty: 0
+--- 💊 MEDICAL SPECS ---
 active_ingredient: "Dimetindenmaleat"
 prescription_required: "No"
 price_pure: 0.00
@@ -81,3 +83,4 @@ vendor_market: ""
 ---
 
 `
+

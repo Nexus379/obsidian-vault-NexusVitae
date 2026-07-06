@@ -59,6 +59,8 @@ const f_am = Number(getVal(plm, "fitness_am", 0));
 const f_pm = Number(getVal(plm, "fitness_pm", 0));
 tp.variables.fitness_revD = f_am + f_pm;
 
+tp.variables.music_revD = Number(getVal(plm, "play_instrum_time", 0));
+
 tp.variables.kcal_revD      = getVal(plm, "nexus_kcal", 0);
 tp.variables.protein_revD   = getVal(plm, "nexus_protein_g", 0);
 tp.variables.mood_plm_revD  = getVal(plm, "mood", "3");
@@ -110,6 +112,7 @@ cal_date: <%- dateStr %>
 status: 1active
 journal_revD: <%- tp.variables.journal_revD %>
 fitness_revD: <%- tp.variables.fitness_revD %>
+music_revD: <%- tp.variables.music_revD %>
 selfcare_revD: <%- tp.variables.selfcare_revD %>
 kcal_revD: <%- tp.variables.kcal_revD %>
 protein_revD: <%- tp.variables.protein_revD %>
@@ -148,7 +151,7 @@ sentiment: 3
 > > ---
 > > - **Energy:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date === "<%- dateStr %>").first(); p ? p.energy + "/5" : "—"`
 > > - **Mood:** `<%- tp.variables.mood_plm_revD %>/5`
-> > - **Sleep:** `<%- tp.variables.sleep_revD %>h` | **Fitness:** `<%- tp.variables.fitness_revD %>m`
+> > - **Sleep:** `<%- tp.variables.sleep_revD %>h` | **Fitness:** `<%- tp.variables.fitness_revD %>m` | **Music:** `<%- tp.variables.music_revD %>m`
 > > - **Fuel:** 🔥 `<%- tp.variables.kcal_revD %>` | 💪 `<%- tp.variables.protein_revD %>g`
 > > - **Habits:**
 > >     - Journal: <%- tp.variables.journal_revD === "true" ? "✅" : "❌" %>

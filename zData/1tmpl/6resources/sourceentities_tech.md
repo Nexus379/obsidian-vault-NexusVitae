@@ -49,12 +49,10 @@ status: 1active
 entity_class: "tech_gear"
 tech_type: "component"
 state: "active"
+qty: 0
 needs_refill: false
 shelf_life_months: 60
 # --- ⚙️ TECH SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 ghz: 0
 ram_gb: 0
@@ -72,6 +70,16 @@ battery_mah: 0
 camera_mp: 0
 condition: "new"
 pl_score: 0
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 # ⚙️  <%- luhmannId %>   <%- displayTitle %>
@@ -99,6 +107,16 @@ pl_score: 0
 | 🔌 **Socket**        | `INPUT[text:socket]`                                                                                                                                           |     |
 | ⭐ **PL Score**       | `INPUT[number:pl_score]` / 10                                                                                                                                  |     |
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 ## 📝 Source & Notes
 - 
@@ -110,9 +128,32 @@ pl_score: 0
 > `BUTTON[add-wardrobe-owner]`
 
 `
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
+price_cheap: 0.00
+vendor_cheap: ""
+price_value: 0.00
+vendor_value: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_pure: 0.00
+vendor_pure: ""
+price_market: 0.00
+vendor_market: ""
 ---
 
 `
+
+
+

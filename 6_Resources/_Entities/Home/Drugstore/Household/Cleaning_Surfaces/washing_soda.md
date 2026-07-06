@@ -22,6 +22,7 @@ status: 1active
 entity_class: "household_item"
 household_type: "cleaning_supply"
 state: "storage"
+qty: 0
 needs_refill: false
 shelf_life_months: 24
 # props: 
@@ -42,16 +43,15 @@ locations:
   - "rossmann"
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 2.00
 vendor_value: "dm"
 price_market: 0.00
 vendor_market: ""
 --- 🧼 CHEMICAL SPECS ---
-unit_price: 0
-pref_vendor: ""
-vendors: []
 brand: ""
 ph_level: 7.0
 solvent_type: ""
@@ -165,6 +165,9 @@ actions:
     templateFile: "zData/2scripts/archiveall.md" 
 
 ```
+
+
+
 
 
 

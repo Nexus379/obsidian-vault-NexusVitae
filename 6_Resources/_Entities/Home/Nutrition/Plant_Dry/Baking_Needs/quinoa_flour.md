@@ -22,8 +22,8 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-vendors: []
 state: "pantry"
+qty: 0
 needs_refill: false
 shelf_life_months: 12
 # fiber_g: 7.0
@@ -64,8 +64,10 @@ de: "Quinoamehl"
 dm: 5.00
 price_pure: 0.00
 vendor_pure: ""
-price_budget: 0.00
-vendor_budget: ""
+price_pure_cheap: 0.00
+vendor_pure_cheap: ""
+price_cheap: 0.00
+vendor_cheap: ""
 price_value: 5.00
 vendor_value: "dm"
 price_market: 0.00
@@ -351,3 +353,6 @@ omega3_dha_mg: 0
 
 ``
 `
+
+
+
