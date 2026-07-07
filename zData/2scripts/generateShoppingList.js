@@ -1,4 +1,4 @@
-﻿async function generateShoppingList(app, dv, moment) {
+async function generateShoppingList(app, dv, moment) {
     let logDateStr = dv.current().cal_date;
     
     // Wenn manuell aus dem Shopping Hub gestartet, frage nach dem Datum!
@@ -96,7 +96,7 @@
     outMd += `## 🥗 Supermarkt & Haushalt\n\n`;
     let totalBudget = 0;
     
-    let groceryItems = [];
+    let vendorGroups = { "Uncategorized": [] };
     if (Object.keys(neededAtoms).length > 0) {
         for (let [id, amount] of Object.entries(neededAtoms)) {
             const item = Nexus ? Nexus.find(id) : null;
@@ -105,26 +105,44 @@
             const val = Math.round(amount * 1000) / 10;
             
             let priceInfo = "";
+            let vendorName = "Uncategorized";
+            
             if (Nexus && Nexus.getStrategicPrice) {
-                // Bei Meal Plan sind amounts in gramm / mengen, unit_price ist meist per stück/kg, wir nehmen 1 Stück als Einheit
                 const sp = Nexus.getStrategicPrice(id, strategy, 1.0); 
                 if (sp && sp.unit_price > 0) {
-                    priceInfo = `*(💰 ~${sp.total.toFixed(2)} @ ${sp.vendor})*`;
+                    priceInfo = `*(💰 ~${sp.total.toFixed(2)})*`;
+                    vendorName = sp.vendor || "Uncategorized";
                     totalBudget += sp.total;
                 }
             }
-            groceryItems.push(`- [ ] ${icon} **${label}** (${val}g) ${priceInfo}`);
+            
+            if (!vendorGroups[vendorName]) vendorGroups[vendorName] = [];
+            vendorGroups[vendorName].push(`- [ ] ${icon} **${label}** (${val}g) ${priceInfo}`);
+        }
+    }
+    
+    // Render grouped lists
+    let hasGroceries = false;
+    for (let [vendor, items] of Object.entries(vendorGroups)) {
+        if (items.length > 0) {
+            hasGroceries = true;
+            outMd += `### 🏬 ${vendor}\n`;
+            outMd += items.join("\n") + "\n\n";
         }
     }
     
     // Manuelle ToBuy Tasks
     const tobuyTasks = dv.pages("#4task/tobuy").where(p => !p.completed);
-    for (let t of tobuyTasks) {
-        groceryItems.push(`- [ ] 🛒 **${t.file.name}** [[${t.file.name}|↗️]]`);
+    if (tobuyTasks.length > 0) {
+        outMd += `### 🛒 Extra Tasks (To-Buy)\n`;
+        for (let t of tobuyTasks) {
+            outMd += `- [ ] 🛒 **${t.file.name}** [[${t.file.name}|↗️]]\n`;
+        }
+        outMd += `\n`;
+        hasGroceries = true;
     }
     
-    if (groceryItems.length > 0) {
-        outMd += groceryItems.join("\n") + "\n\n";
+    if (hasGroceries) {
         outMd += `**💸 Estimated Grocery Budget:** ~${totalBudget.toFixed(2)}\n\n`;
     } else {
         outMd += `_No groceries needed._\n\n`;

@@ -23,12 +23,15 @@ try {
     const currentFm = app.metadataCache.getFileCache(file)?.frontmatter || {};
     const tWeek = currentFm.training_week || 1;
 
-    // 🧠 SMART HELPER: Exercise logic (Sets vs Seconds)
-    const getWorkout = (region, volume, defaultSets) => {
+    // 🧠 SMART HELPER: Exercise logic (Sets vs Seconds) & PROGRESSIVE OVERLOAD
+    const workoutFiles = app.vault.getFiles().filter(f => f.path.startsWith("0_Calendar/4_Projectlogs/Workouts/Workout_")).sort((a,b) => b.name.localeCompare(a.name));
+
+    const getWorkout = async (region, volume, defaultSets) => {
         let available = engine.getByRegion(region);
         let shuffled = available.sort(() => 0.5 - Math.random());
         
-        return shuffled.slice(0, volume).map(ex => {
+        let results = [];
+        for (let ex of shuffled.slice(0, volume)) {
             let metric = defaultSets; 
             if (ex.baseTime) {
                 let extraTime = (tWeek - 1) * 2; // Steigerung: 2 Min pro Woche
@@ -37,9 +40,33 @@ try {
                 metric = "Dynamic Warmup";
             } else if (ex.key.includes("plank") || ex.key.includes("hold") || ex.key.includes("isometric") || ex.key.includes("stance")) {
                 metric = "3x45s Hold";
+            } else {
+                // HISTORY PARSING FOR PROGRESSIVE OVERLOAD
+                let overload = false;
+                for (let i = 0; i < Math.min(5, workoutFiles.length); i++) {
+                    let wContent = await app.vault.read(workoutFiles[i]);
+                    if (wContent.includes(ex.key)) {
+                        let lines = wContent.split("\n");
+                        let inEx = false;
+                        for (let l of lines) {
+                            if (l.startsWith("####") && l.includes(ex.key)) { inEx = true; continue; }
+                            if (l.startsWith("####") && inEx) break;
+                            if (inEx && l.startsWith("|") && !l.includes("Target") && !l.includes(":---:")) {
+                                let cells = l.split("|").slice(2, -1);
+                                for (let c of cells) {
+                                    let reps = parseInt(c.trim());
+                                    if (!isNaN(reps) && reps >= 20) overload = true;
+                                }
+                            }
+                        }
+                    }
+                    if (overload) break;
+                }
+                if (overload) metric += " (⬆️ LvlUp!)";
             }
-            return `${ex.key}|${metric}`;
-        });
+            results.push(`${ex.key}|${metric}`);
+        }
+        return results;
     };
 
     // ==========================================
@@ -68,13 +95,17 @@ try {
         const volChoice = await tp.system.suggester(["2 (Quick)", "3 (Standard)", "4 (Advanced)", "5 (Full Volume)"], [2, 3, 4, 5], false, "🔢 Exercises amount?");
         if(!volChoice) return;
 
-        let finalRoutine = getWorkout(region.v, volChoice, goal.sets);
+        let finalRoutine = await getWorkout(region.v, volChoice, goal.sets);
+        let finalWarmup = null;
+        if (region.v !== "mobility") {
+            finalWarmup = await getWorkout("mobility", 2, "Warmup");
+        }
         
         await app.fileManager.processFrontMatter(file, (fm) => {
             fm[`fit_${day.v}_${region.v}`] = finalRoutine; 
             // Auto-Warmup injection for single day
-            if (region.v !== "mobility") {
-                fm[`fit_${day.v}_mobility`] = getWorkout("mobility", 2, "Warmup");
+            if (finalWarmup) {
+                fm[`fit_${day.v}_mobility`] = finalWarmup;
             }
         });
         new Notice(`🎲 Generated functional workout + Warmup for ${day.l}!`, 4000);
@@ -93,60 +124,71 @@ try {
     const splitChoice = await tp.system.suggester(splits.map(s => s.l), splits, false, "🧬 Select Weekly Plan:");
     if(!splitChoice) return;
 
+    const regionsAll = ["mobility", "upper", "lower", "core", "cardio"];
+    const isDayOccupied = (d) => regionsAll.some(r => currentFm[`fit_${d}_${r}`] && currentFm[`fit_${d}_${r}`] !== "free" && currentFm[`fit_${d}_${r}`].length > 0);
+
+    let newFmValues = {};
+    const applyDay = async (d, planFn) => {
+        if (scope.v === "fill" && isDayOccupied(d)) return; 
+        
+        regionsAll.forEach(r => newFmValues[`fit_${d}_${r}`] = null);
+        
+        await planFn(newFmValues, d);
+        
+        if (newFmValues[`fit_${d}_upper`] || newFmValues[`fit_${d}_lower`] || newFmValues[`fit_${d}_cardio`]) {
+            newFmValues[`fit_${d}_mobility`] = await getWorkout("mobility", 2, "Warmup");
+        }
+    };
+
+    // 1. THE HYBRID ATHLETE (Default)
+    if (splitChoice.v === "hybrid") {
+        await applyDay("mon", async (f) => { f["fit_mon_upper"] = await getWorkout("upper", 3, "5x5"); f["fit_mon_cardio"] = await getWorkout("cardio", 2, "HIIT"); });
+        await applyDay("tue", async (f) => { f["fit_tue_lower"] = await getWorkout("lower", 4, "3x15"); f["fit_tue_core"] = await getWorkout("core", 2, "3x15"); });
+        await applyDay("wed", async (f) => { f["fit_wed_mobility"] = await getWorkout("mobility", 4, "Flow & Recovery"); });
+        await applyDay("thu", async (f) => { f["fit_thu_lower"] = await getWorkout("lower", 3, "5x5"); }); 
+        await applyDay("fri", async (f) => { f["fit_fri_upper"] = await getWorkout("upper", 3, "3x15"); f["fit_fri_cardio"] = await getWorkout("cardio", 3, "Endurance"); });
+        await applyDay("sat", async (f) => { f["fit_sat_core"] = await getWorkout("core", 3, "Explosive"); f["fit_sat_mobility"] = await getWorkout("mobility", 2, "Flow"); });
+        await applyDay("sun", async (f) => {}); 
+    }
+    // 2. BRUCE LEE FLOW
+    else if (splitChoice.v === "bruce_lee") {
+        await applyDay("mon", async (f) => { f["fit_mon_core"] = await getWorkout("core", 3, "3x15"); f["fit_mon_cardio"] = await getWorkout("cardio", 2, "Sprint/HIIT"); });
+        await applyDay("tue", async (f) => { f["fit_tue_upper"] = await getWorkout("upper", 3, "Explosive"); });
+        await applyDay("wed", async (f) => { f["fit_wed_lower"] = await getWorkout("lower", 3, "3x15"); f["fit_wed_core"] = await getWorkout("core", 2, "Isometric"); });
+        await applyDay("thu", async (f) => { f["fit_thu_mobility"] = await getWorkout("mobility", 4, "Tai Chi Flow"); });
+        await applyDay("fri", async (f) => { f["fit_fri_upper"] = await getWorkout("upper", 2, "3x10"); f["fit_fri_cardio"] = await getWorkout("cardio", 2, "Endurance"); });
+        await applyDay("sat", async (f) => { f["fit_sat_core"] = await getWorkout("core", 3, "Max Hold"); f["fit_sat_lower"] = await getWorkout("lower", 2, "Kicks"); });
+        await applyDay("sun", async (f) => {});
+    }
+    // 3. UPPER/LOWER (Functional)
+    else if (splitChoice.v === "upper_lower") {
+        await applyDay("mon", async (f) => { f["fit_mon_upper"] = await getWorkout("upper", 4, "5x5"); });
+        await applyDay("tue", async (f) => { f["fit_tue_lower"] = await getWorkout("lower", 4, "5x5"); });
+        await applyDay("wed", async (f) => { f["fit_wed_mobility"] = await getWorkout("mobility", 4, "Active Rest"); });
+        await applyDay("thu", async (f) => { f["fit_thu_upper"] = await getWorkout("upper", 4, "3x8 (Explosive)"); });
+        await applyDay("fri", async (f) => { f["fit_fri_lower"] = await getWorkout("lower", 4, "3x8 (Explosive)"); });
+        await applyDay("sat", async (f) => { f["fit_sat_core"] = await getWorkout("core", 2, "3x15"); f["fit_sat_cardio"] = await getWorkout("cardio", 2, "LISS"); });
+        await applyDay("sun", async (f) => {}); 
+    }
+    // 4. FUNCTIONAL HYPERTROPHY
+    else if (splitChoice.v === "hypertrophy") {
+        await applyDay("mon", async (f) => { f["fit_mon_upper"] = await getWorkout("upper", 4, "4x8"); }); 
+        await applyDay("tue", async (f) => { f["fit_tue_lower"] = await getWorkout("lower", 4, "4x8"); }); 
+        await applyDay("wed", async (f) => { f["fit_wed_mobility"] = await getWorkout("mobility", 3, "Flow"); }); 
+        await applyDay("thu", async (f) => { f["fit_thu_upper"] = await getWorkout("upper", 4, "3x12"); }); 
+        await applyDay("fri", async (f) => { f["fit_fri_lower"] = await getWorkout("lower", 4, "3x12"); }); 
+        await applyDay("sat", async (f) => { f["fit_sat_core"] = await getWorkout("core", 3, "3x15"); }); 
+        await applyDay("sun", async (f) => {}); 
+    }
+
+    // Apply frontmatter safely
     await app.fileManager.processFrontMatter(file, (fm) => {
-        const regionsAll = ["mobility", "upper", "lower", "core", "cardio"];
-        const isDayOccupied = (d) => regionsAll.some(r => fm[`fit_${d}_${r}`] && fm[`fit_${d}_${r}`] !== "free" && fm[`fit_${d}_${r}`].length > 0);
-
-        const applyDay = (d, planFn) => {
-            if (scope.v === "fill" && isDayOccupied(d)) return; 
-            regionsAll.forEach(r => delete fm[`fit_${d}_${r}`]);
-            
-            planFn(fm, d);
-            
-            if (fm[`fit_${d}_upper`] || fm[`fit_${d}_lower`] || fm[`fit_${d}_cardio`]) {
-                fm[`fit_${d}_mobility`] = getWorkout("mobility", 2, "Warmup");
+        for (let key in newFmValues) {
+            if (newFmValues[key] === null) {
+                delete fm[key];
+            } else {
+                fm[key] = newFmValues[key];
             }
-        };
-
-        // 1. THE HYBRID ATHLETE (Default)
-        if (splitChoice.v === "hybrid") {
-            applyDay("mon", (f) => { f["fit_mon_upper"] = getWorkout("upper", 3, "5x5"); f["fit_mon_cardio"] = getWorkout("cardio", 2, "HIIT"); });
-            applyDay("tue", (f) => { f["fit_tue_lower"] = getWorkout("lower", 4, "3x15"); f["fit_tue_core"] = getWorkout("core", 2, "3x15"); });
-            applyDay("wed", (f) => f["fit_wed_mobility"] = getWorkout("mobility", 4, "Flow & Recovery"));
-            applyDay("thu", (f) => f["fit_thu_lower"] = getWorkout("lower", 3, "5x5")); 
-            applyDay("fri", (f) => { f["fit_fri_upper"] = getWorkout("upper", 3, "3x15"); f["fit_fri_cardio"] = getWorkout("cardio", 3, "Endurance"); });
-            applyDay("sat", (f) => { f["fit_sat_core"] = getWorkout("core", 3, "Explosive"); f["fit_sat_mobility"] = getWorkout("mobility", 2, "Flow"); });
-            applyDay("sun", (f) => {}); 
-        }
-        // 2. BRUCE LEE FLOW
-        else if (splitChoice.v === "bruce_lee") {
-            applyDay("mon", (f) => { f["fit_mon_core"] = getWorkout("core", 3, "3x15"); f["fit_mon_cardio"] = getWorkout("cardio", 2, "Sprint/HIIT"); });
-            applyDay("tue", (f) => { f["fit_tue_upper"] = getWorkout("upper", 3, "Explosive"); });
-            applyDay("wed", (f) => { f["fit_wed_lower"] = getWorkout("lower", 3, "3x15"); f["fit_wed_core"] = getWorkout("core", 2, "Isometric"); });
-            applyDay("thu", (f) => f["fit_thu_mobility"] = getWorkout("mobility", 4, "Tai Chi Flow"));
-            applyDay("fri", (f) => { f["fit_fri_upper"] = getWorkout("upper", 2, "3x10"); f["fit_fri_cardio"] = getWorkout("cardio", 2, "Endurance"); });
-            applyDay("sat", (f) => { f["fit_sat_core"] = getWorkout("core", 3, "Max Hold"); f["fit_sat_lower"] = getWorkout("lower", 2, "Kicks"); });
-            applyDay("sun", (f) => {});
-        }
-        // 3. UPPER/LOWER (Functional)
-        else if (splitChoice.v === "upper_lower") {
-            applyDay("mon", (f) => f["fit_mon_upper"] = getWorkout("upper", 4, "5x5"));
-            applyDay("tue", (f) => f["fit_tue_lower"] = getWorkout("lower", 4, "5x5"));
-            applyDay("wed", (f) => f["fit_wed_mobility"] = getWorkout("mobility", 4, "Active Rest"));
-            applyDay("thu", (f) => f["fit_thu_upper"] = getWorkout("upper", 4, "3x8 (Explosive)"));
-            applyDay("fri", (f) => f["fit_fri_lower"] = getWorkout("lower", 4, "3x8 (Explosive)"));
-            applyDay("sat", (f) => { f["fit_sat_core"] = getWorkout("core", 2, "3x15"); f["fit_sat_cardio"] = getWorkout("cardio", 2, "LISS"); });
-            applyDay("sun", (f) => {}); 
-        }
-        // 4. FUNCTIONAL HYPERTROPHY
-        else if (splitChoice.v === "hypertrophy") {
-            applyDay("mon", (f) => f["fit_mon_upper"] = getWorkout("upper", 4, "4x8")); 
-            applyDay("tue", (f) => f["fit_tue_lower"] = getWorkout("lower", 4, "4x8")); 
-            applyDay("wed", (f) => f["fit_wed_mobility"] = getWorkout("mobility", 3, "Flow")); 
-            applyDay("thu", (f) => f["fit_thu_upper"] = getWorkout("upper", 4, "3x12")); 
-            applyDay("fri", (f) => f["fit_fri_lower"] = getWorkout("lower", 4, "3x12")); 
-            applyDay("sat", (f) => f["fit_sat_core"] = getWorkout("core", 3, "3x15")); 
-            applyDay("sun", (f) => {}); 
         }
     });
 

@@ -73,6 +73,17 @@ sun_act: 0
 > | **Saturday** | `INPUT[text:sat_plan]` | `INPUT[number:sat_act]` | `$= dv.current().sat_act > 0 ? "✅" : (dv.current().sat_plan ? "⏳" : "—")` |
 > | **Sunday** | `INPUT[text:sun_plan]` | `INPUT[number:sun_act]` | `$= dv.current().sun_act > 0 ? "✅" : (dv.current().sun_plan ? "⏳" : "—")` |
 
+> `BUTTON[add-extra-workout]`
+
 ---
 ## 📝 Notes & Adjustments
 - 
+
+```meta-bind-button
+label: "🔥 Add Extra Workout"
+icon: "plus-circle"
+style: primary
+actions:
+  - type: runTemplaterFile
+    templateFile: "zData/3snippets/add-extra-fitness.md"
+```

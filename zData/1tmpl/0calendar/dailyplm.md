@@ -78,8 +78,14 @@ tp.variables.sleep = schlaf || "7";
 tp.variables.title = finalTitle;
 
 // 🔱 4.5 MEAL PLAN SYNC (Zero-Delay & Clean List Edition)
-const planPath = "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md";
-const planPage = dv.page(planPath);
+const weekYearMeal = moment(dateStr).format("YYYY");
+const weekKwMeal = moment(dateStr).format("WW");
+const weeklyMealPath = `0_Calendar/7_Plan/${weekYearMeal}-W${weekKwMeal} meal`;
+
+let planPage = dv.page(weeklyMealPath);
+if (!planPage) {
+    planPage = dv.page("2_Areas/1_Selfcare/Nutrition/Meal_Plan.md");
+}
 const dayPrefix = moment(dateStr).locale('en').format("ddd").toLowerCase(); // e.g. 'mon'
 
 let plannedMealsUI = [];
@@ -165,7 +171,12 @@ try {
     const rDate = moment(dateStr);
     const rDayPrefix = rDate.locale('en').format("ddd").toLowerCase(); // z.B. "mon"
     
-    const rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+    const weekYearRt = rDate.format("YYYY");
+    const weekKwRt = rDate.format("WW");
+    let rPage = dv.page(`0_Calendar/7_Plan/${weekYearRt}-W${weekKwRt} routine`);
+    if (!rPage) {
+        rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+    }
 
     if (rPage && ["mon", "tue", "wed", "thu", "fri", "sat", "sun"].includes(rDayPrefix)) {
         const enginePath = "zData/2scripts/routineEngine.js";
@@ -666,11 +677,15 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >
 > > > [!info|flat] 🛒 Automated Grocery Sync
 > > > ```dataviewjs
-> > > const rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
+> > > const dObj = moment(dStr, "YYYY-MM-DD");
+> > > const weekYearG = dObj.format("YYYY");
+> > > const weekKwG = dObj.format("WW");
+> > > let rPage = dv.page(`0_Calendar/7_Plan/${weekYearG}-W${weekKwG} routine`);
+> > > if (!rPage) rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > 
 > > > if (rPage) {
-> > >     const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
 > > >     const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
-> > >     const dObj = moment(dStr, "YYYY-MM-DD");
 > > >     const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
 > > >     
 > > >     let hasGroceries = false;
@@ -771,11 +786,15 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 
 > > > ```dataviewjs
 > > > // 🏋️ NEXUS FITNESS SYNC
-> > > const rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
+> > > const dObj = moment(dStr, "YYYY-MM-DD");
+> > > const weekYearF = dObj.format("YYYY");
+> > > const weekKwF = dObj.format("WW");
+> > > let rPage = dv.page(`0_Calendar/7_Plan/${weekYearF}-W${weekKwF} routine`);
+> > > if (!rPage) rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > 
 > > > if (rPage) {
-> > >     const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
 > > >     const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
-> > >     const dObj = moment(dStr, "YYYY-MM-DD");
 > > >     const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
 > > >     
 > > >     let hasWorkout = false;
