@@ -5,7 +5,7 @@
 > 2. Click on **`BUTTON[add-wardrobe-owner]`** inside the item and select the person.
 > 3. The person will appear here in the matrix! Toggle `🔄` (Refill) to add it to the Shopping Hub!
 > **`BUTTON[add-wardrobe-owner]`** ⬅️ **Click here to assign an item from the Vault to a person!**
-
+nbcc
 ```dataviewjs
 const categories = [
     { title: "👕 Wardrobe (Clothing & Footwear)", tag: "#6resource/entity/clothing" },
@@ -71,12 +71,4 @@ for (let cat of categories) {
 }
 ```
 
-```meta-bind-button
-label: "➕ Assign Item from Vault"
-id: "add-wardrobe-owner"
-icon: "plus-circle"
-style: primary
-actions:
-  - type: runTemplaterFile
-    templateFile: "zData/3snippets/add-wardrobe-owner.md"
-```
+
