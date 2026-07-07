@@ -1,0 +1,20 @@
+properties:
+  note.Status:
+    displayName: status
+views:
+  - type: table
+    name: Table
+    order:
+      - Inbox
+      - file.name
+      - arch
+      - archtype
+      - Status
+      - priority
+    sort:
+      - property: arch
+        direction: ASC
+    columnSize:
+      file.name: 256
+      note.arch: 86
+      note.archtype: 149
