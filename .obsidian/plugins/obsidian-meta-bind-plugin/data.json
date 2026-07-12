@@ -668,6 +668,18 @@
           "templateFile": "zData/3snippets/generate-workout-log.md"
         }
       ]
+    },
+    {
+      "id": "plan-replicator",
+      "label": "♻️ Replicate Plan",
+      "icon": "copy",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/PlanReplicator.md"
+        }
+      ]
     }
   ],
   "excludedFolders": [

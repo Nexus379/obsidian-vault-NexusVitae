@@ -6,11 +6,12 @@ try {
     let file = app.workspace.getActiveFile();
     if (!file) return;
 
-    // If the current file isn't the routine plan, target the Routine Plan directly
-    if (!file.name.includes("Routine-Timeblocking")) {
-        file = app.vault.getAbstractFileByPath("2_Areas/4_Organize/Routine-Timeblocking.md");
+    // If the current file isn't the routine plan, target the Master Routine Plan directly
+    const isRoutinePlan = file.name.includes("Routine_Timeblocking") || file.name.includes("_routine");
+    if (!isRoutinePlan) {
+        file = app.vault.getAbstractFileByPath("2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
         if (!file) {
-            new Notice("Routine-Timeblocking.md not found!");
+            new Notice("Routine_Timeblocking.md not found!");
             return;
         }
     }

@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. INITIALIZATION & DATA SYNC
 if (!tp.variables) tp.variables = {};
 const dv = app.plugins.plugins.dataview.api;
@@ -97,7 +97,15 @@ const todayPrefix = dayMap[momentDay.day()];
 let workTasks = [];
 
 if (dv) {
-    const routinePage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+    const pYear = momentDay.format("YYYY");
+    const pKw = momentDay.format("WW");
+    const pMonth = momentDay.format("MM");
+    const weeklyRoutinePath = `0_Calendar/7_Plan/${pYear}/${pMonth}/${pYear}-W${pKw}_routine.md`;
+    
+    let routinePage = dv.page(weeklyRoutinePath);
+    if (!routinePage) {
+        routinePage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+    }
     if (routinePage) {
         const enginePath = "zData/2scripts/routineEngine.js";
         let engineData = {};
@@ -515,7 +523,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > SORT due ASC
 > > ```
 >
-> [[2_Areas/4_Organize/Shopping_Hub|➡️ Open Central Procurement Hub]]
+>[[2_Areas/4_Organize/Household/Shopping_Hub|➡️ Open Central Procurement Hub]]]
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 

@@ -8,7 +8,7 @@ if (!dv) {
     return;
 }
 
-const planPage = dv.page("2_Areas/1_Selfcare/Nutrition/Meal_Plan.md");
+const planPage = dv.page("2_Areas/1_Selfcare/Plan/Meal_Plan.md");
 if (!planPage) {
     new Notice("Meal Plan not found!");
     return;

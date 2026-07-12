@@ -78,15 +78,22 @@ tp.variables.sleep = schlaf || "7";
 tp.variables.title = finalTitle;
 
 // 🔱 4.5 MEAL PLAN SYNC (Zero-Delay & Clean List Edition)
-const weekYearMeal = moment(dateStr).format("YYYY");
-const weekKwMeal = moment(dateStr).format("WW");
-const weeklyMealPath = `0_Calendar/7_Plan/${weekYearMeal}-W${weekKwMeal} meal`;
+const targetMoment = moment(dateStr, "YYYY-MM-DD");
+const dayPrefix = targetMoment.locale('en').format("ddd").toLowerCase(); // e.g. 'mon'
 
-let planPage = dv.page(weeklyMealPath);
+// Custom logic replacing planPaths.js
+const pYear = targetMoment.format("YYYY");
+const pMonth = targetMoment.format("MM");
+const pKw = targetMoment.format("WW");
+const weeklyPlanPath = `0_Calendar/7_Plan/${pYear}/${pMonth}/${pYear}-W${pKw}_meal`;
+const masterPlanPath = `2_Areas/1_Selfcare/Plan/Meal_Plan`;
+
+let planPage = dv.page(weeklyPlanPath);
+tp.variables.activePlanLink = `[[${weeklyPlanPath}|Woche ${pKw} Meal Plan]]`;
 if (!planPage) {
-    planPage = dv.page("2_Areas/1_Selfcare/Nutrition/Meal_Plan.md");
+    planPage = dv.page(masterPlanPath);
+    tp.variables.activePlanLink = `[[${masterPlanPath}|Meal_Plan (Master)]]`;
 }
-const dayPrefix = moment(dateStr).locale('en').format("ddd").toLowerCase(); // e.g. 'mon'
 
 let plannedMealsUI = [];
 let nexusBase = {};
@@ -171,11 +178,17 @@ try {
     const rDate = moment(dateStr);
     const rDayPrefix = rDate.locale('en').format("ddd").toLowerCase(); // z.B. "mon"
     
-    const weekYearRt = rDate.format("YYYY");
-    const weekKwRt = rDate.format("WW");
-    let rPage = dv.page(`0_Calendar/7_Plan/${weekYearRt}-W${weekKwRt} routine`);
+    const rYear = rDate.format("YYYY");
+    const rMonth = rDate.format("MM");
+    const rKw = rDate.format("WW");
+    const weeklyRoutinePath = `0_Calendar/7_Plan/${rYear}/${rMonth}/${rYear}-W${rKw}_routine`;
+    const masterRoutinePath = `2_Areas/4_Organize/Plan/Routine_Timeblocking`;
+
+    let rPage = dv.page(weeklyRoutinePath);
+    let rLink = `[[${weeklyRoutinePath}|Woche ${rKw} Routine Plan]]`;
     if (!rPage) {
-        rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+        rPage = dv.page(masterRoutinePath);
+        rLink = `[[${masterRoutinePath}|Routine_Timeblocking (Master)]]`;
     }
 
     if (rPage && ["mon", "tue", "wed", "thu", "fri", "sat", "sun"].includes(rDayPrefix)) {
@@ -246,19 +259,118 @@ try {
             }
         }
 
+        let headerPrefix = `> [!abstract]- 📂 **Active Plan Source**\n> ${rLink}\n> \n`;
         if (dailyRoutines.length > 0) {
-            routineBlocks = `> [!info|clean] 🧹 **Today's Scheduled Routines**\n> \n` + dailyRoutines.map(r => `> ${r}`).join("\n> ");
+            routineBlocks = headerPrefix + `> [!info|clean] 🧹 **Today's Scheduled Routines**\n> \n` + dailyRoutines.map(r => `> ${r}`).join("\n> ");
         } else {
-            routineBlocks = `> [!info|clean] 🌿 **Free Day:** No household or life routines scheduled today.`;
+            routineBlocks = headerPrefix + `> [!info|clean] 🌿 **Free Day:** No household or life routines scheduled today.`;
         }
     } else {
-        routineBlocks = "> [!caution] ⚠️ **Sync Error:** Could not locate Routine-Timeblocking file.";
+        routineBlocks = "> [!caution] **Sync Error:** Could not locate Routine_Timeblocking file.";
     }
 } catch (error) {
     console.error("Routine Sync Error: ", error);
     routineBlocks = "> [!caution] ⚠️ **Sync Error:** Routine Engine failed to load.";
 }
 tp.variables.routineSync = routineBlocks;
+
+// 🔱 5.6 FITNESS SYNC (Weekly-Plan first, Master-Plan fallback)
+let fitnessBlocks = "";
+let fitnessLinkPath = "";
+try {
+    const fDate = moment(dateStr);
+    const fYear = fDate.format("YYYY");
+    const fMonth = fDate.format("MM");
+    const fKw = fDate.format("WW");
+    const weeklyFitnessPath = `0_Calendar/7_Plan/${fYear}/${fMonth}/${fYear}-W${fKw}_fitness`;
+    const masterFitnessPath = `2_Areas/6_Activity/Plan/Fitness_Routine`;
+
+    let fPage = dv.page(weeklyFitnessPath);
+    if (fPage) {
+        fitnessLinkPath = weeklyFitnessPath;
+    } else {
+        fPage = dv.page(masterFitnessPath);
+        fitnessLinkPath = masterFitnessPath;
+    }
+
+    if (fPage) {
+        const fDayPrefix = fDate.locale('en').format("ddd").toLowerCase();
+
+        const enginePathFit = "zData/2scripts/fitnessEngine.js";
+        const eFileFit = app.vault.getAbstractFileByPath(enginePathFit);
+        let fitEngineData = {};
+        if (eFileFit) {
+            const code = await app.vault.read(eFileFit);
+            const module = { exports: {} };
+            new Function("module", "exports", code)(module, module.exports);
+            fitEngineData = (typeof module.exports === "function") ? module.exports().all : {};
+        }
+
+        const regions = [
+            { l: "🤸 Warmup", v: "mobility" }, { l: "💪 Upper", v: "upper" },
+            { l: "🦵 Lower", v: "lower" }, { l: "🪨 Core", v: "core" }, { l: "🔥 Cardio", v: "cardio" }
+        ];
+
+        let dayHasTraining = false;
+        regions.forEach(reg => {
+            let planned = fPage[`fit_${fDayPrefix}_${reg.v}`];
+            if (planned && planned !== "free") {
+                dayHasTraining = true;
+                let arr = Array.isArray(planned) ? planned : [planned];
+                arr.forEach(k => {
+                    let parts = String(k).split("|");
+                    let baseKey = parts[0];
+                    let detail = parts.length > 1 ? ` _(${parts.slice(1).join(" ")})_` : "";
+                    let iconName = (baseKey === "custom")
+                        ? `🔸 ${parts.slice(1).join(" ")}`
+                        : (fitEngineData[baseKey] ? `${fitEngineData[baseKey].icon} ${fitEngineData[baseKey].label}` : `❓ ${baseKey}`);
+                    fitnessBlocks += `- [ ] ${reg.l}: ${iconName}${detail}\n`;
+                });
+            }
+        });
+
+        if (!dayHasTraining) fitnessBlocks = "_Rest day — no training scheduled._\n";
+    } else {
+        fitnessBlocks = "_No Fitness plan found (neither weekly nor master)._\n";
+    }
+} catch (error) {
+    console.error("Fitness Sync Error: ", error);
+    fitnessBlocks = "_Fitness sync failed — see console._\n";
+}
+tp.variables.fitnessSync = fitnessBlocks;
+tp.variables.fitnessLinkPath = fitnessLinkPath;
+
+// 🔱 5.7 INPRA SYNC (Instrumental Practice)
+let inpraBlocks = "";
+let inpraLinkPath = "";
+try {
+    const iDate = moment(dateStr);
+    const iYear = iDate.format("YYYY");
+    const iMonth = iDate.format("MM");
+    const iKw = iDate.format("WW");
+    const weeklyInpraPath = `0_Calendar/7_Plan/${iYear}/${iMonth}/${iYear}-W${iKw}_inpra`;
+    
+    let iPage = dv.page(weeklyInpraPath);
+    if (iPage) {
+        inpraLinkPath = weeklyInpraPath;
+        const iDayPrefix = iDate.locale('en').format("ddd").toLowerCase();
+        let planned = iPage[`inpra_${iDayPrefix}_ex`];
+        let activeInstr = iPage["instr_active"] || "Instrument";
+        
+        if (planned && String(planned).trim() !== "") {
+            inpraBlocks = `**${activeInstr}:** ${planned}\n`;
+        } else {
+            inpraBlocks = `_No specific exercise planned for ${activeInstr} today._\n`;
+        }
+    } else {
+        inpraBlocks = "_No Instrumental Practice plan found for this week._\n";
+    }
+} catch (error) {
+    console.error("Inpra Sync Error: ", error);
+    inpraBlocks = "_Inpra sync failed — see console._\n";
+}
+tp.variables.inpraSync = inpraBlocks;
+tp.variables.inpraLinkPath = inpraLinkPath;
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
@@ -310,13 +422,13 @@ journal_am: false
 journal_pm: false
 fitness_am: 0
 fitness_pm: 0
+inpra_min: 0
 selfcare_am: false
 selfcare_pm: false
 meal: []
 activity_link: []
+activity_time: 0
 creativity_link: []
-play_instrum: []
-play_instrum_time: 0
 entertain_link: []
 strength_link: []
 vita_snap: []
@@ -371,7 +483,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 
 
-## 🌿Consuetudo
+## 🌿 Consuetudo (L-E-B-E-N)
 ```dataviewjs
 (async function(){ 
     const c = dv.current(); 
@@ -379,6 +491,12 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     
     // --- 1. DATA SYNC ---
     const dateValue = c["cal_date"] ? moment(String(c["cal_date"])) : moment(c.file.name, "YYYY-MM-DD");
+    const dayPref = moment(dateValue).locale('en').format("ddd").toLowerCase();
+    const weekName = moment(dateValue).format("YYYY-[W]WW");
+    
+    // Smart Sync with Weekly Plans (aus 0_Calendar/7_Plan/)
+    const fitPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_fitness").first();
+    const musPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_music").first();
 
     // --- 2. THE 5 PILLARS (L-E-B-E-N) ---
     const vitaminTasks = (v && v.file.tasks) ? v.file.tasks : [];
@@ -393,9 +511,21 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     // P2: Emotions (4/4 Toggles)
     const p2 = ["journal_am","journal_pm","selfcare_am","selfcare_pm"].filter(k => String(c[k]) === "true").length / 4;
     
-    // P3: Body (>= 30 Min)
-    const sport = (Number(c["fitness_am"]) || 0) + (Number(c["fitness_pm"]) || 0);
-    const p3 = sport >= 30 ? 1 : 0;
+    // P3: Body (Mobility + Spontaneous Activity + Planned Workout Check)
+    const sportTime = (Number(c["fitness_am"]) || 0) + (Number(c["fitness_pm"]) || 0) + (Number(c["activity_time"]) || 0);
+    
+    let actuallyDidWorkout = false;
+    if (fitPage) {
+        const regs = ["mobility", "upper", "lower", "core", "cardio"];
+        for (let reg of regs) { 
+            let actVal = fitPage[`act_${dayPref}_${reg}`];
+            // Wenn in einem Ausführungs-Feld für heute Text steht, hast du trainiert!
+            if (actVal && String(actVal).trim() !== "") {
+                actuallyDidWorkout = true;
+            }
+        }
+    }
+    const p3 = (sportTime >= 30 || actuallyDidWorkout) ? 1 : 0;
     
     // P4: Entropy (Enjoyment Link)
     const ent = c["entertain_link"];
@@ -410,44 +540,23 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
     // --- 3. BONUS CALCULATION ---
     let bonus = 0;
-    if (sport >= 45) bonus += 5;
-    if (sport >= 60) bonus += 5;
+    if (sportTime >= 45) bonus += 5;
+    if (sportTime >= 60 || actuallyDidWorkout) bonus += 5;
+    if (actuallyDidWorkout && sportTime >= 20) bonus += 5; // Bonus for mixing structured workout + mobility
     if (Number(c.mood) >= 4) bonus += 5;
     if (Number(c.energy) >= 4) bonus += 5;
     
-    // Music Bonus
-    const musicTime = Number(c["play_instrum_time"]) || 0;
+    // Music Bonus from 7_Plan
+    const musicTime = musPage ? (Number(musPage[`mus_${dayPref}_min`]) || 0) : 0;
     if (musicTime >= 15) bonus += 5;
     if (musicTime >= 30) bonus += 5;
 
     const compAlchemy = vitaminTasks.filter(t => isAlchemy(t) && t.completed).length;
     bonus += (compAlchemy * 2.5); // Bio-Hacks
 
-    // Workout-Log Bonus
-    const dStr = c["cal_date"] ? moment(String(c["cal_date"])).format("YYYY-MM-DD") : moment(c.file.name.substring(0,10), "YYYY-MM-DD").format("YYYY-MM-DD");
-    const wPage = dv.page(`0_Calendar/4_Projectlogs/Workouts/Workout_${dStr}.md`);
-    if (wPage) {
-        bonus += 5; // Er hat das Workout-Log gestartet! (+5%)
-        try {
-            const wFile = app.vault.getAbstractFileByPath(wPage.file.path);
-            if (wFile) {
-                const content = await app.vault.read(wFile);
-                let setsFilled = 0;
-                let targetCount = 0;
-                let rows = content.split('\n').filter(r => r.includes('| `'));
-                rows.forEach(r => {
-                    targetCount++;
-                    let cells = r.split('|').slice(2, -1);
-                    if (cells.filter(cell => /[a-zA-Z0-9]/.test(cell)).length >= 3) setsFilled++;
-                });
-                
-                if (targetCount > 0 && setsFilled >= targetCount) {
-                    bonus += 10; // FULL COMPLETION BONUS (+10%)
-                } else if (setsFilled > 0) {
-                    bonus += 5; // PARTIAL COMPLETION (+5%)
-                }
-            }
-        } catch(e) {}
+    // 🏋️ WORKOUT BONUS (Powered by 7_Plan)
+    if (actuallyDidWorkout) {
+        bonus += 15; // Phönix-Boost für ein durchgezogenes Workout! (+15%)
     }
 
     // 🔱 THE CAP (Max 120%)
@@ -500,9 +609,9 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 > [!quote|flat] ☀️ AM Protocol
 > - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
-> -  **Journal** AM: `INPUT[toggle:journal_am]` 
+> - **Journal** AM: `INPUT[toggle:journal_am]` 
 > 	- *Gratitude, Fascinating, Braindump*
-> - **Fitness** AM: `INPUT[number:fitness_am]` min *(inkl. Spazieren)*
+> - **Mobility** AM: INPUT[number:fitness_am] min (Yoga, stretching, morning walk)
 > - [ ] 🛏️ Make bed & air out the room
 > - [ ] 🍽️ Empty dishwasher
 > - [ ] 🍵 Make tea
@@ -624,7 +733,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > [!multi-column]
 > > > [!blank]
 > > > ### 🍽️ Planned Menu (Baseline)
-> > > [[2_Areas/1_Selfcare/Nutrition/Meal_Plan|Meal_Plan]]
+> > > <%- tp.variables.activePlanLink %>
 > > > <%- tp.variables.plannedMealsText.replace(/\n/g, "\n> > > ") %>
 > > > 
 > > > ---
@@ -681,8 +790,11 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const dObj = moment(dStr, "YYYY-MM-DD");
 > > > const weekYearG = dObj.format("YYYY");
 > > > const weekKwG = dObj.format("WW");
-> > > let rPage = dv.page(`0_Calendar/7_Plan/${weekYearG}-W${weekKwG} routine`);
-> > > if (!rPage) rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > const weeklyRoutinePath = `0_Calendar/7_Plan/${weekYearG}/${dObj.format("MM")}/${weekYearG}-W${weekKwG}_routine.md`;
+> > > let rPage = dv.page(weeklyRoutinePath);
+> > > if (!rPage) {
+> > >     rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+> > > }
 > > > 
 > > > if (rPage) {
 > > >     const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
@@ -713,7 +825,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > >     }
 > > > }
 > > > ```
-> > > <br>[[2_Areas/4_Organize/Shopping_Hub|➡️ Open Central Procurement Hub]]
+> > > <br>[[2_Areas/4_Organize/Household/Shopping_Hub|➡️ Open Central Procurement Hub]]
 > >
 > > > [!todo|flat] 📝 Household & Quick Extras
 > > > **Household & Quick Extras:**
@@ -761,71 +873,33 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > });
 > > >```
 
->[!pink] B - Body / Movement
+>[!pink] ## B - Body / Movement
 > > [!multi-column]
-> >  
 > > > [!blank]
 > > > ```dataviewjs
 > > > const c = dv.current();
 > > > const am = Number(c["fitness_am"]) || 0;
 > > > const pm = Number(c["fitness_pm"]) || 0;
-> > > const gesamt = am + pm;
+> > > const act = Number(c["activity_time"]) || 0;
+> > > const gesamt = am + pm + act;
 > > > const ziel = 30;
 > > > 
-> > > let icon = "⚪";
-> > > let flair = "";
-> > > 
+> > > let icon = "⚪"; let flair = "";
 > > > if (gesamt >= 90) { icon = "🦅"; flair = " PHOENIX RUN"; }
 > > > else if (gesamt >= 60) { icon = "✨"; flair = " SHINE"; }
 > > > else if (gesamt >= ziel) { icon = "🟢"; }
 > > > else if (gesamt > 0) { icon = "🟡"; }
 > > > 
-> > > dv.paragraph(`🏃🏽 **Status:** ${gesamt} / ${ziel} min ${icon}${flair}`);
+> > > dv.paragraph(`🏃🏽 **Status:** ${gesamt} /${ziel} min ${icon}${flair}`);
 > > > ```
-> > > `BUTTON[sync-fitness]`
+> > 
+> > > [!blank]
+> > > **Today's Training:**
+> > > <%- tp.variables.fitnessSync.trim().replace(/\n/g, '\n> > > ') %>
+> > > ---
+> > > ➤ [[<%- tp.variables.fitnessLinkPath %>|🏋️ Open Fitness Plan]]
 > > > 
-> > > ```dataviewjs
-> > > // 🏋️ NEXUS FITNESS SYNC
-> > > const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
-> > > const dObj = moment(dStr, "YYYY-MM-DD");
-> > > const weekYearF = dObj.format("YYYY");
-> > > const weekKwF = dObj.format("WW");
-> > > let rPage = dv.page(`0_Calendar/7_Plan/${weekYearF}-W${weekKwF} routine`);
-> > > if (!rPage) rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
-> > > 
-> > > if (rPage) {
-> > >     const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
-> > >     const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
-> > >     
-> > >     let hasWorkout = false;
-> > >     for (let i = 1; i <= 21; i++) {
-> > >         let slotVal = rPage[`rt_${todayStr}_${i}`];
-> > >         if (!slotVal) continue;
-> > >         let arr = Array.isArray(slotVal) ? slotVal : [slotVal];
-> > >         for (let v of arr) {
-> > >             if (String(v).startsWith("workout_")) hasWorkout = true;
-> > >         }
-> > >     }
-> > >     
-> > >     if (hasWorkout) {
-> > >         const enginePath = app.vault.adapter.basePath + "/zData/2scripts/generateWorkoutLog.js";
-> > >         let generator;
-> > >         try { 
-> > >             delete require.cache[require.resolve(enginePath)]; 
-> > >             generator = require(enginePath); 
-> > >             generator(app, dv, moment).then(link => {
-> > >                 if (link) {
-> > >                     dv.paragraph(`🏋️‍♂️ **Workout Time!**<br>Your log is ready:<br>➤ ${link}`);
-> > >                 } else {
-> > >                     dv.paragraph("> [!info|clean] 🧘 **Rest Day.** Recover and flow like water.");
-> > >                 }
-> > >             });
-> > >         } catch(e) { dv.paragraph("🔥 Error loading generator: " + e.message); }
-> > >     } else {
-> > >         dv.paragraph("_No workout scheduled for today._");
-> > >     }
-> > > }
-> > > ```
+> > > ➤ [[fitness- |➕ Create new Plan]]
 
 > [!pink] E - Entropy / Relaxation
 > >[!multi-column]
@@ -838,7 +912,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const dObj = moment(dStr, "YYYY-MM-DD");
 > > > const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
 > > > 
-> > > const rPage = dv.page("2_Areas/4_Organize/Routine-Timeblocking");
+> > > const rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking");
 > > > if (rPage) {
 > > >     const rStart = rPage.rt_start || "07:00";
 > > >     const rDur = Number(rPage.rt_duration) || 60;
@@ -896,17 +970,33 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > ---
 > > > **Active Enjoyment**
 > > > > [!blank]
-> > > > **🏃🏽‍♀️ Activity**
-> > > > Take a walk etc
-> > > > `INPUT[inlineList:activity_link]`
+> > > > **🏃🏽‍♀️ Activity (Spontaneous Sports)**
+> > > > Take a walk, play basketball, etc.
+> > > > `INPUT[inlineList:activity_link]` ⏱️ Duration: `INPUT[number:activity_time]` min
 > > > > 
 > > > > **🎨 Creativity**
-> > > > Painting/Drawing, Crafting, etc
+> > > > Painting/Drawing, Crafting, etc.
 > > > > `INPUT[inlineList:creativity_link]`
 > > > > 
-> > > > 🎸 Instrument Practice
-> > > > Which instrument did you play today?
-> > > > `INPUT[inlineList:play_instrum]` ⏱️ Duration: `INPUT[number:play_instrum_time]` min
+> > > > 🎸 **Instrument Practice**
+> > > > ```dataviewjs
+> > > > const c = dv.current();
+> > > > const mMin = Number(c["inpra_min"]) || 0;
+> > > > const mZiel = 10;
+> > > > let mIcon = "⚪"; let mFlair = "";
+> > > > if (mMin >= 30) { mIcon = "🔥"; mFlair = " VIRTUOSO"; }
+> > > > else if (mMin >= mZiel) { mIcon = "🟢"; }
+> > > > else if (mMin > 0) { mIcon = "🟡"; }
+> > > > dv.paragraph(`🎸 **Status:** ${mMin} /${mZiel} min ${mIcon}${mFlair}`);
+> > > > ```
+> > > > ➤ `INPUT[number:inpra_min]` min
+> > > > 
+> > > > **Today's Setup:**
+> > > > <%- tp.variables.inpraSync.trim().replace(/\n/g, '\n> > > > ') %>
+> > > > ---
+> > > > ➤ [[<%- tp.variables.inpraLinkPath %>|🎼 Open Practice Plan]]
+> > > > 
+> > > > ➤ [[inpra- |➕ Create new Plan]]
 > 
 > > [!quote|flat] 📺 Entertainment (Passive)
 > > *Unplug & Consume: Gaming, Movies, Series, etc.*
@@ -944,7 +1034,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > - **Selfcare** PM: `INPUT[toggle:selfcare_pm]`
 > > - **Journal** PM: `INPUT[toggle:journal_pm]` 
 > > 	- *Gratitude, Fascinating, Braindump*
-> > - **Fitness** PM: `INPUT[number:fitness_pm]` min *(inkl. Spazieren)*
+> > - **Mobility** PM: INPUT[number:fitness_pm] min (Evening stretches, relaxation)
 > > - [ ] 🍽️ Load & start dishwasher
 > > - [ ] 🗑️ Check trash & take out if needed
 > > - [ ] 🛋️ 5-Minute Reset (clear tables & surfaces)

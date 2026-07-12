@@ -14,15 +14,8 @@
     "entity": 4,
     "guide": 2,
     "pc_building": 3,
-    "entity/art_supply": 1,
-    "entity/camping": 2,
-    "entity/clothing": 3,
-    "entity/household": 4,
-    "entity/household_item": 5,
-    "entity/ingredient": 6,
-    "entity/medical": 7,
-    "entity/personal_care": 8,
-    "entity/tech_gear": 9
+    "entity/apparel": 1,
+    "entity/larp_gear": 2
   },
   "tagColors": {},
   "_version": 4

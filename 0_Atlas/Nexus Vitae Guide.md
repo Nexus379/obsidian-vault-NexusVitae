@@ -12,10 +12,10 @@ frozen: true
 ## 🚀 Quick-Start
 ### 1. Plan 
 - Fill your Plan
-	- [[2_Areas/4_Organize/Routine-Timeblocking|Routine-Timeblocking]]
-	- [[2_Areas/6_Activity/Fitness_Routine|Fitness_Routine]]
-	- [[2_Areas/1_Selfcare/Nutrition/Meal_Plan|Meal_Plan]]
-	- [[2_Areas/3_Mind/Timetable|Timetable]]
+	- [[2_Areas/4_Organize/Plan/Routine_Timeblocking|Routine-Timeblocking]]
+	- [[2_Areas/6_Activity/Plan/Fitness_Routine|Fitness_Routine]]
+	- [[2_Areas/1_Selfcare/Plan/Meal_Plan|Meal_Plan]]
+	- [[2_Areas/3_Mind/Plan/Timetable|Timetable]]
 
 ### 2. Create a File
 There are three ways to start a new entry:

@@ -13,5 +13,11 @@
   ],
   "propertiesInDocument": "hidden",
   "promptDelete": false,
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": true,
+    "margin": "2",
+    "downscalePercent": 73
+  }
 }

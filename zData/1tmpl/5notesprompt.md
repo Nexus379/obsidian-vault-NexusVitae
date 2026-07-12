@@ -49,7 +49,7 @@ if (pID) {
 }
 
 // 🔱 4. TYP-AUSWAHL
-const nOptions = ["🍂 1_Fleeting", "📘 2_Literature", "📜 4_Permanent", "🗃️ 3_Atomic...", "🌳 5_Evergreen"];
+const nOptions = ["1 🍂 Fleeting", "2 📘 Literature", "4 📜 Permanent", "3 🗃️ Atomic...", "5 🌳 Evergreen"];
 const nVals = ["1fleet", "2lit", "4perma", "atomic_sub", "5ever"];
 const nFolders = ["1_Fleeting", "2_Literature", "4_Permanent", "3_Atomic", "5_Evergreen"];
 const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();

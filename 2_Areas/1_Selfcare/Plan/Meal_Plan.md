@@ -55,7 +55,7 @@ wed_add: []
 
 ## 🍝 Weekly Meal Matrix
 
-`BUTTON[edit-meal]` `BUTTON[reset-schedule]`
+`BUTTON[edit-meal]` `BUTTON[reset-schedule]` `BUTTON[generate-shopping-list]`
 
 ```dataviewjs
 const c = dv.current();

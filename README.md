@@ -12,13 +12,8 @@ This is my "Nexus Vitae" to have an overview of my life and its different spaces
 		- for projectmanagement
 	- a PKM system
 		- with spaced repitition function
-- GTD - Projectmanagement
-	- Stars are your Prupose, Vision, Goals
-	- Define Projects connect to Stars (if you want)
-	- Define Tasks connect to (if you want)
 - a Zettelkastensystem
 	- for taking notes
-	- 5_Notes/3_Atomic/Entities (must be updatet for other location and stores, genereated with AI)
 - a Resourcesystem
 	- to also track games, movies, etc
 

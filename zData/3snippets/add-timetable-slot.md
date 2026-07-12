@@ -9,7 +9,7 @@ try {
 
     // If the current file isn't the Timetable, target the Timetable directly
     if (!file.name.includes("Timetable")) {
-        file = app.vault.getAbstractFileByPath("2_Areas/3_Mind/Timetable.md");
+        file = app.vault.getAbstractFileByPath("2_Areas/3_Mind/Plan/Timetable.md");
         if (!file) {
             new Notice("Timetable.md not found!");
             return;

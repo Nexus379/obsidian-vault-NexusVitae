@@ -13,7 +13,7 @@ if (!title || title.trim() === "") title = "Star_" + tp.date.now("HH_mm");
 tp.variables.title = title;
 
 // 🔱 2. NAVIGATION & OPTIONEN
-const sOptions = ["🌟 1_Purpose", "🧭 2_Vision", "🎯 3_Goals"];
+const sOptions = ["1 🌟 Purpose", "2 🧭 Vision", "3 🎯 Goals"];
 const sFolders = ["1_Purpose", "2_Vision", "3_Goals"];
 const sTemps   = ["1purpose", "2vision", "3goals"]; 
 
@@ -42,7 +42,7 @@ if (sIdx === null || sIdx === -1) return;
 
 // 🔱 2.1 AREA-ZUTEILUNG (Omni-Bridge Vorbereitung)
 // Da jeder Star (Goal/Vision) einer Area zugeordnet sein sollte:
-const areaLabels = ["🌸 1_Selfcare", "🦄 2_Relationship", "🧠 3_Mind", "🧩 4_Organize", "🎨 5_Creativity", "🚵🏽 6_Activity", "🕹️ 7_Entertainment"];
+const areaLabels = ["1 🌸 Selfcare", "2 🦄 Relationship", "3 🧠 Mind", "4 🧩 Organize", "5 🎨 Creativity", "6 🚵🏽 Activity", "7 🕹️ Entertainment"];
 const aIdx = await tp.system.suggester(areaLabels, [1,2,3,4,5,6,7]);
 tp.variables.currentArea = aIdx ? `area${aIdx}` : "area_undefined";
 

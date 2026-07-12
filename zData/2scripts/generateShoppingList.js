@@ -12,15 +12,13 @@ async function generateShoppingList(app, dv, moment) {
     const logDate = moment(logDateStr, "YYYY-MM-DD");
     const referenceDate = logDate.isValid() ? logDate : moment();
     
-    const fileName = `Grocery_${logDateStr}.md`;
-    const folderPath = "0_Calendar/4_Projectlogs/Utilities";
-    const fullPath = `${folderPath}/${fileName}`;
+    const year = referenceDate.format("YYYY");
+    const month = referenceDate.format("MM");
+    const kw = referenceDate.format("WW");
     
-    // Falls die Datei schon existiert, erstelle nur den Link
-    let existingFile = app.vault.getAbstractFileByPath(fullPath);
-    if (existingFile) {
-        return `[[${fileName}|🛒 Open existing Grocery List (${logDateStr})]]`;
-    }
+    const fileName = `${year}-W${kw}_shopping.md`;
+    const folderPath = `0_Calendar/4_Projectlogs/${year}/Shopping`;
+    const fullPath = `${folderPath}/${fileName}`;
     
     // 1. Strategie auslesen
     const hubPage = dv.page("2_Areas/4_Organize/Shopping_Hub");
@@ -34,8 +32,12 @@ async function generateShoppingList(app, dv, moment) {
         Nexus = await require(enginePath)(app); 
     } catch(e) { console.error(e); }
     
-    // 2. Meal Plan Lookahead berechnen
-    const planPage = dv.page("2_Areas/1_Selfcare/Nutrition/Meal_Plan.md");
+    // 2. Meal Plan Lookahead berechnen (Jetzt mit Wochenplan-Fallback)
+    let planPage = dv.page(`0_Calendar/7_Plan/${year}/${month}/${year}-W${kw}_meal.md`);
+    if (!planPage) {
+        planPage = dv.page("2_Areas/1_Selfcare/Plan/Meal_Plan.md");
+    }
+    
     const todayIdx = referenceDate.day();
     let lookAhead = (todayIdx === 1) ? 3 : (todayIdx === 4 ? 4 : 1);
     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
@@ -83,17 +85,11 @@ async function generateShoppingList(app, dv, moment) {
         }
     }
     
-    // 3. Datei generieren
-    let outMd = `---\n`;
-    outMd += `archtype: ["#0cal/4projectlog"]\n`;
-    outMd += `status: 1active\n`;
-    outMd += `cal_date: ${logDateStr}\n`;
-    outMd += `shopping_strategy: ${strategy}\n`;
-    outMd += `---\n\n`;
-    outMd += `# 🛒 Grocery Execution: ${logDateStr}\n\n`;
-    outMd += `> [!info] Strategy: **${strategy.toUpperCase()}** | Lookahead: **${lookAhead} Days**\n\n`;
+    // 3. Tages-Block (Shopping Run) generieren
+    let blockMd = `## 🛒 Einkauf am ${logDateStr} (Lookahead: ${lookAhead} Days)\n\n`;
+    blockMd += `> [!info] Strategy: **${strategy.toUpperCase()}**\n\n`;
     
-    outMd += `## 🥗 Supermarkt & Haushalt\n\n`;
+    blockMd += `### 🥗 Supermarkt & Haushalt\n\n`;
     let totalBudget = 0;
     
     let vendorGroups = { "Uncategorized": [] };
@@ -121,57 +117,77 @@ async function generateShoppingList(app, dv, moment) {
         }
     }
     
-    // Render grouped lists
+    // Render grouped lists (auf H4, da H2 der Tag und H3 die Kategorie ist)
     let hasGroceries = false;
     for (let [vendor, items] of Object.entries(vendorGroups)) {
         if (items.length > 0) {
             hasGroceries = true;
-            outMd += `### 🏬 ${vendor}\n`;
-            outMd += items.join("\n") + "\n\n";
+            blockMd += `#### 🏬 ${vendor}\n`;
+            blockMd += items.join("\n") + "\n\n";
         }
     }
     
     // Manuelle ToBuy Tasks
     const tobuyTasks = dv.pages("#4task/tobuy").where(p => !p.completed);
     if (tobuyTasks.length > 0) {
-        outMd += `### 🛒 Extra Tasks (To-Buy)\n`;
+        blockMd += `#### 🛒 Extra Tasks (To-Buy)\n`;
         for (let t of tobuyTasks) {
-            outMd += `- [ ] 🛒 **${t.file.name}** [[${t.file.name}|↗️]]\n`;
+            blockMd += `- [ ] 🛒 **${t.file.name}** [[${t.file.name}|↗️]]\n`;
         }
-        outMd += `\n`;
+        blockMd += `\n`;
         hasGroceries = true;
     }
     
     if (hasGroceries) {
-        outMd += `**💸 Estimated Grocery Budget:** ~${totalBudget.toFixed(2)}\n\n`;
+        blockMd += `**💸 Estimated Shopping Budget:** ~${totalBudget.toFixed(2)}\n\n`;
     } else {
-        outMd += `_No groceries needed._\n\n`;
+        blockMd += `_No basic items needed._\n\n`;
     }
     
-    outMd += `---\n\n`;
-    outMd += `## 💎 Projekte & Hardware (Pro-Buy)\n\n`;
+    blockMd += `---\n\n`;
+    blockMd += `### 💎 Projekte & Hardware (Pro-Buy)\n\n`;
     const probuy = dv.pages("#3project/probuy").where(p => p.status === "1active");
     if (probuy.length > 0) {
         for (let p of probuy) {
             let budget = p.amount ? `(💰 ${p.amount})` : "";
-            outMd += `- [ ] 💎 **${p.file.name}** ${budget} [[${p.file.name}|↗️]]\n`;
+            blockMd += `- [ ] 💎 **${p.file.name}** ${budget} [[${p.file.name}|↗️]]\n`;
         }
     } else {
-        outMd += `_No active hardware projects._\n\n`;
+        blockMd += `_No active hardware projects._\n\n`;
     }
     
-    // Ordner erstellen falls er fehlt
-    let cPath = "";
-    for (let seg of folderPath.split('/')) {
-        cPath = cPath === "" ? seg : `${cPath}/${seg}`;
-        if (!app.vault.getAbstractFileByPath(cPath)) await app.vault.createFolder(cPath);
+    // 4. In Datei schreiben oder anhängen (unten)
+    let existingFile = app.vault.getAbstractFileByPath(fullPath);
+    if (existingFile) {
+        const content = await app.vault.read(existingFile);
+        
+        // Füge den neuen Block ganz unten an
+        await app.vault.modify(existingFile, content + "\n---\n\n" + blockMd);
+        
+    } else {
+        let outMd = `---\n`;
+        outMd += `banner: "![[anime-style-cozy-home-interior-with-furnishings.jpg]]"\n`;
+        outMd += `banner_y: 0.5\n`;
+        outMd += `banner_icon: 🛒\n`;
+        outMd += `arch: ["#0cal"]\n`;
+        outMd += `archtype: ["#0cal/7plan/shopping"]\n`;
+        outMd += `plan_year: "${year}"\n`;
+        outMd += `plan_kw: "${kw}"\n`;
+        outMd += `shopping_strategy: "${strategy}"\n`;
+        outMd += `---\n\n`;
+        outMd += `# 🛒 Shopping Log: Woche ${kw}\n\n`;
+        outMd += blockMd;
+        
+        // Ordner erstellen falls er fehlt
+        let cPath = "";
+        for (let seg of folderPath.split('/')) {
+            cPath = cPath === "" ? seg : `${cPath}/${seg}`;
+            if (!app.vault.getAbstractFileByPath(cPath)) await app.vault.createFolder(cPath);
+        }
+        await app.vault.create(fullPath, outMd);
     }
     
-    // Datei schreiben
-    await app.vault.create(fullPath, outMd);
-    
-    // Gib den Link zur neuen Datei zurück
-    return `[[${fileName}|🛒 Open Generated Grocery List (${logDateStr})]]`;
+    return `[[${fileName}|🛒 Open Shopping List (Woche ${kw})]]`;
 }
 
 module.exports = generateShoppingList;

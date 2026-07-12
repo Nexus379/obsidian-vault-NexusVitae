@@ -21,7 +21,7 @@ if (!tp.variables) tp.variables = {};
 // We save the match to remove it precisely later
 const dateMatch = rawTitle.match(/^\d{4}-\d{2}-\d{2}/);
 const loweredTitle = rawTitle.toLowerCase();
-const calendarTriggerKeys = ["projectlog","protocol","plm","pkm","ppm","proj","prot","rev"];
+const calendarTriggerKeys = ["projectlog","protocol","plm","pkm","ppm","proj","prot","rev", "plan","fitness","music","routine","meal","shopping","wardrobe","srs", "spaced"];
 const detectedCalTrigger = calendarTriggerKeys.find(key => new RegExp(`(^|[\\s_-])${key}($|[\\s_-])`, "i").test(loweredTitle));
 if (dateMatch || detectedCalTrigger) {
     if (!selection) selection = "0calendarprompt";
@@ -52,7 +52,7 @@ const promptMap = {
     "c": ARCH.c.prompt, "cal": ARCH.c.prompt, "plm": ARCH.c.prompt, "ppm": ARCH.c.prompt, "pkm": ARCH.c.prompt,
     "projectlog": ARCH.c.prompt, "proj": ARCH.c.prompt, "protocol": ARCH.c.prompt, "prot": ARCH.c.prompt,
     "log": ARCH.c.prompt, "rev": ARCH.c.prompt, "studylog": ARCH.c.prompt, "jou": ARCH.c.prompt,
-    "plan": ARCH.c.prompt, "weekplan": ARCH.c.prompt, "week": ARCH.c.prompt,
+    "plan": ARCH.c.prompt, "weekplan": ARCH.c.prompt, "week": ARCH.c.prompt,"fitness": ARCH.c.prompt, "inpra": ARCH.c.prompt, "routine": ARCH.c.prompt, "meal": ARCH.c.prompt, "shopping": ARCH.c.prompt, "srs": ARCH.c.prompt, "spaced": ARCH.c.prompt, "wardrobe": ARCH.c.prompt,
     "s": ARCH.s.prompt, "stars": ARCH.s.prompt, "purpose": ARCH.s.prompt, "vision": ARCH.s.prompt, "goal": ARCH.s.prompt, "goals": ARCH.s.prompt,
     "a": ARCH.a.prompt, "areas": ARCH.a.prompt, "selfcare": ARCH.a.prompt, "relation": ARCH.a.prompt, "person": ARCH.a.prompt,
     "mind": ARCH.a.prompt, "organize": ARCH.a.prompt, "creativity": ARCH.a.prompt, "activity": ARCH.a.prompt,
@@ -111,7 +111,7 @@ if (!selection && normPath !== "/" && normPath !== SYS.inbox) {
 
 // D) Manual Fallback
 if (!selection) {
-    const labels = Object.keys(ARCH).map(k => ARCH[k].icon + " " + ARCH[k].label);
+    const labels = Object.keys(ARCH).map(k => ARCH[k].folder.split("_")[0] + " " + ARCH[k].icon + " " + ARCH[k].label);
     const keys = Object.keys(ARCH).map(k => ARCH[k].prompt);
     selection = await tp.system.suggester(labels, keys);
 }

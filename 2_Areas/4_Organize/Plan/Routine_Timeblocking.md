@@ -1,6 +1,6 @@
 ---
 banner: "![[xAttachment/Images/Banner/anime-style-cozy-home-interior-with-furnishings.jpg]]"
-banner_y: 0.5
+banner_y: 0.5%
 banner_icon: 🧩
 inbox: true
 persona: ""
@@ -30,9 +30,9 @@ child: []
 summary:
 review:
 rt_start: 05:00
-rt_duration: 45
-rt_periods: 21
-rt_breaks: 4:30, 8:60
+rt_duration: 60
+rt_periods: 17
+rt_breaks: ""
 rt_end: 22:00
 cssclasses:
   - wide-page
@@ -41,7 +41,6 @@ cssclasses:
 # 🧩 Nexus Timeblocking (Routines)
 
 `BUTTON[setup-routine]` `BUTTON[edit-routine]` `BUTTON[sync-timetable]`
-
 
 
 ```dataviewjs

@@ -11,7 +11,7 @@ const activeTrigger = tp.variables.originTrigger || "";
 
 // 🔱 2. TASK SELECTION
 // Die bestehenden Nummern (1-8) bleiben EXAKT wie sie waren!
-const tOptions = ["🛠️ 1_Todo", "🏃🏽 2_Togo", "🎓 3_Tostudy", "📅 4_Tomeet", "💰 5_Tobuy", "💵 6_Topay", "🍜 7_Tocook", "🎀 8_Tocraft", "📥 9_Toget"];
+const tOptions = ["1 🛠️ Todo", "2 🏃🏽 Togo", "3 🎓 Tostudy", "4 📅 Tomeet", "5 💰 Tobuy", "6 💵 Topay", "7 🍜 Tocook", "8 🎀 Tocraft", "9 📥 Toget"];
 const tValues  = ["1todo", "2togo", "3tostudy", "4tomeet", "5tobuy", "6topay", "7tocook", "8tocraft", "9toget"];
 
 const triggerMap = { 

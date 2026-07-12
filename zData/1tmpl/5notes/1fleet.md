@@ -6,6 +6,7 @@ const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const area = tp.variables.currentArea || tp.variables.area || "3_Mind";
 const icon = tp.variables.icon || "🍂";
+const luhmannId = tp.variables.luhmannId || ""; // 🔱 FIX: war nicht deklariert -> ReferenceError > ist es uebrehaupt noetig hier?
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";

@@ -1,8 +1,8 @@
 <%-*
 // 🔱 1. AREA-CHOICE FIRST (Die Basis für alles)
 const areaOptions = [
-    "🌸 1_Selfcare", "🦄 2_Relationship", "🧠 3_Mind", 
-    "🧩 4_Organize", "🎨 5_Creativity", "🚵🏽 6_Activity", "🕹️ 7_Entertainment"
+    "1 🌸 Selfcare", "2 🦄 Relationship", "3 🧠 Mind", 
+    "4 🧩 Organize", "5 🎨 Creativity", "6 🚵🏽 Activity", "7 🕹️ Entertainment"
 ];
 const areaFolders = [
     "1_Selfcare", "2_Relationship", "3_Mind", "4_Organize", "5_Creativity", "6_Activity", "7_Entertainment"

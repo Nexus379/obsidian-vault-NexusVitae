@@ -4,17 +4,17 @@
  * Auto-detects Timetable, Routine, or Fitness Plan.
  */
 try {
-    let file = app.workspace.getActiveFile();
-    let planType = "Routine";
-    let targetPath = "2_Areas/4_Organize/Routine-Timeblocking.md";
-    
-    if (file && file.name.includes("Timetable")) {
-        planType = "Timetable";
-        targetPath = file.path;
-    } else if (file && file.name.includes("Fitness")) {
-        planType = "Fitness";
-        targetPath = file.path;
-    }
+let file = app.workspace.getActiveFile();
+let planType = "Routine";
+let targetPath = "2_Areas/4_Organize/Plan/Routine_Timeblocking.md";
+
+if (file && file.name.includes("Timetable")) {
+    planType = "Timetable";
+    targetPath = file.path;
+} else if (file && file.name.includes("Fitness")) {
+    planType = "Fitness";
+    targetPath = file.path;
+}
     
     const rFile = app.vault.getAbstractFileByPath(targetPath);
     if (!rFile) {

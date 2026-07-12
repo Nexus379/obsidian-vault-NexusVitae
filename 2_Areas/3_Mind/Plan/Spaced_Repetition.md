@@ -1,8 +1,11 @@
 ---
 banner: "![[xAttachment/Images/Banner/Area Banner/study, blau.jpg]]"
 banner_icon: 🚀
-arch: ["#2area"]
-archtype: ["#2area/3mind"]
+arch:
+  - "#2area"
+archtype:
+  - "#2area/3mind"
+banner_y: 22.5%
 ---
 
 # 🚀 Nexus Starfleet Command (Spaced Repetition)

@@ -42,27 +42,58 @@ try {
                 metric = "3x45s Hold";
             } else {
                 // HISTORY PARSING FOR PROGRESSIVE OVERLOAD
-                let overload = false;
-                for (let i = 0; i < Math.min(5, workoutFiles.length); i++) {
-                    let wContent = await app.vault.read(workoutFiles[i]);
-                    if (wContent.includes(ex.key)) {
-                        let lines = wContent.split("\n");
-                        let inEx = false;
-                        for (let l of lines) {
-                            if (l.startsWith("####") && l.includes(ex.key)) { inEx = true; continue; }
-                            if (l.startsWith("####") && inEx) break;
-                            if (inEx && l.startsWith("|") && !l.includes("Target") && !l.includes(":---:")) {
-                                let cells = l.split("|").slice(2, -1);
-                                for (let c of cells) {
-                                    let reps = parseInt(c.trim());
-                                    if (!isNaN(reps) && reps >= 20) overload = true;
+                let targetReps = 0;
+                let isAmrap = metric.includes("AMRAP");
+                if (!isAmrap) {
+                    let cleanMetric = metric.replace(/\D+$/, "").trim(); // remove trailing text like "(Explosive)"
+                    if (cleanMetric.includes("x")) {
+                        let parts = cleanMetric.split("x");
+                        if (parts.length === 2 && !isNaN(parseInt(parts[0])) && !isNaN(parseInt(parts[1]))) {
+                            targetReps = parseInt(parts[0]) * parseInt(parts[1]);
+                        }
+                    } else if (!isNaN(parseInt(cleanMetric))) {
+                        targetReps = parseInt(cleanMetric);
+                    }
+                }
+                
+                let overloadStatus = "";
+                if (targetReps > 0 || isAmrap) {
+                    for (let i = 0; i < Math.min(5, workoutFiles.length); i++) {
+                        let wContent = await app.vault.read(workoutFiles[i]);
+                        if (wContent.includes(ex.key)) {
+                            let lines = wContent.split("\n");
+                            let inEx = false;
+                            let totalAchieved = 0;
+                            let hasEntry = false;
+                            for (let l of lines) {
+                                if (l.startsWith("####") && l.includes(ex.key)) { inEx = true; continue; }
+                                if (l.startsWith("####") && inEx) break;
+                                if (inEx && l.startsWith("|") && !l.includes("Target") && !l.includes(":---:")) {
+                                    let cells = l.split("|").slice(2, -1);
+                                    for (let c of cells) {
+                                        let reps = parseInt(c.trim());
+                                        if (!isNaN(reps)) {
+                                            totalAchieved += reps;
+                                            hasEntry = true;
+                                        }
+                                    }
                                 }
                             }
+                            if (hasEntry) {
+                                if (isAmrap) {
+                                    if (totalAchieved >= 50) overloadStatus = " (⬆️ LvlUp!)";
+                                    else overloadStatus = " (✅ Solid)";
+                                } else {
+                                    if (totalAchieved > targetReps) overloadStatus = " (⬆️ LvlUp!)";
+                                    else if (totalAchieved === targetReps) overloadStatus = " (✅ Target Reached)";
+                                    else overloadStatus = " (⚠️ Keep Working)";
+                                }
+                            }
+                            break;
                         }
                     }
-                    if (overload) break;
                 }
-                if (overload) metric += " (⬆️ LvlUp!)";
+                if (overloadStatus !== "") metric += overloadStatus;
             }
             results.push(`${ex.key}|${metric}`);
         }
@@ -152,8 +183,8 @@ try {
     }
     // 2. BRUCE LEE FLOW
     else if (splitChoice.v === "bruce_lee") {
-        await applyDay("mon", async (f) => { f["fit_mon_core"] = await getWorkout("core", 3, "3x15"); f["fit_mon_cardio"] = await getWorkout("cardio", 2, "Sprint/HIIT"); });
-        await applyDay("tue", async (f) => { f["fit_tue_upper"] = await getWorkout("upper", 3, "Explosive"); });
+        await applyDay("mon", async (f) => { f["fit_mon_core"] = await getWorkout("core", 3, "AMRAP 60s"); f["fit_mon_cardio"] = await getWorkout("cardio", 2, "Sprint/HIIT"); });
+        await applyDay("tue", async (f) => { f["fit_tue_upper"] = await getWorkout("upper", 3, "AMRAP 60s (Explosive)"); });
         await applyDay("wed", async (f) => { f["fit_wed_lower"] = await getWorkout("lower", 3, "3x15"); f["fit_wed_core"] = await getWorkout("core", 2, "Isometric"); });
         await applyDay("thu", async (f) => { f["fit_thu_mobility"] = await getWorkout("mobility", 4, "Tai Chi Flow"); });
         await applyDay("fri", async (f) => { f["fit_fri_upper"] = await getWorkout("upper", 2, "3x10"); f["fit_fri_cardio"] = await getWorkout("cardio", 2, "Endurance"); });

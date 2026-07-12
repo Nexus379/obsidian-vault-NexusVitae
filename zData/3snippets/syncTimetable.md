@@ -16,10 +16,24 @@ try {
 
     const days = ["mon", "tue", "wed", "thu", "fri"];
     
-    // 1. TIMETABLE LESEN
-    const ttFile = app.vault.getAbstractFileByPath("2_Areas/3_Mind/Timetable.md");
+    // 1. TIMETABLE LESEN (mit Fallback-Logik)
+    const kw = fm.plan_kw || file.name.split("W")[1]?.split("_")[0];
+    const year = fm.plan_year || file.name.split("-")[0];
+    const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM") : null;
+    
+    let ttFile = null;
+    if (year && month && kw) {
+        const weeklyTtPath = `0_Calendar/7_Plan/${year}/${month}/${year}-W${kw}_timetable.md`;
+        ttFile = app.vault.getAbstractFileByPath(weeklyTtPath);
+    }
+    
     if (!ttFile) {
-        new Notice("🔥 Fehler: Timetable.md nicht gefunden.");
+        // Fallback auf Master
+        ttFile = app.vault.getAbstractFileByPath("2_Areas/3_Mind/Plan/Timetable.md");
+    }
+
+    if (!ttFile) {
+        new Notice("🔥 Fehler: Timetable (Weder Wochenplan noch Master) nicht gefunden.");
         return;
     }
     const ttCache = app.metadataCache.getFileCache(ttFile);

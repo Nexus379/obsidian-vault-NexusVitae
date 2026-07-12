@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 /**
  * 🧘 NEXUS ENTROPY MASTER INJECTOR - Dynamic Persona Edition
  */

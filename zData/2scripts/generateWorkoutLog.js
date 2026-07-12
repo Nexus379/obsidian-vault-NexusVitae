@@ -15,8 +15,16 @@ async function generateWorkoutLog(app, dv, moment) {
     const dayMap = { 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat", 0: "sun" };
     const dayStr = dayMap[logDate.day()];
     
-    const fitPlan = dv.page("2_Areas/6_Activity/Fitness_Routine.md");
-    if (!fitPlan) throw new Error("Fitness_Routine.md not found.");
+    const year = logDate.format("YYYY");
+    const month = logDate.format("MM");
+    const kw = logDate.format("WW");
+    const weeklyPath = `0_Calendar/7_Plan/${year}/${month}/${year}-W${kw}_fitness.md`;
+    
+    let fitPlan = dv.page(weeklyPath);
+    if (!fitPlan) {
+        fitPlan = dv.page("2_Areas/6_Activity/Plan/Fitness_Routine.md");
+    }
+    if (!fitPlan) throw new Error("Kein Wochenplan und keine Fitness_Routine.md gefunden!");
     
     // Engine laden
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
@@ -105,7 +113,7 @@ cssclasses: ["dashboard-no-border"]
 ${workoutBlocks.join("\n")}
 
 ---
-[[2_Areas/6_Activity/Fitness_Routine|➡️ Back to Fitness Hub]]
+[[${fitPlan.file.path.replace(".md", "")}|➡️ Back to Fitness Plan]]
 `;
 
     // Datei speichern
