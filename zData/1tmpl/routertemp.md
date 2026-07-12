@@ -178,6 +178,7 @@ tp.variables.preSelectedSub = subFolderDetected;
 
 // 🛡️ INTELLIGENT RENAME
 // Only rename physically if it's not a pure Chronos event and the name has changed
+cleanTitle = cleanTitle.replace(/\.md$/i, "");
 if (!isChronos && cleanTitle && cleanTitle.trim() !== "" && cleanTitle !== rawTitle) {
     const checkExist = app.vault.getAbstractFileByPath(`${folderPath}/${cleanTitle}.md`);
     if (!checkExist) {
