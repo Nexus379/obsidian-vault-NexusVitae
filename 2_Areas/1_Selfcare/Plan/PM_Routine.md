@@ -1,53 +1,33 @@
 ---
-pm_start: "20:00"
-pm_duration: 15
-pm_periods: 6
-pm_step_1: chore_cleaning|5-Min Reset
-pm_step_2: hygiene_basic|Skincare
-pm_step_3: journal_log|Reflection
-pm_step_4: sleep_rest|Reading
-pm_step_5: sleep_rest|Lights out
-pm_step_6: free
+pm_start: 20:00
+pm_periods: 2
+pm1: shop_groceries
+pm1det: kgjk
+pm1dur: 15
+pm2: chore_laundry
+pm2det: klkj
+pm2dur: 15
 ---
 
 # 🌙 Evening Routine
-`BUTTON[routine-selector]`
 
 > [!abstract] ⚙️ **Routine Settings**
-> **Start Time:** `INPUT[text:pm_start]` (Format: HH:mm)
-> **Duration per block:** `INPUT[number:pm_duration]` min. | **Number of blocks:** `INPUT[number:pm_periods]`
-
-> [!note] 📝 **Adjust steps** 
-> *Format: `routine_key|Optional Text` (e.g., `hygiene_basic|Shower`)*
-> 1. `INPUT[text:pm_step_1]`
-> 2. `INPUT[text:pm_step_2]`
-> 3. `INPUT[text:pm_step_3]`
-> 4. `INPUT[text:pm_step_4]`
-> 5. `INPUT[text:pm_step_5]`
-> 6. `INPUT[text:pm_step_6]`
-> 7. `INPUT[text:pm_step_7]`
-> 8. `INPUT[text:pm_step_8]`
+> **Start Time:** `INPUT[text:pm_start]` (Format: HH:mm) | **Total Duration:** `$= let c=dv.current(); let t=0; for(let i=1; i<=(c.pm_periods||0); i++) t+=Number(c["pm"+i+"dur"])||0; t;` min.
 
 ---
-
 ```dataviewjs
 const c = dv.current();
-
-const startTime = c.pm_start || "20:00";
-const stepDuration = Number(c.pm_duration) || 15;
-const totalPeriods = Number(c.pm_periods) || 6;
+const prefix = "pm"; // IN DER ABEND-DATEI HIER "pm" EINTRAGEN!
+const periods = Number(c[prefix + "_periods"]) || 0;
+let current = moment(c[prefix + "_start"] || "06:00", ["HH:mm"]);
 
 const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
 let engine = null;
 try { engine = require(enginePath)(); } catch(e) {}
 
-// --- SMART GET-D FUNCTION ---
-const getD = (key) => {
-    if (!key || key === "free") return "—";
-    
-    let parts = String(key).split("|");
-    let baseKey = parts[0].trim();
-    let detail = parts.length > 1 ? parts.slice(1).join(" ").trim() : "";
+// getD nimmt jetzt Routine und Detail als zwei getrennte Parameter!
+const getD = (baseKey, detail) => {
+    if (!baseKey || baseKey === "free" || baseKey === "undefined") return "—";
     
     if (baseKey === "custom") return `🔸 **${detail}**`;
     
@@ -55,31 +35,52 @@ const getD = (key) => {
         const r = engine.all[baseKey];
         const bgColor = r.color || "transparent"; 
         
-        let html = `<div style="padding: 4px; border-radius: 6px; background-color: ${bgColor}; box-shadow: 0 0 6px ${bgColor}; text-align: left; margin-bottom: 2px;">`;
+        let html = `<div style="padding: 4px; border-radius: 6px; background-color: ${bgColor}; box-shadow: 0 0 6px${bgColor}; text-align: left; margin-bottom: 2px;">`;
         html += `${r.icon} <span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">${r.label}</span>`;
-        if (detail) {
-            html += ` &nbsp;<span style="font-size: 0.85em; font-weight: bold; opacity: 0.8;">› ${detail}</span>`;
-        }
+        if (detail) html += ` &nbsp;<span style="font-size: 0.85em; font-weight: bold; opacity: 0.8;">› ${detail}</span>`;
         html += `</div>`;
         return html;
     }
-    return `❓ ${key}`;
+    return `❓ ${baseKey}`;
 };
 
-// --- CALCULATION & TABLE ---
-let current = moment(startTime, ["HH:mm"]);
 const rows = [];
-
-for (let i = 1; i <= totalPeriods; i++) {
-    let end = moment(current).add(stepDuration, 'minutes');
+for (let i = 1; i <= periods; i++) {
+    // Hier werden jetzt alle drei separaten Felder abgerufen
+    let val = String(c[prefix + i] || "");
+    let det = c[prefix + i + "det"] ? String(c[prefix + i + "det"]) : "";
+    let stepDur = Number(c[prefix + i + "dur"]) || 0; 
+    
+    let end = moment(current).add(stepDur, 'minutes');
     let timeBlock = `**${current.format("HH:mm")}** - ${end.format("HH:mm")}`;
     
-    // Look for pm_step_i
-    let routineData = c[`pm_step_${i}`]; 
-    
-    rows.push([timeBlock, getD(routineData)]);
+    rows.push([timeBlock, getD(val, det)]);
     current = end;
 }
-
 dv.table(["⌚ Time", "Routine"], rows);
 ```
+
+---
+`BUTTON[routine-selector]`
+---~Routines~--- 
+
+- 🛒 **kgjk**
+	- 📝 Routine: `INPUT[text:pm1]`
+	- 💬 Detail: `INPUT[text:pm1det]`
+	- ⏱️ Duration: `INPUT[number:pm1dur]` min.
+
+🧺**Laundry** (*klkj*)
+📝 Routine: `INPUT[text:pm2]` | 💬 Detail: `INPUT[text:pm2det]`
+⏱️ Duration: `INPUT[number:pm2dur]` min.
+
+---~End~---
+
+---
+```dataviewjs
+
+```
+
+
+
+
+
