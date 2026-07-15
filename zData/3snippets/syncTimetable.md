@@ -17,9 +17,20 @@ try {
     const days = ["mon", "tue", "wed", "thu", "fri"];
     
     // 1. TIMETABLE LESEN (mit Fallback-Logik)
-    const kw = fm.plan_kw || file.name.split("W")[1]?.split("_")[0];
-    const year = fm.plan_year || file.name.split("-")[0];
-    const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM") : null;
+ let kw = fm.plan_kw;
+ let year = fm.plan_year;
+
+// Falls die Metadaten leer sind, aus dem Dateinamen (z.B. "2026-W29_routine") lesen
+if (!kw || !year) {
+    const match = file.name.match(/(\d{4})-?W(\d{1,2})/);
+    if (match) {
+        if (!year) year = match[1];
+        if (!kw) kw = match[2];
+    }
+}
+
+// Monat berechnen (Backticks für die String-Interpolation wichtig!)
+const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM") : null;
     
     let ttFile = null;
     if (year && month && kw) {

@@ -680,6 +680,18 @@
           "templateFile": "zData/3snippets/PlanReplicator.md"
         }
       ]
+    },
+    {
+      "id": "routine-selector",
+      "label": "add routine",
+      "icon": "",
+      "style": "primary",
+      "actions": [
+        {
+          "type": "runTemplaterFile",
+          "templateFile": "zData/3snippets/routineSelector.md"
+        }
+      ]
     }
   ],
   "excludedFolders": [

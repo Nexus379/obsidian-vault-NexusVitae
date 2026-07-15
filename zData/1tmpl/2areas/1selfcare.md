@@ -1,14 +1,14 @@
-<%-*
+<%*
 // 🔱 1. NEXUS-DATA-SYNC (Autark-Modus)
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
-const persona = tp.variables.persona || "";
-let sci = tp.variables.sci || "";
-let disc = tp.variables.disc || "";
-let icon = tp.variables.discIcon || tp.variables.icon || "🌸";
-let area = tp.variables.currentArea || tp.variables.area || "1_Selfcare";
+const persona = tp.variables?.persona || "";
+let sci = tp.variables?.sci || "";
+let disc = tp.variables?.disc || "";
+let icon = tp.variables?.discIcon || tp.variables?.icon || "🌸";
+let area = tp.variables?.currentArea || tp.variables?.area || "1_Selfcare";
 
 // 🔱 2. FALLBACK & PROMPTS (Zuerst alle Fenster!)
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
@@ -51,7 +51,7 @@ area2: "<%- area %>"
 project3:
 task4:
 note5:
-  - "[[<%- tp.variables.SYS?.inbox || '0_Inbox' %>/GTD - Purpose Vision Area Project Task|GTD - Purpose Vision Area Project Task]]"
+  - "[[<%- tp.variables?.SYS?.inbox || '0_Inbox' %>/GTD - Purpose Vision Area Project Task|GTD - Purpose Vision Area Project Task]]"
 resource6:
 parent: "<%- pLink %>"
 sibling: []
@@ -96,4 +96,4 @@ review:
 ---
 **System Action:** [[n-lit|+ Create Note]] | [[p-active|+ Create Project]] 
 
-<%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
+<%- await tp.file.include("zData/5design_modul/ConnexioModul") %>

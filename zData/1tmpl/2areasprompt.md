@@ -1,4 +1,4 @@
-<%-*
+<%*
 // 🔱 1. AREA-CHOICE FIRST (Die Basis für alles)
 const areaOptions = [
     "1 🌸 Selfcare", "2 🦄 Relationship", "3 🧠 Mind", 
@@ -9,10 +9,13 @@ const areaFolders = [
 ];
 const areaTemplates = ["1selfcare", "2relation", "3mind", "4organize", "5creativity", "6activity", "7entertain"];
 
+// SICHERHEIT: Fallback für tp.variables
+const v = tp.variables || {};
+
 // 🔱 2. NAVIGATION & ESC-SAFETY
 let aIdx = -1;
-const preSub = tp.variables.preSelectedSub || "";
-const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
+const preSub = v.preSelectedSub || "";
+const originTrigger = String(v.originTrigger || v.activeTrigger || "").toLowerCase();
 const areaTriggerMap = {
     selfcare: 0,
     relation: 1,
@@ -47,12 +50,12 @@ if (aIdx === null || aIdx === -1) {
 const targetArea = areaFolders[aIdx];
 const contentTemplate = areaTemplates[aIdx];
 
-// 🔱 3. DISCIPLINE ENGINE (Erst JETZT, mit der Area im Gepäck)
-// Wir speichern die Area vorab in tp.variables, damit spätere Templates sie "sehen" können
+// 🔱 3. DISCIPLINE ENGINE
+// Sicherstellen, dass tp.variables existiert, bevor wir darauf schreiben
+if (!tp.variables) tp.variables = {};
 tp.variables.area = targetArea;
 tp.variables.currentArea = targetArea;
 
-// Die Engine abfragen statt altem Inline-Modul
 if (typeof tp.user.disciplineEngine === "function") {
     const engine = tp.user.disciplineEngine();
     const discList = engine.getDisciplineLabels();
@@ -76,63 +79,18 @@ if (typeof tp.user.disciplineEngine === "function") {
 }
 
 // 🔱 4. TITLE & LOGISTICS
-const { SYS, ARCH } = tp.variables; // Holt die dynamischen Pfade vom Master-Router
-let title = tp.variables.title || tp.file.title;
+// Sicherheits-Fallbacks für SYS und ARCH, falls das Template direkt gestartet wird
+const SYS = v.SYS || { tmpl: "zData/0_Templates" };
+const ARCH = v.ARCH || { a: { folder: "2_Areas" } };
+
+let title = v.title || tp.file.title;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
     title = await tp.system.prompt("💠 Area Name?", "");
 }
-    aIdx = await tp.system.suggester(areaOptions, Array.from(areaOptions.keys()));
-}
 
-// Wenn ESC gedrückt wurde: Abbruch statt 'undefined' Fehler
-if (aIdx === null || aIdx === -1) {
-    new Notice("Selection cancelled. No changes made.");
-    return; 
-}
-
-const targetArea = areaFolders[aIdx];
-const contentTemplate = areaTemplates[aIdx];
-
-// 🔱 3. DISCIPLINE ENGINE (Erst JETZT, mit der Area im Gepäck)
-// Wir speichern die Area vorab in tp.variables, damit spätere Templates sie "sehen" können
-tp.variables.area = targetArea;
-tp.variables.currentArea = targetArea;
-
-// Die Engine abfragen statt altem Inline-Modul
-if (typeof tp.user.disciplineEngine === "function") {
-    const engine = tp.user.disciplineEngine();
-    const discList = engine.getDisciplineLabels();
-    const displayList = discList.map(d => `${d.icon} ${d.label}`);
-    
-    const selectedDisc = await tp.system.suggester(displayList, discList);
-    
-    if (selectedDisc) {
-        tp.variables.sci = selectedDisc.sci.join('", "');
-        tp.variables.disc = selectedDisc.disc;
-        tp.variables.discIcon = selectedDisc.icon;
-    } else {
-        tp.variables.sci = "";
-        tp.variables.disc = "";
-        tp.variables.discIcon = "";
-    }
-} else {
-    new Notice("⚠️ disciplineEngine.js not found!");
-    tp.variables.sci = "";
-    tp.variables.disc = "";
-}
-
-// 🔱 4. TITLE & LOGISTICS
-const { SYS, ARCH } = tp.variables; // Holt die dynamischen Pfade vom Master-Router
-let title = tp.variables.title || tp.file.title;
-const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
-
-if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
-    title = await tp.system.prompt("💠 Area Name?", "");
-}
 if (!title) title = "Area-" + tp.date.now("HH-mm");
-
 if (tp.file.title !== title) await tp.file.rename(title);
 
 // Dynamischer Pfad durch ARCH.a.folder

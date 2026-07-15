@@ -29,11 +29,11 @@ sibling: []
 child: []
 summary:
 review:
-rt_start: 05:00
+rt_start: 04:00
 rt_duration: 60
-rt_periods: 17
+rt_periods: 20
 rt_breaks: ""
-rt_end: 22:00
+rt_end: 00:00
 cssclasses:
   - wide-page
 ---
@@ -68,19 +68,46 @@ let engine = null;
 try { engine = require(enginePath)(); } catch(e) {}
 
 // --- SMART GET-D FUNCTION (With Details Integration) ---
+// --- SMART GET-D FUNCTION (With Engine Colors & Embedding) ---
 const getD = (key) => {
-    if (Array.isArray(key)) return key.map(k => getD(k)).join("<br>");
+    if (Array.isArray(key)) return key.map(k => getD(k)).join("<br><br>");
     if (!key || key === "free") return "—";
     if (key === "break") return "☕ **BUFFER**";
     
     let parts = String(key).split("|");
     let baseKey = parts[0];
-    let detail = parts.length > 1 ? ` _(${parts.slice(1).join(" ")})_` : "";
     
-    if (baseKey === "custom") return `🔸 ${parts.slice(1).join(" ")}`;
+    // Details auslesen und Klammern entfernen (z.B. "Breakfast")
+    let detail = parts.length > 1 ? parts.slice(1).join(" ") : ""; 
+    
+    if (baseKey === "custom") return `🔸 **${detail}**`;
+
+    // 💡 AM/PM Routinen als anklickbare Links (Hover für Mini-Vorschau!)
+    if (baseKey === "am_routine") {
+        return `<div style="padding: 6px; border-radius: 8px; background-color: rgba(128, 128, 128, 0.15); box-shadow: 0 0 8px rgba(128, 128, 128, 0.15); text-align: center;"><span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">[[2_Areas/1_Selfcare/Plan/AM_Routine|🌅 AM Protocol]]</span></div>`;
+    }
+    if (baseKey === "pm_routine") {
+        return `<div style="padding: 6px; border-radius: 8px; background-color: rgba(128, 128, 128, 0.15); box-shadow: 0 0 8px rgba(128, 128, 128, 0.15); text-align: center;"><span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">[[2_Areas/1_Selfcare/Plan/PM_Routine|🌙 PM Protocol]]</span></div>`;
+    }
     
     if (engine && engine.all && engine.all[baseKey]) {
-        return `${engine.all[baseKey].icon} ${engine.all[baseKey].label}${detail}`;
+        const r = engine.all[baseKey];
+        // Zieht die Farbe direkt aus der Engine
+        const bgColor = r.color || "transparent"; 
+        
+        // HTML für Styling (Pastell, Glow)
+        let html = `<div style="padding: 6px; border-radius: 8px; background-color: ${bgColor}; box-shadow: 0 0 8px ${bgColor}; text-align: center;">`;
+        
+        // Haupt-Label (Courier/Monospace, kleiner, fett)
+        html += `${r.icon} <span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">${r.label}</span>`;
+        
+        // Detail-Text (Normaler Font, fett, etwas kleiner, ohne Klammern)
+        if (detail) {
+            html += `<br><span style="font-size: 0.9em; font-weight: bold;">${detail}</span>`;
+        }
+        
+        html += `</div>`;
+        return html;
     }
     return `❓ ${key}`;
 };
