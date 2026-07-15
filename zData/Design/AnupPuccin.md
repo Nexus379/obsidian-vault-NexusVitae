@@ -79,6 +79,7 @@ https://www.linkingyourthinking.com/thank-you/lyt-anuppucin-style-settings
 
 
 
+green light:
 
 {
   "retroma-obsidian-theme@@theme-color-scheme-selection": "Analogous",
