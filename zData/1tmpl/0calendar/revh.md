@@ -149,7 +149,7 @@ status: 1active
 > >
 > > - **Avg Energy:** `$= const p = dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm")); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
 > > - **Avg Sleep:** `$= const p = dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm")); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
-> > - **Total Fitness:** `$= dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm")).array().reduce((sum, p) => sum + (Number(p.fitness_am) || 0) + (Number(p.fitness_pm) || 0), 0)` min
+> > - **Total Fitness:** `$= dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm")).array().reduce((sum, p) => sum + (Number(p.mobility_am) || 0) + (Number(p.mobility_pm) || 0), 0)` min
 > > - **Total Music:** `$= dv.pages().where(p => p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>" && String(p.archtype).includes("#0cal/1plm")).array().reduce((sum, p) => sum + (Number(p.play_instrum_time) || 0), 0)` min
 <%* } -%>
 <%* if (isMaster || revModule === "ppm" || revModule === "proj") { -%>

@@ -139,8 +139,8 @@ if (!engineFile) { dv.paragraph("> [!error] Critical: Items Nexus Engine missing
 
 const Nexus = await require(app.vault.adapter.basePath + "/" + enginePath)(app);
 const getVal = (stats, key) => Number((stats && stats[key]) || 0);
-const getTotalIron = (stats) => getVal(stats, "iron_animal_mg") + getVal(stats, "iron_plant_mg");
-const getTotalVitA = (stats) => getVal(stats, "vit_a_mcg") + getVal(stats, "vit_a_retinol_mcg") + getVal(stats, "vit_a_beta_carotin_mcg");
+const getTotalIron = (stats) => getVal(stats, "iron_heme_mg") + getVal(stats, "iron_plant_mg");
+const getTotalVitA = (stats) => getVal(stats, "vit_a_total_mcg");
 const Nutri = {
     getVal,
     getTotalIron,
@@ -177,7 +177,7 @@ if (ingredients.length === 0) {
 } else {
     // 🔱 3. FULL SPECTRUM CALCULATION
     let totals = {};
-    const baseMetrics = ["kcal", "protein_g", "fat_total_g", "carbs_total_g", "fiber_g", "magnesium_mg", "iron_animal_mg", "iron_plant_mg", "calcium_mg", "zinc_mg", "potassium_mg", "vit_a_mcg", "vit_a_retinol_mcg", "vit_a_beta_carotin_mcg", "vit_b12_mcg", "vit_c_mg", "vit_d_iu", "vit_k_mcg", "vit_k1_mcg", "vit_k2_mcg"];
+    const baseMetrics = ["kcal", "protein_g", "fat_total_g", "carbs_total_g", "fiber_g", "magnesium_mg", "iron_heme_mg", "iron_plant_mg", "iron_total_mg", "calcium_mg", "zinc_mg", "potassium_mg", "vit_a_retinol_mcg", "vit_a_beta_carotin_mcg", "vit_a_total_mcg", "vit_b12_mcg", "vit_c_mg", "vit_d_mcg", "vit_k_mcg", "vit_k1_mcg", "vit_k2_mcg"];
     const metrics = Array.from(new Set([
         ...baseMetrics,
         ...Object.values(masterCatalog).flatMap(item => Object.keys(item.val || {}))
@@ -208,8 +208,8 @@ if (ingredients.length === 0) {
                 delete fm[`recipe_${key}`]; 
             }
         });
-        if (Nutri.getTotalIron) fm.recipe_iron_total = Number(Nutri.getTotalIron(totals).toFixed(2));
-        if (Nutri.getTotalVitA) fm.recipe_vit_a_total = Number(Nutri.getTotalVitA(totals).toFixed(2));
+        if (Nutri.getTotalIron) fm.recipe_iron_total_mg = Number(Nutri.getTotalIron(totals).toFixed(2));
+        if (Nutri.getTotalVitA) fm.recipe_vit_a_total_mcg = Number(Nutri.getTotalVitA(totals).toFixed(2));
     });
 
     const portions = Number(p.portions) || 1;

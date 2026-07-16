@@ -218,8 +218,8 @@ for (let i = 0; i < daysInMonth; i++) {
     const isToday = (dStr === moment().format('YYYY-MM-DD'));
 
     const dayFiles = allLogs.filter(p => p.file.name.includes(dStr));
-    const fitLog = dayFiles.find(p => p['fitness-am'] !== undefined || p['fitness-pm'] !== undefined);
-    const fitTotal = (fitLog ? (Number(fitLog['fitness-am']) || 0) + (Number(fitLog['fitness-pm']) || 0) : 0);
+    const fitLog = dayFiles.find(p => p['mobility_am'] !== undefined || p['mobility_pm'] !== undefined);
+    const fitTotal = (fitLog ? (Number(fitLog['mobility_am']) || 0) + (Number(fitLog['mobility_pm']) || 0) : 0);
     const energy = dayFiles.find(p => p.energy)?.energy || null;
     const tasks = dayFiles.array().reduce((acc, p) => acc + (p.file.tasks ? p.file.tasks.where(t => !t.completed).length : 0), 0);
 
@@ -375,8 +375,8 @@ for (let i = 0; i < daysInM; i++) {
     
     const energy = dayFiles.find(p => p.energy)?.energy || null;
     const tasks = dayFiles.array().reduce((acc, p) => acc + (p.file.tasks ? p.file.tasks.where(t => !t.completed).length : 0), 0);
-    const fitLog = dayFiles.find(p => p['fitness-am'] !== undefined || p['fitness-pm'] !== undefined);
-    const fitTotal = (fitLog ? (Number(fitLog['fitness-am']) || 0) + (Number(fitLog['fitness-pm']) || 0) : 0);
+    const fitLog = dayFiles.find(p => p['mobility_am'] !== undefined || p['mobility_pm'] !== undefined);
+    const fitTotal = (fitLog ? (Number(fitLog['mobility_am']) || 0) + (Number(fitLog['mobility_pm']) || 0) : 0);
 
     dayData.push({ dStr, mDate });
 
@@ -504,8 +504,8 @@ for (let i = 0; i < daysInM; i++) {
     
     const energy = dayFiles.find(p => p.energy)?.energy || null;
     const tasks = dayFiles.array().reduce((acc, p) => acc + (p.file.tasks ? p.file.tasks.where(t => !t.completed).length : 0), 0);
-    const fitLog = dayFiles.find(p => p['fitness-am'] !== undefined || p['fitness-pm'] !== undefined);
-    const fitTotal = (fitLog ? (Number(fitLog['fitness-am']) || 0) + (Number(fitLog['fitness-pm']) || 0) : 0);
+    const fitLog = dayFiles.find(p => p['mobility_am'] !== undefined || p['mobility_pm'] !== undefined);
+    const fitTotal = (fitLog ? (Number(fitLog['mobility_am']) || 0) + (Number(fitLog['mobility_pm']) || 0) : 0);
 
     dayData.push({ dStr, mDate });
 
@@ -649,8 +649,8 @@ for (let i = 0; i < daysInMonth; i++) {
     const isWeekend = (mDate.day() === 0 || mDate.day() === 6);
 
     const dayFiles = allLogs.filter(p => p.file.name.includes(dStr));
-    const fitLog = dayFiles.find(p => p['fitness-am'] !== undefined || p['fitness-pm'] !== undefined);
-    const fitTotal = (fitLog ? (Number(fitLog['fitness-am']) || 0) + (Number(fitLog['fitness-pm']) || 0) : 0);
+    const fitLog = dayFiles.find(p => p['mobility_am'] !== undefined || p['mobility_pm'] !== undefined);
+    const fitTotal = (fitLog ? (Number(fitLog['mobility_am']) || 0) + (Number(fitLog['mobility_pm']) || 0) : 0);
     const energy = dayFiles.find(p => p.energy)?.energy || null;
     const tasks = dayFiles.array().reduce((acc, p) => acc + (p.file.tasks ? p.file.tasks.where(t => !t.completed).length : 0), 0);
 
@@ -2642,7 +2642,7 @@ calendar einmaliges laden::
     const p2 = (journalDone && selfcareDone) ? 20 : 0; 
     
     // Check Fitness (AM + PM zusammen min. 30)
-    const totalSport = (Number(c["fitness-am"]) || 0) + (Number(c["fitness-pm"]) || 0);
+    const totalSport = (Number(c["mobility_am"]) || 0) + (Number(c["mobility_pm"]) || 0);
     const p3 = totalSport >= 30 ? 20 : 0; 
     
     // Check Sleep (min. 7h)
@@ -2709,7 +2709,7 @@ calendar einmaliges laden::
     const p2 = (journalDone && selfcareDone) ? 20 : 0; 
     
     // Check Fitness (AM + PM zusammen min. 30)
-    const totalSport = (Number(c["fitness-am"]) || 0) + (Number(c["fitness-pm"]) || 0);
+    const totalSport = (Number(c["mobility_am"]) || 0) + (Number(c["mobility_pm"]) || 0);
     const p3 = totalSport >= 30 ? 20 : 0; 
     
     // Check Sleep (min. 7h)
@@ -2774,7 +2774,7 @@ const heuteFull = moment(c.file.name, "YYYY-MM-DD").locale('en').format("dddd");
     // --- 2. BASIS CHECK (Die 5 Säulen) ---
     const p1 = (allMeals.length > 0 || (c.meal && c.meal.length > 2)) ? 1 : 0; 
     const p2 = (String(c["journal-am"]) == "true" || String(c["journal-pm"]) == "true") ? 1 : 0; 
-    const sport = (Number(c["fitness-am"]) || 0) + (Number(c["fitness-pm"]) || 0); 
+    const sport = (Number(c["mobility_am"]) || 0) + (Number(c["mobility_pm"]) || 0); 
     const p3 = sport >= 30 ? 1 : 0; 
     const p4 = (Number(c.sleep) || 0) >= 7 ? 1 : 0; 
     const p5 = (v && v.file.tasks && v.file.tasks.filter(t => t.completed).length === v.file.tasks.length) ? 1 : 0; 
@@ -3160,7 +3160,7 @@ const heuteFull = moment(c.file.name, "YYYY-MM-DD").locale('en').format("dddd");
     // --- 2. BASIS CHECK (Die 5 Säulen) ---
     const p1 = (allMeals.length > 0 || (c.meal && c.meal.length > 2)) ? 1 : 0; 
     const p2 = (String(c["journal-am"]) == "true" || String(c["journal-pm"]) == "true") ? 1 : 0; 
-    const sport = (Number(c["fitness-am"]) || 0) + (Number(c["fitness-pm"]) || 0); 
+    const sport = (Number(c["mobility_am"]) || 0) + (Number(c["mobility_pm"]) || 0); 
     const p3 = sport >= 30 ? 1 : 0; 
     const p4 = (Number(c.sleep) || 0) >= 7 ? 1 : 0; 
     const p5 = (v && v.file.tasks && v.file.tasks.filter(t => t.completed).length === v.file.tasks.length) ? 1 : 0; 
@@ -3261,7 +3261,7 @@ const heuteFull = moment(c.file.name, "YYYY-MM-DD").locale('en').format("dddd");
     // --- 2. BASIS CHECK (Die 5 Säulen) ---
     const p1 = (allMeals.length > 0 || (c.meal && c.meal.length > 2)) ? 1 : 0; 
     const p2 = (String(c["journal-am"]) == "true" || String(c["journal-pm"]) == "true") ? 1 : 0; 
-    const sport = (Number(c["fitness-am"]) || 0) + (Number(c["fitness-pm"]) || 0); 
+    const sport = (Number(c["mobility_am"]) || 0) + (Number(c["mobility_pm"]) || 0); 
     const p3 = sport >= 30 ? 1 : 0; 
     const p4 = (Number(c.sleep) || 0) >= 7 ? 1 : 0; 
     const p5 = (v && v.file.tasks && v.file.tasks.filter(t => t.completed).length === v.file.tasks.length) ? 1 : 0; 

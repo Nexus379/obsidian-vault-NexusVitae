@@ -105,7 +105,18 @@ try {
         new Notice("🔥 Engine Error!"); return; 
     }
     
-    const discList = engine.getRoutineLabels ? engine.getRoutineLabels() : Object.keys(engine.all).map(k => ({key: k, ...engine.all[k]}));
+    // 🔍 Fuzzy-Suche: Begriff (auch Deutsch/Alias) → searchRoutines filtert über key + label + aliases
+    const searchTerm = await tp.system.prompt("🔍 Routine suchen (z.B. 'zähneputzen' — Enter = alle):", "");
+    let discList;
+    if (searchTerm && searchTerm.trim() && engine.searchRoutines) {
+        discList = engine.searchRoutines(searchTerm.trim());
+        if (!discList || discList.length === 0) {
+            new Notice(`Keine Treffer für "${searchTerm}" — zeige alle.`);
+            discList = engine.getRoutineLabels();
+        }
+    } else {
+        discList = engine.getRoutineLabels ? engine.getRoutineLabels() : Object.keys(engine.all).map(k => ({key: k, ...engine.all[k]}));
+    }
 
     const options = discList.map(r => ({
         label: `[${r.group || 'Routine'}] ${r.icon} ${r.label}`,
@@ -122,11 +133,13 @@ try {
     let finalValue = subj.key;
 
     // --- 5. SMART DETAIL PROMPT ---
+    // Das getippte Suchwort wird als Default vorgeschlagen → landet als bold Detail
+    const seed = (searchTerm && searchTerm.trim()) ? searchTerm.trim() : "";
     if (finalValue !== "free" && finalValue !== "break" && finalValue !== "custom") {
-        const detail = await tp.system.prompt("Optional Detail (e.g., 'Laundry', 'Taxes'):");
+        const detail = await tp.system.prompt("Optional Detail (e.g., 'Laundry', 'Taxes'):", seed);
         if (detail) finalValue = `${finalValue}|${detail}`;
     } else if (finalValue === "custom") {
-        const customTxt = await tp.system.prompt("Enter custom block text:");
+        const customTxt = await tp.system.prompt("Enter custom block text:", seed);
         if (!customTxt) return;
         finalValue = `custom|${customTxt}`;
     }

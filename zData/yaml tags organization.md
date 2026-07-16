@@ -352,8 +352,8 @@ mood:
 energy:
 journal_am:
 journal_pm:
-fitness_am:
-fitness_pm:
+mobility_am:
+mobility_pm:
 selfcare_am:
 selfcare_pm:
 play_instrum:

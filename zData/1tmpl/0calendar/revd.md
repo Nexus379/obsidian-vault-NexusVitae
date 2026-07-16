@@ -55,8 +55,8 @@ const s_am = getVal(plm, "selfcare_am", false);
 const s_pm = getVal(plm, "selfcare_pm", false);
 tp.variables.selfcare_revD = (s_am || s_pm) ? "true" : "false";
 
-const f_am = Number(getVal(plm, "fitness_am", 0));
-const f_pm = Number(getVal(plm, "fitness_pm", 0));
+const f_am = Number(getVal(plm, "mobility_am", 0));
+const f_pm = Number(getVal(plm, "mobility_pm", 0));
 tp.variables.fitness_revD = f_am + f_pm;
 
 tp.variables.music_revD = Number(getVal(plm, "play_instrum_time", 0));

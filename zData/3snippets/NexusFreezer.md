@@ -74,8 +74,8 @@ try {
                 });
             }
             else if (currentContext === "fitness") {
-                const am = Number(fm.fitness_am) || 0;
-                const pm = Number(fm.fitness_pm) || 0;
+                const am = Number(fm.mobility_am) || 0;
+                const pm = Number(fm.mobility_pm) || 0;
                 const t = am + pm;
                 let ic = "⚪"; if(t>=90)ic="🦅"; else if(t>=60)ic="✨"; else if(t>=30)ic="🟢"; else if(t>0)ic="🟡";
                 finalLines.push(calloutPfx + `🏃🏽 **Status:** ${t} / 30 min ${ic}`);

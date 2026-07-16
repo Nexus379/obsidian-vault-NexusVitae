@@ -3,64 +3,67 @@
  * Central Intelligence for all Silos (Food, Tools, Maintenance)
  */
 async function itemsNexusEngine(app, domainFilter = "ALL") {
-    // 1. Hole die Dataview API
-    const dv = app.plugins.plugins.dataview?.api;
-    if (!dv) {
-        console.error("[Nexus Engine] Fehler: Dataview Plugin ist nicht aktiv oder API nicht verfügbar.");
-        return { all: {} };
-    }
-
     const DATABASE = {};
-    
-    // 2. Lade alle Entities aus dem neuen atomaren Ordner (oder überall wo entity_class existiert)
-    const pages = dv.pages().where(p => p.entity_class != null);
 
-    for (let p of pages) {
-        try {
-            const fm = p.file.frontmatter || {};
-            const key = p.file.name;
-            const isFood = fm.entity_class === "ingredient";
-            const domain = isFood ? "FOOD" : "MAINTENANCE";
+    // === 1. FOOD: aus den normalisierten JSON-Dateien (Quelle der Wahrheit) ===
+    // Volle val{} wird übernommen — KEIN valKeys-Whitelist mehr (der schnitt Eisen/Magnesium/etc. ab).
+    if (domainFilter === "ALL" || domainFilter === "FOOD") {
+        const foodFiles = ["ingre_fresh.json", "ingre_pantry.json", "ingre_consumables.json"];
+        for (const fn of foodFiles) {
+            let raw;
+            try { raw = await app.vault.adapter.read(`zData/6items/${fn}`); }
+            catch (e) { continue; }
+            if (raw.charCodeAt(0) === 0xFEFF) raw = raw.slice(1); // BOM-Schutz
+            let data;
+            try { data = JSON.parse(raw); }
+            catch (e) { console.error(`[Nexus Engine] JSON-Fehler in ${fn}:`, e); continue; }
 
-            // 3. Optionaler Filter
-            if (domainFilter === "FOOD" && !isFood) continue;
-            if (domainFilter === "MAINTENANCE" && isFood) continue;
-
-            // 4. Rekonstruktion des `val` Objekts (für Nährwerte/Macros)
-            const val = {};
-            const valKeys = ['kcal', 'protein_g', 'carbs_total_g', 'carbs_sugar_g', 'fat_total_g', 'fat_sat_g', 'fiber_g', 'sodium_mg', 'calcium_mg', 'iron_mg', 'zinc_mg', 'vit_c_mg', 'vit_d_µg', 'vit_b12_µg'];
-            for (let vk of valKeys) {
-                if (fm[vk] !== undefined && typeof fm[vk] === 'number') {
-                    val[vk] = fm[vk];
+            for (const [silo, items] of Object.entries(data)) {
+                if (!items || typeof items !== "object") continue;
+                for (const [id, it] of Object.entries(items)) {
+                    if (!it || typeof it !== "object" || !it.val) continue;
+                    DATABASE[id] = {
+                        ...it,
+                        id: id,
+                        domain: "FOOD",
+                        isFood: true,
+                        silo: String(silo).toUpperCase(),
+                        val: it.val,               // volle Nährwerte, ungefiltert
+                        energy: it.energy || {},
+                        meta: it.meta || {},
+                        prices: it.prices || {},
+                        lang: it.lang || {},
+                        label: (it.lang && it.lang.de) ? it.lang.de : (it.label || id),
+                        icon: it.icon || "🥗"
+                    };
                 }
             }
+        }
+    }
 
-            // 5. Ermittle das Silo (Sub-Kategorie)
-            let silo = fm.ingre_type || fm.tech_type || fm.household_type || fm.personal_type || fm.art_type || "UNKNOWN";
-            silo = silo.toUpperCase();
-
-            // 6. Prices Rekonstruktion
-            const prices = {};
-            if (fm.pref_vendor && fm.unit_price) {
-                prices[fm.pref_vendor] = fm.unit_price;
+    // === 2. MAINTENANCE: Entities weiter aus MD-Notizen (nur wenn Dataview verfügbar) ===
+    if (domainFilter === "ALL" || domainFilter === "MAINTENANCE") {
+        const dv = app.plugins.plugins.dataview?.api;
+        if (dv) {
+            const pages = dv.pages().where(p => p.entity_class != null && p.entity_class !== "ingredient");
+            for (let p of pages) {
+                try {
+                    const fm = p.file.frontmatter || {};
+                    const key = p.file.name;
+                    let silo = fm.tech_type || fm.household_type || fm.personal_type || fm.art_type || "UNKNOWN";
+                    silo = String(silo).toUpperCase();
+                    const prices = {};
+                    if (fm.pref_vendor && fm.unit_price) prices[fm.pref_vendor] = fm.unit_price;
+                    DATABASE[key] = {
+                        ...fm, id: key, domain: "MAINTENANCE", isFood: false, silo: silo,
+                        lang: fm.lang || {}, val: fm.val || {}, meta: fm.meta || {}, prices: prices,
+                        label: (fm.lang && fm.lang.de) ? fm.lang.de : (fm.aliases && fm.aliases[0] ? fm.aliases[0] : key),
+                        icon: fm.icon || "📦"
+                    };
+                } catch (e) {
+                    console.error(`[Nexus Engine] Load Error for page ${p.file.name}:`, e);
+                }
             }
-
-            // 7. Baue den Datenbank-Eintrag exakt so auf, wie die Dashboards ihn erwarten
-            DATABASE[key] = {
-                ...fm, // Fügt alle YAML Metadaten als flache Keys hinzu
-                id: key,
-                domain: domain,
-                isFood: isFood,
-                silo: silo,
-                lang: fm.lang || {}, // Das Python-Skript wird lang{} als Objekt anlegen
-                val: val,
-                meta: fm.meta || {},
-                prices: prices,
-                label: (fm.lang && fm.lang.de) ? fm.lang.de : (fm.aliases && fm.aliases[0] ? fm.aliases[0] : key),
-                icon: fm.icon || (isFood ? "🥗" : "📦")
-            };
-        } catch (e) {
-            console.error(`[Nexus Engine] Load Error for page ${p.file.name}:`, e);
         }
     }
 
@@ -136,10 +139,12 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
         calculate: (key, amount = 1.0) => {
             const item = DATABASE[key];
             if (!item || !item.val) return null;
-            
+
             let results = {};
-            for (let stat in item.val) {
-                const value = item.val[stat];
+            // energy{kcal,kj} liegt jetzt getrennt von val — für die Rechnung wieder zusammenführen
+            const src = Object.assign({}, item.energy || {}, item.val || {});
+            for (let stat in src) {
+                const value = src[stat];
                 if (typeof value === 'number') {
                     results[stat] = parseFloat((value * amount).toFixed(2));
                 }

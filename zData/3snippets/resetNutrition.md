@@ -1,5 +1,5 @@
 ﻿<%-*
-const activeFile = app.workspace.getActiveFile();
+const activeFile = tp.config.active_file;  // PLM-Notiz, in der der Button sitzt (robuster als getActiveFile)
 if (!activeFile) return;
 
 const fm = app.metadataCache.getFileCache(activeFile)?.frontmatter || {};

@@ -68,7 +68,7 @@ if (!plannedWorkout || String(plannedWorkout).trim() === "") {
             fm[`${dayPrefix}_act`] = numActuals;
         });
         await app.fileManager.processFrontMatter(dailyFile, (fm) => {
-            fm["fitness_pm"] = (Number(fm["fitness_pm"]) || 0) + numActuals;
+            fm["mobility_pm"] = (Number(fm["mobility_pm"]) || 0) + numActuals;
         });
         new Notice(`💪 Spontaneous Workout synced: ${isSpontaneous} (${numActuals})`);
     }
@@ -111,7 +111,7 @@ if (choice.value !== "skipped" || finalActuals > 0) {
     });
     
     await app.fileManager.processFrontMatter(dailyFile, (fm) => {
-        fm["fitness_pm"] = (Number(fm["fitness_pm"]) || 0) + finalActuals;
+        fm["mobility_pm"] = (Number(fm["mobility_pm"]) || 0) + finalActuals;
     });
     
     new Notice(`🏋️ Workout synced to ${kw}! (${finalActuals} units)`);

@@ -1,61 +1,18 @@
-<%-*
-const targetMoment = moment(tp.variables.targetDate || tp.date.now("YYYY-MM-DD"), "YYYY-MM-DD");
-const year = targetMoment.format("YYYY");
-const kw = targetMoment.format("WW");
-tR = "---\n";
-%>
+---
 banner: "![[xAttachment/Images/Banner/fantasy-landscape-sunset.jpg]]"
 banner_y: 0.26
 banner_icon: 🍱
-fileTitle: "<%- tp.variables.title || (year + '-W' + kw + '_meal') %>"
+fileTitle: "{{YEAR}}-W{{KW}}_meal"
 arch:
   - "#0cal"
 archtype:
   - "#0cal/7plan/meal"
 frozen: false
-plan_year: "<%- year %>"
-plan_kw: "<%- kw %>"
-mon_brk: []
-mon_ben: []
-mon_lun: []
-mon_snk: []
-mon_eve: []
-tue_brk: []
-tue_ben: []
-tue_lun: []
-tue_snk: []
-tue_eve: []
-wed_brk: []
-wed_ben: []
-wed_lun: []
-wed_snk: []
-wed_eve: []
-thu_brk: []
-thu_ben: []
-thu_lun: []
-thu_snk: []
-thu_eve: []
-fri_brk: []
-fri_ben: []
-fri_lun: []
-fri_snk: []
-fri_eve: []
-sat_brk: []
-sat_ben: []
-sat_lun: []
-sat_snk: []
-sat_eve: []
-sun_brk: []
-sun_ben: []
-sun_lun: []
-sun_snk: []
-sun_eve: []
-mon_add: []
-fri_rem: []
-wed_add: []
+plan_year: "{{YEAR}}"
+plan_kw: "{{KW}}"
 ---
 
-# 🍱 Nexus Weekly Meal Architect: <%- year %>-W<%- kw %>
+# 🍱 Nexus Weekly Meal Architect: {{YEAR}}-W{{KW}}
 
 ---
 ## ⏲️ Molecular Timing & Absorption Matrix
@@ -196,7 +153,6 @@ if (tFile && tFile.path === p.file.path) {
     const currentFm = app.metadataCache.getFileCache(tFile)?.frontmatter || {};
     let needsUpdate = false;
 
-    // Check if anything actually changed before touching the file
     days.forEach(d => {
         metrics.forEach(m => {
             const val = round3(weeklyData[d.id][m]);
@@ -208,7 +164,6 @@ if (tFile && tFile.path === p.file.path) {
         });
     });
 
-    // Only write if there is a real difference
     if (needsUpdate) {
         await app.fileManager.processFrontMatter(tFile, (fm) => {
             days.forEach(d => {
@@ -231,7 +186,6 @@ for (let d of days) {
 
     dv.header(3, d.name);
     
-    // DISPLAY MEALS
     for (let s of slots) {
         let links = p[`${d.id}_${s}`];
         if (!links) continue;
@@ -247,10 +201,8 @@ for (let d of days) {
         }
     }
 
-    // CORE MACROS
     dv.paragraph(`🔥 **${Math.round(data.kcal)}** kcal | 💪 **${data.protein_g.toFixed(1)}**g Pro | 🥑 **${data.fat_total_g.toFixed(1)}**g Fat | 🌾 **${data.carbs_total_g.toFixed(1)}**g Carbs`);
 
-    // FULL MOLECULAR PROFILE
     let fullHtml = `<details><summary style="cursor: pointer; opacity: 0.6; font-size: 0.8em;">🧬 View Molecular Profile</summary>`;
     fullHtml += `<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 5px; font-size: 0.8em; margin-top: 10px; opacity: 0.8;">`;
     
@@ -258,7 +210,7 @@ for (let d of days) {
         if(data[m] > 0) {
             let cleanName = m.replace(/_total_mg|_total|_mg|_mcg|_g|_iu|_ml|_ug/g, "").replace(/_/g, " ");
             cleanName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
-            let unit = m.includes("_ug") || m.includes("_mcg") ? "µg" : m.split('_').pop();
+            let unit = m.includes("_ug") || m.includes("_mcg") ? "mcg" : m.split('_').pop();
             if (m === "iron_total_mg") cleanName = "Iron (Total)";
             if (m === "vit_a_total_mcg") cleanName = "Vitamin A (Total Eq)";
             fullHtml += `<div><b>${cleanName}:</b> ${data[m].toFixed(1)} ${unit}</div>`;
@@ -267,7 +219,6 @@ for (let d of days) {
     fullHtml += `</div></details>`;
     dv.span(fullHtml);
 
-    // ALCHEMY SYNERGY CHECK
     if (Nutri && Nutri.synergyRules) {
         Nutri.synergyRules.forEach(rule => {
             if (rule.check(data)) {

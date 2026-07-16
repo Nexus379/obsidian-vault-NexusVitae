@@ -8,14 +8,30 @@ if (!dv) {
     return;
 }
 
-const planPage = dv.page("2_Areas/1_Selfcare/Plan/Meal_Plan.md");
+// 🔱 Datum aus der aktiven Tages-Notiz (nicht "heute"), damit auch alte/künftige Logs korrekt syncen
+const dailyFile = tp.config.active_file;
+let refDate = moment();
+if (dailyFile) {
+    const fmCache = app.metadataCache.getFileCache(dailyFile)?.frontmatter || {};
+    if (fmCache.cal_date) {
+        refDate = moment(String(fmCache.cal_date), "YYYY-MM-DD");
+    } else {
+        const dm = dailyFile.basename.match(/^\d{4}-\d{2}-\d{2}/);
+        if (dm) refDate = moment(dm[0], "YYYY-MM-DD");
+    }
+}
+
+// 🔱 Wochenplan zuerst, dann Master (wie dailyplm)
+const y = refDate.format("YYYY"), mth = refDate.format("MM"), kw = refDate.format("WW");
+let planPage = dv.page(`0_Calendar/7_Plan/${y}/${mth}/${y}-W${kw}_meal`);
+if (!planPage) planPage = dv.page("2_Areas/1_Selfcare/Plan/Meal_Plan.md");
 if (!planPage) {
     new Notice("Meal Plan not found!");
     return;
 }
 
 const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-const todayStr = days[moment().day()];
+const todayStr = days[refDate.day()];
 const slots = ["brk", "ben", "lun", "snk", "eve"];
 
 let todaysMeals = [];
@@ -64,7 +80,7 @@ for (let meal of todaysMeals) {
         let newStored = Math.max(0, yieldTotal - 1);
         await app.fileManager.processFrontMatter(file, (fm) => {
             fm.portions_stored = newStored;
-            fm.prep_date = moment().format("YYYY-MM-DD");
+            fm.prep_date = refDate.format("YYYY-MM-DD");
         });
         new Notice(`🍳 ${meal.name}: Fridge updated to ${newStored} portions.`);
     } 
@@ -75,7 +91,7 @@ for (let meal of todaysMeals) {
             let newStored = Math.max(0, yieldTotal - eaten);
             await app.fileManager.processFrontMatter(file, (fm) => {
                 fm.portions_stored = newStored;
-                fm.prep_date = moment().format("YYYY-MM-DD");
+                fm.prep_date = refDate.format("YYYY-MM-DD");
             });
             new Notice(`🍳 ${meal.name}: Fridge updated to ${newStored} portions.`);
         }
@@ -92,7 +108,6 @@ for (let meal of todaysMeals) {
         }
     }
     else if (choice.action === "skip") {
-        const dailyFile = tp.config.active_file;
         if (dailyFile) {
             await app.fileManager.processFrontMatter(dailyFile, (fm) => {
                 if (!fm.meal_rem) fm.meal_rem = [];

@@ -420,14 +420,21 @@ focusM_plm: "<%- focusM_plm %>"
 focusM_start: "<%- focusStart %>"
 journal_am: false
 journal_pm: false
-fitness_am: 0
-fitness_pm: 0
+mobility_am: 0
+mobility_pm: 0
 inpra_min: 0
 selfcare_am: false
 selfcare_pm: false
 meal: []
 activity_link: []
 activity_time: 0
+ct_root: 0
+ct_sacral: 0
+ct_solar: 0
+ct_heart: 0
+ct_throat: 0
+ct_thirdeye: 0
+ct_crown: 0
 creativity_link: []
 entertain_link: []
 strength_link: []
@@ -496,7 +503,6 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     
     // Smart Sync with Weekly Plans (aus 0_Calendar/7_Plan/)
     const fitPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_fitness").first();
-    const musPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_music").first();
 
     // --- 2. THE 5 PILLARS (L-E-B-E-N) ---
     const vitaminTasks = (v && v.file.tasks) ? v.file.tasks : [];
@@ -512,7 +518,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     const p2 = ["journal_am","journal_pm","selfcare_am","selfcare_pm"].filter(k => String(c[k]) === "true").length / 4;
     
     // P3: Body (Mobility + Spontaneous Activity + Planned Workout Check)
-    const sportTime = (Number(c["fitness_am"]) || 0) + (Number(c["fitness_pm"]) || 0) + (Number(c["activity_time"]) || 0);
+    const sportTime = (Number(c["mobility_am"]) || 0) + (Number(c["mobility_pm"]) || 0) + (Number(c["activity_time"]) || 0);
     
     let actuallyDidWorkout = false;
     if (fitPage) {
@@ -546,8 +552,8 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     if (Number(c.mood) >= 4) bonus += 5;
     if (Number(c.energy) >= 4) bonus += 5;
     
-    // Music Bonus from 7_Plan
-    const musicTime = musPage ? (Number(musPage[`mus_${dayPref}_min`]) || 0) : 0;
+    // Instrument-Praxis-Bonus (inpra): Minuten direkt aus der Tagesnotiz
+    const musicTime = Number(c["inpra_min"]) || 0;
     if (musicTime >= 15) bonus += 5;
     if (musicTime >= 30) bonus += 5;
 
@@ -611,7 +617,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
 > - **Journal** AM: `INPUT[toggle:journal_am]` 
 > 	- *Gratitude, Fascinating, Braindump*
-> - **Mobility** AM: INPUT[number:fitness_am] min (Yoga, stretching, morning walk)
+> - **Mobility** AM: INPUT[number:mobility_am] min (Yoga, stretching, morning walk)
 > - [ ] 🛏️ Make bed & air out the room
 > - [ ] 🍽️ Empty dishwasher
 > - [ ] 🍵 Make tea
@@ -747,7 +753,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 
 > > > const resStr = (r.kcal <= 0) ? "🔥 **0** kcal | 💪 **0**g Pro | 🥑 **0**g Fat" : "🔥 **" + Math.round(r.kcal) + "** kcal | 💪 **" + r.protein_g.toFixed(1) + "**g Pro | 🥑 **" + r.fat_total_g.toFixed(1) + "**g Fat";
 > > > let mList = []; 
-> > > const gaps = { "protein_g": ["💪 Protein", 100, "g"], "vit_c_mg": ["🍊 Vit C", 100, "mg"], "fiber_g": ["🥦 Fiber", 30, "g"], "omega3_total_mg": ["🐟 Omega-3", 1000, "mg"], "magnesium_mg": ["💎 Magnesium", 350, "mg"], "iron_total_mg": ["🩸 Iron", 15, "mg"], "zinc_mg": ["🛡️ Zinc", 10, "mg"] };
+> > > const gaps = { "protein_g": ["💪 Protein", 100, "g"], "vit_c_mg": ["🍊 Vit C", 100, "mg"], "fiber_g": ["🥦 Fiber", 30, "g"], "omega3_mg": ["🐟 Omega-3", 1000, "mg"], "magnesium_mg": ["💎 Magnesium", 350, "mg"], "iron_total_mg": ["🩸 Iron", 15, "mg"], "zinc_mg": ["🛡️ Zinc", 10, "mg"] };
 > > > for(let k in gaps){ 
 > > >      let cur = r[k] || 0; 
 > > >      if(cur < gaps[k][1]) mList.push("**" + gaps[k][0] + ":** " + Math.max(0, cur).toFixed(1) + " / " + gaps[k][1] + gaps[k][2]); 
@@ -878,8 +884,8 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > [!blank]
 > > > ```dataviewjs
 > > > const c = dv.current();
-> > > const am = Number(c["fitness_am"]) || 0;
-> > > const pm = Number(c["fitness_pm"]) || 0;
+> > > const am = Number(c["mobility_am"]) || 0;
+> > > const pm = Number(c["mobility_pm"]) || 0;
 > > > const act = Number(c["activity_time"]) || 0;
 > > > const gesamt = am + pm + act;
 > > > const ziel = 30;
@@ -912,7 +918,9 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const dObj = moment(dStr, "YYYY-MM-DD");
 > > > const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
 > > > 
-> > > const rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking");
+> > > const weekName = dObj.isValid() ? dObj.format("YYYY-[W]WW") : moment().format("YYYY-[W]WW");
+> > > let rPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_routine").first();
+> > > if (!rPage) rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking"); // Fallback auf Hauptroutine
 > > > if (rPage) {
 > > >     const rStart = rPage.rt_start || "07:00";
 > > >     const rDur = Number(rPage.rt_duration) || 60;
@@ -1034,7 +1042,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > - **Selfcare** PM: `INPUT[toggle:selfcare_pm]`
 > > - **Journal** PM: `INPUT[toggle:journal_pm]` 
 > > 	- *Gratitude, Fascinating, Braindump*
-> > - **Mobility** PM: INPUT[number:fitness_pm] min (Evening stretches, relaxation)
+> > - **Mobility** PM: INPUT[number:mobility_pm] min (Evening stretches, relaxation)
 > > - [ ] 🍽️ Load & start dishwasher
 > > - [ ] 🗑️ Check trash & take out if needed
 > > - [ ] 🛋️ 5-Minute Reset (clear tables & surfaces)

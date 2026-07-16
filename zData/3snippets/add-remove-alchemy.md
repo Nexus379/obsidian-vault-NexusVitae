@@ -4,8 +4,9 @@
  * Path: zData/3snippets/add-daily-alchemy.md
  */
 
-// 🔱 0. DATEI SICHER GREIFEN (Der Lebensretter für Meta Bind)
-const activeFile = app.workspace.getActiveFile();
+// 🔱 0. DATEI SICHER GREIFEN (tp.config.active_file = Datei in der der Button sitzt,
+//        robuster als getActiveFile() das nur das fokussierte Pane liefert)
+const activeFile = tp.config.active_file;
 if (!activeFile) {
     new Notice("❌ Fehler: Konnte die aktuelle Datei nicht finden.");
     return;
