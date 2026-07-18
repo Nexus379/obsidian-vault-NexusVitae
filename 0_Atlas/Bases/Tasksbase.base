@@ -4,11 +4,11 @@ filters:
 formulas:
   State: |
     if(status == "0start", "📫",
-      if(Status == "2passive" || status == "3idea", "⏳",
+      if(status == "2passive" || status == "3idea", "⏳",
         if(status == "1active", "⭐",
             if(status == "done", "🌟",
-    if(Status == "archive", "💼",
-              if(Status == "canceled", "bin", "➖")
+    if(status == "archive", "💼",
+              if(status == "canceled", "🗑️", "➖")
             )
         )
       )
@@ -20,7 +20,7 @@ formulas:
   RecType: |
     if(recdays > 0, "🔁", "📌")
   Progress Bar: |
-    if(progress >= 100, "✅ Abgeschlossen", 
+    if(progress >= 100, "✅ Completed",
       if(progress >= 90, "█████████░ 90%", 
         if(progress >= 80, "████████░░ 80%", 
           if(progress >= 70, "███████░░░ 70%", 

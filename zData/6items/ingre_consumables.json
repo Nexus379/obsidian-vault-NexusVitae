@@ -3,7 +3,7 @@
     "--- WATER_BRANDED_STILL_INTERNATIONAL ---": "Stille Markenwässer (Internationale Klassiker)",
     "water_still_volvic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Volvic Naturelle",
       "icon": "🌋",
       "latin": "Aqua vulcana (Volvic)",
@@ -68,7 +68,7 @@
     },
     "water_still_evian": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Evian (Still)",
       "icon": "🏔️",
       "latin": "Aqua alpina (Evian)",
@@ -131,7 +131,7 @@
     },
     "water_still_vittel": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Vittel Bonne Source",
       "icon": "💧",
       "latin": "Aqua mineralis (Vittel)",
@@ -195,7 +195,7 @@
     "--- WATER_BRANDED_STILL_GERMAN ---": "Stille Markenwässer (Deutsche Quellen)",
     "water_still_vio": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "ViO Still",
       "icon": "💧",
       "latin": "Aqua mineralis (Lüneburger Heide)",
@@ -257,7 +257,7 @@
     },
     "water_still_gerolsteiner": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Gerolsteiner Naturelle",
       "icon": "💧",
       "latin": "Aqua mineralis (Gerolstein - Naturelle)",
@@ -320,7 +320,7 @@
     },
     "water_still_black_forest": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Black Forest Still",
       "icon": "🌲",
       "latin": "Aqua mineralis (Schwarzwald)",
@@ -383,7 +383,7 @@
     "--- WATER_PRIVATE_LABEL_STILL ---": "Stille Wässer (Discounter & Supermarkt Eigenmarken)",
     "water_still_saskia": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Saskia Still (Lidl)",
       "icon": "💧",
       "latin": "Aqua saskia (Lidl)",
@@ -441,7 +441,7 @@
     },
     "water_still_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Still (Kaufland)",
       "icon": "💧",
       "latin": "Aqua kauflandia (Still)",
@@ -499,7 +499,7 @@
     },
     "water_still_quellbrunn": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Quellbrunn Naturell (Aldi Nord)",
       "icon": "💧",
       "latin": "Aqua quellbrunn (Aldi)",
@@ -557,7 +557,7 @@
     },
     "water_still_ja": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "ja! Still (REWE)",
       "icon": "💧",
       "latin": "Aqua rewe (Still)",
@@ -618,7 +618,7 @@
     "--- WATER_BRANDED_MEDIUM_GERMAN ---": "Medium Markenwässer (Deutsche Klassiker)",
     "water_medium_gerolsteiner": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Gerolsteiner Medium",
       "icon": "🫧",
       "latin": "Aqua mineralis carbonata (Gerolstein)",
@@ -683,7 +683,7 @@
     },
     "water_medium_vilsa": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Vilsa Medium",
       "icon": "🫧",
       "latin": "Aqua mineralis carbonata (Vilsa)",
@@ -745,7 +745,7 @@
     },
     "water_medium_bismarck": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fürst Bismarck Medium",
       "icon": "🫧",
       "latin": "Aqua mineralis carbonata (Bismarck)",
@@ -809,7 +809,7 @@
     "--- WATER_BRANDED_CLASSIC_GERMAN ---": "Sprudelnde Markenwässer (Starke Kohlensäure)",
     "water_classic_bismarck": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fürst Bismarck Classic",
       "icon": "🫧",
       "latin": "Aqua mineralis carbonata (Bismarck)",
@@ -874,7 +874,7 @@
     },
     "water_classic_magnus": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Magnus Classic",
       "icon": "🫧",
       "latin": "Aqua norderstediensis carbonata",
@@ -937,7 +937,7 @@
     },
     "water_classic_hella": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "hella classic",
       "icon": "🫧",
       "latin": "Aqua mineralis (Trappenkamp)",
@@ -999,7 +999,7 @@
     },
     "water_classic_gerolsteiner": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Gerolsteiner Sprudel (Blau)",
       "icon": "🫧",
       "latin": "Aqua mineralis carbonata (Gerolstein)",
@@ -1064,7 +1064,7 @@
     },
     "water_classic_franken_brunnen": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Franken Brunnen Spritzig",
       "icon": "🫧",
       "latin": "Aqua mineralis (Frankonia)",
@@ -1127,7 +1127,7 @@
     "--- WATER_PRIVATE_LABEL_MEDIUM ---": "Medium Wässer (Discounter & Supermarkt)",
     "water_medium_saskia_woerth": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Saskia Medium (Lidl - Wörth Quelle)",
       "icon": "🫧",
       "latin": "Aqua saskia carbonata (Wörth)",
@@ -1186,7 +1186,7 @@
     },
     "water_medium_aqua_culinaris": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Aqua Culinaris Medium (Aldi Süd)",
       "icon": "🫧",
       "latin": "Aqua culinaris carbonata",
@@ -1245,7 +1245,7 @@
     },
     "water_medium_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Medium (Kaufland)",
       "icon": "🫧",
       "latin": "Aqua kauflandia carbonata",
@@ -1303,7 +1303,7 @@
     },
     "water_medium_ja": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "ja! Medium (REWE)",
       "icon": "🫧",
       "latin": "Aqua rewe carbonata (Medium)",
@@ -1364,7 +1364,7 @@
     "--- MEDICINAL_AND_HEALING_WATERS ---": "Heilwasser & Funktionale Wässer",
     "water_medicinal_fachingen": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Staatl. Fachingen (Medium)",
       "icon": "🩺",
       "latin": "Aqua medicinalis (Fachingen)",
@@ -1429,7 +1429,7 @@
     },
     "water_medicinal_hirschquelle": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Hirschquelle Heilwasser",
       "icon": "🦌",
       "latin": "Aqua medicinalis (Hirschquelle)",
@@ -1493,7 +1493,7 @@
     "--- HIGH_MAGNESIUM_AND_SPORTS_WATERS ---": "Extrem mineralisierte Sportwässer (Fokus: Magnesium)",
     "water_magnesium_donat": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Donat Mg (Rogaska)",
       "icon": "👑",
       "latin": "Aqua medicinalis (Donat)",
@@ -1555,7 +1555,7 @@
     },
     "water_sports_ensinger": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Ensinger Sport (Classic/Medium)",
       "icon": "🚴",
       "latin": "Aqua mineralis (Ensinger)",
@@ -1618,7 +1618,7 @@
     },
     "water_sports_rosbacher": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Rosbacher (Klassisch/Medium)",
       "icon": "🏃",
       "latin": "Aqua mineralis (Rosbacher)",
@@ -1681,7 +1681,7 @@
     "--- SODA_COLA_VARIANTS ---": "Cola-Getränke (Originale, Indie & Discounter)",
     "soda_cola_coca_cola": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Coca-Cola Original Taste",
       "icon": "🥤",
       "latin": "Potio carbonata (Cola classic)",
@@ -1736,7 +1736,7 @@
     },
     "soda_cola_pepsi": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Pepsi Original",
       "icon": "🥤",
       "latin": "Potio carbonata (Pepsi)",
@@ -1791,7 +1791,7 @@
     },
     "soda_cola_fritz": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "fritz-kola",
       "icon": "🖤",
       "latin": "Potio carbonata (Cola fritz)",
@@ -1850,7 +1850,7 @@
     },
     "soda_cola_afri": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "afri cola",
       "icon": "🌴",
       "latin": "Potio carbonata (Afri)",
@@ -1909,7 +1909,7 @@
     },
     "soda_cola_freeway": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Freeway Cola (Lidl)",
       "icon": "🥤",
       "latin": "Potio carbonata (Freeway)",
@@ -1964,7 +1964,7 @@
     },
     "soda_cola_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Cola (Kaufland)",
       "icon": "🥤",
       "latin": "Potio carbonata (K-Classic)",
@@ -2020,7 +2020,7 @@
     "--- SODA_LEMON_LIME_VARIANTS ---": "Zitronen-/Limettenlimonaden (Clear Sodas)",
     "soda_lemon_sprite": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Sprite",
       "icon": "🍋",
       "latin": "Potio carbonata (Citrus-Lymon)",
@@ -2074,7 +2074,7 @@
     },
     "soda_lemon_7up": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "7UP",
       "icon": "🍋",
       "latin": "Potio carbonata (7UP)",
@@ -2128,7 +2128,7 @@
     },
     "soda_lemon_freeway_up": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Freeway UP (Lidl)",
       "icon": "🍋",
       "latin": "Potio carbonata (Freeway Lymon)",
@@ -2182,7 +2182,7 @@
     },
     "soda_lemon_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Zitrone (Kaufland)",
       "icon": "🍋",
       "latin": "Potio carbonata (K-Classic Lymon)",
@@ -2237,7 +2237,7 @@
     "--- SODA_COLA_MIX_VARIANTS ---": "Cola-Mix Getränke (Spezi-Kategorie)",
     "soda_mix_paulaner_spezi": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Paulaner Spezi",
       "icon": "🥤",
       "latin": "Potio carbonata (Spezi Paulaner)",
@@ -2296,7 +2296,7 @@
     },
     "soda_mix_mezzo_mix": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Mezzo Mix",
       "icon": "🥤",
       "latin": "Potio carbonata (Mezzo)",
@@ -2351,7 +2351,7 @@
     },
     "soda_mix_schwip_schwap": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Schwip Schwap",
       "icon": "🥤",
       "latin": "Potio carbonata (Schwip)",
@@ -2405,7 +2405,7 @@
     },
     "soda_mix_freeway": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Freeway Mixx (Lidl)",
       "icon": "🥤",
       "latin": "Potio carbonata (Freeway Mix)",
@@ -2460,7 +2460,7 @@
     "--- SODA_ORANGE_AND_FRUIT ---": "Orangen- & Fruchtlimonaden (Das Fanta-Universum)",
     "soda_orange_fanta_original": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fanta Orange",
       "icon": "🍊",
       "latin": "Potio carbonata (Citrus aurantium)",
@@ -2515,7 +2515,7 @@
     },
     "soda_orange_fanta_zero": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fanta Orange Zero",
       "icon": "🧡",
       "latin": "Potio carbonata (Fanta acalorica)",
@@ -2573,7 +2573,7 @@
     },
     "soda_fruit_fanta_exotic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fanta Exotic",
       "icon": "🌴",
       "latin": "Potio carbonata (Fructus exotica)",
@@ -2631,7 +2631,7 @@
     },
     "soda_lemon_fanta_lemon": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fanta Lemon",
       "icon": "🍋",
       "latin": "Potio carbonata (Fanta Limon)",
@@ -2688,7 +2688,7 @@
     "--- SODA_ORANGE_COMPETITORS_AND_DISCOUNTER ---": "Orangen-Limpos (Wettbewerber & Eigenmarken)",
     "soda_orange_mirinda": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Mirinda Orange",
       "icon": "🍊",
       "latin": "Potio carbonata (Mirinda)",
@@ -2746,7 +2746,7 @@
     },
     "soda_orange_fritz_limo": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "fritz-limo Orange",
       "icon": "🍊",
       "latin": "Potio carbonata (fritz Aurantium)",
@@ -2804,7 +2804,7 @@
     },
     "soda_orange_freeway": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Freeway Orange (Lidl)",
       "icon": "🍊",
       "latin": "Potio carbonata (Freeway Aurantium)",
@@ -2858,7 +2858,7 @@
     },
     "soda_orange_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Orange (Kaufland)",
       "icon": "🍊",
       "latin": "Potio carbonata (K-Classic Aurantium)",
@@ -2913,7 +2913,7 @@
     "--- ENERGY_PREMIUM_250ML_PIONEERS ---": "Red Bull (Die Premium 250ml-Klasse)",
     "energy_red_bull_original": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Red Bull Energy Drink",
       "icon": "🐂",
       "latin": "Potio excitans (Taurinum)",
@@ -2969,7 +2969,7 @@
     },
     "energy_red_bull_sugarfree": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Red Bull Sugarfree",
       "icon": "🤍",
       "latin": "Potio excitans (Taurinum acalorica)",
@@ -3025,7 +3025,7 @@
     },
     "energy_red_bull_yellow_tropical": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Red Bull Yellow Edition (Tropical)",
       "icon": "🍍",
       "latin": "Potio excitans (Fructus exotica)",
@@ -3085,7 +3085,7 @@
     "--- ENERGY_VOLUME_500ML_KINGS ---": "Monster & Rockstar (Die 500ml Flavor-Giganten)",
     "energy_monster_original": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Monster Energy (Green)",
       "icon": "💚",
       "latin": "Potio excitans (Monster Original)",
@@ -3141,7 +3141,7 @@
     },
     "energy_monster_ultra_white": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Monster Ultra (White / Zero Sugar)",
       "icon": "🤍",
       "latin": "Potio excitans (Ultra acalorica)",
@@ -3202,7 +3202,7 @@
     },
     "energy_monster_mango_loco": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Monster Mango Loco (Juice)",
       "icon": "🥭",
       "latin": "Potio excitans (Mangifera mix)",
@@ -3261,7 +3261,7 @@
     },
     "energy_rockstar_original": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Rockstar Energy Original",
       "icon": "⭐",
       "latin": "Potio excitans (Rockstar)",
@@ -3321,7 +3321,7 @@
     "--- ENERGY_PRIVATE_LABEL_DISCOUNTER ---": "Eigenmarken (Die hochoptimierten Preis-Leistungs-Sieger)",
     "energy_kong_strong_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Kong Strong Classic (Lidl)",
       "icon": "🦍",
       "latin": "Potio excitans (Lidl)",
@@ -3376,7 +3376,7 @@
     },
     "energy_kong_strong_colossus": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Kong Strong Colossus (Lidl - Wild Berry)",
       "icon": "🫐",
       "latin": "Potio excitans (Lidl Baccae)",
@@ -3431,7 +3431,7 @@
     },
     "energy_crazy_wolf_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Crazy Wolf Classic (Kaufland)",
       "icon": "🐺",
       "latin": "Potio excitans (Kauflandia)",
@@ -3486,7 +3486,7 @@
     },
     "energy_crazy_wolf_apple": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Crazy Wolf Apple",
       "icon": "🍏",
       "latin": "Potio excitans (Kauflandia Malus)",
@@ -3541,7 +3541,7 @@
     },
     "energy_flying_power_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Flying Power (Aldi)",
       "icon": "🦅",
       "latin": "Potio excitans (Aldia)",
@@ -3598,7 +3598,7 @@
     },
     "energy_booster_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Booster Energy (Edeka/Netto)",
       "icon": "🚀",
       "latin": "Potio excitans (Edeka)",
@@ -3655,7 +3655,7 @@
     },
     "energy_crazy_wolf_sugarfree": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Crazy Wolf Sugarfree",
       "icon": "🐺",
       "latin": "Potio excitans (Wolf acalorica)",
@@ -3711,7 +3711,7 @@
     },
     "energy_crazy_wolf_cherry": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Crazy Wolf Cherry",
       "icon": "🍒",
       "latin": "Potio excitans (Kauflandia Cerasus)",
@@ -3767,7 +3767,7 @@
     },
     "energy_crazy_wolf_cactus": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Crazy Wolf Cactus",
       "icon": "🌵",
       "latin": "Potio excitans (Kauflandia Opuntia)",
@@ -3823,7 +3823,7 @@
     },
     "energy_crazy_wolf_cola": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Crazy Wolf Cola-Energy",
       "icon": "🥤",
       "latin": "Potio excitans (Kauflandia Cola)",
@@ -3880,7 +3880,7 @@
     "--- BRANDED_JUICES_AMECKE_PREMIUM ---": "Amecke Säfte (Sanft & Funktional)",
     "juice_apple_amecke_mild": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Amecke Sanfte Säfte Apfel naturtrüb",
       "icon": "🍏",
       "latin": "Succus mali mitis (Amecke)",
@@ -3938,7 +3938,7 @@
     },
     "juice_orange_amecke_mild": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Amecke Sanfte Säfte Orange",
       "icon": "🍊",
       "latin": "Succus aurantii mitis (Amecke)",
@@ -3997,7 +3997,7 @@
     },
     "juice_grape_amecke_iron": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Amecke Rote Traube + Eisen",
       "icon": "🍇",
       "latin": "Succus vitis rubrae (Amecke + Ferrum)",
@@ -4057,7 +4057,7 @@
     },
     "juice_multi_amecke_zinc": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Amecke Apfel-Traube-Himbeere + Zink",
       "icon": "🫐",
       "latin": "Succus multifructus (Amecke + Zincum)",
@@ -4118,7 +4118,7 @@
     "--- BRANDED_JUICES_INNOCENT_CHILLED ---": "Innocent (Direktsäfte aus dem Kühlregal)",
     "juice_orange_innocent_pulp": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Innocent Orange (Mit viel Fruchtfleisch)",
       "icon": "🍊",
       "latin": "Succus aurantii directus (Innocent)",
@@ -4177,7 +4177,7 @@
     },
     "juice_apple_innocent_cloudy": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Innocent Apfelsaft (Naturtrüb)",
       "icon": "🍏",
       "latin": "Succus mali non filtratus (Innocent)",
@@ -4237,7 +4237,7 @@
     "--- SMOOTHIES_INNOCENT_SUPER_BLEND ---": "Innocent (Klassik & Super Smoothies)",
     "smoothie_innocent_mango_passion": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Innocent Smoothie (Mango & Maracuja)",
       "icon": "🥭",
       "latin": "Fructus tritus (Mango/Passiflora)",
@@ -4298,7 +4298,7 @@
     },
     "smoothie_innocent_green_blend": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Innocent Smoothie (Kiwi, Apfel & Limette)",
       "icon": "🥝",
       "latin": "Fructus tritus viridis (Innocent)",
@@ -4357,7 +4357,7 @@
     },
     "smoothie_innocent_blue_spark": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Innocent Super Smoothie Blue Spark",
       "icon": "🌊",
       "latin": "Fructus tritus caeruleus (Spirulina)",
@@ -4418,7 +4418,7 @@
     },
     "smoothie_innocent_recharge": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Innocent Super Smoothie Recharge",
       "icon": "🥕",
       "latin": "Fructus tritus (Daucus/Zingiber)",
@@ -4477,7 +4477,7 @@
     "--- SMOOTHIES_TRUE_FRUITS_FULL_PALETTE ---": "true fruits (Das komplette Glas-Regal)",
     "smoothie_true_fruits_yellow": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "true fruits yellow",
       "icon": "🥭",
       "latin": "Fructus tritus flavus",
@@ -4536,7 +4536,7 @@
     },
     "smoothie_true_fruits_purple": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "true fruits purple",
       "icon": "🫐",
       "latin": "Fructus tritus purpureus",
@@ -4594,7 +4594,7 @@
     },
     "smoothie_true_fruits_green": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "true fruits green",
       "icon": "🥬",
       "latin": "Fructus tritus viridis",
@@ -4652,7 +4652,7 @@
     },
     "smoothie_true_fruits_pink": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "true fruits pink",
       "icon": "🐉",
       "latin": "Fructus tritus roseus",
@@ -4710,7 +4710,7 @@
     },
     "smoothie_true_fruits_white": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "true fruits white",
       "icon": "🥥",
       "latin": "Fructus tritus albus",
@@ -4768,7 +4768,7 @@
     "--- SMOOTHIES_PRIVATE_LABEL_DISCOUNTER_FULL ---": "Lidl & Aldi (Die komplette Farbpalette)",
     "smoothie_solevita_yellow": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Solevita Smoothie Mango-Maracuja (Lidl)",
       "icon": "🥭",
       "latin": "Fructus tritus flavus (Solevita)",
@@ -4821,7 +4821,7 @@
     },
     "smoothie_solevita_green": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Solevita Smoothie Apfel-Spinat (Lidl)",
       "icon": "🥬",
       "latin": "Fructus tritus viridis (Solevita)",
@@ -4875,7 +4875,7 @@
     },
     "smoothie_solevita_red": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Solevita Smoothie Granatapfel-Beere (Lidl)",
       "icon": "🍒",
       "latin": "Fructus tritus ruber (Solevita)",
@@ -4928,7 +4928,7 @@
     },
     "smoothie_rio_d_oro_yellow": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Rio d'Oro Smoothie Mango (Aldi)",
       "icon": "🥭",
       "latin": "Fructus tritus flavus (Aldia)",
@@ -4983,7 +4983,7 @@
     },
     "smoothie_rio_d_oro_green": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Rio d'Oro Smoothie Grünkohl-Spinat (Aldi)",
       "icon": "🥦",
       "latin": "Fructus tritus viridis (Aldia)",
@@ -5039,7 +5039,7 @@
     "--- SMOOTHIES_PRIVATE_LABEL_SUPERMARKET_FULL ---": "REWE, Edeka & Kaufland To-Go",
     "smoothie_rewe_to_go_yellow": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "REWE to go Smoothie Mango-Maracuja",
       "icon": "🥭",
       "latin": "Fructus tritus flavus (REWE)",
@@ -5093,7 +5093,7 @@
     },
     "smoothie_rewe_to_go_green": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "REWE to go Smoothie Apfel-Kiwi-Spinat",
       "icon": "🥝",
       "latin": "Fructus tritus viridis (REWE)",
@@ -5147,7 +5147,7 @@
     },
     "smoothie_rewe_to_go_red": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "REWE to go Smoothie Erdbeer-Banane",
       "icon": "🍓",
       "latin": "Fructus tritus ruber (REWE)",
@@ -5200,7 +5200,7 @@
     },
     "smoothie_edeka_deli_yellow": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "EDEKA Deli Smoothie Mango",
       "icon": "🥭",
       "latin": "Fructus tritus flavus (Edeka)",
@@ -5254,7 +5254,7 @@
     },
     "smoothie_k_to_go_green": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-to-go Smoothie Apfel-Minze (Kaufland)",
       "icon": "🍏",
       "latin": "Fructus tritus viridis (Kauflandia)",
@@ -5308,7 +5308,7 @@
     "--- ICED_TEA_GLOBAL_LEADERS ---": "Die globalen Extrakt-Giganten",
     "iced_tea_lipton_peach": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Lipton Ice Tea Peach",
       "icon": "🍑",
       "latin": "Thea frigida (Lipton Persica)",
@@ -5364,7 +5364,7 @@
     },
     "iced_tea_fuze_peach_hibiscus": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fuze Tea Pfirsich-Hibiskus",
       "icon": "🌺",
       "latin": "Thea frigida (Fuze Persica/Hibiscus)",
@@ -5419,7 +5419,7 @@
     },
     "iced_tea_lipton_lemon": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Lipton Ice Tea Lemon",
       "icon": "🍋",
       "latin": "Thea frigida (Lipton Limon)",
@@ -5479,7 +5479,7 @@
     "--- ICED_TEA_GERMAN_CLASSICS ---": "Die direkt gebrühten 2L-Könige",
     "iced_tea_pfanner_peach": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Pfanner Eistee Pfirsich",
       "icon": "🍑",
       "latin": "Thea frigida (Pfanner Persica)",
@@ -5538,7 +5538,7 @@
     },
     "iced_tea_pfanner_der_gruene": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Pfanner Der Grüne (Zitrone-Kaktusfeige)",
       "icon": "🌵",
       "latin": "Thea viridis frigida (Pfanner)",
@@ -5598,7 +5598,7 @@
     "--- ICED_TEA_WATER_INFUSIONS ---": "Tee-Wässer (Leicht & Still)",
     "iced_tea_volvic_peach": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Volvic Tee Pfirsich",
       "icon": "💧",
       "latin": "Aqua theae (Volvic Persica)",
@@ -5660,7 +5660,7 @@
     "--- ICED_TEA_PRIVATE_LABEL_DISCOUNTER ---": "Eigenmarken (Aldi, Lidl, Kaufland, REWE)",
     "iced_tea_solevita_peach": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Solevita Eistee Pfirsich (Lidl)",
       "icon": "🍑",
       "latin": "Thea frigida (Solevita Persica)",
@@ -5715,7 +5715,7 @@
     },
     "iced_tea_trader_joes_peach": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Trader Joe's Eistee Pfirsich (Aldi)",
       "icon": "🍑",
       "latin": "Thea frigida (Aldia Persica)",
@@ -5772,7 +5772,7 @@
     },
     "iced_tea_k_classic_lemon": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Eistee Zitrone (Kaufland)",
       "icon": "🍋",
       "latin": "Thea frigida (K-Classic Limon)",
@@ -5827,7 +5827,7 @@
     },
     "iced_tea_ja_peach": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "ja! Eistee Pfirsich (REWE)",
       "icon": "🍑",
       "latin": "Thea frigida (ja! Persica)",
@@ -5885,7 +5885,7 @@
     "--- SODA_MATE_THE_ORIGINALS ---": "Mate-Limonaden (Die Club- & Hacker-Klassiker)",
     "soda_mate_club_mate": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Club-Mate",
       "icon": "🧉",
       "latin": "Potio carbonata (Ilex paraguariensis)",
@@ -5947,7 +5947,7 @@
     },
     "soda_mate_mio_mio": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Mio Mio Mate",
       "icon": "🧉",
       "latin": "Potio carbonata (Mio Ilex)",
@@ -6009,7 +6009,7 @@
     },
     "soda_mate_fritz_mate": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "fritz-mate",
       "icon": "🧉",
       "latin": "Potio carbonata (Fritz Ilex)",
@@ -6070,7 +6070,7 @@
     "--- SODA_MATE_DISCOUNTER_AND_BUDGET ---": "Mate-Limonaden (Eigenmarken & Budget)",
     "soda_mate_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Mate (Kaufland)",
       "icon": "🧉",
       "latin": "Potio carbonata (K-Classic Ilex)",
@@ -6125,7 +6125,7 @@
     },
     "soda_mate_gut_guenstig": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Gut & Günstig Mate-Tee (Edeka)",
       "icon": "🧉",
       "latin": "Potio carbonata (Edeka Ilex)",
@@ -6181,7 +6181,7 @@
     "--- MIXERS_SCHWEPPES_THE_STANDARD ---": "Schweppes (Der globale Standard)",
     "mixer_tonic_schweppes": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Schweppes Indian Tonic Water",
       "icon": "🍸",
       "latin": "Potio carbonata amara (Cinchona)",
@@ -6236,7 +6236,7 @@
     },
     "mixer_bitter_lemon_schweppes": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Schweppes Original Bitter Lemon",
       "icon": "🍋",
       "latin": "Potio carbonata amara (Limon)",
@@ -6291,7 +6291,7 @@
     },
     "mixer_ginger_ale_schweppes": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Schweppes American Ginger Ale",
       "icon": "🫚",
       "latin": "Potio carbonata (Zingiber mite)",
@@ -6346,7 +6346,7 @@
     "--- MIXERS_PREMIUM_BAR_BRANDS ---": "Premium Mixer (Thomas Henry & Fever-Tree)",
     "mixer_tonic_thomas_henry": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Thomas Henry Tonic Water",
       "icon": "🍸",
       "latin": "Potio carbonata amara (Thomas Henry)",
@@ -6406,7 +6406,7 @@
     },
     "mixer_ginger_beer_thomas_henry": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Thomas Henry Spicy Ginger (Ginger Beer)",
       "icon": "🔥",
       "latin": "Potio carbonata (Zingiber forte)",
@@ -6464,7 +6464,7 @@
     },
     "mixer_tonic_fever_tree": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fever-Tree Premium Indian Tonic Water",
       "icon": "🌿",
       "latin": "Potio carbonata amara (Fever-Tree)",
@@ -6521,7 +6521,7 @@
     "--- MIXERS_PRIVATE_LABEL_DISCOUNTER ---": "Eigenmarken (Lidl, Kaufland, REWE)",
     "mixer_tonic_freeway": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Freeway Tonic Water (Lidl)",
       "icon": "🍸",
       "latin": "Potio carbonata amara (Freeway)",
@@ -6575,7 +6575,7 @@
     },
     "mixer_bitter_lemon_freeway": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Freeway Bitter Lemon (Lidl)",
       "icon": "🍋",
       "latin": "Potio carbonata amara (Freeway Limon)",
@@ -6629,7 +6629,7 @@
     },
     "mixer_bitter_lemon_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Bitter Lemon (Kaufland)",
       "icon": "🍋",
       "latin": "Potio carbonata amara (K-Classic)",
@@ -6683,7 +6683,7 @@
     },
     "mixer_ginger_ale_ja": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "ja! Ginger Ale (REWE)",
       "icon": "🫚",
       "latin": "Potio carbonata (ja! Zingiber)",
@@ -6742,7 +6742,7 @@
     "--- COOKING_ALCOHOL_VERMOUTH ---": "Wermut (Martini & Co. zum Kochen & Mixen)",
     "vermouth_martini_bianco": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Martini Bianco",
       "icon": "🍸",
       "latin": "Vinum aromaticum (Martini Albus)",
@@ -6792,7 +6792,7 @@
     },
     "vermouth_martini_extra_dry": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Martini Extra Dry",
       "icon": "🍸",
       "latin": "Vinum aromaticum (Martini Siccum)",
@@ -6837,7 +6837,7 @@
     },
     "vermouth_noilly_prat_original_dry": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Noilly Prat Original Dry",
       "icon": "🇫🇷",
       "latin": "Vinum aromaticum (Noilly Prat)",
@@ -6884,7 +6884,7 @@
     },
     "wine_port_sandeman_ruby": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Sandeman Port Ruby",
       "icon": "🍷",
       "latin": "Vinum Portucalense (Ruby)",
@@ -6929,7 +6929,7 @@
     },
     "wine_white_cooking_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Vina de Sol Weißwein zum Kochen (Lidl)",
       "icon": "🍳",
       "latin": "Vinum album culinarium",
@@ -6969,7 +6969,7 @@
     },
     "wine_red_cooking_kaufland": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Rotwein trocken (Kaufland)",
       "icon": "🍳",
       "latin": "Vinum rubrum culinarium",
@@ -7010,7 +7010,7 @@
     "--- COOKING_ALCOHOL_ASIAN_SPECIALS ---": "Asiatische Kochweine (Mirin & Sake)",
     "wine_mirin_hon_mirin": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Hon-Mirin (Echter Koch-Reiswein)",
       "icon": "🍶",
       "latin": "Oryzae vinum culinarium (Hon-Mirin)",
@@ -7064,7 +7064,7 @@
     },
     "wine_mirin_kikkoman": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Kikkoman Mirin-fu (Aji-Mirin)",
       "icon": "🍶",
       "latin": "Oryzae vinum culinarium (Kikkoman)",
@@ -7113,7 +7113,7 @@
     },
     "wine_sake_cooking": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Cooking Sake (Ryorishu)",
       "icon": "🍶",
       "latin": "Oryzae vinum (Sake)",
@@ -7156,7 +7156,7 @@
     "--- RED_WINE_GERMAN_CLASSICS ---": "Deutsche Rotweine (Fruchtig & Elegant)",
     "wine_red_dornfelder_k_classic": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Dornfelder (Trocken)",
       "icon": "🍷",
       "latin": "Vinum rubrum (Dornfelder)",
@@ -7201,7 +7201,7 @@
     },
     "wine_red_spatburgunder_rewe": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "REWE Beste Wahl Spätburgunder (Pinot Noir)",
       "icon": "🍷",
       "latin": "Vinum rubrum (Pinus nigra)",
@@ -7289,7 +7289,8 @@
       "energy": {
         "kcal": 115,
         "kj": 481
-      }
+      },
+      "unit_type": "100ml"
     },
     "wine_sherry_sandeman_medium_dry": {
       "label": "Sandeman Sherry Medium Dry",
@@ -7328,7 +7329,8 @@
       "prices": {
         "everywhere": 1
       },
-      "pref_vendor": "everywhere"
+      "pref_vendor": "everywhere",
+      "unit_type": "100ml"
     },
     "wine_port_taylors_select_reserve": {
       "label": "Taylor's Select Reserve Port",
@@ -7374,7 +7376,8 @@
         "edeka": 1,
         "kaufland": 1
       },
-      "pref_vendor": "rewe"
+      "pref_vendor": "rewe",
+      "unit_type": "100ml"
     },
     "wine_port_graham_fine_white": {
       "label": "Graham's Fine White Port",
@@ -7414,12 +7417,13 @@
         "rewe": 1,
         "edeka": 1
       },
-      "pref_vendor": "rewe"
+      "pref_vendor": "rewe",
+      "unit_type": "100ml"
     },
     "--- RED_WINE_INTERNATIONAL_HEAVYWEIGHTS ---": "Internationale Giganten (Kräftig & Edel)",
     "wine_red_rioja_reserva": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Rioja Reserva (Tempranillo Blend)",
       "icon": "🇪🇸",
       "latin": "Vinum rubrum (Rioja Reserva)",
@@ -7470,7 +7474,7 @@
     },
     "wine_red_chianti_classico": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Chianti Classico DOCG",
       "icon": "🇮🇹",
       "latin": "Vinum rubrum (Chianti)",
@@ -7514,7 +7518,7 @@
     },
     "wine_red_cabernet_sauvignon_chile": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Casillero del Diablo Cabernet Sauvignon",
       "icon": "🇨🇱",
       "latin": "Vinum rubrum (Cabernet)",
@@ -7559,7 +7563,7 @@
     "--- RED_WINE_TREND_AND_DISCOUNTER ---": "Trend-Weine & Discounter-Bestseller",
     "wine_red_primitivo_lidl": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Primitivo di Puglia (Solevita/Lidl)",
       "icon": "🇮🇹",
       "latin": "Vinum rubrum (Primitivo)",
@@ -7600,7 +7604,7 @@
     },
     "wine_red_bordeaux_k_classic": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Bordeaux AOC",
       "icon": "🇫🇷",
       "latin": "Vinum rubrum (Burdurga)",
@@ -7641,7 +7645,7 @@
     "--- RED_WINE_PREMIUM_BRANDS_EUROPE ---": "Europäische Rotwein-Ikonen (Marken)",
     "wine_red_marques_de_riscal_reserva": {
       "unit_price": 25.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Marqués de Riscal Rioja Reserva",
       "icon": "🇪🇸",
       "latin": "Vinum rubrum (Rioja Reserva)",
@@ -7694,7 +7698,7 @@
     },
     "wine_red_antinori_tignanello": {
       "unit_price": 180.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Antinori Tignanello (Super Tuscan)",
       "icon": "🇮🇹",
       "latin": "Vinum rubrum (Antinori)",
@@ -7740,7 +7744,7 @@
     },
     "wine_red_mouton_cadet_bordeaux": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Mouton Cadet Bordeaux (Baron Philippe de Rothschild)",
       "icon": "🇫🇷",
       "latin": "Vinum rubrum (Rothschild)",
@@ -7785,7 +7789,7 @@
     "--- RED_WINE_PREMIUM_BRANDS_GLOBAL ---": "Internationale Rotwein-Giganten (New World Brands)",
     "wine_red_penfolds_koonunga_hill": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Penfolds Koonunga Hill (Shiraz Cabernet)",
       "icon": "🇦🇺",
       "latin": "Vinum rubrum (Penfolds)",
@@ -7863,12 +7867,13 @@
       "prices": {
         "everywhere": 1
       },
-      "pref_vendor": "everywhere"
+      "pref_vendor": "everywhere",
+      "unit_type": "100ml"
     },
     "--- RED_WINE_PREMIUM_BRANDS_GERMAN ---": "Deutsche Rotwein-Benchmark (Marken)",
     "wine_red_knipser_cuvee_x": {
       "unit_price": 50.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Knipser Cuvée X",
       "icon": "🍷",
       "latin": "Vinum rubrum (Knipser)",
@@ -7914,7 +7919,7 @@
     "--- WHITE_WINE_GERMAN_RIESLING_ELITE ---": "Deutsche Riesling-Benchmarks (Die Weltspitze)",
     "wine_white_dr_loosen_riesling": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Dr. Loosen Riesling (Blauschiefer)",
       "icon": "🍷",
       "latin": "Vinum album (Dr. Loosen)",
@@ -7969,7 +7974,7 @@
     },
     "wine_white_robert_weil_riesling": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Robert Weil Riesling (Rheingau)",
       "icon": "🍷",
       "latin": "Vinum album (Weil)",
@@ -8013,7 +8018,7 @@
     },
     "wine_white_markus_molitor_haus_klosterberg": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Markus Molitor Haus Klosterberg Riesling",
       "icon": "🍷",
       "latin": "Vinum album (Molitor)",
@@ -8058,7 +8063,7 @@
     "--- WHITE_WINE_INTERNATIONAL_LEGENDS ---": "Internationale Weißwein-Giganten (Marken)",
     "wine_white_cloudy_bay_sauvignon_blanc": {
       "unit_price": 35.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Cloudy Bay Sauvignon Blanc",
       "icon": "🇳🇿",
       "latin": "Vinum album (Cloudy Bay)",
@@ -8109,7 +8114,7 @@
     },
     "wine_white_santa_margherita_pinot_grigio": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Santa Margherita Pinot Grigio Valdadige",
       "icon": "🇮🇹",
       "latin": "Vinum album (Santa Margherita)",
@@ -8153,7 +8158,7 @@
     },
     "wine_white_louis_jadot_chablis": {
       "unit_price": 30.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Louis Jadot Chablis (Chardonnay)",
       "icon": "🇫🇷",
       "latin": "Vinum album (Chablis)",
@@ -8198,7 +8203,7 @@
     },
     "wine_white_antinori_cervaro_della_sala": {
       "unit_price": 60.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Antinori Cervaro della Sala (Premium Chardonnay)",
       "icon": "🇮🇹",
       "latin": "Vinum album (Cervaro)",
@@ -8244,7 +8249,7 @@
     "--- WHITE_WINE_PRIVATE_LABEL_GERMAN ---": "Deutsche Weißwein-Eigenmarken (Alltags-Klassiker)",
     "wine_white_grauburgunder_rewe": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "REWE Beste Wahl Grauburgunder (Pinot Grigio Style)",
       "icon": "🍷",
       "latin": "Vinum album (Pinus grisea)",
@@ -8289,7 +8294,7 @@
     },
     "wine_white_riesling_k_classic": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Riesling (Trocken)",
       "icon": "🍷",
       "latin": "Vinum album (Riesling)",
@@ -8334,7 +8339,7 @@
     },
     "wine_white_muller_thurgau_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Vina de Sol Müller-Thurgau (Lidl)",
       "icon": "🥂",
       "latin": "Vinum album (Muller-Thurgau)",
@@ -8375,7 +8380,7 @@
     "--- WHITE_WINE_PRIVATE_LABEL_INTERNATIONAL ---": "Internationale Weißwein-Eigenmarken",
     "wine_white_chardonnay_k_classic": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Chardonnay (Pays d'Oc)",
       "icon": "🇫🇷",
       "latin": "Vinum album (Chardonnay)",
@@ -8415,7 +8420,7 @@
     },
     "wine_white_sauvignon_blanc_lidl": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Cimarosa Sauvignon Blanc (Lidl)",
       "icon": "🇳🇿",
       "latin": "Vinum album (Sauvignon)",
@@ -8456,7 +8461,7 @@
     "--- WHISKY_SCOTCH_SINGLE_MALT ---": "Schottische Single Malts (Die regionalen Ikonen)",
     "whisky_scotch_highland_park_12": {
       "unit_price": 45.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Highland Park 12 Years (Viking Honour)",
       "icon": "🥃",
       "latin": "Aqua vitae (Orcadensis)",
@@ -8511,7 +8516,7 @@
     },
     "whisky_scotch_glenfiddich_12": {
       "unit_price": 35.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Glenfiddich 12 Years",
       "icon": "🥃",
       "latin": "Aqua vitae (Vallis Cervi)",
@@ -8556,7 +8561,7 @@
     },
     "whisky_scotch_laphroaig_10": {
       "unit_price": 40.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Laphroaig 10 Years",
       "icon": "🔥",
       "latin": "Aqua vitae (Islaia amara)",
@@ -8608,7 +8613,7 @@
     },
     "whisky_scotch_the_macallan_12": {
       "unit_price": 100.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "The Macallan 12 Years Double Cask",
       "icon": "🥃",
       "latin": "Aqua vitae (Macallan)",
@@ -8650,7 +8655,7 @@
     },
     "whisky_scotch_dalwhinnie_15": {
       "unit_price": 50.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Dalwhinnie 15 Years",
       "icon": "🍯",
       "latin": "Aqua vitae (Dalwhinnie)",
@@ -8705,7 +8710,7 @@
     },
     "whisky_scotch_lagavulin_16": {
       "unit_price": 90.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Lagavulin 16 Years",
       "icon": "🔥",
       "latin": "Aqua vitae (Islaia Regalis)",
@@ -8760,7 +8765,7 @@
     },
     "whisky_scotch_talisker_10": {
       "unit_price": 45.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Talisker 10 Years",
       "icon": "🌊",
       "latin": "Aqua vitae (Scaia)",
@@ -8809,7 +8814,7 @@
     },
     "whisky_scotch_glenmorangie_10": {
       "unit_price": 40.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Glenmorangie The Original (10 Years)",
       "icon": "🦒",
       "latin": "Aqua vitae (Vallis Tranquillitatis)",
@@ -8852,7 +8857,7 @@
     },
     "whisky_scotch_ardbeg_10": {
       "unit_price": 60.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Ardbeg 10 Years (The Ultimate)",
       "icon": "💣",
       "latin": "Aqua vitae (Islaia Ultima)",
@@ -8896,7 +8901,7 @@
     },
     "whisky_scotch_oban_14": {
       "unit_price": 70.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Oban 14 Years",
       "icon": "⚓",
       "latin": "Aqua vitae (Oban)",
@@ -8941,7 +8946,7 @@
     "--- WHISKEY_IRISH_AND_BLENDED ---": "Irish Whiskey & Blended Scotch (Die Weichen)",
     "whiskey_irish_jameson": {
       "unit_price": 25.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Jameson Irish Whiskey",
       "icon": "🇮🇪",
       "latin": "Aqua vitae (Hibernica)",
@@ -8988,7 +8993,7 @@
     },
     "whisky_scotch_johnnie_walker_black": {
       "unit_price": 30.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Johnnie Walker Black Label (12 Years)",
       "icon": "🎩",
       "latin": "Aqua vitae (Walker)",
@@ -9029,7 +9034,7 @@
     "--- WHISKEY_AMERICAN_BOURBON ---": "American Whiskey (Bourbon & Tennessee)",
     "whiskey_usa_jack_daniels_old_no7": {
       "unit_price": 25.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Jack Daniel’s Old No. 7",
       "icon": "🎸",
       "latin": "Aqua vitae (Tennessee)",
@@ -9076,7 +9081,7 @@
     },
     "whiskey_usa_jim_beam_white": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Jim Beam White Label",
       "icon": "🥃",
       "latin": "Aqua vitae (Kentucky)",
@@ -9118,7 +9123,7 @@
     "--- SPIRITS_VODKA_THE_PURITY ---": "Wodka (Die neutralen Basen)",
     "spirit_vodka_absolut": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Absolut Vodka",
       "icon": "🇸🇪",
       "latin": "Aqua vitae (Absolut)",
@@ -9167,7 +9172,7 @@
     },
     "spirit_vodka_gorbatschow": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Wodka Gorbatschow (Blau)",
       "icon": "🏙️",
       "latin": "Aqua vitae (Gorbatschow)",
@@ -9211,7 +9216,7 @@
     "--- SPIRITS_GIN_THE_BOTANICALS ---": "Gin (Wacholder & Kräuter-Extraktion)",
     "spirit_gin_tanqueray_london_dry": {
       "unit_price": 25.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Tanqueray London Dry Gin",
       "icon": "🇬🇧",
       "latin": "Spiritus iuniperus (Tanqueray)",
@@ -9255,7 +9260,7 @@
     },
     "spirit_gin_hendricks": {
       "unit_price": 40.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Hendrick's Gin",
       "icon": "🥒",
       "latin": "Spiritus iuniperus (Hendrick's)",
@@ -9303,7 +9308,7 @@
     "--- SPIRITS_RUM_CANE_ESSENTIALS ---": "Rum (Zuckerrohr-Destillate)",
     "spirit_rum_havana_club_3": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Havana Club Añejo 3 Años",
       "icon": "🇨🇺",
       "latin": "Spiritus sacchari (Havana)",
@@ -9344,7 +9349,7 @@
     },
     "spirit_rum_bacardi_carta_blanca": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Bacardi Carta Blanca",
       "icon": "🦇",
       "latin": "Spiritus sacchari (Bacardi)",
@@ -9385,7 +9390,7 @@
     "--- SPIRITS_TEQUILA_AGAVE_SPIRIT ---": "Tequila (Blaue Weber-Agave)",
     "spirit_tequila_jose_cuervo_especial": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Jose Cuervo Especial Gold",
       "icon": "🇲🇽",
       "latin": "Spiritus agavae (Cuervo)",
@@ -9426,7 +9431,7 @@
     "--- SPIRITS_LIQUEUR_BAR_ADDITIONS ---": "Liköre (Die unverzichtbaren Ergänzungen)",
     "liqueur_orange_cointreau": {
       "unit_price": 25.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Cointreau (Triple Sec)",
       "icon": "🍊",
       "latin": "Liquor aurantii (Cointreau)",
@@ -9471,7 +9476,7 @@
     },
     "spirit_cachaca_pitu": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Pitú (Cachaça)",
       "icon": "🦐",
       "latin": "Spiritus sacchari brasiliensis",
@@ -9512,7 +9517,7 @@
     "--- SPIRITS_VODKA_EXTENDED ---": "Wodka (Von Standard bis Luxus)",
     "spirit_vodka_smirnoff_red": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Smirnoff No. 21",
       "icon": "🏙️",
       "latin": "Aqua vitae (Smirnoff)",
@@ -9557,7 +9562,7 @@
     },
     "spirit_vodka_grey_goose": {
       "unit_price": 50.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Grey Goose Vodka",
       "icon": "🦢",
       "latin": "Aqua vitae (Anser griseus)",
@@ -9608,7 +9613,7 @@
     },
     "spirit_vodka_belvedere": {
       "unit_price": 45.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Belvedere Vodka",
       "icon": "🏰",
       "latin": "Aqua vitae (Belvedere)",
@@ -9651,7 +9656,7 @@
     "--- SPIRITS_GIN_THE_BIG_BRANDS ---": "Gin (Die Wacholder-Benchmarks)",
     "spirit_gin_bombay_sapphire": {
       "unit_price": 25.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Bombay Sapphire London Dry Gin",
       "icon": "💎",
       "latin": "Spiritus iuniperus (Sapphirus)",
@@ -9694,7 +9699,7 @@
     },
     "spirit_gin_beefeater_london_dry": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Beefeater London Dry Gin",
       "icon": "💂",
       "latin": "Spiritus iuniperus (Londinium)",
@@ -9734,7 +9739,7 @@
     },
     "spirit_gin_monkey_47": {
       "unit_price": 40.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Monkey 47 Schwarzwald Dry Gin",
       "icon": "🐒",
       "latin": "Spiritus iuniperus (Silva Nigra)",
@@ -9782,7 +9787,7 @@
     "--- SPIRITS_RUM_THE_FULL_STRENGTH ---": "Rum (Süße & Würze)",
     "spirit_rum_captain_morgan_spiced": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Captain Morgan Spiced Gold",
       "icon": "🏴‍☠️",
       "latin": "Spiritus sacchari conditus",
@@ -9826,7 +9831,7 @@
     },
     "spirit_rum_diplomatico_reserva": {
       "unit_price": 45.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Diplomático Reserva Exclusiva",
       "icon": "🥃",
       "latin": "Spiritus sacchari (Venezuelensis)",
@@ -9868,7 +9873,7 @@
     },
     "spirit_rum_myers_dark": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Myers's Rum Original Dark",
       "icon": "🥃",
       "latin": "Spiritus sacchari niger",
@@ -9911,7 +9916,7 @@
     "--- SPIRITS_TEQUILA_&_MEZCAL ---": "Agaven-Destillate (Mexikos Stolz)",
     "spirit_tequila_sierra_silver": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Sierra Tequila Silver",
       "icon": "👒",
       "latin": "Spiritus agavae (Sierra)",
@@ -9951,7 +9956,7 @@
     },
     "spirit_tequila_patron_silver": {
       "unit_price": 55.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Patrón Silver Tequila",
       "icon": "🐝",
       "latin": "Spiritus agavae (Patron)",
@@ -9996,7 +10001,7 @@
     "--- APERITIFS_&_LIQUEURS ---": "Aperitifs & Liköre (Die Cocktail-Farben)",
     "liqueur_aperol": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Aperol",
       "icon": "🍹",
       "latin": "Liquor amarus (Aperol)",
@@ -10041,7 +10046,7 @@
     },
     "liqueur_campari": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Campari Bitter",
       "icon": "🍷",
       "latin": "Liquor amarus (Campari)",
@@ -10085,7 +10090,7 @@
     },
     "liqueur_ramazzotti_amaro": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Ramazzotti Amaro",
       "icon": "🇮🇹",
       "latin": "Liquor herbaceus (Ramazzotti)",
@@ -10124,7 +10129,7 @@
     },
     "liqueur_disaronno_amaretto": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Disaronno Originale",
       "icon": "🥃",
       "latin": "Liquor amygdalae (Disaronno)",
@@ -10163,7 +10168,7 @@
     },
     "liqueur_baileys_irish_cream": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Baileys Irish Cream",
       "icon": "🥛",
       "latin": "Liquor lactis (Hibernicus)",
@@ -10211,7 +10216,7 @@
     },
     "liqueur_jaegermeister": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Jägermeister",
       "icon": "🦌",
       "latin": "Liquor herbaceus (Venator)",
@@ -10256,7 +10261,7 @@
     "--- LIQUEURS_FRUIT_ESSENTIALS ---": "Fruchtliköre (Die Aroma-Bomben)",
     "liqueur_fruit_grand_marnier": {
       "unit_price": 30.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Grand Marnier (Cordon Rouge)",
       "icon": "🍊",
       "latin": "Liquor aurantii (Cognac base)",
@@ -10301,7 +10306,7 @@
     },
     "liqueur_fruit_chambord": {
       "unit_price": 35.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Chambord Liqueur Royale",
       "icon": "🍇",
       "latin": "Liquor rubi (Chambord)",
@@ -10345,7 +10350,7 @@
     },
     "liqueur_fruit_midori": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Midori Melon Liqueur",
       "icon": "🍈",
       "latin": "Liquor melonis (Midori)",
@@ -10389,7 +10394,7 @@
     },
     "liqueur_fruit_peachtree": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "De Kuyper Peachtree",
       "icon": "🍑",
       "latin": "Liquor persicae",
@@ -10430,7 +10435,7 @@
     "--- LIQUEURS_HERBAL_ELIXIRS ---": "Kräuter- & Klosterliköre (Die heiligen Elixiere)",
     "liqueur_herbal_chartreuse_verte": {
       "unit_price": 50.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Chartreuse Verte (Grün)",
       "icon": "🌿",
       "latin": "Liquor Carthusianus viridis",
@@ -10476,7 +10481,7 @@
     },
     "liqueur_herbal_benedictine": {
       "unit_price": 35.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Bénédictine D.O.M.",
       "icon": "⛪",
       "latin": "Liquor Benedictinus",
@@ -10521,7 +10526,7 @@
     "--- LIQUEURS_DESSERT_BEAN_NUT ---": "Kaffee, Nuss & Vanille (Dessert-Standards)",
     "liqueur_coffee_kahlua": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Kahlúa Coffee Liqueur",
       "icon": "☕",
       "latin": "Liquor coffei (Kahlua)",
@@ -10563,7 +10568,7 @@
     },
     "liqueur_vanilla_licor_43": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Licor 43 (Cuarenta y Tres)",
       "icon": "🇪🇸",
       "latin": "Liquor vanillae (43)",
@@ -10603,7 +10608,7 @@
     },
     "liqueur_nut_frangelico": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Frangelico Hazelnut Liqueur",
       "icon": "🌰",
       "latin": "Liquor avellanae (Frangelico)",
@@ -10647,7 +10652,7 @@
     },
     "liqueur_cream_queen_margot": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Queen Margot Irish Cream (Lidl)",
       "icon": "🥛",
       "latin": "Liquor lactis (Lidl)",
@@ -10687,7 +10692,7 @@
     },
     "liqueur_herbal_jagdstolz": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Jagdstolz Kräuterlikör (REWE/ja!)",
       "icon": "🦌",
       "latin": "Liquor herbaceus (ja!)",
@@ -10730,7 +10735,7 @@
     "--- SPIRITS_GREEK_SUNSHINE ---": "Metaxa (Die griechische Spirituosen-Legende)",
     "spirit_metaxa_5_stars": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Metaxa 5 Stars (Classic Edition)",
       "icon": "☀️",
       "latin": "Spiritus Graecus (V stellae)",
@@ -10779,7 +10784,7 @@
     },
     "spirit_metaxa_7_stars": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Metaxa 7 Stars (Amphora)",
       "icon": "🏺",
       "latin": "Spiritus Graecus (VII stellae)",
@@ -10829,7 +10834,7 @@
     "--- LIQUEURS_ANISE_CLASSICS ---": "Sambuca (Der italienische Digestif)",
     "liqueur_sambuca_molinari": {
       "unit_price": 18.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Molinari Sambuca Extra",
       "icon": "☕",
       "latin": "Liquor anisi (Molinari)",
@@ -10874,7 +10879,7 @@
     "--- WINE_RED_THE_SOFT_GIANT ---": "Merlot (Der samtige Weltstar)",
     "wine_red_merlot_casillero": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Casillero del Diablo Merlot",
       "icon": "🍷",
       "latin": "Vinum rubrum (Merlot)",
@@ -10915,7 +10920,7 @@
     "--- COOKING_ALCOHOL_ITALIAN_SPECIALS ---": "Marsala (Der Star für Tiramisu & Saucen)",
     "wine_marsala_pellegrino_superiore": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Marsala Superiore Dolce (Pellegrino)",
       "icon": "🇮🇹",
       "latin": "Vinum Marsala (Dulcis)",
@@ -10967,7 +10972,7 @@
     "--- SAVORY_VEGETABLE_SPREADS ---": "Herzhafte Gemüsecremes & Pestos",
     "ajvar": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ajvar",
       "icon": "🫑",
       "latin": "Capsicum / Solanum blend",
@@ -11028,7 +11033,7 @@
     },
     "ganoush_baba": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Baba Ganoush (Eggplant Cream)",
       "icon": "🍆",
       "latin": "Solanum melongena blend",
@@ -11091,7 +11096,7 @@
     },
     "hummus": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hummus",
       "icon": "🧆",
       "latin": "Cicer arietinum blend",
@@ -11154,7 +11159,7 @@
     },
     "tapenade": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Olive Tapenade",
       "icon": "🫒",
       "latin": "Olea europaea blend",
@@ -11216,7 +11221,7 @@
     },
     "pesto_green": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pesto Genovese",
       "icon": "🌿",
       "latin": "Ocimum basilicum blend",
@@ -11278,7 +11283,7 @@
     },
     "pesto_red": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pesto Rosso",
       "icon": "🍅",
       "latin": "Solanum lycopersicum siccatum blend",
@@ -11340,7 +11345,7 @@
     },
     "muhammara": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Muhammara",
       "icon": "🌶️",
       "latin": "Juglans / Capsicum blend",
@@ -11401,7 +11406,7 @@
     "--- GOURMET_AND_EUROPEAN_SPREADS ---": "Feinkost-Cremes & Bio-Aufstriche",
     "cream_artichoke": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Artichoke Cream",
       "icon": "🪷",
       "latin": "Cynara scolymus blend",
@@ -11462,7 +11467,7 @@
     },
     "paste_truffle": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Truffle Paste / Tartufata",
       "icon": "🍄",
       "latin": "Tuber blend with mushrooms",
@@ -11521,7 +11526,7 @@
     },
     "spread_vegan_lentil": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lentil / Bean Spread (Vegan Pate)",
       "icon": "🥫",
       "latin": "Lens culinaris blend",
@@ -11587,7 +11592,7 @@
     "--- MAYO_BASED_MEAT_SALADS ---": "Feinkostsalate auf Mayonnaise-Basis (Fleisch)",
     "salad_meat_homann_classic": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Homann Fleischsalat (Klassisch)",
       "icon": "🥣",
       "latin": "Salsa carnis cum mayonnaise",
@@ -11652,7 +11657,7 @@
     },
     "salad_budapest_spicy": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Budapester Salat",
       "icon": "🌶️",
       "latin": "Salsa carnis pannonica",
@@ -11714,7 +11719,7 @@
     "--- FISH_AND_SEAFOOD_SALADS ---": "Fisch- & Meeressalate",
     "salad_herring_red": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Roter Heringssalat (mit Rote Bete)",
       "icon": "🐟",
       "latin": "Salsa harengi rubra",
@@ -11779,7 +11784,7 @@
     },
     "salad_shrimp_cocktail": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Garnelen-Cocktail",
       "icon": "🦐",
       "latin": "Salsa palemonis",
@@ -11841,7 +11846,7 @@
     "--- VEGETARIAN_DELI_SALADS ---": "Vegetarische Feinkostsalate",
     "salad_egg_classic": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Eiersalat",
       "icon": "🥚",
       "latin": "Salsa ovorum",
@@ -11903,7 +11908,7 @@
     "--- BBQ_SIDES_SALADS ---": "Grill- & Beilagensalate (Großgebinde)",
     "salad_potato_mayo": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kartoffelsalat mit Mayonnaise",
       "icon": "🥔",
       "latin": "Salsa solani tuberosi",
@@ -11961,7 +11966,7 @@
     },
     "salad_pasta_classic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nudelsalat (Klassisch)",
       "icon": "🍝",
       "latin": "Salsa pastae",
@@ -12020,7 +12025,7 @@
     "--- HONEY_VARIETIES ---": "Honig & Bienenprodukte (Naturversiegelt)",
     "honey_blossom_liquid": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Blütenhonig (Flüssig)",
       "icon": "🍯",
       "latin": "Mel flos",
@@ -12083,7 +12088,7 @@
     },
     "honey_manuka_mgo": {
       "unit_price": 50.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Manuka Honig (MGO 400+)",
       "icon": "🇳🇿",
       "latin": "Mel leptospermum",
@@ -12143,7 +12148,7 @@
     },
     "honey_forest_honeydew": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Waldhonig (Honigtau)",
       "icon": "🌲",
       "latin": "Mel de melle",
@@ -12205,7 +12210,7 @@
     },
     "honey_acacia_liquid": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Akazienhonig (Glasklar)",
       "icon": "🌳",
       "latin": "Mel robinia",
@@ -12267,7 +12272,7 @@
     },
     "honey_rapeseed_creamy": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rapshonig (Cremig/Weiß)",
       "icon": "🌼",
       "latin": "Mel brassica",
@@ -12329,7 +12334,7 @@
     },
     "honey_heather_erica": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Heidehonig (Gelierend)",
       "icon": "🌸",
       "latin": "Mel calluna",
@@ -12391,7 +12396,7 @@
     "--- BRANDED_HONEY_REFERENCE ---": "Marken-Honig (Supermarkt-Klassiker)",
     "honey_langnese_flotte_biene": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Langnese Flotte Biene (Blütenhonig)",
       "icon": "🍯",
       "latin": "Mel miscellaneum (Langnese)",
@@ -12446,7 +12451,7 @@
     "--- JAMS_AND_CONSERVES ---": "Fruchtige Aufstriche & Konfitüren",
     "jam_strawberry_classic": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Erdbeerkonfitüre (Extra)",
       "icon": "🍓",
       "latin": "Fragaria conserve",
@@ -12507,7 +12512,7 @@
     },
     "marmalade_bitter_orange": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bitterorangen-Marmelade (Englisch)",
       "icon": "🍊",
       "latin": "Citrus aurantium conserve",
@@ -12566,7 +12571,7 @@
     },
     "plum_butter_latwerge": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pflaumenmus (Latwerge)",
       "icon": "🟣",
       "latin": "Prunus domestica pasta",
@@ -12626,7 +12631,7 @@
     "--- NUT_AND_CHOCO_SPREADS ---": "Nuss-Nougat & Schoko-Cremes",
     "spread_hazelnut_nutella": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nutella (Nuss-Nougat-Creme)",
       "icon": "🌰",
       "latin": "Corylus et cacao pasta",
@@ -12685,7 +12690,7 @@
     "--- BRANDED_FRUIT_KONFITÜRE ---": "Marken-Konfitüren (Zucker- & Frucht-Matrix)",
     "jam_strawberry_schwartau_extra": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Schwartau Extra Erdbeere",
       "icon": "🍓",
       "latin": "Fragaria conserve (Schwartau)",
@@ -12744,7 +12749,7 @@
     },
     "jam_strawberry_maribel_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Maribel Erdbeer-Konfitüre (Lidl)",
       "icon": "🍓",
       "latin": "Fragaria conserve (Maribel)",
@@ -12799,7 +12804,7 @@
     "--- SPECIALTY_SENF_MARMELADE ---": "Feinkost-Senf-Saucen (Käsebegleiter)",
     "mustard_jam_fig_tessin": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tessiner Feigensenf-Sauce",
       "icon": "🍯",
       "latin": "Ficus et sinapis conditum",
@@ -12859,7 +12864,7 @@
     "--- CARAMEL_AND_COOKIE_SPREADS ---": "Karamell- & Gebäck-Cremes",
     "spread_lotus_biscoff": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lotus Biscoff Gebäckcreme",
       "icon": "🍪",
       "latin": "Bisctoctum pasta (Lotus)",
@@ -12921,7 +12926,7 @@
     "--- PEANUT_BUTTER_MATRIX ---": "Erdnussbutter (Lidl vs. USA-Standard)",
     "peanut_butter_barneys_kaufland": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Barney's Best Peanut Butter (Creamy)",
       "icon": "🥜",
       "latin": "Arachis hypogaea pasta",
@@ -12976,7 +12981,7 @@
     },
     "peanut_butter_vita_dor_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vita D'Or Erdnussbutter (Lidl)",
       "icon": "🥜",
       "latin": "Arachis pasta (Lidl)",
@@ -13033,7 +13038,7 @@
     "--- THE_CHOCO_HAZELNUT_WARS ---": "Nuss-Nougat-Cremes (Marken-Vergleich)",
     "spread_nuspli_zentis": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nuspli (Zentis)",
       "icon": "🌰",
       "latin": "Corylus pasta (Zentis)",
@@ -13093,7 +13098,7 @@
     },
     "spread_nudossi_classic": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nudossi (Das Original mit 36% Nuss)",
       "icon": "🐿️",
       "latin": "Corylus maxima pasta",
@@ -13152,7 +13157,7 @@
     },
     "spread_choco_nussa_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Choco Nussa (Lidl)",
       "icon": "🌰",
       "latin": "Corylus pasta (Lidl)",
@@ -13207,7 +13212,7 @@
     "--- SCHWARTAU_ELITE_FRUIT ---": "Schwartau Spezialitäten (Sortenrein)",
     "jam_raspberry_schwartau_extra": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Schwartau Extra Himbeere",
       "icon": "🍇",
       "latin": "Rubus idaeus conserve",
@@ -13262,7 +13267,7 @@
     },
     "plum_butter_muehlhaeuser": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mühlhäuser Pflaumenmus",
       "icon": "🟣",
       "latin": "Prunus domestica pasta (Thuringia)",
@@ -13323,7 +13328,7 @@
     },
     "plum_butter_aachen_schwartau": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Aachener Pflaumenmus (Schwartau)",
       "icon": "🥨",
       "latin": "Prunus pasta (Aquisgranum)",
@@ -13382,7 +13387,7 @@
     "--- KETCHUP_BENCHMARKS ---": "Ketchup & Tomaten-Saucen (Zucker & Lycopin)",
     "ketchup_heinz_classic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Heinz Tomato Ketchup",
       "icon": "🍅",
       "latin": "Solanum lycopersicum conditum",
@@ -13438,7 +13443,7 @@
     },
     "ketchup_hela_curry_delikat": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hela Curry Gewürzketchup (Delikat)",
       "icon": "❤️",
       "latin": "Solanum et curcuma (Hela)",
@@ -13499,7 +13504,7 @@
     },
     "ketchup_kania_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kania Tomaten Ketchup (Lidl)",
       "icon": "🍅",
       "latin": "Solanum conditum (Lidl)",
@@ -13555,7 +13560,7 @@
     "--- MAYONNAISE_AND_CREAMS ---": "Mayonnaise & Salatcremes (Die weiße Fraktion)",
     "mayo_thomy_delikatess": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Thomy Delikatess Mayonnaise",
       "icon": "🧴",
       "latin": "Emulsio ovi (Thomy)",
@@ -13610,7 +13615,7 @@
     },
     "salad_cream_miracle_whip": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Miracle Whip (Classic)",
       "icon": "🥣",
       "latin": "Lactis emulsio (Miracle)",
@@ -13665,7 +13670,7 @@
     },
     "mayo_pommes_sauce_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vita D'Or Pommes Sauce (Lidl)",
       "icon": "🍟",
       "latin": "Emulsio frictis (Lidl)",
@@ -13720,7 +13725,7 @@
     "--- MUSTARD_TYPES ---": "Senf-Varietäten (Sinigrin & Schärfe)",
     "mustard_bautzner_medium": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bautz'ner Senf Mittelscharf",
       "icon": "🟡",
       "latin": "Sinapis alba (Bautzner)",
@@ -13775,7 +13780,7 @@
     },
     "mustard_k_classic_extra_hot": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Senf (Scharf/Extra)",
       "icon": "🔥",
       "latin": "Brassica nigra (Kaufland)",
@@ -13888,7 +13893,8 @@
       "energy": {
         "kcal": 243,
         "kj": 1017
-      }
+      },
+      "unit_type": "100g"
     },
     "salad_cream_kania_lidl": {
       "label": "Kania Salatcreme (Lidl)",
@@ -13941,7 +13947,8 @@
       "energy": {
         "kcal": 235,
         "kj": 983
-      }
+      },
+      "unit_type": "100g"
     },
     "--- SPECIALTY_SANDWICH_SPREADS ---": "Spezialisierte Sandwich-Aufstriche",
     "sandwich_cream_kania_remoulade": {
@@ -13994,12 +14001,13 @@
       "energy": {
         "kcal": 610,
         "kj": 2552
-      }
+      },
+      "unit_type": "100g"
     },
     "--- MEXIKANER_ESSENTIALS ---": "Die Seele des Mexikaners (Schärfe & Basis)",
     "mixer_sangrita_classic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sangrita Classico / Picante",
       "icon": "🍅",
       "latin": "Succus lycopersici conditus",
@@ -14059,7 +14067,7 @@
     },
     "sauce_tabasco_original": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tabasco Original Red Pepper Sauce",
       "icon": "🔥",
       "latin": "Capsicum frutescens emulsio",
@@ -14116,7 +14124,7 @@
     "--- INTENSE_TOMATO_KETCHUPS ---": "Fruchtbetonte Ketchups (Hoher Tomatenanteil)",
     "ketchup_werder_premium": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Werder Tomaten Ketchup (Klassik)",
       "icon": "🍅",
       "latin": "Solanum conditum (Werder)",
@@ -14175,7 +14183,7 @@
     },
     "ketchup_k_classic_bio": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Bio Tomaten Ketchup",
       "icon": "🌿",
       "latin": "Solanum conditum organicum",
@@ -14278,12 +14286,13 @@
       "energy": {
         "kcal": 108,
         "kj": 452
-      }
+      },
+      "unit_type": "100g"
     },
     "--- MUSTARD_ELITE ---": "Senf-Spezialitäten (Schärfegrade & Tradition)",
     "mustard_loewensenf_extra_hot": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Löwensenf Extra (Scharf)",
       "icon": "🔥",
       "latin": "Sinapis nigra (Loewen)",
@@ -14339,7 +14348,7 @@
     },
     "mustard_haendlmaier_sweet": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Händlmaier Hausmacher Senf (Süß)",
       "icon": "🥨",
       "latin": "Sinapis alba (Dulcis)",
@@ -14399,7 +14408,7 @@
     "--- BURGER_AND_DELI_CREAMS ---": "Burger- & Sandwich-Saucen (Lidl/Benchmark)",
     "sauce_hamburger_heinz": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Heinz American Style Burger Sauce",
       "icon": "🍔",
       "latin": "Emulsio americana (Heinz)",
@@ -14457,7 +14466,7 @@
     },
     "remoulade_kania_classic_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kania Remoulade (Lidl)",
       "icon": "🌿",
       "latin": "Emulsio cum herbis (Lidl)",
@@ -14513,7 +14522,7 @@
     "--- ASIAN_UMAMI_POWER ---": "Asiatische Würzsaucen (Fermentation)",
     "sauce_fish_tiparos": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tiparos Fish Sauce (Thai)",
       "icon": "🐟",
       "latin": "Liquamen (Tiparos)",
@@ -14573,7 +14582,7 @@
     },
     "sauce_soy_kikkoman": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kikkoman Sojasauce (Natürlich gebraut)",
       "icon": "🥢",
       "latin": "Soia liquida (Kikkoman)",
@@ -14629,7 +14638,7 @@
     },
     "sauce_oyster_lee_kum_kee": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lee Kum Kee Oyster Sauce (Panda)",
       "icon": "🐼",
       "latin": "Ostrea extractum salsa",
@@ -14689,7 +14698,7 @@
     },
     "sauce_worcestershire_lea_perrins": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lea & Perrins Worcestershire Sauce",
       "icon": "🇬🇧",
       "latin": "Liquamen Vigorniense",
@@ -14750,7 +14759,7 @@
     "--- GLOBAL_SWEET_SOUR_BENCHMARKS ---": "Süß-Sauer Standards (Frucht & Säure)",
     "sauce_sweet_sour_bens_original": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ben's Original Süß-Sauer (Klassisch)",
       "icon": "🥫",
       "latin": "Salsa dulcamara (Ben)",
@@ -14809,7 +14818,7 @@
     },
     "sauce_sweet_sour_mcdonalds": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "McDonald's Süßsauer Sauce (Dip)",
       "icon": "🍟",
       "latin": "Emulsio dulcamara (McD)",
@@ -14867,7 +14876,7 @@
     },
     "sauce_sweet_sour_vitasia_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vitasia Süß-Sauer (Lidl)",
       "icon": "🥢",
       "latin": "Salsa dulcamara (Lidl)",
@@ -14922,7 +14931,7 @@
     "--- SMOKY_AND_SWEET_SPECIALS ---": "Grill- & Rauchsaucen (BBQ)",
     "sauce_bbq_bulls_eye_original": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bull's-Eye BBQ Sauce (Original)",
       "icon": "🔥",
       "latin": "Salsa fumigata (Bull)",
@@ -14982,7 +14991,7 @@
     },
     "sauce_hoisin_lee_kum_kee": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hoisin Sauce (Peking-Ente Sauce)",
       "icon": "🦆",
       "latin": "Salsa soia condita",
@@ -15042,7 +15051,7 @@
     "--- PIRI_PIRI_AND_AFRICAN_HEAT ---": "Piri Piri & Afro-Portugiesische Schärfe",
     "sauce_piri_piri_nandos_medium": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nando's Peri-Peri Sauce (Medium)",
       "icon": "🔥",
       "latin": "Capsicum chinense (Nandos)",
@@ -15102,7 +15111,7 @@
     },
     "sauce_piri_piri_kania_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kania Piri Piri Sauce (Lidl)",
       "icon": "🧴",
       "latin": "Capsicum emulsio (Lidl)",
@@ -15157,7 +15166,7 @@
     "--- GLOBAL_CHILI_CHAMPIONS ---": "Weitere globale Schärfe-Spezialisten",
     "sauce_sriracha_flying_goose": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sriracha Chili Sauce (Flying Goose)",
       "icon": "🦢",
       "latin": "Capsicum annuum conditum",
@@ -15217,7 +15226,7 @@
     },
     "paste_harissa_le_phare": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Harissa (Tunesische Chili-Paste)",
       "icon": "🌶️",
       "latin": "Capsicum maghrebiana",
@@ -15278,7 +15287,7 @@
   "TOMATO_BASICS": {
     "sauce_passata_mutti": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mutti Passata",
       "icon": "🍅",
       "latin": "Solanum lycopersicum (Passata)",
@@ -15333,7 +15342,7 @@
     },
     "sauce_tomato_chunks_bio": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bio Stückige Tomaten",
       "icon": "🥫",
       "latin": "Solanum lycopersicum (Concasse)",
@@ -15386,7 +15395,7 @@
     },
     "sauce_tomato_paste": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tomatenmark (2-fach/3-fach konzentriert)",
       "icon": "🧪",
       "latin": "Solanum lycopersicum (Concentratum)",
@@ -15445,7 +15454,7 @@
   "bakery_savory": {
     "togo_puten_omlett_broetchen": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Puten-Omlett Brötchen (Backhus Style)",
       "icon": "🍳",
       "val": {
@@ -15476,7 +15485,7 @@
     },
     "togo_laugenstange_pur": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Laugenstange (Pur)",
       "icon": "🥨",
       "val": {
@@ -15505,7 +15514,7 @@
     },
     "togo_kaesebroetchen": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Käsebrötchen (Überbacken)",
       "icon": "🧀",
       "val": {
@@ -15534,7 +15543,7 @@
     },
     "togo_pizza_zunge": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pizza-Zunge / Snack-Pizza",
       "icon": "🍕",
       "val": {
@@ -15563,7 +15572,7 @@
     },
     "togo_frikadellenbroetchen": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Frikadellenbrötchen mit Senf",
       "icon": "🍔",
       "val": {
@@ -15592,7 +15601,7 @@
   "bakery_sweet": {
     "togo_franzbroetchen_classic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Franzbrötchen (Classic)",
       "icon": "🐌",
       "val": {
@@ -15619,7 +15628,7 @@
     },
     "togo_croissant_pur": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Butter-Croissant",
       "icon": "🥐",
       "val": {
@@ -15646,7 +15655,7 @@
     },
     "togo_quarkbaellchen": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Quarkbällchen (1 Stück)",
       "icon": "⚪",
       "val": {
@@ -15673,7 +15682,7 @@
     },
     "togo_apfeltasche": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Apfeltasche (Blätterteig)",
       "icon": "🍎",
       "val": {
@@ -15702,7 +15711,7 @@
   "fast_food_classics": {
     "togo_doener_standard": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Döner Kebab (Kalb/Hähnchen)",
       "icon": "🥙",
       "val": {
@@ -15731,7 +15740,7 @@
     },
     "togo_falafel_wrap": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Falafel Wrap / Dürüm",
       "icon": "🌯",
       "val": {
@@ -15759,7 +15768,7 @@
   "togo_beverages": {
     "togo_cappuccino_large": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Cappuccino (Groß, Vollmilch)",
       "icon": "☕",
       "val": {
@@ -15786,7 +15795,7 @@
     },
     "togo_latte_macchiato": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Latte Macchiato (Vollmilch)",
       "icon": "🥛",
       "val": {
@@ -15816,7 +15825,7 @@
     "--- KINDER_FERRERO_COMPLETE_GALAXY ---": "Kinder-Produkte (Fokus: Milch, Nuss & Wafer)",
     "kinder_schokolade_bar": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kinder Schokolade",
       "icon": "🍫",
       "latin": "Socolata infantium",
@@ -15872,7 +15881,7 @@
     },
     "kinder_bueno_classic": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kinder Bueno",
       "icon": "🥨",
       "latin": "Crustum coryli bueno",
@@ -15928,7 +15937,7 @@
     },
     "kinder_schoko_bons": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kinder Schoko-Bons",
       "icon": "🍬",
       "latin": "Globuli lactei socolata",
@@ -15982,7 +15991,7 @@
     },
     "kinder_happy_hippo_cacao": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kinder Happy Hippo (Cacao)",
       "icon": "🦛",
       "latin": "Hippopotamus crustum",
@@ -16036,7 +16045,7 @@
     },
     "kinder_milch_schnitte": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Kinder Milch-Schnitte",
       "icon": "🥪",
       "latin": "Lactis segmentum",
@@ -16091,7 +16100,7 @@
     },
     "kinder_pingui_classic": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kinder Pingui",
       "icon": "🐧",
       "latin": "Spheniscidae socolata",
@@ -16145,7 +16154,7 @@
     },
     "kinder_maxi_king": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kinder Maxi King",
       "icon": "👑",
       "latin": "Rex maximus lacteus",
@@ -16199,7 +16208,7 @@
     "--- MONDELEZ_MILKA_COMPLETE_GALAXY ---": "Milka (Mondelez) – Alpenmilch & Kollaborationen",
     "milka_alpenmilch_classic": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milka Alpenmilch",
       "icon": "💜",
       "latin": "Lactis alpina pura",
@@ -16253,7 +16262,7 @@
     },
     "milka_noisette_creamy": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milka Noisette",
       "icon": "🌰",
       "latin": "Socolata coryli pasta",
@@ -16307,7 +16316,7 @@
     },
     "milka_ganze_haselnuesse": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milka Ganze Haselnüsse",
       "icon": "🐿️",
       "latin": "Lactis alpina cum corylis integris",
@@ -16361,7 +16370,7 @@
     },
     "milka_lu_biscuit": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milka & LU Kekse",
       "icon": "🍪",
       "latin": "Lactis alpina et bisctoctum LU",
@@ -16418,7 +16427,7 @@
     },
     "milka_tuc_cracker": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milka & TUC Cracker",
       "icon": "🥨",
       "latin": "Lactis alpina et crustum salis TUC",
@@ -16477,7 +16486,7 @@
     },
     "milka_kuhflecken": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milka Kuhflecken",
       "icon": "🐄",
       "latin": "Lactis alpina variegata",
@@ -16530,7 +16539,7 @@
     },
     "milka_strawberry_yoghurt": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milka Erdbeer-Joghurt",
       "icon": "🍓",
       "latin": "Lactis alpina fragaria coagulata",
@@ -16586,7 +16595,7 @@
     "--- LIDL_SWEET_EMPIRE ---": "Lidl Eigenmarken (Fin Carré & Mister Choc)",
     "chocolate_fin_carre_alpenvollmilch": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fin Carré Alpenvollmilch (Lidl)",
       "icon": "🍫",
       "latin": "Socolata alpina lidliana",
@@ -16641,7 +16650,7 @@
     },
     "chocolate_mister_choc_milk_sticks": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mister Choc Milk & Choc (Riegel)",
       "icon": "🥛",
       "latin": "Bacilli lactei (Lidl)",
@@ -16696,7 +16705,7 @@
     },
     "chocolate_mister_choc_bellona": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mister Choc Bellona (Haselnuss)",
       "icon": "🥨",
       "latin": "Crustum coryli lidlianum",
@@ -16749,7 +16758,7 @@
     },
     "chocolate_mister_choc_choco_bites": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mister Choc Choco Bites",
       "icon": "🍬",
       "latin": "Globuli lactei lidliani",
@@ -16803,7 +16812,7 @@
     "--- KAUFLAND_K_CLASSIC_GALAXY ---": "Kaufland Eigenmarke (K-Classic)",
     "chocolate_k_classic_alpenvollmilch": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Alpenvollmilch",
       "icon": "🍫",
       "latin": "Socolata alpina kauflandia",
@@ -16856,7 +16865,7 @@
     },
     "chocolate_k_classic_milk_sticks": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Milch-Riegel",
       "icon": "🥛",
       "latin": "Bacilli lactei kauflandii",
@@ -16909,7 +16918,7 @@
     },
     "chocolate_k_classic_cookies_milk": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "K-Classic Cookies & Milk",
       "icon": "🍪",
       "latin": "Socolata crustulum kauflandia",
@@ -16963,7 +16972,7 @@
     "--- ALDI_CHOCEUR_LEGENDS ---": "Aldi Eigenmarke (Choceur)",
     "chocolate_choceur_alpenvollmilch": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Choceur Alpenvollmilch (Aldi)",
       "icon": "🍫",
       "latin": "Socolata alpina aldiana",
@@ -17019,7 +17028,7 @@
     "--- FERRERO_GOLD_SPECIALS ---": "Ferrero Spezialitäten (Kult & Knusper)",
     "ferrero_rocher": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ferrero Rocher",
       "icon": "🟡",
       "latin": "Socolata aurata (Rocher)",
@@ -17074,7 +17083,7 @@
     },
     "ferrero_raffaello": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ferrero Raffaello",
       "icon": "⚪",
       "latin": "Cocos socolata (Raffaello)",
@@ -17129,7 +17138,7 @@
     },
     "ferrero_giotto": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Giotto",
       "icon": "🌰",
       "latin": "Globuli coryli (Giotto)",
@@ -17184,7 +17193,7 @@
     "--- FEODORA_PREMIUM_TABLETS ---": "Feodora Edel-Schokoladen (Tradition & Qualität)",
     "feodora_edel_bitter_80": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Feodora Edel-Bitter (80% Kakao)",
       "icon": "⬛",
       "latin": "Socolata amara (Feodora)",
@@ -17244,7 +17253,7 @@
     },
     "feodora_edel_vollmilch": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Feodora Edel-Vollmilch (Hochfein)",
       "icon": "🍫",
       "latin": "Socolata lactea (Feodora)",
@@ -17302,7 +17311,7 @@
     "--- NUT_AND_WHITE_CLASSICS ---": "Massive Nuss- & Weiß-Varianten",
     "ritter_sport_ganze_haselnuss": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ritter Sport Ganze Haselnuss",
       "icon": "🟦",
       "latin": "Socolata cum corylis integris",
@@ -17357,7 +17366,7 @@
     },
     "milka_weisse_schokolade": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milka Weiße Schokolade",
       "icon": "⬜",
       "latin": "Socolata alba alpina",
@@ -17411,7 +17420,7 @@
     },
     "chocolate_ritter_marzipan": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ritter Sport Marzipan",
       "icon": "🟥",
       "latin": "Socolata cum amygdalis pasta",
@@ -17466,7 +17475,7 @@
     },
     "chocolate_ritter_knusperkeks": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ritter Sport Knusperkeks",
       "icon": "🟫",
       "latin": "Socolata cum bisctoctum",
@@ -17522,7 +17531,7 @@
   "GUMMY_BEAR": {
     "gummy_haribo_goldbaeren": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Haribo Goldbären",
       "icon": "🐻",
       "latin": "Ursuli gelati (Haribo)",
@@ -17577,7 +17586,7 @@
     },
     "gummy_sugarland_bears_lidl": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sugarland Fruchtgummibären (Lidl)",
       "icon": "🧸",
       "latin": "Ursuli gelati lidliani",
@@ -17630,7 +17639,7 @@
     },
     "gummy_haribo_color_rado": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Haribo Color-Rado",
       "icon": "🌈",
       "latin": "Varietas gelata (Haribo)",
@@ -17683,7 +17692,7 @@
     },
     "gummy_k_classic_phantasia_kaufland": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Fruchtgummi Mix (Kaufland)",
       "icon": "🐲",
       "latin": "Varietas gelata kauflandia",
@@ -17736,7 +17745,7 @@
     },
     "gummy_haribo_gluehwuermchen": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Haribo Saure Glühwürmchen",
       "icon": "🐛",
       "latin": "Lumbricus acidus (Haribo)",
@@ -17791,7 +17800,7 @@
     },
     "gummy_sugarland_sour_worms_lidl": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sugarland Saure Würmer (Lidl)",
       "icon": "🪱",
       "latin": "Lumbricus lidlianus",
@@ -17845,7 +17854,7 @@
     "--- THE_CONFECTION_LEGENDS ---": "Konfekt & Spezialformen (Pico-Balla)",
     "gummy_haribo_pico_balla": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Haribo Pico-Balla",
       "icon": "⚽",
       "latin": "Globuli multicolor (Haribo)",
@@ -17900,7 +17909,7 @@
     },
     "gummy_sugarland_mini_rolls_lidl": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sugarland Mini-Rollen (Lidl)",
       "icon": "🍥",
       "latin": "Globuli lidliani",
@@ -17954,7 +17963,7 @@
     "--- TROPICAL_AND_SOFT_GUMMIES ---": "Tropische & weiche Texturen (Tropifrutti)",
     "gummy_haribo_tropifrutti": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Haribo Tropifrutti",
       "icon": "🌴",
       "latin": "Fructus tropici gelati",
@@ -18012,7 +18021,7 @@
     },
     "gummy_haribo_pharsich_ringe": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Haribo Pfirsiche",
       "icon": "🍑",
       "latin": "Persica gelata",
@@ -18066,7 +18075,7 @@
     "--- CHEWY_POWER ---": "Kaubonbons (Maoam)",
     "chewy_maoam_bloxx": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Maoam Bloxx",
       "icon": "🍬",
       "latin": "Masticabile (Maoam)",
@@ -18120,7 +18129,7 @@
     },
     "marshmallow_haribo_chamallows": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Haribo Chamallows (Pink & White)",
       "icon": "☁️",
       "latin": "Althaea gelata (Haribo)",
@@ -18175,7 +18184,7 @@
     },
     "marshmallow_sugarland_bbq_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sugarland BBQ Marshmallows (Lidl)",
       "icon": "🔥",
       "latin": "Althaea gigas lidliana",
@@ -18231,7 +18240,7 @@
     "--- POTATO_CHIP_BENCHMARKS ---": "Kartoffelchips (Paprika, Salzig, Chakalaka)",
     "chips_funny_frisch_paprika": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "funny-frisch Chipsfrisch (Ungarisch)",
       "icon": "🍟",
       "latin": "Solanum crispum hungaricum",
@@ -18286,7 +18295,7 @@
     },
     "chips_funny_frisch_chakalaka": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "funny-frisch Chakalaka",
       "icon": "🇿🇦",
       "latin": "Solanum crispum africanum",
@@ -18342,7 +18351,7 @@
     },
     "chips_crusti_croc_paprika_lidl": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Crusti Croc Paprika (Lidl)",
       "icon": "🥔",
       "latin": "Solanum crispum lidlianum",
@@ -18396,7 +18405,7 @@
     "--- EXTRUDED_SPECIALS ---": "Extruder-Snacks (Bacon & Zwiebel)",
     "snack_bacon_chips_k_classic": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Bacon Snacks",
       "icon": "🥓",
       "latin": "Triticum crustum fumosum",
@@ -18452,7 +18461,7 @@
     },
     "snack_onion_rings_penny": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Penny Zwiebelringe",
       "icon": "🧅",
       "latin": "Allium cepa crustum",
@@ -18506,7 +18515,7 @@
     "--- TORTILLA_AND_NACHO_MATRIX ---": "Tortilla-Chips & Dips (Mais-Fokus)",
     "tortilla_doritos_nacho_cheese": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Doritos Nacho Cheese",
       "icon": "📐",
       "latin": "Zea mays socolata (Doritos)",
@@ -18561,7 +18570,7 @@
     },
     "tortilla_chio_salted": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chio Tortilla Chips (Salted)",
       "icon": "🌽",
       "latin": "Zea mays salsa",
@@ -18619,7 +18628,7 @@
     "--- NACHO_DIP_COUNCIL ---": "Nacho-Saucen (Käse, Salsa, Guacamole)",
     "dip_chio_cheese": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chio Dip! Cheese",
       "icon": "🧀",
       "latin": "Emulsio casei (Chio)",
@@ -18672,7 +18681,7 @@
     },
     "dip_k_classic_salsa_hot": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Salsa Dip (Scharf)",
       "icon": "🌶️",
       "latin": "Salsa lycopersici acris",
@@ -18775,7 +18784,8 @@
       "energy": {
         "kcal": 385,
         "kj": 1611
-      }
+      },
+      "unit_type": "100g"
     },
     "sauce_steak_kania_lidl": {
       "label": "Kania Steak Sauce",
@@ -18826,7 +18836,8 @@
       "energy": {
         "kcal": 115,
         "kj": 481
-      }
+      },
+      "unit_type": "100g"
     },
     "sauce_cocktail_kania_lidl": {
       "label": "Kania Cocktail Sauce",
@@ -18877,7 +18888,8 @@
       "energy": {
         "kcal": 412,
         "kj": 1724
-      }
+      },
+      "unit_type": "100g"
     },
     "--- VITASIA_ASIAN_SELECTION ---": "Vitasia (Lidls Asien-Marke)",
     "sauce_sweet_chili_vitasia": {
@@ -18931,7 +18943,8 @@
       "energy": {
         "kcal": 185,
         "kj": 774
-      }
+      },
+      "unit_type": "100g"
     },
     "sauce_teriyaki_vitasia": {
       "label": "Vitasia Teriyaki Sauce / Marinade",
@@ -18983,7 +18996,8 @@
       "energy": {
         "kcal": 160,
         "kj": 669
-      }
+      },
+      "unit_type": "100g"
     },
     "sauce_peanut_vitasia": {
       "label": "Vitasia Erdnuss Sauce (Satay)",
@@ -19035,7 +19049,8 @@
       "energy": {
         "kcal": 280,
         "kj": 1172
-      }
+      },
+      "unit_type": "100g"
     },
     "--- LIDL_SPECIAL_HITS ---": "Besondere Lidl-Saucen (Sriracha & Co.)",
     "sauce_sriracha_vitasia_lidl": {
@@ -19087,14 +19102,15 @@
       "energy": {
         "kcal": 142,
         "kj": 594
-      }
+      },
+      "unit_type": "100g"
     }
   },
   "chips": {
     "--- THE_RING_COUNCIL ---": "Ring-Snacks (Extrudierte Kartoffelringe)",
     "snack_funny_frisch_ringli": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "funny-frisch Ringli",
       "icon": "💍",
       "latin": "Anulus crispus (funny)",
@@ -19149,7 +19165,7 @@
     },
     "snack_crusti_croc_rings_lidl": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Crusti Croc Kartoffelringe (Lidl)",
       "icon": "⭕",
       "latin": "Anulus crispus lidlianus",
@@ -19203,7 +19219,7 @@
     "--- THE_STICK_AND_FRIES_FACTION ---": "Pommes-Snacks & Sticks (Stäbchen-Matrix)",
     "snack_funny_frisch_pommels": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "funny-frisch Pommels (Original)",
       "icon": "🍟",
       "latin": "Solanum spongiosum",
@@ -19256,7 +19272,7 @@
     },
     "snack_lorenz_pomsticks_salted": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lorenz Pomsticks (Gesalzen)",
       "icon": "🥢",
       "latin": "Bacilli solani (Lorenz)",
@@ -19309,7 +19325,7 @@
     },
     "snack_crusti_croc_pomm_frit_lidl": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Crusti Croc Pomm-Frit (Lidl)",
       "icon": "🍟",
       "latin": "Frictis bacilli lidliani",
@@ -19363,7 +19379,7 @@
     "--- THE_CONE_AND_CUP_GANG ---": "Hütchen- & Schalen-Snacks (Dip-Optimiert)",
     "snack_lays_bugles_paprika": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lay's Bugles (Paprika)",
       "icon": "🎺",
       "latin": "Cornu zea mays (Lays)",
@@ -19417,7 +19433,7 @@
     },
     "snack_chili_cheese_nuggets_k_classic": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Chili Cheese Nuggets (Snack)",
       "icon": "🌶️",
       "latin": "Globuli casei kauflandii",
@@ -19471,7 +19487,7 @@
     "--- THE_PEANUT_ENDBOSS ---": "Nuss-Snacks (NicNacs & Co.)",
     "snack_lorenz_nicnacs": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lorenz NicNacs (The Double-Crunch)",
       "icon": "🥜",
       "latin": "Arachis tegmentum (Lorenz)",
@@ -19529,7 +19545,7 @@
     "--- THE_STICK_BENCHMARKS ---": "Salzstangen (Laugenstangen-Matrix)",
     "sticks_lorenz_saltletts": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lorenz Saltletts (Original)",
       "icon": "🥨",
       "latin": "Bacilli salis (Lorenz)",
@@ -19584,7 +19600,7 @@
     },
     "sticks_crusti_croc_lidl": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Crusti Croc Salzstangen (Lidl)",
       "icon": "🥢",
       "latin": "Bacilli salis lidliani",
@@ -19638,7 +19654,7 @@
     "--- THE_PRETZEL_ELITE ---": "Dauerbrezeln (Knoten-Matrix)",
     "pretzel_huober_schwaebische": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Huober Schwäbische Knusperbrezel",
       "icon": "🥨",
       "latin": "Anulus lixivius (Huober)",
@@ -19699,7 +19715,7 @@
     },
     "pretzel_elephant_flat_salt": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Elephant Pretzel Chips (Gesalzen)",
       "icon": "🐘",
       "latin": "Anulus planus (Elephant)",
@@ -19758,7 +19774,7 @@
     "--- THE_PARTY_MIX_UNIVERSE ---": "Gebäck-Mischungen",
     "mix_lorenz_party_world": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lorenz Party World (Mischung)",
       "icon": "🎉",
       "latin": "Varietas salis (Lorenz)",
@@ -19810,7 +19826,7 @@
     },
     "mix_crusti_croc_party_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Crusti Croc Party Mix (Lidl)",
       "icon": "🎊",
       "latin": "Varietas salis lidliana",
@@ -19866,7 +19882,7 @@
     "--- THE_HONEY_SALT_MATRIX ---": "Honig-Salz-Nüsse (Süß-Salziges High-End)",
     "nuts_ultje_honey_salt_peanuts": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "ültje Erdnüsse (Honig & Salz)",
       "icon": "🍯",
       "latin": "Arachis melle salita (Ultje)",
@@ -19922,7 +19938,7 @@
     },
     "nuts_alesto_honey_salt_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alesto Honey & Salt Peanuts (Lidl)",
       "icon": "🥜",
       "latin": "Arachis melle lidliana",
@@ -19976,7 +19992,7 @@
     "--- SPICY_AND_COATED_NUTS ---": "Gewürzte & umhüllte Nüsse (Wasabi & Chili)",
     "nuts_wasabi_peanuts_k_classic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Wasabi Erdnüsse",
       "icon": "🟢",
       "latin": "Arachis eustrema japonica",
@@ -20032,7 +20048,7 @@
     },
     "nuts_cashews_honey_salt_alesto": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alesto Cashews (Honig & Salz)",
       "icon": "🍯",
       "latin": "Anacardium melle salita",
@@ -20086,7 +20102,7 @@
     "--- THE_PURE_AND_SALTED_LORDS ---": "Klassische gesalzene Nüsse",
     "nuts_pistachios_roasted_salted": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pistazien (Geröstet & Gesalzen)",
       "icon": "🟢",
       "latin": "Pistacia vera salita",
@@ -20145,7 +20161,7 @@
     "--- THE_BAR_WARS ---": "Schokoriegel-Matrix (Marken vs. Lidl Clones)",
     "bar_snickers_original": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Snickers (Mars)",
       "icon": "🥜",
       "latin": "Socolata arachidis (Mars)",
@@ -20199,7 +20215,7 @@
     },
     "bar_choco_peanuts_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mister Choc Choco & Peanuts (Lidl)",
       "icon": "🍫",
       "latin": "Socolata arachidis lidliana",
@@ -20252,7 +20268,7 @@
     },
     "bar_twix_original": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Twix (Left & Right)",
       "icon": "🥨",
       "latin": "Bisctoctum caramelisatum (Twix)",
@@ -20305,7 +20321,7 @@
     },
     "bar_choco_biscuit_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mister Choc Choco & Biscuit (Lidl)",
       "icon": "🍪",
       "latin": "Bisctoctum socolatum lidlianum",
@@ -20359,7 +20375,7 @@
     "--- THE_COOKIE_EMPIRE ---": "Keks- & Gebäck-Matrix (Oreo & Co.)",
     "cookie_oreo_original": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Oreo (Classic)",
       "icon": "🍪",
       "latin": "Bisctoctum nigrum lacteum",
@@ -20414,7 +20430,7 @@
     },
     "cookie_neo_lidl": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sondey Neo (Lidl)",
       "icon": "🌑",
       "latin": "Bisctoctum lidlianum nigrum",
@@ -20467,7 +20483,7 @@
     },
     "cookie_prinzen_rolle": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Prinzen Rolle",
       "icon": "🤴",
       "latin": "Bisctoctum nobile (DeBeukelaer)",
@@ -20521,7 +20537,7 @@
     "--- FRESHNESS_AND_GUMS ---": "Atemfrische & Kaugummi (Funktionale Süße)",
     "gum_airwaves_menthol": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Airwaves Menthol & Eukalyptus",
       "icon": "🌀",
       "latin": "Masticabile mentholatum",
@@ -20576,7 +20592,7 @@
     },
     "gum_jetgum_menthol_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Jetgum Menthol (Lidl)",
       "icon": "❄️",
       "latin": "Masticabile lidlianum",
@@ -20632,7 +20648,7 @@
     "--- THE_COLORFUL_BUTTON_WARS ---": "Schokolinsen (M&M's vs. Smarties vs. Lidl)",
     "choco_m_and_ms_peanut": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "M&M's Peanut",
       "icon": "🥜",
       "latin": "Arachis socolata (Mars)",
@@ -20686,7 +20702,7 @@
     },
     "choco_mister_choc_peanuts_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mister Choc Choco-Linsen (Erdnuss)",
       "icon": "🍭",
       "latin": "Arachis lidliana socolata",
@@ -20739,7 +20755,7 @@
     },
     "choco_smarties_classic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Smarties",
       "icon": "🔴",
       "latin": "Globuli socolata (Nestle)",
@@ -20793,7 +20809,7 @@
     "--- THE_MODERN_PROTEIN_SNACKS ---": "Protein-Riegel (2026 Fitness-Standard)",
     "bar_protein_lidl_high_50": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lidl High Protein Bar (50%)",
       "icon": "💪",
       "latin": "Bacillus proteinus lidlianus",
@@ -20849,7 +20865,7 @@
     "--- THE_FRUIT_CHEW_LEGENDS ---": "Fruchtige Kaubonbons (Skittles & Co.)",
     "chew_skittles_original": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Skittles (Original)",
       "icon": "🌈",
       "latin": "Globuli fructosi (Mars)",
@@ -20911,7 +20927,7 @@
     "--- THE_BLUE_ANTIOXIDANTS ---": "Bio-Heidelbeeren (Blaubeeren - Anthocyan-Power)",
     "tk_bio_blueberries_alnatura": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alnatura Bio Heidelbeeren (TK)",
       "icon": "🫐",
       "latin": "Vaccinium myrtillus (Frozen)",
@@ -20971,7 +20987,7 @@
     },
     "tk_bio_blueberries_lidl_organic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lidl Bio Organic Heidelbeeren",
       "icon": "🔵",
       "latin": "Vaccinium lidlianum bio",
@@ -21025,7 +21041,7 @@
     "--- THE_FRAGILE_RUBIES ---": "Bio-Himbeeren (Die empfindliche Elite)",
     "tk_bio_raspberries_k_bio": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Bio Himbeeren (TK)",
       "icon": "🍓",
       "latin": "Rubus idaeus (Frozen)",
@@ -21080,7 +21096,7 @@
     "--- THE_ULTIMATE_SMOOTHIE_BASE ---": "Bio-Beerenmischungen (Diversität)",
     "tk_bio_berry_mix_alnatura": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alnatura Bio Beerenmischung",
       "icon": "🥣",
       "latin": "Mistura fructus silvestris",
@@ -21137,7 +21153,7 @@
     },
     "tk_bio_berry_mix_freshona_lidl": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Freshona Bio Beerenmischung (Lidl)",
       "icon": "🥤",
       "latin": "Mistura lidliana bio",
@@ -21191,7 +21207,7 @@
     "--- KAUFLAND_K_CLASSIC_POWER ---": "K-Classic (Kaufland Standard-Sortiment)",
     "tk_raspberries_k_classic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Himbeeren (TK)",
       "icon": "🍓",
       "latin": "Rubus idaeus (Standard)",
@@ -21245,7 +21261,7 @@
     },
     "tk_berry_mix_k_classic_family": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Beerenmischung (750g)",
       "icon": "🥣",
       "latin": "Mistura fructus (Family Pack)",
@@ -21299,7 +21315,7 @@
     "--- REWE_AND_EDEKA_PREMIUM ---": "REWE Beste Wahl & EDEKA (Qualitäts-Fokus)",
     "tk_wild_blueberries_rewe_beste_wahl": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "REWE Beste Wahl Wald-Heidelbeeren",
       "icon": "🫐",
       "latin": "Vaccinium myrtillus (Wild)",
@@ -21354,7 +21370,7 @@
     },
     "tk_strawberries_gut_guenstig_edeka": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gut & Günstig Erdbeeren (EDEKA)",
       "icon": "🍓",
       "latin": "Fragaria ananassa (Frozen)",
@@ -21408,7 +21424,7 @@
     "--- THE_BRAMBLE_ELITE ---": "Brombeeren (Struktur & Eisen)",
     "tk_blackberries_bio_organic_lidl": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lidl Bio Organic Brombeeren",
       "icon": "🍇",
       "latin": "Rubus fruticosus (Bio)",
@@ -21463,7 +21479,7 @@
     "--- THE_SPINACH_EMPIRE ---": "Spinat-Varianten (Eisen & Folsäure)",
     "tk_spinach_iglo_rahm": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Rahm-Spinat (mit dem Blubb)",
       "icon": "🍃",
       "latin": "Spinacia oleracea cremosa",
@@ -21519,7 +21535,7 @@
     },
     "tk_spinach_bio_blatt_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lidl Bio Organic Blattspinat",
       "icon": "🌿",
       "latin": "Spinacia oleracea (Bio)",
@@ -21574,7 +21590,7 @@
     "--- THE_GREEN_PEARLS ---": "Erbsen (Protein-Hämmer aus dem Frost)",
     "tk_peas_iglo_gartenerbsen": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Gartenerbsen (Extra fein)",
       "icon": "🟢",
       "latin": "Pisum sativum (Iglo)",
@@ -21629,7 +21645,7 @@
     },
     "tk_peas_k_classic_kaufland": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Erbsen (Junge Erbsen)",
       "icon": "🌳",
       "latin": "Pisum sativum kauflandia",
@@ -21683,7 +21699,7 @@
     "--- THE_PAN_READY_ELITE ---": "Pfannengemüse (Mischungen & Würze)",
     "tk_pan_veg_frosta_asia": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Frosta Pfannengemüse (Asia Mix)",
       "icon": "🥢",
       "latin": "Mistura vegetabilis asiatica",
@@ -21740,7 +21756,7 @@
     },
     "tk_broccoli_bio_k_bio": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Bio Broccoli Röschen",
       "icon": "🥦",
       "latin": "Brassica oleracea italica",
@@ -21797,7 +21813,7 @@
     "--- THE_SOUP_FOUNDATION ---": "Suppengrün & Basis-Mixe (Aroma-Konzentrat)",
     "tk_soup_greens_freshona_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Freshona Suppengrün (TK)",
       "icon": "🥣",
       "latin": "Mistura holeribus suppae",
@@ -21853,7 +21869,7 @@
     "--- THE_FLORET_ELITE ---": "Brokkoli & Blumenkohl (Kohl-Power)",
     "tk_broccoli_gut_guenstig_edeka": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gut & Günstig Broccoli (Röschen)",
       "icon": "🥦",
       "latin": "Brassica oleracea italica (Standard)",
@@ -21907,7 +21923,7 @@
     },
     "tk_cauliflower_k_classic_kaufland": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Blumenkohl (TK)",
       "icon": "☁️",
       "latin": "Brassica oleracea botrytis",
@@ -21962,7 +21978,7 @@
     "--- THE_GREEN_BEAM ---": "Prinzessbohnen & Rosenkohl (Struktur-Gemüse)",
     "tk_green_beans_rewe_beste_wahl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "REWE Beste Wahl Prinzessbohnen",
       "icon": "🥢",
       "latin": "Phaseolus vulgaris (Fine)",
@@ -22016,7 +22032,7 @@
     },
     "tk_brussels_sprouts_iglo": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Rosenkohl",
       "icon": "🌳",
       "latin": "Brassica oleracea gemmifera",
@@ -22071,7 +22087,7 @@
     "--- THE_ROYAL_MIXES ---": "Rahm- & Königsgemüse (Klassische Mischungen)",
     "tk_veg_iglo_koenigsgemuese": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Königsgemüse (Rahm-Version)",
       "icon": "👑",
       "latin": "Mistura vegetabilis regia",
@@ -22125,7 +22141,7 @@
     },
     "tk_veg_mix_mexican_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Freshona Mexiko-Mix (Lidl)",
       "icon": "🇲🇽",
       "latin": "Mistura mexicana lidliana",
@@ -22180,7 +22196,7 @@
     "--- THE_HERB_MATRIX ---": "TK-Kräuter (Die Aroma-Konzentrate)",
     "tk_herbs_8_mix_iglo": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo 8-Kräuter Mix",
       "icon": "🌿",
       "latin": "Mistura octo herbarum",
@@ -22234,7 +22250,7 @@
     },
     "tk_herbs_parsley_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Petersilie (TK)",
       "icon": "🍃",
       "latin": "Petroselinum crispum (Frozen)",
@@ -22287,7 +22303,7 @@
     "--- THE_ORGANIC_HERB_GARDEN ---": "Bio-Kräuter (Reinheit & Ätherische Öle)",
     "tk_bio_basil_alnatura": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alnatura Bio Basilikum (TK)",
       "icon": "🌿",
       "latin": "Ocimum basilicum (Bio)",
@@ -22345,7 +22361,7 @@
     },
     "tk_bio_dill_lidl_organic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lidl Bio Organic Dill",
       "icon": "🌿",
       "latin": "Anethum graveolens (Bio)",
@@ -22397,7 +22413,7 @@
     },
     "tk_bio_cilantro_rewe_bio": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "REWE Bio Koriander (TK)",
       "icon": "☘️",
       "latin": "Coriandrum sativum (Bio)",
@@ -22449,7 +22465,7 @@
     "--- THE_BIO_VEGGIE_SPECIALS ---": "Besondere Bio-TK-Spezialitäten",
     "tk_bio_edamame_vitasia_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vitasia Bio Edamame (Sojabohnen)",
       "icon": "🫛",
       "latin": "Glycine max (Bio)",
@@ -22504,7 +22520,7 @@
     },
     "tk_bio_corn_k_bio": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Bio Junger Zuckermais (TK)",
       "icon": "🌽",
       "latin": "Zea mays (Bio Frozen)",
@@ -22559,7 +22575,7 @@
     "--- THE_FISH_STICK_KINGDOM ---": "Fischstäbchen (Panaden-Technologie)",
     "tk_fish_sticks_iglo_classic": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Fischstäbchen (15er Pack)",
       "icon": "🐟",
       "latin": "Gadus morhua crustatus",
@@ -22613,7 +22629,7 @@
     },
     "tk_fish_sticks_ocean_sea_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ocean Sea Fischstäbchen (Lidl)",
       "icon": "🌊",
       "latin": "Gadus lidlianus crustatus",
@@ -22666,7 +22682,7 @@
     "--- THE_POTATO_ALCHYMY ---": "Pommes & Kartoffel-Specials (Stärke-Physik)",
     "tk_fries_mccain_golden_longs": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "McCain Golden Longs",
       "icon": "🍟",
       "latin": "Solanum frictum mccainium",
@@ -22720,7 +22736,7 @@
     },
     "tk_fries_harvest_basket_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Harvest Basket Backofen-Pommes (Lidl)",
       "icon": "🥔",
       "latin": "Solanum frictum lidlianum",
@@ -22772,7 +22788,7 @@
     },
     "tk_potato_wedges_k_classic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Kartoffel-Spalten (Wedges)",
       "icon": "📐",
       "latin": "Solanum cuneatum kauflandia",
@@ -22825,7 +22841,7 @@
     "--- THE_BATTER_BENCHMARKS ---": "Backfischstäbchen (Die Backteig-Elite)",
     "tk_backfisch_iglo_classic": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Backfisch-Stäbchen",
       "icon": "🥨",
       "latin": "Gadus morhua crustatus inflatus",
@@ -22879,7 +22895,7 @@
     },
     "tk_backfisch_ocean_sea_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ocean Sea Backfisch-Stäbchen (Lidl)",
       "icon": "🌊",
       "latin": "Gadus lidlianus inflatus",
@@ -22931,7 +22947,7 @@
     },
     "tk_backfisch_k_classic_kaufland": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Backfisch-Stäbchen",
       "icon": "⚓",
       "latin": "Gadus kauflandia inflatus",
@@ -22984,7 +23000,7 @@
     "--- THE_GOURMET_FISH_FILES ---": "Besondere Fisch-Spezialitäten (TK)",
     "tk_schlemmerfilet_bordelaise_iglo": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Schlemmerfilet Bordelaise",
       "icon": "🥘",
       "latin": "Gadus morhua bordelaise",
@@ -23038,7 +23054,7 @@
     "--- THE_CEPHALOPOD_CHAMPIONS ---": "Calamari & Tintenfisch (Textur-Spezialisten)",
     "tk_calamari_rings_ocean_sea_lidl": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ocean Sea Tintenfischringe (im Backteig)",
       "icon": "🦑",
       "latin": "Illex argentinus crustatus",
@@ -23092,7 +23108,7 @@
     "--- THE_SHRIMP_SQUAD ---": "Garnelen & Shrimps (Protein-Gourmets)",
     "tk_party_shrimps_k_classic": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Party-Garnelen (gekocht & geschält)",
       "icon": "🦐",
       "latin": "Penaeus monodon (Frozen)",
@@ -23145,7 +23161,7 @@
     "--- THE_ASIAN_CRUNCH_MATRIX ---": "Frühlingsrollen (Vitasia-Spezial)",
     "tk_spring_rolls_vitasia_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vitasia Mini-Frühlingsrollen (Gemüse)",
       "icon": "🥢",
       "latin": "Mistura crustata asiatica",
@@ -23199,7 +23215,7 @@
     "--- THE_POULTRY_POWER ---": "Hähnchen-Snacks (Nuggets & Co.)",
     "tk_chicken_nuggets_iglo_classic": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Chicken Nuggets",
       "icon": "🍗",
       "latin": "Gallus gallus crustatus",
@@ -23254,7 +23270,7 @@
     "--- THE_CLASSIC_CUTS ---": "Standard & Wellenschnitt (Die Allrounder)",
     "tk_fries_mccain_123_original": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "McCain 1-2-3 Fries (Original)",
       "icon": "🍟",
       "latin": "Solanum frictum classicum",
@@ -23308,7 +23324,7 @@
     },
     "tk_fries_crinkle_cut_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Harvest Basket Wellenschnitt-Pommes (Lidl)",
       "icon": "〰️",
       "latin": "Solanum frictum undulatum",
@@ -23362,7 +23378,7 @@
     "--- THE_STEAKHOUSE_AND_THIN_FACTION ---": "Steakhouse & Julienne (Gourmet vs. Fast Food)",
     "tk_fries_steakhouse_k_classic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Steakhouse Pommes",
       "icon": "🥩",
       "latin": "Solanum frictum latum",
@@ -23415,7 +23431,7 @@
     "--- THE_SPECIAL_SHAPES ---": "Curly Fries & Gitterkartoffeln (Textur-Champions)",
     "tk_fries_curly_mccain_spicy": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "McCain Curly Fries (Spicy)",
       "icon": "🌀",
       "latin": "Solanum frictum spiralis",
@@ -23470,7 +23486,7 @@
     "--- THE_MODERN_ALTERNATIVES ---": "Süßkartoffel-Pommes (The High-Fiber Choice)",
     "tk_fries_sweet_potato_lidl": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Harvest Basket Süßkartoffel Pommes",
       "icon": "🍠",
       "latin": "Ipomoea batatas frictum",
@@ -23525,7 +23541,7 @@
     "--- THE_KROKETTEN_KINGDOM ---": "Kroketten (Gepresste Kartoffel-Eleganz)",
     "tk_kroketten_harvest_basket_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Harvest Basket Kroketten (Lidl)",
       "icon": "🟡",
       "latin": "Solanum crustatum lidlianum",
@@ -23578,7 +23594,7 @@
     "--- THE_POCKET_MATRIX ---": "Kartoffeltaschen (Gefüllte Spezialitäten)",
     "tk_kartoffeltaschen_frischkaese_penny": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Penny Kartoffeltaschen (Frischkäse & Kräuter)",
       "icon": "📁",
       "latin": "Solanum frictum impletum",
@@ -23632,7 +23648,7 @@
     "--- THE_ROYAL_SHAPES ---": "Herzoginkartoffeln & Gitter (Form-Physik)",
     "tk_herzoginkartoffeln_harvest_basket_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Harvest Basket Herzoginkartoffeln",
       "icon": "👑",
       "latin": "Solanum ducissae lidlianum",
@@ -23685,7 +23701,7 @@
     "--- THE_GRID_AND_WAFFLE ---": "Gitterkartoffeln (Maximale Oberfläche)",
     "tk_gitterkartoffeln_k_classic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Gitterkartoffeln (Criss-Cross)",
       "icon": "🏁",
       "latin": "Solanum cancellatum kauflandia",
@@ -23738,7 +23754,7 @@
     "--- THE_PUFFER_PARADE ---": "Kartoffelpuffer / Reibekuchen (Der Klassiker)",
     "tk_reibekuchen_harvest_basket_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Harvest Basket Kartoffelpuffer (Hausmacher Art)",
       "icon": "🥞",
       "latin": "Solanum frictum avitum lidlianum",
@@ -23792,7 +23808,7 @@
     },
     "tk_reibekuchen_penny_omas_art": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Penny Reibekuchen (Nach Omas Art)",
       "icon": "👵",
       "latin": "Solanum frictum avitum pennia",
@@ -23845,7 +23861,7 @@
     "--- THE_ROESTI_REVOLUTION ---": "Rösti-Ecken & Taler (Schweizer Stil)",
     "tk_roesti_ecken_k_classic_kaufland": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Rösti-Ecken",
       "icon": "📐",
       "latin": "Solanum frictum helveticum",
@@ -23897,7 +23913,7 @@
     },
     "tk_roesti_taler_alnatura_bio": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alnatura Bio Rösti-Taler",
       "icon": "🌱",
       "latin": "Solanum helveticum bio",
@@ -23956,7 +23972,7 @@
     "--- THE_PREMIUM_BENCHMARK ---": "Gustavo Gusto (Die 'Wie-beim-Italiener' Technologie)",
     "tk_pizza_gustavo_gusto_margherita": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gustavo Gusto Pizza Margherita",
       "icon": "🍕",
       "latin": "Pizza premium gigantus",
@@ -24015,7 +24031,7 @@
     "--- THE_CRISP_CLASSICS ---": "Dr. Oetker & Wagner (Die Marktführer)",
     "tk_pizza_oetker_ristorante_salami": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dr. Oetker Ristorante (Salami)",
       "icon": "🇮🇹",
       "latin": "Pizza crispa tenuissima",
@@ -24067,7 +24083,7 @@
     },
     "tk_pizza_wagner_steinofen_speciale": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wagner Steinofen (Speciale)",
       "icon": "🔥",
       "latin": "Pizza petra-furnus",
@@ -24120,7 +24136,7 @@
     "--- THE_STORE_BRAND_ASSASSINS ---": "Lidl & Penny Eigenmarken (Die Klone)",
     "tk_pizza_alfredo_deliziosa_lidl": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Trattoria Alfredo (Deliziosa) - Lidl",
       "icon": "🛒",
       "latin": "Pizza lidliana economica",
@@ -24172,7 +24188,7 @@
     },
     "tk_pizza_san_fabio_penny": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "San Fabio Pizza (Steinofen) - Penny",
       "icon": "🪙",
       "latin": "Pizza pennia economica",
@@ -24227,7 +24243,7 @@
     "--- THE_TEXMEX_ALLIANCE ---": "Tex-Mex & Spicy Pizzen (Die Party-Matrix)",
     "tk_pizza_tex_mex_rewe_beste_wahl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "REWE Beste Wahl Pizza Tex-Mex",
       "icon": "🌶️",
       "latin": "Pizza texana mexicana",
@@ -24280,7 +24296,7 @@
     },
     "tk_pizza_inferno_alfredo_lidl": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Trattoria Alfredo Inferno (Lidl)",
       "icon": "🔥",
       "latin": "Pizza infernalis lidliana",
@@ -24334,7 +24350,7 @@
     "--- THE_AMERICAN_HEAVYWEIGHTS ---": "American Style (Pan Pizza Technologie)",
     "tk_pizza_american_supreme_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "McEnnandy American Style Supreme (Lidl)",
       "icon": "🇺🇸",
       "latin": "Pizza americana spissa",
@@ -24388,7 +24404,7 @@
     "--- THE_BAGUETTE_BENCHMARKS ---": "TK-Baguettes (Brot-Matrix)",
     "tk_baguette_oetker_bistro_salami": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dr. Oetker Bistro Baguette (Salami)",
       "icon": "🥖",
       "latin": "Panis gallicus crustatus",
@@ -24441,7 +24457,7 @@
     },
     "tk_baguette_alfredo_lidl": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Trattoria Alfredo Baguettes (Lidl)",
       "icon": "🛒",
       "latin": "Panis gallicus lidlianus",
@@ -24494,7 +24510,7 @@
     "--- THE_MINI_PIZZA_LORDS ---": "Picolinis & Mini-Pizzen (Fingerfood-Physik)",
     "tk_picolinis_wagner_salami": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wagner Original Picolinis (Salami)",
       "icon": "🍕",
       "latin": "Pizza minima wagneria",
@@ -24546,7 +24562,7 @@
     },
     "tk_mini_pizzen_san_fabio_penny": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "San Fabio Mini-Pizzen (Penny)",
       "icon": "🪙",
       "latin": "Pizza minima pennia",
@@ -24598,7 +24614,7 @@
     },
     "tk_pizzetta_k_classic_kaufland": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Pizzetta (Mini-Pizzen)",
       "icon": "🧱",
       "latin": "Pizza minima kauflandia",
@@ -24653,7 +24669,7 @@
     "--- THE_SKILLET_GIGANTS ---": "Pfannengerichte (Beutel-Technologie)",
     "tk_pan_frosta_paella": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Frosta Paella (Original)",
       "icon": "🥘",
       "latin": "Oryza marina frostia",
@@ -24707,7 +24723,7 @@
     },
     "tk_pan_vitasia_nasi_goreng_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vitasia Nasi Goreng (Lidl)",
       "icon": "🥢",
       "latin": "Oryza indonesica lidliana",
@@ -24760,7 +24776,7 @@
     "--- THE_OVEN_TRAY_MASTERS ---": "Schalengerichte (Lasagne & Co.)",
     "tk_lasagne_bolognese_k_classic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Lasagne Bolognese (400g/1kg)",
       "icon": "🍝",
       "latin": "Lasagna bovis kauflandia",
@@ -24813,7 +24829,7 @@
     },
     "tk_huehnerfrikassee_iglo": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iglo Hühnerfrikassee (mit Reis)",
       "icon": "🍗",
       "latin": "Fricassee galli iglonis",
@@ -24868,7 +24884,7 @@
     "--- THE_SUNDAY_SAVIORS ---": "TK-Backstube (Brötchen & Laugengebäck)",
     "tk_bread_oetker_goldstuecke": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Coppenrath & Wiese Goldstücke (Weizen)",
       "icon": "🥖",
       "latin": "Panis aureus coppenrathius",
@@ -24921,7 +24937,7 @@
     },
     "tk_bread_grafschafter_goldstuecke_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grafschafter Goldstücke (Lidl)",
       "icon": "🛒",
       "latin": "Panis aureus lidlianus",
@@ -24973,7 +24989,7 @@
     },
     "tk_pretzels_ditsch_classic": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ditsch Laugenbrezeln (zum Selberbacken)",
       "icon": "🥨",
       "latin": "Circulus salis ditschius",
@@ -25027,7 +25043,7 @@
     "--- THE_SWEET_TEMPTATIONS ---": "TK-Desserts & Torten (Zucker-Physik)",
     "tk_cake_benjamin_bluemchen": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Benjamin Blümchen Torte (Coppenrath & Wiese)",
       "icon": "🐘",
       "latin": "Bolo benjamini blumchenis",
@@ -25080,7 +25096,7 @@
     },
     "tk_apple_strudel_coppenrath_classic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Coppenrath & Wiese Apfelstrudel",
       "icon": "🥧",
       "latin": "Strudel pomi coppenrathius",
@@ -25132,7 +25148,7 @@
     },
     "tk_cream_puffs_windbeutel_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Eridanous Mini-Windbeutel (Lidl)",
       "icon": "🧁",
       "latin": "Sphaera cremosa lidliana",
@@ -25188,7 +25204,7 @@
     "--- K_CLASSIC_MORNING_POWER ---": "Kaufland Backstube (Infrastruktur)",
     "tk_bread_k_classic_weizenbroetchen": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Weizenbrötchen (zum Fertigbacken)",
       "icon": "🥖",
       "latin": "Panis kauflandia aureus",
@@ -25240,7 +25256,7 @@
     },
     "tk_pretzels_k_classic_laugen": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Laugenbrezeln",
       "icon": "🥨",
       "latin": "Circulus salis kauflandia",
@@ -25294,7 +25310,7 @@
     "--- K_CLASSIC_SWEET_TREATS ---": "Kaufland Süßspeisen (Dessert-Reserve)",
     "tk_windbeutel_k_classic_mini": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Mini-Windbeutel",
       "icon": "🧁",
       "latin": "Sphaera cremosa kauflandia",
@@ -25346,7 +25362,7 @@
     },
     "tk_apple_strudel_k_classic": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Apfelstrudel (600g)",
       "icon": "🥧",
       "latin": "Strudel pomi kauflandia",
@@ -25400,7 +25416,7 @@
   "diy_beauty_tea": {
     "chamomile_tea_diy": {
       "unit_price": 1.5,
-      "unit_type": "Packung",
+      "unit_type": "100g",
       "label": "Chamomile Tea",
       "icon": "ðŸŒ¼",
       "val": {

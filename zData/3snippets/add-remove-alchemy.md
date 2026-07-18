@@ -39,7 +39,8 @@ const options = Object.entries(foodDb).map(([key, item]) => {
     return {
         display: `${item.icon || "📦"} ${localName} <${item.silo}>`,
         value: key,
-        label: localName
+        label: localName,
+        unit: item.unit_type || "100g"
     };
 });
 
@@ -47,18 +48,21 @@ const actionWord = targetProperty === "food_add" ? "ADD" : "REMOVE";
 const selectedAtom = await tp.system.suggester(options.map(o => o.display), options, false, `Select Atom to ${actionWord}:`);
 if (!selectedAtom) return;
 
-// 🔱 4. FRONTMATTER INJECTION 
+// 🔱 3.5 AMOUNT — factor 1.0 = one base unit of the item (100g / 100ml / 1 piece); stored as `id|amount`
+const uDesc = selectedAtom.unit === "100ml" ? "100ml" : (selectedAtom.unit === "piece" ? "1 piece" : "100g");
+let amtStr = await tp.system.prompt(`Amount of ${selectedAtom.label}? (1.0 = ${uDesc})`, "1.0");
+if (amtStr === null) return;
+let amt = Number(String(amtStr).replace(",", ".")) || 1;
+const entry = `${selectedAtom.value}|${amt}`;
+
+// 🔱 4. FRONTMATTER INJECTION
 await app.fileManager.processFrontMatter(activeFile, (fm) => {
     if (!fm[targetProperty]) fm[targetProperty] = [];
     if (!Array.isArray(fm[targetProperty])) fm[targetProperty] = [fm[targetProperty]];
-    
-    // Verhindert Duplikate am selben Tag
-    if (!fm[targetProperty].includes(selectedAtom.value)) {
-        fm[targetProperty].push(selectedAtom.value);
-    }
+    fm[targetProperty].push(entry);
 });
 
-// Feedback
 const icon = targetProperty === "food_add" ? "➕" : "➖";
-new Notice(`${icon} 🧬 ${selectedAtom.label} im heutigen Log verzeichnet!`);
+const amtShown = selectedAtom.unit === "piece" ? `${amt}×` : `${Math.round(amt * 100)}${selectedAtom.unit === "100ml" ? "ml" : "g"}`;
+new Notice(`${icon} 🧬 ${selectedAtom.label} (${amtShown}) logged!`);
 -%>

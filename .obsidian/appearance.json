@@ -1,13 +1,13 @@
 {
-  "theme": "system",
+  "theme": "moonstone",
   "enabledCssSnippets": [
     "MCL Multi Column",
     "MCL Wide Views",
     "MCL Gallery Cards",
     "dashboard",
     "supercharged-links-gen",
-    "background",
-    "nolinenum"
+    "nolinenum",
+    "background"
   ],
   "cssTheme": "AnuPpuccin",
   "showViewHeader": true,

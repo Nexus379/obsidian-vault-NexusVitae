@@ -87,7 +87,7 @@ cssclasses:
 
 # 💪 Nexus Fitness Routine
 
-`BUTTON[setup-fitness]`  `BUTTON[generate-workout]` `BUTTON[generate-workout-log]` `BUTTON[edit-fitness]` `BUTTON[reset-schedule]`
+`BUTTON[setup-fitness]`  `BUTTON[generate-workout]` `BUTTON[generate-workout-log]` `BUTTON[edit-fitness]` `BUTTON[reset-schedule]` `BUTTON[snapshot-week-fitness]`
 
 ```dataviewjs
 const c = dv.current();

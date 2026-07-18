@@ -85,9 +85,14 @@ review:
 > [!multi-column]
 >
 > > [!todo|wide-1] Agenda & Objectives
-> > - [ ] **A1:** > > - [ ] **A2:** >
+> > - [ ] **A1:** 
+> > - [ ] **A2:** 
+>
 > > [!abstract|wide-1] Decisions & Actions
-> > - [ ] **Action:** > > - [ ] **Action:** ## 📝 Meeting Notes
+> > - [ ] **Action:** 
+> > - [ ] **Action:** 
+
+## 📝 Meeting Notes
 - 
 
 ## 🛠️ Workload / Pensum

@@ -1,7 +1,7 @@
 <%-*
 // 🔱 1. NEXUS-DATA-SYNC (Inherit from Router/Prompt)
 const persona = tp.variables.persona || "alchemist"; 
-const area = tp.variables.currentArea || tp.variables.area || "4_Organize";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/4organize";
 const icon = "📥"; 
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;

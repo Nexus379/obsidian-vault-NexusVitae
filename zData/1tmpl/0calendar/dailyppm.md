@@ -1,7 +1,7 @@
 <%-*
 // 🔱 1. INITIALIZATION & DATA SYNC
 if (!tp.variables) tp.variables = {};
-const dv = app.plugins.plugins.dataview.api;
+const dv = app.plugins.plugins.dataview?.api;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 
 // 🔱 2. SMART CLEAN & FALLBACK (Für Direkt-Start ohne Prompt)
@@ -119,6 +119,18 @@ if (dv) {
             }
         } catch(e) { console.error("Engine Load Error", e); }
 
+        // persona → axis bridge (same load pattern): pull ALL PPM-axis routines, not just "worker"
+        let getAxis = (p) => "Unknown";
+        try {
+            const pFile = app.vault.getAbstractFileByPath("zData/2scripts/personaEngine.js");
+            if (pFile) {
+                const pcode = await app.vault.read(pFile);
+                const pmod = { exports: {} };
+                new Function("module", "exports", pcode)(pmod, pmod.exports);
+                if (typeof pmod.exports === "function") getAxis = pmod.exports().getAxis;
+            }
+        } catch(e) { console.error("Persona Engine Load Error", e); }
+
         const totalPeriods = Number(routinePage.rt_periods) || 14;
         
         for (let i = 1; i <= totalPeriods; i++) {
@@ -129,7 +141,7 @@ if (dv) {
                 let detail = parts.length > 1 ? ` (${parts.slice(1).join(" ")})` : "";
                 
                 // 🔥 DER FILTER: Zieht NUR PPM/Arbeits-Aufgaben (Kein Haushalt, kein Studium!)
-                if (engineData && engineData[baseKey] && engineData[baseKey].group === "Work & Projects") {
+                if (engineData && engineData[baseKey] && getAxis(engineData[baseKey].persona) === "PPM") {
                     let label = engineData[baseKey].label; 
                     let icon = engineData[baseKey].icon || "💼";
                     workTasks.push(`${icon} ${label}${detail}`);
@@ -185,7 +197,7 @@ persona: organizer
 energy: "<%- energy %>"
 cal0: 
 stars1:
-area2: ["4_Organize"]
+area2: ["#2area/4organize"]
 project3:
 task4:
 note5: []
@@ -249,6 +261,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >
 > > > [!blank|wide-1] 
 > > > **Main Tasks**
+> > > <small style="opacity:0.45;font-style:italic;">(auto-filled from today's routine PPM blocks — empty = none scheduled, or the slot isn't tagged with a PPM persona)</small>
 > > > 1. **`INPUT[text:maintask1]`** <span style="font-size: 0.79em; opacity: 0.7;">🎯</span>
 > > > 2. **`INPUT[text:maintask2]`** <span style="font-size: 0.79em; opacity: 0.7;">🎯</span>
 > > > 3. `INPUT[text:maintask3]`
@@ -294,11 +307,20 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 ##### Sidequest /Braindump
 - 
+> [!todo]- 📝 Open Ad-Hoc Tasks (Past PPMs)
+> <small style="opacity:0.45;font-style:italic;">(unchecked tasks pulled from past PPM logs)</small>
+> ```dataview
+> TASK
+> FROM "0_Calendar/2_PPM"
+> WHERE !completed 
+> AND file.name != this.file.name
+> AND text != ""
+> GROUP BY file.link
+> ```
 
-
-## 🛠️ Management & Fokus
+## 🛠️ Management & Focus
 > [!multi-column]
-> > [!calendar|wide-0] ⏳ Zeit-Matrix
+> > [!calendar|wide-0] ⏳ Time Matrix
 > > ```dataviewjs
 > > (() => {
 > >    if (dv.viewCount && dv.viewCount > 1) return; // ruhig bleiben
@@ -422,7 +444,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 <%-* if (Number(energy) >= 5) { -%>
 
-> [!project] 🚀 Project Nexus (Level 5 Energy)
+> [!project]- 🚀 Project Nexus (Level 5 Energy)
 > ```dataviewjs
 > const projs = dv.pages('#3project');
 > 
@@ -502,6 +524,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > [!multi-column]
 >
 > > [!todo|flat] 💸 Horizon 0: To-Buy
+> > <small style="opacity:0.45;font-style:italic;">(open #4task/tobuy items — empty = nothing queued, or tasks not tagged tobuy)</small>
 > > ```dataview
 > > TABLE WITHOUT ID
 > >   file.link AS "Item",
@@ -513,6 +536,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > ```
 >
 > > [!money|flat] 💎 Horizon 1: Pro-Buy
+> > <small style="opacity:0.45;font-style:italic;">(active #3project/probuy — empty = none active)</small>
 > > ```dataview
 > > TABLE WITHOUT ID
 > >   file.link AS "Acquisition",
@@ -523,7 +547,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > SORT due ASC
 > > ```
 >
->[[2_Areas/4_Organize/Household/Shopping_Hub|➡️ Open Central Procurement Hub]]]
+>[[2_Areas/4_Organize/Plan/Shopping_Hub|➡️ Open Central Procurement Hub]]
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 

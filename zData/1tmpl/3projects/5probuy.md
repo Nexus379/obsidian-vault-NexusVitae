@@ -86,9 +86,9 @@ review:
 > > - [ ] **R3:** Final Decision & Order
 >
 > > [!abstract|wide-1] Order Details
-> > **Tracking-Number:** > > 
+> > **Tracking-Number:** 
 > > 
-> > **Delivery Date:** > > 
+> > **Delivery Date:** 
 > > 
 > > **Acting Persona:** `<%- persona %>`
 

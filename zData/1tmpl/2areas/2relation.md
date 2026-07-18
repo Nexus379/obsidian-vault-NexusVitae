@@ -4,7 +4,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const icon = tp.variables.discIcon || tp.variables.icon || "🦄";
-const area = tp.variables.currentArea || tp.variables.area || "2_Relationship";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/2relationship";
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -73,7 +73,9 @@ review:
 > > [!love|wide-1] Connections & Exchange
 > > **Focus on the "We". Cultivating social resonance, deep conversations, and awareness for fellow human beings.**
 > > 
-> > - **Key People:** > > - **Quality Time:** > > - **Acting Persona:** `<%- persona %>`
+> > - **Key People:** 
+> > - **Quality Time:** 
+> > - **Acting Persona:** `<%- persona %>`
 >
 > > [!todo|wide-1] Standards
 > > **How do I maintain social resonance here?**
@@ -82,7 +84,7 @@ review:
 > > **What does a healthy connection in this area look like?**
 > > 
 
-## Workload / Pensum
+## Workload
 
 
 

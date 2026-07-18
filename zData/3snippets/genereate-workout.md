@@ -24,7 +24,7 @@ try {
     const tWeek = currentFm.training_week || 1;
 
     // 🧠 SMART HELPER: Exercise logic (Sets vs Seconds) & PROGRESSIVE OVERLOAD
-    const workoutFiles = app.vault.getFiles().filter(f => f.path.startsWith("0_Calendar/4_Projectlogs/Workouts/Workout_")).sort((a,b) => b.name.localeCompare(a.name));
+    const workoutFiles = app.vault.getFiles().filter(f => f.path.startsWith("0_Calendar/4_Projectlogs/Routine/") && f.name.startsWith("Workout_")).sort((a,b) => b.name.localeCompare(a.name));
 
     const getWorkout = async (region, volume, defaultSets) => {
         let available = engine.getByRegion(region);

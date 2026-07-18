@@ -95,7 +95,7 @@ review:
 > > - [ ] **M3:** Synthesis & Spaced Repetition setup (Anki)
 >
 > > [!abstract|wide-1] Target State & Context
-> > **Key Learnings:** > > 
+> > **Key Learnings:** 
 > > 
 > > **Why this topic?**
 > > 

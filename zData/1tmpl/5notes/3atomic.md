@@ -2,12 +2,12 @@
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
-const persona = tp.variables.persona || "queen_king";
 const area = tp.variables.currentArea || tp.variables.area || "";
 const sci = tp.variables.sciTag || tp.variables.sci || "#science";
 const disc = tp.variables.discTag || tp.variables.disc || "#disc";
 const icon = tp.variables.icon || "🗃️";
 const luhmannId = tp.variables.luhmannId || "";
+const p1 = tp.date.now("YYYY-MM-DD", 1); // first SRS session = tomorrow (prime-chain seed)
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -42,7 +42,11 @@ archtype:
 status: 1active
 priority:
   - "1"
-persona: "<%- persona %>"
+persona: "student"
+space_lvl: 0
+space_rank: "Ground Crew (Sprout)"
+space_date: <%- p1 %>
+lastgrade: 0
 science: ["<%- sci %>"]
 discipline: ["<%- disc %>"]
 cal0:
@@ -66,8 +70,11 @@ review:
 > Cluster: <%- sci %> | Discipline: <%- disc %>
 > > **Phase:** `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
-## 🗂️ Flashcard Content
-- **Questio (Question):** - **Responsio (Answer):** ---
+## 🗂️ Active Recall (Questio / Responsio)
+> [!question] **Questio:**
+> 
+> [!success]- **Responsio:**
+> 
 
 ## 🔗 Struktur-Kontext (LID-Automatik)
 - **Parent:** <%- pLink %>
@@ -75,6 +82,12 @@ review:
 - **Children:** `$= dv.list(dv.pages("#5note").filter(p => p.LID && p.LID.length > dv.current().LID.length && p.LID.startsWith(dv.current().LID)).file.link)`
 
 ---
+
+> [!info] 🛡️ Nexus Progression (Prime-Chain SRS)
+> **Rank:** `VIEW[{space_rank}]` `$= const icons = ["🌱","🌿","🍀","⚓","🖖","🎖️","🚢","🏛️","📡","🛰️","☄️","🌌","🛸","👁️","🌀","✨","🎭","🔱","💎","👑","🌟","🪐","🌠","🌌"]; const lvl = dv.current().space_lvl || 0; dv.span(icons[Math.min(lvl, icons.length-1)] + " **Level " + lvl + "**")`
+> 🔥 **Next Session:** `VIEW[{space_date}]`
+> 
+> `BUTTON[spaced]`
 
 ---
 [[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]

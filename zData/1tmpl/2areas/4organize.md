@@ -4,7 +4,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const icon = tp.variables.discIcon || tp.variables.icon || "🧩";
-const area = tp.variables.currentArea || tp.variables.area || "4_Organize";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/4organize";
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -77,7 +77,9 @@ review:
 > > 
 > > *The connection between Mind (above) and Matter (below). Here I create order to enable freedom.*
 > > 
-> > - **Structural Element:** > > - **What can be let go?:** > > - **Acting Persona:** `<%- persona %>`
+> > - **Structural Element:** 
+> > - **What can be let go?:** 
+> > - **Acting Persona:** `<%- persona %>`
 >
 > > [!todo|wide-1] Standards
 > > **Is the current system reducing friction or creating it?**
@@ -86,7 +88,7 @@ review:
 > > **What administrative task provides the most relief right now?**
 > > 
 
-## Workload / Pensum
+## Workload
 
 
 

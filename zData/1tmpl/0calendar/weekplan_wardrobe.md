@@ -11,7 +11,7 @@ fileTitle: "<%- tp.variables.title || (year + '-W' + kw + '_wardrobe') %>"
 arch:
   - "#0cal"
 archtype:
-  - "#0cal/7plan/wardrobe"
+  - "#0cal/7plan"
 frozen: false
 plan_year: "<%- year %>"
 plan_kw: "<%- kw %>"

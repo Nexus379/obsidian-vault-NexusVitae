@@ -4,7 +4,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const icon = tp.variables.discIcon || tp.variables.icon || "🎨";
-const area = tp.variables.currentArea || tp.variables.area || "5_Creativity";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/5creativity";
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -77,7 +77,9 @@ review:
 > > 
 > > *This is where the inner vision becomes loud. It is about authentic communication and creating something new.*
 > > 
-> > - **Medium/Project:** > > - **What needs to be spoken/created?:** > > - **Acting Persona:** `<%- persona %>`
+> > - **Medium/Project:** 
+> > - **What needs to be spoken/created?:** 
+> > - **Acting Persona:** `<%- persona %>`
 >
 > > [!todo|wide-1] Standards
 > > **Am I expressing my truth or following a trend?**
@@ -86,7 +88,7 @@ review:
 > > **Is there a "Brain-Dump" needed to clear the channel?**
 > > 
 
-## Workload / Pensum
+## Workload
 
 
 

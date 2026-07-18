@@ -1,12 +1,19 @@
 <%-*
 // 🔱 1. INITIALIZATION & DATE
-const dv = app.plugins.plugins.dataview.api;
+const dv = app.plugins.plugins.dataview?.api;
 const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
 const [yy, mm] = dateStr.split("-");
 
 // 🔱 2. ORIGIN (What does this protocol refer to?)
 let logConnect = (tp.variables && tp.variables.logConnect) ? tp.variables.logConnect : "";
 let inheritedProject = "";
+
+// SMART PATH DETECTION: created directly inside a project's Protocols folder → link the project automatically
+if (!logConnect) {
+    const _fp = tp.file.folder(true).replace(/\\/g, "/");
+    const _pm = _fp.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)\/([^/]+)/);
+    if (_pm) logConnect = `[[${_pm[2]}]]`;
+}
 
 if (!logConnect || logConnect === "MAN") {
     const manual = await tp.system.prompt("🔗 Link to Origin (Log or Project)?", "");
@@ -51,15 +58,30 @@ const dIcon = discData.icon || "📝";
 const sciTag = discData.sci || ["#sci/General"];
 
 // 🔱 4.1 FLEX-TAGGING
-const axisMap = { "PLM": "1_Selfcare", "PPM": "4_Organize", "PKM": "3_Mind" };
+const axisMap = { "PLM": "1selfcare", "PPM": "4organize", "PKM": "3mind" };
 const areaBase = tp.variables.ARCH?.a?.tag || "#2area";
 const areaTag = axisMap[pArea] ? `${areaBase}/${axisMap[pArea]}` : `${areaBase}/unknown`;
 
-// 🔱 5. PATH LOGISTICS
+// 🔱 5. PATH LOGISTICS — PARA weiche (mirror projectlog): live WITH the project if it's a real one
 const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
 
-// 🎯 KORRIGIERT AUF NEUEN ORDNER:
-const targetFolder = `${baseCal}/5_Protocols/${yy}/${folderContext}`;
+// Resolve the linked project → its status folder (1_Active/2_Passive/…) if it exists in 3_Projects
+let projName = String(inheritedProject || logConnect).replace(/[\[\]]/g, "").replace(".md", "").split("/").pop().split("|")[0].trim();
+let projStat = "";
+if (dv && projName && projName !== "Unlinked") {
+    const projPage = dv.pages('"3_Projects"')
+        .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Protocols/") && !p.file.path.includes("/Tasks/") && p.file.name === projName)
+        .first();
+    if (projPage) {
+        const mt = String(projPage.file.path).match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
+        projStat = mt ? mt[1] : "";
+    }
+}
+
+// Real project → nest under it; otherwise → central protocol folder (loose/unlinked protocols)
+const targetFolder = projStat
+    ? `3_Projects/${projStat}/${projName}/Protocols/${yy}/${mm}`
+    : `${baseCal}/5_Protocols/${yy}/${folderContext}`;
 
 let currentPath = "";
 for (const seg of targetFolder.split('/')) {

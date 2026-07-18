@@ -13,7 +13,8 @@ const foodDb = Nexus.getDomain("FOOD");
 
 const options = Object.entries(foodDb).map(([k, v]) => ({
     display: `${v.icon || "📦"} ${v.lang?.de || v.label || k}`,
-    value: k, icon: v.icon || "📦", label: v.lang?.de || v.label || k
+    value: k, icon: v.icon || "📦", label: v.lang?.de || v.label || k,
+    unit: v.unit_type || "100g"
 }));
 
 const selected = await tp.system.suggester(options.map(o => o.display), options, false, "Atom wählen...");
@@ -68,7 +69,8 @@ await app.fileManager.processFrontMatter(file, (f) => {
 });
 
 // 🔱 4. EINZEILIGE INJECTION (Mit Callout- und Marker-Schutz)
-const newItem = `* ${selected.icon} **${selected.label}** \`INPUT[number(placeholder(1.0)):${propName}]\``;
+const uLabel = selected.unit === "100ml" ? "×100ml" : (selected.unit === "piece" ? "×1 pc" : "×100g");
+const newItem = `* ${selected.icon} **${selected.label}**\n${linePrefix}\t* \`INPUT[number(placeholder(1.0)):${propName}]\` <small style="opacity:0.55;">${uLabel}</small>`;
 let updated = "";
 
 if (targetCat === "+ New Category...") {

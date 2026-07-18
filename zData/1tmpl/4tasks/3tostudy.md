@@ -26,7 +26,6 @@ if ((!tp.variables.sci || !tp.variables.disc) && typeof tp.user.disciplineEngine
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const sub = tp.variables.sub || "";
-const persona = tp.variables.persona || "student"; // Perfekter Fallback für Study!
 const area = tp.variables.currentArea || tp.variables.area || "";
 const icon = tp.variables.icon || "🎓";
 
@@ -48,8 +47,8 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. STUDY-TYPE SELECTION
-const sOpt = ["🔄 Spaced Repetition", "📝 Test (Small)", "🔥 Exam (Big)", "🏛️ Lecture", "📚 General"];
-const sVal = ["spaced", "test", "exam", "class", "general"];
+const sOpt = ["🔥 Exam (Big)", "📝 Test (Small)", "🎤 Presentation", "📓 Homework", "🏛️ Lecture", "📚 General"];
+const sVal = ["exam", "test", "presentation", "homework", "class", "general"];
 let studyType = await tp.system.suggester(sOpt, sVal) || "general";
 
 const today = tp.date.now("YYYY-MM-DD");
@@ -67,15 +66,11 @@ arch:
   - "#4task"
 archtype:
   - "#4task/tostudy/<%- studyType %>"
-status: "<%- (studyType === 'spaced') ? 'review' : '1active' %>"
+status: 1active
 priority:
   - "1"
-persona: "<%- persona %>"
-due: <%- today %>
-space_lvl: 0
-space_rank: "Ground Crew (Sprout)"
-space_date: <%- p1 %>
-lastgrade: 0
+persona: "student"
+due: <%- p1 %>
 cal0:
 stars1:
 area2: "<%- area %>"
@@ -94,33 +89,19 @@ review:
 ---
 
 # 🎓 Quest: <%- displayTitle %>
-## 🛰️ Mission Control Display
-**Project:** <%- pLink || "None" %>
+> [!abstract] 📋 <%- studyType.toUpperCase() %> · **Project:** <%- pLink || "None" %>
+> Discipline: `$= dv.current().discipline`
 
-> [!multi-column]
-> > [!calendar|wide-5] Ebbinghaus Prime-Chain (99% Retention)
-> > **Last Session:** <%- today %> (Initial Capture)
-> > **Target Session (P1):** <%- p1 %>
-> > 
-> >> <small style="opacity:0.6; font-style:italic;">Each next step is calculated from the successful completion of the previous one.</small>
-> >
-> > **Status:**
-> > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]` 
-> 
-> > [!info|wide-0] 🛡️ Nexus Progression
-> > **Starfleet Rank:**
-> > 
-> >  `VIEW[{space_rank}]` 
-> >  `$= const icons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"]; const lvl = dv.current().space_lvl || 0; dv.paragraph(icons[Math.min(lvl, icons.length - 1)] + " **Level " + lvl + "**")`
-> > 🔥 **Next Dynamic Session:** `VIEW[{space_date}]`  
+> [!calendar] ⏳ Deadline
+> **Due:** `INPUT[date:due]`
+> `$= const d = dv.current().due; if(!d){dv.span("—")}else{const days=moment(String(d)).startOf('day').diff(moment().startOf('day'),'days');const c=days<0?"var(--text-error)":(days<=3?"#ff7b00":"var(--text-success)");dv.paragraph("<span style='color:"+c+";font-weight:bold'>"+(days<0?"OVERDUE by "+(-days)+"d":days+" days left")+"</span>");}`
+> **Status:** `INPUT[inlineSelect(option(1active, ⚡ Active), option(2passive, 💤 Passive), option(review, 🔍 Review), option(done, ✅ Done), option(canceled, ❌ Canceled)):status]`
 
-## 🧠 Active Recall / Brain Dump 
-- 
+## 📝 Preparation / Brain Dump
+- [ ] 
 
-
-
- 
-`BUTTON[spaced]`
+## ✅ Checklist
+- [ ] 
 
 ---
 **System Action:**

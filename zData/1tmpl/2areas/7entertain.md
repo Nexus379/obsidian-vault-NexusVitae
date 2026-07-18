@@ -4,7 +4,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const icon = tp.variables.discIcon || tp.variables.icon || "🕹️";
-const area = tp.variables.currentArea || tp.variables.area || "7_Entertainment";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/7entertain";
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -77,7 +77,9 @@ review:
 > > 
 > > *Letting go, silence (or play), and dissolving the ego. When we play, we are one with the moment.*
 > > 
-> > - **Game/Entertainment:** > > - **State after letting go:** > > - **Acting Persona:** `<%- persona %>`
+> > - **Game/Entertainment:** 
+> > - **State after letting go:** 
+> > - **Acting Persona:** `<%- persona %>`
 >
 > > [!todo|wide-1] Standards
 > > **Is this activity truly recharging me or just consuming time?**
@@ -86,7 +88,7 @@ review:
 > > **Am I able to fully immerse myself in the moment?**
 > > 
 
-## Workload / Pensum
+## Workload
 
 
 

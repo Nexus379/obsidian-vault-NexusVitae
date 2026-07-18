@@ -130,8 +130,8 @@ banner: "![[xAttachment/Images/Banner/bubble.jpg]]"
 > >         String(p.cal_date || "").substring(0, 10) === dStr ||
 > >         String(p.rev_end || "").substring(0, 10) === dStr
 > >     );
-> >     const fitLog = dayFiles.find(p => p.fitness_am !== undefined || p.fitness_pm !== undefined);
-> >     const fitTotal = (fitLog ? (Number(fitLog.fitness_am) || 0) + (Number(fitLog.fitness_pm) || 0) : 0);
+> >     const fitLog = dayFiles.find(p => p.mobility_am !== undefined || p.mobility_pm !== undefined);
+> >     const fitTotal = (fitLog ? (Number(fitLog.mobility_am) || 0) + (Number(fitLog.mobility_pm) || 0) : 0);
 > >     const energy = dayFiles.find(p => p.energy)?.energy || null;
 > >     const tasks = dayFiles.array().reduce((acc, p) => acc + (p.file.tasks ? p.file.tasks.where(t => !t.completed).length : 0), 0);
 > > 

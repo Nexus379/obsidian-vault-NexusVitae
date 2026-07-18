@@ -8,9 +8,21 @@ const file = tp.config.target_file;
 const currentPath = file.path;
 const title = tp.file.title;
 
-// Zeit-Variablen für die Ordnerstruktur
-const year = tp.date.now("YYYY");
-const month = tp.date.now("MM_MMMM"); // Erstellt "03_März"
+// Date variables for the folder structure — use the NOTE'S OWN date, not today,
+// so a note always lands in the year/month folder of its real date.
+const fmCache = app.metadataCache.getFileCache(file)?.frontmatter || {};
+let noteDate = fmCache.cal_date || fmCache.rev_end || null;   // calendar notes / reviews
+if (!noteDate) {
+    const titleMatch = title.match(/(\d{4}-\d{2}-\d{2})/);    // leading date in the title
+    if (titleMatch) noteDate = titleMatch[1];
+}
+let noteMoment = noteDate ? moment(String(noteDate), "YYYY-MM-DD") : null;
+if (!noteMoment || !noteMoment.isValid()) {
+    // undated note (area/project/resource…) -> fall back to its creation date, then today
+    noteMoment = file.stat && file.stat.ctime ? moment(file.stat.ctime) : moment();
+}
+const year = noteMoment.format("YYYY");
+const month = noteMoment.format("MM_MMMM"); // e.g. "07_Juli" (keeps existing locale/format)
 
 // 🔱 2. SMART-DETECTION (Herkunftsanalyse)
 let category = "7_Misc";

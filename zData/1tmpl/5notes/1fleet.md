@@ -1,10 +1,25 @@
 <%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
+
+// 🔱 DISCIPLINE INHERIT-OR-ASK: caller (dailypkm) may pass sci/disc; if not, ask. Mirrors 3tostudy.
+if ((!tp.variables.sci || !tp.variables.disc) && typeof tp.user.disciplineEngine === "function") {
+    const engine = tp.user.disciplineEngine();
+    const discList = engine.getDisciplineLabels();
+    const selectedDisc = await tp.system.suggester(
+        discList.map(d => `${d.icon} ${d.label}`), discList, false, "🎓 Science / Discipline?"
+    );
+    if (selectedDisc) {
+        tp.variables.sci = selectedDisc.sci.join('", "');
+        tp.variables.disc = selectedDisc.disc;
+        tp.variables.currentArea = tp.variables.currentArea || selectedDisc.area;
+    }
+}
+
 const persona = tp.variables.persona || "student";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
-const area = tp.variables.currentArea || tp.variables.area || "3_Mind";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/3mind";
 const icon = tp.variables.icon || "🍂";
 const luhmannId = tp.variables.luhmannId || ""; // 🔱 FIX: war nicht deklariert -> ReferenceError > ist es uebrehaupt noetig hier?
 
@@ -68,6 +83,9 @@ review:
 > **Discipline:** `$= dv.current().discipline`
 > > **Phase:** `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
+## 🧠 Active Recall / Brain Dump 
+- 
+
 ### ✍️ Adnotatio (Notes)
 - 
 
@@ -80,5 +98,8 @@ review:
 [[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]
 
 ---
+
+> [!tip] 🌱 Ready to distill? Promote this fleeting thought into your **Zettelkasten** (Atomic / Permanent / Evergreen) — keeps its Luhmann ID + links:
+> `BUTTON[topermanent]`
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>

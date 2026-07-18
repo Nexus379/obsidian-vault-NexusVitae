@@ -3,11 +3,11 @@ filters:
     - arch == ["#0cal"]
 formulas:
   Fitnessum: |+
-    `$= (dv.current()["fitness-am"] || 0) + (dv.current()["fitness-pm"] || 0)`
+    `$= (dv.current()["mobility_am"] || 0) + (dv.current()["mobility_pm"] || 0)`
 
 properties:
   formula.Fitnessum:
-    displayName: fitness-sum
+    displayName: mobility-sum
 views:
   - type: table
     name: Table
@@ -25,21 +25,21 @@ views:
       - maintask3
       - maintask4
       - maintask5
-      - selfcare-am
-      - selfcare-pm
-      - fitness-am
-      - fitness-pm
-      - journal-am
-      - journal-pm
+      - selfcare_am
+      - selfcare_pm
+      - mobility_am
+      - mobility_pm
+      - journal_am
+      - journal_pm
     sort: []
     columnSize:
       file.name: 183
       note.focus: 86
       note.aim1: 73
       note.aim2: 76
-      note.selfcare-am: 47
-      note.selfcare-pm: 57
-      note.fitness-am: 55
-      note.fitness-pm: 51
-      note.journal-am: 66
-      note.journal-pm: 62
+      note.selfcare_am: 47
+      note.selfcare_pm: 57
+      note.mobility_am: 55
+      note.mobility_pm: 51
+      note.journal_am: 66
+      note.journal_pm: 62

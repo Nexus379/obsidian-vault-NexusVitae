@@ -1,0 +1,7 @@
+﻿/* Fix for Banners 1.3.3 and Obsidian 1.4+ Properties */
+.obsidian-banner {
+    position: unset !important;
+}
+.obsidian-banner-wrapper {
+    margin-top: 0 !important;
+}

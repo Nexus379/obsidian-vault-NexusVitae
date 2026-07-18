@@ -74,16 +74,19 @@ review:
 > > **Phase:** `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
 ## 🌿 Synthesis & Insight
-- **Core Thesis:** - **Connections:** ## 🧪 Evidence (Linked Atoms)
+- **Core Thesis:** 
+- **Connections:** 
+
+## 🧪 Evidence (Linked Atoms)
 - 
 
 ### 🔗 Connectiones (Connections)
 - **Up (Parent):** <%- pLink %>
-- **Sideways (Siblings):** `$= dv.list(dv.pages("#5note/5evergreen").filter(p => p.LID && p.LID.length === dv.current().LID.length && p.LID.startsWith(dv.current().LID.slice(0,-1)) && p.file.name != dv.current().file.name).file.link)`
+- **Sideways (Siblings):** `$= dv.list(dv.pages("#5note").filter(p => p.LID && p.LID.length === dv.current().LID.length && p.LID.startsWith(dv.current().LID.slice(0,-1)) && p.file.name != dv.current().file.name).file.link)`
 - **Down (Children):** `$= dv.list(dv.pages("#5note").filter(p => p.LID && p.LID.length > dv.current().LID.length && p.LID.startsWith(dv.current().LID)).file.link)`
 
 
-- $ _A growing note that unites various concepts. It is continuously expanded and refined over time._
+- _A growing note that unites various concepts. It is continuously expanded and refined over time._
 ---
 
 ---

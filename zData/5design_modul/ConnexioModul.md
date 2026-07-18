@@ -33,7 +33,7 @@
 >>>```
 >>>##### Adveniens
 >>>```dataview
->>>LIST FROM #5note WHERE contains(this.file.inlinks, file.link) OR contains(this.file.outlinks, file.link)
+>>>LIST FROM #5note WHERE contains(this.file.inlinks, file.link) OR parent = this.file.link
 >>>```
 >
 >> [!source]- 🔖 Sources
@@ -52,7 +52,7 @@
 >>>```
 >>>##### Adveniens
 >>>```dataview
->>>LIST FROM #2area WHERE contains(this.file.outlinks, file.link) OR parent = file.link
+>>>LIST FROM #2area WHERE contains(this.file.inlinks, file.link) OR parent = this.file.link
 >>>```
 >>
 >>> [!stars]- ✨ Stellae
@@ -63,7 +63,7 @@
 >>>```
 >>>##### Adveniens
 >>>```dataview
->>>LIST FROM #1stars WHERE contains(this.file.outlinks, file.link) OR parent = file.link
+>>>LIST FROM #1stars WHERE contains(this.file.inlinks, file.link) OR parent = this.file.link
 >>>```
 >
 >> [!abstract]- 🔙 Hub & Backlinks
@@ -73,16 +73,9 @@
 
 ---
 
-```meta-bind-button
-label: "Archivieren"
-icon: "archive"
-style: primary
-actions:
-  - type: runTemplaterFile
-    # Nutze den kompletten Pfad ohne führenden Slash
-    templateFile: "zData/2scripts/archiveall.md" 
+`BUTTON[freezer]` `BUTTON[archive]`
 
-```
+<small style="opacity:0.55;">⚠️ <b>Freeze</b> is permanent — it bakes live blocks & inputs into static text. Freeze only when the note is final, then Archive.</small>
 
 
 

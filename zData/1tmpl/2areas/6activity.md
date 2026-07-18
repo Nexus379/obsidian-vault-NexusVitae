@@ -8,7 +8,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const icon = tp.variables.discIcon || tp.variables.icon || "🚵🏽";
-const area = tp.variables.currentArea || tp.variables.area || "6_Activity";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/6activity";
 
 // 🔱 2. FALLBACK & PROMPTS (Zuerst alle Fenster!)
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
@@ -87,7 +87,7 @@ review:
 > > **What physical milestone provides the most clarity right now?**
 > > 
 
-## Workload / Pensum
+## Workload
 
 
 

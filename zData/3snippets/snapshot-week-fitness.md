@@ -13,7 +13,7 @@ try {
         probe.add(1, 'week');
     }
     const defaultDate = probe.format("YYYY-MM-DD");
-    const input = await tp.system.prompt("📸 Snapshot Fitness für welche Woche? (YYYY-MM-DD)", defaultDate);
+    const input = await tp.system.prompt("📸 Snapshot Fitness for which week? (YYYY-MM-DD)", defaultDate);
     if (input === null) return;
     const target = moment(/^\d{4}-\d{2}-\d{2}$/.test(input) ? input : defaultDate, "YYYY-MM-DD");
 
@@ -23,7 +23,7 @@ try {
 
     // 2. Master lesen (nur fit_* wird kopiert)
     const masterFile = app.vault.getAbstractFileByPath("2_Areas/6_Activity/Plan/Fitness_Routine.md");
-    if (!masterFile) { new Notice("❌ Master Fitness_Routine nicht gefunden!"); return; }
+    if (!masterFile) { new Notice("❌ Master Fitness_Routine not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 
     // 3. training_week auto-erkennen: letzte _fitness-Woche + 1 (Fallback 1)
@@ -39,7 +39,7 @@ try {
     const folder = `0_Calendar/7_Plan/${year}/${month}`;
     const finalDest = `${folder}/${year}-W${kw}_fitness.md`;
     if (app.vault.getAbstractFileByPath(finalDest)) {
-        new Notice(`⚠️ Fitness-Woche W${kw} existiert schon — nicht überschrieben.`);
+        new Notice(`⚠️ Fitness-Week W${kw} already exists — not overwritten.`);
         return;
     }
     let cp = "";
@@ -49,8 +49,8 @@ try {
     }
 
     // 5. Shape laden + Platzhalter füllen
-    const shapeFile = app.vault.getAbstractFileByPath("zData/1tmpl/0calendar/_snapshot_shape_fitness.md");
-    if (!shapeFile) { new Notice("❌ Shape-Datei _snapshot_shape_fitness fehlt!"); return; }
+    const shapeFile = app.vault.getAbstractFileByPath("zData/1tmpl/0calendar/weekplan_fitness.md");
+    if (!shapeFile) { new Notice("❌ Shape file weekplan_fitness missing!"); return; }
     let body = await app.vault.read(shapeFile);
     body = body.replace(/\{\{YEAR\}\}/g, year).replace(/\{\{KW\}\}/g, kw);
 
@@ -66,10 +66,10 @@ try {
         fm.training_week = currentWeek;
     });
 
-    new Notice(`📸 Fitness-Snapshot: ${year}-W${kw}_fitness (Training-Woche ${currentWeek})`);
+    new Notice(`📸 Fitness snapshot: ${year}-W${kw}_fitness (training week ${currentWeek})`);
     await app.workspace.getLeaf(true).openFile(newFile);
 
 } catch(e) {
-    new Notice("🔥 Snapshot-Fehler: " + e.message, 10000);
+    new Notice("🔥 Snapshot error: " + e.message, 10000);
 }
 -%>

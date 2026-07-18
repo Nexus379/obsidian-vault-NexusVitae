@@ -80,8 +80,8 @@ review:
 
 ## 🔗 Connectiones (Verknüpfungen)
 - **Up (Parent):** <%- pLink %>
-- **Sideways (Siblings):** `$= dv.list(dv.pages("#5note/4permanent").filter(p => p.LID && p.LID.length === dv.current().LID.length && p.LID.startsWith(dv.current().LID.slice(0,-1)) && p.file.name != dv.current().file.name).file.link)`
-- **Down (Children):** `$= dv.list(dv.pages("#5note/4permanent").filter(p => p.LID && p.LID.length > dv.current().LID.length && p.LID.startsWith(dv.current().LID)).file.link)`
+- **Sideways (Siblings):** `$= dv.list(dv.pages("#5note").filter(p => p.LID && p.LID.length === dv.current().LID.length && p.LID.startsWith(dv.current().LID.slice(0,-1)) && p.file.name != dv.current().file.name).file.link)`
+- **Down (Children):** `$= dv.list(dv.pages("#5note").filter(p => p.LID && p.LID.length > dv.current().LID.length && p.LID.startsWith(dv.current().LID)).file.link)`
 
 
 

@@ -40,7 +40,7 @@ cssclasses:
 
 # 🧩 Nexus Timeblocking (Routines)
 
-`BUTTON[setup-routine]` `BUTTON[edit-routine]` `BUTTON[sync-timetable]`
+`BUTTON[setup-routine]` `BUTTON[edit-routine]` `BUTTON[sync-timetable]` `BUTTON[snapshot-week-routine]`
 
 
 ```dataviewjs
@@ -130,13 +130,14 @@ for (let i = 1; i <= totalPeriods; i++) {
 }
 
 // --- RENDER TABLE ---
-const headers = ["⌚ Time", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const cf = (t) => `<span style="font-family: 'Courier New', Courier, monospace; font-weight: bold;">${t}</span>`;
+const headers = ["⌚ Time", cf("Mon"), cf("Tue"), cf("Wed"), cf("Thu"), cf("Fri"), cf("Sat"), cf("Sun")];
 const rows = slots.map(s => {
     if(s.isBreak) {
-        return [`*${s.time}*`, getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break")];
+        return [cf(s.time), getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break")];
     }
     return [
-        `**${s.time}**<br><small style="opacity: 0.5;">[${s.id}]</small>`,
+        cf(s.time) + `<br><small style="opacity: 0.5;">[${s.id}]</small>`,
         getD(c[`rt_mon_${s.id}`]),
         getD(c[`rt_tue_${s.id}`]),
         getD(c[`rt_wed_${s.id}`]),

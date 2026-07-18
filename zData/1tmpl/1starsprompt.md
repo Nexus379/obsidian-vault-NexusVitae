@@ -40,11 +40,11 @@ if (sIdx === -1) {
 }
 if (sIdx === null || sIdx === -1) return;
 
-// 🔱 2.1 AREA-ZUTEILUNG (Omni-Bridge Vorbereitung)
-// Da jeder Star (Goal/Vision) einer Area zugeordnet sein sollte:
+// 🔱 2.1 AREA-ZUTEILUNG (GTD Omni-Bridge: which Area of Focus does this Star serve?)
 const areaLabels = ["1 🌸 Selfcare", "2 🦄 Relationship", "3 🧠 Mind", "4 🧩 Organize", "5 🎨 Creativity", "6 🚵🏽 Activity", "7 🕹️ Entertainment"];
-const aIdx = await tp.system.suggester(areaLabels, [1,2,3,4,5,6,7]);
-tp.variables.currentArea = aIdx ? `area${aIdx}` : "area_undefined";
+const areaValues = ["#2area/1selfcare", "#2area/2relationship", "#2area/3mind", "#2area/4organize", "#2area/5creativity", "#2area/6activity", "#2area/7entertain"];
+const aPick = await tp.system.suggester(areaLabels, areaValues, false, "💠 Which Area of Focus does this Star serve?");
+tp.variables.currentArea = aPick || "area_undefined";
 
 // Pfad bauen (Nutzt dynamisch ARCH.s.folder vom Router)
 const targetFolder = `${ARCH.s.folder}/${sFolders[sIdx]}`;

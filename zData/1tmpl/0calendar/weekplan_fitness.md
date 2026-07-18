@@ -26,21 +26,23 @@ if (allFit.length > 0) {
 arch:
   - "#0cal"
 archtype:
-  - "#0cal/7plan/fitness"
+  - "#0cal/7plan"
 cal_date: <%- dateStr %>
 energy: "<%- energy %>"
 training_week: <%- currentWeek %>
----
-# <%- displayTitle %>
 
-> [!abstract] 🎒 **NEXUS ARSENAL & STATUS**
+---
+
+# 💪 Fitness: # <%- displayTitle %>
+
+> [!body] 🎒 **NEXUS ARSENAL & STATUS**
 > **Phase:** `$= const w = dv.current().training_week || 1; const cw = ((w - 1) % 4) + 1; cw === 1 ? "🌱 Foundation (70%)" : cw === 2 ? "⚙️ Volume (80%)" : cw === 3 ? "🔥 Overreach (90%)" : "🔋 Deload (60%)"`
 > **Current Cycle Week:** `INPUT[number:training_week]`
 
-> ---
-> **Actions:** `BUTTON[setup-fitness]` `BUTTON[generate-workout]` `BUTTON[generate-workout-log]` `BUTTON[edit-fitness]` `BUTTON[reset-schedule]` `BUTTON[plan-replicator]`
+> **Actions:** `BUTTON[setup-fitness]` `BUTTON[generate-workout]`  `BUTTON[edit-fitness]` 
 
 ## 📋 1. The Master Plan (Overview)
+`BUTTON[generate-workout-log]`
 ```dataviewjs
 const c = dv.current();
 const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
@@ -77,7 +79,7 @@ const rows = regions.map(r => [
 dv.table(headers, rows);
 ``` 
 
-
+`BUTTON[reset-schedule]` `BUTTON[plan-replicator]` 
 ```dataviewjs
 const c = dv.current();
 const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
@@ -124,7 +126,12 @@ days.forEach(day => {
     }
 });
 
-if (trackerHtml === "") dv.paragraph("_No training planned for this week yet. Use the setup button above!_");
+if (trackerHtml === "") dv.paragraph("_No training planned this week yet — use Setup above, or the day's region isn't assigned an exercise._");
 else dv.paragraph(trackerHtml);
 ```
 
+
+
+---
+
+`BUTTON[freeze-week]` `BUTTON[archive]`

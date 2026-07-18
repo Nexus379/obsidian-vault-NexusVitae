@@ -72,7 +72,7 @@ const resourceTriggerMap = {
     fitness: "sourceentities_fitness",
     household: "sourceentities_household",
     medical: "sourceentities_medical",
-    music: "sourceentities_music",
+    musicgear: "sourceentities_music",
     personal: "sourceentities_personal",
     pet: "sourceentities_pet",
     larp: "sourceentities_larp"
@@ -146,7 +146,7 @@ for (const seg of targetFolder.split('/')) {
     current = current === "" ? seg : `${current}/${seg}`;
     if (!app.vault.getAbstractFileByPath(current)) await app.vault.createFolder(current);
 }
-await tp.file.move(`${targetFolder}/${title}`);
+await tp.file.move(`${targetFolder}/${title}.md`);
 await new Promise(r => setTimeout(r, 850));
 
 // 🔱 6. PASS TO CONTENT

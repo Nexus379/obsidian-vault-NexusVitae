@@ -127,7 +127,7 @@
     },
     "edamame": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Edamame",
       "icon": "🫛",
       "latin": "Glycine max (Semen immaturum in legumine)",
@@ -307,7 +307,7 @@
     },
     "yardlong_bean": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Yardlong Bean",
       "icon": "🐍",
       "latin": "Vigna unguiculata subsp. sesquipedalis (Legumen recens)",
@@ -477,7 +477,7 @@
     "--- DRIED_LEGUMES_LENTILS ---": "Linsen-Vielfalt (Protein & Eisen)",
     "lentils_beluga": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Beluga Lentils",
       "icon": "⚫",
       "latin": "Lens culinaris (Semen siccum)",
@@ -539,7 +539,7 @@
     },
     "lentils_red": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Red Lentils",
       "icon": "🔴",
       "latin": "Lens culinaris (Semen decorticatum)",
@@ -598,7 +598,7 @@
     },
     "lentils_puy": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Puy Lentils",
       "icon": "🟢",
       "latin": "Lens culinaris esculenta (Semen siccum)",
@@ -655,7 +655,7 @@
     },
     "lentils_brown": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Brown Lentils (Tellerlinsen)",
       "icon": "🟤",
       "latin": "Lens culinaris (Semen siccum)",
@@ -714,7 +714,7 @@
     "--- ORIENT_AND_DAL_SPECIALISTS ---": "Orient-Markt & Dal-Giganten",
     "lentils_yellow": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Yellow Lentils",
       "icon": "🟡",
       "latin": "Lens culinaris (Semen decorticatum flavum)",
@@ -773,7 +773,7 @@
     },
     "lentils_large_green": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Large Green Lentils",
       "icon": "🟢",
       "latin": "Lens culinaris (Semen siccum)",
@@ -830,7 +830,7 @@
     },
     "black_gram": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Gram (Urad Dal)",
       "icon": "⬛",
       "latin": "Vigna mungo (Semen siccum)",
@@ -887,7 +887,7 @@
     },
     "pigeon_peas": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pigeon Peas (Toor Dal)",
       "icon": "💛",
       "latin": "Cajanus cajan (Semen siccum)",
@@ -942,7 +942,7 @@
     },
     "split_peas": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Split Peas (Yellow/Green)",
       "icon": "🟡",
       "latin": "Pisum sativum (Semen decorticatum et fissum)",
@@ -999,7 +999,7 @@
     "--- DRIED_LEGUMES_BEANS_CHICKPEAS ---": "Trockenbohnen & Kichererbsen",
     "chickpeas": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chickpeas (Garbanzo)",
       "icon": "⚪",
       "latin": "Cicer arietinum (Semen siccum)",
@@ -1058,7 +1058,7 @@
     },
     "chickpeas_black": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Chickpeas (Kala Chana)",
       "icon": "⚫",
       "latin": "Cicer arietinum (Semen siccum nigrum)",
@@ -1114,7 +1114,7 @@
     },
     "beans_kidney": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kidney Beans",
       "icon": "🫘",
       "latin": "Phaseolus vulgaris (Semen siccum)",
@@ -1173,7 +1173,7 @@
     },
     "beans_black": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Beans (Turtle Beans)",
       "icon": "⬛",
       "latin": "Phaseolus vulgaris (Semen siccum nigrum)",
@@ -1232,7 +1232,7 @@
     },
     "beans_white": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cannellini Beans (White Beans)",
       "icon": "🤍",
       "latin": "Phaseolus vulgaris (Semen siccum album)",
@@ -1289,7 +1289,7 @@
     },
     "soybeans": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Soybeans (Dried)",
       "icon": "🟡",
       "latin": "Glycine max (Semen siccum)",
@@ -1348,7 +1348,7 @@
     },
     "sweet_lupin_seeds": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sweet Lupin Seeds",
       "icon": "🌼",
       "latin": "Lupinus albus (Semen siccum)",
@@ -1405,7 +1405,7 @@
     },
     "beans_mung": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mung Beans",
       "icon": "🟢",
       "latin": "Vigna radiata (Semen siccum)",
@@ -1461,7 +1461,7 @@
     },
     "beans_pinto": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pinto Beans",
       "icon": "🫘",
       "latin": "Phaseolus vulgaris (Semen siccum variegatum)",
@@ -1519,7 +1519,7 @@
     },
     "beans_lima": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lima Beans (Butter Beans)",
       "icon": "🤍",
       "latin": "Phaseolus lunatus (Semen siccum)",
@@ -1578,7 +1578,7 @@
     },
     "black_eyed_peas": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black-Eyed Peas",
       "icon": "👁️",
       "latin": "Vigna unguiculata (Semen siccum)",
@@ -1636,7 +1636,7 @@
     "--- SPROUTS_AND_GERMINATED ---": "Sprossen & Keimlinge (Lebendige Nahrung)",
     "mung_bean_sprouts": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mung Bean Sprouts",
       "icon": "🌱",
       "latin": "Vigna radiata (Germinatus)",
@@ -1689,7 +1689,7 @@
     },
     "sprouts_alfalfa": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alfalfa Sprouts",
       "icon": "🌿",
       "latin": "Medicago sativa (Germinatus)",
@@ -1745,7 +1745,7 @@
     "--- EVERYDAY_FUNGI ---": "Standard-Pilze & Vitamin D",
     "shiitake_dried": {
       "unit_price": 3.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Getrocknete Shiitake Pilze",
       "icon": "🍄",
       "latin": "Lentinula edodes",
@@ -2178,7 +2178,7 @@
     },
     "enoki": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Enoki Mushroom",
       "icon": "🥢",
       "latin": "Flammulina filiformis (Carpoforum recens)",
@@ -2231,7 +2231,7 @@
     },
     "shimeji": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Shimeji Mushroom",
       "icon": "🍄",
       "latin": "Hypsizygus tessellatus (Carpoforum recens)",
@@ -2403,7 +2403,7 @@
     },
     "portobello": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Portobello Mushroom",
       "icon": "🛸",
       "latin": "Agaricus bisporus (Carpoforum recens maturus)",
@@ -2628,7 +2628,7 @@
     },
     "snow_fungus": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Snow Fungus",
       "icon": "❄️",
       "latin": "Tremella fuciformis (Carpoforum recens)",
@@ -2682,7 +2682,7 @@
     },
     "black_truffle": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Truffle",
       "icon": "🪨",
       "latin": "Tuber melanosporum (Carpoforum recens)",
@@ -2741,7 +2741,7 @@
     "--- SEAWEED_AND_KELP ---": "Die Jod- & Umami-Meister",
     "wakame_seaweed_dried": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wakame Algen (Getrocknet)",
       "icon": "🌿",
       "latin": "Undaria pinnatifida",
@@ -2783,7 +2783,7 @@
     },
     "nori": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nori",
       "icon": "🍙",
       "latin": "Porphyra umbilicalis (Thallus siccus)",
@@ -2841,7 +2841,7 @@
     },
     "wakame": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wakame",
       "icon": "🥗",
       "latin": "Undaria pinnatifida (Thallus siccus)",
@@ -2899,7 +2899,7 @@
     },
     "kombu_kelp": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kombu (Kelp)",
       "icon": "🌊",
       "latin": "Laminaria digitata (Thallus siccus)",
@@ -2955,7 +2955,7 @@
     },
     "dulse": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dulse",
       "icon": "🔴",
       "latin": "Palmaria palmata (Thallus siccus)",
@@ -3014,7 +3014,7 @@
     },
     "irish_moss": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Irish Moss (Sea Moss)",
       "icon": "🧽",
       "latin": "Chondrus crispus (Thallus siccus)",
@@ -3072,7 +3072,7 @@
     },
     "sea_spaghetti": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sea Spaghetti",
       "icon": "🍝",
       "latin": "Himanthalia elongata (Thallus siccus)",
@@ -3128,7 +3128,7 @@
     },
     "hijiki": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hijiki",
       "icon": "🖤",
       "latin": "Sargassum fusiforme (Thallus siccus)",
@@ -3183,7 +3183,7 @@
     },
     "arame": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Arame",
       "icon": "🤎",
       "latin": "Eisenia bicyclis (Thallus siccus)",
@@ -3239,7 +3239,7 @@
     },
     "sea_grapes": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sea Grapes (Umibudo)",
       "icon": "🍇",
       "latin": "Caulerpa lentillifera (Thallus recens)",
@@ -3296,7 +3296,7 @@
     },
     "ogonori": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ogonori (Agar Seaweed)",
       "icon": "🥢",
       "latin": "Gracilaria spp. (Thallus siccus)",
@@ -3412,7 +3412,7 @@
     },
     "oats": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Oats",
       "icon": "🥣",
       "latin": "Avena sativa (Caryopsis sicca)",
@@ -3592,7 +3592,7 @@
     },
     "barley": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Barley (Pearled)",
       "icon": "🍺",
       "latin": "Hordeum vulgare (Caryopsis decorticata)",
@@ -3828,7 +3828,7 @@
     },
     "grunkern": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grünkern (Unripe Spelt)",
       "icon": "🟢",
       "latin": "Triticum spelta (Caryopsis immatura siccata)",
@@ -4466,7 +4466,7 @@
     },
     "oats_gf": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gluten-Free Oats (Certified)",
       "icon": "🥣",
       "latin": "Avena sativa (Caryopsis sicca)",
@@ -4584,7 +4584,7 @@
     },
     "quinoa_tricolor": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Quinoa (Tricolor)",
       "icon": "🥣",
       "latin": "Chenopodium quinoa (Semen siccum variegatum)",
@@ -5053,7 +5053,7 @@
     "--- PROCESSED_GRAIN_PRODUCTS ---": "Verarbeitete Getreideprodukte (Schnellküche)",
     "soy_flakes": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sojaflocken",
       "icon": "🥣",
       "latin": "Glycine max",
@@ -5095,7 +5095,7 @@
     },
     "oat_flakes_fine": {
       "unit_price": 0.85,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Haferflocken Zart",
       "icon": "🌾",
       "latin": "Avena sativa",
@@ -5136,7 +5136,7 @@
     },
     "rice_cocoa_pops_gf": {
       "unit_price": 2.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Reis-Kakao-Pops (Glutenfrei)",
       "icon": "🥣",
       "sci": [
@@ -5174,7 +5174,7 @@
     },
     "puffed_amaranth": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gepuffter Amaranth",
       "icon": "🌾",
       "sci": [
@@ -5569,7 +5569,7 @@
     "--- ANCIENT_AND_SMOKED_GRAINS ---": "Traditionelle Verarbeitung & Grützen",
     "buckwheat_kasha": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kasha (Roasted Buckwheat)",
       "icon": "🥣",
       "latin": "Fagopyrum esculentum (torrefactum)",
@@ -5632,7 +5632,7 @@
     "--- STARCH_PEARLS ---": "Reine Stärkeperlen",
     "tapioca_pearls": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tapioca Pearls (Sago substitute)",
       "icon": "🧋",
       "latin": "Manihot esculenta (Granula)",
@@ -6000,7 +6000,7 @@
     "--- THE_FLATBREAD_FLEX ---": "Tortilla-Varianten (Weizen & Vollkorn)",
     "bread_tortilla_wheat_lidl": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "McEnnandy Wheat Tortillas (Lidl)",
       "icon": "🫓",
       "latin": "Panis planus triticeus",
@@ -6054,7 +6054,7 @@
     },
     "bread_tortilla_whole_wheat_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bio Organic Vollkorn Tortilla (Lidl)",
       "icon": "🌾",
       "latin": "Panis planus triticeus completus",
@@ -6108,7 +6108,7 @@
     "--- LIDL_MCENNANDY_POWER ---": "McEnnandy Tortillas (Lidl Standard)",
     "bread_tortilla_lidl_mcennandy_wheat": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "McEnnandy Wheat Tortillas (Standard 25cm)",
       "icon": "🫓",
       "latin": "Panis planus lidlianus",
@@ -6162,7 +6162,7 @@
     },
     "bread_tortilla_lidl_mcennandy_whole_wheat": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "McEnnandy Whole Wheat Tortillas",
       "icon": "🌾",
       "latin": "Panis planus lidlianus completus",
@@ -6216,7 +6216,7 @@
     "--- KAUFLAND_K_CLASSIC_GIGANTS ---": "K-Classic Tortillas (Kaufland Bulk)",
     "bread_tortilla_kaufland_k_classic_wheat": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Weizen-Tortillas",
       "icon": "🧱",
       "latin": "Panis planus kauflandia",
@@ -6269,7 +6269,7 @@
     "--- SPECIAL_EDITIONS ---": "Mais & Diverses (Die Nischen-Player)",
     "bread_tortilla_k_classic_corn_mix": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Tortilla-Wraps Mais (Mix)",
       "icon": "🌽",
       "latin": "Panis planus kauflandia maizium",
@@ -6322,7 +6322,7 @@
     "--- THE_CORN_HERITAGE ---": "Mais-Tortillas (Mexiko-Technologie)",
     "bread_tortilla_corn_old_el_paso": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Old El Paso Corn Tortillas",
       "icon": "🌽",
       "latin": "Panis planus maizium",
@@ -6381,7 +6381,7 @@
     "--- THE_LYE_FAT_FUSION ---": "Laugen-Brioche (Premium-Snack-Buns)",
     "bread_laugen_brioche_buns_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Laugen-Brioche Burger Buns (Lidl)",
       "icon": "🍔",
       "latin": "Panis briochius lixivius",
@@ -6438,7 +6438,7 @@
     "--- THE_CRUNCH_ELITE ---": "Rosenbrötchen (Die Oberflächen-Könige)",
     "bread_roll_rose_lidl_grafschafter": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grafschafter Rosenbrötchen (Lidl)",
       "icon": "🌹",
       "latin": "Panis rosaceus lidlianus",
@@ -6492,7 +6492,7 @@
     "--- THE_MULTIGRAIN_HEAVYWEIGHTS ---": "Weltmeister & Körnerbrötchen (Die Sattmacher)",
     "bread_roll_world_champ_k_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "K-Classic Weltmeisterbrötchen",
       "icon": "🏆",
       "latin": "Panis victor mundi",
@@ -6546,7 +6546,7 @@
     },
     "bread_roll_pumpkin_seed_rewe_beste_wahl": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "REWE Beste Wahl Kürbiskernbrötchen",
       "icon": "🎃",
       "latin": "Panis cucurbitae",
@@ -6599,7 +6599,7 @@
     "--- THE_CLASSIC_FOUNDATION ---": "Kaisersemmeln (Der Allrounder)",
     "bread_roll_kaiser_lidl": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grafschafter Kaisersemmeln",
       "icon": "👑",
       "latin": "Panis imperialis",
@@ -6656,7 +6656,7 @@
     "--- TRUE_AND_CULINARY_NUTS ---": "Baumnüsse & Exoten",
     "walnut": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Walnut",
       "icon": "🧠",
       "latin": "Juglans regia (Semen siccum)",
@@ -6720,7 +6720,7 @@
     },
     "almond": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Almond",
       "icon": "🌰",
       "latin": "Prunus dulcis (Semen siccum)",
@@ -6782,7 +6782,7 @@
     },
     "brazil_nut": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Brazil Nut",
       "icon": "🌰",
       "latin": "Bertholletia excelsa (Semen siccum)",
@@ -6843,7 +6843,7 @@
     },
     "cashew": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cashew",
       "icon": "🌙",
       "latin": "Anacardium occidentale (Semen siccum)",
@@ -6905,7 +6905,7 @@
     },
     "pistachio": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pistachio",
       "icon": "🟢",
       "latin": "Pistacia vera (Semen siccum)",
@@ -6965,7 +6965,7 @@
     },
     "hazelnut": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hazelnut",
       "icon": "🌰",
       "latin": "Corylus avellana (Nux sicca)",
@@ -7026,7 +7026,7 @@
     },
     "macadamia": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Macadamia Nut",
       "icon": "⚪",
       "latin": "Macadamia integrifolia (Semen siccum)",
@@ -7084,7 +7084,7 @@
     },
     "pecan": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pecan",
       "icon": "🌰",
       "latin": "Carya illinoinensis (Semen siccum)",
@@ -7143,7 +7143,7 @@
     },
     "pine_nut": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pine Nut",
       "icon": "🌲",
       "latin": "Pinus pinea (Semen siccum)",
@@ -7201,7 +7201,7 @@
     },
     "peanut": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Peanut",
       "icon": "🥜",
       "latin": "Arachis hypogaea (Semen siccum)",
@@ -7263,7 +7263,7 @@
     },
     "tiger_nut": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tiger Nut",
       "icon": "🟤",
       "latin": "Cyperus esculentus (Tuber siccum fractum)",
@@ -7381,7 +7381,7 @@
     },
     "sacha_inchi": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sacha Inchi (Inca Peanut)",
       "icon": "⭐",
       "latin": "Plukenetia volubilis (Semen siccum)",
@@ -7438,7 +7438,7 @@
     },
     "chinese_pine_nut": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chinese Pine Nut",
       "icon": "🌲",
       "latin": "Pinus armandii (Semen siccum)",
@@ -7547,7 +7547,7 @@
     },
     "water_chestnut": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Water Chestnut",
       "icon": "🌰",
       "latin": "Eleocharis dulcis (Cormus recens)",
@@ -7604,7 +7604,7 @@
     "--- SMALL_SEEDS_AND_KERNELS ---": "Samen, Kerne & Superfoods",
     "chia_seeds": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chia-Samen",
       "icon": "🌱",
       "latin": "Salvia hispanica",
@@ -7646,7 +7646,7 @@
     },
     "sunflower_seeds": {
       "unit_price": 1.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sonnenblumenkerne",
       "icon": "🌻",
       "latin": "Helianthus annuus",
@@ -7688,7 +7688,7 @@
     },
     "flaxseed": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Flaxseed",
       "icon": "🤎",
       "latin": "Linum usitatissimum (Semen siccum)",
@@ -7752,7 +7752,7 @@
     },
     "chia_seed": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chia Seed",
       "icon": "⚫",
       "latin": "Salvia hispanica (Semen siccum)",
@@ -7815,7 +7815,7 @@
     },
     "hemp_seed": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hemp Seed (Hulled)",
       "icon": "🌿",
       "latin": "Cannabis sativa (Semen decorticatum)",
@@ -7877,7 +7877,7 @@
     },
     "pumpkin_seed": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pumpkin Seed",
       "icon": "🎃",
       "latin": "Cucurbita pepo (Semen siccum)",
@@ -7939,7 +7939,7 @@
     },
     "sunflower_seed": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sunflower Seed",
       "icon": "🌻",
       "latin": "Helianthus annuus (Semen siccum)",
@@ -8000,7 +8000,7 @@
     },
     "sesame_seed": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sesame Seed (Unhulled)",
       "icon": "🌾",
       "latin": "Sesamum indicum (Semen siccum cum cortice)",
@@ -8062,7 +8062,7 @@
     },
     "black_sesame": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Sesame Seed",
       "icon": "⬛",
       "latin": "Sesamum indicum (Semen siccum nigrum)",
@@ -8120,7 +8120,7 @@
     },
     "poppy_seed": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Poppy Seed",
       "icon": "🌑",
       "latin": "Papaver somniferum (Semen siccum)",
@@ -8180,7 +8180,7 @@
     },
     "nigella_black_seed": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Seed (Nigella)",
       "icon": "🕳️",
       "latin": "Nigella sativa (Semen siccum)",
@@ -8239,7 +8239,7 @@
     },
     "white_chia_seed": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "White Chia Seed",
       "icon": "⚪",
       "latin": "Salvia hispanica (Semen siccum album)",
@@ -8297,7 +8297,7 @@
     },
     "cedar_nut": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Siberian Cedar Nut",
       "icon": "🌲",
       "latin": "Pinus sibirica (Semen siccum)",
@@ -8355,7 +8355,7 @@
     },
     "sweet_apricot_kernel": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sweet Apricot Kernel",
       "icon": "🍑",
       "latin": "Prunus armeniaca (Semen siccum dulce)",
@@ -8468,7 +8468,7 @@
     },
     "white_mustard_seed": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mustard Seed (White/Yellow)",
       "icon": "🟡",
       "latin": "Sinapis alba (Semen siccum)",
@@ -8528,7 +8528,7 @@
     },
     "black_mustard_seed": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Mustard Seed",
       "icon": "⚫",
       "latin": "Brassica nigra (Semen siccum nigrum)",
@@ -8585,7 +8585,7 @@
     },
     "fennel_seed": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fennel Seed",
       "icon": "🌿",
       "latin": "Foeniculum vulgare (Semen siccum)",
@@ -8645,7 +8645,7 @@
     },
     "anise": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Anise Seed",
       "icon": "⭐",
       "latin": "Pimpinella anisum (Semen siccum)",
@@ -8704,7 +8704,7 @@
     },
     "lotus_seed": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lotus Seed (Makhana)",
       "icon": "🪷",
       "latin": "Nelumbo nucifera (Semen siccum)",
@@ -8760,7 +8760,7 @@
     },
     "caraway": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Caraway Seed",
       "icon": "🌿",
       "latin": "Carum carvi (Semen siccum)",
@@ -8819,7 +8819,7 @@
     },
     "cumin": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cumin Seed",
       "icon": "🤎",
       "latin": "Cuminum cyminum (Semen siccum)",
@@ -8880,7 +8880,7 @@
   "leafy_greens_dry_greens": {
     "spirulina_powder": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Spirulina Powder",
       "icon": "🧬",
       "latin": "Arthrospira platensis (Cyanobacteria pulvis)",
@@ -8939,7 +8939,7 @@
     },
     "matcha_powder": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Matcha Powder",
       "icon": "🍵",
       "latin": "Camellia sinensis (Folia pulvis)",
@@ -9006,7 +9006,7 @@
     },
     "chlorella_powder": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chlorella Powder",
       "icon": "🧬",
       "latin": "Chlorella vulgaris (Algae pulvis)",
@@ -9069,7 +9069,7 @@
     },
     "wheatgrass_powder": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wheatgrass Powder",
       "icon": "🌱",
       "latin": "Triticum aestivum (Herba pulvis)",
@@ -9131,7 +9131,7 @@
     },
     "moringa_powder": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Moringa Powder",
       "icon": "🍃",
       "latin": "Moringa oleifera (Folia pulvis)",
@@ -9192,7 +9192,7 @@
     },
     "barley_grass_powder": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Barley Grass Powder",
       "icon": "🌾",
       "latin": "Hordeum vulgare (Herba pulvis)",
@@ -9254,7 +9254,7 @@
     },
     "broccoli_sprout_powder": {
       "unit_price": 20.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Broccoli Sprout Powder",
       "icon": "🥦",
       "latin": "Brassica oleracea (Germinatus pulvis)",
@@ -9308,7 +9308,7 @@
     },
     "spinach_powder": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Spinach Powder",
       "icon": "🥬",
       "latin": "Spinacia oleracea (Folia pulvis)",
@@ -9366,7 +9366,7 @@
     },
     "kale_powder": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kale Powder",
       "icon": "🥬",
       "latin": "Brassica oleracea var. sabellica (Folia pulvis)",
@@ -9423,7 +9423,7 @@
     },
     "alfalfa_powder": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alfalfa Powder",
       "icon": "🌿",
       "latin": "Medicago sativa (Herba pulvis)",
@@ -9481,7 +9481,7 @@
     "--- ROOTS_AND_BARKS_POWDER ---": "Wurzeln & Rinden (Getrocknet & Gemahlen)",
     "turmeric_powder": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Turmeric Powder",
       "icon": "🫙",
       "latin": "Curcuma longa (Rhizoma pulvis)",
@@ -9541,7 +9541,7 @@
     },
     "ginger_powder": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ginger Powder",
       "icon": "🫙",
       "latin": "Zingiber officinale (Rhizoma pulvis)",
@@ -9597,7 +9597,7 @@
     },
     "ceylon_cinnamon_ground": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ceylon Cinnamon (Ground)",
       "icon": "🫙",
       "latin": "Cinnamomum verum (Cortex pulvis)",
@@ -9654,7 +9654,7 @@
     "--- SEEDS_FLOWERS_FRUITS_DRY ---": "Blüten, Samen & getrocknete Früchte",
     "goji_berries": {
       "unit_price": 4.5,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gojibeeren",
       "icon": "🍒",
       "latin": "Lycium barbarum",
@@ -9693,7 +9693,7 @@
     },
     "mango_strips_dried": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mangostreifen (Getrocknet)",
       "icon": "🥭",
       "sci": [
@@ -9731,7 +9731,7 @@
     },
     "black_pepper_ground": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Pepper (Ground)",
       "icon": "⚫",
       "latin": "Piper nigrum (Fructus pulvis)",
@@ -9786,7 +9786,7 @@
     },
     "cloves": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cloves (Whole/Ground)",
       "icon": "📍",
       "latin": "Syzygium aromaticum (Alabastra sicca)",
@@ -9841,7 +9841,7 @@
     },
     "cardamom": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cardamom (Pods/Powder)",
       "icon": "🟢",
       "latin": "Elettaria cardamomum (Fructus siccus)",
@@ -9894,7 +9894,7 @@
     },
     "nutmeg_ground": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nutmeg (Ground)",
       "icon": "🌰",
       "latin": "Myristica fragrans (Semen pulvis)",
@@ -9949,7 +9949,7 @@
     },
     "saffron": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Saffron (Threads)",
       "icon": "🏵️",
       "latin": "Crocus sativus (Stigma sicca)",
@@ -10004,7 +10004,7 @@
     },
     "paprika_powder": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Paprika Powder",
       "icon": "🌶️",
       "latin": "Capsicum annuum (Fructus pulvis)",
@@ -10063,7 +10063,7 @@
     },
     "cayenne_pepper": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cayenne Pepper",
       "icon": "🌶️",
       "latin": "Capsicum annuum (Fructus pulvis acris)",
@@ -10119,7 +10119,7 @@
     },
     "mixed_peppercorns": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mixed Peppercorns",
       "icon": "🌈",
       "latin": "Piperis varietates (Fructus siccus)",
@@ -10174,7 +10174,7 @@
     },
     "white_pepper_ground": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "White Pepper (Ground)",
       "icon": "⚪",
       "latin": "Piper nigrum (Fructus decorticatus pulvis)",
@@ -10229,7 +10229,7 @@
     },
     "paprika_smoked": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Smoked Paprika",
       "icon": "💨",
       "latin": "Capsicum annuum (Fructus fumigatus pulvis)",
@@ -10285,7 +10285,7 @@
     },
     "garlic_powder": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Garlic Powder",
       "icon": "🧄",
       "latin": "Allium sativum (Bulbus pulvis)",
@@ -10340,7 +10340,7 @@
     },
     "onion_powder": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Onion Powder",
       "icon": "🧅",
       "latin": "Allium cepa (Bulbus pulvis)",
@@ -10392,7 +10392,7 @@
     },
     "coriander_powder": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Coriander Powder",
       "icon": "🫙",
       "latin": "Coriandrum sativum (Fructus pulvis)",
@@ -10449,7 +10449,7 @@
     },
     "fenugreek": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fenugreek (Seeds/Powder)",
       "icon": "🫘",
       "latin": "Trigonella foenum-graecum (Semen siccum)",
@@ -10508,7 +10508,7 @@
     },
     "anise_ground": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Anise (Ground)",
       "icon": "⭐",
       "latin": "Pimpinella anisum (Fructus pulvis)",
@@ -10561,7 +10561,7 @@
     },
     "fennel_powder": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fennel (Ground)",
       "icon": "🌿",
       "latin": "Foeniculum vulgare (Fructus pulvis)",
@@ -10616,7 +10616,7 @@
     },
     "chili_flakes": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chili Flakes (Pul Biber)",
       "icon": "🌶️",
       "latin": "Capsicum annuum (Fructus siccus fractus)",
@@ -10671,7 +10671,7 @@
     },
     "black_mustard_powder": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Mustard (Ground)",
       "icon": "🫙",
       "latin": "Brassica nigra (Semen pulvis)",
@@ -10721,7 +10721,7 @@
     },
     "sumac": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sumac",
       "icon": "🔴",
       "latin": "Rhus coriaria (Fructus pulvis)",
@@ -10776,7 +10776,7 @@
     },
     "pure_vanilla_powder": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vanilla (Pure Powder)",
       "icon": "🍦",
       "latin": "Vanilla planifolia (Fructus pulvis)",
@@ -10832,7 +10832,7 @@
     "--- VEGAN_PROTEIN_ISOLATES ---": "Pflanzliche Proteinkonzentrate",
     "pea_protein_isolate": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pea Protein Isolate",
       "icon": "💪",
       "latin": "Pisum sativum (Protein isolate)",
@@ -10894,7 +10894,7 @@
     },
     "rice_protein_isolate": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rice Protein Isolate",
       "icon": "💪",
       "latin": "Oryza sativa (Protein isolate)",
@@ -10951,7 +10951,7 @@
     },
     "sunflower_protein": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sunflower Protein",
       "icon": "🌻",
       "latin": "Helianthus annuus (Protein powder)",
@@ -11008,7 +11008,7 @@
     "--- ENERGY_AND_RECOVERY_POWDERS ---": "Energie- & Regenerations-Pulver",
     "maca_powder": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Maca Powder",
       "icon": "🌋",
       "latin": "Lepidium meyenii (Radix pulvis)",
@@ -11069,7 +11069,7 @@
     },
     "guarana_powder": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Guarana Powder",
       "icon": "👁️",
       "latin": "Paullinia cupana (Semen pulvis)",
@@ -11127,7 +11127,7 @@
     },
     "cacao_nibs": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cacao Nibs",
       "icon": "🍫",
       "latin": "Theobroma cacao (Semen fractum)",
@@ -11187,7 +11187,7 @@
     },
     "beetroot_juice_powder": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Beetroot Juice Powder",
       "icon": "🩸",
       "latin": "Beta vulgaris (Succus pulvis)",
@@ -11244,7 +11244,7 @@
     },
     "nutritional_yeast_flakes": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nutritional Yeast Flakes",
       "icon": "💛",
       "latin": "Saccharomyces cerevisiae (Inactivatum)",
@@ -11303,7 +11303,7 @@
     },
     "carob_powder": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Carob Powder",
       "icon": "🤎",
       "latin": "Ceratonia siliqua (Fructus pulvis)",
@@ -11359,7 +11359,7 @@
     },
     "lupin_protein": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lupin Protein Powder",
       "icon": "🌼",
       "latin": "Lupinus albus (Protein pulvis)",
@@ -11419,7 +11419,7 @@
     "--- WHEAT_AND_GLUTEN_FLOURS ---": "Brot- und Backmehle (Mit Klebereiweiß)",
     "all_purpose_wheat_flour": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wheat Flour (Type 405 / AP)",
       "icon": "🌾",
       "latin": "Triticum aestivum (Semolina polita)",
@@ -11476,7 +11476,7 @@
     },
     "whole_wheat_flour": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Whole Wheat Flour",
       "icon": "🌾",
       "latin": "Triticum aestivum (Farina completa)",
@@ -11536,7 +11536,7 @@
     },
     "light_spelt_flour": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Spelt Flour (Type 630)",
       "icon": "🌾",
       "latin": "Triticum spelta (Farina typus 630)",
@@ -11594,7 +11594,7 @@
     },
     "rye_flour": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rye Flour (Type 1150)",
       "icon": "🍞",
       "latin": "Secale cereale (Farina typus 1150)",
@@ -11651,7 +11651,7 @@
     "--- GLUTEN_FREE_FLOURS ---": "Glutenfreie Mehle & Low-Carb",
     "defatted_almond_flour": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Almond Flour (Defatted)",
       "icon": "🌰",
       "latin": "Prunus dulcis (Semen deoleatum pulvis)",
@@ -11709,7 +11709,7 @@
     },
     "chickpea_flour": {
       "unit_price": 2.45,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "dmBio Kichererbsenmehl",
       "icon": "🧆",
       "latin": "Cicer arietinum (pulvis)",
@@ -11758,7 +11758,7 @@
     },
     "buckwheat_flour": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Buckwheat Flour",
       "icon": "📐",
       "latin": "Fagopyrum esculentum (Semen pulvis)",
@@ -11814,7 +11814,7 @@
     },
     "rice_flour": {
       "unit_price": 1.85,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "dmBio Reismehl",
       "icon": "🍚",
       "latin": "Oryza sativa (pulvis)",
@@ -11864,7 +11864,7 @@
     "--- KETO_AND_PROTEIN_FLOURS ---": "Low-Carb & Veganes Protein",
     "coconut_flour": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Coconut Flour",
       "icon": "🥥",
       "latin": "Cocos nucifera (Semen deoleatum pulvis)",
@@ -11924,7 +11924,7 @@
     },
     "lupin_flour": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lupin Flour",
       "icon": "🌼",
       "latin": "Lupinus albus (Semen pulvis)",
@@ -11982,7 +11982,7 @@
     "--- GF_BAKING_SCIENCE ---": "Glutenfreie Bindemittel & Resistente Stärke",
     "green_banana_flour": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Green Banana Flour",
       "icon": "🍌",
       "latin": "Musa acuminata (Fructus immaturus pulvis)",
@@ -12039,7 +12039,7 @@
     },
     "psyllium_husk_powder": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Psyllium Husk Powder",
       "icon": "🌾",
       "latin": "Plantago ovata (Testa pulvis)",
@@ -12098,7 +12098,7 @@
     },
     "xanthan_gum": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Xanthan Gum",
       "icon": "🧪",
       "latin": "Xanthomonas campestris (Polysaccharidum)",
@@ -12153,7 +12153,7 @@
     },
     "arrowroot_powder": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Arrowroot Powder",
       "icon": "🌿",
       "latin": "Maranta arundinacea (Amylum)",
@@ -12209,7 +12209,7 @@
     },
     "cassava_flour": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cassava Flour",
       "icon": "🍠",
       "latin": "Manihot esculenta (Radix completa pulvis)",
@@ -12266,7 +12266,7 @@
     "--- STARCHES_AND_THICKENERS ---": "Reine Stärken & Bindemittel",
     "zea_mays_starch": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cornstarch",
       "icon": "🌽",
       "latin": "Zea mays (Amylum)",
@@ -12323,7 +12323,7 @@
     },
     "solanum_tuberosum_starch": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Potato Starch",
       "icon": "🥔",
       "latin": "Solanum tuberosum (Amylum)",
@@ -12379,7 +12379,7 @@
     },
     "manihot_esculenta_starch": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tapioca Starch",
       "icon": "🧋",
       "latin": "Manihot esculenta (Amylum)",
@@ -12435,7 +12435,7 @@
     },
     "oryza_sativa_starch": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rice Starch",
       "icon": "🍚",
       "latin": "Oryza sativa (Amylum)",
@@ -12493,7 +12493,7 @@
     "--- GELLING_AGENTS ---": "Geliermittel & Vegane Gelatine",
     "agar_agar": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Agar-Agar Powder",
       "icon": "🍮",
       "latin": "Gelidium / Gracilaria extract (Polysaccharidum)",
@@ -12555,7 +12555,7 @@
     },
     "apple_pectin": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pectin (Apple/Citrus)",
       "icon": "🍎",
       "latin": "Pectinum",
@@ -12610,7 +12610,7 @@
     },
     "gelatin_powder": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gelatin Powder (Animal)",
       "icon": "🦴",
       "latin": "Gelatina animalis",
@@ -12669,7 +12669,7 @@
     "--- LEGUME_FLOURS ---": "Hülsenfrüchte (Extreme Protein-Werte)",
     "defatted_soy_flour": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Soy Flour (Defatted)",
       "icon": "🫘",
       "latin": "Glycine max (Semen deoleatum pulvis)",
@@ -12726,7 +12726,7 @@
     },
     "red_lentil_flour": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Red Lentil Flour",
       "icon": "🔴",
       "latin": "Lens culinaris (Semen pulvis)",
@@ -12785,7 +12785,7 @@
     "--- SEED_AND_NUT_FLOURS ---": "Saaten & Nüsse (Low-Carb Helden)",
     "defatted_flaxseed_meal": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Flaxseed Meal (Defatted)",
       "icon": "🤎",
       "latin": "Linum usitatissimum (Semen deoleatum pulvis)",
@@ -12843,7 +12843,7 @@
     },
     "pumpkin_seed_flour": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pumpkin Seed Flour",
       "icon": "🎃",
       "latin": "Cucurbita pepo (Semen deoleatum pulvis)",
@@ -12901,7 +12901,7 @@
     "--- GF_GRAINS_AND_PSEUDOCEREALS ---": "Glutenfreie Getreidemehle",
     "maize_flour": {
       "unit_price": 1.95,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "dmBio Maismehl",
       "icon": "🌽",
       "latin": "Zea mays (pulvis)",
@@ -12950,7 +12950,7 @@
     },
     "rice_starch": {
       "unit_price": 2.25,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "dmBio Reisstärke",
       "icon": "🍙",
       "latin": "Amylum oryzae",
@@ -12999,7 +12999,7 @@
     },
     "oat_flour": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Oat Flour (Certified GF)",
       "icon": "🥣",
       "latin": "Avena sativa (Caryopsis pulvis)",
@@ -13056,7 +13056,7 @@
     },
     "teff_flour": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Teff Flour",
       "icon": "🌾",
       "latin": "Eragrostis tef (Caryopsis pulvis)",
@@ -13114,7 +13114,7 @@
     },
     "millet_flour": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Millet Flour",
       "icon": "🌾",
       "latin": "Panicum miliaceum (Caryopsis pulvis)",
@@ -13171,7 +13171,7 @@
     },
     "quinoa_flour": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Quinoa Flour",
       "icon": "🥣",
       "latin": "Chenopodium quinoa (Semen pulvis)",
@@ -13228,7 +13228,7 @@
     },
     "glutinous_rice_flour": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Glutinous Rice Flour",
       "icon": "🍚",
       "latin": "Oryza sativa var. glutinosa (Caryopsis pulvis)",
@@ -13280,7 +13280,7 @@
     },
     "harina_masa": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Masa Harina (Nixtamalized)",
       "icon": "🌽",
       "latin": "Zea mays (Caryopsis nixtamalizata pulvis)",
@@ -13336,7 +13336,7 @@
     "--- SPECIALTY_ROOTS_AND_MOLECULAR_BINDERS ---": "Wurzeln & Super-Bindemittel",
     "chestnut_flour": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chestnut Flour",
       "icon": "🌰",
       "latin": "Castanea sativa (Fructus pulvis)",
@@ -13394,7 +13394,7 @@
     },
     "tiger_nut_flour": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tiger Nut Flour",
       "icon": "🟤",
       "latin": "Cyperus esculentus (Rhizoma pulvis)",
@@ -13450,7 +13450,7 @@
     },
     "konjac_powder": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Konjac Powder (Glucomannan)",
       "icon": "🥔",
       "latin": "Amorphophallus konjac (Rhizoma pulvis)",
@@ -13505,7 +13505,7 @@
     },
     "kudzu_starch": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kudzu Root Starch (Kuzu)",
       "icon": "🌿",
       "latin": "Pueraria montana (Amylum)",
@@ -13562,7 +13562,7 @@
     },
     "locust_bean_gum": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Locust Bean Gum",
       "icon": "🧪",
       "latin": "Ceratonia siliqua (Polysaccharidum)",
@@ -13615,7 +13615,7 @@
     },
     "lotus_root_starch": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lotus Root Starch",
       "icon": "🪷",
       "latin": "Nelumbo nucifera (Amylum)",
@@ -13668,7 +13668,7 @@
     "--- DRIED_SEAWEED_SHEETS ---": "Getrocknete & Geröstete Algenprodukte",
     "roasted_nori_sheets": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sushi Nori (Roasted Sheets)",
       "icon": "🍙",
       "latin": "Pyropia yezoensis (Thallus torrefactus)",
@@ -13733,7 +13733,7 @@
     "--- DRIED_FRUIT_FOUNDATIONS ---": "Die Energie-Anker (Konzentrierte Vitalität)",
     "date": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Date (Fresh/Medjool)",
       "icon": "🌴",
       "latin": "Phoenix dactylifera (Fructus recens)",
@@ -13788,7 +13788,7 @@
     },
     "raisin": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Raisin / Sultana",
       "icon": "🍇",
       "latin": "Vitis vinifera (Uva passa)",
@@ -13845,7 +13845,7 @@
     },
     "goji_berry": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Goji Berry (Dried)",
       "icon": "🏮",
       "latin": "Lycium barbarum (Fructus siccus)",
@@ -13907,7 +13907,7 @@
     },
     "mulberry": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mulberry (Dried)",
       "icon": "🍇",
       "latin": "Morus alba (Fructus siccus)",
@@ -13966,7 +13966,7 @@
     },
     "fig_dried": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fig (Dried)",
       "icon": "🟤",
       "latin": "Ficus carica (Fructus siccus)",
@@ -14023,7 +14023,7 @@
     },
     "prune": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Prune (Dried Plum)",
       "icon": "🟣",
       "latin": "Prunus domestica (Fructus siccus)",
@@ -14081,7 +14081,7 @@
     },
     "apricot_dried": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Apricot (Dried)",
       "icon": "🟠",
       "latin": "Prunus armeniaca (Fructus siccus)",
@@ -14139,7 +14139,7 @@
     },
     "cranberry_dried": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cranberry (Dried/Sweetened)",
       "icon": "🔴",
       "latin": "Vaccinium macrocarpon (Fructus siccus)",
@@ -14196,7 +14196,7 @@
     },
     "inca_berry": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Inca Berry (Dried Physalis)",
       "icon": "🏮",
       "latin": "Physalis peruviana (Fructus siccus)",
@@ -14253,7 +14253,7 @@
     },
     "banana_chips": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Banana Chips (Dried)",
       "icon": "🍌",
       "latin": "Musa acuminata (Fructus siccus fractus)",
@@ -14310,7 +14310,7 @@
     },
     "apple_dried": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Apple Rings (Dried)",
       "icon": "🍎",
       "latin": "Malus domestica (Fructus siccus)",
@@ -14366,7 +14366,7 @@
     },
     "mango_dried": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mango (Dried)",
       "icon": "🥭",
       "latin": "Mangifera indica (Fructus siccus)",
@@ -14424,7 +14424,7 @@
     },
     "pineapple_dried": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pineapple (Dried)",
       "icon": "🍍",
       "latin": "Ananas comosus (Fructus siccus)",
@@ -14476,7 +14476,7 @@
     },
     "papaya_dried": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Papaya (Dried)",
       "icon": "🧡",
       "latin": "Carica papaya (Fructus siccus)",
@@ -14532,7 +14532,7 @@
     "--- BAKING_LEAVENING_AGENTS ---": "Triebmittel (Die CO2-Architektur)",
     "baking_powder_dr_oetker": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dr. Oetker Original Backin",
       "icon": "🍰",
       "latin": "Pulvis fermentans (Oetkerus)",
@@ -14587,7 +14587,7 @@
     },
     "baking_powder_discounter": {
       "unit_price": 0.65,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Belbake Backpulver (Lidl)",
       "icon": "🍞",
       "latin": "Pulvis fermentans",
@@ -14644,7 +14644,7 @@
     },
     "yeast_fresh": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Frische Hefe (Würfel)",
       "icon": "🍞",
       "latin": "Saccharomyces cerevisiae (vivus)",
@@ -14705,7 +14705,7 @@
     },
     "yeast_dry": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Trockenbackhefe",
       "icon": "🥨",
       "latin": "Saccharomyces cerevisiae (siccus)",
@@ -14760,7 +14760,7 @@
     "--- THE_VANILLA_TRINITY ---": "Die gesetzliche Vanille-Trinität",
     "vanilla_sugar_bourbon": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bourbon-Vanillezucker (Gemahlene Schote)",
       "icon": "🌼",
       "latin": "Saccharum vanillatum (Bourbon)",
@@ -14814,7 +14814,7 @@
     },
     "vanilla_sugar_natural_extract": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vanillezucker (Natürlicher Extrakt)",
       "icon": "🍯",
       "latin": "Saccharum vanillatum (Extractum)",
@@ -14872,7 +14872,7 @@
     },
     "vanillin_sugar_synthetic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vanillin-Zucker (Synthetisch)",
       "icon": "🍬",
       "latin": "Saccharum vanillinum (syntheticum)",
@@ -14933,7 +14933,7 @@
     "--- BAKING_STABILIZERS ---": "Hilfsmittel (Struktur & Optik)",
     "sahnesteif_dr_oetker": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dr. Oetker Sahnesteif",
       "icon": "🍦",
       "latin": "Stabilisator lactis (Oetker)",
@@ -14991,7 +14991,7 @@
     "--- TRADITIONAL_CHEMICAL_LEAVENING ---": "Spezifische Triebmittel & Säuren",
     "baking_soda_kaiser": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kaiser Natron (Natriumhydrogencarbonat)",
       "icon": "🧂",
       "latin": "Natrii hydrogenocarbonas",
@@ -15047,7 +15047,7 @@
     },
     "baking_powder_cream_of_tartar_gf": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Weinstein-Backpulver (Glutenfrei)",
       "icon": "🧁",
       "latin": "Pulvis fermentans (Potassii bitartras)",
@@ -15108,7 +15108,7 @@
     },
     "ammonium_bicarbonate": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hirschhornsalz (Ammoniumhydrogencarbonat)",
       "icon": "🦌",
       "latin": "Ammonii hydrogenocarbonas",
@@ -15169,7 +15169,7 @@
     },
     "potassium_carbonate": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pottasche (Kaliumcarbonat)",
       "icon": "🍯",
       "latin": "Kalii carbonas",
@@ -15231,7 +15231,7 @@
     },
     "citric_acid_powder": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Zitronensäure (Lebensmittelqualität / E 330)",
       "icon": "🍋",
       "latin": "Acidum citricum",
@@ -15293,7 +15293,7 @@
     "--- BREAD_BAKING_ESSENTIALS ---": "Brotback-Hilfsmittel",
     "panko_breadcrumbs": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Panko Paniermehl",
       "icon": "🍤",
       "sci": [
@@ -15331,7 +15331,7 @@
     },
     "sourdough_extract_dry": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sauerteig-Extrakt (Getrocknet)",
       "icon": "🍞",
       "latin": "Fermentum siccum",
@@ -15394,7 +15394,7 @@
     },
     "baking_malt_active": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Backmalz (Gerstenmalzextrakt)",
       "icon": "🌾",
       "latin": "Extractum malti",
@@ -15456,7 +15456,7 @@
     "--- PASTRY_AND_CAKE_ADDITIVES ---": "Kuchen- & Gebäck-Zutaten",
     "marzipan_raw": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Marzipanrohmasse",
       "icon": "🌰",
       "latin": "Pasta amygdalae",
@@ -15517,7 +15517,7 @@
     },
     "candied_lemon_peel": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Zitronat (Sukkade)",
       "icon": "🍋",
       "latin": "Citrus medica (Cortex saccharatus)",
@@ -15579,7 +15579,7 @@
     },
     "candied_orange_peel": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Orangeat",
       "icon": "🍊",
       "latin": "Citrus aurantium (Cortex saccharatus)",
@@ -15641,7 +15641,7 @@
     },
     "powdered_sugar": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Puderzucker (Staubzucker)",
       "icon": "❄️",
       "latin": "Saccharum officinarum (Pulvis)",
@@ -15695,7 +15695,7 @@
     },
     "pearl_sugar": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hagelzucker",
       "icon": "💎",
       "latin": "Saccharum officinarum (Granula)",
@@ -15751,7 +15751,7 @@
     },
     "clear_cake_glaze": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Klarer Tortenguss",
       "icon": "🍰",
       "latin": "Gelatina clara",
@@ -15813,7 +15813,7 @@
     "--- CAKE_DECORATION_AND_GLAZES ---": "Dekoration, Fondant & Glasuren",
     "rolled_fondant": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rollfondant (Weiß)",
       "icon": "🎂",
       "latin": "Pasta saccharina",
@@ -15876,7 +15876,7 @@
     },
     "sugar_sprinkles": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Zuckerstreusel / Liebesperlen",
       "icon": "🎊",
       "latin": "Granula saccharina colorata",
@@ -15933,7 +15933,7 @@
     },
     "chocolate_fat_glaze": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kakaohaltige Fettglasur",
       "icon": "🍩",
       "latin": "Tegumentum cacaoticum",
@@ -15997,7 +15997,7 @@
     "--- DESSERT_POWDERS_AND_JELLIES ---": "Pudding, Cremes & Wackelpudding",
     "pudding_powder_vanilla": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Puddingpulver Vanille-Geschmack",
       "icon": "🍮",
       "latin": "Pulvis amyli (Vanilla)",
@@ -16052,7 +16052,7 @@
     },
     "pudding_powder_chocolate": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Puddingpulver Schokolade",
       "icon": "🍫",
       "latin": "Pulvis amyli (Cacao)",
@@ -16107,7 +16107,7 @@
     },
     "instant_dessert_cream": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Paradiescreme / Instant-Dessert",
       "icon": "☁️",
       "latin": "Spuma dulcis instantanea",
@@ -16166,7 +16166,7 @@
     },
     "jello_powder_woodruff": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Götterspeise / Wackelpudding (Waldmeister)",
       "icon": "🟢",
       "latin": "Gelatina viridis (Galium odoratum)",
@@ -16226,7 +16226,7 @@
     "--- LIQUID_BAKING_FLAVORS_AND_PODS ---": "Backaromen & Rohe Vanille",
     "bitter_almond_flavor": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bittermandel-Aroma (Fläschchen)",
       "icon": "🧪",
       "latin": "Benzaldehydum emulsionem",
@@ -16284,7 +16284,7 @@
     },
     "whole_vanilla_bean": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vanilleschote (Ganz)",
       "icon": "🌱",
       "latin": "Vanilla planifolia (Fructus integer)",
@@ -16350,7 +16350,7 @@
     "--- DURUM_WHEAT_CLASSICS ---": "Traditionelle Hartweizengrieß-Pasta (Vegan)",
     "pasta_spaghetti_durum": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Spaghetti (Hartweizengrieß)",
       "icon": "🍝",
       "latin": "Triticum durum (Fila)",
@@ -16415,7 +16415,7 @@
     },
     "pasta_spaghetti_wholegrain": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Vollkorn Spaghetti",
       "icon": "🍝",
       "latin": "Triticum aestivum (Integralis)",
@@ -16476,7 +16476,7 @@
     },
     "pasta_dinkel_fusilli": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dinkel Spirelli (Type 630/Vollkorn)",
       "icon": "🌪️",
       "latin": "Triticum spelta",
@@ -16534,7 +16534,7 @@
     },
     "pasta_penne_rigate": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Penne Rigate",
       "icon": "🍝",
       "latin": "Triticum durum (Tubuli striati)",
@@ -16595,7 +16595,7 @@
     },
     "pasta_fusilli": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fusilli (Spirelli)",
       "icon": "🌪️",
       "latin": "Triticum durum (Spirae)",
@@ -16657,7 +16657,7 @@
     "--- DURUM_SHAPES_EXPANDED ---": "Formate & Spezialnudeln (Hartweizen)",
     "pasta_farfalle": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Farfalle (Schmetterlingsnudeln)",
       "icon": "🦋",
       "latin": "Triticum durum (Papiliones)",
@@ -16718,7 +16718,7 @@
     },
     "pasta_maccheroni": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Maccheroni (Makkaroni)",
       "icon": "🍝",
       "latin": "Triticum durum (Tubuli longi)",
@@ -16779,7 +16779,7 @@
     },
     "pasta_rigatoni": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rigatoni",
       "icon": "🍝",
       "latin": "Triticum durum (Tubuli magni striati)",
@@ -16840,7 +16840,7 @@
     },
     "pasta_linguine": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Linguine / Bavette",
       "icon": "🍝",
       "latin": "Triticum durum (Fila plana)",
@@ -16901,7 +16901,7 @@
     },
     "pasta_lasagne_sheets": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lasagneplatten (Trocken)",
       "icon": "🔲",
       "latin": "Triticum durum (Laminas)",
@@ -16962,7 +16962,7 @@
     },
     "pasta_cannelloni": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cannelloni (Trockenröhren)",
       "icon": "🧻",
       "latin": "Triticum durum (Tubuli maximi)",
@@ -17023,7 +17023,7 @@
     },
     "pasta_orecchiette": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Orecchiette (Öhrchennudeln)",
       "icon": "👂",
       "latin": "Triticum durum (Auriculae)",
@@ -17084,7 +17084,7 @@
     },
     "pasta_orzo_kritharaki": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Orzo / Kritharaki (Nudelreis)",
       "icon": "🌾",
       "latin": "Triticum durum (Granula)",
@@ -17146,7 +17146,7 @@
     "--- EGG_AND_FRESH_PASTA ---": "Eiernudeln & Schwäbische Tradition",
     "pasta_tagliatelle_egg": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tagliatelle / Bandnudeln (Mit Ei)",
       "icon": "🎀",
       "latin": "Triticum durum et ovum",
@@ -17208,7 +17208,7 @@
     },
     "pasta_spaetzle": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Spätzle (Schwäbische Eiernudeln)",
       "icon": "🍲",
       "latin": "Triticum et ovum (Spätzle)",
@@ -17271,7 +17271,7 @@
     },
     "pasta_tortellini_dry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tortellini (Trocken / Fleisch- oder Käsefüllung)",
       "icon": "🥟",
       "latin": "Triticum, ovum et farcimen",
@@ -17333,7 +17333,7 @@
     "--- ASIAN_WHEAT_AND_EGG_NOODLES ---": "Asiatische Weizen- & Eiernudeln",
     "noodles_udon_dry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Udon Nudeln (Trocken)",
       "icon": "🍜",
       "latin": "Triticum aestivum (Udon)",
@@ -17395,7 +17395,7 @@
     },
     "noodles_ramen_dry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ramen Nudeln (Getrocknet / Kansui)",
       "icon": "🍜",
       "latin": "Triticum aestivum (Ramen alkaline)",
@@ -17457,7 +17457,7 @@
     },
     "noodles_soba_dry": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Soba Nudeln (Buchweizen)",
       "icon": "🥢",
       "latin": "Fagopyrum esculentum (Soba)",
@@ -17519,7 +17519,7 @@
     },
     "noodles_mie_egg": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mie Nudeln (Eiernudeln, Asiatisch)",
       "icon": "🥡",
       "latin": "Triticum et ovum (Mie)",
@@ -17583,7 +17583,7 @@
     "--- ASIAN_GF_AND_STARCH_NOODLES ---": "Glas-, Reis- & Konjaknudeln (Glutenfrei)",
     "noodles_rice_dry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Reisnudeln (Getrocknet)",
       "icon": "🍜",
       "latin": "Oryza sativa (Fila)",
@@ -17644,7 +17644,7 @@
     },
     "noodles_glass_mung": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Glasnudeln (Mungbohnenstärke)",
       "icon": "🥢",
       "latin": "Vigna radiata (Amylum fila)",
@@ -17705,7 +17705,7 @@
     },
     "noodles_shirataki_konjac": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Shirataki Nudeln (Konjak)",
       "icon": "💧",
       "latin": "Amorphophallus konjac (Fila)",
@@ -17816,7 +17816,8 @@
       "energy": {
         "kcal": 360,
         "kj": 1506
-      }
+      },
+      "unit_type": "100g"
     },
     "asian_rice_noodles": {
       "label": "Reisnudeln (Bandschnitt/Vermicelli)",
@@ -17872,7 +17873,8 @@
       "energy": {
         "kcal": 350,
         "kj": 1464
-      }
+      },
+      "unit_type": "100g"
     },
     "asian_glass_noodles": {
       "label": "Glasnudeln (Mungobohne)",
@@ -17924,14 +17926,15 @@
       "energy": {
         "kcal": 345,
         "kj": 1443
-      }
+      },
+      "unit_type": "100g"
     }
   },
   "pasta_and_noodles_brands_asia": {
     "--- ASIAN_NOODLE_BRANDS_AND_IMPORTS ---": "Asiatische Nudeln (Marken-Standards & Original-Importe)",
     "noodles_rice_cock_brand": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cock Brand Reisnudeln (Pad Thai / 5mm)",
       "icon": "🍜",
       "latin": "Oryza sativa (Cock Brand)",
@@ -17992,7 +17995,7 @@
     },
     "noodles_vermicelli_wai_wai": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wai Wai Reis-Vermicelli (Bún)",
       "icon": "🥢",
       "latin": "Oryza sativa (Wai Wai)",
@@ -18049,7 +18052,7 @@
     },
     "noodles_glass_lungkow": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lungkow Glasnudeln (Longkou Vermicelli)",
       "icon": "🥡",
       "latin": "Vigna radiata (Longkou)",
@@ -18110,7 +18113,7 @@
     },
     "noodles_udon_samlip": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Samlip Fresh Udon (Vakuumverpackt)",
       "icon": "🍲",
       "latin": "Triticum aestivum (Samlip Fresh)",
@@ -18170,7 +18173,7 @@
     },
     "noodles_soba_hakubaku": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hakubaku Organic Soba",
       "icon": "🥢",
       "latin": "Fagopyrum esculentum (Hakubaku)",
@@ -18231,7 +18234,7 @@
     },
     "noodles_shirataki_kajnok": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kajnok Konjak Nudeln (Premium Shirataki)",
       "icon": "💧",
       "latin": "Amorphophallus konjac (Kajnok)",
@@ -18296,7 +18299,7 @@
     "--- LEGUME_AND_GF_PASTA ---": "Hülsenfrüchte & Glutenfreie Alternativen",
     "pasta_red_lentil_gf": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rote Linsen Nudeln (Fusilli/Penne)",
       "icon": "🔴",
       "latin": "Lens culinaris (Fila)",
@@ -18361,7 +18364,7 @@
     },
     "pasta_chickpea_gf": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kichererbsen Nudeln",
       "icon": "🧆",
       "latin": "Cicer arietinum (Fila)",
@@ -18425,7 +18428,7 @@
     },
     "pasta_corn_rice_classic_gf": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Glutenfreie Pasta (Mais-Reis-Mischung)",
       "icon": "🌽",
       "latin": "Zea mays et Oryza sativa (Fila)",
@@ -18489,7 +18492,7 @@
     "--- POTATO_BASED_PASTA ---": "Kartoffelbasierte Teigwaren (Meist Kühlregal)",
     "pasta_gnocchi_fresh": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gnocchi (Frisch/Kühlregal)",
       "icon": "🥔",
       "latin": "Solanum tuberosum (Pasta)",
@@ -18545,7 +18548,7 @@
     },
     "pasta_schupfnudeln": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Schupfnudeln (Fingernudeln)",
       "icon": "🥟",
       "latin": "Solanum tuberosum (Fila)",
@@ -18602,7 +18605,7 @@
     "--- PLANT_OILS_AND_FATS ---": "Pflanzliche Fette (MUFA & PUFA Fokus)",
     "olive_oil": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Extra Virgin Olive Oil",
       "icon": "🫒",
       "latin": "Olea europaea",
@@ -18670,7 +18673,7 @@
     },
     "rapeseed_oil": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Rapeseed Oil (Canola)",
       "icon": "🌼",
       "latin": "Brassica napus",
@@ -18735,7 +18738,7 @@
     },
     "coconut_oil": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Coconut Oil",
       "icon": "🥥",
       "latin": "Cocos nucifera",
@@ -18802,7 +18805,7 @@
     },
     "margarine": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Margarine (Plant-Based)",
       "icon": "🧈",
       "latin": "Mixed Plant Oils",
@@ -18867,7 +18870,7 @@
     },
     "cocoa_butter": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cocoa Butter (Pure)",
       "icon": "🍫",
       "latin": "Theobroma cacao (Oleum)",
@@ -18936,7 +18939,7 @@
     "--- ESSENTIAL_SEED_OILS ---": "Klassische Saaten- & Bratöle",
     "sunflower_oil": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Sunflower Oil",
       "icon": "🌻",
       "latin": "Helianthus annuus",
@@ -19001,7 +19004,7 @@
     },
     "safflower_oil": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Safflower Oil",
       "icon": "🌼",
       "latin": "Carthamus tinctorius",
@@ -19066,7 +19069,7 @@
     },
     "peanut_oil": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Peanut Oil",
       "icon": "🥜",
       "latin": "Arachis hypogaea",
@@ -19131,7 +19134,7 @@
     "--- OMEGA_AND_GOURMET_OILS ---": "Kaltgepresste Medizin- & Gourmet-Öle",
     "flaxseed_oil": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Flaxseed Oil (Linseed)",
       "icon": "🤎",
       "latin": "Linum usitatissimum",
@@ -19198,7 +19201,7 @@
     },
     "toasted_sesame_oil": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Sesame Oil (Toasted)",
       "icon": "🌾",
       "latin": "Sesamum indicum",
@@ -19263,7 +19266,7 @@
     },
     "pumpkin_seed_oil": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Pumpkin Seed Oil",
       "icon": "🎃",
       "latin": "Cucurbita pepo",
@@ -19328,7 +19331,7 @@
     },
     "hemp_oil": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Hemp Seed Oil",
       "icon": "🌿",
       "latin": "Cannabis sativa",
@@ -19394,7 +19397,7 @@
     },
     "avocado_oil": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Avocado Oil",
       "icon": "🥑",
       "latin": "Persea americana",
@@ -19459,7 +19462,7 @@
     },
     "walnut_oil": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Walnut Oil",
       "icon": "🧠",
       "latin": "Juglans regia",
@@ -19525,7 +19528,7 @@
     "--- ANIMAL_FATS ---": "Tierische Fette (Gesättigte Fettsäuren & Vitamine)",
     "butter": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Butter",
       "icon": "🧈",
       "latin": "Bos taurus (Milk Fat)",
@@ -19593,7 +19596,7 @@
     },
     "lard": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lard (Pork Fat)",
       "icon": "🥓",
       "latin": "Sus scrofa domesticus",
@@ -19658,7 +19661,7 @@
     },
     "fish_oil": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Fish Oil",
       "icon": "🐟",
       "latin": "Pisces (Mixed Marine Oil)",
@@ -19723,7 +19726,7 @@
     },
     "goose_fat": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Goose Fat",
       "icon": "🦢",
       "latin": "Anser anser domesticus",
@@ -19790,7 +19793,7 @@
     },
     "duck_fat": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Duck Fat",
       "icon": "🦆",
       "latin": "Anas platyrhynchos domesticus",
@@ -19858,7 +19861,7 @@
     "--- REFINED_AND_ALTERNATIVE_SUGARS ---": "Kristallzucker & Kokosblüten",
     "white_sugar": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "White Sugar (Sucrose)",
       "icon": "🧂",
       "latin": "Saccharum officinarum",
@@ -19920,7 +19923,7 @@
     },
     "brown_cane_sugar": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Brown Cane Sugar",
       "icon": "🟤",
       "latin": "Saccharum officinarum",
@@ -19987,7 +19990,7 @@
     },
     "coconut_sugar": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Coconut Blossom Sugar",
       "icon": "🥥",
       "latin": "Cocos nucifera",
@@ -20053,7 +20056,7 @@
     "--- NATURAL_LIQUID_SYRUPS ---": "Flüssige Natur-Süßen (Honig & Sirup)",
     "raw_honey": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Honey (Raw)",
       "icon": "🍯",
       "latin": "Apis mellifera (Producer)",
@@ -20116,7 +20119,7 @@
     },
     "maple_syrup": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Maple Syrup",
       "icon": "🍁",
       "latin": "Acer saccharum",
@@ -20182,7 +20185,7 @@
     },
     "agave_nectar": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Agave Nectar",
       "icon": "🌵",
       "latin": "Agave tequilana",
@@ -20244,7 +20247,7 @@
     },
     "date_syrup": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Date Syrup",
       "icon": "🌴",
       "latin": "Phoenix dactylifera",
@@ -20308,7 +20311,7 @@
     "--- BEVERAGE_AND_COCKTAIL_SYRUPS ---": "Bar- & Barista-Sirupe",
     "simple_syrup": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Simple Syrup (Läuterzucker)",
       "icon": "🍸",
       "latin": "Syrupus simplex",
@@ -20369,7 +20372,7 @@
     },
     "grenadine": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grenadine",
       "icon": "🍹",
       "latin": "Punica granatum (Historically)",
@@ -20431,7 +20434,7 @@
     },
     "orgeat": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Orgeat (Almond Syrup)",
       "icon": "🌰",
       "latin": "Prunus dulcis extract",
@@ -20490,7 +20493,7 @@
     },
     "gomme_syrup": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Gomme Syrup",
       "icon": "🥃",
       "latin": "Acacia senegal (Gum Arabic)",
@@ -20549,7 +20552,7 @@
     },
     "vanilla_syrup": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Vanilla Syrup",
       "icon": "☕",
       "latin": "Vanilla planifolia infused",
@@ -20610,7 +20613,7 @@
     },
     "caramel_syrup": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Caramel Syrup",
       "icon": "🍮",
       "latin": "Saccharum caramelised",
@@ -20671,7 +20674,7 @@
     },
     "hazelnut_syrup": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Hazelnut Syrup",
       "icon": "🌰",
       "latin": "Corylus avellana infused",
@@ -20732,7 +20735,7 @@
     },
     "coconut_syrup": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Coconut Syrup (Bar)",
       "icon": "🥥",
       "latin": "Cocos nucifera infused",
@@ -20793,7 +20796,7 @@
     },
     "passion_fruit_syrup": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Passion Fruit Syrup",
       "icon": "🥭",
       "latin": "Passiflora edulis extract",
@@ -20853,7 +20856,7 @@
     },
     "falernum_syrup": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Falernum (Syrup)",
       "icon": "🍹",
       "latin": "Zingiber / Citrus / Syzygium blend",
@@ -20912,7 +20915,7 @@
     },
     "elderflower_syrup": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Elderflower Syrup",
       "icon": "🌼",
       "latin": "Sambucus nigra extract",
@@ -20977,7 +20980,7 @@
     },
     "woodruff_syrup": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Woodruff Syrup",
       "icon": "🌿",
       "latin": "Galium odoratum extract",
@@ -21040,7 +21043,7 @@
     "--- ZERO_CALORIE_AND_SUGAR_ALCOHOLS ---": "Zuckeralkohole & Keto-Süßen",
     "erythritol": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Erythritol",
       "icon": "❄️",
       "latin": "Erythritol (Fermented)",
@@ -21105,7 +21108,7 @@
     },
     "xylitol": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Xylitol (Birch Sugar)",
       "icon": "🌳",
       "latin": "Xylitol",
@@ -21168,7 +21171,7 @@
     },
     "monk_fruit_extract": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Monk Fruit Extract",
       "icon": "🍈",
       "latin": "Siraitia grosvenorii",
@@ -21229,7 +21232,7 @@
     },
     "stevia_extract": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Stevia Extract (Powder/Liquid)",
       "icon": "🍃",
       "latin": "Stevia rebaudiana",
@@ -21295,7 +21298,7 @@
     "--- NUT_AND_SEED_BUTTERS ---": "Reines Nuss- & Samenmus (100% Natur)",
     "smooth_peanut_butter": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Peanut Butter (Smooth)",
       "icon": "🥜",
       "latin": "Arachis hypogaea paste",
@@ -21358,7 +21361,7 @@
     },
     "crunchy_peanut_butter": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Peanut Butter (Crunchy)",
       "icon": "🥜",
       "latin": "Arachis hypogaea paste",
@@ -21421,7 +21424,7 @@
     },
     "white_almond_butter": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Almond Butter (White/Blanched)",
       "icon": "🍯",
       "latin": "Prunus dulcis paste",
@@ -21486,7 +21489,7 @@
     },
     "brown_almond_butter": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Almond Butter (Brown/Roasted)",
       "icon": "🌰",
       "latin": "Prunus dulcis paste",
@@ -21550,7 +21553,7 @@
     },
     "cashew_butter": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cashew Butter",
       "icon": "🌙",
       "latin": "Anacardium occidentale paste",
@@ -21614,7 +21617,7 @@
     },
     "light_tahini": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tahini (White/Hulled)",
       "icon": "🌾",
       "latin": "Sesamum indicum paste",
@@ -21680,7 +21683,7 @@
     },
     "dark_tahini": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tahini (Dark/Unhulled)",
       "icon": "⬛",
       "latin": "Sesamum indicum paste",
@@ -21742,7 +21745,7 @@
     },
     "hazelnut_butter": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hazelnut Butter",
       "icon": "🌰",
       "latin": "Corylus avellana paste",
@@ -21804,7 +21807,7 @@
     },
     "pistachio_butter": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pistachio Cream/Butter",
       "icon": "🟢",
       "latin": "Pistacia vera paste",
@@ -21864,7 +21867,7 @@
     },
     "sunflower_seed_butter": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sunflower Seed Butter",
       "icon": "🌻",
       "latin": "Helianthus annuus paste",
@@ -21928,7 +21931,7 @@
     "--- FERMENTED_UMAMI_PASTES ---": "Fermentierte Würz-Pasten (Probiotisch & Salzig)",
     "dashi_powder": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dashi Pulver (Hondashi)",
       "icon": "🐟",
       "sci": [
@@ -21965,7 +21968,7 @@
     },
     "white_miso": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Shiro Miso (White Miso)",
       "icon": "🥣",
       "latin": "Fermented Glycine max & Oryza sativa",
@@ -22027,7 +22030,7 @@
     },
     "red_miso": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Aka Miso (Red Miso)",
       "icon": "🟫",
       "latin": "Fermented Glycine max",
@@ -22087,7 +22090,7 @@
     },
     "hatcho_miso": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hatcho Miso (100% Soy)",
       "icon": "⬛",
       "latin": "Fermented Glycine max (No Grain)",
@@ -22147,7 +22150,7 @@
     },
     "gochujang": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gochujang (Korean Chili Paste)",
       "icon": "🌶️",
       "latin": "Fermented Capsicum & Oryza",
@@ -22207,7 +22210,7 @@
     },
     "doenjang": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Doenjang (Korean Soybean Paste)",
       "icon": "🍲",
       "latin": "Fermented Glycine max",
@@ -22265,7 +22268,7 @@
     },
     "yeast_extract": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Yeast Extract (Marmite/Vegemite)",
       "icon": "🍞",
       "latin": "Saccharomyces cerevisiae",
@@ -22330,7 +22333,7 @@
     "--- CULINARY_BASES_AND_SPICE_PASTES ---": "Würz-Basen (Curry, Tomate, Chili)",
     "tomato_paste": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tomato Paste (Triple Concentrated)",
       "icon": "🍅",
       "latin": "Solanum lycopersicum",
@@ -22395,7 +22398,7 @@
     },
     "tamarind_paste": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tamarind Paste",
       "icon": "🟤",
       "latin": "Tamarindus indica",
@@ -22455,7 +22458,7 @@
     },
     "harissa": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Harissa Paste",
       "icon": "🌶️",
       "latin": "Capsicum / Cuminum blend",
@@ -22517,7 +22520,7 @@
     },
     "green_curry_paste": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Green Curry Paste",
       "icon": "🟢",
       "latin": "Capsicum / Cymbopogon blend",
@@ -22579,7 +22582,7 @@
     },
     "red_curry_paste": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Red Curry Paste",
       "icon": "🔴",
       "latin": "Capsicum blend",
@@ -22641,7 +22644,7 @@
     },
     "umeboshi_paste": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Umeboshi Paste",
       "icon": "🌸",
       "latin": "Prunus mume",
@@ -22704,7 +22707,7 @@
     },
     "anchovy_paste": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Anchovy Paste",
       "icon": "🐟",
       "latin": "Engraulidae siccatum",
@@ -22766,7 +22769,7 @@
     },
     "garlic_paste": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Garlic Paste",
       "icon": "🧄",
       "latin": "Allium sativum blend",
@@ -22828,7 +22831,7 @@
     "--- ASIAN_FERMENTED_BEAN_PASTES ---": "Asiatische Bohnen- & Chili-Pasten",
     "doubanjiang": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Doubanjiang (Chili Bean Paste)",
       "icon": "🌶️",
       "latin": "Fermented Vicia faba",
@@ -22886,7 +22889,7 @@
     },
     "chunjang": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chunjang (Black Bean Paste)",
       "icon": "🫘",
       "latin": "Fermented Glycine max",
@@ -22945,7 +22948,7 @@
     "--- LIQUID_UMAMI_AND_FERMENTED_SAUCES ---": "Flüssige Umami-Bomben & Fermentiertes",
     "mirin_sweet_cooking_rice_wine": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Mirin (Süßer Reiswein)",
       "icon": "🍶",
       "sci": [
@@ -22983,7 +22986,7 @@
     },
     "cooking_sake": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cooking Sake",
       "icon": "🍶",
       "sci": [
@@ -23020,7 +23023,7 @@
     },
     "soy_sauce": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Soy Sauce (Shoyu)",
       "icon": "🏺",
       "latin": "Fermented Glycine max & Triticum",
@@ -23084,7 +23087,7 @@
     },
     "tamari": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tamari (Gluten-Free Soy Sauce)",
       "icon": "🏺",
       "latin": "Fermented Glycine max (No Wheat)",
@@ -23146,7 +23149,7 @@
     },
     "fish_sauce": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fish Sauce (Nam Pla / Nuoc Mam)",
       "icon": "🐟",
       "latin": "Fermented Anchovies & Salt",
@@ -23208,7 +23211,7 @@
     },
     "oyster_sauce": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Oyster Sauce",
       "icon": "🦪",
       "latin": "Crassostrea extract blend",
@@ -23268,7 +23271,7 @@
     },
     "worcestershire_sauce": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Worcestershire Sauce",
       "icon": "🇬🇧",
       "latin": "Vinegar / Molasses / Anchovy blend",
@@ -23331,7 +23334,7 @@
     "--- VINEGARS_AND_ACIDIFIERS ---": "Essige & Säure-Basen",
     "balsamic_vinegar": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Balsamic Vinegar of Modena (Aceto Balsamico)",
       "icon": "🍷",
       "latin": "Vitis vinifera (Must)",
@@ -23395,7 +23398,7 @@
     },
     "apple_cider_vinegar": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Apple Cider Vinegar (Raw/With Mother)",
       "icon": "🍎",
       "latin": "Malus domestica ferment",
@@ -23460,7 +23463,7 @@
     },
     "rice_vinegar": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Rice Vinegar",
       "icon": "🍚",
       "latin": "Oryza sativa ferment",
@@ -23522,7 +23525,7 @@
     },
     "lemon_juice": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Lemon Juice Concentrate",
       "icon": "🍋",
       "latin": "Citrus limon",
@@ -23587,7 +23590,7 @@
   "diy_beauty_raw": {
     "baking_soda_diy": {
       "unit_price": 1.5,
-      "unit_type": "250g",
+      "unit_type": "100g",
       "label": "Baking Soda",
       "icon": "ðŸ¥£",
       "val": {
@@ -23616,7 +23619,7 @@
     },
     "apple_cider_vinegar_diy": {
       "unit_price": 2.0,
-      "unit_type": "500ml",
+      "unit_type": "100ml",
       "label": "Apple Cider Vinegar",
       "icon": "ðŸŽ",
       "val": {
@@ -23646,7 +23649,7 @@
     },
     "coconut_oil_diy": {
       "unit_price": 4.0,
-      "unit_type": "Glas",
+      "unit_type": "100ml",
       "label": "Coconut Oil",
       "icon": "ðŸ¥¥",
       "val": {
@@ -23676,7 +23679,7 @@
     },
     "honey_raw_diy": {
       "unit_price": 5.0,
-      "unit_type": "Glas",
+      "unit_type": "100g",
       "label": "Raw Honey",
       "icon": "ðŸ¯",
       "val": {

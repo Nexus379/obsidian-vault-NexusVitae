@@ -3,7 +3,7 @@
 if (!tp.variables) tp.variables = {};
 const SYS = tp.variables.SYS || {};
 const ARCH = tp.variables.ARCH || {};
-const dv = app.plugins.plugins.dataview.api; // 🎯 NEU: Dataview für die Projekt-Suche
+const dv = app.plugins.plugins.dataview?.api; // 🎯 NEU: Dataview für die Projekt-Suche
 
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
@@ -74,26 +74,43 @@ tp.variables.deadline = await tp.system.prompt(
 let pLink = "";
 let targetFolder = (ARCH && ARCH.t && ARCH.t.folder) ? ARCH.t.folder : "4_Tasks"; // Standard-Fallback "4_Tasks"
 
-const projs = dv ? dv.pages('"3_Projects"').where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/")).sort(p => p.file.mtime, "desc") : [];
-const projOptions = ["✖️ No Project (General Task)"];
-const projPaths = ["NONE"];
+// SMART PATH DETECTION: created directly inside a project's Tasks folder → auto-link, skip the prompt
+const _fp = tp.file.folder(true).replace(/\\/g, "/");
+const _pm = _fp.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)\/([^/]+)\/Tasks/);
 
-for (let p of projs) {
-    let match = p.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
-    let stat = match ? match[1] : "1_Active";
-    projOptions.push(`🧩 ${p.file.name} (${stat})`);
-    projPaths.push(`${p.file.name}|${stat}`);
-}
+if (_pm) {
+    pLink = `[[${_pm[2]}]]`;
+    targetFolder = `3_Projects/${_pm[1]}/${_pm[2]}/Tasks`;
+} else {
+    const projs = dv ? dv.pages('"3_Projects"').where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/")).sort(p => p.file.mtime, "desc") : [];
+    const projOptions = ["✖️ No Project (General Task)", "➕ ✨ Create New Project"];
+    const projPaths = ["NONE", "NEW"];
 
-const pick = await tp.system.suggester(projOptions, projPaths, false, "🔗 Link Task to Project?");
+    for (let p of projs) {
+        let match = p.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
+        let stat = match ? match[1] : "1_Active";
+        projOptions.push(`🧩 ${p.file.name} (${stat})`);
+        projPaths.push(`${p.file.name}|${stat}`);
+    }
 
-if (pick && pick !== "NONE") {
-    // Projekt wurde ausgewählt: Wir bauen den neuen Projekt-Ordner-Pfad
-    const parts = pick.split("|");
-    const pName = parts[0];  
-    const pStat = parts[1];
-    pLink = `[[${pName}]]`;
-    targetFolder = `3_Projects/${pStat}/${pName}/Tasks`;
+    const pick = await tp.system.suggester(projOptions, projPaths, false, "🔗 Link Task to Project?");
+
+    if (pick === "NEW") {
+        // Create a new project on the fly (parity with projectlog)
+        const pName = (await tp.system.prompt("📝 Name of the NEW Project?", "New Project") || "New Project").replace(/[\\/:"*?<>|]+/g, "-").trim();
+        const statLabels = ["🟢 1_Active", "🟡 2_Passive", "💡 3_Idea", "🔄 0_Recurring"];
+        const statFolders = ["1_Active", "2_Passive", "3_Idea", "0_Recurring"];
+        const pStat = await tp.system.suggester(statLabels, statFolders, false, "🚦 Initial Project Status?") || "1_Active";
+        pLink = `[[${pName}]]`;
+        targetFolder = `3_Projects/${pStat}/${pName}/Tasks`;
+    } else if (pick && pick !== "NONE") {
+        // Existing project selected → build the project Tasks path
+        const parts = pick.split("|");
+        const pName = parts[0];
+        const pStat = parts[1];
+        pLink = `[[${pName}]]`;
+        targetFolder = `3_Projects/${pStat}/${pName}/Tasks`;
+    }
 }
 
 // Variablen sichern, damit die Templates (z.B. 1todo.md) den Link nutzen können

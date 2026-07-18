@@ -1,117 +1,113 @@
 <%-*
-// ❄️ NEXUS FREEZER v59 - Return to Vault (Connexio Shield 🛡️ + Archive Button Saver 💾)
+/**
+ * ❄️ NEXUS FREEZER v60 — Render-Capture Edition
+ *
+ * Turns a live note into a permanent archive. Instead of BLANKING computed blocks
+ * (the old v59 flaw), it EXECUTES each dataview/dataviewjs block once and bakes the
+ * rendered output in as static HTML — so averages, chakra bars, heatmaps, tables and
+ * lists all stay exactly as they were at freeze time.
+ *   • dataview / dataviewjs blocks  -> rendered to static HTML (one line, stays in callouts)
+ *   • `$= ...` inline               -> evaluated to its value
+ *   • INPUT[...] widgets            -> resolved to their frontmatter value
+ *   • BUTTON[...]                   -> removed
+ *   • Connexio section              -> shielded (kept live, so backlinks stay dynamic)
+ */
 const file = app.workspace.getActiveFile();
-if (!file) {
-    new Notice("❌ Freezer: No active note found.");
-    return;
-}
+if (!file) { new Notice("❌ Freezer: No active note found."); return; }
 
-const dv = app.plugins.plugins.dataview?.api;
+const dvApi = app.plugins.plugins.dataview?.api;
+if (!dvApi) { new Notice("❌ Freezer: Dataview is not available."); return; }
+
 const fm = app.metadataCache.getFileCache(file)?.frontmatter || {};
+if (fm.frozen) { new Notice("❄️ This matrix is already secured in the archive!"); return; }
 
-if (fm.frozen) {
-    new Notice("❄️ This matrix is already secured in the archive!");
-    return;
+// The open note's view is a valid Obsidian Component — dataview needs one for rendering lifecycle.
+const component = app.workspace.activeLeaf?.view;
+if (!component) { new Notice("❌ Freezer: No active view to render into."); return; }
+
+new Notice("⏳ Freezing — rendering all live blocks, please wait...");
+
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+// Render dataview(js) source into a detached (off-screen) node and return its HTML.
+async function renderToHtml(code, isJs) {
+    const holder = document.createElement("div");
+    holder.style.position = "absolute";
+    holder.style.left = "-9999px";
+    document.body.appendChild(holder);
+    try {
+        if (isJs) await dvApi.executeJs(code, holder, component, file.path);
+        else      await dvApi.execute(code, holder, component, file.path);
+        await sleep(300); // let async queries + heatmaps finish painting
+        const html = holder.innerHTML.trim();
+        return html || null;
+    } finally {
+        holder.remove();
+    }
 }
-
-new Notice("⏳ Creating museum in the background... Please wait.");
 
 try {
-    // 1. Gently read the file from the disk
     const content = await app.vault.read(file);
-    let lines = content.split("\n");
-    let finalLines = [];
-    let inBlock = false;
-    let currentContext = ""; 
-    let calloutPfx = "";
+    const lines = content.split("\n");
+    const out = [];
+    let shield = false; // once true (Connexio section), blocks pass through untouched
+    let i = 0;
 
-    // 2. Your modern museum logic
-    for (let i = 0; i < lines.length; i++) {
+    while (i < lines.length) {
         let line = lines[i];
 
-        // Context detection (With Connexio radar)
-        if (line.includes("[!zettelkasten] ✍️ Recent Notes")) currentContext = "notes";
-        else if (line.includes("[!log] 🌙 Last Syncs")) currentContext = "logs";
-        else if (line.includes("L - Lifestyle / Food")) currentContext = "food_main";
-        else if (line.includes("Live Resonance (Actuals)")) currentContext = "food_res";
-        else if (line.includes("**Fitness:**")) currentContext = "fitness";
-        else if (line.includes("## 🌿Consuetudo")) currentContext = "consuetudo";
-        else if (line.includes("#### 🔱 Connexio")) currentContext = "connexio";
+        // --- Fenced code block? ---
+        const fence = line.match(/^([ \t>]*)```(\w*)/);
+        if (fence) {
+            const pfx = fence[1];
+            const lang = fence[2];
+            const freezable = (lang === "dataviewjs" || lang === "dataview") && !shield;
 
-        // 🎯 CHANGE: We ONLY target dataview and dataviewjs. 
-        // The meta-bind-button (Archive) is completely ignored and preserved!
-        const blockStart = line.match(/^([ \t>]*)(```)(dataview|dataviewjs)/);
-        
-        if (blockStart && !inBlock) {
-            
-            // 🛡️ CONNEXIO SHIELD
-            if (currentContext === "connexio") {
-                finalLines.push(line);
-                continue; 
+            if (freezable) {
+                // collect the code body (strip callout prefixes so it runs clean)
+                const body = [];
+                i++;
+                while (i < lines.length && !lines[i].match(/^[ \t>]*```\s*$/)) {
+                    body.push(lines[i].replace(/^[ \t>]*/, ""));
+                    i++;
+                }
+                i++; // consume closing fence
+                let html = null;
+                try { html = await renderToHtml(body.join("\n"), lang === "dataviewjs"); }
+                catch (e) { html = null; }
+                if (html) out.push(pfx + `<div class="nexus-frozen">` + html.replace(/\n/g, " ") + `</div>`);
+                else      out.push(pfx + "> [!note] ❄️ Frozen (block produced no output).");
+                continue;
+            } else {
+                // non-dataview OR shielded: copy the whole block verbatim
+                out.push(line); i++;
+                while (i < lines.length && !lines[i].match(/^[ \t>]*```\s*$/)) { out.push(lines[i]); i++; }
+                if (i < lines.length) { out.push(lines[i]); i++; }
+                continue;
             }
-
-            inBlock = true;
-            calloutPfx = blockStart[1];
-            
-            if (currentContext === "notes" && dv) {
-                const notes = dv.pages('"5_Notes"').sort(p => p.file.mtime, "desc").limit(5).array();
-                if (notes.length > 0) notes.forEach(p => finalLines.push(calloutPfx + `- [[${p.file.name}]]`));
-                else finalLines.push(calloutPfx + "- _No recent notes._");
-            }
-            else if (currentContext === "logs" && dv) {
-                const configs = [
-                    { label: "Journal", archtype: "#0cal/1plm" },
-                    { label: "Log", archtype: "#0cal/2ppm" },
-                    { label: "Study", archtype: "#0cal/3pkm" },
-                    { label: "Project", archtype: "#0cal/4projectlog" },
-                    { label: "Protocol", archtype: "#0cal/5protocol" },
-                    { label: "Review", archtype: "#0cal/6review" }
-                ];
-                configs.forEach(cfg => {
-                    const pages = dv.pages().where(p => String(p.archtype || "").includes(cfg.archtype));
-                    const last = pages.sort(p => p.file.name, "desc").first();
-                    if (last) finalLines.push(calloutPfx + `- **${cfg.label}:** ${last.file.link}`);
-                });
-            }
-            else if (currentContext === "fitness") {
-                const am = Number(fm.mobility_am) || 0;
-                const pm = Number(fm.mobility_pm) || 0;
-                const t = am + pm;
-                let ic = "⚪"; if(t>=90)ic="🦅"; else if(t>=60)ic="✨"; else if(t>=30)ic="🟢"; else if(t>0)ic="🟡";
-                finalLines.push(calloutPfx + `🏃🏽 **Status:** ${t} / 30 min ${ic}`);
-            }
-            else if (currentContext === "food_res") {
-                const r = window.dailyResonance || {};
-                const kcal = Math.round(Number(r.kcal) || 0);
-                const pro = (Number(r.protein_g) || 0).toFixed(1);
-                const fat = (Number(r.fat_total_g) || 0).toFixed(1);
-                finalLines.push(calloutPfx + `🔥 **${kcal}** kcal | 💪 **${pro}**g Pro | 🥑 **${fat}**g Fat`);
-            }
-            else if (currentContext === "consuetudo") {
-                finalLines.push(calloutPfx + "> [!quote] 🌿 **Consuetudo:** Day calculated & archived.");
-            }
-            else if (currentContext === "food_main") {
-                 finalLines.push(calloutPfx + "> [!note] ❄️ **Nutrition Log:** Metrics finalized.");
-            }
-            else {
-                finalLines.push(calloutPfx + "> [!note] ❄️ Matrix frozen.");
-            }
-            continue;
         }
 
-        if (inBlock) {
-            if (line.match(/^[ \t>]*```[ \t]*$/)) { inBlock = false; currentContext = ""; }
-            continue; 
+        // --- Connexio shield: from its header on, keep dynamic (backlinks stay live) ---
+        if (line.includes("Connexio")) shield = true;
+
+        // --- Inline `$= ...` -> evaluate to value (safe eval of the user's own expression) ---
+        if (line.includes("$=")) {
+            const matches = [...line.matchAll(/`\$=\s*([^`]+)`/g)];
+            for (const m of matches) {
+                let val = "❄️";
+                try { val = String(eval(m[1])); } catch (e) { val = "❄️"; }
+                line = line.replace(m[0], val);
+            }
         }
 
-        // We delete ALL inline buttons (like BUTTON[freezer])
-        line = line.replace(/`?BUTTON\[.*?\]`?/g, "");
-        if (line.includes("$=")) line = line.replace(/`\$=.*?`/g, "❄️");
-        
+        // --- Buttons removed (but KEEP Archive, so you can still archive a frozen note) ---
+        line = line.replace(/`?BUTTON\[(?!archive\])[^\]]*\]`?/g, "");
+
+        // --- INPUT[...] -> its frontmatter value ---
         if (line.includes("INPUT[")) {
             line = line.replace(/`?INPUT\[(.*?)\]`?/g, (match, inner) => {
                 const parts = inner.split(":");
-                let key = parts[parts.length - 1].trim().replace(/\]/g, "");
+                let key = parts[parts.length - 1].trim().replace(/[\]\)]/g, "");
                 let val = fm[key];
                 if (typeof val === "boolean" || val === "true" || val === "false") return (val === true || val === "true") ? "✅" : "❌";
                 if (val === undefined || val === null || val === "") return "—";
@@ -120,20 +116,15 @@ try {
             });
         }
 
-        finalLines.push(line);
+        out.push(line);
+        i++;
     }
 
-    // 3. Gently save to the disk
-    await app.vault.modify(file, finalLines.join("\n"));
-    
-    // 4. Mark it as frozen
-    await app.fileManager.processFrontMatter(file, (frontmatter) => {
-        frontmatter.frozen = true;
-    });
-
-    new Notice("🏛️ Archiving complete! File is now ready for the archive button.");
+    await app.vault.modify(file, out.join("\n"));
+    await app.fileManager.processFrontMatter(file, (f) => { f.frozen = true; });
+    new Notice("🏛️ Freeze complete — every live block baked in as static output.");
 
 } catch (e) {
-    new Notice("🔥 CRITICAL ERROR:\n" + e.message, 15000);
+    new Notice("🔥 FREEZE ERROR:\n" + e.message, 15000);
 }
 -%>

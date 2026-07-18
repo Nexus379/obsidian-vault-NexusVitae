@@ -8,7 +8,7 @@ const persona = tp.variables?.persona || "";
 let sci = tp.variables?.sci || "";
 let disc = tp.variables?.disc || "";
 let icon = tp.variables?.discIcon || tp.variables?.icon || "🌸";
-let area = tp.variables?.currentArea || tp.variables?.area || "1_Selfcare";
+let area = tp.variables?.currentArea || tp.variables?.area || "#2area/1selfcare";
 
 // 🔱 2. FALLBACK & PROMPTS (Zuerst alle Fenster!)
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
@@ -87,7 +87,7 @@ review:
 > > **How do I maintain my energy here?**
 > > 
 
-## Workload / Pensum
+## Workload
 
 
 

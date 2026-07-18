@@ -77,7 +77,7 @@
     },
     "arugula": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Arugula (Rocket)",
       "icon": "🌿",
       "latin": "Eruca vesicaria (Folia)",
@@ -146,7 +146,7 @@
     },
     "lettuce_lambs": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lamb's Lettuce",
       "icon": "🥗",
       "latin": "Valerianella locusta (Herba)",
@@ -216,7 +216,7 @@
     },
     "lettuce_iceberg": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Iceberg Lettuce",
       "icon": "🥬",
       "latin": "Lactuca sativa var. crispa (Herba)",
@@ -279,7 +279,7 @@
     },
     "lettuce_romaine": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Romaine Lettuce",
       "icon": "🥬",
       "latin": "Lactuca sativa var. longifolia (Herba)",
@@ -348,7 +348,7 @@
     },
     "watercress": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Watercress",
       "icon": "🌿",
       "latin": "Nasturtium officinale (Herba recens)",
@@ -416,7 +416,7 @@
     },
     "bok_choy": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bok Choy",
       "icon": "🥬",
       "latin": "Brassica rapa subsp. chinensis (Herba)",
@@ -484,7 +484,7 @@
     },
     "endive": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Endive",
       "icon": "🥗",
       "latin": "Cichorium endivia (Herba)",
@@ -552,7 +552,7 @@
     },
     "radicchio": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Radicchio",
       "icon": "🟣",
       "latin": "Cichorium intybus var. foliosum (Herba)",
@@ -619,7 +619,7 @@
     },
     "chard_swiss": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Swiss Chard",
       "icon": "🥬",
       "latin": "Beta vulgaris var. cicla (Folia et Stipites)",
@@ -688,7 +688,7 @@
     },
     "sorrel": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sorrel",
       "icon": "🌿",
       "latin": "Rumex acetosa (Folia)",
@@ -821,7 +821,7 @@
     },
     "pea_shoots": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pea Shoots",
       "icon": "🌱",
       "latin": "Pisum sativum (Germinatus)",
@@ -884,7 +884,7 @@
     },
     "lettuce_butterhead": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Butterhead Lettuce",
       "icon": "🥗",
       "latin": "Lactuca sativa var. capitata (Herba)",
@@ -948,7 +948,7 @@
     },
     "celery_leaves": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Celery Leaves",
       "icon": "🌿",
       "latin": "Apium graveolens (Folia)",
@@ -1013,7 +1013,7 @@
     },
     "lettuce_sugarloaf": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sugarloaf Lettuce",
       "icon": "🥬",
       "latin": "Cichorium intybus var. latifolium (Herba)",
@@ -1068,7 +1068,7 @@
     },
     "broccoli": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Broccoli",
       "icon": "🥦",
       "latin": "Brassica oleracea var. italica (Inflorescentia)",
@@ -1131,7 +1131,7 @@
     },
     "cauliflower": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cauliflower",
       "icon": "🥬",
       "latin": "Brassica oleracea var. botrytis (Inflorescentia)",
@@ -1193,7 +1193,7 @@
     },
     "romanesco": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Romanesco",
       "icon": "🥦",
       "latin": "Brassica oleracea var. botrytis (Inflorescentia Romanesco)",
@@ -1251,7 +1251,7 @@
     },
     "cabbage_red": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Red Cabbage",
       "icon": "🟣",
       "latin": "Brassica oleracea var. capitata f. rubra (Herba)",
@@ -1376,7 +1376,7 @@
     },
     "kale": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kale",
       "icon": "🥬",
       "latin": "Brassica oleracea var. sabellica (Folia)",
@@ -1435,7 +1435,7 @@
     },
     "mustard_greens": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mustard Greens",
       "icon": "🥬",
       "latin": "Brassica juncea (Folia)",
@@ -1501,7 +1501,7 @@
     },
     "cabbage_napa": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Napa Cabbage",
       "icon": "🥬",
       "latin": "Brassica rapa subsp. pekinensis (Herba)",
@@ -1624,7 +1624,7 @@
     },
     "tatsoi": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tatsoi",
       "icon": "🍃",
       "latin": "Brassica rapa var. rosularis (Folia)",
@@ -1800,7 +1800,7 @@
     },
     "spinach_water": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Water Spinach",
       "icon": "🌱",
       "latin": "Ipomoea aquatica (Herba)",
@@ -1857,7 +1857,7 @@
     },
     "crown_daisy": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Garland Chrysanthemum",
       "icon": "🌼",
       "latin": "Glebionis coronaria (Folia)",
@@ -1908,7 +1908,7 @@
     },
     "dandelion_greens": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dandelion Greens",
       "icon": "🌼",
       "latin": "Taraxacum officinale (Folia)",
@@ -1970,7 +1970,7 @@
     },
     "mallow_jute": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Jute Mallow",
       "icon": "🌿",
       "latin": "Corchorus olitorius (Folia)",
@@ -2029,7 +2029,7 @@
     },
     "shiso": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Shiso",
       "icon": "🍃",
       "latin": "Perilla frutescens (Folia)",
@@ -2089,7 +2089,7 @@
     },
     "bitter_leaf": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bitter Leaf",
       "icon": "🍃",
       "latin": "Vernonia amygdalina (Folia)",
@@ -2140,7 +2140,7 @@
     },
     "callaloo": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Callaloo",
       "icon": "🌿",
       "latin": "Amaranthus viridis (Folia)",
@@ -2192,7 +2192,7 @@
     },
     "chives": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chives",
       "icon": "🌿",
       "latin": "Allium schoenoprasum (Herba recens)",
@@ -2255,7 +2255,7 @@
     },
     "chives_garlic": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Garlic Chives",
       "icon": "🌿",
       "latin": "Allium tuberosum (Folia)",
@@ -2304,7 +2304,7 @@
     },
     "lemon_balm": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lemon Balm",
       "icon": "🌱",
       "latin": "Melissa officinalis (Folia)",
@@ -2365,7 +2365,7 @@
     },
     "cabbage_savoy": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Savoy Cabbage",
       "icon": "🥬",
       "latin": "Brassica oleracea var. sabauda (Herba)",
@@ -2420,7 +2420,7 @@
     },
     "garden_cress": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Garden Cress",
       "icon": "🌱",
       "latin": "Lepidium sativum (Herba recens)",
@@ -2527,7 +2527,7 @@
     },
     "lollo_rosso": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lollo Rosso",
       "icon": "🥬",
       "latin": "Lactuca sativa var. crispa (Herba)",
@@ -2583,7 +2583,7 @@
   "leafy_greens_and_herbs": {
     "parsley": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Parsley",
       "icon": "🌿",
       "latin": "Petroselinum crispum (Herba recens)",
@@ -2650,7 +2650,7 @@
     },
     "marjoram": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Marjoram",
       "icon": "🌿",
       "latin": "Origanum majorana (Herba siccata)",
@@ -2707,7 +2707,7 @@
     },
     "summer_savory": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Summer Savory",
       "icon": "🌿",
       "latin": "Satureja hortensis (Herba siccata)",
@@ -2872,7 +2872,7 @@
     },
     "dill": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dill",
       "icon": "🌿",
       "latin": "Anethum graveolens (Herba recens)",
@@ -2936,7 +2936,7 @@
     },
     "cilantro": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cilantro (Coriander)",
       "icon": "🌿",
       "latin": "Coriandrum sativum (Herba recens)",
@@ -3001,7 +3001,7 @@
     },
     "mint": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mint",
       "icon": "🌱",
       "latin": "Mentha spicata (Folia)",
@@ -3066,7 +3066,7 @@
     },
     "basil": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Basil",
       "icon": "🌿",
       "latin": "Ocimum basilicum (Folia recens)",
@@ -3128,7 +3128,7 @@
     },
     "rosemary": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rosemary",
       "icon": "🌲",
       "latin": "Salvia rosmarinus (Folia recens)",
@@ -3192,7 +3192,7 @@
     },
     "thyme": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Thyme",
       "icon": "🌿",
       "latin": "Thymus vulgaris (Herba recens)",
@@ -3255,7 +3255,7 @@
     },
     "sage": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sage",
       "icon": "🍃",
       "latin": "Salvia officinalis (Folia recens)",
@@ -3316,7 +3316,7 @@
     },
     "oregano": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Oregano",
       "icon": "🌿",
       "latin": "Origanum vulgare (Herba siccata)",
@@ -3379,7 +3379,7 @@
     },
     "lovage": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lovage",
       "icon": "🌿",
       "latin": "Levisticum officinale (Folia)",
@@ -3437,7 +3437,7 @@
     },
     "tarragon": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tarragon",
       "icon": "🌿",
       "latin": "Artemisia dracunculus (Herba)",
@@ -3496,7 +3496,7 @@
     },
     "anise_leaves": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Anise Leaves",
       "icon": "🌿",
       "latin": "Pimpinella anisum (Folia recens)",
@@ -3552,7 +3552,7 @@
     },
     "chervil": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chervil",
       "icon": "🌿",
       "latin": "Anthriscus cerefolium (Herba recens)",
@@ -3611,7 +3611,7 @@
     },
     "holy_basil": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Holy Basil (Tulsi)",
       "icon": "🌿",
       "latin": "Ocimum tenuiflorum (Herba recens)",
@@ -3671,7 +3671,7 @@
     },
     "thai_basil": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Thai Basil",
       "icon": "🌿",
       "latin": "Ocimum basilicum var. thyrsiflora (Folia recens)",
@@ -3725,7 +3725,7 @@
     },
     "lemongrass": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lemongrass",
       "icon": "🌾",
       "latin": "Cymbopogon citratus (Stipites)",
@@ -3786,7 +3786,7 @@
     },
     "curry_leaves": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Curry Leaves",
       "icon": "🍃",
       "latin": "Bergera koenigii (Folia recens)",
@@ -3843,7 +3843,7 @@
     },
     "hyssop": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hyssop",
       "icon": "🌿",
       "latin": "Hyssopus officinalis (Herba recens)",
@@ -3900,7 +3900,7 @@
     },
     "rue": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rue",
       "icon": "🌿",
       "latin": "Ruta graveolens (Herba recens)",
@@ -3955,7 +3955,7 @@
     },
     "stevia_leaves": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Stevia Leaves",
       "icon": "🍃",
       "latin": "Stevia rebaudiana (Folia recens)",
@@ -4070,7 +4070,7 @@
     },
     "nasturtium_leaves": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nasturtium Leaves",
       "icon": "🌺",
       "latin": "Tropaeolum majus (Folia)",
@@ -4303,7 +4303,7 @@
     },
     "cabbage_savoy_outer": {
       "unit_price": 0.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Savoy Cabbage (Outer Leaves)",
       "icon": "🥬",
       "latin": "Brassica oleracea var. sabauda (Folia externa)",
@@ -4363,7 +4363,7 @@
     },
     "cabbage_savoy_heart": {
       "unit_price": 0.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Savoy Cabbage (Heart)",
       "icon": "🥬",
       "latin": "Brassica oleracea var. sabauda (Folia interna)",
@@ -4420,7 +4420,7 @@
     },
     "wild_garlic": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wild Garlic",
       "icon": "🌱",
       "latin": "Allium ursinum (Folia)",
@@ -4549,7 +4549,7 @@
     },
     "cucumber": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cucumber",
       "icon": "🥒",
       "latin": "Cucumis sativus (Fructus recens)",
@@ -4612,7 +4612,7 @@
     },
     "pepper_red_bell": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Red Bell Pepper",
       "icon": "🫑",
       "latin": "Capsicum annuum (Fructus recens maturus)",
@@ -4677,7 +4677,7 @@
     },
     "eggplant": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Eggplant",
       "icon": "🍆",
       "latin": "Solanum melongena (Fructus recens)",
@@ -4741,7 +4741,7 @@
     },
     "zucchini": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Zucchini",
       "icon": "🥒",
       "latin": "Cucurbita pepo var. cylindrica (Fructus recens)",
@@ -4862,7 +4862,7 @@
     },
     "melon_bitter": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bitter Melon",
       "icon": "🥒",
       "latin": "Momordica charantia (Fructus recens)",
@@ -4919,7 +4919,7 @@
     },
     "pepper_red_pointed": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Red Pointed Pepper",
       "icon": "🌶️",
       "latin": "Capsicum annuum var. longum (Fructus recens maturus)",
@@ -4977,7 +4977,7 @@
     },
     "chili_red": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Red Chili",
       "icon": "🌶️",
       "latin": "Capsicum annuum (Fructus recens maturus)",
@@ -5037,7 +5037,7 @@
     },
     "avocado": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Avocado",
       "icon": "🥑",
       "latin": "Persea americana (Fructus recens)",
@@ -5101,7 +5101,7 @@
     },
     "pumpkin_hokkaido": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hokkaido Pumpkin",
       "icon": "🎃",
       "latin": "Cucurbita maxima (Fructus recens)",
@@ -5163,7 +5163,7 @@
     },
     "squash_butternut": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Butternut Squash",
       "icon": "🍐",
       "latin": "Cucurbita moschata (Fructus recens)",
@@ -5224,7 +5224,7 @@
     },
     "physalis": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Physalis",
       "icon": "🏮",
       "latin": "Physalis peruviana (Fructus recens)",
@@ -5284,7 +5284,7 @@
     },
     "pepper_green_bell": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Green Bell Pepper",
       "icon": "🫑",
       "latin": "Capsicum annuum (Fructus recens immaturus)",
@@ -5341,7 +5341,7 @@
     },
     "sweetcorn": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sweetcorn",
       "icon": "🌽",
       "latin": "Zea mays var. saccharata (Caryopsis recens)",
@@ -5403,7 +5403,7 @@
     },
     "squash_pattypan": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pattypan Squash",
       "icon": "☀️",
       "latin": "Cucurbita pepo var. clypeata (Fructus recens)",
@@ -5458,7 +5458,7 @@
     },
     "cucumber_armenian": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Armenian Cucumber",
       "icon": "🥒",
       "latin": "Cucumis melo var. flexuosus (Fructus recens)",
@@ -5513,7 +5513,7 @@
     },
     "eggplant_asian": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Asian Eggplant",
       "icon": "🍆",
       "latin": "Solanum melongena var. serpentinum (Fructus recens)",
@@ -5736,7 +5736,7 @@
     },
     "tamarillo": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Tamarillo (Tree Tomato)",
       "icon": "🍅",
       "latin": "Solanum betaceum (Fructus recens)",
@@ -5853,7 +5853,7 @@
     },
     "chayote": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chayote",
       "icon": "🍐",
       "latin": "Sechium edule (Fructus recens)",
@@ -5913,7 +5913,7 @@
     },
     "gourd_snake": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Snake Gourd",
       "icon": "🐍",
       "latin": "Trichosanthes cucumerina (Fructus recens)",
@@ -6026,7 +6026,7 @@
     },
     "tomato_cherry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cherry Tomato",
       "icon": "🍅",
       "latin": "Solanum lycopersicum var. cerasiforme (Fructus recens)",
@@ -6152,7 +6152,7 @@
     },
     "pumpkin": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Field Pumpkin",
       "icon": "🎃",
       "latin": "Cucurbita pepo (Fructus recens)",
@@ -6205,7 +6205,7 @@
     },
     "pepper_mild": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mild Chili Pepper",
       "icon": "🌶️",
       "latin": "Capsicum annuum (Fructus recens immaturus)",
@@ -6257,7 +6257,7 @@
   "root_vegetables": {
     "parsnip": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Parsnip",
       "icon": "🥕",
       "latin": "Pastinaca sativa (Radix recens)",
@@ -6383,7 +6383,7 @@
     },
     "salsify_black": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Salsify",
       "icon": "🦯",
       "latin": "Scorzonera hispanica (Radix recens)",
@@ -6673,7 +6673,7 @@
     },
     "carrot_purple": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Purple Carrot",
       "icon": "🥕",
       "latin": "Daucus carota (Radix recens anthocyanidiana)",
@@ -6850,7 +6850,7 @@
     },
     "radish": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Radish",
       "icon": "🔴",
       "latin": "Raphanus sativus (Radix recens)",
@@ -6910,7 +6910,7 @@
     },
     "daikon": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Daikon Radish",
       "icon": "🥢",
       "latin": "Raphanus sativus var. longipinnatus (Radix recens)",
@@ -6971,7 +6971,7 @@
     },
     "radish_black": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Radish",
       "icon": "🌑",
       "latin": "Raphanus sativus var. niger (Radix recens)",
@@ -7029,7 +7029,7 @@
     },
     "horseradish": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Horseradish",
       "icon": "🧪",
       "latin": "Armoracia rusticana (Radix recens)",
@@ -7089,7 +7089,7 @@
     },
     "celeriac": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Celeriac",
       "icon": "🥔",
       "latin": "Apium graveolens var. rapaceum (Radix recens)",
@@ -7150,7 +7150,7 @@
     },
     "kohlrabi": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kohlrabi",
       "icon": "🟢",
       "latin": "Brassica oleracea var. gongylodes (Caulis recens)",
@@ -7267,7 +7267,7 @@
     },
     "burdock_root": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Burdock Root",
       "icon": "🦯",
       "latin": "Arctium lappa (Radix recens)",
@@ -7562,7 +7562,7 @@
     },
     "turnip": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Turnip",
       "icon": "🧶",
       "latin": "Brassica rapa subsp. rapa (Radix recens)",
@@ -7620,7 +7620,7 @@
     },
     "radish_watermelon": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Watermelon Radish",
       "icon": "🍉",
       "latin": "Raphanus sativus (Radix recens incarnata)",
@@ -7904,11 +7904,12 @@
       "energy": {
         "kcal": 82,
         "kj": 343
-      }
+      },
+      "unit_type": "100g"
     },
     "rutabaga": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rutabaga / Swede",
       "icon": "🍠",
       "latin": "Brassica napus var. napobrassica (Radix recens)",
@@ -7966,7 +7967,7 @@
     },
     "parsley_root": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Parsley Root",
       "icon": "🥕",
       "latin": "Petroselinum crispum var. tuberosum (Radix recens)",
@@ -8257,7 +8258,8 @@
       "energy": {
         "kcal": 34,
         "kj": 142
-      }
+      },
+      "unit_type": "100g"
     },
     "cauliflower": {
       "label": "Cauliflower",
@@ -8317,7 +8319,8 @@
       "energy": {
         "kcal": 25,
         "kj": 105
-      }
+      },
+      "unit_type": "100g"
     },
     "romanesco": {
       "label": "Romanesco",
@@ -8373,7 +8376,8 @@
       "energy": {
         "kcal": 25,
         "kj": 105
-      }
+      },
+      "unit_type": "100g"
     },
     "cabbage_red": {
       "label": "Red Cabbage",
@@ -8432,7 +8436,8 @@
       "energy": {
         "kcal": 31,
         "kj": 130
-      }
+      },
+      "unit_type": "100g"
     },
     "brussels_sprouts": {
       "label": "Brussels Sprouts",
@@ -8491,7 +8496,8 @@
       "energy": {
         "kcal": 43,
         "kj": 180
-      }
+      },
+      "unit_type": "100g"
     },
     "kale": {
       "label": "Kale",
@@ -8551,7 +8557,8 @@
       "energy": {
         "kcal": 49,
         "kj": 205
-      }
+      },
+      "unit_type": "100g"
     },
     "savoy_cabbage": {
       "label": "Savoy Cabbage",
@@ -8610,7 +8617,8 @@
       "energy": {
         "kcal": 27,
         "kj": 113
-      }
+      },
+      "unit_type": "100g"
     },
     "cabbage_white": {
       "label": "White Cabbage",
@@ -8667,7 +8675,8 @@
       "energy": {
         "kcal": 25,
         "kj": 105
-      }
+      },
+      "unit_type": "100g"
     },
     "cabbage_pointed": {
       "label": "Pointed Cabbage",
@@ -8723,7 +8732,8 @@
       "energy": {
         "kcal": 24,
         "kj": 100
-      }
+      },
+      "unit_type": "100g"
     },
     "bok_choy": {
       "label": "Pak Choi",
@@ -8782,7 +8792,8 @@
       "energy": {
         "kcal": 13,
         "kj": 54
-      }
+      },
+      "unit_type": "100g"
     },
     "cabbage_napa": {
       "label": "Napa Cabbage",
@@ -8840,7 +8851,8 @@
       "energy": {
         "kcal": 13,
         "kj": 54
-      }
+      },
+      "unit_type": "100g"
     },
     "gai_lan": {
       "label": "Gai Lan (Chinese Broccoli)",
@@ -8891,7 +8903,8 @@
       "energy": {
         "kcal": 22,
         "kj": 92
-      }
+      },
+      "unit_type": "100g"
     },
     "kale_lacinato": {
       "label": "Black Kale (Cavolo Nero)",
@@ -8947,7 +8960,8 @@
       "energy": {
         "kcal": 49,
         "kj": 205
-      }
+      },
+      "unit_type": "100g"
     },
     "cauliflower_colored": {
       "label": "Purple/Orange Cauliflower",
@@ -9001,7 +9015,8 @@
       "energy": {
         "kcal": 25,
         "kj": 105
-      }
+      },
+      "unit_type": "100g"
     },
     "sprout_flower": {
       "label": "Flower Sprout (Kalettes)",
@@ -9056,7 +9071,8 @@
       "energy": {
         "kcal": 45,
         "kj": 188
-      }
+      },
+      "unit_type": "100g"
     },
     "mustard_greens": {
       "label": "Mustard Greens",
@@ -9110,7 +9126,8 @@
       "energy": {
         "kcal": 27,
         "kj": 113
-      }
+      },
+      "unit_type": "100g"
     },
     "komatsuna": {
       "label": "Komatsuna (Japanese Mustard Spinach)",
@@ -9162,13 +9179,14 @@
       "energy": {
         "kcal": 14,
         "kj": 59
-      }
+      },
+      "unit_type": "100g"
     }
   },
   "allium_vegetables": {
     "garlic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Garlic",
       "icon": "🧄",
       "latin": "Allium sativum (Bulbus recens)",
@@ -9283,7 +9301,7 @@
     },
     "leek": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Leek",
       "icon": "🥬",
       "latin": "Allium ampeloprasum (Caulis et Folia)",
@@ -9337,7 +9355,7 @@
     },
     "shallot": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Shallot",
       "icon": "🧅",
       "latin": "Allium ascalonicum (Bulbus recens)",
@@ -9394,7 +9412,7 @@
     },
     "onion_spring": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Spring Onion",
       "icon": "🌱",
       "latin": "Allium fistulosum (Herba recens)",
@@ -9556,7 +9574,8 @@
       "energy": {
         "kcal": 30,
         "kj": 126
-      }
+      },
+      "unit_type": "100g"
     },
     "wild_garlic": {
       "label": "Wild Garlic",
@@ -9611,11 +9630,12 @@
       "energy": {
         "kcal": 34,
         "kj": 142
-      }
+      },
+      "unit_type": "100g"
     },
     "garlic_solo": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Solo Garlic",
       "icon": "⚪",
       "latin": "Allium sativum (Bulbus unilocularis)",
@@ -9671,7 +9691,7 @@
     },
     "banana_shallot": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Banana Shallot (Eschalion)",
       "icon": "🧅",
       "latin": "Allium cepa var. aggregatum (Bulbus longus)",
@@ -9788,7 +9808,7 @@
     },
     "black_garlic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Black Garlic (Fermented)",
       "icon": "🧄",
       "latin": "Allium sativum (Bulbus fermentatus)",
@@ -9900,14 +9920,15 @@
       "energy": {
         "kcal": 32,
         "kj": 134
-      }
+      },
+      "unit_type": "100g"
     }
   },
   "mammut_nutrition_power_matrix": {
     "--- THE_MASSIVE_PROTEIN_SUPPLY ---": "Mammut Protein-Lösungen (Masse & Erhalt)",
     "protein_mammut_formel_90": {
       "unit_price": 30.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mammut Formel 90 (Protein-Mix)",
       "icon": "🦍",
       "latin": "Multi-componentum proteinum (Mammut)",
@@ -9964,7 +9985,7 @@
     },
     "protein_mammut_whey_classic": {
       "unit_price": 25.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mammut Whey Protein",
       "icon": "🥤",
       "latin": "Serum proteinum mammutium",
@@ -10018,7 +10039,7 @@
     "--- STRENGTH_AND_WEIGHT_BOOST ---": "Kraft & Masse (Creatin & Gainer)",
     "supp_mammut_creatin_monohydrate": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mammut Creatin Monohydrat",
       "icon": "⚡",
       "latin": "Creatinum purum (Mammut)",
@@ -10073,7 +10094,7 @@
     },
     "gainer_mammut_weight_gainer_crash": {
       "unit_price": 35.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mammut Weight Gainer Crash 5000",
       "icon": "🏗️",
       "latin": "Hypercaloricum mammutium",
@@ -10129,7 +10150,7 @@
     "--- THE_CEREAL_POWER ---": "Haferriegel & Flapjacks (Langzeit-Energie)",
     "bar_oat_alnatura_classic": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Alnatura Haferriegel (Natur/Bio)",
       "icon": "🌾",
       "latin": "Avena sativa crustum (Alnatura)",
@@ -10191,7 +10212,7 @@
     "--- THE_RAW_ENERGY_SPHERES ---": "Energy Balls (Dattel-Frucht-Power)",
     "energy_balls_rossmann_cocoa": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "EnerBiO Kakao Energy Balls (Rossmann)",
       "icon": "⚽",
       "latin": "Globuli fructosi cacao",
@@ -10246,7 +10267,7 @@
     "--- THE_PROTEIN_POWDER_MATRIX ---": "Proteinpulver (Whey & Isolat)",
     "protein_whey_esn_designer": {
       "unit_price": 35.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "ESN Designer Whey (Reference)",
       "icon": "🥤",
       "latin": "Serum proteinum lacteum",
@@ -10304,7 +10325,7 @@
     },
     "protein_whey_rossmann_wellmix": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "WellMix Sport Whey Protein (Rossmann)",
       "icon": "🏋️",
       "latin": "Serum proteinum rossmannium",
@@ -10356,7 +10377,7 @@
     "--- THE_PROTEIN_BAR_ELITE ---": "Moderne High-Protein Riegel",
     "bar_protein_lidl_white_choco": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lidl High Protein Bar (White Choco)",
       "icon": "🦾",
       "latin": "Bacillus proteinus lidlianus alba",
@@ -10411,7 +10432,7 @@
     "--- POME_FRUITS ---": "Kernobst (Pektin & Flavonoide)",
     "apple": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Apple",
       "icon": "🍎",
       "latin": "Malus domestica (Fructus recens)",
@@ -10476,7 +10497,7 @@
     },
     "pear": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pear",
       "icon": "🍐",
       "latin": "Pyrus communis (Fructus recens)",
@@ -10539,7 +10560,7 @@
     },
     "quince": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Quince",
       "icon": "🍐",
       "latin": "Cydonia oblonga (Fructus recens)",
@@ -10599,7 +10620,7 @@
     },
     "asian_pear": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Asian Pear (Nashi)",
       "icon": "🍏",
       "latin": "Pyrus pyrifolia (Fructus recens)",
@@ -10889,7 +10910,7 @@
     },
     "peach": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Peach",
       "icon": "🍑",
       "latin": "Prunus persica (Fructus recens)",
@@ -10950,7 +10971,7 @@
     },
     "nectarine": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nectarine",
       "icon": "🍑",
       "latin": "Prunus persica var. nucipersica (Fructus recens)",
@@ -11009,7 +11030,7 @@
     },
     "apricot": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Apricot",
       "icon": "🟠",
       "latin": "Prunus armeniaca (Fructus recens)",
@@ -11365,7 +11386,7 @@
     },
     "pluot": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pluot (Plum-Apricot Hybrid)",
       "icon": "🍑",
       "latin": "Prunus salicina × armeniaca (Fructus recens)",
@@ -11536,7 +11557,7 @@
     "--- CITRUS_FRUITS ---": "Zitrusfrüchte (Vitamin C, Flavonoide & Limonen)",
     "orange": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Orange",
       "icon": "🍊",
       "latin": "Citrus sinensis (Fructus recens)",
@@ -11597,7 +11618,7 @@
     },
     "lemon": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lemon",
       "icon": "🍋",
       "latin": "Citrus limon (Fructus recens)",
@@ -11657,7 +11678,7 @@
     },
     "grapefruit": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grapefruit",
       "icon": "🍊",
       "latin": "Citrus × paradisi (Fructus recens)",
@@ -11717,7 +11738,7 @@
     },
     "lime": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lime",
       "icon": "🟢",
       "latin": "Citrus × aurantiifolia (Fructus recens)",
@@ -11777,7 +11798,7 @@
     },
     "mandarin": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mandarin / Tangerine",
       "icon": "🍊",
       "latin": "Citrus reticulata (Fructus recens)",
@@ -11835,7 +11856,7 @@
     },
     "pomelo": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pomelo",
       "icon": "🍈",
       "latin": "Citrus maxima (Fructus recens)",
@@ -11893,7 +11914,7 @@
     },
     "blood_orange": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Blood Orange",
       "icon": "🩸",
       "latin": "Citrus sinensis var. sanguinea (Fructus recens)",
@@ -12009,7 +12030,7 @@
     },
     "yuzu": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Yuzu",
       "icon": "🟡",
       "latin": "Citrus junos (Fructus recens)",
@@ -12064,7 +12085,7 @@
     },
     "buddhas_hand": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Buddha's Hand",
       "icon": "🖐️",
       "latin": "Citrus medica var. sarcodactylis (Fructus recens)",
@@ -12121,7 +12142,7 @@
     "--- BERRIES ---": "Beeren (Die Antioxidantien- & Polyphenol-Könige)",
     "wild_blueberry": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wild Blueberry (Bilberry)",
       "icon": "🫐",
       "latin": "Vaccinium myrtillus (Fructus recens)",
@@ -12182,7 +12203,7 @@
     },
     "cultivated_blueberry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cultivated Blueberry",
       "icon": "🫐",
       "latin": "Vaccinium corymbosum (Fructus recens)",
@@ -12242,7 +12263,7 @@
     },
     "strawberry": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Strawberry",
       "icon": "🍓",
       "latin": "Fragaria × ananassa (Fructus recens)",
@@ -12304,7 +12325,7 @@
     },
     "raspberry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Raspberry",
       "icon": "🩷",
       "latin": "Rubus idaeus (Fructus recens)",
@@ -12367,7 +12388,7 @@
     },
     "blackberry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Blackberry",
       "icon": "🍇",
       "latin": "Rubus fruticosus (Fructus recens)",
@@ -12486,7 +12507,7 @@
     },
     "redcurrant": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Redcurrant",
       "icon": "🔴",
       "latin": "Ribes rubrum (Fructus recens)",
@@ -12542,7 +12563,7 @@
     },
     "gooseberry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gooseberry",
       "icon": "🟢",
       "latin": "Ribes uva-crispa (Fructus recens)",
@@ -12597,7 +12618,7 @@
     },
     "cranberry": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cranberry",
       "icon": "🔴",
       "latin": "Vaccinium macrocarpon (Fructus recens)",
@@ -12828,7 +12849,7 @@
     },
     "goji_berry": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Goji Berry (Wolfberry)",
       "icon": "🏮",
       "latin": "Lycium barbarum (Fructus siccus)",
@@ -12945,7 +12966,7 @@
     },
     "mulberry": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mulberry (Dried)",
       "icon": "🍇",
       "latin": "Morus alba (Fructus siccus)",
@@ -13005,7 +13026,7 @@
     },
     "acai_berry": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Açaí Berry",
       "icon": "🌴",
       "latin": "Euterpe oleracea (Fructus recens gelidus)",
@@ -13065,7 +13086,7 @@
     "--- EXOTIC_FRUITS ---": "Exoten (Energie, Enzyme & Tropen-Power)",
     "banana": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Banana",
       "icon": "🍌",
       "latin": "Musa acuminata (Fructus recens)",
@@ -13127,7 +13148,7 @@
     },
     "mango": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mango",
       "icon": "🥭",
       "latin": "Mangifera indica (Fructus recens)",
@@ -13189,7 +13210,7 @@
     },
     "pineapple": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pineapple",
       "icon": "🍍",
       "latin": "Ananas comosus (Fructus recens)",
@@ -13248,7 +13269,7 @@
     },
     "papaya": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Papaya",
       "icon": "🍈",
       "latin": "Carica papaya (Fructus recens)",
@@ -13309,7 +13330,7 @@
     },
     "kiwi": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Kiwi (Green)",
       "icon": "🥝",
       "latin": "Actinidia deliciosa (Fructus recens)",
@@ -13368,7 +13389,7 @@
     },
     "pomegranate": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pomegranate",
       "icon": "🔴",
       "latin": "Punica granatum (Fructus recens)",
@@ -13428,7 +13449,7 @@
     },
     "passion_fruit": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Passion Fruit (Maracuja)",
       "icon": "🟣",
       "latin": "Passiflora edulis (Fructus recens)",
@@ -13487,7 +13508,7 @@
     },
     "dragon_fruit": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dragon Fruit (Pitaya)",
       "icon": "🐉",
       "latin": "Selenicereus undatus (Fructus recens)",
@@ -13547,7 +13568,7 @@
     },
     "persimmon": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Persimmon (Kaki)",
       "icon": "🟠",
       "latin": "Diospyros kaki (Fructus recens)",
@@ -13608,7 +13629,7 @@
     },
     "guava": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Guava",
       "icon": "🍐",
       "latin": "Psidium guajava (Fructus recens)",
@@ -13665,7 +13686,7 @@
     },
     "fig": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fig (Fresh)",
       "icon": "🟤",
       "latin": "Ficus carica (Fructus recens)",
@@ -13782,7 +13803,7 @@
     },
     "mangosteen": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mangosteen",
       "icon": "🟣",
       "latin": "Garcinia mangostana (Fructus recens)",
@@ -13837,7 +13858,7 @@
     },
     "durian": {
       "unit_price": 30.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Durian",
       "icon": "🦔",
       "latin": "Durio zibethinus (Fructus recens)",
@@ -13891,7 +13912,7 @@
     },
     "jackfruit": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Jackfruit",
       "icon": "🍈",
       "latin": "Artocarpus heterophyllus (Fructus recens)",
@@ -13943,7 +13964,7 @@
     },
     "starfruit": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Starfruit (Carambola)",
       "icon": "⭐",
       "latin": "Averrhoa carambola (Fructus recens)",
@@ -14001,7 +14022,7 @@
     },
     "cherimoya": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cherimoya",
       "icon": "🍏",
       "latin": "Annona cherimola (Fructus recens)",
@@ -14054,7 +14075,7 @@
     "--- MELONS ---": "Melonen (Hydratation & Elektrolyte)",
     "watermelon": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Watermelon",
       "icon": "🍉",
       "latin": "Citrullus lanatus (Fructus recens)",
@@ -14112,7 +14133,7 @@
     },
     "cantaloupe": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cantaloupe Melon",
       "icon": "🍈",
       "latin": "Cucumis melo var. cantalupensis (Fructus recens)",
@@ -14163,7 +14184,7 @@
     },
     "honeydew_melon": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Honeydew Melon",
       "icon": "🍈",
       "latin": "Cucumis melo var. inodorus (Fructus recens)",
@@ -14217,7 +14238,7 @@
     },
     "galia_melon": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Galia Melon",
       "icon": "🍈",
       "latin": "Cucumis melo var. reticulatus (Fructus recens)",
@@ -14559,7 +14580,7 @@
     },
     "rib_eye_steak": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rib-Eye / Entrecôte",
       "icon": "🥩",
       "latin": "Bos taurus (Rib cut)",
@@ -14614,7 +14635,7 @@
     },
     "beef_fillet": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Beef Fillet / Tenderloin",
       "icon": "🥩",
       "latin": "Bos taurus (Psoas major)",
@@ -14786,7 +14807,7 @@
     },
     "duck_breast": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Duck Breast",
       "icon": "🦆",
       "latin": "Anas platyrhynchos",
@@ -14898,7 +14919,7 @@
     },
     "chicken_thigh": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chicken Thigh (with Skin)",
       "icon": "🍗",
       "latin": "Gallus gallus (Femur)",
@@ -14957,7 +14978,7 @@
     },
     "turkey_drumstick": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Turkey Drumstick",
       "icon": "🍗",
       "latin": "Meleagris gallopavo (Crus)",
@@ -15010,7 +15031,7 @@
     },
     "pulled_turkey": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pulled Turkey",
       "icon": "🥪",
       "latin": "Meleagris gallopavo (Dark meat)",
@@ -15341,7 +15362,7 @@
     },
     "pulled_pork": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Pulled Pork (Shoulder)",
       "icon": "🥪",
       "latin": "Sus scrofa (Pork Butt)",
@@ -15675,7 +15696,7 @@
     },
     "bone_marrow": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bone Marrow",
       "icon": "🦴",
       "latin": "Bos taurus (Medulla ossium)",
@@ -15795,7 +15816,7 @@
     },
     "mackerel": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mackerel",
       "icon": "🐟",
       "latin": "Scomber scombrus",
@@ -15909,7 +15930,7 @@
     },
     "sardines": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sardines",
       "icon": "🥫",
       "latin": "Sardina pilchardus",
@@ -15969,7 +15990,7 @@
     },
     "caviar": {
       "unit_price": 50.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sturgeon Caviar",
       "icon": "🖤",
       "latin": "Acipenseridae (Roe)",
@@ -16024,7 +16045,7 @@
     },
     "gilt_head_bream": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gilt-head Bream (Dorade)",
       "icon": "🐟",
       "latin": "Sparus aurata",
@@ -16193,7 +16214,7 @@
     },
     "sea_bass": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "European Sea Bass (Wolfsbarsch)",
       "icon": "🐟",
       "latin": "Dicentrarchus labrax",
@@ -16301,7 +16322,7 @@
     },
     "common_sole": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Common Sole (Seeunge)",
       "icon": "🐟",
       "latin": "Solea solea",
@@ -16353,7 +16374,7 @@
     "--- FRESHWATER_FISH ---": "Süßwasserfisch",
     "rainbow_trout": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rainbow Trout",
       "icon": "🐟",
       "latin": "Oncorhynchus mykiss",
@@ -16468,7 +16489,7 @@
     },
     "mussels": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mussels",
       "icon": "🐚",
       "latin": "Mytilus edulis",
@@ -16639,7 +16660,7 @@
     },
     "king_scallop": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "King Scallop",
       "icon": "🐚",
       "latin": "Pecten maximus",
@@ -16697,7 +16718,7 @@
     },
     "oyster": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Oyster",
       "icon": "🦪",
       "latin": "Ostrea edulis",
@@ -16812,7 +16833,7 @@
     },
     "lobster": {
       "unit_price": 30.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Lobster",
       "icon": "🦞",
       "latin": "Homarus americanus",
@@ -16865,7 +16886,7 @@
     "--- SMOKED_AND_CURED_SALMON ---": "Räucherlachs & Graved Lachs",
     "smoked_salmon": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Räucherlachs (Kaltgeräuchert)",
       "icon": "🐟",
       "latin": "Salmo salar (Fumigata)",
@@ -16930,7 +16951,7 @@
     },
     "graved_salmon": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Graved Lachs (Gravlax)",
       "icon": "🌿",
       "latin": "Salmo salar (Curata)",
@@ -16994,7 +17015,7 @@
   "sausages": {
     "sausage_gutfried_poultry_thick": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gutfried Geflügel-Fleischwurst (Die Dicke)",
       "icon": "🌭",
       "latin": "Aves farcimen (Gutfried)",
@@ -17057,7 +17078,7 @@
     },
     "sausage_dulano_poultry_thick": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dulano Geflügel-Fleischwurst (Lidl)",
       "icon": "🌭",
       "latin": "Aves farcimen (Lidl)",
@@ -17116,7 +17137,7 @@
     },
     "cold_cut_dulano_chicken_breast": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dulano Hähnchenbrust-Aufschnitt (Scheiben)",
       "icon": "🍗",
       "latin": "Gallus gallus (Pectus dissectum)",
@@ -17175,7 +17196,7 @@
     },
     "cold_cut_dulano_cooked_ham": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dulano Delikatess Kochschinken",
       "icon": "🥓",
       "latin": "Sus scrofa (Perna cocta)",
@@ -17234,7 +17255,7 @@
     },
     "cold_cut_black_forest_ham": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Schwarzwälder Schinken (Rohschinken)",
       "icon": "🥓",
       "latin": "Sus scrofa (Perna fumigata)",
@@ -17296,7 +17317,7 @@
     },
     "cold_cut_dulano_salami": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dulano Salami in Scheiben",
       "icon": "🍕",
       "latin": "Salumen siccum (Lidl)",
@@ -17355,7 +17376,7 @@
     },
     "cold_cut_dulano_lyoner": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Dulano Lyoner / Mortadella (Scheiben)",
       "icon": "🥪",
       "latin": "Farcimen coctum",
@@ -17414,7 +17435,7 @@
     },
     "cold_cut_mortadella_bologna_igp": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mortadella Bologna IGP (Original Italienisch)",
       "icon": "🥩",
       "latin": "Sus scrofa (Farcimen Bononiense)",
@@ -17477,7 +17498,7 @@
     },
     "cold_cut_german_mortadella": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Deutsche Mortadella (Schinkenwurst mit Pistazien)",
       "icon": "🥪",
       "latin": "Farcimen germanicum (Pistacia)",
@@ -17540,7 +17561,7 @@
     "--- HALAL_AND_POULTRY_SALAMI ---": "Rind- & Geflügelsalami (Supermarkt & Orient-Markt)",
     "sausage_beef_salami": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Rindersalami (Halal)",
       "icon": "🥩",
       "latin": "Salumen siccum (Bos taurus)",
@@ -17602,7 +17623,7 @@
     },
     "sausage_poultry_salami": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Geflügelsalami",
       "icon": "🍗",
       "latin": "Salumen siccum (Aves)",
@@ -17666,7 +17687,7 @@
     },
     "sausage_sucuk": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Sucuk (Knoblauchwurst)",
       "icon": "🧄",
       "latin": "Farcimen allium (Bos/Ovis)",
@@ -17729,7 +17750,7 @@
     "--- CLASSIC_GERMAN_DELI ---": "Traditioneller deutscher Aufschnitt",
     "cold_cut_bierschinken": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bierschinken",
       "icon": "🥓",
       "latin": "Farcimen perna",
@@ -17793,7 +17814,7 @@
     },
     "cold_cut_leberkaese": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Leberkäse / Fleischkäse",
       "icon": "🍞",
       "latin": "Farcimen coctum bavaricum",
@@ -17856,7 +17877,7 @@
     "--- GERMAN_BBQ_CLASSICS ---": "Grillwürste & Rote (Das deutsche BBQ-Fundament)",
     "sausage_bratwurst_pork": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grobe Bratwurst (Schwein)",
       "icon": "🌭",
       "latin": "Farcimen assum (Sus scrofa)",
@@ -17921,7 +17942,7 @@
     },
     "sausage_nuernberger": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Nürnberger Rostbratwurst",
       "icon": "🌭",
       "latin": "Farcimen norimbergense",
@@ -17983,7 +18004,7 @@
     },
     "sausage_kaesekrainer": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Käsekrainer",
       "icon": "🧀",
       "latin": "Farcimen caseosum",
@@ -18046,7 +18067,7 @@
     },
     "sausage_krakauer": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Krakauer / Rote Wurst",
       "icon": "🌭",
       "latin": "Farcimen rubrum",
@@ -18108,7 +18129,7 @@
     },
     "sausage_poultry_bratwurst": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Geflügel-Bratwurst",
       "icon": "🍗",
       "latin": "Farcimen assum (Aves)",
@@ -18172,7 +18193,7 @@
     },
     "sausage_merguez": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Merguez",
       "icon": "🌶️",
       "latin": "Farcimen picante (Ovis/Bos)",
@@ -18234,7 +18255,7 @@
     },
     "sausage_meica_bratmaxe": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Meica Bratmaxe",
       "icon": "🌭",
       "latin": "Farcimen assum (Meica)",
@@ -18298,7 +18319,7 @@
     },
     "sausage_wiesenhof_bruzzzler": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Wiesenhof Bruzzzler (Geflügel)",
       "icon": "🍗",
       "latin": "Farcimen assum aves (Wiesenhof)",
@@ -18362,7 +18383,7 @@
     },
     "sausage_egetuerk_soelen": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Egetürk Şölen (Grill-Sucuk)",
       "icon": "🧄",
       "latin": "Farcimen allium craticula (Egetürk)",
@@ -18425,7 +18446,7 @@
     },
     "bbq_cevapcici_beef": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cevapcici (Rind / Lamm)",
       "icon": "🥩",
       "latin": "Carnis concisae cylindrus",
@@ -18489,7 +18510,7 @@
     },
     "bbq_adana_kebab_skewer": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Adana Kebab (Grillspieß)",
       "icon": "🍢",
       "latin": "Carnis concisae veru (Adana)",
@@ -18551,7 +18572,7 @@
     "--- PORK_BELLY_AND_RIBS ---": "Das Lidl-Bauchfleisch- & Rippchen-Regal",
     "bbq_grillfackeln": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grillfackeln (Schweinebauch am Spieß)",
       "icon": "🥓",
       "latin": "Sus scrofa (Venter marinatus)",
@@ -18613,7 +18634,7 @@
     },
     "bbq_pork_belly_slices": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Schweinebauchscheiben (Kräuter/Paprika)",
       "icon": "🥩",
       "latin": "Sus scrofa (Venter)",
@@ -18677,7 +18698,7 @@
     },
     "bbq_spareribs_marinated": {
       "unit_price": 10.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Spareribs / Schälrippchen (Mariniert & Vorgegart)",
       "icon": "🍖",
       "latin": "Sus scrofa (Costae marinatae coctae)",
@@ -18740,7 +18761,7 @@
     "--- THE_SPECIALTY_SAUSAGES ---": "Spezial-Grillwürste (Käse, Speck & Form)",
     "sausage_berner_wuerstel": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Berner Würstel (Käsefüllung & Speckmantel)",
       "icon": "🥓",
       "latin": "Farcimen caseosum lardumque",
@@ -18803,7 +18824,7 @@
     },
     "sausage_bratwurst_schnecke": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Bratwurstschnecke",
       "icon": "🌀",
       "latin": "Farcimen assum spirale",
@@ -18865,7 +18886,7 @@
     },
     "sausage_schinkenkrakauer": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Schinkenkrakauer (Grillwurst)",
       "icon": "🌭",
       "latin": "Farcimen perna rubrum",
@@ -18928,7 +18949,7 @@
     "--- BBQ_POULTRY_CLASSICS ---": "Geflügel vom Grill (Wings, Keulen & Spieße)",
     "bbq_chicken_wings_marinated": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hähnchenflügel / Chicken Wings (Mariniert)",
       "icon": "🍗",
       "latin": "Gallus gallus (Ala marinata)",
@@ -18993,7 +19014,7 @@
     },
     "bbq_chicken_drumsticks": {
       "unit_price": 8.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hähnchenunterschenkel / Drumsticks (Mariniert)",
       "icon": "🍗",
       "latin": "Gallus gallus (Crus marinatum)",
@@ -19057,7 +19078,7 @@
     },
     "bbq_chicken_skewers_paprika": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hähnchenspieße (Paprika-Marinade)",
       "icon": "🍢",
       "latin": "Gallus gallus (Veru marinatum)",
@@ -19119,7 +19140,7 @@
     },
     "bbq_chicken_inner_fillet": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Hähnchen-Innenfilets / Tenders (Natur/Mariniert)",
       "icon": "🥩",
       "latin": "Gallus gallus (Pectus minor)",
@@ -19185,7 +19206,7 @@
     "--- EGGS_AVIAN_PROTEIN ---": "Eier (Das Goldstandard-Protein)",
     "egg_chicken": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Chicken Egg (Size L)",
       "icon": "🥚",
       "latin": "Gallus gallus (Ovum)",
@@ -19245,7 +19266,7 @@
     },
     "egg_quail": {
       "unit_price": 5.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Quail Egg",
       "icon": "🪺",
       "latin": "Coturnix japonica (Ova)",
@@ -19299,7 +19320,7 @@
     },
     "egg_duck": {
       "unit_price": 1.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Duck Egg",
       "icon": "🦆",
       "latin": "Ovum anatis (Anas platyrhynchos)",
@@ -19356,7 +19377,7 @@
     },
     "egg_white": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Egg White (Liquid)",
       "icon": "⚪",
       "latin": "Albumen ovi (Gallus gallus)",
@@ -19416,7 +19437,7 @@
     },
     "egg_yolk": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Egg Yolk (Fresh)",
       "icon": "🟡",
       "latin": "Vitellus ovi (Gallus gallus)",
@@ -19475,7 +19496,7 @@
     },
     "egg_ostrich": {
       "unit_price": 30.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ostrich Egg",
       "icon": "🥚",
       "latin": "Ovum struthionis (Struthio camelus)",
@@ -19531,7 +19552,7 @@
     },
     "egg_century": {
       "unit_price": 6.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Century Egg (Pidan)",
       "icon": "🌑",
       "latin": "Ovum fermentatum alkaline",
@@ -19586,7 +19607,7 @@
   "milk": {
     "milk_cow_whole": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Whole Cow Milk (3.5%)",
       "icon": "🥛",
       "latin": "Lactis vaccinum (Bos taurus)",
@@ -19645,7 +19666,7 @@
     },
     "milk_goat": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Goat Milk",
       "icon": "🐐",
       "latin": "Lactis caprinum (Capra hircus)",
@@ -19703,7 +19724,7 @@
     },
     "milk_sheep": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Sheep Milk",
       "icon": "🐑",
       "latin": "Lactis ovillum (Ovis aries)",
@@ -19758,7 +19779,7 @@
     },
     "milk_buffalo": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Buffalo Milk",
       "icon": "🐃",
       "latin": "Lactis bubalinum (Bubalus bubalis)",
@@ -19812,7 +19833,7 @@
     },
     "milk_donkey": {
       "unit_price": 15.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Donkey Milk",
       "icon": "🫏",
       "latin": "Lactis asininum (Equus asinus)",
@@ -19868,7 +19889,7 @@
     },
     "milk_camel": {
       "unit_price": 12.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Camel Milk",
       "icon": "🐪",
       "latin": "Lactis camelnum (Camelus dromedarius)",
@@ -19924,7 +19945,7 @@
     "--- THERMAL_DAIRY_VARIANTS ---": "Milch nach Verarbeitungsgrad (Kuh)",
     "milk_cow_fresh": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fresh Whole Milk (Pasteurized)",
       "icon": "🥛",
       "latin": "Lactis vaccinum pasteurizatum",
@@ -19981,7 +20002,7 @@
     },
     "milk_cow_uht": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "UHT Whole Milk (Shelf-stable)",
       "icon": "📦",
       "latin": "Lactis vaccinum uperisatum",
@@ -20038,7 +20059,7 @@
     "--- PLANT_BASED_DRINKS ---": "Pflanzliche Milchgetränke (Vegan)",
     "drink_oat": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Oat Drink (Haferdrink)",
       "icon": "🌾",
       "latin": "Extractum avenae liquidum",
@@ -20095,7 +20116,7 @@
     },
     "drink_almond": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Almond Drink (Unsweetened)",
       "icon": "🫘",
       "latin": "Extractum amygdalae liquidum",
@@ -20151,7 +20172,7 @@
     },
     "drink_soy": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Soy Drink",
       "icon": "🫛",
       "latin": "Extractum sojae liquidum",
@@ -20209,7 +20230,7 @@
   "YOGURT": {
     "yogurt_greek": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Greek Yogurt (10% Fat)",
       "icon": "🥣",
       "latin": "Fermented Bos taurus milk",
@@ -20266,7 +20287,7 @@
     },
     "skyr": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Skyr (Traditional)",
       "icon": "🥣",
       "latin": "Bos taurus (curd)",
@@ -20322,7 +20343,7 @@
     },
     "yogurt_natural": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Natural Yogurt (3.5%)",
       "icon": "🥣",
       "latin": "Lactis fermentatum (Lactobacillus)",
@@ -20375,7 +20396,7 @@
     },
     "kefir": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100ml",
       "label": "Kefir (Mild)",
       "icon": "🥛",
       "latin": "Lactis fermentatum yeast-based",
@@ -20433,7 +20454,7 @@
   "CHEESE": {
     "quark_low_fat": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Low-Fat Quark (Magerquark)",
       "icon": "🥣",
       "latin": "Caseus acidus (Bos taurus)",
@@ -20491,7 +20512,7 @@
     },
     "cheese_cottage": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cottage Cheese (Hüttenkäse)",
       "icon": "🥣",
       "latin": "Caseus granulatus (Bos taurus)",
@@ -20544,7 +20565,7 @@
     },
     "cheese_ricotta": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Ricotta",
       "icon": "🥣",
       "latin": "Caseus recoctus (Whey curd)",
@@ -20600,7 +20621,7 @@
     },
     "cheese_mascarpone": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Mascarpone",
       "icon": "🥣",
       "latin": "Caseus butyrosus (Double cream cheese)",
@@ -20657,7 +20678,7 @@
     "--- SOFT_AND_MOLD_CHEESE ---": "Weich- & Edelschimmelkäse",
     "cheese_camembert": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Camembert / Brie",
       "icon": "🧀",
       "latin": "Caseus mofla (Penicillium)",
@@ -20710,7 +20731,7 @@
     },
     "cheese_gorgonzola": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gorgonzola (Blue Cheese)",
       "icon": "🧀",
       "latin": "Caseus mofla caeruleus",
@@ -20817,7 +20838,7 @@
     "--- SEMI_HARD_AND_CHEDDARED_CHEESE ---": "Schnittkäse & Cheddar-Varianten",
     "cheese_cheddar_aged": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Aged Cheddar",
       "icon": "🧀",
       "latin": "Caseus cheddarensis",
@@ -21033,7 +21054,7 @@
     },
     "cheese_monterey_jack": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Monterey Jack",
       "icon": "🧀",
       "latin": "Caseus americanus (Monterey)",
@@ -21086,7 +21107,7 @@
     },
     "cheese_halloumi_cyprus_classic": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Halloumi (Original Zypern)",
       "icon": "🇨🇾",
       "latin": "Caseus cyprius",
@@ -21145,7 +21166,7 @@
     },
     "cheese_grillkaese_gazi_herbs": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Gazi Grill- und Pfannenkäse (Kräuter)",
       "icon": "🌿",
       "latin": "Caseus frictis gazi",
@@ -21200,7 +21221,7 @@
     },
     "cheese_grill_milbona_lidl": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Milbona Grillkäse (Lidl)",
       "icon": "🧀",
       "latin": "Caseus frictis lidlianus",
@@ -21407,7 +21428,7 @@
     "--- SPREADABLE_FRESH_CHEESE ---": "Streichfähiger Frischkäse & Spezialitäten",
     "cheese_cream_full_fat": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Cream Cheese (Double Cream)",
       "icon": "🥣",
       "latin": "Caseus butyrosus recens",
@@ -21464,7 +21485,7 @@
     },
     "cheese_goat_fresh": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Fresh Goat Cheese",
       "icon": "🐐",
       "latin": "Caseus caprinus recens",
@@ -21523,7 +21544,7 @@
     "--- BRANDED_FRESH_CHEESE_PHILADELPHIA ---": "Frischkäse-Referenz (Marke: Philadelphia)",
     "cheese_cream_philadelphia_original": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Philadelphia Original (Double Cream)",
       "icon": "🥣",
       "latin": "Caseus butyrosus (Philadelphia)",
@@ -21583,7 +21604,7 @@
     },
     "cheese_cream_philadelphia_balance": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Philadelphia Balance (11% Fat)",
       "icon": "🥣",
       "latin": "Caseus butyrosus levis",
@@ -21639,7 +21660,7 @@
     },
     "cheese_cream_philadelphia_protein": {
       "unit_price": 3.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Philadelphia Protein (3% Fat)",
       "icon": "🥣",
       "latin": "Caseus proteicus (Philadelphia)",
@@ -21696,7 +21717,7 @@
     "--- DAIRY_FAT_AND_CREAM ---": "Milchfette, Sahne & Kochhelfer",
     "butter_grass_fed": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Grass-Fed Butter",
       "icon": "🧈",
       "latin": "Butyrum (Bos taurus)",
@@ -21749,7 +21770,7 @@
     },
     "cream_heavy": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Heavy Cream (30%)",
       "icon": "🥛",
       "latin": "Flos lactis",
@@ -21802,7 +21823,7 @@
     },
     "dairy_butter_irish": {
       "unit_price": 4.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Irische Butter (z.B. Kerrygold)",
       "icon": "🧈",
       "latin": "Butyrum hibernicum",
@@ -21891,11 +21912,12 @@
       "energy": {
         "kcal": 292,
         "kj": 1222
-      }
+      },
+      "unit_type": "100g"
     },
     "dairy_sour_cream_20": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Schmand / Sour Cream (20-24%)",
       "icon": "🥣",
       "latin": "Lactis flos acidus",
@@ -21941,7 +21963,7 @@
     },
     "dairy_creme_fraiche": {
       "unit_price": 2.0,
-      "unit_type": "piece",
+      "unit_type": "100g",
       "label": "Crème Fraîche (30% Fett)",
       "icon": "🇫🇷",
       "latin": "Flos lactis gallicus",

@@ -61,8 +61,8 @@ const noteTriggerMap = {
     perma: "4perma",
     permanent: "4perma",
     atomic: "3atomic",
-    anki: "3atomic_anki",
-    ankicloze: "3atomic_ankicloze",
+    studycards: "3atomic_studycards",
+    studycard: "3atomic_studycards",
     ever: "5ever",
     evergreen: "5ever"
 };
@@ -81,17 +81,16 @@ if (!nChoice) {
         "2lit": "5_Notes/2_Literature",
         "4perma": "5_Notes/4_Permanent",
         "3atomic": "5_Notes/3_Atomic",
-        "3atomic_anki": "5_Notes/3_Atomic/anki",
-        "3atomic_ankicloze": "5_Notes/3_Atomic/anki",
+        "3atomic_studycards": "5_Notes/3_Atomic/studycards",
         "5ever": "5_Notes/5_Evergreen"
     };
     targetFolder = directFolders[nChoice];
 }
 
 if (nChoice === "atomic_sub") {
-    const aOptions = ["🗃️ Standard Atomic", "🎴 Anki-Basic", "🧠 Anki-Cloze"];
-    const aVals = ["3atomic", "3atomic_anki", "3atomic_ankicloze"];
-    const aFoldersFull = ["5_Notes/3_Atomic", "5_Notes/3_Atomic/anki", "5_Notes/3_Atomic/anki"];
+    const aOptions = ["🗃️ Standard Atomic (custom SRS)", "🎴 Studycards (Plugin FSRS)"];
+    const aVals = ["3atomic", "3atomic_studycards"];
+    const aFoldersFull = ["5_Notes/3_Atomic", "5_Notes/3_Atomic/studycards"];
     let aIdx = await tp.system.suggester(aOptions, Array.from(aOptions.keys()));
     if (aIdx === null) return;
     nChoice = aVals[aIdx];
@@ -99,7 +98,7 @@ if (nChoice === "atomic_sub") {
 }
 
 // 🔱 5. SCIENCE-MODULE INTEGRATION (Delegiert die Abfrage!)
-const needsScience = ["4perma", "2lit", "3atomic", "3atomic_anki", "3atomic_ankicloze", "5ever"];
+const needsScience = ["4perma", "2lit", "3atomic", "3atomic_studycards", "5ever"];
 if (needsScience.includes(nChoice)) {
     if (typeof tp.user.disciplineEngine === "function") {
         const engine = tp.user.disciplineEngine();

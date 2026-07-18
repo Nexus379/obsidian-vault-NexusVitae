@@ -80,7 +80,7 @@ if (typeof tp.user.disciplineEngine === "function") {
 
 // 🔱 4. TITLE & LOGISTICS
 // Sicherheits-Fallbacks für SYS und ARCH, falls das Template direkt gestartet wird
-const SYS = v.SYS || { tmpl: "zData/0_Templates" };
+const SYS = v.SYS || { tmpl: "zData/1tmpl" };
 const ARCH = v.ARCH || { a: { folder: "2_Areas" } };
 
 let title = v.title || tp.file.title;
@@ -146,7 +146,7 @@ try {
         mocContent += ">> ```dataview\n";
         mocContent += ">> TABLE without ID\n";
         mocContent += ">>   file.link as \"Item\",\n";
-        mocContent += ">>   archtype as \"Typ\",\n";
+        mocContent += ">>   archtype as \"Type\",\n";
         mocContent += ">>   status as \"Status\"\n";
         mocContent += `>> FROM "${targetFolderForMOC}"\n`;
         mocContent += ">> SORT archtype ASC, file.mtime DESC\n";

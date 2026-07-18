@@ -1,11 +1,14 @@
 async function generateShoppingList(app, dv, moment) {
-    let logDateStr = dv.current().cal_date;
-    
-    // Wenn manuell aus dem Shopping Hub gestartet, frage nach dem Datum!
+    // dv.current() only exists on the inline dataviewjs API; from a Templater button
+    // dv is the top-level API (no current()) -> guard, then fall back to a date prompt.
+    const cur = (dv && typeof dv.current === "function") ? dv.current() : null;
+    let logDateStr = cur ? cur.cal_date : null;
+
+    // If started manually (e.g. from the Shopping Hub), ask for the date.
     if (!logDateStr) {
         let tp = app.plugins.plugins["templater-obsidian"].templater.current_functions_object;
-        let userInput = await tp.system.prompt("📅 Für welches Datum soll die Liste sein? (YYYY-MM-DD)", moment().format("YYYY-MM-DD"));
-        if (!userInput) return; // Abgebrochen
+        let userInput = await tp.system.prompt("📅 Which date is the list for? (YYYY-MM-DD)", moment().format("YYYY-MM-DD"));
+        if (!userInput) return; // cancelled
         logDateStr = userInput;
     }
     
@@ -16,12 +19,12 @@ async function generateShoppingList(app, dv, moment) {
     const month = referenceDate.format("MM");
     const kw = referenceDate.format("WW");
     
-    const fileName = `${year}-W${kw}_shopping.md`;
-    const folderPath = `0_Calendar/4_Projectlogs/${year}/Shopping`;
+    const fileName = `Grocerie_${logDate.format("YYYY-MM-DD")}.md`;
+    const folderPath = `0_Calendar/4_Projectlogs/Routine/${year}/${month}`;
     const fullPath = `${folderPath}/${fileName}`;
     
     // 1. Strategie auslesen
-    const hubPage = dv.page("2_Areas/4_Organize/Shopping_Hub");
+    const hubPage = dv.page("2_Areas/4_Organize/Plan/Shopping_Hub");
     const strategy = hubPage && hubPage.shopping_strategy ? hubPage.shopping_strategy : "value";
     
     // Engine laden
@@ -187,7 +190,7 @@ async function generateShoppingList(app, dv, moment) {
         await app.vault.create(fullPath, outMd);
     }
     
-    return `[[${fileName}|🛒 Open Shopping List (Woche ${kw})]]`;
+    return `[[${fileName}|🛒 Open Grocery List (${logDate.format("YYYY-MM-DD")})]]`;
 }
 
 module.exports = generateShoppingList;

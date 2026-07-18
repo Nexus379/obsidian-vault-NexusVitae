@@ -4,7 +4,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const icon = tp.variables.discIcon || tp.variables.icon || "🧠";
-const area = tp.variables.currentArea || tp.variables.area || "3_Mind";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/3mind";
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -77,7 +77,8 @@ review:
 > > 
 > > *Focus on mental strength, discipline, and forging your own will.*
 > > 
-> > - **Core Belief:** > > - **Knowledge Focus:** `<%- disc %>`
+> > - **Core Belief:** 
+> > - **Knowledge Focus:** `<%- disc %>`
 > > - **Acting Persona:** `<%- persona %>`
 >
 > > [!todo|wide-1] Standards
@@ -87,7 +88,7 @@ review:
 > > **Is my current focus aligned with my long-term goals?**
 > > 
 
-## Workload / Pensum
+## Workload
 
 
 

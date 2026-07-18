@@ -56,6 +56,14 @@ banner_y: 0
 > > > SORT file.mtime DESC
 > > > ```
 > >
+> > > [!goals] **🌟 Stars (Purpose · Vision · Goals serving this Area)**
+> > > ```dataview
+> > > TABLE archtype, status, due
+> > > FROM #1stars AND !"zData" AND -"yArchive"
+> > > WHERE (contains(string(area2), "2_Relationship") OR contains(string(area2), "2relationship")) AND inbox != true
+> > > SORT due ASC, file.mtime DESC
+> > > ```
+> >
 > > > [!project] **Projects and Tasks**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due

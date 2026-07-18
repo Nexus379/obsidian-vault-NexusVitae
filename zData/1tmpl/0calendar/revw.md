@@ -1,6 +1,6 @@
 <%-*
 // 🔱 1. INITIALIZATION & CONTEXT
-const dv = app.plugins.plugins.dataview.api;
+const dv = app.plugins.plugins.dataview?.api;
 const revModule = tp.variables.revModule || "master";
 const end = tp.variables.revEnd || tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
 const start = tp.variables.revStart || moment(end).subtract(7, "days").format("YYYY-MM-DD"); 
@@ -129,7 +129,74 @@ status: 1active
 > > - **Weekly Avg Mood:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.mood.avg() * 10) / 10 || 0) + "** / 5")`
 > > - **Sleep Avg:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
 > > - **Fitness Total:** `$= dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.mobility_am) || 0) + (Number(p.mobility_pm) || 0), 0)` min
-> > - **Music Total:** `$= dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.play_instrum_time) || 0), 0)` min
+> > - **Music Total:** `$= dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.inpra_min) || 0), 0)` min
+
+### 🌈 Chakra Balance (Plan vs Actual)
+```dataviewjs
+// Read-only weekly aggregation of chakra time (plan from routine, actual from the dailyplm ct_/auto fields)
+const base = app.vault.adapter.basePath;
+let engine = null, i18n = null, persEngine = null;
+try { engine = require(base + "/zData/2scripts/routineEngine.js")(); } catch(e) {}
+try { persEngine = require(base + "/zData/2scripts/personaEngine.js")(); } catch(e) {}
+try { i18n   = require(base + "/zData/2scripts/i18n.js")(); } catch(e) {}
+const t = i18n ? i18n.t : (k)=>k;
+const start = "<%- start %>", end = "<%- end %>";
+
+const wk = moment(end).format("YYYY-[W]WW");
+let rPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === wk + "_routine").first();
+if (!rPage) rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking");
+
+const chakras = [
+  {g:"1. Root",         icon:"❤️", lkey:"ck_root",     key:"ct_root",     col:"239,83,80"},
+  {g:"2. Sacral",       icon:"🧡", lkey:"ck_sacral",   key:"ct_sacral",   col:"255,152,0"},
+  {g:"3. Solar Plexus", icon:"💛", lkey:"ck_solar",    key:"ct_solar",    col:"255,213,0"},
+  {g:"4. Heart",        icon:"💚", lkey:"ck_heart",    key:"ct_heart",    col:"102,187,106"},
+  {g:"5. Throat",       icon:"💙", lkey:"ck_throat",   key:"ct_throat",   col:"41,182,246"},
+  {g:"6. Third Eye",    icon:"💜", lkey:"ck_thirdeye", key:"ct_thirdeye", col:"171,71,188"},
+  {g:"7. Crown",        icon:"🤍", lkey:"ck_crown",    key:"ct_crown",    col:"236,64,122"},
+];
+
+// ACTUAL: sum over the week's dailyplm notes; each day's actuals are auto-pulled via the engine
+// (manual ct_ override wins per day, else the engine maps tracked time to its chakra).
+const plm = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= start && p.cal_date <= end).array();
+const istSum = {}; chakras.forEach(ch => istSum[ch.g] = 0);
+plm.forEach(x => {
+  const act = engine ? engine.getActualChakraMinutes(x) : {};
+  chakras.forEach(ch => {
+    const manual = Number(x[ch.key]) || 0;
+    istSum[ch.g] += manual > 0 ? manual : (act[ch.g] || 0);
+  });
+});
+
+// PLAN: sum getChakraMinutes per weekday
+const planSum = {}; chakras.forEach(ch => planSum[ch.g] = 0);
+if (engine && rPage && engine.getChakraMinutes) {
+  ["mon","tue","wed","thu","fri","sat","sun"].forEach(d => {
+    const m = engine.getChakraMinutes(rPage, d);
+    Object.entries(m).forEach(([g,v]) => { if (planSum[g] !== undefined) planSum[g] += v; });
+  });
+}
+
+// SHARED renderer — same bars as dailyplm, only the data prep above differs (week sums vs single day).
+const rows = chakras.map(ch => ({ icon: ch.icon, label: t(ch.lkey), col: ch.col, p: planSum[ch.g] || 0, ist: istSum[ch.g] || 0 }));
+if (engine && engine.renderChakraBars) {
+  const out = engine.renderChakraBars(rows, { plan: t("chakra_plan"), act: t("chakra_act"), legend: t("chakra_legend") });
+  dv.paragraph(out.bars);
+  dv.paragraph(out.sigma);
+  // 🧬 Axis coverage: which of the 3 axes (PLM/PPM/PKM) the plan touches, via persona.
+  if (persEngine && rPage && engine.getAxisCoverage) {
+    const ax = { PLM:false, PPM:false, PKM:false };
+    ["mon","tue","wed","thu","fri","sat","sun"].forEach(d => {
+      const a = engine.getAxisCoverage(rPage, d, persEngine);
+      Object.keys(ax).forEach(k => { if (a[k]) ax[k] = true; });
+    });
+    const mk = b => b ? "✅" : "⚪";
+    dv.paragraph(`<small style="opacity:0.75;"><b>Axes:</b> 🧬 PLM ${mk(ax.PLM)} · ⚙️ PPM ${mk(ax.PPM)} · 🧠 PKM ${mk(ax.PKM)}</small>`);
+  }
+} else {
+  dv.paragraph("⚠️ routineEngine not found — chakra bars unavailable.");
+}
+```
 
 ---
 <%* } %>
@@ -313,12 +380,6 @@ status: 1active
 > > 
 > > **Focus for Next Week:**
 > > `INPUT[text:next_week_focus]`
-
----
-## 🚀 Look Ahead
-
-> [!abstract] **Plan Next Week**
-> `BUTTON[create-weekly-plan]`
 
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>

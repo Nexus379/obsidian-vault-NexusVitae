@@ -1,6 +1,6 @@
 <%-*
 // 🔱 1. INITIALIZATION & DATE
-const dv = app.plugins.plugins.dataview.api;
+const dv = app.plugins.plugins.dataview?.api;
 const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
 
 // 🔱 2. PATH LOGISTICS (Backsafe for direct template starts)
@@ -59,7 +59,7 @@ const f_am = Number(getVal(plm, "mobility_am", 0));
 const f_pm = Number(getVal(plm, "mobility_pm", 0));
 tp.variables.fitness_revD = f_am + f_pm;
 
-tp.variables.music_revD = Number(getVal(plm, "play_instrum_time", 0));
+tp.variables.music_revD = Number(getVal(plm, "inpra_min", 0));
 
 tp.variables.kcal_revD      = getVal(plm, "nexus_kcal", 0);
 tp.variables.protein_revD   = getVal(plm, "nexus_protein_g", 0);
@@ -145,7 +145,7 @@ sentiment: 3
 
 > [!multi-column]
 >
-> > [!info|wide-1] 🌷 PLM (Life)
+> > [!plm|wide-1] 🌷 PLM (Life)
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_plm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_plm || "..." %>**
 > > ---
@@ -157,7 +157,7 @@ sentiment: 3
 > >     - Journal: <%- tp.variables.journal_revD === "true" ? "✅" : "❌" %>
 > >     - Selfcare: <%- tp.variables.selfcare_revD === "true" ? "✅" : "❌" %>
 >
-> > [!info|wide-1] 🌻 PPM (Strategy)
+> > [!ppm|wide-1] 🌻 PPM (Strategy)
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_ppm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_ppm || "..." %>**
 > > ---
@@ -172,7 +172,7 @@ sentiment: 3
 > >     - 🧹 `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p?.maintask5 || "—"`
 > >     - 🧼 `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/2ppm") && p.cal_date === "<%- dateStr %>").first(); p?.maintask6 || "—"`
 >
-> > [!info|wide-1] 🌼 PKM (Knowledge)
+> > [!pkm|wide-1] 🌼 PKM (Knowledge)
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Focus</small><br>**<%- tp.variables.focusD_pkm || "..." %>**
 > > <small style="opacity:0.5; text-transform:uppercase;">Monthly Focus</small><br>**<%- tp.variables.focusM_pkm || "..." %>**
 > > ---
@@ -188,7 +188,7 @@ sentiment: 3
 
 > [!multi-column] 
 >
-> > [!pink|wide-1] 🍽️ PLM: Fuel & Body
+> > [!plm|wide-1] 🍽️ PLM: Fuel & Body
 > > <small style="opacity:0.5; text-transform:uppercase;">Daily Totals</small>
 > > - 🔥 **`$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_kcal : 0`** kcal
 > > - 💪 **`$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date === "<%- dateStr %>").first(); p ? p.nexus_protein_g : 0`**g Protein
@@ -197,7 +197,7 @@ sentiment: 3
 > > [[<%- dateStr %> plm|↗️ Open Today's Journal]]
 > > <br>
 >
-> > [!todo|wide-1] 🛠️ PPM: Execution
+> > [!ppm|wide-1] 🛠️ PPM: Execution
 > > <small style="opacity:0.5; text-transform:uppercase;">Tasks Completed Today</small>
 > > ```dataviewjs
 > > const t = dv.pages().file.tasks.where(t => t.completed && t.completion && String(t.completion).includes("<%- dateStr %>"));
@@ -212,7 +212,7 @@ sentiment: 3
 > > else dv.paragraph("_No project logs recorded._");
 > > ```
 >
-> > [!abstract|wide-1] 🎓 PKM: Knowledge Gained
+> > [!pkm|wide-1] 🎓 PKM: Knowledge Gained
 > > <small style="opacity:0.5; text-transform:uppercase;">Subject Deep-Dive (Min)</small>
 > > ```dataviewjs
 > > const p = dv.pages().where(p => String(p.archtype).includes("#0cal/3pkm") && p.cal_date === "<%- dateStr %>").first();
@@ -237,23 +237,71 @@ sentiment: 3
 > > else dv.paragraph("_No new notes recorded._");
 > > ```
 
+
 ---
 
 ## 🔍 Specific Pillar Review
 
 > [!multi-column]
 >
-> > [!abstract|wide-1] 🍽️ PLM: Meal Review
+> > [!plm|wide-1] 🍽️ PLM: Meal Review
 > > <small>Did I stick to the baseline? Resonance?</small>
 > > `INPUT[text:review_meal]`
 >
-> > [!abstract|wide-1] 🛒 PPM: Shopping
+> > [!ppm|wide-1] 🛒 PPM: Shopping
 > > <small>Procurement status? Impulsive buys?</small>
 > > `INPUT[text:review_shopping]`
 >
-> > [!abstract|wide-1] 🧠 PKM: Spaced Rep.
+> > [!pkm|wide-1] 🧠 PKM: Spaced Rep.
 > > <small>Flashcards done? Delay cleared?</small>
 > > `INPUT[text:review_spacedrep]`
+
+
+```dataviewjs
+const c = dv.current();
+const base = app.vault.adapter.basePath;
+let engine = null, i18n = null;
+try { engine = require(base + "/zData/2scripts/routineEngine.js")(); } catch(e) {}
+try { i18n   = require(base + "/zData/2scripts/i18n.js")(); } catch(e) {}
+const t = i18n ? i18n.t : (k)=>k;
+
+const dStr = c.cal_date || c.file.name.substring(0,10);
+const dObj = moment(String(dStr), "YYYY-MM-DD");
+const dayMap = {1:"mon",2:"tue",3:"wed",4:"thu",5:"fri",6:"sat",0:"sun"};
+const day = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
+const weekName = dObj.isValid() ? dObj.format("YYYY-[W]WW") : moment().format("YYYY-[W]WW");
+let rPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_routine").first();
+if (!rPage) rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking");
+
+const planned = (engine && rPage) ? engine.getChakraMinutes(rPage, day) : {};
+const actual  = engine ? engine.getActualChakraMinutes(c) : {};   // auto-pulled from tracked time via engine groups
+
+// Data prep is LOCAL (single day). Actual minutes come from the engine (music -> Sacral, fitness -> Solar…).
+const chakras = [
+  {g:"1. Root",         icon:"❤️", lkey:"ck_root",     key:"ct_root",     col:"239,83,80"},
+  {g:"2. Sacral",       icon:"🧡", lkey:"ck_sacral",   key:"ct_sacral",   col:"255,152,0"},
+  {g:"3. Solar Plexus", icon:"💛", lkey:"ck_solar",    key:"ct_solar",    col:"255,213,0"},
+  {g:"4. Heart",        icon:"💚", lkey:"ck_heart",    key:"ct_heart",    col:"102,187,106"},
+  {g:"5. Throat",       icon:"💙", lkey:"ck_throat",   key:"ct_throat",   col:"41,182,246"},
+  {g:"6. Third Eye",    icon:"💜", lkey:"ck_thirdeye", key:"ct_thirdeye", col:"171,71,188"},
+  {g:"7. Crown",        icon:"🤍", lkey:"ck_crown",    key:"ct_crown",    col:"236,64,122"},
+];
+
+const rows = chakras.map(ch => {
+  const p = planned[ch.g] || 0;
+  const manual = Number(c[ch.key]) || 0;
+  const ist = manual > 0 ? manual : (actual[ch.g] || 0);   // manual override wins, else engine auto-pull
+  return { icon: ch.icon, label: t(ch.lkey), col: ch.col, p, ist };
+});
+
+if (engine) {
+  const out = engine.renderChakraBars(rows, { plan: t("chakra_plan"), act: t("chakra_act"), legend: t("chakra_legend") });
+  dv.paragraph(out.bars);
+  dv.paragraph(out.sigma);
+} else {
+  dv.paragraph("⚠️ routineEngine not found — chakra bars unavailable.");
+}
+```
 
 ---
 

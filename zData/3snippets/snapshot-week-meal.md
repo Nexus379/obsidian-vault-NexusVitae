@@ -16,7 +16,7 @@ try {
         probe.add(1, 'week');
     }
     const defaultDate = probe.format("YYYY-MM-DD");
-    const input = await tp.system.prompt("📸 Snapshot Meal-Plan für welche Woche? (YYYY-MM-DD)", defaultDate);
+    const input = await tp.system.prompt("📸 Snapshot Meal Plan for which week? (YYYY-MM-DD)", defaultDate);
     if (input === null) return;
     const target = moment(/^\d{4}-\d{2}-\d{2}$/.test(input) ? input : defaultDate, "YYYY-MM-DD");
 
@@ -26,14 +26,14 @@ try {
 
     // 2. Master lesen
     const masterFile = app.vault.getAbstractFileByPath("2_Areas/1_Selfcare/Plan/Meal_Plan.md");
-    if (!masterFile) { new Notice("❌ Master Meal_Plan nicht gefunden!"); return; }
+    if (!masterFile) { new Notice("❌ Master Meal_Plan not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 
     // 3. Zielpfad + Kollisionsschutz
     const folder = `0_Calendar/7_Plan/${year}/${month}`;
     const finalDest = `${folder}/${year}-W${kw}_meal.md`;
     if (app.vault.getAbstractFileByPath(finalDest)) {
-        new Notice(`⚠️ Meal-Woche W${kw} existiert schon — nicht überschrieben.`);
+        new Notice(`⚠️ Meal-Week W${kw} already exists — not overwritten.`);
         return;
     }
     let cp = "";
@@ -43,8 +43,8 @@ try {
     }
 
     // 4. Shape laden + Platzhalter füllen
-    const shapeFile = app.vault.getAbstractFileByPath("zData/1tmpl/0calendar/_snapshot_shape_meal.md");
-    if (!shapeFile) { new Notice("❌ Shape-Datei _snapshot_shape_meal fehlt!"); return; }
+    const shapeFile = app.vault.getAbstractFileByPath("zData/1tmpl/0calendar/weekplan_meal.md");
+    if (!shapeFile) { new Notice("❌ Shape file weekplan_meal missing!"); return; }
     let body = await app.vault.read(shapeFile);
     body = body.replace(/\{\{YEAR\}\}/g, year).replace(/\{\{KW\}\}/g, kw);
 
@@ -59,10 +59,10 @@ try {
         }
     });
 
-    new Notice(`📸 Meal-Snapshot: ${year}-W${kw}_meal (Master unberührt)`);
+    new Notice(`📸 Meal snapshot: ${year}-W${kw}_meal (master untouched)`);
     await app.workspace.getLeaf(true).openFile(newFile);
 
 } catch(e) {
-    new Notice("🔥 Snapshot-Fehler: " + e.message, 10000);
+    new Notice("🔥 Snapshot error: " + e.message, 10000);
 }
 -%>

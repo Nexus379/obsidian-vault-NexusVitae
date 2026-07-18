@@ -22,7 +22,7 @@ fileTitle: "<%- tp.variables.title || (year + '-W' + kw + '_routine') %>"
 arch:
   - "#0cal"
 archtype:
-  - "#0cal/7plan/routine"
+  - "#0cal/7plan"
 frozen: false
 plan_year: "<%- year %>"
 plan_kw: "<%- kw %>"
@@ -32,8 +32,7 @@ plan_kw: "<%- kw %>"
 
 # 🧩 Nexus Timeblocking (Routines): <%- year %>-W<%- kw %>
 
-`BUTTON[setup-routine]` `BUTTON[edit-routine]` `BUTTON[sync-timetable]`
-
+`BUTTON[setup-routine]` `BUTTON[edit-routine]` `BUTTON[sync-timetable]` 
 
 ```dataviewjs
 const c = dv.current();
@@ -59,33 +58,44 @@ const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.j
 let engine = null;
 try { engine = require(enginePath)(); } catch(e) {}
 
-// --- SMART GET-D FUNCTION (With Details Integration) ---
 const getD = (key) => {
-    if (Array.isArray(key)) return key.map(k => getD(k)).join("<br>");
+    if (Array.isArray(key)) return key.map(k => getD(k)).join("<br><br>");
     if (!key || key === "free") return "—";
     if (key === "break") return "☕ **BUFFER**";
-    
+
     let parts = String(key).split("|");
     let baseKey = parts[0];
-    let detail = parts.length > 1 ? ` _(${parts.slice(1).join(" ")})_` : "";
-    
-    if (baseKey === "custom") return `🔸 ${parts.slice(1).join(" ")}`;
-    
+    let detail = parts.length > 1 ? parts.slice(1).join(" ") : "";
+
+    if (baseKey === "custom") return `🔸 **${detail}**`;
+
+    if (baseKey === "am_routine") {
+        return `<div style="padding: 6px; border-radius: 8px; background-color: rgba(128, 128, 128, 0.15); box-shadow: 0 0 8px rgba(128, 128, 128, 0.15); text-align: center;"><span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">[[2_Areas/1_Selfcare/Plan/AM_Routine|🌅 AM Protocol]]</span></div>`;
+    }
+    if (baseKey === "pm_routine") {
+        return `<div style="padding: 6px; border-radius: 8px; background-color: rgba(128, 128, 128, 0.15); box-shadow: 0 0 8px rgba(128, 128, 128, 0.15); text-align: center;"><span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">[[2_Areas/1_Selfcare/Plan/PM_Routine|🌙 PM Protocol]]</span></div>`;
+    }
+
     if (engine && engine.all && engine.all[baseKey]) {
-        return `${engine.all[baseKey].icon} ${engine.all[baseKey].label}${detail}`;
+        const r = engine.all[baseKey];
+        const bgColor = r.color || "transparent";
+        let html = `<div style="padding: 6px; border-radius: 8px; background-color: ${bgColor}; box-shadow: 0 0 8px ${bgColor}; text-align: center;">`;
+        html += `${r.icon} <span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">${r.label}</span>`;
+        if (detail) {
+            html += `<br><span style="font-size: 0.9em; font-weight: bold;">${detail}</span>`;
+        }
+        html += `</div>`;
+        return html;
     }
     return `❓ ${key}`;
 };
 
-// --- TIME CALCULATION ---
 let current = moment(startTime, ["HH:mm", "h:mm A", "h:mma"]);
 let slots = [];
-
 for (let i = 1; i <= totalPeriods; i++) {
     let end = moment(current).add(classDuration, 'minutes');
     slots.push({ id: String(i), time: `${current.format("HH:mm")}`, isBreak: false });
     current = end;
-
     if (customBreaks[i] && i !== totalPeriods) {
         let bDur = customBreaks[i];
         let breakEnd = moment(current).add(bDur, 'minutes');
@@ -94,14 +104,14 @@ for (let i = 1; i <= totalPeriods; i++) {
     }
 }
 
-// --- RENDER TABLE ---
-const headers = ["⌚ Time", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const cf = (t) => `<span style="font-family: 'Courier New', Courier, monospace; font-weight: bold;">${t}</span>`;
+const headers = ["⌚ Time", cf("Mon"), cf("Tue"), cf("Wed"), cf("Thu"), cf("Fri"), cf("Sat"), cf("Sun")];
 const rows = slots.map(s => {
     if(s.isBreak) {
-        return [`*${s.time}*`, getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break")];
+        return [cf(s.time), getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break"), getD("break")];
     }
     return [
-        `**${s.time}**<br><small style="opacity: 0.5;">[${s.id}]</small>`,
+        cf(s.time) + `<br><small style="opacity: 0.5;">[${s.id}]</small>`,
         getD(c[`rt_mon_${s.id}`]),
         getD(c[`rt_tue_${s.id}`]),
         getD(c[`rt_wed_${s.id}`]),
@@ -116,5 +126,6 @@ dv.table(headers, rows);
 ```
 
 
-
 `BUTTON[reset-schedule]`
+
+`BUTTON[freeze-week]` `BUTTON[archive]`

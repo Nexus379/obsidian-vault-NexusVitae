@@ -99,7 +99,7 @@ if (preSub) {
 
 if (cIdx === null || cIdx === -1) {
     // 🎯 HIER WAR DER FEHLER: JETZT SIND FITNESS & CO MIT INDEX 6 DRIN!
-    const triggerMap = { plm:0, ppm:1, pkm:2, projectlog:3, proj:3, prjlog:3, protocol:4, prot:4, prtcl:4, rev:5, plan:6, fitness:6, music:6, routine:6, meal:6, shopping:6, srs:6, spaced:6, wardrobe:6 };
+    const triggerMap = { plm:0, ppm:1, pkm:2, projectlog:3, proj:3, prjlog:3, protocol:4, prot:4, prtcl:4, rev:5, plan:6, fitness:6, inpra:6, routine:6, meal:6, shopping:6, srs:6, spaced:6, wardrobe:6 };
     if (triggerMap[activeTrigger] !== undefined) cIdx = triggerMap[activeTrigger];
 }
 
@@ -252,20 +252,24 @@ if (cIdx === 6) {
     const targetMoment = moment(dateStr, "YYYY-MM-DD");
     const planYear = targetMoment.format("YYYY");
     const planKw = targetMoment.format("WW");
+    tp.variables.planYear = planYear;
+    tp.variables.planKw = planKw;
     
     let subType = (tp.variables.originTrigger && tp.variables.originTrigger !== "plan") ? tp.variables.originTrigger : "";
     
     if (!subType || subType === "plan") {
         const planOptions = [
             "💪 Fitness Routine", 
-            "🎸 Music & Mastery", 
+            "🎸 Instrument Practice", 
             "⏰ Timeblocking (Routines)", 
             "🍱 Meal Plan", 
             "🛒 Shopping Hub", 
             "🧠 Spaced Repetition", 
-            "👗 Wardrobe"
+            "👗 Wardrobe",
+            "📚 Study Plan",
+            "🗓️ Timetable"
         ];
-        const planKeys = ["fitness", "music", "routine", "meal", "shopping", "srs", "wardrobe"];
+        const planKeys = ["fitness", "inpra", "routine", "meal", "shopping", "srs", "wardrobe", "study", "timetable"];
         
         subType = await tp.system.suggester(planOptions, planKeys, false, "📋 Welchen Wochenplan möchtest du anlegen?");
         if (!subType) return; 
@@ -273,13 +277,15 @@ if (cIdx === 6) {
 
     const planMap = {
         "fitness": "weekplan_fitness",
-        "music": "weekplan_inpra",
+        "inpra": "weekplan_inpra",
         "routine": "weekplan_routine",
         "meal": "weekplan_meal",
         "shopping": "weekplan_shopping",
         "spaced": "weekplan_srs",
         "srs": "weekplan_srs",
-        "wardrobe": "weekplan_wardrobe"
+        "wardrobe": "weekplan_wardrobe",
+        "study": "weekplan_study",
+        "timetable": "weekplan_timetable"
     };
 
     planTemp = planMap[subType] || "weekplan";
@@ -379,7 +385,16 @@ if (finalTempName) {
     const templatePath = `${SYS.tmpl}/0calendar/${finalTempName}.md`;
     const tFile = app.vault.getAbstractFileByPath(templatePath);
     if (tFile) {
-        tR += await tp.file.include(tFile);
+        let raw = await app.vault.read(tFile);
+        if (raw.includes("{{YEAR}}") || raw.includes("{{KW}}")) {
+            // Shape-based plan (fitness/routine/meal): copy-fill like the snapshot button.
+            const py = tp.variables.planYear || tp.date.now("YYYY");
+            const pk = tp.variables.planKw || tp.date.now("WW");
+            tR += raw.replace(/\{\{YEAR\}\}/g, py).replace(/\{\{KW\}\}/g, pk);
+        } else {
+            // Templater weekplan (inpra/shopping/srs/wardrobe/study): run normally.
+            tR += await tp.file.include(tFile);
+        }
     } else {
         new Notice("❌ Template missing: " + templatePath);
     }

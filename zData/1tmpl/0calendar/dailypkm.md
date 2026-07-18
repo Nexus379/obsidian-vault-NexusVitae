@@ -1,7 +1,7 @@
 <%-*
 // 🔱 1. INITIALIZATION & DATA SYNC
 if (!tp.variables) tp.variables = {};
-const dv = app.plugins.plugins.dataview.api;
+const dv = app.plugins.plugins.dataview?.api;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 
 // 🔱 2. SMART CLEAN & FALLBACK (For Direct-Start without Prompt)
@@ -56,10 +56,10 @@ const energy = tp.variables.energy || tp.frontmatter?.energy || "3";
 tp.variables.energy = energy;
 
 const drainChoice = await tp.system.suggester(
-    ["5 - Fresh / Ready", "4 - Focused", "3 - Average", "2 - Tired", "1 - Fried 🍳"], 
-    ["5", "4", "3", "2", "1"], false, "🧠 Brain Drain: How taxed is your mind?"
+    ["🧠 5 - Fresh", "💡 4 - Focused", "😐 3 - Average", "🥱 2 - Tired", "🍳 1 - Fried"], 
+    ["5", "4", "3", "2", "1"], false, "🧠 Brain Drain?"
 );
-const drainVal = drainChoice || "1";
+const drainVal = drainChoice || "3";
 
 // 🔱 5. MONTHLY STRATEGY SYNC
 let focusM_pkm = "";
@@ -149,13 +149,13 @@ try {
                 }
             }
         } else {
-            timetableBlocks = "> [!info] 🗓️ **Timetable:** Keine Fächer für heute eingetragen.\n\n";
+            timetableBlocks = "> [!caution]- 🗓️ **Timetable:** Nothing scheduled today — no subjects in this week's timetable, or it isn't tagged with a discipline yet.\n\n";
         }
     } else if (["sat", "sun"].includes(dayPrefix)) {
-    timetableBlocks = "> [!info] 🌴 **Weekend Mode:** No regular subjects scheduled today.\n\n";
-} else {
-    timetableBlocks = "> [!caution] ⚠️ **Timetable Error:** Could not locate Timetable.md.\n\n";
-}
+        timetableBlocks = "> [!info] 🌴 **Weekend Mode:** No regular subjects scheduled today.\n\n";
+    } else {
+        timetableBlocks = "> [!caution] ⚠️ **Timetable Error:** Could not locate Timetable.md.\n\n";
+    }
 } catch (error) {
     console.error("Timetable Sync Error: ", error);
 }
@@ -182,27 +182,12 @@ discipline:
 subject: ""
 cal0: 
 stars1:
-area2: ["3_Mind"]
+area2: ["#2area/3mind"]
 project3:
 task4:
 note5: 
 resource6:
 cal_date: <%- dateStr %>
-english: ""
-german: ""
-math: ""
-latin: ""
-physics: ""
-biology: ""
-chemistry: ""
-history: ""
-philosophy: ""
-politics: ""
-economics: ""
-law: ""
-psychology: ""
-art: ""
-music: ""
 
 ---
 
@@ -329,11 +314,12 @@ createDashboardBox("Cognitive Load", bMap, "brain_drain", "#b873f0", "🧠");
 >         </div>
 >     `);
 > } else {
->     dv.paragraph("<center><i>No sessions logged today. Use the button above.</i></center>");
+>     dv.paragraph("<center><i>No sessions logged yet — add a discipline with the button above, or check today's Timetable Sync.</i></center>");
 > }
 > ```
 
 ## Studyplan
+<small style="opacity:0.45;font-style:italic;">(3atomic notes whose SRS Stardate is due today — empty = nothing due, or notes aren't running the spaced-repetition button yet)</small>
 ```dataview
 TABLE WITHOUT ID
   space_rank as "Rank",
@@ -347,6 +333,7 @@ LIMIT 5
 ```
 
 ### ! Delay
+<small style="opacity:0.45;font-style:italic;">(past-due SRS notes — empty = you're all caught up)</small>
 ```dataview
 TABLE WITHOUT ID
   space_rank as "Rank",
@@ -363,7 +350,7 @@ LIMIT 8
 
 ---
 
-[[n-lit|+ Literature Note]] | [[n-perma|+ Permanent Note]]
+[[lit- |+ Literature Note]] | [[perma- |+ Permanent Note]]
 
 ---
 

@@ -2,7 +2,7 @@
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {};
 const persona = tp.variables.persona || "healer";
-const area = tp.variables.currentArea || tp.variables.area || "1_Selfcare";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/1selfcare";
 const deadline = tp.variables.deadline || tp.date.now("YYYY-MM-DD");
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;

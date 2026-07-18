@@ -4,6 +4,19 @@ if (!tp.variables) tp.variables = {};
 const dv = app.plugins.plugins.dataview.api;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 
+// 🌐 i18n label helper (loads zData/2scripts/i18n.js via the same read+Function pattern as the engines).
+// L("key") returns the label in the current language, falling back to English, then the key itself.
+let L = (k) => k;
+try {
+    const _i18nFile = app.vault.getAbstractFileByPath("zData/2scripts/i18n.js");
+    if (_i18nFile) {
+        const _code = await app.vault.read(_i18nFile);
+        const _mod = { exports: {} };
+        new Function("module", "exports", _code)(_mod, _mod.exports);
+        L = _mod.exports().t;
+    }
+} catch (e) { console.error("i18n load failed:", e); }
+
 // 🔱 2. SMART CLEAN & FALLBACK (For Direct-Start without Prompt)
 // Detects "Untitled" or the "Entry-..." placeholder from Router
 let currentFileTitle = tp.variables.title || tp.file.title;
@@ -89,7 +102,7 @@ const weeklyPlanPath = `0_Calendar/7_Plan/${pYear}/${pMonth}/${pYear}-W${pKw}_me
 const masterPlanPath = `2_Areas/1_Selfcare/Plan/Meal_Plan`;
 
 let planPage = dv.page(weeklyPlanPath);
-tp.variables.activePlanLink = `[[${weeklyPlanPath}|Woche ${pKw} Meal Plan]]`;
+tp.variables.activePlanLink = `[[${weeklyPlanPath}|Week ${pKw} Meal Plan]]`;
 if (!planPage) {
     planPage = dv.page(masterPlanPath);
     tp.variables.activePlanLink = `[[${masterPlanPath}|Meal_Plan (Master)]]`;
@@ -176,7 +189,7 @@ if (tp.frontmatter && tp.frontmatter.focusM_plm) {
 let routineBlocks = "";
 try {
     const rDate = moment(dateStr);
-    const rDayPrefix = rDate.locale('en').format("ddd").toLowerCase(); // z.B. "mon"
+    const rDayPrefix = rDate.locale('en').format("ddd").toLowerCase(); // e.g. "mon"
     
     const rYear = rDate.format("YYYY");
     const rMonth = rDate.format("MM");
@@ -185,7 +198,7 @@ try {
     const masterRoutinePath = `2_Areas/4_Organize/Plan/Routine_Timeblocking`;
 
     let rPage = dv.page(weeklyRoutinePath);
-    let rLink = `[[${weeklyRoutinePath}|Woche ${rKw} Routine Plan]]`;
+    let rLink = `[[${weeklyRoutinePath}|Week ${rKw} Routine Plan]]`;
     if (!rPage) {
         rPage = dv.page(masterRoutinePath);
         rLink = `[[${masterRoutinePath}|Routine_Timeblocking (Master)]]`;
@@ -220,7 +233,7 @@ try {
         let rCurrent = moment(rStart, ["HH:mm", "h:mm A", "h:mma"]);
         let dailyRoutines = [];
 
-        // Nur die Zeitblöcke aus der MD-Datei auslesen
+        // Read only the time blocks from the MD file
         for (let i = 1; i <= rTotal; i++) {
             let key = `rt_${rDayPrefix}_${i}`;
             let val = rPage[key];
@@ -234,15 +247,15 @@ try {
                 let label = baseKey;
                 let icon = "🔸";
 
-                // Filter: Gehört dieser Block aus der Timeblocking.md zum Haushalt/Life?
+                // Filter: does this block from Timeblocking.md belong to household/life (Root chakra = daily basics)?
                 if (engineData && engineData[baseKey]) {
-                    if (engineData[baseKey].group === "Life & Home" || engineData[baseKey].group === "Selfcare & PLM") {
+                    if (engineData[baseKey].group === "1. Root") {
                         isHousehold = true;
                         label = engineData[baseKey].label;
                         icon = engineData[baseKey].icon || "🔸";
                     }
                 } else if (baseKey === "custom") {
-                    // Wenn du "custom" nutzt, lassen wir es im PLM auftauchen (z.B. für schnelle, eigene Todos)
+                    // If you use "custom", surface it in the PLM (e.g. for quick, personal todos)
                     isHousehold = true; 
                     label = parts.slice(1).join(" ");
                     detail = "";
@@ -339,6 +352,10 @@ try {
 }
 tp.variables.fitnessSync = fitnessBlocks;
 tp.variables.fitnessLinkPath = fitnessLinkPath;
+// Build the ready link (guard against an empty path -> avoids a broken [[|label]] wikilink)
+tp.variables.fitnessLinkMd = fitnessLinkPath
+    ? `➤ [[${fitnessLinkPath}|🏋️ Open Fitness Plan]]`
+    : `_No fitness plan found._`;
 
 // 🔱 5.7 INPRA SYNC (Instrumental Practice)
 let inpraBlocks = "";
@@ -354,11 +371,18 @@ try {
     if (iPage) {
         inpraLinkPath = weeklyInpraPath;
         const iDayPrefix = iDate.locale('en').format("ddd").toLowerCase();
-        let planned = iPage[`inpra_${iDayPrefix}_ex`];
         let activeInstr = iPage["instr_active"] || "Instrument";
-        
-        if (planned && String(planned).trim() !== "") {
-            inpraBlocks = `**${activeInstr}:** ${planned}\n`;
+        // Read 3 slots inpra_<day>_ex_1..3 (+ Mastery lvl_1..3) — matches weekplan_inpra
+        let items = [];
+        for (let s = 1; s <= 3; s++) {
+            let ex = iPage[`inpra_${iDayPrefix}_ex_${s}`];
+            if (ex && String(ex).trim() !== "") {
+                let lvl = Number(iPage[`inpra_${iDayPrefix}_lvl_${s}`]) || 0;
+                items.push(`- ${String(ex).trim()}${lvl ? ` _(Mastery ${lvl}/5)_` : ""}`);
+            }
+        }
+        if (items.length > 0) {
+            inpraBlocks = `**${activeInstr}:**\n${items.join("\n")}\n`;
         } else {
             inpraBlocks = `_No specific exercise planned for ${activeInstr} today._\n`;
         }
@@ -371,6 +395,10 @@ try {
 }
 tp.variables.inpraSync = inpraBlocks;
 tp.variables.inpraLinkPath = inpraLinkPath;
+// Inpra has no master fallback -> without a weekly plan the path is empty. Guard the link.
+tp.variables.inpraLinkMd = inpraLinkPath
+    ? `➤ [[${inpraLinkPath}|🎼 Open Practice Plan]]`
+    : `_No practice plan yet — create one via the weekly router._`;
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
@@ -407,7 +435,7 @@ archtype:
 - "#0cal/1plm"
 cal0:
 stars1:
-area2: ["1_Selfcare"]
+area2: ["#2area/1selfcare"]
 project3:
 task4:
 note5: []
@@ -428,13 +456,7 @@ selfcare_pm: false
 meal: []
 activity_link: []
 activity_time: 0
-ct_root: 0
-ct_sacral: 0
-ct_solar: 0
-ct_heart: 0
-ct_throat: 0
-ct_thirdeye: 0
-ct_crown: 0
+shopping_extras: []
 creativity_link: []
 entertain_link: []
 strength_link: []
@@ -454,7 +476,7 @@ food_rem:
 ## <%- displayTitle %>
 
 <%-*
-// 🔱 3. DYNAMISCHE LINKS ZU DEN ANDEREN LOGS
+// 🔱 3. DYNAMIC LINKS TO THE OTHER LOGS
 const todayPPM = `0_Calendar/2_PPM/${year}/${month}/${dateStr} ppm`;
 const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 %>
@@ -520,14 +542,16 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     // P3: Body (Mobility + Spontaneous Activity + Planned Workout Check)
     const sportTime = (Number(c["mobility_am"]) || 0) + (Number(c["mobility_pm"]) || 0) + (Number(c["activity_time"]) || 0);
     
+    // Read "did train?" from the Workout log (real reps live there) instead of empty act_ fields
     let actuallyDidWorkout = false;
-    if (fitPage) {
-        const regs = ["mobility", "upper", "lower", "core", "cardio"];
-        for (let reg of regs) { 
-            let actVal = fitPage[`act_${dayPref}_${reg}`];
-            // Wenn in einem Ausführungs-Feld für heute Text steht, hast du trainiert!
-            if (actVal && String(actVal).trim() !== "") {
-                actuallyDidWorkout = true;
+    const _wDate = moment(dateValue).format("YYYY-MM-DD");
+    const _wFile = app.vault.getAbstractFileByPath(`0_Calendar/4_Projectlogs/Routine/${moment(dateValue).format("YYYY")}/${moment(dateValue).format("MM")}/Workout_${_wDate}.md`);
+    if (_wFile) {
+        const _wc = await app.vault.read(_wFile);
+        for (let _l of _wc.split("\n")) {
+            if (_l.startsWith("|") && !_l.includes("Target") && !_l.includes(":---:")) {
+                const _cells = _l.split("|").slice(2, -1);
+                if (_cells.some(x => x.trim() !== "" && !isNaN(parseInt(x.trim())))) { actuallyDidWorkout = true; break; }
             }
         }
     }
@@ -552,7 +576,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     if (Number(c.mood) >= 4) bonus += 5;
     if (Number(c.energy) >= 4) bonus += 5;
     
-    // Instrument-Praxis-Bonus (inpra): Minuten direkt aus der Tagesnotiz
+    // Instrument practice bonus (inpra): minutes straight from the day note
     const musicTime = Number(c["inpra_min"]) || 0;
     if (musicTime >= 15) bonus += 5;
     if (musicTime >= 30) bonus += 5;
@@ -562,7 +586,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
     // 🏋️ WORKOUT BONUS (Powered by 7_Plan)
     if (actuallyDidWorkout) {
-        bonus += 15; // Phönix-Boost für ein durchgezogenes Workout! (+15%)
+        bonus += 15; // Phoenix boost for a completed workout! (+15%)
     }
 
     // 🔱 THE CAP (Max 120%)
@@ -613,22 +637,22 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 ```
 [^1]
 
-> [!quote|flat] ☀️ AM Protocol
-> - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
-> - **Journal** AM: `INPUT[toggle:journal_am]` 
-> 	- *Gratitude, Fascinating, Braindump*
-> - **Mobility** AM: INPUT[number:mobility_am] min (Yoga, stretching, morning walk)
-> - [ ] 🛏️ Make bed & air out the room
-> - [ ] 🍽️ Empty dishwasher
-> - [ ] 🍵 Make tea
-> - [ ] 🪻 Give Flowers Love
-
 > [!pink] L - Lifestyle / Food  
+> > [!quote|flat] ☀️[[2_Areas/1_Selfcare/Plan/AM_Routine|AM_Routine]]
+> > - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
+> > - **Journal** AM: `INPUT[toggle:journal_am]` 
+> > 	- *Gratitude, Fascinating, Braindump*
+> > 	- ✍️ *Better by hand — pen & paper. See [[Journaling Ideas]]*
+> > - **Mobility** AM: INPUT[number:mobility_am] min (Yoga, stretching, morning walk)
+> > - [ ] 🛏️ Make bed & air out the room
+> > - [ ] 🍽️ Empty dishwasher
+> > - [ ] 🍵 Make tea
+> > - [ ] 🪻 Give Flowers Love
 > ### Basics doing
-> <%- tp.variables.routineSync %>
+> <%- tp.variables.routineSync.replace(/\n/g, "\n> ") %>
 > 
 > ```dataviewjs
-> // 🔱 START DER BERECHNUNG (Als Promise verpackt, damit andere warten können)
+> // 🔱 START OF CALCULATION (wrapped as a Promise so other blocks can await it)
 > window.dailyResonancePromise = (async () => {
 >      const c = dv.current();
 >      const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
@@ -700,15 +724,19 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 >            const processAtom = (links, isPlus) => {
 >                if(!links) return;
 >                let arr = Array.isArray(links) ? links : [links];
->                arr.forEach(id => {
->                    let v = Nexus.calculate(id, 1);
+>                arr.forEach(entry => {
+>                    let [id, amtRaw] = String(entry).split("|");
+>                    let amt = Number(amtRaw) || 1;
+>                    let v = Nexus.calculate(id, amt);
 >                    if(v) {
 >                        for(let k in v) {
 >                            let metric = k.replace("recipe_", ""); 
 >                            if(!totals[metric]) totals[metric] = 0;
 >                            totals[metric] += v[k] * (isPlus ? 1 : -1);
 >                        }
->                        atomLog.push((isPlus ? "➕ 🧪 " : "➖ 🧪 ") + " _" + (Nexus.find(id)?.label || id) + "_");
+>                        let _it = Nexus.find(id) || {}; let _u = _it.unit_type;
+>                        let _amtShown = (_u === "piece") ? (amt + "×") : (Math.round(amt * 100) + (_u === "100ml" ? "ml" : "g"));
+>                        atomLog.push((isPlus ? "➕ 🧪 " : "➖ 🧪 ") + " _" + (_it.label || id) + "_ <small>(" + _amtShown + ")</small>");
 >                    }
 >                });
 >            };
@@ -743,17 +771,17 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > <%- tp.variables.plannedMealsText.replace(/\n/g, "\n> > > ") %>
 > > > 
 > > > ---
-> > > **Actions:** `BUTTON[sync-fridge-meals]` `BUTTON[add-remove-meal]` `BUTTON[add-remove-alchemy]` `BUTTON[reset-nutri]`
+> > > **Actions:** `BUTTON[sync-fridge-meals]` `BUTTON[add-remove-meal]` `BUTTON[add-remove-alchemy]`
 > >
 > > > [!info] **Live Resonance (Actuals)**
 > > > ```dataviewjs
-> > > // 🔱 WARTET AUF BLOCK 1, BEVOR ER LOSLEGT
+> > > // 🔱 WAITS FOR BLOCK 1 BEFORE STARTING
 > > > const data = window.dailyResonancePromise ? await window.dailyResonancePromise : null;
 > > > const r = data ? data.totals : { kcal:0, protein_g:0, fat_total_g:0 };
 > > > 
 > > > const resStr = (r.kcal <= 0) ? "🔥 **0** kcal | 💪 **0**g Pro | 🥑 **0**g Fat" : "🔥 **" + Math.round(r.kcal) + "** kcal | 💪 **" + r.protein_g.toFixed(1) + "**g Pro | 🥑 **" + r.fat_total_g.toFixed(1) + "**g Fat";
 > > > let mList = []; 
-> > > const gaps = { "protein_g": ["💪 Protein", 100, "g"], "vit_c_mg": ["🍊 Vit C", 100, "mg"], "fiber_g": ["🥦 Fiber", 30, "g"], "omega3_mg": ["🐟 Omega-3", 1000, "mg"], "magnesium_mg": ["💎 Magnesium", 350, "mg"], "iron_total_mg": ["🩸 Iron", 15, "mg"], "zinc_mg": ["🛡️ Zinc", 10, "mg"] };
+> > > const gaps = { "protein_g": ["💪 Protein", 100, "g"], "vit_c_mg": ["🍊 Vit C", 100, "mg"], "fiber_g": ["🥦 Fiber", 30, "g"], "omega3_total_mg": ["🐟 Omega-3", 1000, "mg"], "magnesium_mg": ["💎 Magnesium", 350, "mg"], "iron_total_mg": ["🩸 Iron", 15, "mg"], "zinc_mg": ["🛡️ Zinc", 10, "mg"] };
 > > > for(let k in gaps){ 
 > > >      let cur = r[k] || 0; 
 > > >      if(cur < gaps[k][1]) mList.push("**" + gaps[k][0] + ":** " + Math.max(0, cur).toFixed(1) + " / " + gaps[k][1] + gaps[k][2]); 
@@ -831,11 +859,11 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > >     }
 > > > }
 > > > ```
-> > > <br>[[2_Areas/4_Organize/Household/Shopping_Hub|➡️ Open Central Procurement Hub]]
+> > > <br>[[2_Areas/4_Organize/Plan/Shopping_Hub|➡️ Open Central Procurement Hub]]
 > >
 > > > [!todo|flat] 📝 Household & Quick Extras
-> > > **Household & Quick Extras:**
-> > > `INPUT[inlineListSuggester(optionQuery("")):shopping_extras]`
+> > > **Household & Quick Extras:** `BUTTON[add-shopping-extra]`
+> > > `VIEW[{shopping_extras}]`
 
 > [!pink] E - Emotions
 > >[!multi-column]
@@ -848,10 +876,10 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const currentEnergy = dv.current().energy || "3";
 > > > const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
 > > > 
-> > > // Container für das Interface-Element erstellen
+> > > // Create the container for the interface element
 > > > const container = dv.container.createEl("div", { style: "font-size: 0.85em; font-family: var(--font-interface);" });
 > > > 
-> > > // Label und Status-Text-Element
+> > > // Label and status-text element
 > > > const label = container.createEl("small", { text: "⚡ Energy Level: ", style: "opacity: 0.8;" });
 > > > const statusText = container.createEl("span", { 
 > > >     text: eMap[String(currentEnergy)] || currentEnergy, 
@@ -860,19 +888,19 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 
 > > > container.createEl("br");
 > > > 
-> > > // Der HTML Slider (input type='range')
+> > > // The HTML slider (input type='range')
 > > > const slider = container.createEl("input", {
 > > >     type: "range",
 > > >     attr: { min: "1", max: "5", value: String(currentEnergy), step: "1" },
 > > >     style: "width: 100%; max-width: 150px; margin-top: 6px; cursor: pointer;"
 > > > });
 > > > 
-> > > // Event-Listener für Interaktionen
+> > > // Event listener for interactions
 > > > slider.addEventListener("input", async (e) => {
 > > >     const val = e.target.value;
 > > >     statusText.innerText = eMap[val] || val;
 > > >     
-> > >     // Schreibt den Wert direkt zurück in das YAML Frontmatter der aktuellen Datei
+> > >     // Writes the value straight back into the current file's YAML frontmatter
 > > >     await app.fileManager.processFrontMatter(tFile, (fm) => {
 > > >         fm["energy"] = Number(val);
 > > >     });
@@ -903,9 +931,9 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > **Today's Training:**
 > > > <%- tp.variables.fitnessSync.trim().replace(/\n/g, '\n> > > ') %>
 > > > ---
-> > > ➤ [[<%- tp.variables.fitnessLinkPath %>|🏋️ Open Fitness Plan]]
+> > > <%- tp.variables.fitnessLinkMd %>
 > > > 
-> > > ➤ [[fitness- |➕ Create new Plan]]
+> > > ➤ `BUTTON[snapshot-week-fitness]`
 
 > [!pink] E - Entropy / Relaxation
 > >[!multi-column]
@@ -920,7 +948,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > 
 > > > const weekName = dObj.isValid() ? dObj.format("YYYY-[W]WW") : moment().format("YYYY-[W]WW");
 > > > let rPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_routine").first();
-> > > if (!rPage) rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking"); // Fallback auf Hauptroutine
+> > > if (!rPage) rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking"); // Fallback to main routine
 > > > if (rPage) {
 > > >     const rStart = rPage.rt_start || "07:00";
 > > >     const rDur = Number(rPage.rt_duration) || 60;
@@ -980,7 +1008,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > > [!blank]
 > > > > **🏃🏽‍♀️ Activity (Spontaneous Sports)**
 > > > > Take a walk, play basketball, etc.
-> > > > `INPUT[inlineList:activity_link]` ⏱️ Duration: `INPUT[number:activity_time]` min
+> > > > `INPUT[inlineListSuggester(option(Walk), option(Run), option(Basketball), option(Swim), option(Cycling), option(Climbing), option(Yoga), option(Dance), option(Hike), option(Tennis)):activity_link]` ⏱️ Duration: `INPUT[number:activity_time]` min
 > > > > 
 > > > > **🎨 Creativity**
 > > > > Painting/Drawing, Crafting, etc.
@@ -1002,9 +1030,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > > **Today's Setup:**
 > > > > <%- tp.variables.inpraSync.trim().replace(/\n/g, '\n> > > > ') %>
 > > > > ---
-> > > > ➤ [[<%- tp.variables.inpraLinkPath %>|🎼 Open Practice Plan]]
-> > > > 
-> > > > ➤ [[inpra- |➕ Create new Plan]]
+> > > > <%- tp.variables.inpraLinkMd %>
 > 
 > > [!quote|flat] 📺 Entertainment (Passive)
 > > *Unplug & Consume: Gaming, Movies, Series, etc.*
@@ -1012,12 +1038,12 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > 
 > > ```dataviewjs
 > > // 📺 NEXUS CONSUMPTION MONITOR
-> > // Scannt deine Entertainment-Ordner und zeigt die 3 zuletzt aktualisierten Einträge
+> > // Scans your entertainment folders and shows the 3 most recently updated entries
 > > const sources = ['6_Resources/Films', '6_Resources/Series', '6_Resources/Games'];
 > > const pages = dv.pages(sources.map(s => `"${s}"`).join(" or "));
 > > 
 > > const recent = pages
-> >     .sort(p => p.file.mday, 'desc') // Sortiert nach dem letzten Änderungsdatum
+> >     .sort(p => p.file.mday, 'desc') // Sorted by last modified date
 > >     .limit(3);
 > > 
 > > if (recent.length > 0) {
@@ -1025,7 +1051,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >         ["Title", "Type", "Last Update"],
 > >         recent.map(p => [
 > >             p.file.link, 
-> >             p.file.folder.split('/').pop(), // Zeigt an, ob Film, Serie oder Game
+> >             p.file.folder.split('/').pop(), // Shows whether it's a film, series or game
 > >             p.file.mday.toFormat("yyyy-MM-dd")
 > >         ])
 > >     );
@@ -1038,10 +1064,11 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > **Action:** `BUTTON[add-entropy]`
 
 > [!pink] N - Night / Sleep
-> > [!quote|flat] 🌙 PM Protocol
+> > [!quote|flat] 🌙 [[2_Areas/1_Selfcare/Plan/PM_Routine|PM_Routine]]
 > > - **Selfcare** PM: `INPUT[toggle:selfcare_pm]`
 > > - **Journal** PM: `INPUT[toggle:journal_pm]` 
 > > 	- *Gratitude, Fascinating, Braindump*
+> > 	- ✍️ *Better by hand — pen & paper. See [[Journaling Ideas]]*
 > > - **Mobility** PM: INPUT[number:mobility_pm] min (Evening stretches, relaxation)
 > > - [ ] 🍽️ Load & start dishwasher
 > > - [ ] 🗑️ Check trash & take out if needed
@@ -1051,14 +1078,30 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > 
 > - **Sleep:** <%- schlaf %>h `$= Number(<%- schlaf %>) >= 7 ? "🟢" : "🔴"`
 
+```dataviewjs
+const c = dv.current();
+const base = app.vault.adapter.basePath;
+let engine = null; try { engine = require(base + "/zData/2scripts/routineEngine.js")(); } catch(e) {}
+if (engine && engine.renderChakraColumns) {
+  const actual = engine.getActualChakraMinutes(c);
+  const chakras = [
+    {g:"1. Root", icon:"❤️", col:"239,83,80"},
+    {g:"2. Sacral", icon:"🧡", col:"255,152,0"},
+    {g:"3. Solar Plexus", icon:"💛", col:"255,213,0"},
+    {g:"4. Heart", icon:"💚", col:"102,187,106"},
+    {g:"5. Throat", icon:"💙", col:"41,182,246"},
+    {g:"6. Third Eye", icon:"💜", col:"171,71,188"},
+    {g:"7. Crown", icon:"🤍", col:"236,64,122"},
+  ];
+  const rows = chakras.map(ch => ({ icon: ch.icon, col: ch.col, ist: actual[ch.g] || 0 }));
+  dv.paragraph(`<small style="opacity:0.55;">🌈 Chakra time today</small>`);
+  dv.paragraph(engine.renderChakraColumns(rows));
+}
+```
 
 
 
----
-`BUTTON[freezer]`
 
+[^1]: L-E-B-E-N by Birkenbihl
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-
-[^1]: L-E-B-E-N von Birkenbihl

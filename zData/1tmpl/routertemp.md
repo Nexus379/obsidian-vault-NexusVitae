@@ -97,12 +97,21 @@ if (!selection && rawTitle.includes("-")) {
 // C) Folder Path Analysis
 const normPath = folderPath.replace(/\\/g,"/");
 if (!selection && normPath !== "/" && normPath !== SYS.inbox) {
-    const root = normPath.split("/")[0];
-    for (let k of Object.keys(ARCH)) {
-        if (root.startsWith(ARCH[k].folder)) {
-            selection = ARCH[k].prompt;
-            activeTrigger = (ARCH[k].trigger && ARCH[k].trigger[0]) || activeTrigger;
-            break;
+    // C0) Raw file created directly inside a project's Logs/Protocols/Tasks subfolder → route to the specialist
+    if (/(^|\/)3_Projects\//.test(normPath)) {
+        if (/\/Logs(\/|$)/.test(normPath))            { selection = "0calendar/projectlog"; activeTrigger = "projectlog"; }
+        else if (/\/Protocols(\/|$)/.test(normPath))  { selection = "0calendar/protocol";   activeTrigger = "protocol"; }
+        else if (/\/Tasks(\/|$)/.test(normPath))      { selection = ARCH.t.prompt; }
+    }
+    // C1) Otherwise route by the root archetype folder
+    if (!selection) {
+        const root = normPath.split("/")[0];
+        for (let k of Object.keys(ARCH)) {
+            if (root.startsWith(ARCH[k].folder)) {
+                selection = ARCH[k].prompt;
+                activeTrigger = (ARCH[k].trigger && ARCH[k].trigger[0]) || activeTrigger;
+                break;
+            }
         }
     }
     const segs = normPath.split("/");

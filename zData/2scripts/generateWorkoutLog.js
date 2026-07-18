@@ -1,11 +1,14 @@
 async function generateWorkoutLog(app, dv, moment) {
-    let logDateStr = dv.current().cal_date;
-    
-    // Wenn manuell aus dem Fitness Hub gestartet, frage nach dem Datum!
+    // dv.current() only exists on the inline dataviewjs API; from a Templater button
+    // dv is the top-level API (no current()) -> guard, then fall back to a date prompt.
+    const cur = (dv && typeof dv.current === "function") ? dv.current() : null;
+    let logDateStr = cur ? cur.cal_date : null;
+
+    // If started manually (e.g. from the Fitness Hub), ask for the date.
     if (!logDateStr) {
         let tp = app.plugins.plugins["templater-obsidian"].templater.current_functions_object;
-        let userInput = await tp.system.prompt("📅 Für welches Datum soll das Workout-Log sein? (YYYY-MM-DD)", moment().format("YYYY-MM-DD"));
-        if (!userInput) return null; // Abgebrochen
+        let userInput = await tp.system.prompt("📅 Which date is the workout log for? (YYYY-MM-DD)", moment().format("YYYY-MM-DD"));
+        if (!userInput) return null; // cancelled
         logDateStr = userInput;
     }
     
@@ -89,7 +92,7 @@ async function generateWorkoutLog(app, dv, moment) {
     
     // Markdown zusammenbauen
     const fileName = `Workout_${logDate.format("YYYY-MM-DD")}`;
-    const folderPath = "0_Calendar/4_Projectlogs/Workouts";
+    const folderPath = `0_Calendar/4_Projectlogs/Routine/${year}/${month}`;
     const filePath = `${folderPath}/${fileName}.md`;
     
     let content = `---
@@ -117,19 +120,21 @@ ${workoutBlocks.join("\n")}
 `;
 
     // Datei speichern
-    const abstractFolder = app.vault.getAbstractFileByPath(folderPath);
-    if (!abstractFolder) {
-        await app.vault.createFolder(folderPath);
+    // Verschachtelte Ordner sicher anlegen (Routine/YYYY/MM)
+    let cPath = "";
+    for (const seg of folderPath.split('/')) {
+        cPath = cPath === "" ? seg : `${cPath}/${seg}`;
+        if (!app.vault.getAbstractFileByPath(cPath)) await app.vault.createFolder(cPath);
     }
     
     const existingFile = app.vault.getAbstractFileByPath(filePath);
     if (!existingFile) {
         await app.vault.create(filePath, content);
-    } else {
-        // Falls die Datei schon existiert, nicht überschreiben (sonst gehen Actuals verloren)
-        // Aber trotzdem den Link zurückgeben
     }
-    
+    // Existing files are NOT overwritten (would wipe your actuals) — but still open + link them.
+    const logFile = app.vault.getAbstractFileByPath(filePath);
+    if (logFile) await app.workspace.getLeaf('split').openFile(logFile);
+
     return `[[${fileName}]]`;
 }
 

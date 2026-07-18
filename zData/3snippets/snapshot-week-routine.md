@@ -13,7 +13,7 @@ try {
         probe.add(1, 'week');
     }
     const defaultDate = probe.format("YYYY-MM-DD");
-    const input = await tp.system.prompt("📸 Snapshot Routine für welche Woche? (YYYY-MM-DD)", defaultDate);
+    const input = await tp.system.prompt("📸 Snapshot Routine for which week? (YYYY-MM-DD)", defaultDate);
     if (input === null) return;
     const target = moment(/^\d{4}-\d{2}-\d{2}$/.test(input) ? input : defaultDate, "YYYY-MM-DD");
 
@@ -23,14 +23,14 @@ try {
 
     // 2. Master lesen
     const masterFile = app.vault.getAbstractFileByPath("2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
-    if (!masterFile) { new Notice("❌ Master Routine_Timeblocking nicht gefunden!"); return; }
+    if (!masterFile) { new Notice("❌ Master Routine_Timeblocking not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 
     // 3. Zielpfad + Kollisionsschutz (eine schon geplante Woche NICHT überschreiben)
     const folder = `0_Calendar/7_Plan/${year}/${month}`;
     const finalDest = `${folder}/${year}-W${kw}_routine.md`;
     if (app.vault.getAbstractFileByPath(finalDest)) {
-        new Notice(`⚠️ Woche W${kw} existiert schon — nicht überschrieben.`);
+        new Notice(`⚠️ Week W${kw} already exists — not overwritten.`);
         return;
     }
     let cp = "";
@@ -40,8 +40,8 @@ try {
     }
 
     // 4. Shape (Wochen-File-Form) laden + Platzhalter füllen
-    const shapeFile = app.vault.getAbstractFileByPath("zData/1tmpl/0calendar/_snapshot_shape_routine.md");
-    if (!shapeFile) { new Notice("❌ Shape-Datei _snapshot_shape_routine fehlt!"); return; }
+    const shapeFile = app.vault.getAbstractFileByPath("zData/1tmpl/0calendar/weekplan_routine.md");
+    if (!shapeFile) { new Notice("❌ Shape file weekplan_routine missing!"); return; }
     let body = await app.vault.read(shapeFile);
     body = body.replace(/\{\{YEAR\}\}/g, year).replace(/\{\{KW\}\}/g, kw);
 
@@ -56,10 +56,10 @@ try {
         }
     });
 
-    new Notice(`📸 Snapshot erstellt: ${year}-W${kw}_routine (editierbar, Master unberührt)`);
+    new Notice(`📸 Snapshot created: ${year}-W${kw}_routine (editable, master untouched)`);
     await app.workspace.getLeaf(true).openFile(newFile);
 
 } catch(e) {
-    new Notice("🔥 Snapshot-Fehler: " + e.message, 10000);
+    new Notice("🔥 Snapshot error: " + e.message, 10000);
 }
 -%>

@@ -141,10 +141,20 @@ const Nexus = await require(app.vault.adapter.basePath + "/" + enginePath)(app);
 const getVal = (stats, key) => Number((stats && stats[key]) || 0);
 const getTotalIron = (stats) => getVal(stats, "iron_heme_mg") + getVal(stats, "iron_plant_mg");
 const getTotalVitA = (stats) => getVal(stats, "vit_a_total_mcg");
+const getTotalOmega3 = (stats) => {
+    // Explicit total wins; else sum the breakdowns (g -> mg) — same idea as getTotalIron.
+    let t = getVal(stats, "omega3_total_mg") || getVal(stats, "omega3_mg");
+    if (t > 0) return t;
+    let ala = getVal(stats, "omega3_ala_g") * 1000 + getVal(stats, "omega3_ala_mg");
+    let ed  = getVal(stats, "omega3_epa_dha_g") * 1000 + getVal(stats, "omega3_epa_dha_mg");
+    if (ed === 0) ed = getVal(stats, "epa_mg") + getVal(stats, "dha_mg");
+    return ala + ed;
+};
 const Nutri = {
     getVal,
     getTotalIron,
     getTotalVitA,
+    getTotalOmega3,
     synergyRules: [
         {
             type: "boost",
@@ -177,7 +187,7 @@ if (ingredients.length === 0) {
 } else {
     // 🔱 3. FULL SPECTRUM CALCULATION
     let totals = {};
-    const baseMetrics = ["kcal", "protein_g", "fat_total_g", "carbs_total_g", "fiber_g", "magnesium_mg", "iron_heme_mg", "iron_plant_mg", "iron_total_mg", "calcium_mg", "zinc_mg", "potassium_mg", "vit_a_retinol_mcg", "vit_a_beta_carotin_mcg", "vit_a_total_mcg", "vit_b12_mcg", "vit_c_mg", "vit_d_mcg", "vit_k_mcg", "vit_k1_mcg", "vit_k2_mcg"];
+    const baseMetrics = ["kcal", "kj", "protein_g", "fat_total_g", "carbs_total_g", "fiber_g", "magnesium_mg", "iron_heme_mg", "iron_plant_mg", "iron_total_mg", "calcium_mg", "zinc_mg", "potassium_mg", "vit_a_retinol_mcg", "vit_a_beta_carotin_mcg", "vit_a_total_mcg", "vit_b12_mcg", "vit_c_mg", "vit_d_mcg", "vit_k_mcg", "vit_k1_mcg", "vit_k2_mcg"];
     const metrics = Array.from(new Set([
         ...baseMetrics,
         ...Object.values(masterCatalog).flatMap(item => Object.keys(item.val || {}))
@@ -190,8 +200,11 @@ if (ingredients.length === 0) {
         const atom = masterCatalog[ing] || Nexus.find(ing);
         
         if (atom && atom.val) {
+            // Energy (kcal/kj) lives in atom.energy, everything else in atom.val — merge both
+            // to sum (same as the engine's own calculate()). Without this, recipe_kcal stays 0.
+            const src = Object.assign({}, atom.energy || {}, atom.val);
             metrics.forEach(m => {
-                const val = Nutri.getVal ? Nutri.getVal(atom.val, m) : (atom.val[m] || 0);
+                const val = Nutri.getVal ? Nutri.getVal(src, m) : (src[m] || 0);
                 totals[m] += val * factor;
             });
         }
@@ -210,6 +223,7 @@ if (ingredients.length === 0) {
         });
         if (Nutri.getTotalIron) fm.recipe_iron_total_mg = Number(Nutri.getTotalIron(totals).toFixed(2));
         if (Nutri.getTotalVitA) fm.recipe_vit_a_total_mcg = Number(Nutri.getTotalVitA(totals).toFixed(2));
+        if (Nutri.getTotalOmega3) fm.recipe_omega3_total_mg = Number(Nutri.getTotalOmega3(totals).toFixed(2));
     });
 
     const portions = Number(p.portions) || 1;
