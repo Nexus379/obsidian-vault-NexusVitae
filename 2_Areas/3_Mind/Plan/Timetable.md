@@ -19,15 +19,11 @@ tt_start: 08:15
 tt_duration: 45
 tt_periods: 16
 tt_breaks: 2:15, 4:15, 6:30
-tt_wed_3: german_studies
-tt_mon_1: agriculture
-tt_mon_2: agriculture
 ---
 
 # 🗓️ Nexus Timetable
 
 `BUTTON[setup-timetable]` `BUTTON[edit-timetable]`
-
 
 ```dataviewjs
 // 1. DATEN AUS DEM YAML LESEN

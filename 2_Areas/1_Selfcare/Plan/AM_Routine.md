@@ -1,9 +1,6 @@
 ---
 am_start: 06:00
-am_periods: 1
-am1: health_medical
-am1det: jij
-am1dur: ""
+am_periods: 0
 ---
 
 # 🌅 Morning Routine
@@ -58,10 +55,6 @@ dv.table(["⌚ Time", "Routine"], rows);
 ---
 `BUTTON[routine-selector]`
 ---~Routines~--- 
-
-⚕️ **Health** (*jij*)
-📝 Routine: `INPUT[text:am1]` | 💬 Detail: `INPUT[text:am1det]`
-⏱️ Duration: `INPUT[number:am1dur]` min.
 
 ---~End~---
 

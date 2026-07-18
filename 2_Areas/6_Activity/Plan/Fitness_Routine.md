@@ -30,64 +30,13 @@ child: []
 summary:
 review:
 training_week: 1
-fit_mon_core:
-  - glute_bridge|3x15
-  - ab_wheel|3x15
-  - isometric_punch|3x45s Hold
-fit_mon_cardio:
-  - walking|20 Min.
-  - mountain_climbers|5 Min.
-fit_mon_mobility:
-  - dancing|15 Min.
-  - horse_stance|Dynamic Warmup
-fit_tue_upper:
-  - woodchopper|Explosive
-  - leg_raises|Explosive
-  - ab_wheel|Explosive
-fit_tue_mobility:
-  - cat_cow|5 Min.
-  - yoga_practice|15 Min.
-fit_wed_lower:
-  - pistol_squat|3x15
-  - horse_stance|3x45s Hold
-  - box_jump|3x15
-fit_wed_core:
-  - mountain_climbers|5 Min.
-  - crunches|Isometric
-fit_wed_mobility:
-  - tai_chi_flow|15 Min.
-  - arm_swings|5 Min.
-fit_thu_mobility:
-  - pistol_squat|Dynamic Warmup
-  - yoga_practice|15 Min.
-  - dancing|15 Min.
-  - worlds_greatest|5 Min.
-fit_fri_upper:
-  - yoga_practice|15 Min.
-  - weighted_pullup|3x10
-fit_fri_cardio:
-  - broad_jump|Endurance
-  - jumping_jacks|5 Min.
-fit_fri_mobility:
-  - dancing|15 Min.
-  - horse_stance|Dynamic Warmup
-fit_sat_core:
-  - ab_wheel|Max Hold
-  - plank|3x45s Hold
-  - barbell_squat|Max Hold
-fit_sat_lower:
-  - running|10 Min.
-  - deadlift|Kicks
-fit_sat_mobility:
-  - pistol_squat|Dynamic Warmup
-  - dynamic_lunge|5 Min.
 cssclasses:
   - wide-page
 ---
 
 # 💪 Nexus Fitness Routine
 
-`BUTTON[setup-fitness]`  `BUTTON[generate-workout]` `BUTTON[generate-workout-log]` `BUTTON[edit-fitness]` `BUTTON[reset-schedule]` `BUTTON[snapshot-week-fitness]`
+`BUTTON[setup-fitness]`  `BUTTON[generate-workout]` `BUTTON[edit-fitness]` `BUTTON[generate-workout-log]` `BUTTON[snapshot-week-fitness]`
 
 ```dataviewjs
 const c = dv.current();
@@ -137,7 +86,7 @@ const rows = regions.map(r => [
 
 dv.table(headers, rows);
 ```
-
+`BUTTON[reset-schedule]` 
 ```dataviewjs
 // 🎒 NEXUS ARSENAL CALLOUT
 const profile = dv.page("zData/4values/Fitness_Profile.md");

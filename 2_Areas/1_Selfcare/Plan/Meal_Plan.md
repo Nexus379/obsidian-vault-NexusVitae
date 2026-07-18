@@ -28,9 +28,11 @@ thu_snk: []
 thu_eve: []
 fri_brk: []
 fri_ben: []
-fri_lun: []
+fri_lun:
+  - "[[6_Resources/Recipes/Backofenkuchen.md|Backofenkuchen]]"
 fri_snk: []
-fri_eve: []
+fri_eve:
+  - "[[6_Resources/Recipes/CakeIsALie.md|CakeIsALie]]"
 sat_brk: []
 sat_ben: []
 sat_lun: []
@@ -136,7 +138,7 @@ const getVal = (stats, key) => Number((stats && stats[key]) || 0);
 const Nutri = {
     synergyRules: [
         { type: "success", name: "Iron Catalyst", message: "Iron and Vitamin C are both present.", check: (stats) => getVal(stats, "iron_total_mg") > 0 && getVal(stats, "vit_c_mg") >= 20 },
-        { type: "success", name: "Fat-Soluble Support", message: "Vitamin A and fat are both present.", check: (stats) => getVal(stats, "vit_a_total") > 0 && getVal(stats, "fat_total_g") >= 3 },
+        { type: "success", name: "Fat-Soluble Support", message: "Vitamin A and fat are both present.", check: (stats) => getVal(stats, "vit_a_total_mcg") > 0 && getVal(stats, "fat_total_g") >= 3 },
         { type: "warning", name: "Mineral Balance", message: "High calcium with low magnesium.", check: (stats) => getVal(stats, "calcium_mg") > 400 && getVal(stats, "magnesium_mg") < 50 }
     ]
 };
@@ -150,7 +152,7 @@ const days = [
 const slots = ["brk", "ben", "lun", "snk", "eve"];
 const slotsLabels = { brk: "🌅 AM", ben: "🍱 Box", lun: "🥗 Mid", snk: "🍎 Snk", eve: "🌙 PM" };
 
-const metrics = ["kcal", "protein_g", "fat_total_g", "carbs_total_g", "fiber_g", "magnesium_mg", "iron_animal_mg", "iron_plant_mg", "calcium_mg", "zinc_mg", "potassium_mg", "vit_a_mcg", "vit_a_retinol_mcg", "vit_a_beta_carotin_mcg", "vit_b12_mcg", "vit_c_mg", "vit_d_iu", "vit_k_mcg", "vit_k1_mcg", "vit_k2_mcg", "iron_total_mg", "vit_a_total"];
+const metrics = ["kcal", "protein_g", "fat_total_g", "carbs_total_g", "fiber_g", "omega3_total_mg", "magnesium_mg", "iron_heme_mg", "iron_plant_mg", "iron_total_mg", "calcium_mg", "zinc_mg", "potassium_mg", "vit_a_retinol_mcg", "vit_a_beta_carotin_mcg", "vit_a_total_mcg", "vit_b12_mcg", "vit_c_mg", "vit_d_mcg", "vit_k_mcg", "vit_k1_mcg", "vit_k2_mcg"];
 
 let weeklyData = {};
 const round3 = (num) => Math.round(num * 1000) / 1000;
@@ -251,7 +253,7 @@ for (let d of days) {
             cleanName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
             let unit = m.includes("_ug") || m.includes("_mcg") ? "µg" : m.split('_').pop();
             if (m === "iron_total_mg") cleanName = "Iron (Total)";
-            if (m === "vit_a_total") cleanName = "Vitamin A (Total Eq)";
+            if (m === "vit_a_total_mcg") cleanName = "Vitamin A (Total Eq)";
             fullHtml += `<div><b>${cleanName}:</b> ${data[m].toFixed(1)} ${unit}</div>`;
         }
     });
