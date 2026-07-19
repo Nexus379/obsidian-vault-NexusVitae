@@ -98,12 +98,14 @@ const getD = (key) => {
         // HTML für Styling (Pastell, Glow)
         let html = `<div style="padding: 6px; border-radius: 8px; background-color: ${bgColor}; box-shadow: 0 0 8px ${bgColor}; text-align: center;">`;
         
-        // Haupt-Label (Courier/Monospace, kleiner, fett)
-        html += `${r.icon} <span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">${r.label}</span>`;
-        
-        // Detail-Text (Normaler Font, fett, etwas kleiner, ohne Klammern)
         if (detail) {
-            html += `<br><span style="font-size: 0.9em; font-weight: bold;">${detail}</span>`;
+            // Category: subtle, smaller, courier
+            html += `<div style="font-family: 'Courier New', Courier, monospace; font-size: 0.7em; font-weight: normal; opacity: 0.75; margin-bottom: 2px;">${r.icon} ${r.label}</div>`;
+            // Detail (suchwort): bold, normal font, prominent
+            html += `<span style="font-size: 0.95em; font-weight: bold;">${detail}</span>`;
+        } else {
+            // Haupt-Label (Courier/Monospace, kleiner, fett) if no detail
+            html += `${r.icon} <span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">${r.label}</span>`;
         }
         
         html += `</div>`;

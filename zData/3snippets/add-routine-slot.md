@@ -98,45 +98,50 @@ try {
     const endSlot = await tp.system.suggester(validEndSlots.map(s => s.label), validEndSlots, false, "🛬 Select END Block:");
     if(!endSlot) return;
 
-    // --- 4. LOAD ENGINE & CHOOSE ROUTINE ---
+    // --- 4. LOAD ENGINE & CHOOSE ROUTINE (LIVE FUZZY SEARCH) ---
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.js";
     let engine;
     try { engine = require(enginePath)(); } catch(e) { 
         new Notice("🔥 Engine Error!"); return; 
     }
     
-    // 🔍 Fuzzy-Suche: Begriff (auch Deutsch/Alias) → searchRoutines filtert über key + label + aliases
-    const searchTerm = await tp.system.prompt("🔍 Routine suchen (z.B. 'zähneputzen' — Enter = alle):", "");
-    let discList;
-    if (searchTerm && searchTerm.trim() && engine.searchRoutines) {
-        discList = engine.searchRoutines(searchTerm.trim());
-        if (!discList || discList.length === 0) {
-            new Notice(`Keine Treffer für "${searchTerm}" — zeige alle.`);
-            discList = engine.getRoutineLabels();
+    const options = [];
+    
+    // Add Special Options First
+    options.push({key: "free", label: "❌ Empty Block (Clear slot)", seed: ""});
+    options.push({key: "break", label: "☕ Mark as Buffer / Rest", seed: ""});
+    options.push({key: "custom", label: "✍️ Custom Block...", seed: ""});
+
+    // Add all routines and their aliases as separate options for LIVE search
+    Object.keys(engine.all).forEach(k => {
+        const r = engine.all[k];
+        const baseLabel = `[${r.group || 'Routine'}] ${r.icon} ${r.label}`;
+        
+        // Add the base routine
+        options.push({ key: k, label: baseLabel, seed: "" });
+        
+        // Add an option for EACH alias so the live-search catches it
+        if (r.aliases && r.aliases.length > 0) {
+            r.aliases.forEach(alias => {
+                options.push({
+                    key: k,
+                    label: `${baseLabel} 🔍 "${alias}"`,
+                    seed: alias
+                });
+            });
         }
-    } else {
-        discList = engine.getRoutineLabels ? engine.getRoutineLabels() : Object.keys(engine.all).map(k => ({key: k, ...engine.all[k]}));
-    }
+    });
 
-    const options = discList.map(r => ({
-        label: `[${r.group || 'Routine'}] ${r.icon} ${r.label}`,
-        key: r.key
-    }));
-
-    options.unshift({key: "break", label: "☕ Mark as Buffer / Rest"});
-    options.unshift({key: "free", label: "❌ Empty Block (Clear slot)"});
-    options.push({key: "custom", label: "✍️ Custom Block..."});
-
-    const subj = await tp.system.suggester(options.map(o => o.label), options, false, "🎯 Select Routine Category:");
+    const subj = await tp.system.suggester(options.map(o => o.label), options, false, "🎯 Select Routine (Live Search):");
     if(!subj) return;
 
     let finalValue = subj.key;
 
     // --- 5. SMART DETAIL PROMPT ---
-    // Das getippte Suchwort wird als Default vorgeschlagen → landet als bold Detail
-    const seed = (searchTerm && searchTerm.trim()) ? searchTerm.trim() : "";
+    // Der ausgewählte Alias wird als Default vorgeschlagen → landet als bold Detail
+    const seed = subj.seed || "";
     if (finalValue !== "free" && finalValue !== "break" && finalValue !== "custom") {
-        const detail = await tp.system.prompt("Optional Detail (e.g., 'Laundry', 'Taxes'):", seed);
+        const detail = await tp.system.prompt("Optional Detail:", seed);
         if (detail) finalValue = `${finalValue}|${detail}`;
     } else if (finalValue === "custom") {
         const customTxt = await tp.system.prompt("Enter custom block text:", seed);

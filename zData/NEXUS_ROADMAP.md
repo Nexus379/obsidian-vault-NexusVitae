@@ -18,6 +18,16 @@ type: roadmap
 - Item-Datenschicht KOMPLETT designt (ITEM_SCHEMA.md): Schema, Vendor, Öko, Materialisieren/Sync.
 - Meal-Buttons gegen Absicht verifiziert (add-remove-meal / add-remove-alchemy / sync-fridge = wie gedacht).
 
+## 🧭 Prioritäts-Reihenfolge (vom User): dailyplm → dailyppm → dailypkm (srs lebt in pkm). Erst die 3 Tagesblätter fertig.
+
+**Plan-Verbindungen (Bauplan):**
+- Jeder Plan/Aktivität hat in dailyplm einen LINK + einen CHECK (Toggle/Minuten "gemacht?") → füttert die BALKEN (L-E-B-E-N, Chakra).
+- inpra ≈ funktioniert wie fitness (Regionen/Tabelle/Engine) → beim Bauen an fitness anlehnen.
+- timetable funktioniert + ist mit routine verlinkt (sync-timetable). Selektiv.
+- wardrobe → Shopping-Hub → Grocery-List (wenn Kleidung fehlt). Snapshot interessant für "Plan für andere Person".
+- shopping + srs = GENERIERT (nicht Master→Snapshot): shopping aus Meal-Plan, srs aus Wiederhol-Algo. srs kommt mit dailypkm.
+- Snapshot-Rollout DONE: routine/fitness/meal. Rest (timetable/wardrobe) nur bei Bedarf; music/inpra-Doppelung klären.
+
 ## 🔨 Aktueller Bereich: dailyplm von oben nach unten
 ### Meal / Nutrition
 - ✅ Buttons-Logik stimmt mit Absicht überein.
@@ -57,11 +67,13 @@ type: roadmap
 - [ ] Button noch als `BUTTON[snapshot-week-routine]` registrieren + auf Master-Routine platzieren (wie setup-routine etc.). In Obsidian testen.
 - Snapshot-Pattern ausrollen:
   - [x] **Fitness** gebaut: `snapshot-week-fitness.md` + `_snapshot_shape_fitness.md`. Kopiert `fit_*`, `training_week` wird AUTO-erkannt (letzte _fitness-Woche +1, nicht kopiert). Shape getestet.
-  - [ ] **Inpra:** noch NICHT fertig (jüngstes Modul, kein Master, keine Engine). Snapshot verfrüht.
-        → Eigener Bau-Faden: Modul erst fertigstellen. Datenmodell einer Session:
-        instrument (instr_active) · Quelle (Übung X aus Übungsbuch / Stück) · Part (1/2/…) ·
-        Minuten · Wie-lief-es (Rating, vgl. inpra_*_lvl) · Notiz "nächstes Mal …".
-        Dazu kleine `inpraEngine` (analog routineEngine/fitnessEngine) — FEHLT. Danach erst Snapshot.
+  - [x] **Inpra-Modul gebaut** (nach Fitness-Muster, aber schlanker — kein Auto-Generator, man folgt einem Buch):
+        - inpraEngine.js: 4 Qualitäts-Dimensionen (Haltung/Rhythmus/Melodie/Gefühl) + Mastery-Skala 1-5 + getPractice + readyToAdvance + avgQuality. Node-getestet.
+        - generateInpraLog.js + generate-inpra-log.md: Tages-Übungs-Log mit Bewertungs-Tabelle → 0_Calendar/4_Projectlogs/Routine/YYYY/MM/Inpra_DATE.md. Button registriert (metabind) + auf weekplan_inpra gesetzt.
+        - Existierende weekplan_inpra (instr_active/instr_book, inpra_<day>_ex_1..3 + _lvl_1..3, Mastery-Skala) bleibt der Plan.
+        - OFFEN: dailyplm-Inpra-Sync um Log-Link erweitern; ggf. Snapshot (Master Instrument_Mastery ist noch leer).
+  - [x] Generierte Logs → einheitlicher Pfad `0_Calendar/4_Projectlogs/Routine/YYYY/MM/`: Workout_DATE, Grocerie_DATE, Inpra_DATE. (Workout+Grocery+Inpra umgestellt, Overload-Read mit.)
+  - [x] Fitness act_-Lücke: dailyplm "trainiert?" liest jetzt das Workout-LOG (ausgefüllte Set-Zelle) statt leerer act_-Felder. Node-getestet (leer→false, gefüllt→true).
   - [x] **Meal** gebaut: `snapshot-week-meal.md` + `_snapshot_shape_meal.md`. Copy-Regel alle `${day}_*` (Slots+add/rem); Nährwerte rechnet Diagnostics-Block neu. Shape getestet. (µg→mcg im Molecular-Profile-Label mitgefixt.)
   - [x] Alle 3 Snapshot-Buttons in metabind data.json registriert (buttonTemplates, +.bak-Sicherung) + `BUTTON[snapshot-week-*]` auf die Master (Routine/Fitness/Meal) gesetzt. In Obsidian testen (Reload nötig).
   - [x] Live-Test-Fixes (Routine): (1) Snapshot-Shape nutzte einfache getD → reiche getD vom Master übernommen (Chakra-Farben/Glow/Courier-Labels/AM-PM-Links). (2) Default springt jetzt auf erste FREIE Woche (überspringt geplante) — alle 3 Buttons. (3) Uhrzeiten+Tage in Courier (Master + Snapshot identisch).
@@ -70,9 +82,17 @@ type: roadmap
         zähneputzen→Hygiene, ausmisten→Deep Clean, joggen→Cardio, gassi→Pet Care etc. Live-Test in Obsidian offen.
   - [x] Fuzzy zweisprachig: +englische Aliase (34 Routinen). teeth+zähneputzen→Hygiene, coding+programmieren→Deep Work.
   - [x] add-routine-slot: getipptes Suchwort wird als Default im Detail-/Custom-Prompt vorgeschlagen (→ bold Detail).
-  - [ ] FEATURE Chakra-Zeit: aus Routine-Timeblock Minuten pro Chakra (Block×Dauer, group=Chakra) → dailyplm/revD → revW-Rollup. Design offen (geplant vs geloggt).
+  - FEATURE Chakra-Zeit (Balance Plan vs Ist):
+    - [x] routineEngine.getChakraMinutes(page, day) — geplante Min/Chakra aus Timeblock. Node-getestet.
+    - [x] Ist-Logik: auto (mobility_am/pm+activity→Solar Plexus, inpra_min→Sacral) + manuell (ct_root..ct_crown überschreibt). Node-getestet.
+    - [x] dailyplm: 7 ct_-Felder im Frontmatter + Anzeige-Block (2 Leisten Plan/Ist pro Chakra + Σ) + INPUT-Zeile. LIVE-Ort.
+    - [x] revW read-only Wochen-Rollup gebaut (PLM-Sektion): Plan = 7× getChakraMinutes, Ist = Σ über dailyplm-Notizen (ct_/auto). Reviews nur lesen, wie vom User korrigiert.
+    - [ ] Live-Test in Obsidian (dailyplm-Block + revW-Rollup). revD optional (revW deckt Wochen-Sicht).
 - [ ] HIGH-END später (atlas/dashboard): Gesamtansicht Monat×Tag, Slots editierbar/dynamisch.
-- ⬜ Energy-Slider · Mantra · restliche ~15 Buttons · VitaminTracker.
+- [x] **dailyplm Konsistenz-Sweep**: 0 stale Keys, alle INPUT-Felder kanonisch+definiert, Lesezugriffe kanonisch,
+      Balken-Fütterung korrekt. Gefixt: shopping_extras ins Frontmatter; Shopping-Hub-Links (dailyplm + generateShoppingList)
+      auf `2_Areas/4_Organize/Plan/Shopping_Hub` (waren tot: Household/ bzw. 4_Organize/).
+- ⬜ Energy-Slider · Mantra · restliche ~15 Buttons · VitaminTracker (Feinschliff, sekundär).
 
 ## ⬜ Kalender: weitere Module
 - dailyppm (Log) · dailypkm (Studylog + disciplineEngine + Spaced Rep)
@@ -113,3 +133,8 @@ type: roadmap
 
 ## 🚀 Danach
 - Vault-Logik → Plugin spiegeln (TS). Dann: manifest, main.js frisch bauen, README, Community-Store-Anforderungen.
+
+### ⚙️ Nötige Plugin-Settings (für README/Setup — sonst rendert's bei anderen kaputt)
+- [x] **banners-reloaded**: „Show banners in embeds" → **AUS**. Sonst rendert das banner_icon+Dateiname in jede
+      dataviewjs-Tabellen-Zelle (Zellen zählen als Embeds) → „🍱 Meal_Plan" überall. Muss in die README.
+- [ ] weitere Plugin-Settings sammeln, während wir testen (supercharged-links, meta-bind, dataview, callouts…).

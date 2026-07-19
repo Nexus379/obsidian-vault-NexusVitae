@@ -80,10 +80,14 @@ const getD = (key) => {
         const r = engine.all[baseKey];
         const bgColor = r.color || "transparent";
         let html = `<div style="padding: 6px; border-radius: 8px; background-color: ${bgColor}; box-shadow: 0 0 8px ${bgColor}; text-align: center;">`;
-        html += `${r.icon} <span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">${r.label}</span>`;
+        
         if (detail) {
-            html += `<br><span style="font-size: 0.9em; font-weight: bold;">${detail}</span>`;
+            html += `<div style="font-family: 'Courier New', Courier, monospace; font-size: 0.7em; font-weight: normal; opacity: 0.75; margin-bottom: 2px;">${r.icon} ${r.label}</div>`;
+            html += `<span style="font-size: 0.95em; font-weight: bold;">${detail}</span>`;
+        } else {
+            html += `${r.icon} <span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">${r.label}</span>`;
         }
+        
         html += `</div>`;
         return html;
     }
