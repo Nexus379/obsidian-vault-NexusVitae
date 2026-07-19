@@ -9,26 +9,7 @@
   "accessibility": {
     "highTextContrast": false
   },
-  "knownTags": {
-    "2area": 8,
-    "4task": 5,
-    "anki": 6,
-    "art_supply": 1,
-    "disc": 9,
-    "guide": 2,
-    "pc_building": 3,
-    "persona": 10,
-    "sci": 7,
-    "2area/4_organize": 1,
-    "4task/todo": 1,
-    "anki/sync": 1,
-    "disc/generalstudies": 1,
-    "persona/organizer": 1,
-    "sci/arts": 3,
-    "sci/education": 4,
-    "sci/humanities": 1,
-    "sci/linguistics": 2
-  },
+  "knownTags": {},
   "tagColors": {},
   "_version": 4
 }

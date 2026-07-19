@@ -52,5 +52,5 @@ Deep gratitude goes to the people and concepts that shaped this system:
 * **Cognitive Science:** Vera F. Birkenbihl (Brain-Friendly Learning) and Hermann Ebbinghaus (Forgetting Curve).
 * **Productivity & PKM:** Niklas Luhmann (Zettelkasten), David Allen (GTD), Tiago Forte (PARA), Nick Milo (LYT), Pamela Wang, Thomas Frank, FromSergio, Bryan Jenks, and Lars Bobach.
 
-
+*(using pubilc images for examples)*
 *(Built with AI assistance)*
