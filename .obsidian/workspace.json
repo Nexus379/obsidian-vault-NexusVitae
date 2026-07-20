@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2e8c7a86ba236900",
+        "id": "e118e46b47c880d9",
         "type": "tabs",
         "children": [
           {
-            "id": "7019ec2cdfbdedbf",
+            "id": "feca3469e911da7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "8b8196953c253bc8",
+            "id": "2043eefd568f0fbf",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -47,7 +47,7 @@
       {
         "id": "2ee4fecc77ffb983",
         "type": "tabs",
-        "dimension": 44.04494382022472,
+        "dimension": 47.901740020470825,
         "children": [
           {
             "id": "c85e8211c505f051",
@@ -64,7 +64,7 @@
       {
         "id": "095f8bbec6267d04",
         "type": "tabs",
-        "dimension": 55.955056179775276,
+        "dimension": 52.098259979529175,
         "children": [
           {
             "id": "b03e6c11cbf79544",
@@ -100,7 +100,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311.00499725341797
+    "width": 210.0054054260254
   },
   "right": {
     "id": "5234691d1cea0fcc",
@@ -109,7 +109,7 @@
       {
         "id": "7dda4bfe97ef493b",
         "type": "tabs",
-        "dimension": 50,
+        "dimension": 66.73189823874756,
         "children": [
           {
             "id": "feab8170b1408f9c",
@@ -117,17 +117,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "zData/1tmpl/0calendar/dailyplm.md",
+                "file": "zData/yaml tags organization.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of dailyplm"
+              "title": "Outline of yaml tags organization"
             }
           },
           {
-            "id": "9aec8b4fe7e2d787",
+            "id": "f000a8e7891312b5",
             "type": "leaf",
             "state": {
               "type": "chronology-calendar-view",
@@ -136,28 +136,6 @@
               "title": "Chronology"
             }
           },
-          {
-            "id": "5d8d3e3e2d5a69ad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "zData/5design_modul/CalendarMonth.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CalendarMonth"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "93fb1a17dccd2f4c",
-        "type": "tabs",
-        "dimension": 50,
-        "children": [
           {
             "id": "7ab2f0ab66e3a51e",
             "type": "leaf",
@@ -169,7 +147,15 @@
               "icon": "lucide-info",
               "title": "File properties for README"
             }
-          },
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "93fb1a17dccd2f4c",
+        "type": "tabs",
+        "dimension": 33.268101761252446,
+        "children": [
           {
             "id": "59c1b1a0b136d6e0",
             "type": "leaf",
@@ -231,12 +217,26 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "5d8d3e3e2d5a69ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zData/5design_modul/CalendarMonth.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CalendarMonth"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 271
+    "width": 252
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -256,43 +256,43 @@
       "flashcards-obsidian:Generate flashcards": false
     }
   },
-  "active": "7019ec2cdfbdedbf",
+  "active": "feca3469e911da7b",
   "lastOpenFiles": [
-    "2_Areas/4_Organize/Shopping_Hub.md",
+    "0_Atlas/Nexus Vitae Guide.md",
     "README.md",
-    "zData/3snippets/add-timetable-slot.md",
-    "zData/1tmpl/0calendar/dailyplm.md",
-    "zData/3snippets/add-routine-slot.md",
-    "zData/2scripts/archive-routine.md",
-    "0_Atlas/Bases/6-Resources/Series.base",
-    "0_Atlas/Bases/Resourcebase.base",
-    "2_Areas/6_Activity/Fitness_Routine.md",
-    "2_Areas/4_Organize/Routine-Timeblocking.md",
-    "zData/3snippets/syncTimetable.md",
-    "0_Atlas/0_Dashboard/0-Dashboard.md",
-    "zData/6items/item_tech_office.json",
-    "zData/6items/item_personal.json",
-    "zData/6items/item_leisure.json",
-    "zData/6items/item_household.json",
-    "zData/6items/ingre_pantry.json",
-    "zData/6items/ingre_fresh.json",
-    "zData/6items/ingre_consumables.json",
-    "zData/1tmpl/3projectsprompt.md",
+    "zData/yaml tags organization.md",
+    "0_Inbox/Untitled 1.md",
     "zData/1tmpl/5notesprompt.md",
-    "zData/1tmpl/3projectesprompt.md",
-    "zData/1tmpl/4tasks/5tobuy.md",
-    "zData/1tmpl/3projects/5probuy.md",
-    "zData/1tmpl/4tasksprompt.md",
-    "zData/1tmpl/routertemp.md",
-    "2_Areas/1_Selfcare/Nutrition/Meal_Plan.md",
-    "0_Atlas/0_Dashboard/1-Stars.md",
-    "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM.md",
-    "0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PLM.md",
-    "0_Atlas/0_Dashboard/0-Calendar.md",
-    "0_Atlas/0_Dashboard/6-Resources.md",
-    "zData/1tmpl/4tasks/1todo.md",
-    "zData/1tmpl/2areas/3mind.md",
-    "zData/1tmpl/2areas/2relation.md",
-    "zData/tasksCalendar/view.js"
+    "zData/1tmpl/5notes/3atomic_studycards.md",
+    "zData/1tmpl/5notes/3atomic_ankicloze.md",
+    "zData/1tmpl/5notes/3atomic_anki.md",
+    "2_Areas/4_Organize/Plan/Routine_Timeblocking.md",
+    "zData/HANDOFF.md",
+    "5_Notes/1_Fleeting/daef.md",
+    "0_Inbox/Untitled.md",
+    "zData/1tmpl/0calendar/weekplan_wardrobe.md",
+    "0_Calendar/7_Plan/2026/07/2026-W29_routine.md",
+    "zData/Design/AnupPuccin.md",
+    "0_Calendar/7_Plan/2026/07/2026W29_fitness.md.md",
+    "2_Areas/4_Organize/Plan/Shopping_Hub.md",
+    "zData/3snippets/fleet-to-perma.md",
+    "zData/2scripts/disciplineEngine.js.bak",
+    "zData/1tmpl/2areas/2relation_person.md",
+    "zData/1tmpl/0calendar/weekplan_study.md",
+    "zData/1tmpl/0calendar/weekplan_routine.md.bak",
+    "zData/1tmpl/0calendar/weekplan_meal.md.bak",
+    "zData/1tmpl/0calendar/weekplan_fitness.md.bak",
+    "zData/Design/Calendar Ansichten.md",
+    "zData/Design/Dashboard ansichten.md",
+    "zData/Design/Diagramme.md",
+    "zData/Design/LOG PPLM ideas design.md",
+    "zData/Design/pkmAnsichten.md",
+    "zData/5design_modul/ZkLogsModul.md",
+    "3_Projects/1_Active/Studyplan Summer 2026/Logs/2026/07",
+    "3_Projects/1_Active/Studyplan Summer 2026/Logs/2026",
+    "3_Projects/1_Active/Studyplan Summer 2026/Logs",
+    "0_Calendar/4_Projectlogs/2026/Studyplan Summer 2026/07",
+    "0_Calendar/4_Projectlogs/2026/Studyplan Summer 2026",
+    "0_Calendar/4_Projectlogs/Studu Summer"
   ]
 }

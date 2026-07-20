@@ -17,6 +17,7 @@ This is my "Nexus Vitae" to have an overview of my life and its different spaces
 - a Resourcesystem
 	- to also track games, movies, etc
 
+
 ## 🚀 How to load it
 1. **Download** the `.zip` from the latest release.
 2. **Extract** it and open the folder in Obsidian (`Open folder as vault`).
