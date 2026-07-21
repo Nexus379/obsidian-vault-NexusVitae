@@ -26,7 +26,7 @@ let merchant = await tp.system.prompt("🛒 Materials from?", "Local Store/Onlin
 let cost     = await tp.system.prompt("💰 Material Costs?", "0.00");
 
 // 🔱 4. CLEANING
-let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(8procraft-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(8procraft-|p-|3project-)/i, "").trim();
 
 // 🔱 5. SMART-DEADLINE (14 Days)
 let deadline = await tp.system.prompt("📅 Target Completion?", tp.date.now("YYYY-MM-DD", 14));
@@ -77,6 +77,7 @@ review:
 > > > **Materials:** `<%- merchant %>` | **Costs:** `<%- cost %>`
 > > 
 > > >[!blank|wide-0]
+> > > **Inbox:** `INPUT[toggle:inbox]`
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 

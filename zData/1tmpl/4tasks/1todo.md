@@ -21,7 +21,7 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. CLEANING
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(1todo-|t-|4task-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(1todo-|t-|4task-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -63,6 +63,7 @@ review:
 > > > **Persona:** `<%- persona %>`
 > > 
 > > >[!blank|wide-0]
+> > > **Inbox:** `INPUT[toggle:inbox]`
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 

@@ -1,5 +1,5 @@
 >[!multi-column]
->>[!overview]- [[0_Atlas/0_Dashboard/0-Dashboard|💫 Dashy]]-[[0_Atlas/MOCs/AtlasMOC|🗺️ Atlas]]
+>>[!overview]- [[0_Atlas/0_Dashboard/0-Dashboard|💫 Dashy]]-[[0_Atlas/MOCs/AtlasMOC|🗺️ Atlas]]-[[0_Atlas/0_Overview/Nexus_Master_Overview|⚡ Overviews]]
 >> - [[0_Atlas/0_Dashboard/0-Inbox|💌 Inbox]] 
 >>
 >> - [[0_Atlas/Bases/Inboxbase.base|Inboxbase]]

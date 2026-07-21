@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -57,16 +57,18 @@ material: ""
 chlorine_free: "Yes"
 absorption: ""
 pl_score: 0
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
+pref_vendor: "dm"
+unit_price: 2.49
+price_cheap: 1.19
+vendor_cheap: "Rossmann"
+price_value: 2.49
+vendor_value: "Müller"
+price_pure_cheap: 2.99
+vendor_pure_cheap: "dm Bio"
+price_pure: 4.49
+vendor_pure: "Alnatura"
+price_market: 5.99
+vendor_market: "Apotheke"
 ---
 
 # 🧴  <%- luhmannId %>   <%- displayTitle %>

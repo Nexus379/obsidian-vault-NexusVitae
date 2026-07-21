@@ -26,7 +26,7 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 5. CLEANING
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(1selfcare-|a-|2area-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(1selfcare-|a-|2area-)/i, "").trim();
 
 tR += "---\n";  
 %>

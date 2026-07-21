@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -56,16 +56,18 @@ ph_level: 7.0
 solvent_type: ""
 surfactant_conc: ""
 pl_score: 0
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
+pref_vendor: "dm"
+unit_price: 1.99
+price_cheap: 1.29
+vendor_cheap: "Lidl"
+price_value: 1.99
+vendor_value: "Rewe"
+price_pure_cheap: 2.29
+vendor_pure_cheap: "dm Bio"
+price_pure: 3.49
+vendor_pure: "Denns"
+price_market: 2.99
+vendor_market: "Rossmann"
 ---
 
 # 🧼  <%- luhmannId %>   <%- displayTitle %>
@@ -82,16 +84,6 @@ vendor_market: ""
 | 🫧 **Surfactants** | `INPUT[text:surfactant_conc]` |     |
 | ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
 ---
 ## 📝 Source & Notes
 - 
@@ -102,30 +94,8 @@ vendor_market: ""
 > Click here to add an owner to this item:
 > `BUTTON[add-wardrobe-owner]`
 
-`
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
 ---
 
 `

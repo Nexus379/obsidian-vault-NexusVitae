@@ -50,7 +50,7 @@ const today = tp.date.now("YYYY-MM-DD");
 const p1 = tp.date.now("YYYY-MM-DD", 1); 
 
 // 🔱 3. CLEANING FÜR DEN DISPLAY-TITLE
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(ankicard-|anki-|3tostudy-|t-|4task-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(ankicard-|anki-|3tostudy-|t-|4task-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -84,8 +84,6 @@ LID: "<%- luhmannId %>"
 parent: "<%- pLink %>"
 sibling: []
 child: []
-deck: "Nexus::General"
-tags: ["#anki/sync"]
 
 ---
 
@@ -110,39 +108,8 @@ tags: ["#anki/sync"]
 > >  `$= const icons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"]; const lvl = dv.current().space_lvl || 0; dv.paragraph(icons[Math.min(lvl, icons.length - 1)] + " **Level " + lvl + "**")`
 > > 🔥 **Next Dynamic Session:** `VIEW[{space_date}]`  
 
-> [!info]- 📖 Anki Syntax Cheat Sheet
-> **1. Basic Card (Front & Back)**
-> START
-> {Basic}
-> Front: Your question?
-> Back: Your answer!
-> ID: 0 (Plugin fills this out)
-> END
-> 
-> **2. Cloze Card (Fill-in-the-blank)**
-> START
-> {Cloze}
-> Text: Rome is the {{c1::capital}} of {{c2::Italy}}.
-> Extra: Additional info here.
-> ID: 0
-> END
-> 
-> **3. Image Occlusion (Hide image parts)**
-> START
-> {Image Occlusion}
-> Header: Title of the image
-> Image: paste your image embed here
-> ID: 0
-> END
-> 
-> ---
-> - **`START` / `END`**: Card boundaries. Everything in between = one flashcard.
-> - **`{Basic}`**: Card type. "Basic" = Question on front, answer on back.
-> - **`Front:` / `Back:`**: Text for the front/back of the card.
-> - **`ID: ...`**: Card fingerprint. Anki recognizes updates instead of creating duplicates.
-
 [cards-deck:: ]
-FILE TAGS: #anki
+[tags:: #cards]
 
 
 ## 🚀 Flashcards
@@ -156,6 +123,8 @@ ID: 0
 END
 
 
+
+---
 
 `BUTTON[spaced]`
 

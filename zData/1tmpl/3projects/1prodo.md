@@ -25,7 +25,7 @@ if (tp.file.title !== title) {
 let deadline = await tp.system.prompt("📅 Project Deadline?", tp.date.now("YYYY-MM-DD", 14));
 
 // 🔱 4. CLEANING
-let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(1prodo-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(1prodo-|p-|3project-)/i, "").trim();
 
 
 tR += "---"  
@@ -69,6 +69,7 @@ review:
 > > > **Deadline:** `<%- deadline %>`   (Target: 14 days)
 > > 
 > > >[!blank|wide-0]
+> > > **Inbox:** `INPUT[toggle:inbox]`
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 

@@ -326,7 +326,7 @@ TABLE WITHOUT ID
   file.link as "Mission / Topic",
   space_date as "Due Stardate"
 WHERE space_date != null
-  AND space_date = date(today) 
+  AND date(space_date) = date(today) 
   AND status != "archive"
 SORT space_date ASC
 LIMIT 5
@@ -340,7 +340,7 @@ TABLE WITHOUT ID
   file.link as "Mission / Topic",
   space_date as "Stardate Due"
 WHERE space_date != null
-  AND space_date < date(today) 
+  AND date(space_date) < date(today) 
   AND status != "archive"
 SORT space_date ASC
 LIMIT 8

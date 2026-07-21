@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
@@ -32,6 +32,8 @@ arch:
   - "#6resource"
 archtype:
   - "#6resource/guide"
+science:
+discipline:
 status:
   - "1active"
 priority:

@@ -25,7 +25,7 @@ let amount = await tp.system.prompt("💰 Expected Amount?", "0.00");
 let account = await tp.system.suggester(["💳 Visa", "🔵 PayPal", "🏦 Bank", "💵 Cash"], ["Visa", "PayPal", "Bank", "Cash"]) || "TBD";
 
 // 🔱 4. CLEANING
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(7protake-|p-|3project-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(7protake-|p-|3project-)/i, "").trim();
 let deadline = tp.date.now("YYYY-MM-DD", 7);
 
 tR += "---"  

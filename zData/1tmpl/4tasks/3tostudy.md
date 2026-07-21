@@ -55,7 +55,7 @@ const today = tp.date.now("YYYY-MM-DD");
 const p1 = tp.date.now("YYYY-MM-DD", 1); 
 
 // 🔱 4. CLEANING FÜR DEN DISPLAY-TITLE
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(3tostudy-|t-|4task-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(3tostudy-|t-|4task-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -95,6 +95,7 @@ review:
 > [!calendar] ⏳ Deadline
 > **Due:** `INPUT[date:due]`
 > `$= const d = dv.current().due; if(!d){dv.span("—")}else{const days=moment(String(d)).startOf('day').diff(moment().startOf('day'),'days');const c=days<0?"var(--text-error)":(days<=3?"#ff7b00":"var(--text-success)");dv.paragraph("<span style='color:"+c+";font-weight:bold'>"+(days<0?"OVERDUE by "+(-days)+"d":days+" days left")+"</span>");}`
+> **Inbox:** `INPUT[toggle:inbox]`
 > **Status:** `INPUT[inlineSelect(option(1active, ⚡ Active), option(2passive, 💤 Passive), option(review, 🔍 Review), option(done, ✅ Done), option(canceled, ❌ Canceled)):status]`
 
 ## 📝 Preparation / Brain Dump

@@ -93,7 +93,7 @@ if (!title) title = "Project-" + tp.date.now("HH-mm");
 if (tp.file.title !== title) await tp.file.rename(title);
 
 // 🎯 NEU: Clean Display Title (wichtig für einen sauberen Ordnernamen)
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(1prodo-|p-|3project-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(1prodo-|p-|3project-)/i, "").trim();
 
 // 🎯 NEU: GTD Ordner-Mapping
 const statusFolderMap = {

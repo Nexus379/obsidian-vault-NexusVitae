@@ -27,7 +27,7 @@ if (tp.file.title !== title) {
 let balanceFocus = await tp.system.prompt("✨ Your Mantra for mental Clarity?", "I am focused and disciplined.");
 
 // 🔱 3. CLEANING (Entfernt Trigger wie 8tocraft- oder t-)
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(3mind-|a-|2area-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(3mind-|a-|2area-)/i, "").trim();
 
 tR += "---"  
 %>

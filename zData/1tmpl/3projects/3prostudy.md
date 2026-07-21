@@ -33,7 +33,7 @@ let deadline = await tp.system.prompt("📅 Exam/Deadline Date?", tp.date.now("Y
 let p1 = tp.date.now("YYYY-MM-DD");
 
 // 🔱 6. CLEANING
-let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^[a-z0-9.]+ /i, "").replace(/^(3prostudy-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(3prostudy-|p-|3project-)/i, "").trim();
 tR += "---"  
 %>
 banner: "![[xAttachment/Images/Banner/Black-hole-banner.jpg]]"
@@ -82,6 +82,7 @@ review:
 > > > **Exam/Deadline:** `<%- deadline %>`   (Target: 14 days)
 > > 
 > > >[!blank|wide-0]
+> > > **Inbox:** `INPUT[toggle:inbox]`
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 

@@ -52,7 +52,7 @@ const today = tp.date.now("YYYY-MM-DD");
 const p1 = tp.date.now("YYYY-MM-DD", 1); 
 
 // 🔱 4. CLEANING FÜR DEN DISPLAY-TITLE
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(3tostudy-|t-|4task-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(3tostudy-|t-|4task-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -110,16 +110,8 @@ tags: ["#studycards"]
 > >  `VIEW[{space_rank}]` 
 > >  `$= const icons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"]; const lvl = dv.current().space_lvl || 0; dv.paragraph(icons[Math.min(lvl, icons.length - 1)] + " **Level " + lvl + "**")`
 > > 🔥 **Next Dynamic Session:** `VIEW[{space_date}]`  
+[[cards_cheat sheet]]
 
-> [!info]- 📖 SRS-92 Syntax Cheat Sheet
-> **Basic (One-way):** `Question :: Answer`
-> **Reversed (Bidirectional):** `Question ::: Answer` (Generates 2 cards automatically)
-> **Cloze (Fill-in-the-blank):** `The capital of Iceland is ==Reykjavik==.`
-> **Multi-Line:** 
-> `Question`
-> `?`
-> `Answer Line 1`
-> `Answer Line 2`
 
 ## 🚀 Flashcards
 
@@ -129,6 +121,8 @@ Enter question ::: Enter answer
 
 
 
+
+---
  
 `BUTTON[spaced]`
 

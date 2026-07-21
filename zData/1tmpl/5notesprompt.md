@@ -49,9 +49,9 @@ if (pID) {
 }
 
 // 🔱 4. TYP-AUSWAHL
-const nOptions = ["1 🍂 Fleeting", "2 📘 Literature", "4 📜 Permanent", "3 🗃️ Atomic...", "5 🌳 Evergreen"];
-const nVals = ["1fleet", "2lit", "4perma", "atomic_sub", "5ever"];
-const nFolders = ["1_Fleeting", "2_Literature", "4_Permanent", "3_Atomic", "5_Evergreen"];
+const nOptions = ["1 🍂 Fleeting", "2 📘 Literature", "3 🗃️ Atomic...", "4 📜 Permanent", "5 🌳 Evergreen"];
+const nVals = ["1fleet", "2lit", "atomic_sub", "4perma", "5ever"];
+const nFolders = ["1_Fleeting", "2_Literature", "3_Atomic", "4_Permanent", "5_Evergreen"];
 const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
 const noteTriggerMap = {
     fleet: "1fleet",
@@ -92,7 +92,7 @@ if (!nChoice) {
 }
 
 if (nChoice === "atomic_sub") {
-    const aOptions = ["🗃️ Standard Atomic (custom SRS)", "🎴 Studycards (Plugin FSRS)", "🎴 Anki Basic", "🎴 Anki Cloze"];
+    const aOptions = ["1 🗃️ Standard Atomic (custom SRS)", "2 🎴 Studycards (Plugin FSRS)", "3 🎴 Anki Basic", "4 🎴 Anki Cloze"];
     const aVals = ["3atomic", "3atomic_studycards", "3atomic_anki", "3atomic_ankicloze"];
     const aFoldersFull = ["5_Notes/3_Atomic", "5_Notes/3_Atomic/studycards", "5_Notes/3_Atomic/anki", "5_Notes/3_Atomic/anki"];
     let aIdx = await tp.system.suggester(aOptions, Array.from(aOptions.keys()));

@@ -28,7 +28,7 @@ let amount = await tp.system.prompt("💰 Expected Amount?", "0.00");
 let account = await tp.system.suggester(["💳 Visa", "🔵 PayPal", "🏦 Bank", "💵 Cash"], ["Visa", "PayPal", "Bank", "Cash"]) || "TBD";
 
 // 🔱 4. CLEANING (Entfernt Trigger wie 7totake- oder t-)
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(7totake-|t-|4task-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(7totake-|t-|4task-)/i, "").trim();
 
 tR += "---"  
 %>

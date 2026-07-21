@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -56,16 +56,18 @@ brand: ""
 active_ingredient: ""
 prescription_required: "No"
 pl_score: 0
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
+pref_vendor: "Shop-Apotheke"
+unit_price: 3.99
+price_cheap: 1.99
+vendor_cheap: "DocMorris"
+price_value: 3.99
+vendor_value: "dm"
+price_pure_cheap: 2.99
+vendor_pure_cheap: "Rossmann"
+price_pure: 4.99
+vendor_pure: "Apotheke"
+price_market: 5.99
+vendor_market: "Vor-Ort Apotheke"
 ---
 
 # 💊  <%- luhmannId %>   <%- displayTitle %>

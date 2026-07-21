@@ -6,10 +6,15 @@ async function generateShoppingList(app, dv, moment) {
 
     // If started manually (e.g. from the Shopping Hub), ask for the date.
     if (!logDateStr) {
-        let tp = app.plugins.plugins["templater-obsidian"].templater.current_functions_object;
-        let userInput = await tp.system.prompt("📅 Which date is the list for? (YYYY-MM-DD)", moment().format("YYYY-MM-DD"));
-        if (!userInput) return; // cancelled
-        logDateStr = userInput;
+        let tp = app.plugins.plugins["templater-obsidian"]?.templater?.current_functions_object;
+        let userInput = null;
+        if (tp && tp.system && typeof tp.system.prompt === "function") {
+            userInput = await tp.system.prompt("📅 Which date is the list for? (YYYY-MM-DD)", moment().format("YYYY-MM-DD"));
+            if (userInput) logDateStr = userInput;
+        }
+        if (!logDateStr) {
+            logDateStr = moment().format("YYYY-MM-DD");
+        }
     }
     
     const logDate = moment(logDateStr, "YYYY-MM-DD");

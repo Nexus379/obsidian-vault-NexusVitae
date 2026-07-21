@@ -53,7 +53,12 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
                     let silo = fm.tech_type || fm.household_type || fm.personal_type || fm.art_type || "UNKNOWN";
                     silo = String(silo).toUpperCase();
                     const prices = {};
-                    if (fm.pref_vendor && fm.unit_price) prices[fm.pref_vendor] = fm.unit_price;
+                    if (fm.pref_vendor) prices[fm.pref_vendor] = fm.pref_price || fm.unit_price || 0;
+                    if (fm.vendor_cheap) prices[fm.vendor_cheap] = fm.price_cheap || 0;
+                    if (fm.vendor_value) prices[fm.vendor_value] = fm.price_value || 0;
+                    if (fm.vendor_pure_cheap) prices[fm.vendor_pure_cheap] = fm.price_pure_cheap || 0;
+                    if (fm.vendor_pure) prices[fm.vendor_pure] = fm.price_pure || 0;
+                    if (fm.vendor_market) prices[fm.vendor_market] = fm.price_market || 0;
                     DATABASE[key] = {
                         ...fm, id: key, domain: "MAINTENANCE", isFood: false, silo: silo,
                         lang: fm.lang || {}, val: fm.val || {}, meta: fm.meta || {}, prices: prices,
@@ -104,27 +109,44 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             return `[[${key}|${item.icon || "📦"} ${name}]]`;
         },
 
-        // 💰 Errechnet den Preis nach ausgewählter Strategie
+        // 💰 Errechnet den Preis nach ausgewählter Strategie (Budget/Cheap, Value, Pure, Market)
         getStrategicPrice: (key, strategy = "value", amount = 1.0) => {
             const item = DATABASE[key];
             if (!item) return null;
             
-            const stratKeys = ["cheap", "value", "pure_cheap", "pure", "market"];
+            const stratKeys = ["cheap", "value", "budget", "pure_cheap", "pure", "market"];
             let s = stratKeys.includes(strategy) ? strategy : "value";
+            if (s === "budget") s = "cheap";
             
             let price = Number(item[`price_${s}`]) || 0;
             let vendor = item[`vendor_${s}`] || "";
+
+            // Falls JSON-Datenbank ein prices-Objekt besitzt
+            if (price === 0 && item.prices && typeof item.prices === "object" && Object.keys(item.prices).length > 0) {
+                if (s === "cheap") {
+                    let lowest = Infinity, bestV = "";
+                    for (let [v, p] of Object.entries(item.prices)) {
+                        if (Number(p) > 0 && Number(p) < lowest) { lowest = Number(p); bestV = v; }
+                    }
+                    if (lowest !== Infinity) { price = lowest; vendor = bestV; }
+                } else if (s === "pure") {
+                    const bioVendors = ["denns", "alnatura", "bio", "dm"];
+                    for (let v of bioVendors) {
+                        if (item.prices[v]) { price = Number(item.prices[v]); vendor = v; break; }
+                    }
+                }
+            }
             
-            // Fallback auf 'value', falls die gewählte Strategie leer ist
+            // Fallback auf 'value', falls gewählte Strategie leer ist
             if (price === 0 && s !== "value") {
                 price = Number(item[`price_value`]) || 0;
                 vendor = item[`vendor_value`] || "";
             }
             
-            // Fallback auf Legacy, falls noch gar keine neuen Felder befüllt wurden
+            // Fallback auf Standard / Legacy (pref_price oder unit_price)
             if (price === 0) {
-                price = Number(item.unit_price) || 0;
-                vendor = item.pref_vendor || "unknown";
+                price = Number(item.pref_price) || Number(item.unit_price) || (item.prices ? Number(Object.values(item.prices)[0]) : 0) || 0;
+                vendor = item.pref_vendor || (item.prices ? Object.keys(item.prices)[0] : "unknown") || "unknown";
             }
             
             return {

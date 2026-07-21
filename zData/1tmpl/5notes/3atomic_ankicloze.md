@@ -50,7 +50,7 @@ const today = tp.date.now("YYYY-MM-DD");
 const p1 = tp.date.now("YYYY-MM-DD", 1); 
 
 // 🔱 3. CLEANING FÜR DEN DISPLAY-TITLE
-let displayTitle = title.replace(/^[0-9a-z.]+ /i, "").replace(/^(ankicloze-|anki-|3tostudy-|t-|4task-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(ankicloze-|anki-|3tostudy-|t-|4task-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -110,40 +110,8 @@ tags: ["#anki/sync"]
 > >  `$= const icons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"]; const lvl = dv.current().space_lvl || 0; dv.paragraph(icons[Math.min(lvl, icons.length - 1)] + " **Level " + lvl + "**")`
 > > 🔥 **Next Dynamic Session:** `VIEW[{space_date}]`  
 
-> [!info]- 📖 Anki Cloze Syntax Cheat Sheet
-> **1. Cloze Card (Fill-in-the-blank)**
-> START
-> {Cloze}
-> Text: Rome is the {{c1::capital}} of {{c2::Italy}}.
-> Extra: Additional info here.
-> ID: 0
-> END
-> 
-> **2. Basic Card (Front & Back)**
-> START
-> {Basic}
-> Front: Your question?
-> Back: Your answer!
-> ID: 0
-> END
-> 
-> **3. Image Occlusion (Hide image parts)**
-> START
-> {Image Occlusion}
-> Header: Title of the image
-> Image: paste your image embed here
-> ID: 0
-> END
-> 
-> ---
-> - **`{{c1::text}}`**: Cloze deletion. The number (`c1`, `c2`…) groups blanks per card.
-> - **`Text:`**: The full sentence with cloze deletions embedded.
-> - **`Extra:`**: Additional context shown on the back of the card.
-> - **`START` / `END`**: Card boundaries. Everything in between = one flashcard.
-> - **`ID: ...`**: Card fingerprint. Anki recognizes updates instead of creating duplicates.
-
 [cards-deck:: ]
-FILE TAGS: #anki
+[tags:: #cards]
 
 ## 🧠 Cloze / Fill-in-the-blank
 
@@ -156,16 +124,7 @@ END
 
 
 
-## 🚀 Flashcards
-
-START
-{Cloze}
-Text: Write your sentence with {{c1::blanks}} here.
-Extra: 
-ID: 0
-END
-
-
+---
 
 `BUTTON[spaced]`
 

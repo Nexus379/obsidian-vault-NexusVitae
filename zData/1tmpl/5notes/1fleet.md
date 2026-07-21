@@ -75,12 +75,14 @@ review:
 # 🍂 Captura: <%- displayTitle %>
 
 
-> [!abstract] Cogitatio Fugax (Fleeting Thought)
-> Raw capture of an idea or observation. Not yet distilled.
+> [!multi-column]
+> > [!abstract] Cogitatio Fugax (Fleeting Thought)
+> > Raw capture of an idea or observation. Not yet distilled.
 > 
-> **Context:** `$= dv.current().science` 
-> 
-> **Discipline:** `$= dv.current().discipline`
+> > [!blank]
+> > **Context:** `$= dv.current().science` 
+> > **Discipline:** `$= dv.current().discipline`
+> > **Inbox:** `INPUT[toggle:inbox]`
 > > **Phase:** `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
 ## 🧠 Active Recall / Brain Dump 

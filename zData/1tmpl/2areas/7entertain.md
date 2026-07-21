@@ -27,7 +27,7 @@ if (tp.file.title !== title) {
 let balanceFocus = await tp.system.prompt("🕹️ Crown: What makes you forget time today?", "Absolute flow & joy of play.");
 
 // 🔱 3. CLEANING (Entfernt Trigger wie 8tocraft- oder t-)
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(7entertain-|a-|2area-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(7entertain-|a-|2area-)/i, "").trim();
 
 tR += "---"  
 %>

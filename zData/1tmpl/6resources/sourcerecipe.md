@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. INITIALIZATION & NEXUS-SYNC
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
@@ -78,6 +78,8 @@ arch:
   - "#6resource"
 archtype:
   - "#6resource/recipe"
+science:
+discipline:
 status:
   - 1active
 priority: 

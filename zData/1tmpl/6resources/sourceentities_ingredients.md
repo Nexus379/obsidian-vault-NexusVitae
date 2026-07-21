@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -79,16 +79,18 @@ tryptophan_mg: 0
 leucine_mg: 0
 omega3_epa_mg: 0
 omega3_dha_mg: 0
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
+pref_vendor: "Rewe"
+unit_price: 1.79
+price_cheap: 0.99
+vendor_cheap: "Lidl"
+price_value: 1.79
+vendor_value: "Edeka"
+price_pure_cheap: 1.49
+vendor_pure_cheap: "dm Bio"
+price_pure: 2.49
+vendor_pure: "Denns"
+price_market: 2.99
+vendor_market: "Wochenmarkt"
 ---
 
 # 🥗  <%- luhmannId %>   <%- displayTitle %>

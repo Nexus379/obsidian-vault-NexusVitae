@@ -49,7 +49,7 @@ let deadline = await tp.system.prompt(
 );
 
 // 🔱 4. CLEANING
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(2vision-|v-|vision-|stars-|s-|1stars-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(2vision-|v-|vision-|stars-|s-|1stars-)/i, "").trim();
 
 tR += "---"  
 %>

@@ -38,7 +38,7 @@ tp.variables.ARCH = {
     c: { label: "Calendar",  folder: "0_Calendar",  icon: "📅", prompt: "0calendarprompt", trigger: ["c","cal"] },
     s: { label: "Stars",     folder: "1_Stars",     icon: "✨", prompt: "1starsprompt", trigger: ["s","stars"] },
     a: { label: "Areas",     folder: "2_Areas",     icon: "💠", prompt: "2areasprompt", trigger: ["a","areas"] },
-    p: { label: "Projects",  folder: "3_Projects",  icon: "🧩", prompt: "3projectsprompt", trigger: ["p","projects"] },
+    p: { label: "Projects",  folder: "3_Projects",  icon: "🧩", prompt: "3projectsprompt", trigger: ["p","pro","project","projects"] },
     t: { label: "Tasks",     folder: "4_Tasks",     icon: "🛠️", prompt: "4tasksprompt", trigger: ["t","tasks"] },
     n: { label: "Notes",     folder: "5_Notes",     icon: "✏️", prompt: "5notesprompt", trigger: ["n","notes"] },
     r: { label: "Resources", folder: "6_Resources", icon: "🔖", prompt: "6resourcesprompt", trigger: ["r","resources"] }
@@ -57,7 +57,7 @@ const promptMap = {
     "a": ARCH.a.prompt, "areas": ARCH.a.prompt, "selfcare": ARCH.a.prompt, "relation": ARCH.a.prompt, "person": ARCH.a.prompt,
     "mind": ARCH.a.prompt, "organize": ARCH.a.prompt, "creativity": ARCH.a.prompt, "activity": ARCH.a.prompt,
     "entertain": ARCH.a.prompt, "entertainment": ARCH.a.prompt,
-    "p": ARCH.p.prompt, "projects": ARCH.p.prompt, "prodo": ARCH.p.prompt, "progo": ARCH.p.prompt, "prostudy": ARCH.p.prompt,
+    "p": ARCH.p.prompt, "pro": ARCH.p.prompt, "project": ARCH.p.prompt, "projects": ARCH.p.prompt, "prodo": ARCH.p.prompt, "progo": ARCH.p.prompt, "prostudy": ARCH.p.prompt,
     "promeet": ARCH.p.prompt, "probuy": ARCH.p.prompt, "propay": ARCH.p.prompt, "procook": ARCH.p.prompt, "procraft": ARCH.p.prompt, "proget": ARCH.p.prompt,
     "t": ARCH.t.prompt, "tasks": ARCH.t.prompt, "todo": ARCH.t.prompt, "togo": ARCH.t.prompt, "tostudy": ARCH.t.prompt,
     "tomeet": ARCH.t.prompt, "tobuy": ARCH.t.prompt, "topay": ARCH.t.prompt, "tocook": ARCH.t.prompt, "tocraft": ARCH.t.prompt,

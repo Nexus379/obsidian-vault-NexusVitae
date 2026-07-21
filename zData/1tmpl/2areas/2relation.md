@@ -24,7 +24,7 @@ if (tp.file.title !== title) {
 }
 
 // 🔱 3. CLEANING (Entfernt Trigger wie 8tocraft- oder t-)
-let displayTitle = title.replace(/^[a-z0-9.]+ /i, "").replace(/^(2relation-|a-|2area-)/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(2relation-|a-|2area-)/i, "").trim();
 
 tR += "---"  
 %>

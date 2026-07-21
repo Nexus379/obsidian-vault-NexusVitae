@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -70,16 +70,18 @@ battery_mah: 0
 camera_mp: 0
 condition: "new"
 pl_score: 0
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
+pref_vendor: "Amazon"
+unit_price: 19.99
+price_cheap: 9.99
+vendor_cheap: "Action"
+price_value: 19.99
+vendor_value: "MediaMarkt"
+price_pure_cheap: 14.99
+vendor_pure_cheap: "Refurbed"
+price_pure: 24.99
+vendor_pure: "Cyberport"
+price_market: 29.99
+vendor_market: "Fachgeschäft"
 ---
 
 # ⚙️  <%- luhmannId %>   <%- displayTitle %>

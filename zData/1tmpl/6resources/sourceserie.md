@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. NEXUS-DATA-SYNC
 let luhmannId = tp.variables.luhmannId || "R" + tp.date.now("YYYYMMDDHHmm");
 let title = tp.variables.title || tp.file.title;
@@ -110,6 +110,8 @@ arch:
   - "#6resource"
 archtype:
   - "#6resource/serie"
+science:
+discipline:
 status:
   - "1active"
 priority:

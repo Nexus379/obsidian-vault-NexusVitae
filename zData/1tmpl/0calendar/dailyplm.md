@@ -840,7 +840,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > >         if (!slotVal) continue;
 > > >         let arr = Array.isArray(slotVal) ? slotVal : [slotVal];
 > > >         for (let v of arr) {
-> > >             if (String(v).startsWith("groceries")) hasGroceries = true;
+> > >             if (String(v).startsWith("shop_groceries")) hasGroceries = true;
 > > >         }
 > > >     }
 > > >     
