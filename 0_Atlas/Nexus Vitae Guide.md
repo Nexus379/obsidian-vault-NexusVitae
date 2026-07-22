@@ -178,6 +178,43 @@ Everything goes into: `0_Inbox` and sorts through `[[zData/1tmpl/routertemp|rout
 
 ---
 
+## 🛠️ Complete Installation & Setup Guide (Step-by-Step)
+
+### Step 1: Install the Nexus Vitae Engine Plugin
+1. Download `manifest.json`, `main.js`, and `styles.css` from the release package.
+2. Create a folder named `nexus-vitae` inside your vault's `.obsidian/plugins/` directory:
+   ```
+   <your-vault>/.obsidian/plugins/nexus-vitae/
+   ```
+3. Copy `manifest.json`, `main.js`, and `styles.css` into that folder.
+4. Open Obsidian `Settings` ⚙️ ➔ `Community Plugins` ➔ Click **Reload** 🔄 and enable **NexusVitae Engine**.
+
+### Step 2: Appearance & Layout (Darstellung)
+1. Go to `Settings` ⚙️ ➔ `Appearance` (Darstellung).
+2. **Theme:** Select **AnuPpuccin** or standard Obsidian Dark Mode.
+3. **CSS Snippets (CSS-Schnipsel):** Ensure CSS Snippets are enabled. The plugin automatically loads `styles.css` for Multi-Column layouts (`> [!multi-column]`), Gallery Cards, and Custom Callouts.
+
+### Step 3: Required Community Plugins
+Install and enable the following core plugins from `Settings` ⚙️ ➔ `Community Plugins`:
+- **Meta Bind:** Mandatory for interactive buttons, sliders, and input fields. [Open Meta Bind](obsidian://show-plugin?id=obsidian-meta-bind-plugin).
+- **Templater:** Powers daily note, project, task, and resource generation. [Open Templater](obsidian://show-plugin?id=templater-obsidian).
+- **Dataview:** Query support for legacy tables and overview lists. [Open Dataview](obsidian://show-plugin?id=dataview).
+- **Spaced Repetition:** Community Flashcards plugin for reviewing single-line cards (`::`). [Open Spaced Repetition](obsidian://show-plugin?id=spaced-repetition).
+
+### Step 4: Templater Settings Configuration
+1. Go to `Settings` ⚙️ ➔ `Templater`.
+2. Set **Template Folder Location** (Vorlagen-Ordner) to: `zData/1tmpl`.
+3. Enable **Trigger Templater on new file creation**.
+
+### Step 5: Initial Setup Snippets
+Run the following setup scripts via Templater (`Alt + N` or `Ctrl + P` ➔ *Templater: Open Insert Template modal*):
+- `setupFitness.md` ➔ Configures your fitness routine & workout splits.
+- `setupRoutine.md` ➔ Configures morning, afternoon, and evening habit slots.
+- `setupTimetable.md` ➔ Configures weekly study/academy subjects.
+- `PlanReplicator.md` ➔ Pushes plan updates across your calendar logs.
+
+---
+
 ## ⚙️ Main Settings & Hotkeys
 
 * **Editor:** Strict line breaks `OFF`, Line numbers `ON`. New link format `Path from vault folder`.

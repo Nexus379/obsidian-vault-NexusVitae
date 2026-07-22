@@ -27,7 +27,7 @@ let vendor = await tp.system.prompt("🛒 Vendor or Link?", "Amazon");
 let deadline = await tp.system.prompt("📅 Acquisition Deadline?", tp.date.now("YYYY-MM-DD", 14)) || tp.date.now("YYYY-MM-DD", 14);
 
 // 🔱 4. CLEANING
-let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(5probuy-|p-|3project-)/i, "").trim();
+let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : title.replace(/^(5probuy|3project|p)[-_\s]+/i, "").replace(/^\d+[\d.a-z]*\s+/i, "").trim();
 
 tR += "---"  
 %>
@@ -75,6 +75,9 @@ review:
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
 
 - 💵 Price: `INPUT[number:amount]` € at <%- vendor %>
+
+---
+`BUTTON[convert-bought-entity]`
 
 ---
 ## 🛒 Purchase Blueprint

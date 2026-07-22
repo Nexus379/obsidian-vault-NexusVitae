@@ -20,12 +20,18 @@ if (!existing) {
     const tmplFile = app.vault.getAbstractFileByPath("zData/1tmpl/0_overview/overview-area.md");
     if (tmplFile) {
         const rendered = await tp.file.include(tmplFile);
-        await app.vault.create(destPath, rendered);
+        const created = await app.vault.create(destPath, rendered);
         new Notice(`🚀 Area Cockpit created: ${targetTitle}_Overview.md`);
+        const leaf = app.workspace.getLeaf(false);
+        await leaf.openFile(created);
+        app.commands.executeCommandById("file-explorer:reveal-active-file");
     } else {
         new Notice("🔥 Template overview-area.md not found!");
     }
 } else {
-    new Notice(`ℹ️ Cockpit already exists: ${targetTitle}_Overview.md`);
+    new Notice(`ℹ️ Cockpit already exists: ${targetTitle}_Overview.md. Opening & revealing...`);
+    const leaf = app.workspace.getLeaf(false);
+    await leaf.openFile(existing);
+    app.commands.executeCommandById("file-explorer:reveal-active-file");
 }
 -%>

@@ -123,7 +123,7 @@ review:
 ---
 
 ## 🚀 Active Responsibilities
-*(Hier erscheinen automatisch alle aktiven Projekte, die du für diese Person managst).*
+*(All active projects managed for this person automatically appear here).*
 
 ```dataview
 TABLE status AS Status, persona AS Persona

@@ -552,4 +552,4 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
 
-`BUTTON[freezer]`
+`BUTTON[freezer]` `BUTTON[archive-month-logs]`

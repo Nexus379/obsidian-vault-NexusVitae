@@ -365,11 +365,15 @@ for (const seg of targetFolder.split("/")) {
 const targetPath = `${targetFolder}/${finalTitle}.md`;
 if (tp.file.path !== targetPath) {
     const fileAtTarget = app.vault.getAbstractFileByPath(targetPath);
-    if (!fileAtTarget) {
+    if (fileAtTarget instanceof tp.obsidian.TFile) {
+        new Notice("ℹ️ Note already exists: " + finalTitle + ". Opening & revealing...");
+        const leaf = app.workspace.getLeaf(false);
+        await leaf.openFile(fileAtTarget);
+        app.commands.executeCommandById("file-explorer:reveal-active-file");
+        return;
+    } else {
         await tp.file.move(targetPath);
         await new Promise(r => setTimeout(r, 150));
-    } else {
-        new Notice("⚠️ Note already exists at destination: " + finalTitle);
     }
 }
 

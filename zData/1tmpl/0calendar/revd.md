@@ -335,4 +335,4 @@ if (engine) {
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
-`BUTTON[freezer]`
+`BUTTON[freezer]` `BUTTON[archive-month-logs]`

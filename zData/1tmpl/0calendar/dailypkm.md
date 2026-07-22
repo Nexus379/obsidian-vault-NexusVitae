@@ -135,7 +135,7 @@ try {
             }
 
             // 5. Baue die Blöcke exakt im Format deines Button-Skripts
-            timetableBlocks += `> [!info] 🗓️ **Timetable Sync: ${ttDate.format("dddd")}**\n>\n> Die folgenden Fächer stehen heute auf dem Plan:\n\n`;
+            timetableBlocks += `> [!info] 🗓️ **Timetable Sync: ${ttDate.format("dddd")}**\n>\n> The following subjects are scheduled for today:\n\n`;
             
             for (let subjKey of dailySubjects) {
                 let disc = engineData[subjKey];
@@ -356,4 +356,4 @@ LIMIT 8
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
-`BUTTON[freezer]`
+`BUTTON[freezer]` `BUTTON[archive-month-logs]`

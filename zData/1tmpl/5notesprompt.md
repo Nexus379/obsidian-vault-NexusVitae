@@ -49,9 +49,9 @@ if (pID) {
 }
 
 // 🔱 4. TYP-AUSWAHL
-const nOptions = ["1 🍂 Fleeting", "2 📘 Literature", "3 🗃️ Atomic...", "4 📜 Permanent", "5 🌳 Evergreen"];
-const nVals = ["1fleet", "2lit", "atomic_sub", "4perma", "5ever"];
-const nFolders = ["1_Fleeting", "2_Literature", "3_Atomic", "4_Permanent", "5_Evergreen"];
+const nOptions = ["1 🍂 Fleeting", "2 📘 Literature", "4 📜 Permanent", "3 🗃️ Atomic...", "5 🌳 Evergreen"];
+const nVals = ["1fleet", "2lit", "4perma", "atomic_sub", "5ever"];
+const nFolders = ["1_Fleeting", "2_Literature", "4_Permanent", "3_Atomic", "5_Evergreen"];
 const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
 const noteTriggerMap = {
     fleet: "1fleet",
@@ -63,8 +63,10 @@ const noteTriggerMap = {
     atomic: "3atomic",
     studycards: "3atomic_studycards",
     studycard: "3atomic_studycards",
-    anki: "3atomic_anki",
-    ankicloze: "3atomic_ankicloze",
+    srs: "3atomic_srs",
+    card: "3atomic_srs",
+    cards: "3atomic_srs",
+    anki: "3atomic_srs",
     ever: "5ever",
     evergreen: "5ever"
 };
@@ -84,17 +86,20 @@ if (!nChoice) {
         "4perma": "5_Notes/4_Permanent",
         "3atomic": "5_Notes/3_Atomic",
         "3atomic_studycards": "5_Notes/3_Atomic/studycards",
-        "3atomic_anki": "5_Notes/3_Atomic/anki",
-        "3atomic_ankicloze": "5_Notes/3_Atomic/anki",
+        "3atomic_srs": "5_Notes/3_Atomic/srs",
         "5ever": "5_Notes/5_Evergreen"
     };
     targetFolder = directFolders[nChoice];
 }
 
 if (nChoice === "atomic_sub") {
-    const aOptions = ["1 🗃️ Standard Atomic (custom SRS)", "2 🎴 Studycards (Plugin FSRS)", "3 🎴 Anki Basic", "4 🎴 Anki Cloze"];
-    const aVals = ["3atomic", "3atomic_studycards", "3atomic_anki", "3atomic_ankicloze"];
-    const aFoldersFull = ["5_Notes/3_Atomic", "5_Notes/3_Atomic/studycards", "5_Notes/3_Atomic/anki", "5_Notes/3_Atomic/anki"];
+    const aOptions = [
+        "1 🗃️ Standard Atomic",
+        "2 🖖 Studycards (Nexus Star Trek SRS Ränge)",
+        "3 🎴 SRS Flashcards (Community Plugin)"
+    ];
+    const aVals = ["3atomic", "3atomic_studycards", "3atomic_srs"];
+    const aFoldersFull = ["5_Notes/3_Atomic", "5_Notes/3_Atomic/studycards", "5_Notes/3_Atomic/srs"];
     let aIdx = await tp.system.suggester(aOptions, Array.from(aOptions.keys()));
     if (aIdx === null) return;
     nChoice = aVals[aIdx];
@@ -102,7 +107,7 @@ if (nChoice === "atomic_sub") {
 }
 
 // 🔱 5. SCIENCE-MODULE INTEGRATION (Delegiert die Abfrage!)
-const needsScience = ["4perma", "2lit", "3atomic", "3atomic_studycards", "3atomic_anki", "3atomic_ankicloze", "5ever"];
+const needsScience = ["4perma", "2lit", "3atomic", "3atomic_studycards", "3atomic_srs", "5ever"];
 if (needsScience.includes(nChoice)) {
     if (typeof tp.user.disciplineEngine === "function") {
         const engine = tp.user.disciplineEngine();
@@ -139,7 +144,18 @@ for (const seg of targetFolder.split('/')) {
     current = current === "" ? seg : `${current}/${seg}`;
     if (!app.vault.getAbstractFileByPath(current)) await app.vault.createFolder(current);
 }
-try { await tp.file.move(`${targetFolder}/${title}.md`); } catch(e) {}
+const targetPath = `${targetFolder}/${title}.md`;
+if (tp.file.path !== targetPath) {
+    const existing = app.vault.getAbstractFileByPath(targetPath);
+    if (existing instanceof tp.obsidian.TFile) {
+        new Notice(`ℹ️ Note already exists: ${title}. Opening & revealing...`);
+        const leaf = app.workspace.getLeaf(false);
+        await leaf.openFile(existing);
+        app.commands.executeCommandById("file-explorer:reveal-active-file");
+        return;
+    }
+    try { await tp.file.move(targetPath); } catch(e) {}
+}
 await new Promise(r => setTimeout(r, 850));
 
 // 🔱 8. TEMPLATE LADEN

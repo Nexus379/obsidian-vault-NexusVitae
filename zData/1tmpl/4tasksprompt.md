@@ -138,8 +138,16 @@ for (const seg of targetFolder.split('/').filter(s => s)) {
 
 // 🔱 6. RENAME & MOVE (Stabilisiert)
 const finalPath = `${targetFolder}/${title}.md`;
-if (tp.file.path !== finalPath && !app.vault.getAbstractFileByPath(finalPath)) {
-    await tp.file.move(finalPath);
+if (tp.file.path !== finalPath) {
+    const existing = app.vault.getAbstractFileByPath(finalPath);
+    if (existing instanceof tp.obsidian.TFile) {
+        new Notice(`ℹ️ Task already exists: ${title}. Opening & revealing...`);
+        const leaf = app.workspace.getLeaf(false);
+        await leaf.openFile(existing);
+        app.commands.executeCommandById("file-explorer:reveal-active-file");
+        return;
+    }
+    try { await tp.file.move(finalPath); } catch(e) {}
 }
 
 // 🔱 7. LOAD CONTENT

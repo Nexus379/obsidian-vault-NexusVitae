@@ -15,6 +15,23 @@
 	"inputFieldTemplates": [],
 	"buttonTemplates": [
 		{
+			"label": "🛒 Als dauerhaftes Inventar-Item speichern",
+			"icon": "",
+			"style": "primary",
+			"class": "",
+			"cssStyle": "",
+			"backgroundImage": "",
+			"tooltip": "Erstellt eine permanente Entitäts-Notiz in 6_Resources/_Entities/...",
+			"id": "convert-bought-entity",
+			"hidden": false,
+			"actions": [
+				{
+					"type": "runTemplaterFile",
+					"templateFile": "zData/3snippets/convert-bought-entity.md"
+				}
+			]
+		},
+		{
 			"label": "➕ add Discpline",
 			"icon": "",
 			"style": "plain",

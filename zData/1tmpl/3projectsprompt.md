@@ -124,7 +124,18 @@ if (!app.vault.getAbstractFileByPath(targetFolder)) {
     }
 }
 
-await tp.file.move(`${targetFolder}/${title}.md`);
+const targetPath = `${targetFolder}/${title}.md`;
+if (tp.file.path !== targetPath) {
+    const existing = app.vault.getAbstractFileByPath(targetPath);
+    if (existing instanceof tp.obsidian.TFile) {
+        new Notice(`ℹ️ Project already exists: ${title}. Opening & revealing...`);
+        const leaf = app.workspace.getLeaf(false);
+        await leaf.openFile(existing);
+        app.commands.executeCommandById("file-explorer:reveal-active-file");
+        return;
+    }
+    try { await tp.file.move(targetPath); } catch(e) {}
+}
 await new Promise(r => setTimeout(r, 400)); 
 
 // 🔱 5. FINAL HANDOVER

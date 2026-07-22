@@ -912,10 +912,16 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > [!blank]
 > > > ```dataviewjs
 > > > const c = dv.current();
+> > > const dStr = c.cal_date || c.file.name.substring(0, 10);
+> > > const wLogs = dv.pages('"0_Calendar/4_Projectlogs"')
+> > >     .where(p => (p.cal_date == dStr || p.file.name.includes(dStr)) && (p.file.name.toLowerCase().includes("workout") || p.file.name.toLowerCase().includes("fitness")));
+> > > let wMin = 0;
+> > > wLogs.forEach(l => wMin += (Number(l.duration) || 0));
+> > > 
 > > > const am = Number(c["mobility_am"]) || 0;
 > > > const pm = Number(c["mobility_pm"]) || 0;
 > > > const act = Number(c["activity_time"]) || 0;
-> > > const gesamt = am + pm + act;
+> > > const gesamt = am + pm + act + wMin;
 > > > const ziel = 30;
 > > > 
 > > > let icon = "⚪"; let flair = "";
@@ -928,12 +934,28 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > ```
 > > 
 > > > [!blank]
-> > > **Today's Training:**
-> > > <%- tp.variables.fitnessSync.trim().replace(/\n/g, '\n> > > ') %>
-> > > ---
-> > > <%- tp.variables.fitnessLinkMd %>
+> > > **🏋️ Today's Training & Exercises:**
+> > > ```dataviewjs
+> > > const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
+> > > const logs = dv.pages('"0_Calendar/4_Projectlogs"')
+> > >     .where(p => (p.cal_date == dStr || p.file.name.includes(dStr)) && (p.file.name.toLowerCase().includes("workout") || p.file.name.toLowerCase().includes("fitness")));
 > > > 
-> > > ➤ `BUTTON[snapshot-week-fitness]`
+> > > if (logs.length > 0) {
+> > >     for (let l of logs) {
+> > >         dv.header(4, `🏋️ ${l.file.name} (${l.duration || 30} min)`);
+> > >         if (l.exercises && Array.isArray(l.exercises)) {
+> > >             dv.list(l.exercises.map(e => `💪 ${e}`));
+> > >         } else {
+> > >             dv.paragraph(`_Log: [[${l.file.name}]] (${l.duration || 30} min recorded)_`);
+> > >         }
+> > >     }
+> > > } else {
+> > >     dv.paragraph(`> [!info] **No Workout Log Today**\n> ➡️ Check your [[2_Areas/1_Selfcare/Plan/Fitness_Plan|🏋️ Fitness Plan]] or generate a new log:\n> \`BUTTON[generate-workout-log]\` \`BUTTON[genereate-workout]\``);
+> > > }
+> > > ```
+> > > ---
+> > > **📝 Quick Activity Input (Manual Fallback):**
+> > > `INPUT[inlineListSuggester(option(Walk), option(Run), option(Basketball), option(Swim), option(Cycling), option(Climbing), option(Yoga), option(Dance), option(Hike), option(Tennis)):activity_link]` ⏱️ Duration: `INPUT[number:activity_time]` min
 
 > [!pink] E - Entropy / Relaxation
 > >[!multi-column]
@@ -1014,10 +1036,16 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > > Painting/Drawing, Crafting, etc.
 > > > > `INPUT[inlineList:creativity_link]`
 > > > > 
-> > > > 🎸 **Instrument Practice**
+> > > > 🎸 **Instrument Practice (Inpra)**
 > > > > ```dataviewjs
 > > > > const c = dv.current();
-> > > > const mMin = Number(c["inpra_min"]) || 0;
+> > > > const dStr = c.cal_date || c.file.name.substring(0, 10);
+> > > > const iLogs = dv.pages('"0_Calendar/4_Projectlogs"')
+> > > >     .where(p => (p.cal_date == dStr || p.file.name.includes(dStr)) && (p.file.name.toLowerCase().includes("inpra") || p.file.name.toLowerCase().includes("practice")));
+> > > > let logMin = 0;
+> > > > iLogs.forEach(l => logMin += (Number(l.duration) || 0));
+> > > > 
+> > > > const mMin = (Number(c["inpra_min"]) || 0) + logMin;
 > > > > const mZiel = 10;
 > > > > let mIcon = "⚪"; let mFlair = "";
 > > > > if (mMin >= 30) { mIcon = "🔥"; mFlair = " VIRTUOSO"; }
@@ -1025,12 +1053,27 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > > else if (mMin > 0) { mIcon = "🟡"; }
 > > > > dv.paragraph(`🎸 **Status:** ${mMin} /${mZiel} min ${mIcon}${mFlair}`);
 > > > > ```
-> > > > ➤ `INPUT[number:inpra_min]` min
+> > > > ➤ `INPUT[number:inpra_min]` min (Manual Entry)
 > > > > 
-> > > > **Today's Setup:**
-> > > > <%- tp.variables.inpraSync.trim().replace(/\n/g, '\n> > > > ') %>
-> > > > ---
-> > > > <%- tp.variables.inpraLinkMd %>
+> > > > **Today's Practice Sessions:**
+> > > > ```dataviewjs
+> > > > const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
+> > > > const logs = dv.pages('"0_Calendar/4_Projectlogs"')
+> > > >     .where(p => (p.cal_date == dStr || p.file.name.includes(dStr)) && (p.file.name.toLowerCase().includes("inpra") || p.file.name.toLowerCase().includes("practice")));
+> > > > 
+> > > > if (logs.length > 0) {
+> > > >     for (let l of logs) {
+> > > >         dv.header(4, `🎸 ${l.file.name} (${l.duration || 15} min)`);
+> > > >         if (l.notes || l.exercises) {
+> > > >             dv.paragraph(l.notes || (Array.isArray(l.exercises) ? l.exercises.join(", ") : l.exercises));
+> > > >         } else {
+> > > >             dv.paragraph(`_Log: [[${l.file.name}]] (${l.duration || 15} min recorded)_`);
+> > > >         }
+> > > >     }
+> > > > } else {
+> > > >     dv.paragraph(`> [!info] **No Inpra Log Today**\n> ➡️ Check your [[2_Areas/5_Creativity/Plan/Inpra_Plan|🎸 Inpra Plan]] or generate a new log:\n> \`BUTTON[generate-inpra-log]\` \`BUTTON[generate-inpra]\``);
+> > > > }
+> > > > ```
 > 
 > > [!quote|flat] 📺 Entertainment (Passive)
 > > *Unplug & Consume: Gaming, Movies, Series, etc.*
@@ -1102,6 +1145,18 @@ if (engine && engine.renderChakraColumns) {
 
 
 
-[^1]: L-E-B-E-N by Birkenbihl
+> [!info] 📑 Today's Project Logs & Protocols (`4_Projectlogs` & `5_Protocols`)
+> ```dataviewjs
+> const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
+> const logs = dv.pages('"0_Calendar/4_Projectlogs" or "0_Calendar/5_Protocols"')
+>     .where(p => p.cal_date == dStr || p.file.name.includes(dStr) || p.file.mtime.toFormat("yyyy-MM-dd") == dStr);
+> if (logs.length > 0) {
+>     dv.table(["📄 Log / Protocol", "📂 Location", "🕒 Last Modified"], logs.map(p => [p.file.link, p.file.folder, p.file.mtime.toFormat("HH:mm")]));
+> } else {
+>     dv.paragraph("_No project logs or protocols generated for today yet._");
+> }
+> ```
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
+
+`BUTTON[freezer]` `BUTTON[archive-month-logs]`

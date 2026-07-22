@@ -24,10 +24,16 @@ if (!existing) {
     const tmplFile = app.vault.getAbstractFileByPath("zData/1tmpl/0_overview/overview-resource.md");
     if (tmplFile) {
         const rendered = await tp.file.include(tmplFile);
-        await app.vault.create(destPath, rendered);
+        const created = await app.vault.create(destPath, rendered);
         new Notice(`🔖 Resource Cockpit created: ${resType}_Overview.md in 6_Resources/${resType}`);
+        const leaf = app.workspace.getLeaf(false);
+        await leaf.openFile(created);
+        app.commands.executeCommandById("file-explorer:reveal-active-file");
     }
 } else {
-    new Notice(`ℹ️ Cockpit already exists: ${resType}_Overview.md`);
+    new Notice(`ℹ️ Cockpit already exists: ${resType}_Overview.md. Opening & revealing...`);
+    const leaf = app.workspace.getLeaf(false);
+    await leaf.openFile(existing);
+    app.commands.executeCommandById("file-explorer:reveal-active-file");
 }
 -%>
