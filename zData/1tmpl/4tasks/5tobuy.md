@@ -25,7 +25,7 @@ let amount = await tp.system.prompt("💰 Estimated Budget/Price?", "0.00");
 let vendor = await tp.system.prompt("🛒 Vendor or Link?", "Amazon");
 
 // 🔱 3. CLEANING
-let displayTitle = title.replace(/^(5tobuy|4task|t)[-_\s]+/i, "").replace(/^\d+[\d.a-z]*\s+/i, "").trim();
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(5tobuy-|t-|4task-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -75,7 +75,7 @@ review:
 - 💵 Price: `INPUT[number:amount]` € at <%- vendor %>
 
 ---
-`BUTTON[convert-bought-entity]`
+[[p-active|+ Create Project]] 
 
 ---
 

@@ -7,10 +7,16 @@ const areaOptions = [
 const areaFolders = [
     "1_Selfcare", "2_Relationship", "3_Mind", "4_Organize", "5_Creativity", "6_Activity", "7_Entertainment"
 ];
+const areaTags = [
+    "#2area/1selfcare", "#2area/2relationship", "#2area/3mind", "#2area/4organize", "#2area/5creativity", "#2area/6activity", "#2area/7entertain"
+];
 const areaTemplates = ["1selfcare", "2relation", "3mind", "4organize", "5creativity", "6activity", "7entertain"];
 
 // SICHERHEIT: Fallback für tp.variables
-const v = tp.variables || {};
+if (!tp.variables) tp.variables = {};
+const v = tp.variables;
+if (!v.SYS) v.SYS = { tmpl: "zData/1tmpl", inbox: "0_Inbox" };
+if (!v.ARCH) v.ARCH = { a: { folder: "2_Areas" } };
 
 // 🔱 2. NAVIGATION & ESC-SAFETY
 let aIdx = -1;
@@ -20,7 +26,8 @@ const areaTriggerMap = {
     selfcare: 0,
     relation: 1,
     relationship: 1,
-    person: 1,
+    character: 1,
+    char: 1,
     mind: 2,
     organize: 3,
     creativity: 4,
@@ -30,7 +37,7 @@ const areaTriggerMap = {
 };
 
 if (preSub) {
-    aIdx = areaFolders.findIndex(f => preSub.includes(f));
+    aIdx = areaFolders.findIndex(f => preSub.toLowerCase().includes(f.toLowerCase()));
 }
 
 if (aIdx === -1 && areaTriggerMap[originTrigger] !== undefined) {
@@ -48,13 +55,16 @@ if (aIdx === null || aIdx === -1) {
 }
 
 const targetArea = areaFolders[aIdx];
-const contentTemplate = areaTemplates[aIdx];
+const targetAreaTag = areaTags[aIdx];
+let contentTemplate = areaTemplates[aIdx];
+if (originTrigger === "character" || originTrigger === "char") contentTemplate = "2relation_character";
 
 // 🔱 3. DISCIPLINE ENGINE
 // Sicherstellen, dass tp.variables existiert, bevor wir darauf schreiben
 if (!tp.variables) tp.variables = {};
-tp.variables.area = targetArea;
-tp.variables.currentArea = targetArea;
+tp.variables.area = targetAreaTag;
+tp.variables.currentArea = targetAreaTag;
+tp.variables.areaFolder = targetArea;
 
 if (typeof tp.user.disciplineEngine === "function") {
     const engine = tp.user.disciplineEngine();
@@ -80,8 +90,8 @@ if (typeof tp.user.disciplineEngine === "function") {
 
 // 🔱 4. TITLE & LOGISTICS
 // Sicherheits-Fallbacks für SYS und ARCH, falls das Template direkt gestartet wird
-const SYS = v.SYS || { tmpl: "zData/1tmpl" };
-const ARCH = v.ARCH || { a: { folder: "2_Areas" } };
+const SYS = v.SYS;
+const ARCH = v.ARCH;
 
 let title = v.title || tp.file.title;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
@@ -91,13 +101,25 @@ if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
 }
 
 if (!title) title = "Area-" + tp.date.now("HH-mm");
-if (tp.file.title !== title) await tp.file.rename(title);
+const noteName = title.includes("/") ? title.substring(title.lastIndexOf("/") + 1) : title;
+if (tp.file.title !== noteName) await tp.file.rename(noteName);
 
 // Dynamischer Pfad durch ARCH.a.folder
 const fullPath = `${ARCH.a.folder}/${targetArea}`;
 // Folder-Bot (Ensures folder exists)
-if (!app.vault.getAbstractFileByPath(fullPath)) {
-    await app.vault.createFolder(fullPath);
+async function ensureFolder(path) {
+    let curr = "";
+    for (const seg of path.split("/").filter(Boolean)) {
+        curr = curr ? `${curr}/${seg}` : seg;
+        if (!app.vault.getAbstractFileByPath(curr)) await app.vault.createFolder(curr);
+    }
+}
+
+await ensureFolder(fullPath);
+
+if (title.includes("/")) {
+    const nestedFolder = title.substring(0, title.lastIndexOf("/"));
+    await ensureFolder(`${fullPath}/${nestedFolder}`);
 }
 
 await tp.file.move(`${fullPath}/${title}.md`);
@@ -122,7 +144,7 @@ try {
     const mocFilePath = `${mocFolderPath}/${mocTitleName} MOC.md`;
 
     if (!app.vault.getAbstractFileByPath(mocFolderPath)) {
-        await app.vault.createFolder(mocFolderPath);
+        await ensureFolder(mocFolderPath);
     }
 
     if (!app.vault.getAbstractFileByPath(mocFilePath)) {

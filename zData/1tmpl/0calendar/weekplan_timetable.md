@@ -1,13 +1,29 @@
----
+<%-*
+if (!tp.variables) tp.variables = {};
+const targetMoment = moment(tp.variables.targetDate || tp.date.now("YYYY-MM-DD"), "YYYY-MM-DD");
+const dateStr = targetMoment.format("YYYY-MM-DD");
+const energy = tp.variables.energy || "3";
+const year = tp.variables.planYear || targetMoment.format("YYYY");
+const kw = tp.variables.planKw || targetMoment.format("WW");
+const displayTitle = tp.variables.displayTitle || `${year}-W${kw}_timetable`;
+tR = "---\n";
+%>
 banner: "![[xAttachment/Images/Banner/kachelschwarz-lichtblau.jpg]]"
 banner_y: 0.35
 banner_icon: 🧠
 inbox: true
 persona: ""
 arch:
-  - "#2area"
+  - "#0cal"
 archtype:
-  - "#2area/3mind"
+  - "#0cal/7plan/timetable"
+fileTitle: "<%- displayTitle %>"
+cal_date: <%- dateStr %>
+energy: "<%- energy %>"
+frozen: false
+plan_type: timetable
+plan_year: "<%- year %>"
+plan_kw: "<%- kw %>"
 status: 1active
 priority:
   - "4"

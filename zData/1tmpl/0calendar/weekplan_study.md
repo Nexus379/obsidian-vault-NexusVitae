@@ -2,6 +2,7 @@
 // 🔱 1. INITIALIZATION & DATE
 if (!tp.variables) tp.variables = {}; // 🛡️ crash guard
 const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
+const energy = tp.variables.energy || "3";
 const [yy, mm] = dateStr.split("-");
 const py = tp.variables.planYear || tp.date.now("YYYY");
 const pk = tp.variables.planKw || tp.date.now("WW");
@@ -117,9 +118,13 @@ arch:
 archtype:
   - "#0cal/7plan/study"
 frozen: false
+plan_type: study
+plan_year: "<%- py %>"
+plan_kw: "<%- pk %>"
 status: 1active
 persona: "<%- persona %>"
 cal_date: "<%- dateStr %>"
+energy: "<%- energy %>"
 science: ["<%- sci %>"]
 discipline: ["<%- disc %>"]
 topic: "<%- topic %>"
@@ -234,4 +239,4 @@ dv.table(headers, rows);
 - 
 
 ---
-`BUTTON[freeze-week]` `BUTTON[archive]`
+`BUTTON[freeze-week]` `BUTTON[archive]` `BUTTON[archive-month]`

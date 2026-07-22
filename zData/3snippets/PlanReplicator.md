@@ -7,6 +7,37 @@ try {
     const currentKw = moment().format("WW");
     const nextKw = moment().add(1, 'weeks').format("WW");
     const year = moment().format("YYYY");
+    const renderWeekplan = (raw, values) => {
+        let out = raw
+            .replace(/^<%-?\*[\s\S]*?-%>\s*/, "")
+            .replace(/^<%-?\*[\s\S]*?%>\s*/, "");
+
+        const replacements = {
+            dateStr: values.dateStr,
+            energy: values.energy,
+            year: values.year,
+            kw: values.kw,
+            planYear: values.year,
+            planKw: values.kw,
+            displayTitle: `${values.year}-W${values.kw}_${values.planType}`,
+            currentWeek: values.currentWeek || 1
+        };
+
+        for (const [key, value] of Object.entries(replacements)) {
+            out = out.replace(new RegExp(`<%-\\s*${key}\\s*%>`, "g"), String(value));
+        }
+
+        out = out.replace(
+            /<%-\s*tp\.variables\.title\s*\|\|\s*\([^%]+?_'?\s*\+\s*[^%]+?\)\s*%>/g,
+            `${values.year}-W${values.kw}_${values.planType}`
+        );
+        out = out.replace(
+            /<%-\s*tp\.variables\.title\s*\|\|\s*\([^%]+?_(routine|meal)'\)\s*%>/g,
+            `${values.year}-W${values.kw}_${values.planType}`
+        );
+
+        return out;
+    };
 
     // 1. ZIEL-WOCHE ABFRAGEN
     const targetKwInput = await tp.system.prompt("🗓️ Für welche KW möchtest du den Plan erstellen/kopieren?", nextKw);
@@ -41,18 +72,22 @@ try {
     for (let key in sourceFm) {
         // Ignoriere Obsidian-interne Felder und reine Ausführungs-Felder (act_, lvl, min)
         if (["position", "arch", "archtype"].includes(key)) continue;
+        if (planType === "inpra" && key.startsWith("inpra_")) {
+            dataToCopy[key] = sourceFm[key];
+            continue;
+        }
         if (key.startsWith("act_") || key.includes("_lvl") || key.endsWith("_min")) continue;
         
         // Kopiere spezifische Logik-Blöcke
         if (planType === "routine" && key.startsWith("rt_")) dataToCopy[key] = sourceFm[key];
         else if (planType === "fitness" && key.startsWith("fit_")) dataToCopy[key] = sourceFm[key];
-        else if (planType === "inpra" && (key.startsWith("instr_") || key.startsWith("inpra_"))) dataToCopy[key] = sourceFm[key];
         else if (planType === "meal" && /^(mon|tue|wed|thu|fri|sat|sun)_/.test(key)) dataToCopy[key] = sourceFm[key];
     }
 
     // 5. ZIEL-DATEI PRÜFEN ODER ERSTELLEN
+    const targetMoment = moment(`${year}-W${targetKw}`, "YYYY-[W]WW").startOf("isoWeek");
     const targetName = `${year}-W${targetKw}_${planType}`;
-    const targetFolder = `0_Calendar/7_Plan/${year}/${moment().week(targetKw).format("MM")}`;
+    const targetFolder = `0_Calendar/7_Plan/${year}/${targetMoment.format("MM")}`;
     const targetPath = `${targetFolder}/${targetName}.md`;
     
     let targetFile = app.vault.getAbstractFileByPath(targetPath);
@@ -81,7 +116,17 @@ try {
         const tmplFile = app.vault.getAbstractFileByPath(`zData/1tmpl/0calendar/${tmplMap[planType]}.md`);
         if (!tmplFile) { new Notice("❌ Template fehlt im zData-Ordner!"); return; }
         
-        targetFile = await app.vault.copy(tmplFile, targetPath);
+        let body = await app.vault.read(tmplFile);
+        body = renderWeekplan(body, {
+            dateStr: targetMoment.format("YYYY-MM-DD"),
+            energy: "3",
+            year,
+            kw: targetKw,
+            planType,
+            currentWeek: planType === "fitness" ? (Number(sourceFm.training_week || 0) + 1 || 1) : 1
+        });
+        await app.vault.create(targetPath, body);
+        targetFile = app.vault.getAbstractFileByPath(targetPath);
         await new Promise(r => setTimeout(r, 200)); // Kurz warten, bis Obsidian die Datei registriert
     }
 

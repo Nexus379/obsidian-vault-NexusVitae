@@ -22,7 +22,9 @@ if (!logConnect || logConnect === "MAN") {
 
 // 🎯 MAGIC: If logConnect is a Log, automatically extract the project via Dataview
 if (dv && logConnect !== "[[Unlinked]]") {
-    const logPage = dv.page(logConnect.replace(/[\[\]]/g, ""));
+    let logPath = logConnect.replace(/[\[\]]/g, "");
+    if (!logPath.endsWith(".md")) logPath += ".md";
+    const logPage = dv.page(logPath);
     if (logPage && logPage.project3) {
         inheritedProject = Array.isArray(logPage.project3) ? logPage.project3[0] : logPage.project3;
     }
@@ -142,5 +144,4 @@ cal_date: <%- dateStr %>
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
-
-`BUTTON[freezer]` `BUTTON[archive-month-logs]`
+`BUTTON[archive-month]`

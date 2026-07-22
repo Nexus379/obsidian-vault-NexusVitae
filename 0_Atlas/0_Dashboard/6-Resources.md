@@ -28,9 +28,9 @@ cssclasses:
 > >              return allTags.includes("#6") || p.file.path.includes("6_Resources");
 > >          });
 > > 
-> >          const resLabels = ["AI", "Articles", "Boardgames", "Books", "Classes", "Courses", "Films", "Games", "Guides", "Museums", "Music", "Papers", "Recipes", "Reference", "Series", "Videos"];
-> >          const resTags = ["ai", "article", "boardgame", "book", "class", "course", "film", "game", "guide", "museum", "music", "paper", "recipe", "reference", "serie", "video"];
-> >          const resColors = ['#89dceb', '#a6e3a1', '#f9e2af', '#f5e0dc', '#94e2d5', '#74c7ec', '#fab387', '#cba6f7', '#b4befe', '#eba0ac', '#f38ba8', '#89b4fa', '#a6e3a1', '#bac2de', '#f5c2e7', '#fab387'];
+> >          const resLabels = ["AI", "Articles", "Boardgames", "Books", "Classes", "Courses", "Films", "Games", "Guides", "Museums", "Music", "Papers", "Recipes", "Reference", "Series", "Software", "Videos"];
+> >          const resTags = ["ai", "article", "boardgame", "book", "class", "course", "film", "game", "guide", "museum", "music", "paper", "recipe", "reference", "serie", "software", "video"];
+> >          const resColors = ['#89dceb', '#a6e3a1', '#f9e2af', '#f5e0dc', '#94e2d5', '#74c7ec', '#fab387', '#cba6f7', '#b4befe', '#eba0ac', '#f38ba8', '#89b4fa', '#a6e3a1', '#bac2de', '#f5c2e7', '#89b4fa', '#fab387'];
 > > 
 > >          const counts = resTags.map(tag => 
 > >              entries.filter(p => {

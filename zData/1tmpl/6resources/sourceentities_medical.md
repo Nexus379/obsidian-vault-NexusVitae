@@ -57,6 +57,7 @@ active_ingredient: ""
 prescription_required: "No"
 pl_score: 0
 pref_vendor: "Shop-Apotheke"
+pref_price: 0.00
 unit_price: 3.99
 price_cheap: 1.99
 vendor_cheap: "DocMorris"
@@ -79,21 +80,12 @@ vendor_market: "Vor-Ort Apotheke"
 | 📦 **Storage** | `INPUT[text:storage_location]` |     |
 | 📊 **Stock Level** | `INPUT[number:stock_level]` / Min: `INPUT[number:min_stock]` |     |
 | 🏪 **Vendor** | `INPUT[text:pref_vendor]` |     |
-| 💰 **Price** | `INPUT[number:unit_price]` € |     |
+| 💰 **Price** | `VIEW[{unit_price}]` € |     |
 | 🧬 **Active Ingredient**| `INPUT[text:active_ingredient]` |     |
 | ⚕️ **Prescription**| `INPUT[suggester(option("No", 🟢 No), option("Yes", 🔴 Yes)):prescription_required]` |     |
 
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
+<%- tp.file.include("[[zData/5design_modul/ShoppingPriceMatrix]]") %>
+
 ## 📝 Source & Notes
 - 
 - 
@@ -103,33 +95,5 @@ vendor_market: ""
 > Click here to add an owner to this item:
 > `BUTTON[add-wardrobe-owner]`
 
-`
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
-
-`
-
-
 

@@ -16,6 +16,7 @@ if (!title || title.trim() === "") title = "Book-" + tp.date.now("HH-mm");
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); // Short stabilization
+}
 
 
 // 🔱 3. AUTO-COVER SCAN (With Folder-Bot Safety)

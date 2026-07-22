@@ -56,7 +56,8 @@ archtype:
   - "#5note/2literature"
   - "#5note/4permanent"
   - "#5note/3atomic"
-  - "#5note/3atomic/anki"
+  - "#5note/3atomic/studycards"
+  - "#5note/3atomic/vocabcards"
   - "#5note/5evergreen"
   - "#6resource/ai"
   - "#6resource/article"
@@ -531,7 +532,8 @@ difficulty:
 #5note/2literature
 #5note/4permanent
 #5note/3atomic
-#5note/3atomic/anki
+#5note/3atomic/studycards
+#5note/3atomic/vocabcards
 #5note/5evergreen
 
 ### 6 Resource

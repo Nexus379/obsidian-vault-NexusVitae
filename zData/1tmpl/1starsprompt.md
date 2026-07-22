@@ -1,8 +1,13 @@
 <%-*
 // 🔱 1. DATEN-IMPORT & INITIALISIERUNG
-const { SYS, ARCH } = tp.variables; // ⬅️ Holt die Pfade dynamisch vom Master-Router ab!
+if (!tp.variables) tp.variables = {};
+const v = tp.variables;
+if (!v.SYS) v.SYS = { tmpl: "zData/1tmpl", inbox: "0_Inbox" };
+if (!v.ARCH) v.ARCH = { s: { folder: "1_Stars" } };
+const SYS = v.SYS;
+const ARCH = v.ARCH;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
-let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
+let title = v.title || tp.file.title;
 
 // Titel-Check (Sprachunabhängig)
 if (!title || title.trim() === "" || title.toLowerCase().includes(defaultName.toLowerCase())) {
@@ -18,8 +23,8 @@ const sFolders = ["1_Purpose", "2_Vision", "3_Goals"];
 const sTemps   = ["1purpose", "2vision", "3goals"]; 
 
 let sIdx = -1;
-const preSub = tp.variables.preSelectedSub || "";
-const originTrigger = String(tp.variables.originTrigger || tp.variables.activeTrigger || "").toLowerCase();
+const preSub = v.preSelectedSub || "";
+const originTrigger = String(v.originTrigger || v.activeTrigger || "").toLowerCase();
 const starTriggerMap = {
     purpose: 0,
     vision: 1,

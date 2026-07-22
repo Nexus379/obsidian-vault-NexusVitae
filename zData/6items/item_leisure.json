@@ -1,104 +1,397 @@
 {
-"cat_nutrition_complete": {
+  "cat_nutrition_complete": {
     "--- WET_FOOD_INFRASTRUCTURE ---": "Nassfutter (Hydratation & Taurin)",
     "pet_cat_coshida_selection_lidl": {
-      "unit_price": 6.00,
+      "unit_price": 6,
       "unit_type": "piece",
-      "label": "Coshida Selection (Lidl Pouches)", "room": "pantry", "pl_score": 10.0,
-      "val": { "meat_content": "approx. 60%", "sugar_free": "Yes", "taurine_mg": 450 },
-      "meta": { "locations": ["lidl"], "brand": "Coshida", "test_result": "Very Good" },
-      "props": ["Technologischer P/L-König", "Kein Getreide, kein Zucker", "Perfekte Nährstoff-Balance laut Stiftung Warentest"],
-      "lang": { "de": "Coshida Selection", "en": "Lidl Coshida Pouches" }
+      "label": "Coshida Selection (Lidl Pouches)",
+      "room": "pantry",
+      "pl_score": 10,
+      "val": {
+        "meat_content": "approx. 60%",
+        "sugar_free": "Yes",
+        "taurine_mg": 450
+      },
+      "meta": {
+        "locations": [
+          "lidl"
+        ],
+        "brand": "Coshida",
+        "test_result": "Very Good"
+      },
+      "props": [
+        "Technologischer P/L-König",
+        "Kein Getreide, kein Zucker",
+        "Perfekte Nährstoff-Balance laut Stiftung Warentest"
+      ],
+      "lang": {
+        "de": "Coshida Selection",
+        "en": "Lidl Coshida Pouches"
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 6,
+      "price_cheap": 6,
+      "vendor_cheap": "lidl",
+      "price_value": 6,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 6,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 6,
+      "vendor_pure": "lidl",
+      "price_market": 6,
+      "vendor_market": "lidl"
     },
     "pet_cat_k_classic_schlemmer_happen": {
-      "unit_price": 1.00,
+      "unit_price": 1,
       "unit_type": "piece",
-      "label": "K-Classic Schlemmerhappen (Kaufland)", "room": "pantry", "pl_score": 9.5,
-      "val": { "meat_content": "High", "sugar_free": "Yes" },
-      "meta": { "locations": ["kaufland"], "brand": "K-Classic" },
-      "props": ["Kauflands Antwort auf teure Gourmet-Dosen", "Sehr hohe Akzeptanz durch technologisch optimierte Lockstoffe (natürlich)"],
-      "lang": { "de": "K-Classic Schälchen", "en": "Kaufland Gourmet Tins" }
+      "label": "K-Classic Schlemmerhappen (Kaufland)",
+      "room": "pantry",
+      "pl_score": 9.5,
+      "val": {
+        "meat_content": "High",
+        "sugar_free": "Yes"
+      },
+      "meta": {
+        "locations": [
+          "kaufland"
+        ],
+        "brand": "K-Classic"
+      },
+      "props": [
+        "Kauflands Antwort auf teure Gourmet-Dosen",
+        "Sehr hohe Akzeptanz durch technologisch optimierte Lockstoffe (natürlich)"
+      ],
+      "lang": {
+        "de": "K-Classic Schälchen",
+        "en": "Kaufland Gourmet Tins"
+      },
+      "prices": {},
+      "pref_vendor": "kaufland",
+      "pref_price": 1,
+      "price_cheap": 1,
+      "vendor_cheap": "kaufland",
+      "price_value": 1,
+      "vendor_value": "kaufland",
+      "price_pure_cheap": 1,
+      "vendor_pure_cheap": "kaufland",
+      "price_pure": 1,
+      "vendor_pure": "kaufland",
+      "price_market": 1,
+      "vendor_market": "kaufland"
     },
     "pet_cat_sheba_selection": {
-      "unit_price": 1.00,
+      "unit_price": 1,
       "unit_type": "piece",
-      "label": "Sheba Selection in Sauce", "room": "pantry", "pl_score": 5.0,
-      "val": { "meat_content": "4% named source (standard)", "sugar": "Often included" },
-      "meta": { "locations": ["everywhere"], "brand": "Sheba (Mars)" },
-      "props": ["Marketing-Goliath", "Technologisch auf maximale 'Human-Appeal' Optik getrimmt", "Preislich deutlich über der Leistung"],
-      "lang": { "de": "Sheba Selektion", "en": "Sheba Fine Flakes" }
+      "label": "Sheba Selection in Sauce",
+      "room": "pantry",
+      "pl_score": 5,
+      "val": {
+        "meat_content": "4% named source (standard)",
+        "sugar": "Often included"
+      },
+      "meta": {
+        "locations": [
+          "everywhere"
+        ],
+        "brand": "Sheba (Mars)"
+      },
+      "props": [
+        "Marketing-Goliath",
+        "Technologisch auf maximale 'Human-Appeal' Optik getrimmt",
+        "Preislich deutlich über der Leistung"
+      ],
+      "lang": {
+        "de": "Sheba Selektion",
+        "en": "Sheba Fine Flakes"
+      },
+      "prices": {},
+      "pref_vendor": "everywhere",
+      "pref_price": 1,
+      "price_cheap": 1,
+      "vendor_cheap": "everywhere",
+      "price_value": 1,
+      "vendor_value": "everywhere",
+      "price_pure_cheap": 1,
+      "vendor_pure_cheap": "everywhere",
+      "price_pure": 1,
+      "vendor_pure": "everywhere",
+      "price_market": 1,
+      "vendor_market": "everywhere"
     },
-
     "--- DRY_FOOD_MATRIX ---": "Trockenfutter (Energetik)",
     "pet_cat_purina_one_adult": {
-      "unit_price": 5.00,
+      "unit_price": 5,
       "unit_type": "piece",
-      "label": "Purina ONE Adult", "room": "pantry", "pl_score": 7.5,
-      "val": { "protein_source": "Chicken/Salmon", "immune_support": "Bifensis" },
-      "meta": { "locations": ["everywhere"], "brand": "Purina" },
-      "props": ["Technologisch führend bei der Darmgesundheit", "Hoher Proteinanteil für Wohnungskatzen"],
-      "lang": { "de": "Purina ONE Adult", "en": "Purina ONE Dry Food" }
+      "label": "Purina ONE Adult",
+      "room": "pantry",
+      "pl_score": 7.5,
+      "val": {
+        "protein_source": "Chicken/Salmon",
+        "immune_support": "Bifensis"
+      },
+      "meta": {
+        "locations": [
+          "everywhere"
+        ],
+        "brand": "Purina"
+      },
+      "props": [
+        "Technologisch führend bei der Darmgesundheit",
+        "Hoher Proteinanteil für Wohnungskatzen"
+      ],
+      "lang": {
+        "de": "Purina ONE Adult",
+        "en": "Purina ONE Dry Food"
+      },
+      "prices": {},
+      "pref_vendor": "everywhere",
+      "pref_price": 5,
+      "price_cheap": 5,
+      "vendor_cheap": "everywhere",
+      "price_value": 5,
+      "vendor_value": "everywhere",
+      "price_pure_cheap": 5,
+      "vendor_pure_cheap": "everywhere",
+      "price_pure": 5,
+      "vendor_pure": "everywhere",
+      "price_market": 5,
+      "vendor_market": "everywhere"
     },
     "pet_cat_coshida_knuspermix_lidl": {
-      "unit_price": 3.00,
+      "unit_price": 3,
       "unit_type": "piece",
-      "label": "Coshida Knuspermix (Lidl)", "room": "pantry", "pl_score": 9.0,
-      "val": { "vitamins": "A, D3, E", "pl_score": 9.0 },
-      "meta": { "locations": ["lidl"], "brand": "Coshida" },
-      "props": ["Die ökonomische Basis-Versorgung", "Technologisch solide Vitamingrundlage"],
-      "lang": { "de": "Coshida Knuspermix", "en": "Lidl Crunchy Mix" }
+      "label": "Coshida Knuspermix (Lidl)",
+      "room": "pantry",
+      "pl_score": 9,
+      "val": {
+        "vitamins": "A, D3, E",
+        "pl_score": 9
+      },
+      "meta": {
+        "locations": [
+          "lidl"
+        ],
+        "brand": "Coshida"
+      },
+      "props": [
+        "Die ökonomische Basis-Versorgung",
+        "Technologisch solide Vitamingrundlage"
+      ],
+      "lang": {
+        "de": "Coshida Knuspermix",
+        "en": "Lidl Crunchy Mix"
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "lidl",
+      "price_value": 3,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 3,
+      "vendor_pure": "lidl",
+      "price_market": 3,
+      "vendor_market": "lidl"
     }
   },
   "dog_nutrition_complete": {
     "--- WET_FOOD_GIGANTS ---": "Nassfutter (Dosen & Menüs)",
     "pet_dog_orlando_pure_taste_lidl": {
-      "unit_price": 2.00,
+      "unit_price": 2,
       "unit_type": "piece",
-      "label": "Orlando Pure Taste (Lidl)", "room": "pantry", "pl_score": 10.0,
-      "val": { "meat_content": "70% (High Quality)", "grain_free": "Yes" },
-      "meta": { "locations": ["lidl"], "brand": "Orlando" },
-      "props": ["Lidls Premium-Linie zum Discounter-Preis", "Technologisch auf Augenhöhe mit Barf-Menüs", "Keine künstlichen Konservierungsstoffe"],
-      "lang": { "de": "Orlando Pure Taste", "en": "Lidl Pure Meat" }
+      "label": "Orlando Pure Taste (Lidl)",
+      "room": "pantry",
+      "pl_score": 10,
+      "val": {
+        "meat_content": "70% (High Quality)",
+        "grain_free": "Yes"
+      },
+      "meta": {
+        "locations": [
+          "lidl"
+        ],
+        "brand": "Orlando"
+      },
+      "props": [
+        "Lidls Premium-Linie zum Discounter-Preis",
+        "Technologisch auf Augenhöhe mit Barf-Menüs",
+        "Keine künstlichen Konservierungsstoffe"
+      ],
+      "lang": {
+        "de": "Orlando Pure Taste",
+        "en": "Lidl Pure Meat"
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "lidl",
+      "price_value": 2,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 2,
+      "vendor_pure": "lidl",
+      "price_market": 2,
+      "vendor_market": "lidl"
     },
     "pet_dog_rinti_kennerfleisch": {
-      "unit_price": 3.00,
+      "unit_price": 3,
       "unit_type": "piece",
-      "label": "Rinti Kennerfleisch", "room": "pantry", "pl_score": 7.5,
-      "val": { "meat_quality": "Whole meat chunks", "grain_free": "Yes" },
-      "meta": { "locations": ["everywhere"], "brand": "Rinti" },
-      "props": ["Die Marken-Referenz für Fleischfütterung", "Hoher Fettanteil für aktive Hunde", "Verlässlich seit Jahrzehnten"],
-      "lang": { "de": "Rinti Kennerfleisch", "en": "Rinti Real Meat" }
+      "label": "Rinti Kennerfleisch",
+      "room": "pantry",
+      "pl_score": 7.5,
+      "val": {
+        "meat_quality": "Whole meat chunks",
+        "grain_free": "Yes"
+      },
+      "meta": {
+        "locations": [
+          "everywhere"
+        ],
+        "brand": "Rinti"
+      },
+      "props": [
+        "Die Marken-Referenz für Fleischfütterung",
+        "Hoher Fettanteil für aktive Hunde",
+        "Verlässlich seit Jahrzehnten"
+      ],
+      "lang": {
+        "de": "Rinti Kennerfleisch",
+        "en": "Rinti Real Meat"
+      },
+      "prices": {},
+      "pref_vendor": "everywhere",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "everywhere",
+      "price_value": 3,
+      "vendor_value": "everywhere",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "everywhere",
+      "price_pure": 3,
+      "vendor_pure": "everywhere",
+      "price_market": 3,
+      "vendor_market": "everywhere"
     },
-
     "--- DRY_FOOD_ELITE ---": "Trockenfutter (Struktur & Kraft)",
     "pet_dog_k_pur_grain_free_kaufland": {
-      "unit_price": 15.00,
+      "unit_price": 15,
       "unit_type": "piece",
-      "label": "K-Pur Getreidefrei (Kaufland)", "room": "pantry", "pl_score": 9.5,
-      "val": { "main_ingredient": "Potato/Beef", "grain_free": "Yes" },
-      "meta": { "locations": ["kaufland"], "brand": "K-Pur" },
-      "props": ["Bestes P/L-Verhältnis für Allergiker", "Technologisch perfektionierte Krokettenform"],
-      "lang": { "de": "K-Pur Getreidefrei", "en": "Kaufland Grain Free" }
+      "label": "K-Pur Getreidefrei (Kaufland)",
+      "room": "pantry",
+      "pl_score": 9.5,
+      "val": {
+        "main_ingredient": "Potato/Beef",
+        "grain_free": "Yes"
+      },
+      "meta": {
+        "locations": [
+          "kaufland"
+        ],
+        "brand": "K-Pur"
+      },
+      "props": [
+        "Bestes P/L-Verhältnis für Allergiker",
+        "Technologisch perfektionierte Krokettenform"
+      ],
+      "lang": {
+        "de": "K-Pur Getreidefrei",
+        "en": "Kaufland Grain Free"
+      },
+      "prices": {},
+      "pref_vendor": "kaufland",
+      "pref_price": 15,
+      "price_cheap": 15,
+      "vendor_cheap": "kaufland",
+      "price_value": 15,
+      "vendor_value": "kaufland",
+      "price_pure_cheap": 15,
+      "vendor_pure_cheap": "kaufland",
+      "price_pure": 15,
+      "vendor_pure": "kaufland",
+      "price_market": 15,
+      "vendor_market": "kaufland"
     },
     "pet_dog_josera_festival": {
-      "unit_price": 20.00,
+      "unit_price": 20,
       "unit_type": "piece",
-      "label": "Josera Festival", "room": "pantry", "pl_score": 7.0,
-      "val": { "extra": "With Sauce Powder", "quality": "Human Grade" },
-      "meta": { "locations": ["specialty stores"], "brand": "Josera" },
-      "props": ["Gourmet-Trockenfutter (wird mit Wasser zur Sauce)", "Technologisch extrem hochwertiges Familienunternehmen"],
-      "lang": { "de": "Josera Festival", "en": "Josera Festival" }
+      "label": "Josera Festival",
+      "room": "pantry",
+      "pl_score": 7,
+      "val": {
+        "extra": "With Sauce Powder",
+        "quality": "Human Grade"
+      },
+      "meta": {
+        "locations": [
+          "specialty stores"
+        ],
+        "brand": "Josera"
+      },
+      "props": [
+        "Gourmet-Trockenfutter (wird mit Wasser zur Sauce)",
+        "Technologisch extrem hochwertiges Familienunternehmen"
+      ],
+      "lang": {
+        "de": "Josera Festival",
+        "en": "Josera Festival"
+      },
+      "prices": {},
+      "pref_vendor": "specialty stores",
+      "pref_price": 20,
+      "price_cheap": 20,
+      "vendor_cheap": "specialty stores",
+      "price_value": 20,
+      "vendor_value": "specialty stores",
+      "price_pure_cheap": 20,
+      "vendor_pure_cheap": "specialty stores",
+      "price_pure": 20,
+      "vendor_pure": "specialty stores",
+      "price_market": 20,
+      "vendor_market": "specialty stores"
     },
-
     "--- DENTAL_&_SNACKS ---": "Zahnpflege & Belohnung",
     "pet_dog_orlando_dental_sticks_lidl": {
-      "unit_price": 2.00,
+      "unit_price": 2,
       "unit_type": "piece",
-      "label": "Orlando Dental Sticks", "room": "pantry", "pl_score": 10.0,
-      "val": { "form": "Star-profile", "active_ing": "Hexametaphosphate" },
-      "meta": { "locations": ["lidl"], "brand": "Orlando" },
-      "props": ["Mechanische Zahnreinigung durch Kauen", "Viel günstiger als Marken-Originale"],
-      "lang": { "de": "Orlando Zahnpflege", "en": "Lidl Dental Sticks" }
+      "label": "Orlando Dental Sticks",
+      "room": "pantry",
+      "pl_score": 10,
+      "val": {
+        "form": "Star-profile",
+        "active_ing": "Hexametaphosphate"
+      },
+      "meta": {
+        "locations": [
+          "lidl"
+        ],
+        "brand": "Orlando"
+      },
+      "props": [
+        "Mechanische Zahnreinigung durch Kauen",
+        "Viel günstiger als Marken-Originale"
+      ],
+      "lang": {
+        "de": "Orlando Zahnpflege",
+        "en": "Lidl Dental Sticks"
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "lidl",
+      "price_value": 2,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 2,
+      "vendor_pure": "lidl",
+      "price_market": 2,
+      "vendor_market": "lidl"
     }
   }
 }

@@ -1,0 +1,28 @@
+filters:
+  and:
+    - arch.contains("#6resou")
+    - archtype.contains("#6resou/software")
+views:
+  - type: table
+    name: Software
+    order:
+      - file.name
+      - software_type
+      - maintenance_status
+      - version
+      - vendor
+      - plattform
+      - url
+      - last_checked
+      - next_check
+      - file.path
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 240
+      note.software_type: 120
+      note.maintenance_status: 140
+      note.version: 100
+      note.vendor: 140
+      note.plattform: 140

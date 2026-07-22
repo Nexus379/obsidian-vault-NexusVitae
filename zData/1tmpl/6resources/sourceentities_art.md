@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -57,6 +57,9 @@ core_type: ""
 ink_type: ""
 lightfastness: ""
 pl_score: 0
+pref_vendor: ""
+pref_price: 0.00
+unit_price: 0.00
 price_cheap: 0.00
 vendor_cheap: ""
 price_value: 0.00
@@ -77,23 +80,14 @@ vendor_market: ""
 | 🏷️ **Type** | `INPUT[suggester(option(medium_dry, ✏️ Dry Medium), option(medium_wet, 🖌️ Wet Medium), option(paper_canvas, 📜 Paper/Canvas), option(tool, 🛠️ Tool)):art_type]` |     |
 | 🏷️ **Brand** | `INPUT[text:brand]` |     |
 | 🏪 **Vendor** | `INPUT[text:pref_vendor]` |     |
-| 💰 **Price** | `INPUT[number:unit_price]` € |     |
+| 💰 **Price** | `VIEW[{unit_price}]` € |     |
 | ✏️ **Core Type** | `INPUT[text:core_type]` |     |
 | 🖋️ **Ink Type** | `INPUT[text:ink_type]` |     |
 | ☀️ **Lightfastness**| `INPUT[text:lightfastness]` |     |
 | ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
+<%- tp.file.include("[[zData/5design_modul/ShoppingPriceMatrix]]") %>
+
 ## 📝 Source & Notes
 - 
 - 
@@ -103,33 +97,5 @@ vendor_market: ""
 > Click here to add an owner to this item:
 > `BUTTON[add-wardrobe-owner]`
 
-`
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
-
-`
-
-
 

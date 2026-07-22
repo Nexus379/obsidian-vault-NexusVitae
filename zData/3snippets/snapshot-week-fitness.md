@@ -5,6 +5,27 @@
  * training_week wird NICHT kopiert, sondern auto-erkannt (letzte _fitness-Woche + 1) — wie das Original.
  */
 try {
+    const renderWeekplan = (raw, values) => {
+        let out = raw
+            .replace(/^<%-?\*[\s\S]*?-%>\s*/, "")
+            .replace(/^<%-?\*[\s\S]*?%>\s*/, "");
+
+        const replacements = {
+            dateStr: values.dateStr,
+            energy: values.energy,
+            year: values.year,
+            kw: values.kw,
+            displayTitle: `${values.year}-W${values.kw}_fitness`,
+            currentWeek: values.currentWeek
+        };
+
+        for (const [key, value] of Object.entries(replacements)) {
+            out = out.replace(new RegExp(`<%-\\s*${key}\\s*%>`, "g"), String(value));
+        }
+
+        return out;
+    };
+
     // 1. Ziel-Woche wählen (default: erste FREIE Woche ab nächster — überspringt schon geplante)
     let probe = moment().add(1, 'week');
     for (let i = 0; i < 60; i++) {
@@ -52,7 +73,13 @@ try {
     const shapeFile = app.vault.getAbstractFileByPath("zData/1tmpl/0calendar/weekplan_fitness.md");
     if (!shapeFile) { new Notice("❌ Shape file weekplan_fitness missing!"); return; }
     let body = await app.vault.read(shapeFile);
-    body = body.replace(/\{\{YEAR\}\}/g, year).replace(/\{\{KW\}\}/g, kw);
+    body = renderWeekplan(body, {
+        dateStr: target.format("YYYY-MM-DD"),
+        energy: "3",
+        year,
+        kw,
+        currentWeek
+    });
 
     await app.vault.create(finalDest, body);
     await new Promise(r => setTimeout(r, 150));

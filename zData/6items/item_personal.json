@@ -2,7 +2,7 @@
   "self_care_matrix": {
     "--- THE_EYE_ARCHITECTS ---": "Augen-Make-up (Kajal & Liner)",
     "beauty_kajal_alverde_naturkosmetik": {
-      "unit_price": 2.0,
+      "unit_price": 2,
       "unit_type": "piece",
       "label": "Alverde Kajal Eyeliner",
       "icon": "✏️",
@@ -37,11 +37,24 @@
         "de": "Alverde Kajal",
         "en": "Alverde Eyeliner Pencil",
         "es": "Lápiz de ojos Alverde"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "budni",
+      "price_value": 2,
+      "vendor_value": "budni",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 2,
+      "vendor_pure": "budni",
+      "price_market": 2,
+      "vendor_market": "budni"
     },
     "--- THE_HAIR_ENGINEERS ---": "Haarpflege (Reinigung & Struktur)",
     "care_shampoo_alverde_bio_quitte": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Bio-Quitte Shampoo",
       "icon": "🧴",
@@ -53,7 +66,7 @@
       "val": {
         "ph_level": 5.5,
         "surfactants": "Sugar-based (Mild)",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "meta": {
         "locations": [
@@ -74,17 +87,30 @@
       "lang": {
         "de": "Alverde Bio-Shampoo",
         "en": "Alverde Organic Shampoo"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "budni",
+      "price_value": 3,
+      "vendor_value": "budni",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 3,
+      "vendor_pure": "budni",
+      "price_market": 3,
+      "vendor_market": "budni"
     },
     "care_shampoo_cien_lidl": {
-      "unit_price": 1.0,
+      "unit_price": 1,
       "unit_type": "piece",
       "label": "Cien Tag für Tag Shampoo (Lidl)",
       "icon": "🛒",
       "room": "bathroom",
       "val": {
         "form": "Liquid",
-        "pl_score": 10.0
+        "pl_score": 10
       },
       "meta": {
         "locations": [
@@ -100,10 +126,23 @@
       "lang": {
         "de": "Lidl Cien Shampoo",
         "en": "Lidl Cien Shampoo"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 1,
+      "price_cheap": 1,
+      "vendor_cheap": "lidl",
+      "price_value": 1,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 1,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 1,
+      "vendor_pure": "lidl",
+      "price_market": 1,
+      "vendor_market": "lidl"
     },
     "care_conditioner_alverde_repair": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Repair Spülung (Bio-Avocado)",
       "icon": "🥑",
@@ -134,16 +173,29 @@
       "lang": {
         "de": "Alverde Spülung",
         "en": "Alverde Conditioner"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "budni",
+      "price_value": 3,
+      "vendor_value": "budni",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 3,
+      "vendor_pure": "budni",
+      "price_market": 3,
+      "vendor_market": "budni"
     },
     "--- THE_FACE_ARCHITECTS ---": "Teint-Optimierung (Make-up & BB-Cream)",
     "beauty_bb_cream_alverde_7in1": {
-      "unit_price": 4.0,
+      "unit_price": 4,
       "unit_type": "piece",
       "label": "Alverde BB Cream 7in1 (Bio-Zitronenmelisse)",
       "icon": "🧴",
       "room": "bathroom",
-      "pl_score": 9.0,
+      "pl_score": 9,
       "val": {
         "coverage": "Light/Natural",
         "spf": "None/Low",
@@ -164,10 +216,23 @@
       "lang": {
         "de": "Alverde BB Cream",
         "en": "Alverde Beauty Balm"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 4,
+      "price_cheap": 4,
+      "vendor_cheap": "budni",
+      "price_value": 4,
+      "vendor_value": "budni",
+      "price_pure_cheap": 4,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 4,
+      "vendor_pure": "budni",
+      "price_market": 4,
+      "vendor_market": "budni"
     },
     "beauty_powder_alverde_compact": {
-      "unit_price": 4.0,
+      "unit_price": 4,
       "unit_type": "piece",
       "label": "Alverde Compact Powder",
       "icon": "🎨",
@@ -192,11 +257,24 @@
       "lang": {
         "de": "Alverde Kompaktpuder",
         "en": "Alverde Pressed Powder"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 4,
+      "price_cheap": 4,
+      "vendor_cheap": "budni",
+      "price_value": 4,
+      "vendor_value": "budni",
+      "price_pure_cheap": 4,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 4,
+      "vendor_pure": "budni",
+      "price_market": 4,
+      "vendor_market": "budni"
     },
     "--- THE_CURL_ENGINEERS ---": "Locken-Physik (Reinigung & Definition)",
     "care_shampoo_alverde_locken": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Locken-Shampoo (Bio-Leinsamen & Bio-Sheabutter)",
       "icon": "🌀",
@@ -207,7 +285,7 @@
       "val": {
         "sulfate_free": "Yes",
         "moisture_level": "Extreme",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "meta": {
         "locations": [
@@ -224,17 +302,30 @@
       "lang": {
         "de": "Alverde Locken-Shampoo",
         "en": "Alverde Curl Shampoo"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "budni",
+      "price_value": 3,
+      "vendor_value": "budni",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 3,
+      "vendor_pure": "budni",
+      "price_market": 3,
+      "vendor_market": "budni"
     },
     "care_conditioner_alverde_locken": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Locken-Spülung",
       "icon": "🥑",
       "room": "bathroom",
       "val": {
         "silicone_free": "Yes",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "props": [
         "Sorgt für die Bündelung der Locken durch Faserglättung",
@@ -243,11 +334,24 @@
       "lang": {
         "de": "Alverde Locken-Spülung",
         "en": "Alverde Curl Conditioner"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "",
+      "price_value": 3,
+      "vendor_value": "",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "",
+      "price_pure": 3,
+      "vendor_pure": "",
+      "price_market": 3,
+      "vendor_market": ""
     },
     "--- THE_FLORAL_BARS ---": "Feste Seifen (Lavendel & Ylang-Ylang)",
     "care_soap_alverde_lavendel": {
-      "unit_price": 1.0,
+      "unit_price": 1,
       "unit_type": "piece",
       "label": "Alverde Pflanzenölseife Lavendel",
       "icon": "💜",
@@ -276,16 +380,29 @@
       "lang": {
         "de": "Alverde Lavendelseife",
         "en": "Alverde Lavender Soap"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 1,
+      "price_cheap": 1,
+      "vendor_cheap": "budni",
+      "price_value": 1,
+      "vendor_value": "budni",
+      "price_pure_cheap": 1,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 1,
+      "vendor_pure": "budni",
+      "price_market": 1,
+      "vendor_market": "budni"
     },
     "care_soap_ylang_ylang_special": {
-      "unit_price": 2.0,
+      "unit_price": 2,
       "unit_type": "piece",
       "label": "Alverde Pflanzenölseife (Exotisch - Ylang-Ylang Mix)",
       "icon": "🟡",
       "room": "bathroom",
       "latin": "Cananga odorata",
-      "pl_score": 8.0,
+      "pl_score": 8,
       "meta": {
         "locations": [
           "budni",
@@ -301,17 +418,30 @@
       "lang": {
         "de": "Ylang-Ylang Seife",
         "en": "Ylang Ylang Soap"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "budni",
+      "price_value": 2,
+      "vendor_value": "budni",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 2,
+      "vendor_pure": "budni",
+      "price_market": 2,
+      "vendor_market": "budni"
     },
     "care_shower_gel_cien_lidl": {
-      "unit_price": 1.0,
+      "unit_price": 1,
       "unit_type": "piece",
       "label": "Cien Family Duschgel",
       "icon": "🌊",
       "room": "bathroom",
       "val": {
         "size": "500ml",
-        "pl_score": 10.0
+        "pl_score": 10
       },
       "meta": {
         "locations": [
@@ -327,17 +457,30 @@
       "lang": {
         "de": "Lidl Cien Duschgel",
         "en": "Lidl Cien Shower Gel"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 1,
+      "price_cheap": 1,
+      "vendor_cheap": "lidl",
+      "price_value": 1,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 1,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 1,
+      "vendor_pure": "lidl",
+      "price_market": 1,
+      "vendor_market": "lidl"
     },
     "care_hand_soap_alverde_bio": {
-      "unit_price": 2.0,
+      "unit_price": 2,
       "unit_type": "piece",
       "label": "Alverde Flüssigseife Bio-Minze",
       "icon": "🧼",
       "room": "bathroom",
       "val": {
         "refillable": "Yes",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "meta": {
         "locations": [
@@ -353,11 +496,24 @@
       "lang": {
         "de": "Alverde Bio-Seife",
         "en": "Alverde Liquid Soap"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "budni",
+      "price_value": 2,
+      "vendor_value": "budni",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 2,
+      "vendor_pure": "budni",
+      "price_market": 2,
+      "vendor_market": "budni"
     },
     "--- THE_ORBITAL_GUARDS ---": "Augenpflege (Sensible Zonen)",
     "care_eye_cream_alverde_wildrose": {
-      "unit_price": 5.0,
+      "unit_price": 5,
       "unit_type": "piece",
       "label": "Alverde Augencreme Bio-Wildrose",
       "icon": "👁️",
@@ -367,7 +523,7 @@
       ],
       "val": {
         "moisture_level": "High",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "meta": {
         "locations": [
@@ -384,11 +540,24 @@
       "lang": {
         "de": "Alverde Augencreme",
         "en": "Alverde Eye Cream"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 5,
+      "price_cheap": 5,
+      "vendor_cheap": "budni",
+      "price_value": 5,
+      "vendor_value": "budni",
+      "price_pure_cheap": 5,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 5,
+      "vendor_pure": "budni",
+      "price_market": 5,
+      "vendor_market": "budni"
     },
     "--- THE_KERATIN_STABILIZERS ---": "Nagelpflege (Struktur-Härtung)",
     "care_nail_oil_alverde_aprikose": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Nagelpflegeöl (Aprikose)",
       "icon": "💅",
@@ -415,18 +584,31 @@
       "lang": {
         "de": "Alverde Nagelöl",
         "en": "Alverde Nail Oil"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "budni",
+      "price_value": 3,
+      "vendor_value": "budni",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 3,
+      "vendor_pure": "budni",
+      "price_market": 3,
+      "vendor_market": "budni"
     },
     "--- THE_BODY_BARRIER ---": "Körperlotion (Großflächen-Hydratation)",
     "care_body_lotion_alverde_bio_olive": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Bodylotion Bio-Olive",
       "icon": "🧴",
       "room": "bathroom",
       "val": {
         "skin_type": "Very Dry",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "meta": {
         "locations": [
@@ -443,10 +625,23 @@
       "lang": {
         "de": "Alverde Bodylotion",
         "en": "Alverde Body Lotion"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "budni",
+      "price_value": 3,
+      "vendor_value": "budni",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 3,
+      "vendor_pure": "budni",
+      "price_market": 3,
+      "vendor_market": "budni"
     },
     "care_face_cream_alverde_aqua_24h": {
-      "unit_price": 4.0,
+      "unit_price": 4,
       "unit_type": "piece",
       "label": "Alverde Aqua 24h Hyaluron Meeresalge",
       "icon": "🌊",
@@ -474,13 +669,26 @@
       "lang": {
         "de": "Alverde Aqua Gesichtscreme",
         "en": "Alverde Aqua Face Cream"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 4,
+      "price_cheap": 4,
+      "vendor_cheap": "budni",
+      "price_value": 4,
+      "vendor_value": "budni",
+      "price_pure_cheap": 4,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 4,
+      "vendor_pure": "budni",
+      "price_market": 4,
+      "vendor_market": "budni"
     }
   },
   "dental_hygiene_matrix": {
     "--- THE_ENAMEL_GUARDS ---": "Zahnpasta (Fluorid- & Schutz-Tech)",
     "care_toothpaste_cien_dental_lidl": {
-      "unit_price": 1.0,
+      "unit_price": 1,
       "unit_type": "piece",
       "label": "Cien Dental Rundumschutz (Lidl)",
       "icon": "🪥",
@@ -493,7 +701,7 @@
       "val": {
         "fluoride_ppm": 1450,
         "rda_value": "Medium (approx. 70)",
-        "pl_score": 10.0
+        "pl_score": 10
       },
       "meta": {
         "locations": [
@@ -513,10 +721,23 @@
       "lang": {
         "de": "Lidl Cien Zahnpasta",
         "en": "Lidl Cien Toothpaste"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 1,
+      "price_cheap": 1,
+      "vendor_cheap": "lidl",
+      "price_value": 1,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 1,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 1,
+      "vendor_pure": "lidl",
+      "price_market": 1,
+      "vendor_market": "lidl"
     },
     "care_toothpaste_elmex_professional": {
-      "unit_price": 5.0,
+      "unit_price": 5,
       "unit_type": "piece",
       "label": "Elmex Sensitive Professional",
       "icon": "🛡️",
@@ -548,10 +769,23 @@
       "lang": {
         "de": "Elmex Professional",
         "en": "Elmex Sensitive"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "everywhere",
+      "pref_price": 5,
+      "price_cheap": 5,
+      "vendor_cheap": "everywhere",
+      "price_value": 5,
+      "vendor_value": "everywhere",
+      "price_pure_cheap": 5,
+      "vendor_pure_cheap": "everywhere",
+      "price_pure": 5,
+      "vendor_pure": "everywhere",
+      "price_market": 5,
+      "vendor_market": "everywhere"
     },
     "care_toothpaste_alverde_bio_minze": {
-      "unit_price": 2.0,
+      "unit_price": 2,
       "unit_type": "piece",
       "label": "Alverde Zahncreme Bio-Minze",
       "icon": "🌱",
@@ -575,14 +809,27 @@
       "lang": {
         "de": "Alverde Zahnpasta",
         "en": "Alverde Natural Toothpaste"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "budni",
+      "price_value": 2,
+      "vendor_value": "budni",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 2,
+      "vendor_pure": "budni",
+      "price_market": 2,
+      "vendor_market": "budni"
     },
     "care_toothpaste_cien_dental": {
-      "unit_price": 1.0,
+      "unit_price": 1,
       "unit_type": "piece",
       "label": "Cien Dental Rundumschutz",
       "room": "bathroom",
-      "pl_score": 10.0,
+      "pl_score": 10,
       "use_case": "Kariesprophylaxe & Zahnschmelzhärtung",
       "tech_benefit": "Präzise Fluorid-Dosis ($1450 ppm$); wandelt Hydroxyapatit in säureresistenten Fluorapatit um.",
       "meta": {
@@ -590,11 +837,24 @@
           "lidl"
         ],
         "brand": "Cien"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 1,
+      "price_cheap": 1,
+      "vendor_cheap": "lidl",
+      "price_value": 1,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 1,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 1,
+      "vendor_pure": "lidl",
+      "price_market": 1,
+      "vendor_market": "lidl"
     },
     "--- THE_GREEN_PROTECTORS ---": "Natur-Zahnpasta (Bio-Wirkstoffe)",
     "care_toothpaste_alverde_5in1_nanaminze": {
-      "unit_price": 2.0,
+      "unit_price": 2,
       "unit_type": "piece",
       "label": "Alverde 5-in-1 Zahncreme (Nanaminze)",
       "icon": "🌱",
@@ -623,17 +883,30 @@
       "lang": {
         "de": "Alverde 5-in-1",
         "en": "Alverde 5-in-1 Toothpaste"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "budni",
+      "price_value": 2,
+      "vendor_value": "budni",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 2,
+      "vendor_pure": "budni",
+      "price_market": 2,
+      "vendor_market": "budni"
     },
     "care_toothpaste_alverde_fluoridfrei": {
-      "unit_price": 2.0,
+      "unit_price": 2,
       "unit_type": "piece",
       "label": "Alverde Zahncreme Bio-Minze (Fluoridfrei)",
       "icon": "🍃",
       "room": "bathroom",
       "val": {
         "fluoride": "None",
-        "pl_score": 8.0
+        "pl_score": 8
       },
       "meta": {
         "locations": [
@@ -650,10 +923,23 @@
       "lang": {
         "de": "Alverde Fluoridfrei",
         "en": "Alverde Fluoride-Free"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "budni",
+      "price_value": 2,
+      "vendor_value": "budni",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 2,
+      "vendor_pure": "budni",
+      "price_market": 2,
+      "vendor_market": "budni"
     },
     "care_toothpaste_weleda_sole": {
-      "unit_price": 6.0,
+      "unit_price": 6,
       "unit_type": "piece",
       "label": "Weleda Sole-Zahncreme",
       "icon": "🌊",
@@ -682,11 +968,24 @@
       "lang": {
         "de": "Weleda Sole",
         "en": "Weleda Salt Toothpaste"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 6,
+      "price_cheap": 6,
+      "vendor_cheap": "budni",
+      "price_value": 6,
+      "vendor_value": "budni",
+      "price_pure_cheap": 6,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 6,
+      "vendor_pure": "budni",
+      "price_market": 6,
+      "vendor_market": "budni"
     },
     "--- THE_MECHANICAL_SQUAD ---": "Zahnbürsten & Tools",
     "care_toothbrush_dontodent_dm_budni": {
-      "unit_price": 20.0,
+      "unit_price": 20,
       "unit_type": "piece",
       "label": "Dontodent Akku-Zahnbürste Active",
       "icon": "⚡",
@@ -696,7 +995,7 @@
       ],
       "val": {
         "tech": "Oscillating-Rotating",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "meta": {
         "locations": [
@@ -713,10 +1012,23 @@
       "lang": {
         "de": "Dontodent Elektro-Bürste",
         "en": "Dontodent Electric Toothbrush"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 20,
+      "price_cheap": 20,
+      "vendor_cheap": "budni",
+      "price_value": 20,
+      "vendor_value": "budni",
+      "price_pure_cheap": 20,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 20,
+      "vendor_pure": "budni",
+      "price_market": 20,
+      "vendor_market": "budni"
     },
     "care_interdental_sticks_cien_lidl": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Cien Interdental-Sticks",
       "icon": "🧵",
@@ -739,13 +1051,26 @@
       "lang": {
         "de": "Lidl Interdental-Sticks",
         "en": "Lidl Interdental Brushes"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "lidl",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "lidl",
+      "price_value": 3,
+      "vendor_value": "lidl",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "lidl",
+      "price_pure": 3,
+      "vendor_pure": "lidl",
+      "price_market": 3,
+      "vendor_market": "lidl"
     }
   },
   "aroma_customization_matrix": {
     "--- THE_NEUTRAL_BASES ---": "Neutrale Trägersysteme (Basis)",
     "care_laundry_neutral_lotion_alverde": {
-      "unit_price": 4.0,
+      "unit_price": 4,
       "unit_type": "piece",
       "label": "Alverde Ultra Sensitiv Körperlotion",
       "icon": "🧴",
@@ -771,16 +1096,29 @@
       "lang": {
         "de": "Alverde Ultra Sensitiv Lotion",
         "en": "Alverde Neutral Body Lotion"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 4,
+      "price_cheap": 4,
+      "vendor_cheap": "budni",
+      "price_value": 4,
+      "vendor_value": "budni",
+      "price_pure_cheap": 4,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 4,
+      "vendor_pure": "budni",
+      "price_market": 4,
+      "vendor_market": "budni"
     },
     "care_neutral_soap_alverde": {
-      "unit_price": 1.0,
+      "unit_price": 1,
       "unit_type": "piece",
       "label": "Alverde Pflanzenölseife (Neutral / Unparfümiert)",
       "icon": "🧼",
       "room": "bathroom",
       "val": {
-        "pl_score": 10.0
+        "pl_score": 10
       },
       "meta": {
         "locations": [
@@ -796,11 +1134,24 @@
       "lang": {
         "de": "Alverde Neutralseife",
         "en": "Alverde Neutral Soap"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 1,
+      "price_cheap": 1,
+      "vendor_cheap": "budni",
+      "price_value": 1,
+      "vendor_value": "budni",
+      "price_pure_cheap": 1,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 1,
+      "vendor_pure": "budni",
+      "price_market": 1,
+      "vendor_market": "budni"
     },
     "--- THE_AROMA_MODULES ---": "Ätherische Wirkstoffe (Aroma)",
     "aroma_oil_ylang_ylang": {
-      "unit_price": 8.0,
+      "unit_price": 8,
       "unit_type": "piece",
       "label": "Ylang-Ylang Ätherisches Öl",
       "icon": "🟡",
@@ -830,10 +1181,23 @@
       "lang": {
         "de": "Ylang-Ylang Öl",
         "en": "Ylang Ylang Essential Oil"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 8,
+      "price_cheap": 8,
+      "vendor_cheap": "budni",
+      "price_value": 8,
+      "vendor_value": "budni",
+      "price_pure_cheap": 8,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 8,
+      "vendor_pure": "budni",
+      "price_market": 8,
+      "vendor_market": "budni"
     },
     "aroma_oil_lavendel_bio": {
-      "unit_price": 6.0,
+      "unit_price": 6,
       "unit_type": "piece",
       "label": "Bio-Lavendelöl",
       "icon": "💜",
@@ -849,11 +1213,24 @@
       "lang": {
         "de": "Lavendelöl",
         "en": "Lavender Essential Oil"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "",
+      "pref_price": 6,
+      "price_cheap": 6,
+      "vendor_cheap": "",
+      "price_value": 6,
+      "vendor_value": "",
+      "price_pure_cheap": 6,
+      "vendor_pure_cheap": "",
+      "price_pure": 6,
+      "vendor_pure": "",
+      "price_market": 6,
+      "vendor_market": ""
     },
     "--- THE_CROWN_JEWEL ---": "Spitzenreiter der Regeneration",
     "care_wildrosenoel_alverde": {
-      "unit_price": 5.0,
+      "unit_price": 5,
       "unit_type": "piece",
       "label": "Alverde Bio-Wildrosenöl",
       "room": "bathroom",
@@ -870,13 +1247,26 @@
       "props": [
         "Beste natürliche Alternative zu Bio-Oil",
         "Hoher Anteil an Omega-3 und Omega-6 Fettsäuren"
-      ]
+      ],
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 5,
+      "price_cheap": 5,
+      "vendor_cheap": "budni",
+      "price_value": 5,
+      "vendor_value": "budni",
+      "price_pure_cheap": 5,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 5,
+      "vendor_pure": "budni",
+      "price_market": 5,
+      "vendor_market": "budni"
     }
   },
   "feminine_hygiene_nature": {
     "--- THE_ABSORPTION_CORES ---": "Tampons (Interne Kapillar-Logistik)",
     "hygiene_tampons_alverde_bio": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Bio-Tampons (Normal/Super)",
       "icon": "🌿",
@@ -905,11 +1295,24 @@
       "lang": {
         "de": "Alverde Bio-Tampons",
         "en": "Alverde Organic Tampons"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "budni",
+      "price_value": 3,
+      "vendor_value": "budni",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 3,
+      "vendor_pure": "budni",
+      "price_market": 3,
+      "vendor_market": "budni"
     },
     "--- THE_EXTERNAL_BARRIERS ---": "Binden & Einlagen (Oberflächen-Tech)",
     "hygiene_binden_alverde_bio": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Bio-Binden / Slipeinlagen",
       "icon": "☁️",
@@ -920,7 +1323,7 @@
       "val": {
         "surface": "Organic Cotton",
         "backsheet": "Bio-Plastic (Compostable)",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "meta": {
         "locations": [
@@ -937,11 +1340,24 @@
       "lang": {
         "de": "Alverde Bio-Binden",
         "en": "Alverde Organic Pads"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "budni",
+      "price_value": 3,
+      "vendor_value": "budni",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 3,
+      "vendor_pure": "budni",
+      "price_market": 3,
+      "vendor_market": "budni"
     },
     "--- THE_SUSTAINABLE_ALTERNATIVE ---": "Menstruationstassen (Material-Wissenschaft)",
     "hygiene_cup_selenz_alverde": {
-      "unit_price": 15.0,
+      "unit_price": 15,
       "unit_type": "piece",
       "label": "Alverde Menstruationstasse",
       "icon": "🍷",
@@ -949,7 +1365,7 @@
       "val": {
         "material": "Medical Grade Silicone",
         "reusable": "Yes",
-        "pl_score": 10.0
+        "pl_score": 10
       },
       "meta": {
         "locations": [
@@ -966,11 +1382,24 @@
       "lang": {
         "de": "Alverde Menstasse",
         "en": "Alverde Menstrual Cup"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 15,
+      "price_cheap": 15,
+      "vendor_cheap": "budni",
+      "price_value": 15,
+      "vendor_value": "budni",
+      "price_pure_cheap": 15,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 15,
+      "vendor_pure": "budni",
+      "price_market": 15,
+      "vendor_market": "budni"
     },
     "--- THE_TEXTILE_ENGINEERS ---": "Perioden-Unterwäsche (Mehrweg-Logistik)",
     "hygiene_period_panty_selenz_dm_budni": {
-      "unit_price": 15.0,
+      "unit_price": 15,
       "unit_type": "piece",
       "label": "Jessa / Budni Perioden-Unterwäsche",
       "icon": "🩲",
@@ -999,17 +1428,30 @@
       "lang": {
         "de": "Perioden-Unterhose",
         "en": "Period Panty"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "budni",
+      "pref_price": 15,
+      "price_cheap": 15,
+      "vendor_cheap": "budni",
+      "price_value": 15,
+      "vendor_value": "budni",
+      "price_pure_cheap": 15,
+      "vendor_pure_cheap": "budni",
+      "price_pure": 15,
+      "vendor_pure": "budni",
+      "price_market": 15,
+      "vendor_market": "budni"
     },
     "--- THE_BRAND_SYNERGY ---": "Natur-Alternativen (Vergleichswerte)",
     "hygiene_facelle_nature_rossmann": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Facelle Natur (Rossmann)",
       "icon": "🌿",
       "val": {
         "material": "Organic Cotton",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "props": [
         "Technologisch gleichwertig zu Alverde",
@@ -1018,16 +1460,29 @@
       "lang": {
         "de": "Rossmann Bio-Hygiene",
         "en": "Rossmann Organic Hygiene"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "",
+      "price_value": 3,
+      "vendor_value": "",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "",
+      "price_pure": 3,
+      "vendor_pure": "",
+      "price_market": 3,
+      "vendor_market": ""
     },
     "hygiene_jessa_nature_dm": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Jessa Nature (dm)",
       "icon": "🍃",
       "val": {
         "material": "FSC-certified Wood Pulp / Cotton",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "props": [
         "Nutzt chlorfrei gebleichten Zellstoff und Bio-Baumwolle",
@@ -1036,11 +1491,24 @@
       "lang": {
         "de": "dm Jessa Nature",
         "en": "dm Jessa Nature"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "",
+      "price_value": 3,
+      "vendor_value": "",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "",
+      "price_pure": 3,
+      "vendor_pure": "",
+      "price_market": 3,
+      "vendor_market": ""
     },
     "--- THE_DAILY_FRESHNESS ---": "Slipeinlagen (Täglicher Schutz)",
     "hygiene_panty_liners_jessa_nature": {
-      "unit_price": 2.0,
+      "unit_price": 2,
       "unit_type": "piece",
       "label": "Jessa Nature Slipeinlagen (dm/Budni)",
       "icon": "☁️",
@@ -1061,18 +1529,31 @@
       "lang": {
         "de": "Jessa Bio-Slipeinlagen",
         "en": "Jessa Organic Liners"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "",
+      "pref_price": 2,
+      "price_cheap": 2,
+      "vendor_cheap": "",
+      "price_value": 2,
+      "vendor_value": "",
+      "price_pure_cheap": 2,
+      "vendor_pure_cheap": "",
+      "price_pure": 2,
+      "vendor_pure": "",
+      "price_market": 2,
+      "vendor_market": ""
     },
     "--- THE_SECURE_HOLD ---": "Binden mit Flügeln (Stabilitäts-Tech)",
     "hygiene_pads_wings_facelle_nature": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Facelle Natur Ultra-Binden Flügel (Rossmann)",
       "icon": "🦋",
       "room": "bathroom",
       "val": {
         "wings": "Double-Adhesion",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "props": [
         "Flügel sorgen technologisch für fixierten Sitz bei Bewegung",
@@ -1082,11 +1563,24 @@
       "lang": {
         "de": "Facelle Flügelbinden",
         "en": "Facelle Wings Pads"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "",
+      "price_value": 3,
+      "vendor_value": "",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "",
+      "price_pure": 3,
+      "vendor_pure": "",
+      "price_market": 3,
+      "vendor_market": ""
     },
     "--- THE_NIGHT_SHIELD ---": "Nachtbinden (Maximal-Volumen)",
     "hygiene_pads_night_alverde_bio": {
-      "unit_price": 3.0,
+      "unit_price": 3,
       "unit_type": "piece",
       "label": "Alverde Bio-Binden Nacht",
       "icon": "🌙",
@@ -1097,7 +1591,7 @@
       "val": {
         "length": "Extended",
         "absorption": "Heavy Duty",
-        "pl_score": 9.0
+        "pl_score": 9
       },
       "props": [
         "Technologisch verlängerte Rückseite für Schutz im Liegen",
@@ -1107,13 +1601,26 @@
       "lang": {
         "de": "Alverde Nachtbinden",
         "en": "Alverde Night Pads"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "",
+      "pref_price": 3,
+      "price_cheap": 3,
+      "vendor_cheap": "",
+      "price_value": 3,
+      "vendor_value": "",
+      "price_pure_cheap": 3,
+      "vendor_pure_cheap": "",
+      "price_pure": 3,
+      "vendor_pure": "",
+      "price_market": 3,
+      "vendor_market": ""
     }
   },
   "supplement": {
     "--- DROGERIE_MINERALS_AND_METALS ---": "Mineralien & Spurenelemente (Standard-Bioverfügbarkeit)",
     "supp_magnesium_400_depot": {
-      "unit_price": 6.0,
+      "unit_price": 6,
       "unit_type": "piece",
       "label": "Magnesium 400 Depot (Doppelherz/Altapharma)",
       "icon": "💊",
@@ -1123,7 +1630,7 @@
       ],
       "val": {
         "kcal": 0,
-        "magnesium_mg": 400.0,
+        "magnesium_mg": 400,
         "vit_b1_mg": 1.1,
         "vit_b6_mg": 1.4,
         "vit_b12_mcg": 2.5
@@ -1144,10 +1651,23 @@
       "lang": {
         "de": "Magnesium 400 Depot",
         "en": "Magnesium 400 Depot"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 6,
+      "price_cheap": 6,
+      "vendor_cheap": "rossmann",
+      "price_value": 6,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 6,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 6,
+      "vendor_pure": "rossmann",
+      "price_market": 6,
+      "vendor_market": "rossmann"
     },
     "supp_magnesium_citrat_stick": {
-      "unit_price": 8.0,
+      "unit_price": 8,
       "unit_type": "piece",
       "label": "Magnesium Citrat (Direkt-Stick)",
       "icon": "🧪",
@@ -1157,7 +1677,7 @@
       ],
       "val": {
         "kcal": 5,
-        "magnesium_mg": 400.0,
+        "magnesium_mg": 400,
         "carbs_total_g": 1.2
       },
       "meta": {
@@ -1174,10 +1694,23 @@
       ],
       "lang": {
         "de": "Magnesium Citrat Stick"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "dm",
+      "pref_price": 8,
+      "price_cheap": 8,
+      "vendor_cheap": "dm",
+      "price_value": 8,
+      "vendor_value": "dm",
+      "price_pure_cheap": 8,
+      "vendor_pure_cheap": "dm",
+      "price_pure": 8,
+      "vendor_pure": "dm",
+      "price_market": 8,
+      "vendor_market": "dm"
     },
     "supp_iron_vit_c_taxofit": {
-      "unit_price": 6.0,
+      "unit_price": 6,
       "unit_type": "piece",
       "label": "Eisen + Vitamin C (Taxofit/Doppelherz)",
       "icon": "🩸",
@@ -1187,8 +1720,8 @@
       ],
       "val": {
         "kcal": 0,
-        "iron_animal_mg": 50.0,
-        "vit_c_mg": 50.0
+        "iron_animal_mg": 50,
+        "vit_c_mg": 50
       },
       "meta": {
         "locations": [
@@ -1204,10 +1737,23 @@
       ],
       "lang": {
         "de": "Eisen + Vitamin C"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 6,
+      "price_cheap": 6,
+      "vendor_cheap": "rossmann",
+      "price_value": 6,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 6,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 6,
+      "vendor_pure": "rossmann",
+      "price_market": 6,
+      "vendor_market": "rossmann"
     },
     "supp_zinc_histidin_300": {
-      "unit_price": 6.0,
+      "unit_price": 6,
       "unit_type": "piece",
       "label": "Zink + Histidin + Vit C",
       "icon": "🛡️",
@@ -1217,8 +1763,8 @@
       ],
       "val": {
         "kcal": 0,
-        "zinc_mg": 15.0,
-        "vit_c_mg": 300.0
+        "zinc_mg": 15,
+        "vit_c_mg": 300
       },
       "meta": {
         "locations": [
@@ -1234,10 +1780,23 @@
       ],
       "lang": {
         "de": "Zink + Histidin"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 6,
+      "price_cheap": 6,
+      "vendor_cheap": "rossmann",
+      "price_value": 6,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 6,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 6,
+      "vendor_pure": "rossmann",
+      "price_market": 6,
+      "vendor_market": "rossmann"
     },
     "supp_calcium_600_d3": {
-      "unit_price": 5.0,
+      "unit_price": 5,
       "unit_type": "piece",
       "label": "Calcium 600 + D3 (Abtei/Mivolis)",
       "icon": "🦴",
@@ -1247,8 +1806,8 @@
       ],
       "val": {
         "kcal": 0,
-        "calcium_mg": 600.0,
-        "vit_d_mcg": 5.0
+        "calcium_mg": 600,
+        "vit_d_mcg": 5
       },
       "meta": {
         "locations": [
@@ -1264,10 +1823,23 @@
       ],
       "lang": {
         "de": "Calcium + D3"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 5,
+      "price_cheap": 5,
+      "vendor_cheap": "rossmann",
+      "price_value": 5,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 5,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 5,
+      "vendor_pure": "rossmann",
+      "price_market": 5,
+      "vendor_market": "rossmann"
     },
     "supp_selenium_mini": {
-      "unit_price": 6.0,
+      "unit_price": 6,
       "unit_type": "piece",
       "label": "Selen (Depot/Mini-Tabs)",
       "icon": "🛡️",
@@ -1277,7 +1849,7 @@
       ],
       "val": {
         "kcal": 0,
-        "selenium_mcg": 55.0
+        "selenium_mcg": 55
       },
       "meta": {
         "locations": [
@@ -1292,11 +1864,24 @@
       ],
       "lang": {
         "de": "Selen"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 6,
+      "price_cheap": 6,
+      "vendor_cheap": "rossmann",
+      "price_value": 6,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 6,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 6,
+      "vendor_pure": "rossmann",
+      "price_market": 6,
+      "vendor_market": "rossmann"
     },
     "--- DROGERIE_VITAMINS_AND_OILS ---": "Vitamine & Lipide (Basis-Standard)",
     "supp_b_complex_all_in_one": {
-      "unit_price": 5.0,
+      "unit_price": 5,
       "unit_type": "piece",
       "label": "B-Komplex (Gesamtspektrum)",
       "icon": "⚡",
@@ -1310,10 +1895,10 @@
         "vit_b2_mg": 1.4,
         "vit_b6_mg": 1.4,
         "vit_b12_mcg": 2.5,
-        "folic_acid_mcg": 200.0,
-        "vit_b3_mg": 16.0,
-        "vit_b5_mg": 6.0,
-        "vit_b7_mcg": 50.0
+        "folic_acid_mcg": 200,
+        "vit_b3_mg": 16,
+        "vit_b5_mg": 6,
+        "vit_b7_mcg": 50
       },
       "meta": {
         "locations": [
@@ -1330,10 +1915,23 @@
       ],
       "lang": {
         "de": "Vitamin B-Komplex"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 5,
+      "price_cheap": 5,
+      "vendor_cheap": "rossmann",
+      "price_value": 5,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 5,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 5,
+      "vendor_pure": "rossmann",
+      "price_market": 5,
+      "vendor_market": "rossmann"
     },
     "supp_vit_d3_1000_ie": {
-      "unit_price": 5.0,
+      "unit_price": 5,
       "unit_type": "piece",
       "label": "Vitamin D3 1000 IE (Basis)",
       "icon": "☀️",
@@ -1343,7 +1941,7 @@
       ],
       "val": {
         "kcal": 1,
-        "vit_d_mcg": 25.0,
+        "vit_d_mcg": 25,
         "fat_total_g": 0.1
       },
       "meta": {
@@ -1360,10 +1958,23 @@
       ],
       "lang": {
         "de": "Vitamin D3 1000 IE"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "dm",
+      "pref_price": 5,
+      "price_cheap": 5,
+      "vendor_cheap": "dm",
+      "price_value": 5,
+      "vendor_value": "dm",
+      "price_pure_cheap": 5,
+      "vendor_pure_cheap": "dm",
+      "price_pure": 5,
+      "vendor_pure": "dm",
+      "price_market": 5,
+      "vendor_market": "dm"
     },
     "supp_vit_c_depot_500": {
-      "unit_price": 5.0,
+      "unit_price": 5,
       "unit_type": "piece",
       "label": "Vitamin C 500 Depot",
       "icon": "🍊",
@@ -1373,7 +1984,7 @@
       ],
       "val": {
         "kcal": 0,
-        "vit_c_mg": 500.0
+        "vit_c_mg": 500
       },
       "meta": {
         "locations": [
@@ -1388,10 +1999,23 @@
       ],
       "lang": {
         "de": "Vitamin C Depot"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 5,
+      "price_cheap": 5,
+      "vendor_cheap": "rossmann",
+      "price_value": 5,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 5,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 5,
+      "vendor_pure": "rossmann",
+      "price_market": 5,
+      "vendor_market": "rossmann"
     },
     "supp_omega3_1000_standard": {
-      "unit_price": 8.0,
+      "unit_price": 8,
       "unit_type": "piece",
       "label": "Omega-3 1000mg (Fischöl)",
       "icon": "🐟",
@@ -1401,10 +2025,10 @@
       ],
       "val": {
         "kcal": 9,
-        "fat_total_g": 1.0,
-        "omega3_total_mg": 300.0,
-        "epa_mg": 180.0,
-        "dha_mg": 120.0
+        "fat_total_g": 1,
+        "omega3_total_mg": 300,
+        "epa_mg": 180,
+        "dha_mg": 120
       },
       "meta": {
         "locations": [
@@ -1420,11 +2044,24 @@
       ],
       "lang": {
         "de": "Omega-3 1000mg"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "dm",
+      "pref_price": 8,
+      "price_cheap": 8,
+      "vendor_cheap": "dm",
+      "price_value": 8,
+      "vendor_value": "dm",
+      "price_pure_cheap": 8,
+      "vendor_pure_cheap": "dm",
+      "price_pure": 8,
+      "vendor_pure": "dm",
+      "price_market": 8,
+      "vendor_market": "dm"
     },
     "--- DROGERIE_PROTEINS_AND_SPORT ---": "Proteine & Performance (Standard)",
     "supp_whey_sportness_dm": {
-      "unit_price": 15.0,
+      "unit_price": 15,
       "unit_type": "piece",
       "label": "dm Sportness Whey Protein",
       "icon": "🥛",
@@ -1434,7 +2071,7 @@
       ],
       "val": {
         "kcal": 112,
-        "protein_g": 23.0,
+        "protein_g": 23,
         "carbs_total_g": 2.1,
         "fat_total_g": 1.4
       },
@@ -1451,10 +2088,23 @@
       ],
       "lang": {
         "de": "Sportness Whey"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "dm",
+      "pref_price": 15,
+      "price_cheap": 15,
+      "vendor_cheap": "dm",
+      "price_value": 15,
+      "vendor_value": "dm",
+      "price_pure_cheap": 15,
+      "vendor_pure_cheap": "dm",
+      "price_pure": 15,
+      "vendor_pure": "dm",
+      "price_market": 15,
+      "vendor_market": "dm"
     },
     "supp_vegan_protein_wellmix": {
-      "unit_price": 15.0,
+      "unit_price": 15,
       "unit_type": "piece",
       "label": "WellMix Vegan Protein",
       "icon": "🌱",
@@ -1464,7 +2114,7 @@
       ],
       "val": {
         "kcal": 110,
-        "protein_g": 21.0,
+        "protein_g": 21,
         "carbs_total_g": 1.5,
         "fat_total_g": 1.8
       },
@@ -1481,10 +2131,23 @@
       ],
       "lang": {
         "de": "WellMix Vegan Protein"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 15,
+      "price_cheap": 15,
+      "vendor_cheap": "rossmann",
+      "price_value": 15,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 15,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 15,
+      "vendor_pure": "rossmann",
+      "price_market": 15,
+      "vendor_market": "rossmann"
     },
     "supp_creatin_pur_rossmann": {
-      "unit_price": 20.0,
+      "unit_price": 20,
       "unit_type": "piece",
       "label": "Creatin Monohydrat (Pulver)",
       "icon": "💪",
@@ -1494,7 +2157,7 @@
       ],
       "val": {
         "kcal": 0,
-        "creatine_g": 3.0
+        "creatine_g": 3
       },
       "meta": {
         "locations": [
@@ -1509,11 +2172,24 @@
       ],
       "lang": {
         "de": "Creatin Monohydrat"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 20,
+      "price_cheap": 20,
+      "vendor_cheap": "rossmann",
+      "price_value": 20,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 20,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 20,
+      "vendor_pure": "rossmann",
+      "price_market": 20,
+      "vendor_market": "rossmann"
     },
     "--- DROGERIE_BIOHACKS_AND_EXTRACTS ---": "Extrakte & Spezial-Supps",
     "supp_ashwagandha_doppelherz": {
-      "unit_price": 10.0,
+      "unit_price": 10,
       "unit_type": "piece",
       "label": "Ashwagandha + B6 + B12",
       "icon": "🧘",
@@ -1525,7 +2201,7 @@
         "kcal": 0,
         "vit_b6_mg": 1.4,
         "vit_b12_mcg": 2.5,
-        "ashwagandha_extract_mg": 300.0
+        "ashwagandha_extract_mg": 300
       },
       "meta": {
         "locations": [
@@ -1541,10 +2217,23 @@
       ],
       "lang": {
         "de": "Ashwagandha Kapseln"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 10,
+      "price_cheap": 10,
+      "vendor_cheap": "rossmann",
+      "price_value": 10,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 10,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 10,
+      "vendor_pure": "rossmann",
+      "price_market": 10,
+      "vendor_market": "rossmann"
     },
     "supp_melatonin_spray": {
-      "unit_price": 8.0,
+      "unit_price": 8,
       "unit_type": "piece",
       "label": "Melatonin Sofort-Spray",
       "icon": "🌙",
@@ -1554,7 +2243,7 @@
       ],
       "val": {
         "kcal": 0,
-        "melatonin_mg": 1.0
+        "melatonin_mg": 1
       },
       "meta": {
         "locations": [
@@ -1570,10 +2259,23 @@
       ],
       "lang": {
         "de": "Melatonin Spray"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "dm",
+      "pref_price": 8,
+      "price_cheap": 8,
+      "vendor_cheap": "dm",
+      "price_value": 8,
+      "vendor_value": "dm",
+      "price_pure_cheap": 8,
+      "vendor_pure_cheap": "dm",
+      "price_pure": 8,
+      "vendor_pure": "dm",
+      "price_market": 8,
+      "vendor_market": "dm"
     },
     "supp_curcuma_750_piperin": {
-      "unit_price": 10.0,
+      "unit_price": 10,
       "unit_type": "piece",
       "label": "Curcuma 750 + Piperin",
       "icon": "🧡",
@@ -1583,8 +2285,8 @@
       ],
       "val": {
         "kcal": 2,
-        "curcuma_root_mg": 750.0,
-        "piperine_mg": 2.0
+        "curcuma_root_mg": 750,
+        "piperine_mg": 2
       },
       "meta": {
         "locations": [
@@ -1600,13 +2302,26 @@
       ],
       "lang": {
         "de": "Curcuma Kapseln"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "rossmann",
+      "pref_price": 10,
+      "price_cheap": 10,
+      "vendor_cheap": "rossmann",
+      "price_value": 10,
+      "vendor_value": "rossmann",
+      "price_pure_cheap": 10,
+      "vendor_pure_cheap": "rossmann",
+      "price_pure": 10,
+      "vendor_pure": "rossmann",
+      "price_market": 10,
+      "vendor_market": "rossmann"
     }
   },
   "supplement_premium": {
     "--- PREMIUM_CELLULAR_MINERALS ---": "Hochverfügbare Chelat-Mineralien (Apotheke/Premium)",
     "supp_magnesium_bisglycinate_premium": {
-      "unit_price": 30.0,
+      "unit_price": 30,
       "unit_type": "piece",
       "label": "Magnesium-Bisglycinat (Pure/Sunday/Thorne)",
       "icon": "💎",
@@ -1617,7 +2332,7 @@
       ],
       "val": {
         "kcal": 0,
-        "magnesium_mg": 100.0
+        "magnesium_mg": 100
       },
       "meta": {
         "locations": [
@@ -1634,10 +2349,23 @@
       ],
       "lang": {
         "de": "Magnesium Bisglycinat (Premium)"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "pharmacy",
+      "pref_price": 30,
+      "price_cheap": 30,
+      "vendor_cheap": "pharmacy",
+      "price_value": 30,
+      "vendor_value": "pharmacy",
+      "price_pure_cheap": 30,
+      "vendor_pure_cheap": "pharmacy",
+      "price_pure": 30,
+      "vendor_pure": "pharmacy",
+      "price_market": 30,
+      "vendor_market": "pharmacy"
     },
     "supp_zinc_picolinate_premium": {
-      "unit_price": 20.0,
+      "unit_price": 20,
       "unit_type": "piece",
       "label": "Zink-Picolinat (Pure Encapsulations)",
       "icon": "🛡️",
@@ -1647,7 +2375,7 @@
       ],
       "val": {
         "kcal": 0,
-        "zinc_mg": 15.0
+        "zinc_mg": 15
       },
       "meta": {
         "locations": [
@@ -1663,10 +2391,23 @@
       ],
       "lang": {
         "de": "Zink Picolinat (Premium)"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "pharmacy",
+      "pref_price": 20,
+      "price_cheap": 20,
+      "vendor_cheap": "pharmacy",
+      "price_value": 20,
+      "vendor_value": "pharmacy",
+      "price_pure_cheap": 20,
+      "vendor_pure_cheap": "pharmacy",
+      "price_pure": 20,
+      "vendor_pure": "pharmacy",
+      "price_market": 20,
+      "vendor_market": "pharmacy"
     },
     "supp_iron_bisglycinate_gentle": {
-      "unit_price": 25.0,
+      "unit_price": 25,
       "unit_type": "piece",
       "label": "Eisen-Bisglycinat (Gentle Iron)",
       "icon": "🩸",
@@ -1676,8 +2417,8 @@
       ],
       "val": {
         "kcal": 0,
-        "iron_animal_mg": 25.0,
-        "vit_c_mg": 100.0
+        "iron_animal_mg": 25,
+        "vit_c_mg": 100
       },
       "meta": {
         "locations": [
@@ -1693,10 +2434,23 @@
       ],
       "lang": {
         "de": "Eisen Bisglycinat (Sanft)"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "online",
+      "pref_price": 25,
+      "price_cheap": 25,
+      "vendor_cheap": "online",
+      "price_value": 25,
+      "vendor_value": "online",
+      "price_pure_cheap": 25,
+      "vendor_pure_cheap": "online",
+      "price_pure": 25,
+      "vendor_pure": "online",
+      "price_market": 25,
+      "vendor_market": "online"
     },
     "supp_calcium_malate_premium": {
-      "unit_price": 30.0,
+      "unit_price": 30,
       "unit_type": "piece",
       "label": "Calcium-Malat (Gereift)",
       "icon": "🦴",
@@ -1706,7 +2460,7 @@
       ],
       "val": {
         "kcal": 0,
-        "calcium_mg": 250.0
+        "calcium_mg": 250
       },
       "meta": {
         "locations": [
@@ -1721,11 +2475,24 @@
       ],
       "lang": {
         "de": "Calcium Malat (Premium)"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "online",
+      "pref_price": 30,
+      "price_cheap": 30,
+      "vendor_cheap": "online",
+      "price_value": 30,
+      "vendor_value": "online",
+      "price_pure_cheap": 30,
+      "vendor_pure_cheap": "online",
+      "price_pure": 30,
+      "vendor_pure": "online",
+      "price_market": 30,
+      "vendor_market": "online"
     },
     "--- BIOACTIVE_VITAMINS_AND_LIPIDS ---": "Bioaktive Co-Faktoren & Reinstöle",
     "supp_b_complex_bioactive_premium": {
-      "unit_price": 40.0,
+      "unit_price": 40,
       "unit_type": "piece",
       "label": "B-Complex Methylated (Bioaktiv)",
       "icon": "🧬",
@@ -1735,12 +2502,12 @@
       ],
       "val": {
         "kcal": 0,
-        "vit_b1_mg": 50.0,
-        "vit_b2_mg": 50.0,
-        "vit_b6_mg": 20.0,
-        "vit_b12_mcg": 500.0,
-        "folic_acid_mcg": 400.0,
-        "vit_b7_mcg": 500.0
+        "vit_b1_mg": 50,
+        "vit_b2_mg": 50,
+        "vit_b6_mg": 20,
+        "vit_b12_mcg": 500,
+        "folic_acid_mcg": 400,
+        "vit_b7_mcg": 500
       },
       "meta": {
         "locations": [
@@ -1756,10 +2523,23 @@
       ],
       "lang": {
         "de": "B-Komplex Bioaktiv"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "online",
+      "pref_price": 40,
+      "price_cheap": 40,
+      "vendor_cheap": "online",
+      "price_value": 40,
+      "vendor_value": "online",
+      "price_pure_cheap": 40,
+      "vendor_pure_cheap": "online",
+      "price_pure": 40,
+      "vendor_pure": "online",
+      "price_market": 40,
+      "vendor_market": "online"
     },
     "supp_omega3_total_norsan": {
-      "unit_price": 35.0,
+      "unit_price": 35,
       "unit_type": "piece",
       "label": "Norsan Omega-3 Total (Premium Öl)",
       "icon": "🐟",
@@ -1769,12 +2549,12 @@
       ],
       "val": {
         "kcal": 72,
-        "fat_total_g": 8.0,
-        "omega3_total_mg": 2000.0,
-        "epa_mg": 1120.0,
-        "dha_mg": 536.0,
-        "vit_e_mg": 3.0,
-        "vit_d_mcg": 20.0
+        "fat_total_g": 8,
+        "omega3_total_mg": 2000,
+        "epa_mg": 1120,
+        "dha_mg": 536,
+        "vit_e_mg": 3,
+        "vit_d_mcg": 20
       },
       "meta": {
         "locations": [
@@ -1791,10 +2571,23 @@
       ],
       "lang": {
         "de": "Norsan Omega-3 Öl"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "pharmacy",
+      "pref_price": 35,
+      "price_cheap": 35,
+      "vendor_cheap": "pharmacy",
+      "price_value": 35,
+      "vendor_value": "pharmacy",
+      "price_pure_cheap": 35,
+      "vendor_pure_cheap": "pharmacy",
+      "price_pure": 35,
+      "vendor_pure": "pharmacy",
+      "price_market": 35,
+      "vendor_market": "pharmacy"
     },
     "supp_vit_d3_k2_all_trans_premium": {
-      "unit_price": 30.0,
+      "unit_price": 30,
       "unit_type": "piece",
       "label": "Vitamin D3 + K2 MK7 (All-Trans)",
       "icon": "☀️",
@@ -1805,7 +2598,7 @@
       "val": {
         "kcal": 0,
         "vit_d_mcg": 62.5,
-        "vit_k2_mcg": 100.0
+        "vit_k2_mcg": 100
       },
       "meta": {
         "locations": [
@@ -1820,11 +2613,24 @@
       ],
       "lang": {
         "de": "Premium D3+K2 Tropfen"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "online",
+      "pref_price": 30,
+      "price_cheap": 30,
+      "vendor_cheap": "online",
+      "price_value": 30,
+      "vendor_value": "online",
+      "price_pure_cheap": 30,
+      "vendor_pure_cheap": "online",
+      "price_pure": 30,
+      "vendor_pure": "online",
+      "price_market": 30,
+      "vendor_market": "online"
     },
     "--- ELITE_PERFORMANCE_AND_ISOLATES ---": "Maximale Reinheit für Sport & Zelle",
     "supp_whey_isolate_isoclear": {
-      "unit_price": 40.0,
+      "unit_price": 40,
       "unit_type": "piece",
       "label": "Whey Isolat / Isoclear (ESN/More)",
       "icon": "🧃",
@@ -1834,7 +2640,7 @@
       ],
       "val": {
         "kcal": 105,
-        "protein_g": 26.0,
+        "protein_g": 26,
         "leucine_g": 3.1,
         "fat_total_g": 0.1,
         "carbs_total_g": 0.5
@@ -1853,10 +2659,23 @@
       ],
       "lang": {
         "de": "Premium Whey Isolat"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "online",
+      "pref_price": 40,
+      "price_cheap": 40,
+      "vendor_cheap": "online",
+      "price_value": 40,
+      "vendor_value": "online",
+      "price_pure_cheap": 40,
+      "vendor_pure_cheap": "online",
+      "price_pure": 40,
+      "vendor_pure": "online",
+      "price_market": 40,
+      "vendor_market": "online"
     },
     "supp_creapure_premium": {
-      "unit_price": 35.0,
+      "unit_price": 35,
       "unit_type": "piece",
       "label": "Creapure® (Reinstes Creatin)",
       "icon": "🏁",
@@ -1866,7 +2685,7 @@
       ],
       "val": {
         "kcal": 0,
-        "creatine_g": 3.0
+        "creatine_g": 3
       },
       "meta": {
         "locations": [
@@ -1881,7 +2700,20 @@
       ],
       "lang": {
         "de": "Creapure® Creatin"
-      }
+      },
+      "prices": {},
+      "pref_vendor": "online",
+      "pref_price": 35,
+      "price_cheap": 35,
+      "vendor_cheap": "online",
+      "price_value": 35,
+      "vendor_value": "online",
+      "price_pure_cheap": 35,
+      "vendor_pure_cheap": "online",
+      "price_pure": 35,
+      "vendor_pure": "online",
+      "price_market": 35,
+      "vendor_market": "online"
     }
   }
 }

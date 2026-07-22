@@ -4,18 +4,17 @@
 // Two distinct behaviors exist:
 //
 //   "fallback"    -> if no weekly snapshot exists for the current week, READ the
-//                    Master-Plan in 2_Areas/.../Plans/ as the data source.
+//                    Master-Plan in 2_Areas/.../Plan/ as the data source.
 //                    (Instrument, Routine, Timetable, Meal)
 //
 //   "autocreate"  -> if no weekly snapshot exists, there is NOTHING to fall back to.
 //                    Instead, a fresh empty weekly plan should be CREATED via its
-//                    weekplan_*.md template. The 2_Areas/.../Plans/ file (if any)
+//                    weekplan_*.md template. The 2_Areas/.../Plan/ file (if any)
 //                    is a pure DASHBOARD/aggregator, never a data source for "today".
 //                    (Fitness)
 //
-// Study is intentionally NOT modeled here as its own weekly-plan module — it has
-// no weekplan template at all. It simply references the existing
-// Spaced_Repitition.md dashboard directly wherever needed (e.g. dailypkm.md).
+// SRS, Wardrobe, and Study also have weekplan templates and can resolve through
+// this same map.
 // Timetable IS its own module (behavior: "fallback") since it's a genuine
 // recurring weekly plan (school/uni schedule). It additionally gets manually
 // blocked into the Routine via the syncTimetable.md button — the user decides
@@ -28,8 +27,8 @@ function planPaths() {
             label: "Fitness",
             icon: "🚵🏽",
             behavior: "autocreate",
-            masterPath: "2_Areas/6_Activity/Plans/Fitness_Routine", // dashboard only, NOT a fallback data source
-            weeklyPrefix: "ft",
+            masterPath: "2_Areas/6_Activity/Plan/Fitness_Routine", // dashboard only, NOT a fallback data source
+            weeklyPrefix: "fitness",
             weekplanTemplate: "weekplan_fitness"
         },
         mi: {
@@ -37,17 +36,17 @@ function planPaths() {
             label: "Instrument",
             icon: "🎸",
             behavior: "fallback",
-            masterPath: "2_Areas/5_Creativity/Plans/Instrument_Mastery",
-            weeklyPrefix: "mi",
-            weekplanTemplate: "weekplan_music" // filename of the existing template stays as-is
+            masterPath: "2_Areas/5_Creativity/Plan/Instrument_Mastery",
+            weeklyPrefix: "inpra",
+            weekplanTemplate: "weekplan_inpra"
         },
         rt: {
             key: "rt",
             label: "Routine",
             icon: "🧩",
             behavior: "fallback",
-            masterPath: "2_Areas/4_Organize/Plans/Routine_Timeblocking",
-            weeklyPrefix: "rt",
+            masterPath: "2_Areas/4_Organize/Plan/Routine_Timeblocking",
+            weeklyPrefix: "routine",
             weekplanTemplate: "weekplan_routine"
         },
         tt: {
@@ -55,8 +54,8 @@ function planPaths() {
             label: "Timetable",
             icon: "🧠",
             behavior: "fallback",
-            masterPath: "2_Areas/3_Mind/Plans/Timetable",
-            weeklyPrefix: "tt",
+            masterPath: "2_Areas/3_Mind/Plan/Timetable",
+            weeklyPrefix: "timetable",
             weekplanTemplate: "weekplan_timetable"
         },
         mp: {
@@ -64,9 +63,36 @@ function planPaths() {
             label: "Meal",
             icon: "🍱",
             behavior: "fallback",
-            masterPath: "2_Areas/1_Selfcare/Plans/Meal_Plan",
-            weeklyPrefix: "mp",
+            masterPath: "2_Areas/1_Selfcare/Plan/Meal_Plan",
+            weeklyPrefix: "meal",
             weekplanTemplate: "weekplan_meal"
+        },
+        sr: {
+            key: "sr",
+            label: "Spaced Repetition",
+            icon: "ðŸ§ ",
+            behavior: "fallback",
+            masterPath: "2_Areas/3_Mind/Plan/Spaced_Repetition",
+            weeklyPrefix: "srs",
+            weekplanTemplate: "weekplan_srs"
+        },
+        wd: {
+            key: "wd",
+            label: "Wardrobe",
+            icon: "ðŸ‘—",
+            behavior: "fallback",
+            masterPath: "2_Areas/1_Selfcare/Plan/Wardrobe",
+            weeklyPrefix: "wardrobe",
+            weekplanTemplate: "weekplan_wardrobe"
+        },
+        st: {
+            key: "st",
+            label: "Study",
+            icon: "ðŸ“š",
+            behavior: "fallback",
+            masterPath: "2_Areas/3_Mind/Plan/Study_Plan",
+            weeklyPrefix: "study",
+            weekplanTemplate: "weekplan_study"
         }
     };
 
@@ -76,10 +102,13 @@ function planPaths() {
     // The plan module for practicing an instrument uses "mi" / "instrument" only.
     const ALIASES = {
         fitness: "ft", fit: "ft",
-        instrument: "mi", instr: "mi",
+        instrument: "mi", instr: "mi", inpra: "mi",
         routine: "rt",
         timetable: "tt",
-        meal: "mp"
+        meal: "mp",
+        srs: "sr", spaced: "sr",
+        wardrobe: "wd",
+        study: "st"
     };
 
     const resolveKey = (raw) => {
@@ -118,8 +147,11 @@ function planPaths() {
             const k = resolveKey(rawKey);
             if (!k) return null;
             const cfg = PLANS[k];
-            const weekStr = moment(dateStr, "YYYY-MM-DD").format("YYYY-[W]WW");
-            return `0_Calendar/7_Plan/${weekStr}_${cfg.weeklyPrefix}`;
+            const d = moment(dateStr, "YYYY-MM-DD");
+            const year = d.format("YYYY");
+            const month = d.format("MM");
+            const kw = d.format("WW");
+            return `0_Calendar/7_Plan/${year}/${month}/${year}-W${kw}_${cfg.weeklyPrefix}.md`;
         },
 
         // Resolves the active plan page for "today".
@@ -130,8 +162,11 @@ function planPaths() {
             if (!k || !dv) return null;
             const cfg = PLANS[k];
 
-            const weekStr = moment(dateStr, "YYYY-MM-DD").format("YYYY-[W]WW");
-            const weeklyPath = `0_Calendar/7_Plan/${weekStr}_${cfg.weeklyPrefix}`;
+            const d = moment(dateStr, "YYYY-MM-DD");
+            const year = d.format("YYYY");
+            const month = d.format("MM");
+            const kw = d.format("WW");
+            const weeklyPath = `0_Calendar/7_Plan/${year}/${month}/${year}-W${kw}_${cfg.weeklyPrefix}.md`;
 
             let page = dv.page(weeklyPath);
             if (page) return { page, source: "weekly", path: weeklyPath, behavior: cfg.behavior };

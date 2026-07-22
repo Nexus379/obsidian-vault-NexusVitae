@@ -3,6 +3,9 @@
 if (!tp.variables) tp.variables = {}; // 🛡️ The ultimate crash protection
 
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
+const SYS = tp.variables.SYS || { tmpl: "zData/1tmpl" };
+const ARCH = tp.variables.ARCH || {};
+const resourceRoot = (ARCH && ARCH.r && ARCH.r.folder) ? ARCH.r.folder : "6_Resources";
 let title = tp.variables.title || tp.file.title;
 
 if (!title || title.trim() === "" || title.toLowerCase().includes(defaultName.toLowerCase())) {
@@ -29,18 +32,19 @@ const resources = [
     { label: "14 🎞️ Serie", val: "sourceserie", folder: "Series" },
     { label: "15 💻 Video", val: "sourcevideo", folder: "Videos" },
     { label: "16 🎲 Boardgame", val: "sourceboardgame", folder: "Boardgame" },
-    { label: "17 🥦 Ingredient", val: "sourceentities_ingredients", folder: "_Entities/Nutrition/Ingredients" },
-    { label: "18 ⛺ Camping Gear", val: "sourceentities_camping", folder: "_Entities/Camping_Outdoors" },
-    { label: "19 🔌 Tech & Electronics", val: "sourceentities_tech", folder: "_Entities/Electronics_Tech" },
-    { label: "20 🎨 Art & Stationery", val: "sourceentities_art", folder: "_Entities/Stationery_Art" },
-    { label: "21 👕 Clothing", val: "sourceentities_clothing", folder: "_Entities/Clothing" },
-    { label: "22 🏋️ Fitness Gear", val: "sourceentities_fitness", folder: "_Entities/Fitness" },
-    { label: "23 🧹 Household Item", val: "sourceentities_household", folder: "_Entities/Home/Drugstore/Household" },
-    { label: "24 💊 Medical", val: "sourceentities_medical", folder: "_Entities/Medical" },
-    { label: "25 🎵 Music Gear", val: "sourceentities_music", folder: "_Entities/Music_Audio" },
-    { label: "26 🧴 Personal Care", val: "sourceentities_personal", folder: "_Entities/Personal" },
-    { label: "27 🐕 Pet Item", val: "sourceentities_pet", folder: "_Entities/Pets" },
-    { label: "28 ⚔️ LARP Gear", val: "sourceentities_larp", folder: "_Entities/LARP" }
+    { label: "17 Software Maintenance", val: "sourcesoftware", folder: "Software_Maintenance" },
+    { label: "18 🥦 Ingredient", val: "sourceentities_ingredients", folder: "_Entities/Nutrition/Ingredients" },
+    { label: "19 ⛺ Camping Gear", val: "sourceentities_camping", folder: "_Entities/Camping_Outdoors" },
+    { label: "20 🔌 Tech & Electronics", val: "sourceentities_tech", folder: "_Entities/Electronics_Tech" },
+    { label: "21 🎨 Art & Stationery", val: "sourceentities_art", folder: "_Entities/Stationery_Art" },
+    { label: "22 👕 Clothing", val: "sourceentities_clothing", folder: "_Entities/Clothing" },
+    { label: "23 🏋️ Fitness Gear", val: "sourceentities_fitness", folder: "_Entities/Fitness" },
+    { label: "24 🧹 Household Item", val: "sourceentities_household", folder: "_Entities/Home/Drugstore/Household" },
+    { label: "25 💊 Medical", val: "sourceentities_medical", folder: "_Entities/Medical" },
+    { label: "26 🎵 Music Gear", val: "sourceentities_music", folder: "_Entities/Music_Audio" },
+    { label: "27 🧴 Personal Care", val: "sourceentities_personal", folder: "_Entities/Personal" },
+    { label: "28 🐕 Pet Item", val: "sourceentities_pet", folder: "_Entities/Pets" },
+    { label: "29 ⚔️ LARP Gear", val: "sourceentities_larp", folder: "_Entities/LARP" }
 ];
 
 let nIdx = null;
@@ -64,6 +68,11 @@ const resourceTriggerMap = {
     series: "sourceserie",
     video: "sourcevideo",
     boardgame: "sourceboardgame",
+    software: "sourcesoftware",
+    softwaremaintenance: "sourcesoftware",
+    maintenance: "sourcesoftware",
+    app: "sourcesoftware",
+    plugin: "sourcesoftware",
     ingredient: "sourceentities_ingredients",
     camping: "sourceentities_camping",
     tech: "sourceentities_tech",
@@ -110,8 +119,7 @@ if (choice.val === "sourcebook") {
 }
 
 const nChoice = choice.val;
-const targetFolder = `6_Resources/${choice.folder}`;
-const SYS = tp.variables.SYS || { tmpl: "zData/1tmpl" };
+const targetFolder = `${resourceRoot}/${choice.folder}`;
 const templatePath = `${SYS.tmpl}/6resources/${nChoice}.md`;
 
 // 🔱 3. TAXONOMY (Calls your English ScienceModule)
@@ -146,18 +154,7 @@ for (const seg of targetFolder.split('/')) {
     current = current === "" ? seg : `${current}/${seg}`;
     if (!app.vault.getAbstractFileByPath(current)) await app.vault.createFolder(current);
 }
-const targetPath = `${targetFolder}/${title}.md`;
-if (tp.file.path !== targetPath) {
-    const existing = app.vault.getAbstractFileByPath(targetPath);
-    if (existing instanceof tp.obsidian.TFile) {
-        new Notice(`ℹ️ Resource already exists: ${title}. Opening & revealing...`);
-        const leaf = app.workspace.getLeaf(false);
-        await leaf.openFile(existing);
-        app.commands.executeCommandById("file-explorer:reveal-active-file");
-        return;
-    }
-    try { await tp.file.move(targetPath); } catch(e) {}
-}
+await tp.file.move(`${targetFolder}/${title}.md`);
 await new Promise(r => setTimeout(r, 850));
 
 // 🔱 6. PASS TO CONTENT

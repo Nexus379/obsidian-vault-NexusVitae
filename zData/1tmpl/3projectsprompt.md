@@ -1,4 +1,8 @@
 <%-*
+// Nexus Router Prompt: Projects
+if (!tp.variables) tp.variables = {};
+if (!tp.variables.SYS) tp.variables.SYS = { tmpl: "zData/1tmpl", inbox: "0_Inbox" };
+if (!tp.variables.ARCH) tp.variables.ARCH = { p: { folder: "3_Projects" } };
 // 🔱 1. PROJECT-CHOICE FIRST (Die Basis wie beim Area-Prompt)
 const pStatusOpt = ["1 ⚡ Active", "2 ⏳ Passive", "3 ☁️ Idea", "0 🔄 Recurring"];
 const pStatusVal = ["1active", "2passive", "3idea", "0recurring"];
@@ -124,18 +128,7 @@ if (!app.vault.getAbstractFileByPath(targetFolder)) {
     }
 }
 
-const targetPath = `${targetFolder}/${title}.md`;
-if (tp.file.path !== targetPath) {
-    const existing = app.vault.getAbstractFileByPath(targetPath);
-    if (existing instanceof tp.obsidian.TFile) {
-        new Notice(`ℹ️ Project already exists: ${title}. Opening & revealing...`);
-        const leaf = app.workspace.getLeaf(false);
-        await leaf.openFile(existing);
-        app.commands.executeCommandById("file-explorer:reveal-active-file");
-        return;
-    }
-    try { await tp.file.move(targetPath); } catch(e) {}
-}
+await tp.file.move(`${targetFolder}/${title}.md`);
 await new Promise(r => setTimeout(r, 400)); 
 
 // 🔱 5. FINAL HANDOVER

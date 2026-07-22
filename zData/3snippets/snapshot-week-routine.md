@@ -5,6 +5,32 @@
  * Gegenstück zum Archive-Button (rückwärts, eingefroren) — hier: vorwärts, frozen:false.
  */
 try {
+    const renderWeekplan = (raw, values) => {
+        let out = raw
+            .replace(/^<%-?\*[\s\S]*?-%>\s*/, "")
+            .replace(/^<%-?\*[\s\S]*?%>\s*/, "");
+
+        const replacements = {
+            dateStr: values.dateStr,
+            energy: values.energy,
+            year: values.year,
+            kw: values.kw,
+            planYear: values.year,
+            planKw: values.kw
+        };
+
+        for (const [key, value] of Object.entries(replacements)) {
+            out = out.replace(new RegExp(`<%-\\s*${key}\\s*%>`, "g"), String(value));
+        }
+
+        out = out.replace(
+            /<%-\s*tp\.variables\.title\s*\|\|\s*\([^%]+?_routine'\)\s*%>/g,
+            `${values.year}-W${values.kw}_routine`
+        );
+
+        return out;
+    };
+
     // 1. Ziel-Woche wählen (default: erste FREIE Woche ab nächster — überspringt schon geplante)
     let probe = moment().add(1, 'week');
     for (let i = 0; i < 60; i++) {
@@ -43,7 +69,12 @@ try {
     const shapeFile = app.vault.getAbstractFileByPath("zData/1tmpl/0calendar/weekplan_routine.md");
     if (!shapeFile) { new Notice("❌ Shape file weekplan_routine missing!"); return; }
     let body = await app.vault.read(shapeFile);
-    body = body.replace(/\{\{YEAR\}\}/g, year).replace(/\{\{KW\}\}/g, kw);
+    body = renderWeekplan(body, {
+        dateStr: target.format("YYYY-MM-DD"),
+        energy: "3",
+        year,
+        kw
+    });
 
     await app.vault.create(finalDest, body);
     await new Promise(r => setTimeout(r, 150));

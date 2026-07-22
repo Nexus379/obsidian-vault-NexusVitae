@@ -1,88 +1,80 @@
 ---
 cssclasses:
   - wide-page
+  - srs-card-dashboard
 ---
 
-# 🖖 Concept Studycards Overview (Star Trek Ebbinghaus Ranks)
+# Studycards Overview
 
 ![[zData/5design_modul/OverviewNavigationModul]]
 
----
-
-> [!info] 🖖 Concept Studycards Matrix (Y: Discipline | X: Space Ranks)
-
 ```dataviewjs
-const pages = dv.pages('"5_Notes" or "6_Resources"')
-    .where(p => p.space_rank != null || (p.archtype && p.archtype.includes("#5note/3atomic/studycards")));
-
-const discSet = new Set();
-pages.forEach(p => {
-    let disc = p.discipline || p.discTag || p.areaTag || "Concept Knowledge";
-    if (Array.isArray(disc)) disc = disc[0];
-    discSet.add(disc.replace(/^#/, ''));
-});
-
-const sortedDiscs = Array.from(discSet).sort();
-
-const columns = [
-    "Discipline",
-    "👨‍🎓 Cadet (Rank 1)",
-    "🎖️ Lieutenant (Rank 2)",
-    "🏅 Commander (Rank 3)",
-    "🎗️ Captain (Rank 4)",
-    "👑 Admiral (Rank 5)"
-];
-
-const rankMap = {
-    "cadet": 1, "rank 1": 1, "1": 1,
-    "lieutenant": 2, "rank 2": 2, "2": 2,
-    "commander": 3, "rank 3": 3, "3": 3,
-    "captain": 4, "rank 4": 4, "4": 4,
-    "admiral": 5, "rank 5": 5, "5": 5
+const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  "\"": "&quot;",
+  "'": "&#39;"
+}[char]));
+const render = (html, cls) => {
+  const node = dv.el("div", "", { cls });
+  node.innerHTML = html;
+  return node;
 };
+const first = value => Array.isArray(value) ? value[0] : value;
+const label = value => String(first(value) ?? "Concept Knowledge").replace(/^#/, "");
+const arch = page => String(page.archtype ?? "");
+const isStudy = page => page.space_rank != null || page.space_lvl != null || arch(page).includes("#5note/3atomic/studycards");
+const link = page => `<a class="internal-link" data-href="${esc(page.file.path)}" href="${esc(page.file.path)}">${esc(page.file.name)}</a>`;
+const deckName = page => String(page.deck || label(page.discipline || page.discTag || page.areaTag) || "Concept Knowledge");
 
-const tableRows = [];
+const pages = dv.pages('"5_Notes" or "6_Resources"').where(isStudy).array();
+const today = moment().startOf("day");
+const dueDiff = page => page.space_date ? moment(page.space_date).startOf("day").diff(today, "days") : 9999;
 
-sortedDiscs.forEach(disc => {
-    const discPages = pages.filter(p => {
-        let d = p.discipline || p.discTag || p.areaTag || "Concept Knowledge";
-        if (Array.isArray(d)) d = d[0];
-        return d.replace(/^#/, '') === disc;
-    });
-
-    const rank1 = [];
-    const rank2 = [];
-    const rank3 = [];
-    const rank4 = [];
-    const rank5 = [];
-
-    discPages.forEach(p => {
-        const rawRank = String(p.space_rank || p.space_lvl || "1").toLowerCase();
-        let rNum = rankMap[rawRank] || parseInt(rawRank) || 1;
-
-        const dateBadge = p.space_date ? `<small style="opacity:0.6;"> (${p.space_date})</small>` : '';
-        const itemStr = `${p.file.link}${dateBadge}`;
-
-        if (rNum === 1) rank1.push(itemStr);
-        else if (rNum === 2) rank2.push(itemStr);
-        else if (rNum === 3) rank3.push(itemStr);
-        else if (rNum === 4) rank4.push(itemStr);
-        else rank5.push(itemStr);
-    });
-
-    tableRows.push([
-        `**${disc}**`,
-        rank1.length > 0 ? rank1.join("<br>") : "-",
-        rank2.length > 0 ? rank2.join("<br>") : "-",
-        rank3.length > 0 ? rank3.join("<br>") : "-",
-        rank4.length > 0 ? rank4.join("<br>") : "-",
-        rank5.length > 0 ? rank5.join("<br>") : "-"
-    ]);
-});
-
-if (pages.length > 0) {
-    dv.table(columns, tableRows);
-} else {
-    dv.paragraph("_No Concept Studycards found. Create a note with template `3atomic_studycards`._");
+const ranks = new Map();
+for (const page of pages) {
+  const raw = page.space_rank || (page.space_lvl != null ? `Level ${page.space_lvl}` : "Unranked");
+  const key = String(raw);
+  if (!ranks.has(key)) ranks.set(key, []);
+  ranks.get(key).push(page);
 }
+
+render(Array.from(ranks.entries()).sort((a, b) => a[0].localeCompare(b[0])).map(([rank, cards]) => {
+  const due = cards.filter(page => dueDiff(page) <= 0).length;
+  return `
+    <div class="nxs-deck-card">
+      <div>
+        <div class="nxs-card-kicker">Nexus Rank</div>
+        <div class="nxs-card-title">${esc(rank)}</div>
+        <div class="nxs-card-meta">
+          <span class="nxs-card-pill">${cards.length} cards</span>
+          <span class="nxs-card-pill">${due} due</span>
+        </div>
+      </div>
+    </div>
+  `;
+}).join("") || `<div class="nxs-deck-card"><div class="nxs-card-title">No studycards yet</div><div class="nxs-card-meta"><span class="nxs-card-pill">Use n-studycards</span></div></div>`, "nxs-card-grid");
+
+const cards = pages.sort((a, b) => dueDiff(a) - dueDiff(b)).slice(0, 40).map(page => {
+  const diff = dueDiff(page);
+  const state = diff < 0 ? "is-overdue" : diff === 0 ? "is-due" : "is-future";
+  const dueText = diff === 9999 ? "no date" : diff < 0 ? `${Math.abs(diff)}d overdue` : diff === 0 ? "due today" : `in ${diff}d`;
+  const rank = page.space_rank || (page.space_lvl != null ? `Level ${page.space_lvl}` : "Unranked");
+  return `
+    <div class="nxs-study-card ${state}">
+      <div>
+        <div class="nxs-card-kicker">${esc(deckName(page))}</div>
+        <div class="nxs-card-title">${link(page)}</div>
+      </div>
+      <div class="nxs-card-meta">
+        <span class="nxs-card-pill">${esc(dueText)}</span>
+        <span class="nxs-card-pill">${esc(rank)}</span>
+      </div>
+    </div>
+  `;
+}).join("");
+
+dv.header(2, "Cards");
+render(cards || `<div class="nxs-study-card"><div class="nxs-card-title">No studycards found.</div></div>`, "nxs-card-row");
 ```

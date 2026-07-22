@@ -40,7 +40,7 @@ const calSubfolder = ARCHTYPES_CAL.map(m => m.subfolder);
 const calSuffix    = ARCHTYPES_CAL.map(m => m.id);
 
 // 🔱 4. TRIGGER & DATE DETECTION (NEU: Erkennt jetzt Fitness & Musik)
-const planSubkeys = ["fitness", "inpra", "routine", "meal", "shopping", "srs", "wardrobe", "spaced"];
+const planSubkeys = ["fitness", "inpra", "routine", "meal", "srs", "wardrobe", "spaced", "study", "timetable"];
 
 if (!activeTrigger) {
     const lowered = rawTitle.toLowerCase();
@@ -99,7 +99,7 @@ if (preSub) {
 
 if (cIdx === null || cIdx === -1) {
     // 🎯 HIER WAR DER FEHLER: JETZT SIND FITNESS & CO MIT INDEX 6 DRIN!
-    const triggerMap = { plm:0, ppm:1, pkm:2, projectlog:3, proj:3, prjlog:3, protocol:4, prot:4, prtcl:4, rev:5, plan:6, fitness:6, inpra:6, routine:6, meal:6, shopping:6, srs:6, spaced:6, wardrobe:6 };
+    const triggerMap = { plm:0, ppm:1, pkm:2, projectlog:3, proj:3, prjlog:3, protocol:4, prot:4, prtcl:4, rev:5, plan:6, fitness:6, inpra:6, routine:6, meal:6, srs:6, spaced:6, wardrobe:6, study:6, timetable:6 };
     if (triggerMap[activeTrigger] !== undefined) cIdx = triggerMap[activeTrigger];
 }
 
@@ -109,6 +109,23 @@ if ((cIdx === null || cIdx === -1) && !activeTrigger) {
 
 if (cIdx === null || cIdx === -1) return;
 const activeMod = ARCHTYPES_CAL[cIdx];
+const dateParts = dateStr.split("-");
+const y = dateParts[0];
+const m = dateParts[1];
+
+// 🛑 PREVENT DUPLICATE DAILY LOGS (DATE + MOD ID CHECK)
+if ([0, 1, 2].includes(cIdx)) {
+    const checkFolder = `${ARCH.c.folder}/${activeMod.subfolder}/${y}/${m}`;
+    const prefix = `${dateStr} ${activeMod.id}`;
+    const existingLog = app.vault.getMarkdownFiles().find(f => f.path.startsWith(checkFolder + "/") && f.name.startsWith(prefix));
+
+    if (existingLog) {
+        new Notice(`📂 Note already exists for ${dateStr}: ${existingLog.name}`);
+        await app.workspace.getLeaf(false).openFile(existingLog);
+        app.commands.executeCommandById("file-explorer:reveal-active-file");
+        return;
+    }
+}
 
 // 🔱 6. ENERGY LEVEL
 let energy = tp.variables.energy;
@@ -122,7 +139,7 @@ if (!energy || !["1","2","3","4","5"].includes(String(energy))) {
 // 🔱 7. DATAVIEW CONNECTION (Projects / Logs)
 let logConnect = ""; 
 const dv = app.plugins?.plugins?.dataview?.api;
-const [y, m] = dateStr.split("-");
+// Note: y and m are already declared on lines 113-114, reuse them here
 
 if (cIdx === 3 && dv && ARCH.p) {
     const projects = dv.pages(`"${ARCH.p.folder}"`)
@@ -263,13 +280,12 @@ if (cIdx === 6) {
             "🎸 Instrument Practice", 
             "⏰ Timeblocking (Routines)", 
             "🍱 Meal Plan", 
-            "🛒 Shopping Hub", 
             "🧠 Spaced Repetition", 
             "👗 Wardrobe",
             "📚 Study Plan",
             "🗓️ Timetable"
         ];
-        const planKeys = ["fitness", "inpra", "routine", "meal", "shopping", "srs", "wardrobe", "study", "timetable"];
+        const planKeys = ["fitness", "inpra", "routine", "meal", "srs", "wardrobe", "study", "timetable"];
         
         subType = await tp.system.suggester(planOptions, planKeys, false, "📋 Welchen Wochenplan möchtest du anlegen?");
         if (!subType) return; 
@@ -280,7 +296,6 @@ if (cIdx === 6) {
         "inpra": "weekplan_inpra",
         "routine": "weekplan_routine",
         "meal": "weekplan_meal",
-        "shopping": "weekplan_shopping",
         "spaced": "weekplan_srs",
         "srs": "weekplan_srs",
         "wardrobe": "weekplan_wardrobe",
@@ -365,15 +380,11 @@ for (const seg of targetFolder.split("/")) {
 const targetPath = `${targetFolder}/${finalTitle}.md`;
 if (tp.file.path !== targetPath) {
     const fileAtTarget = app.vault.getAbstractFileByPath(targetPath);
-    if (fileAtTarget instanceof tp.obsidian.TFile) {
-        new Notice("ℹ️ Note already exists: " + finalTitle + ". Opening & revealing...");
-        const leaf = app.workspace.getLeaf(false);
-        await leaf.openFile(fileAtTarget);
-        app.commands.executeCommandById("file-explorer:reveal-active-file");
-        return;
-    } else {
+    if (!fileAtTarget) {
         await tp.file.move(targetPath);
         await new Promise(r => setTimeout(r, 150));
+    } else {
+        new Notice("⚠️ Note already exists at destination: " + finalTitle);
     }
 }
 
@@ -396,7 +407,7 @@ if (finalTempName) {
             const pk = tp.variables.planKw || tp.date.now("WW");
             tR += raw.replace(/\{\{YEAR\}\}/g, py).replace(/\{\{KW\}\}/g, pk);
         } else {
-            // Templater weekplan (inpra/shopping/srs/wardrobe/study): run normally.
+            // Templater weekplan (inpra/srs/wardrobe/study): run normally.
             tR += await tp.file.include(tFile);
         }
     } else {

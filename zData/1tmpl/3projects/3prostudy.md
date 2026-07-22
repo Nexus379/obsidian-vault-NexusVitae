@@ -93,7 +93,7 @@ review:
 > > [!todo|wide-1] Milestones & Objectives
 > > - [ ] **M1:** Source collection & Initial overview
 > > - [ ] **M2:** Deep dive & Note extraction (Atomic Notes)
-> > - [ ] **M3:** Synthesis & Spaced Repetition setup (Anki)
+> > - [ ] **M3:** Synthesis & Spaced Repetition setup (Vocabcards)
 >
 > > [!abstract|wide-1] Target State & Context
 > > **Key Learnings:** 

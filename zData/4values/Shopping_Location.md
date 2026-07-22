@@ -2,8 +2,7 @@
 current_city: "Berlin"
 current_country: "Germany"
 currency: "EUR"
-ai_provider: "ollama"
-ollama_model: "mistral"
+ai_provider: "safe_manual"
 ---
 
 # 📍 Nexus Shopping Location & AI Profile
@@ -14,5 +13,4 @@ ollama_model: "mistral"
 > **Currency:** `INPUT[text:currency]`  
 > 
 > **AI Provider Mode:**  
-> `INPUT[inlineSelect(option(ollama, 🦙 Ollama (Local)), option(manual, ✍️ Manual (No AI))):ai_provider]`  
-> **Ollama Model:** `INPUT[text:ollama_model]`
+> `INPUT[inlineSelect(option(safe_manual, Safe Manual Mode), option(openai_compatible, OpenAI-Compatible API)):ai_provider]`  

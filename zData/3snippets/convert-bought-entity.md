@@ -45,7 +45,7 @@ if (existingFile instanceof tp.obsidian.TFile) {
         content = await app.vault.read(tmplFile);
         content = content.replace(/{{NEXUS_TITLE}}/g, cleanName).replace(/{{title}}/g, cleanName);
     } else {
-        content = `---\narch:\n  - "#6resource"\narchtype:\n  - "#6resource/entity"\nstatus: 1active\npref_vendor: ""\npref_price: 0\n---\n\n# 🛒 ${cleanName}\n`;
+        content = `---\narch:\n  - "#6resource"\narchtype:\n  - "#6resource/entity"\nstatus: 1active\npref_vendor: ""\npref_price: 0.00\nunit_price: 0.00\nprice_cheap: 0.00\nvendor_cheap: ""\nprice_value: 0.00\nvendor_value: ""\nprice_pure_cheap: 0.00\nvendor_pure_cheap: ""\nprice_pure: 0.00\nvendor_pure: ""\nprice_market: 0.00\nvendor_market: ""\n---\n\n# ${cleanName}\n`;
     }
     
     const created = await app.vault.create(targetPath, content);
@@ -56,4 +56,4 @@ if (existingFile instanceof tp.obsidian.TFile) {
 }
 
 tR += `[[${targetPath}|${cleanName}]]`;
-*-%>
+-%>

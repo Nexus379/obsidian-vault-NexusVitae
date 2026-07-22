@@ -1,8 +1,12 @@
 <%-*
 // 🔱 1. ROUTER-DATEN ABFANGEN
-const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
+if (!tp.variables) tp.variables = {};
+const targetMoment = moment(tp.variables.targetDate || tp.date.now("YYYY-MM-DD"), "YYYY-MM-DD");
+const dateStr = targetMoment.format("YYYY-MM-DD");
+const year = tp.variables.planYear || targetMoment.format("YYYY");
+const kw = tp.variables.planKw || targetMoment.format("WW");
 const energy = tp.variables.energy || "3";
-const displayTitle = tp.variables.displayTitle || tp.file.title;
+const displayTitle = tp.variables.displayTitle || `${year}-W${kw}_fitness`;
 
 // 🔱 2. AUTOMATISCHE TRAININGS-WOCHE ERKENNUNG
 let currentWeek = 1;
@@ -26,14 +30,19 @@ if (allFit.length > 0) {
 arch:
   - "#0cal"
 archtype:
-  - "#0cal/7plan"
+  - "#0cal/7plan/fitness"
+fileTitle: "<%- displayTitle %>"
 cal_date: <%- dateStr %>
 energy: "<%- energy %>"
+frozen: false
+plan_type: fitness
+plan_year: "<%- year %>"
+plan_kw: "<%- kw %>"
 training_week: <%- currentWeek %>
 
 ---
 
-# 💪 Fitness: # <%- displayTitle %>
+# 💪 Fitness: <%- displayTitle %>
 
 > [!body] 🎒 **NEXUS ARSENAL & STATUS**
 > **Phase:** `$= const w = dv.current().training_week || 1; const cw = ((w - 1) % 4) + 1; cw === 1 ? "🌱 Foundation (70%)" : cw === 2 ? "⚙️ Volume (80%)" : cw === 3 ? "🔥 Overreach (90%)" : "🔋 Deload (60%)"`
@@ -134,4 +143,4 @@ else dv.paragraph(trackerHtml);
 
 ---
 
-`BUTTON[freeze-week]` `BUTTON[archive]`
+`BUTTON[freeze-week]` `BUTTON[archive]` `BUTTON[archive-month]`

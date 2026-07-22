@@ -71,6 +71,7 @@ camera_mp: 0
 condition: "new"
 pl_score: 0
 pref_vendor: "Amazon"
+pref_price: 0.00
 unit_price: 19.99
 price_cheap: 9.99
 vendor_cheap: "Action"
@@ -93,7 +94,7 @@ vendor_market: "Fachgeschäft"
 | ✨ **Condition**    | `INPUT[suggester(option(new, 🆕 New), option(refurbished, ♻️ Refurbished), option(used, 🩹 Used)):condition]`                                                                                                                                           |     |
 | 🏷️ **Brand**        | `INPUT[text:brand]`                                                                                                                                            |     |
 | 🏪 **Vendor**        | `INPUT[text:pref_vendor]`                                                                                                                                      |     |
-| 💰 **Price**         | `INPUT[number:unit_price]` €                                                                                                                                   |     |
+| 💰 **Price**         | `VIEW[{unit_price}]` €                                                                                                                                   |     |
 | 🧠 **RAM**           | `INPUT[number:ram_gb]` GB                                                                                                                                      |     |
 | ⚡ **GHz**            | `INPUT[number:ghz]` GHz                                                                                                                                        |     |
 | 💾 **Storage**       | `INPUT[number:storage_gb]` GB                                                                                                                                  |     |
@@ -109,17 +110,8 @@ vendor_market: "Fachgeschäft"
 | 🔌 **Socket**        | `INPUT[text:socket]`                                                                                                                                           |     |
 | ⭐ **PL Score**       | `INPUT[number:pl_score]` / 10                                                                                                                                  |     |
 
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
+<%- tp.file.include("[[zData/5design_modul/ShoppingPriceMatrix]]") %>
+
 ## 📝 Source & Notes
 - 
 - 
@@ -129,33 +121,5 @@ vendor_market: ""
 > Click here to add an owner to this item:
 > `BUTTON[add-wardrobe-owner]`
 
-`
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
-
-`
-
-
 

@@ -55,6 +55,7 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
                     const prices = {};
                     if (fm.pref_vendor) prices[fm.pref_vendor] = fm.pref_price || fm.unit_price || 0;
                     if (fm.vendor_cheap) prices[fm.vendor_cheap] = fm.price_cheap || 0;
+                    if (fm.vendor_best) prices[fm.vendor_best] = fm.price_best || fm.price_value || 0;
                     if (fm.vendor_value) prices[fm.vendor_value] = fm.price_value || 0;
                     if (fm.vendor_pure_cheap) prices[fm.vendor_pure_cheap] = fm.price_pure_cheap || 0;
                     if (fm.vendor_pure) prices[fm.vendor_pure] = fm.price_pure || 0;
@@ -114,12 +115,19 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             const item = DATABASE[key];
             if (!item) return null;
             
-            const stratKeys = ["cheap", "value", "budget", "pure_cheap", "pure", "market"];
+            const stratKeys = ["cheap", "value", "best", "budget", "pref", "preferred", "pure_cheap", "pure", "market"];
             let s = stratKeys.includes(strategy) ? strategy : "value";
             if (s === "budget") s = "cheap";
+            if (s === "best") s = "value";
+            if (s === "preferred") s = "pref";
             
-            let price = Number(item[`price_${s}`]) || 0;
-            let vendor = item[`vendor_${s}`] || "";
+            let price = s === "pref" ? (Number(item.pref_price) || Number(item.unit_price) || 0) : (Number(item[`price_${s}`]) || 0);
+            let vendor = s === "pref" ? (item.pref_vendor || "") : (item[`vendor_${s}`] || "");
+
+            if (s === "value" && price === 0) {
+                price = Number(item.price_best) || 0;
+                vendor = item.vendor_best || vendor;
+            }
 
             // Falls JSON-Datenbank ein prices-Objekt besitzt
             if (price === 0 && item.prices && typeof item.prices === "object" && Object.keys(item.prices).length > 0) {
@@ -127,6 +135,14 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
                     let lowest = Infinity, bestV = "";
                     for (let [v, p] of Object.entries(item.prices)) {
                         if (Number(p) > 0 && Number(p) < lowest) { lowest = Number(p); bestV = v; }
+                    }
+                    if (lowest !== Infinity) { price = lowest; vendor = bestV; }
+                } else if (s === "pure_cheap") {
+                    const bioVendors = ["denns", "alnatura", "bio", "dm"];
+                    let lowest = Infinity, bestV = "";
+                    for (let [v, p] of Object.entries(item.prices)) {
+                        const isBio = bioVendors.some(b => String(v).toLowerCase().includes(b));
+                        if (isBio && Number(p) > 0 && Number(p) < lowest) { lowest = Number(p); bestV = v; }
                     }
                     if (lowest !== Infinity) { price = lowest; vendor = bestV; }
                 } else if (s === "pure") {
@@ -138,9 +154,9 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             }
             
             // Fallback auf 'value', falls gewählte Strategie leer ist
-            if (price === 0 && s !== "value") {
-                price = Number(item[`price_value`]) || 0;
-                vendor = item[`vendor_value`] || "";
+            if (price === 0 && s !== "value" && s !== "pref") {
+                price = Number(item.price_value) || Number(item.price_best) || 0;
+                vendor = item.vendor_value || item.vendor_best || "";
             }
             
             // Fallback auf Standard / Legacy (pref_price oder unit_price)

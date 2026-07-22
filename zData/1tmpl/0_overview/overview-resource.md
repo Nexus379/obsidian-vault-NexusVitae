@@ -11,6 +11,9 @@ cssclasses:
 
 ![[zData/5design_modul/OverviewNavigationModul]]
 
+---
+
+### 🔖 Existing Resources
 ```dataviewjs
 const rType = "<%- resType %>".toLowerCase();
 const res = dv.pages('"6_Resources"').where(p => {
@@ -18,22 +21,9 @@ const res = dv.pages('"6_Resources"').where(p => {
     return meta.includes(rType);
 });
 
-dv.paragraph(`> [!abstract] 📊 **Resource Category Metrics**\n> 🔖 **Total Items:** ${res.length}`);
+if (res.length > 0) {
+    dv.table(["🔖 Item", "🚦 Status", "🕒 Modified"], res.map(r => [r.file.link, r.status || "1active", r.file.mtime.toFormat("yyyy-MM-dd")]));
+} else {
+    dv.paragraph("_No resources found for this type._");
+}
 ```
-
----
-
-> [!multi-column]
-> > [!resource|wide-2] 🔖 Existing Items in Category
-> > ```dataviewjs
-> > const rType = "<%- resType %>".toLowerCase();
-> > const res = dv.pages('"6_Resources"').where(p => {
-> >     const meta = (p.file.path + " " + String(p.archtype || "")).toLowerCase();
-> >     return meta.includes(rType);
-> > });
-> > if (res.length > 0) {
-> >     dv.table(["🔖 Item", "🚦 Status", "🕒 Modified"], res.map(r => [r.file.link, r.status || "1active", r.file.mtime.toFormat("yyyy-MM-dd")]));
-> > } else {
-> >     dv.paragraph("_No resources found for this category._");
-> > }
-> > ```

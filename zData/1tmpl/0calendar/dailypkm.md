@@ -3,6 +3,18 @@
 if (!tp.variables) tp.variables = {};
 const dv = app.plugins.plugins.dataview?.api;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
+let nexusConfig = {
+    roots: { calendar: "0_Calendar" },
+    areas: { mainPlans: {} }
+};
+try {
+    const cfgFile = app.vault.getAbstractFileByPath("zData/4values/NexusVitae_SystemConfig.json");
+    if (cfgFile) nexusConfig = Object.assign(nexusConfig, JSON.parse(await app.vault.read(cfgFile)));
+} catch (e) { console.error("Nexus system config load failed:", e); }
+const cfgRoot = (key, fallback) => nexusConfig?.roots?.[key] || fallback;
+const cfgAreaPlan = (key, fallback) => nexusConfig?.areas?.mainPlans?.[key] || fallback;
+const calendarRoot = cfgRoot("calendar", "0_Calendar");
+const weeklyPlanRoot = `${calendarRoot}/7_Plan`;
 
 // 🔱 2. SMART CLEAN & FALLBACK (For Direct-Start without Prompt)
 // Detects "Untitled" or the "Entry-..." placeholder from Router
@@ -106,11 +118,11 @@ try {
     const tYear = ttDate.format("YYYY");
     const tKw = ttDate.format("WW");
     const tMonth = ttDate.format("MM");
-    const weeklyTtPath = `0_Calendar/7_Plan/${tYear}/${tMonth}/${tYear}-W${tKw}_timetable.md`;
+    const weeklyTtPath = `${weeklyPlanRoot}/${tYear}/${tMonth}/${tYear}-W${tKw}_timetable.md`;
     
     let ttPage = dv.page(weeklyTtPath);
     if (!ttPage) {
-        ttPage = dv.page("2_Areas/3_Mind/Plan/Timetable.md");
+        ttPage = dv.page(cfgAreaPlan("timetable", "2_Areas/3_Mind/Plan/Timetable.md"));
     }
 
     if (ttPage && ["mon", "tue", "wed", "thu", "fri"].includes(dayPrefix)) {
@@ -135,7 +147,7 @@ try {
             }
 
             // 5. Baue die Blöcke exakt im Format deines Button-Skripts
-            timetableBlocks += `> [!info] 🗓️ **Timetable Sync: ${ttDate.format("dddd")}**\n>\n> The following subjects are scheduled for today:\n\n`;
+            timetableBlocks += `> [!info] 🗓️ **Timetable Sync: ${ttDate.format("dddd")}**\n>\n> Die folgenden Fächer stehen heute auf dem Plan:\n\n`;
             
             for (let subjKey of dailySubjects) {
                 let disc = engineData[subjKey];
@@ -318,8 +330,41 @@ createDashboardBox("Cognitive Load", bMap, "brain_drain", "#b873f0", "🧠");
 > }
 > ```
 
-## Studyplan
-<small style="opacity:0.45;font-style:italic;">(3atomic notes whose SRS Stardate is due today — empty = nothing due, or notes aren't running the spaced-repetition button yet)</small>
+## 🚀 Studyplan & Mastery Matrix
+
+> [!info] 🎖️ **Star Trek Rank Mastery Matrix (Disciplines vs. Ranks)**
+> *Every SRS Card is a Study Card, but not every Study Card is an SRS Card!*
+
+```dataviewjs
+const pages = dv.pages('(#5note/3atomic/studycards OR #5note/3atomic) AND !"zData" AND -"yArchive"')
+    .where(p => p.space_rank != null && p.status !== "archive" && p.status !== "archived");
+
+const ranks = ["Cadet 🎖️", "Ensign 🔰", "Lieutenant 🎗️", "Commander 🎖️", "Captain 👨‍✈️"];
+
+if (pages.length > 0) {
+    const grouped = pages.groupBy(p => {
+        let disc = p.discipline ? (Array.isArray(p.discipline) ? p.discipline[0] : p.discipline) : "General";
+        return String(disc).replace("#disc/", "").toUpperCase();
+    });
+
+    const rows = [];
+    grouped.forEach(g => {
+        let r1 = g.rows.filter(p => !p.space_rank || p.space_rank === 1).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r2 = g.rows.filter(p => p.space_rank === 2).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r3 = g.rows.filter(p => p.space_rank === 3).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r4 = g.rows.filter(p => p.space_rank === 4).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r5 = g.rows.filter(p => p.space_rank >= 5).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        rows.push([`**${g.key}**`, r1, r2, r3, r4, r5]);
+    });
+
+    dv.table(["📚 Discipline (Y-Axis)", "Cadet (L1)", "Ensign (L2)", "Lieutenant (L3)", "Commander (L4)", "Captain (L5)"], rows);
+} else {
+    dv.paragraph("_No active Study Cards found. Create cards via 3atomic_studycards!_");
+}
+```
+
+### 🧠 Spaced Repetition (SRS Due Reviews)
+<small style="opacity:0.45;font-style:italic;">(Study Cards whose SRS Stardate interval is due today for review)</small>
 ```dataview
 TABLE WITHOUT ID
   space_rank as "Rank",
@@ -332,8 +377,8 @@ SORT space_date ASC
 LIMIT 5
 ```
 
-### ! Delay
-<small style="opacity:0.45;font-style:italic;">(past-due SRS notes — empty = you're all caught up)</small>
+### ⚠️ SRS Delay (Overdue Reviews)
+<small style="opacity:0.45;font-style:italic;">(past-due SRS Study Cards — empty = you're all caught up!)</small>
 ```dataview
 TABLE WITHOUT ID
   space_rank as "Rank",
@@ -356,4 +401,4 @@ LIMIT 8
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
-`BUTTON[freezer]` `BUTTON[archive-month-logs]`
+`BUTTON[archive-month]`

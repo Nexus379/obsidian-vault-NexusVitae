@@ -14,9 +14,9 @@ let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 // 🔱 2. FALLBACK: Untitled Check
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
-    title = await tp.system.prompt("Your atomic SRS note?", "");
+    title = await tp.system.prompt("Vocabcard topic?", "");
 }
-if (!title || title.trim() === "") title = "SRS-" + tp.date.now("HH-mm");
+if (!title || title.trim() === "") title = "VocabCard-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
@@ -26,7 +26,7 @@ if (tp.file.title !== title) {
 // 🔱 3. TITEL-CLEANING 
 let displayTitle = title;
 if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
-displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(srs-|atomic-|n-)/i, "").trim();
+displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(vocabcard-|vocab-|srs-|atomic-|n-)/i, "").trim();
 
 tR += "---"  
 %>
@@ -36,7 +36,7 @@ inbox: true
 arch:
   - "#5note"
 archtype:
-  - "#5note/3atomic/srs"
+  - "#5note/3atomic/vocabcards"
 status: 1active
 priority:
   - "1"
@@ -55,15 +55,15 @@ parent: "<%- pLink %>"
 sibling: []
 child: []
 deck: "Nexus::General"
-tags: ["#srs/sync"]
+tags: ["#vocabcards"]
 
 ---
 
-# 🎴 SRS Note: <%- displayTitle %>
+# 🎴 Vocabcard: <%- displayTitle %>
 
 <%- tp.file.include("[[zData/1tmpl/5notes/cards_cheat sheet]]") %>
 
-## 🛰️ Flashcard Content (Spaced Repetition)
+## 🛰️ Flashcard Content (Spaced Repetition Plugin)
 
 Question :: Answer
 

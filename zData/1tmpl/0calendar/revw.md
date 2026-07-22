@@ -6,6 +6,16 @@ const end = tp.variables.revEnd || tp.variables.targetDate || tp.date.now("YYYY-
 const start = tp.variables.revStart || moment(end).subtract(7, "days").format("YYYY-MM-DD"); 
 const logConnect = tp.variables.logConnect || ""; 
 const displayTitle = tp.variables.displayTitle || "Weekly Review";
+let nexusConfig = {
+    roots: { calendar: "0_Calendar" },
+    areas: { mainPlans: {} }
+};
+try {
+    const cfgFile = app.vault.getAbstractFileByPath("zData/4values/NexusVitae_SystemConfig.json");
+    if (cfgFile) nexusConfig = Object.assign(nexusConfig, JSON.parse(await app.vault.read(cfgFile)));
+} catch (e) { console.error("Nexus system config load failed:", e); }
+tp.variables.weeklyPlanRoot = `${nexusConfig?.roots?.calendar || "0_Calendar"}/7_Plan`;
+tp.variables.routineMainPath = nexusConfig?.areas?.mainPlans?.routine || "2_Areas/4_Organize/Plan/Routine_Timeblocking.md";
 
 const isMaster = (revModule === "master");
 
@@ -143,8 +153,8 @@ const t = i18n ? i18n.t : (k)=>k;
 const start = "<%- start %>", end = "<%- end %>";
 
 const wk = moment(end).format("YYYY-[W]WW");
-let rPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === wk + "_routine").first();
-if (!rPage) rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking");
+let rPage = dv.pages('"<%- tp.variables.weeklyPlanRoot %>"').where(p => p.file.name === wk + "_routine").first();
+if (!rPage) rPage = dv.page("<%- tp.variables.routineMainPath %>");
 
 const chakras = [
   {g:"1. Root",         icon:"❤️", lkey:"ck_root",     key:"ct_root",     col:"239,83,80"},
@@ -384,4 +394,4 @@ if (engine && engine.renderChakraBars) {
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
-`BUTTON[freezer]`
+`BUTTON[archive-month]`

@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -62,6 +62,9 @@ care_tumble_dry: false
 is_waterproof: false
 toe_shape: ""
 pl_score: 0
+pref_vendor: ""
+pref_price: 0.00
+unit_price: 0.00
 price_cheap: 0.00
 vendor_cheap: ""
 price_value: 0.00
@@ -82,7 +85,7 @@ vendor_market: ""
 | 🏷️ **Type** | `INPUT[suggester(option(casual, 👕 Casual), option(formal, 👔 Formal), option(footwear, 👞 Footwear), option(outerwear, 🧥 Outerwear), option(activewear, 🏃 Activewear), option(accessory, 🕶️ Accessory)):clothing_type]` |     |
 | 🏷️ **Brand** | `INPUT[text:brand]` |     |
 | 🏪 **Vendor** | `INPUT[text:pref_vendor]` |     |
-| 💰 **Price** | `INPUT[number:unit_price]` € |     |
+| 💰 **Price** | `VIEW[{unit_price}]` € |     |
 | 📏 **Size** | `INPUT[text:size]` |     |
 | 🎨 **Color** | `INPUT[text:color]` |     |
 | 🧱 **Material** | `INPUT[text:material_primary]` |     |
@@ -92,17 +95,8 @@ vendor_market: ""
 | 🌧️ **Waterproof** | `INPUT[toggle:is_waterproof]` |     |
 | ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
+<%- tp.file.include("[[zData/5design_modul/ShoppingPriceMatrix]]") %>
+
 ## 📝 Source & Notes
 - 
 - 
@@ -112,33 +106,5 @@ vendor_market: ""
 > Click here to add an owner to this item:
 > `BUTTON[add-wardrobe-owner]`
 
-`
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
-
-`
-
-
 

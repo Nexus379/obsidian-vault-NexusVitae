@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // ðŸ”± 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // ðŸ›¡ï¸ Crash-Schutz
 
@@ -28,7 +28,7 @@ tR += "---"
 arch:
   - "#6resource"
 archtype:
-  - "#6resource/entity/Fitness"
+  - "#6resource/entity/fitness"
 science: 
   - "#sci/Biology"
   - "#sci/Geography"
@@ -46,7 +46,7 @@ subject: "Fitness & Outdoors"
 persona: "hiker"
 status: 1active
 entity_class: "outdoor_gear"
-Fitness_type: "tent"
+fitness_type: "tent"
 state: "active"
 qty: 0
 needs_refill: false
@@ -60,6 +60,9 @@ season_rating: 3
 pack_size_cm: ""
 material: ""
 pl_score: 0
+pref_vendor: ""
+pref_price: 0.00
+unit_price: 0.00
 price_cheap: 0.00
 vendor_cheap: ""
 price_value: 0.00
@@ -77,10 +80,10 @@ vendor_market: ""
 ## ðŸ”¬ Gear Lab
 | ðŸ•ï¸ Specification | âš–ï¸ Value |     |
 | :------------- | :------- | --- |
-| ðŸ·ï¸ **Type** | `INPUT[suggester(option(tent, â›º Tent), option(sleeping_bag, ðŸ›ï¸ Sleeping Bag), option(sleeping_pad, ðŸ›Œ Sleeping Pad), option(cooking, ðŸ³ Cooking), option(water_filter, ðŸ’§ Water Filter), option(backpack, ðŸŽ’ Backpack), option(tool, ðŸ”ª Tool)):Fitness_type]` |     |
+| ðŸ·ï¸ **Type** | `INPUT[suggester(option(tent, â›º Tent), option(sleeping_bag, ðŸ›ï¸ Sleeping Bag), option(sleeping_pad, ðŸ›Œ Sleeping Pad), option(cooking, ðŸ³ Cooking), option(water_filter, ðŸ’§ Water Filter), option(backpack, ðŸŽ’ Backpack), option(tool, ðŸ”ª Tool)):fitness_type]` |     |
 | ðŸ·ï¸ **Brand** | `INPUT[text:brand]` |     |
 | ðŸª **Vendor** | `INPUT[text:pref_vendor]` |     |
-| ðŸ’° **Price** | `INPUT[number:unit_price]` â‚¬ |     |
+| ðŸ’° **Price** | `VIEW[{unit_price}]` â‚¬ |     |
 | âš–ï¸ **Weight** | `INPUT[number:weight_g]` g |     |
 | ðŸ§‘â€ðŸ¤â€ðŸ§‘ **Capacity** | `INPUT[number:capacity_persons]` Personen |     |
 | ðŸŒ§ï¸ **Waterproof** | `INPUT[number:water_column_mm]` mm |     |
@@ -89,17 +92,8 @@ vendor_market: ""
 | ðŸ§± **Material** | `INPUT[text:material]` |     |
 | â­ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
+<%- tp.file.include("[[zData/5design_modul/ShoppingPriceMatrix]]") %>
+
 ## ðŸ“ Source & Notes
 - 
 - 
@@ -109,34 +103,4 @@ vendor_market: ""
 > Click here to add an owner to this item:
 > `BUTTON[add-wardrobe-owner]`
 
-
-`
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
-
-`
-
-
-

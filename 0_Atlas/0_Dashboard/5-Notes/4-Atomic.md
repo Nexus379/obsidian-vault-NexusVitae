@@ -22,13 +22,14 @@ cssclasses:
 > >     if (!container.querySelector('canvas')) {
 > >         const pages = dv.pages('#5note/4atomic AND !"zData" AND -"yArchive"').where(p => p.inbox !== true);
 > >         const values = [
-> >             pages.where(p => !String(p.archtype).toLowerCase().includes('anki') && !String(p.archtype).toLowerCase().includes('nutrition')).length,
-> >             pages.where(p => String(p.archtype).toLowerCase().includes('anki')).length,
+> >             pages.where(p => !String(p.archtype).toLowerCase().includes('studycards') && !String(p.archtype).toLowerCase().includes('vocabcards') && !String(p.archtype).toLowerCase().includes('nutrition')).length,
+> >             pages.where(p => String(p.archtype).toLowerCase().includes('studycards')).length,
+> >             pages.where(p => String(p.archtype).toLowerCase().includes('vocabcards')).length,
 > >             pages.where(p => String(p.archtype).toLowerCase().includes('nutrition')).length
 > >         ];
 > >         const hasData = values.some(v => v > 0);
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
-> >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Atomic', 'Anki', 'Nutrition'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#a6e3a1', '#cba6f7', '#fab387'] : ['var(--background-modifier-border)'], borderWidth: 0 }] }, options: { cutout: '80%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
+> >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Atomic', 'Studycards', 'Vocabcards', 'Nutrition'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#a6e3a1', '#89b4fa', '#f9e2af', '#fab387'] : ['var(--background-modifier-border)'], borderWidth: 0 }] }, options: { cutout: '80%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
 > >         const interval = setInterval(() => { if (window.renderChart) { const oldCanvas = container.querySelector('canvas'); if (oldCanvas) oldCanvas.remove(); window.renderChart(chartData, container); clearInterval(interval); } }, 150);
 > >     }
 > > }

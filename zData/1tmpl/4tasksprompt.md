@@ -1,10 +1,12 @@
 <%-*
-// 🔱 1. DATA-SYNC & SAFE VARIABLES
+// Nexus Router Prompt: Tasks
 if (!tp.variables) tp.variables = {};
-const SYS = tp.variables.SYS || {};
+const SYS = tp.variables.SYS || { tmpl: "zData/1tmpl" };
 const ARCH = tp.variables.ARCH || {};
-const dv = app.plugins.plugins.dataview?.api; // 🎯 NEU: Dataview für die Projekt-Suche
-
+const dv = app.plugins.plugins.dataview?.api;
+const taskRoot = (ARCH && ARCH.t && ARCH.t.folder) ? ARCH.t.folder : "4_Tasks";
+const projectRoot = (ARCH && ARCH.p && ARCH.p.folder) ? ARCH.p.folder : "3_Projects";
+const projectRootPattern = projectRoot.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 const activeTrigger = tp.variables.originTrigger || ""; 
@@ -72,22 +74,22 @@ tp.variables.deadline = await tp.system.prompt(
 
 // 🔱 4. PROJECT ASSIGNMENT (Das neue GTD-Routing für Tasks)
 let pLink = "";
-let targetFolder = (ARCH && ARCH.t && ARCH.t.folder) ? ARCH.t.folder : "4_Tasks"; // Standard-Fallback "4_Tasks"
+let targetFolder = taskRoot;
 
 // SMART PATH DETECTION: created directly inside a project's Tasks folder → auto-link, skip the prompt
 const _fp = tp.file.folder(true).replace(/\\/g, "/");
-const _pm = _fp.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)\/([^/]+)\/Tasks/);
+const _pm = _fp.match(new RegExp(projectRootPattern + "\\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)\\/([^/]+)\\/Tasks"));
 
 if (_pm) {
     pLink = `[[${_pm[2]}]]`;
-    targetFolder = `3_Projects/${_pm[1]}/${_pm[2]}/Tasks`;
+    targetFolder = `${projectRoot}/${_pm[1]}/${_pm[2]}/Tasks`;
 } else {
-    const projs = dv ? dv.pages('"3_Projects"').where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/")).sort(p => p.file.mtime, "desc") : [];
+    const projs = dv ? dv.pages(`"${projectRoot}"`).where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/")).sort(p => p.file.mtime, "desc") : [];
     const projOptions = ["✖️ No Project (General Task)", "➕ ✨ Create New Project"];
     const projPaths = ["NONE", "NEW"];
 
     for (let p of projs) {
-        let match = p.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
+        let match = p.file.path.match(new RegExp(projectRootPattern + "\\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)"));
         let stat = match ? match[1] : "1_Active";
         projOptions.push(`🧩 ${p.file.name} (${stat})`);
         projPaths.push(`${p.file.name}|${stat}`);
@@ -102,14 +104,14 @@ if (_pm) {
         const statFolders = ["1_Active", "2_Passive", "3_Idea", "0_Recurring"];
         const pStat = await tp.system.suggester(statLabels, statFolders, false, "🚦 Initial Project Status?") || "1_Active";
         pLink = `[[${pName}]]`;
-        targetFolder = `3_Projects/${pStat}/${pName}/Tasks`;
+        targetFolder = `${projectRoot}/${pStat}/${pName}/Tasks`;
     } else if (pick && pick !== "NONE") {
         // Existing project selected → build the project Tasks path
         const parts = pick.split("|");
         const pName = parts[0];
         const pStat = parts[1];
         pLink = `[[${pName}]]`;
-        targetFolder = `3_Projects/${pStat}/${pName}/Tasks`;
+        targetFolder = `${projectRoot}/${pStat}/${pName}/Tasks`;
     }
 }
 
@@ -138,16 +140,8 @@ for (const seg of targetFolder.split('/').filter(s => s)) {
 
 // 🔱 6. RENAME & MOVE (Stabilisiert)
 const finalPath = `${targetFolder}/${title}.md`;
-if (tp.file.path !== finalPath) {
-    const existing = app.vault.getAbstractFileByPath(finalPath);
-    if (existing instanceof tp.obsidian.TFile) {
-        new Notice(`ℹ️ Task already exists: ${title}. Opening & revealing...`);
-        const leaf = app.workspace.getLeaf(false);
-        await leaf.openFile(existing);
-        app.commands.executeCommandById("file-explorer:reveal-active-file");
-        return;
-    }
-    try { await tp.file.move(finalPath); } catch(e) {}
+if (tp.file.path !== finalPath && !app.vault.getAbstractFileByPath(finalPath)) {
+    await tp.file.move(finalPath);
 }
 
 // 🔱 7. LOAD CONTENT

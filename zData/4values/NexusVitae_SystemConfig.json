@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "roots": {
+    "calendar": "0_Calendar",
+    "stars": "1_Stars",
+    "areas": "2_Areas",
+    "projects": "3_Projects",
+    "tasks": "4_Tasks",
+    "notes": "5_Notes",
+    "resources": "6_Resources",
+    "atlas": "0_Atlas",
+    "archive": "yArchive",
+    "system": "zData"
+  },
+  "router": [],
+  "templates": {
+    "root": "zData/1tmpl",
+    "plans": {
+      "fitness": "1tmpl/0calendar/7plan/fitnessplan.md",
+      "meal": "1tmpl/0calendar/7plan/mealplan.md",
+      "financial": "1tmpl/0calendar/7plan/financialplan.md",
+      "study": "1tmpl/0calendar/7plan/studyplan.md"
+    }
+  },
+  "values": {
+    "taxonomy": "zData/yaml tags organization.md"
+  },
+  "entities": {
+    "home": "6_Resources/_Entities/Home",
+    "travel": "6_Resources/_Entities/Travel"
+  },
+  "areas": {
+    "root": "2_Areas",
+    "mainPlans": {
+      "meal": "2_Areas/1_Selfcare/Plan/Meal_Plan.md",
+      "am_routine": "2_Areas/1_Selfcare/Plan/AM_Routine.md",
+      "pm_routine": "2_Areas/1_Selfcare/Plan/PM_Routine.md",
+      "wardrobe": "2_Areas/1_Selfcare/Plan/Wardrobe.md",
+      "timetable": "2_Areas/3_Mind/Plan/Timetable.md",
+      "study": "2_Areas/3_Mind/Plan/Study_Plan.md",
+      "srs": "2_Areas/3_Mind/Plan/Spaced_Repetition.md",
+      "routine": "2_Areas/4_Organize/Plan/Routine_Timeblocking.md",
+      "shopping": "2_Areas/4_Organize/Plan/Shopping_Hub.md",
+      "inpra": "2_Areas/5_Creativity/Plan/Instrument_Mastery.md",
+      "fitness": "2_Areas/6_Activity/Plan/Fitness_Routine.md"
+    }
+  },
+  "generated": {
+    "groceryOutputFolder": "0_Calendar/4_Projectlogs/Utilities",
+    "workoutOutputFolder": "0_Calendar/4_Projectlogs/Fitness"
+  },
+  "metaBind": {
+    "dataPath": ".obsidian/plugins/obsidian-meta-bind-plugin/data.json"
+  }
+}

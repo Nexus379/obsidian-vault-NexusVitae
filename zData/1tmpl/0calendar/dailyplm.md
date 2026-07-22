@@ -3,6 +3,23 @@
 if (!tp.variables) tp.variables = {};
 const dv = app.plugins.plugins.dataview.api;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
+let nexusConfig = {
+    roots: { calendar: "0_Calendar" },
+    areas: { mainPlans: {} }
+};
+try {
+    const cfgFile = app.vault.getAbstractFileByPath("zData/4values/NexusVitae_SystemConfig.json");
+    if (cfgFile) nexusConfig = Object.assign(nexusConfig, JSON.parse(await app.vault.read(cfgFile)));
+} catch (e) { console.error("Nexus system config load failed:", e); }
+const cfgRoot = (key, fallback) => nexusConfig?.roots?.[key] || fallback;
+const cfgAreaPlan = (key, fallback) => nexusConfig?.areas?.mainPlans?.[key] || fallback;
+const calendarRoot = cfgRoot("calendar", "0_Calendar");
+const weeklyPlanRoot = `${calendarRoot}/7_Plan`;
+tp.variables.weeklyPlanRoot = weeklyPlanRoot;
+tp.variables.routineMainPath = cfgAreaPlan("routine", "2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+tp.variables.amRoutinePath = cfgAreaPlan("am_routine", "2_Areas/1_Selfcare/Plan/AM_Routine.md");
+tp.variables.pmRoutinePath = cfgAreaPlan("pm_routine", "2_Areas/1_Selfcare/Plan/PM_Routine.md");
+tp.variables.shoppingHubPath = cfgAreaPlan("shopping", "2_Areas/4_Organize/Plan/Shopping_Hub.md");
 
 // 🌐 i18n label helper (loads zData/2scripts/i18n.js via the same read+Function pattern as the engines).
 // L("key") returns the label in the current language, falling back to English, then the key itself.
@@ -98,8 +115,8 @@ const dayPrefix = targetMoment.locale('en').format("ddd").toLowerCase(); // e.g.
 const pYear = targetMoment.format("YYYY");
 const pMonth = targetMoment.format("MM");
 const pKw = targetMoment.format("WW");
-const weeklyPlanPath = `0_Calendar/7_Plan/${pYear}/${pMonth}/${pYear}-W${pKw}_meal`;
-const masterPlanPath = `2_Areas/1_Selfcare/Plan/Meal_Plan`;
+const weeklyPlanPath = `${weeklyPlanRoot}/${pYear}/${pMonth}/${pYear}-W${pKw}_meal.md`;
+const masterPlanPath = cfgAreaPlan("meal", "2_Areas/1_Selfcare/Plan/Meal_Plan.md");
 
 let planPage = dv.page(weeklyPlanPath);
 tp.variables.activePlanLink = `[[${weeklyPlanPath}|Week ${pKw} Meal Plan]]`;
@@ -194,8 +211,8 @@ try {
     const rYear = rDate.format("YYYY");
     const rMonth = rDate.format("MM");
     const rKw = rDate.format("WW");
-    const weeklyRoutinePath = `0_Calendar/7_Plan/${rYear}/${rMonth}/${rYear}-W${rKw}_routine`;
-    const masterRoutinePath = `2_Areas/4_Organize/Plan/Routine_Timeblocking`;
+    const weeklyRoutinePath = `${weeklyPlanRoot}/${rYear}/${rMonth}/${rYear}-W${rKw}_routine.md`;
+    const masterRoutinePath = cfgAreaPlan("routine", "2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
 
     let rPage = dv.page(weeklyRoutinePath);
     let rLink = `[[${weeklyRoutinePath}|Week ${rKw} Routine Plan]]`;
@@ -295,8 +312,8 @@ try {
     const fYear = fDate.format("YYYY");
     const fMonth = fDate.format("MM");
     const fKw = fDate.format("WW");
-    const weeklyFitnessPath = `0_Calendar/7_Plan/${fYear}/${fMonth}/${fYear}-W${fKw}_fitness`;
-    const masterFitnessPath = `2_Areas/6_Activity/Plan/Fitness_Routine`;
+    const weeklyFitnessPath = `${weeklyPlanRoot}/${fYear}/${fMonth}/${fYear}-W${fKw}_fitness.md`;
+    const masterFitnessPath = cfgAreaPlan("fitness", "2_Areas/6_Activity/Plan/Fitness_Routine.md");
 
     let fPage = dv.page(weeklyFitnessPath);
     if (fPage) {
@@ -344,7 +361,7 @@ try {
 
         if (!dayHasTraining) fitnessBlocks = "_Rest day — no training scheduled._\n";
     } else {
-        fitnessBlocks = "_No Fitness plan found (neither weekly nor master)._\n";
+        fitnessBlocks = `⚠️ _No Fitness plan found._\n👉 [[${masterFitnessPath}|🏋️ Open Main Fitness Plan (Area 6)]] to create your routine!\n`;
     }
 } catch (error) {
     console.error("Fitness Sync Error: ", error);
@@ -352,10 +369,10 @@ try {
 }
 tp.variables.fitnessSync = fitnessBlocks;
 tp.variables.fitnessLinkPath = fitnessLinkPath;
-// Build the ready link (guard against an empty path -> avoids a broken [[|label]] wikilink)
+const planLabel = fitnessLinkPath.includes("7_Plan") ? "Weekly Fitness Plan" : "Master Fitness Routine (Area 6)";
 tp.variables.fitnessLinkMd = fitnessLinkPath
-    ? `➤ [[${fitnessLinkPath}|🏋️ Open Fitness Plan]]`
-    : `_No fitness plan found._`;
+    ? `➤ [[${fitnessLinkPath}|🏋️ Open ${planLabel}]]`
+    : `👉 [[${cfgAreaPlan("fitness", "2_Areas/6_Activity/Plan/Fitness_Routine.md")}|🏋️ Open Master Fitness Routine (Area 6)]]`;
 
 // 🔱 5.7 INPRA SYNC (Instrumental Practice)
 let inpraBlocks = "";
@@ -365,20 +382,27 @@ try {
     const iYear = iDate.format("YYYY");
     const iMonth = iDate.format("MM");
     const iKw = iDate.format("WW");
-    const weeklyInpraPath = `0_Calendar/7_Plan/${iYear}/${iMonth}/${iYear}-W${iKw}_inpra`;
+    const weeklyInpraPath = `${weeklyPlanRoot}/${iYear}/${iMonth}/${iYear}-W${iKw}_inpra.md`;
+    const masterInpraPath = cfgAreaPlan("inpra", "2_Areas/5_Creativity/Plan/Instrument_Mastery.md");
     
     let iPage = dv.page(weeklyInpraPath);
     if (iPage) {
         inpraLinkPath = weeklyInpraPath;
+    } else {
+        iPage = dv.page(masterInpraPath);
+        inpraLinkPath = masterInpraPath;
+    }
+    
+    if (iPage) {
         const iDayPrefix = iDate.locale('en').format("ddd").toLowerCase();
-        let activeInstr = iPage["instr_active"] || "Instrument";
-        // Read 3 slots inpra_<day>_ex_1..3 (+ Mastery lvl_1..3) — matches weekplan_inpra
+        let activeInstr = iPage["inpra_active"] || "Instrument";
+        // Read 3 planned slots inpra_<day>_ex_1..3 from weekplan_inpra.
         let items = [];
         for (let s = 1; s <= 3; s++) {
             let ex = iPage[`inpra_${iDayPrefix}_ex_${s}`];
             if (ex && String(ex).trim() !== "") {
-                let lvl = Number(iPage[`inpra_${iDayPrefix}_lvl_${s}`]) || 0;
-                items.push(`- ${String(ex).trim()}${lvl ? ` _(Mastery ${lvl}/5)_` : ""}`);
+                let mins = Number(iPage[`inpra_${iDayPrefix}_min_${s}`]) || 0;
+                items.push(`- ${String(ex).trim()}${mins ? ` _(${mins} min)_` : ""}`);
             }
         }
         if (items.length > 0) {
@@ -387,7 +411,7 @@ try {
             inpraBlocks = `_No specific exercise planned for ${activeInstr} today._\n`;
         }
     } else {
-        inpraBlocks = "_No Instrumental Practice plan found for this week._\n";
+        inpraBlocks = `⚠️ _No Instrumental Practice plan found._\n👉 [[${masterInpraPath}|🎼 Open Master Instrumental Practice Plan (Area 5)]] to create your routine!\n`;
     }
 } catch (error) {
     console.error("Inpra Sync Error: ", error);
@@ -395,10 +419,10 @@ try {
 }
 tp.variables.inpraSync = inpraBlocks;
 tp.variables.inpraLinkPath = inpraLinkPath;
-// Inpra has no master fallback -> without a weekly plan the path is empty. Guard the link.
+const inpraLabel = inpraLinkPath.includes("7_Plan") ? "Weekly Practice Plan" : "Master Instrumental Practice Plan (Area 5)";
 tp.variables.inpraLinkMd = inpraLinkPath
-    ? `➤ [[${inpraLinkPath}|🎼 Open Practice Plan]]`
-    : `_No practice plan yet — create one via the weekly router._`;
+    ? `➤ [[${inpraLinkPath}|🎼 Open ${inpraLabel}]]`
+    : `👉 [[${cfgAreaPlan("inpra", "2_Areas/5_Creativity/Plan/Instrument_Mastery.md")}|🎼 Open Master Instrumental Practice Plan (Area 5)]]`;
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
@@ -476,10 +500,17 @@ food_rem:
 ## <%- displayTitle %>
 
 <%-*
-// 🔱 3. DYNAMIC LINKS TO THE OTHER LOGS
-const todayPPM = `0_Calendar/2_PPM/${year}/${month}/${dateStr} ppm`;
-const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
-%>
+// 🔱 3. DYNAMIC LINKS TO THE OTHER LOGS (ROBUST EDITION)
+let todayPPM = `0_Calendar/2_PPM/${year}/${month}/${dateStr} ppm`;
+let todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
+
+if (dv) {
+    const ppmPage = dv.pages(`"0_Calendar/2_PPM/${year}/${month}"`).find(p => p.file.name.startsWith(`${dateStr} ppm`));
+    const pkmPage = dv.pages(`"0_Calendar/3_PKM/${year}/${month}"`).find(p => p.file.name.startsWith(`${dateStr} pkm`));
+    if (ppmPage) todayPPM = ppmPage.file.path;
+    if (pkmPage) todayPKM = pkmPage.file.path;
+}
+-%>
 **Professional:** [[<%- todayPPM %>|🌻 Go to today's Manager-Log (PPM)]]
 **Knowledge:** [[<%- todayPKM %>|🌼 Go to today's Study-Log (PKM)]]
 
@@ -524,7 +555,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
     const weekName = moment(dateValue).format("YYYY-[W]WW");
     
     // Smart Sync with Weekly Plans (aus 0_Calendar/7_Plan/)
-    const fitPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_fitness").first();
+    const fitPage = dv.pages('"<%- tp.variables.weeklyPlanRoot %>"').where(p => p.file.name === weekName + "_fitness").first();
 
     // --- 2. THE 5 PILLARS (L-E-B-E-N) ---
     const vitaminTasks = (v && v.file.tasks) ? v.file.tasks : [];
@@ -638,7 +669,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 [^1]
 
 > [!pink] L - Lifestyle / Food  
-> > [!quote|flat] ☀️[[2_Areas/1_Selfcare/Plan/AM_Routine|AM_Routine]]
+> > [!quote|flat] ☀️[[<%- tp.variables.amRoutinePath %>|AM_Routine]]
 > > - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
 > > - **Journal** AM: `INPUT[toggle:journal_am]` 
 > > 	- *Gratitude, Fascinating, Braindump*
@@ -824,10 +855,10 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const dObj = moment(dStr, "YYYY-MM-DD");
 > > > const weekYearG = dObj.format("YYYY");
 > > > const weekKwG = dObj.format("WW");
-> > > const weeklyRoutinePath = `0_Calendar/7_Plan/${weekYearG}/${dObj.format("MM")}/${weekYearG}-W${weekKwG}_routine.md`;
+> > > const weeklyRoutinePath = `<%- tp.variables.weeklyPlanRoot %>/${weekYearG}/${dObj.format("MM")}/${weekYearG}-W${weekKwG}_routine.md`;
 > > > let rPage = dv.page(weeklyRoutinePath);
 > > > if (!rPage) {
-> > >     rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+> > >     rPage = dv.page("<%- tp.variables.routineMainPath %>");
 > > > }
 > > > 
 > > > if (rPage) {
@@ -859,7 +890,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > >     }
 > > > }
 > > > ```
-> > > <br>[[2_Areas/4_Organize/Plan/Shopping_Hub|➡️ Open Central Procurement Hub]]
+> > > <br>[[<%- tp.variables.shoppingHubPath %>|➡️ Open Central Procurement Hub]]
 > >
 > > > [!todo|flat] 📝 Household & Quick Extras
 > > > **Household & Quick Extras:** `BUTTON[add-shopping-extra]`
@@ -912,16 +943,10 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > [!blank]
 > > > ```dataviewjs
 > > > const c = dv.current();
-> > > const dStr = c.cal_date || c.file.name.substring(0, 10);
-> > > const wLogs = dv.pages('"0_Calendar/4_Projectlogs"')
-> > >     .where(p => (p.cal_date == dStr || p.file.name.includes(dStr)) && (p.file.name.toLowerCase().includes("workout") || p.file.name.toLowerCase().includes("fitness")));
-> > > let wMin = 0;
-> > > wLogs.forEach(l => wMin += (Number(l.duration) || 0));
-> > > 
 > > > const am = Number(c["mobility_am"]) || 0;
 > > > const pm = Number(c["mobility_pm"]) || 0;
 > > > const act = Number(c["activity_time"]) || 0;
-> > > const gesamt = am + pm + act + wMin;
+> > > const gesamt = am + pm + act;
 > > > const ziel = 30;
 > > > 
 > > > let icon = "⚪"; let flair = "";
@@ -930,32 +955,17 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > else if (gesamt >= ziel) { icon = "🟢"; }
 > > > else if (gesamt > 0) { icon = "🟡"; }
 > > > 
-> > > dv.paragraph(`🏃🏽 **Status:** ${gesamt} /${ziel} min ${icon}${flair}`);
+> > > dv.paragraph(`🏃🏽 **Movement Total:** ${gesamt} / ${ziel} min ${icon}${flair}`);
+> > > dv.paragraph(`<small style="opacity:0.7;">🧘 Mobility AM: <b>${am} min</b> · 🌙 Mobility PM: <b>${pm} min</b> · ⚡ Activity: <b>${act} min</b></small>`);
 > > > ```
 > > 
 > > > [!blank]
-> > > **🏋️ Today's Training & Exercises:**
-> > > ```dataviewjs
-> > > const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
-> > > const logs = dv.pages('"0_Calendar/4_Projectlogs"')
-> > >     .where(p => (p.cal_date == dStr || p.file.name.includes(dStr)) && (p.file.name.toLowerCase().includes("workout") || p.file.name.toLowerCase().includes("fitness")));
-> > > 
-> > > if (logs.length > 0) {
-> > >     for (let l of logs) {
-> > >         dv.header(4, `🏋️ ${l.file.name} (${l.duration || 30} min)`);
-> > >         if (l.exercises && Array.isArray(l.exercises)) {
-> > >             dv.list(l.exercises.map(e => `💪 ${e}`));
-> > >         } else {
-> > >             dv.paragraph(`_Log: [[${l.file.name}]] (${l.duration || 30} min recorded)_`);
-> > >         }
-> > >     }
-> > > } else {
-> > >     dv.paragraph(`> [!info] **No Workout Log Today**\n> ➡️ Check your [[2_Areas/1_Selfcare/Plan/Fitness_Plan|🏋️ Fitness Plan]] or generate a new log:\n> \`BUTTON[generate-workout-log]\` \`BUTTON[genereate-workout]\``);
-> > > }
-> > > ```
+> > > **Today's Training:**
+> > > <%- tp.variables.fitnessSync.trim().replace(/\n/g, '\n> > > ') %>
 > > > ---
-> > > **📝 Quick Activity Input (Manual Fallback):**
-> > > `INPUT[inlineListSuggester(option(Walk), option(Run), option(Basketball), option(Swim), option(Cycling), option(Climbing), option(Yoga), option(Dance), option(Hike), option(Tennis)):activity_link]` ⏱️ Duration: `INPUT[number:activity_time]` min
+> > > <%- tp.variables.fitnessLinkMd %>
+> > > 
+> > > ➤ `BUTTON[snapshot-week-fitness]`
 
 > [!pink] E - Entropy / Relaxation
 > >[!multi-column]
@@ -969,8 +979,8 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const todayStr = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
 > > > 
 > > > const weekName = dObj.isValid() ? dObj.format("YYYY-[W]WW") : moment().format("YYYY-[W]WW");
-> > > let rPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_routine").first();
-> > > if (!rPage) rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking"); // Fallback to main routine
+> > > let rPage = dv.pages('"<%- tp.variables.weeklyPlanRoot %>"').where(p => p.file.name === weekName + "_routine").first();
+> > > if (!rPage) rPage = dv.page("<%- tp.variables.routineMainPath %>"); // Fallback to main routine
 > > > if (rPage) {
 > > >     const rStart = rPage.rt_start || "07:00";
 > > >     const rDur = Number(rPage.rt_duration) || 60;
@@ -1036,16 +1046,10 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > > Painting/Drawing, Crafting, etc.
 > > > > `INPUT[inlineList:creativity_link]`
 > > > > 
-> > > > 🎸 **Instrument Practice (Inpra)**
+> > > > 🎸 **Instrument Practice**
 > > > > ```dataviewjs
 > > > > const c = dv.current();
-> > > > const dStr = c.cal_date || c.file.name.substring(0, 10);
-> > > > const iLogs = dv.pages('"0_Calendar/4_Projectlogs"')
-> > > >     .where(p => (p.cal_date == dStr || p.file.name.includes(dStr)) && (p.file.name.toLowerCase().includes("inpra") || p.file.name.toLowerCase().includes("practice")));
-> > > > let logMin = 0;
-> > > > iLogs.forEach(l => logMin += (Number(l.duration) || 0));
-> > > > 
-> > > > const mMin = (Number(c["inpra_min"]) || 0) + logMin;
+> > > > const mMin = Number(c["inpra_min"]) || 0;
 > > > > const mZiel = 10;
 > > > > let mIcon = "⚪"; let mFlair = "";
 > > > > if (mMin >= 30) { mIcon = "🔥"; mFlair = " VIRTUOSO"; }
@@ -1053,27 +1057,12 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > > else if (mMin > 0) { mIcon = "🟡"; }
 > > > > dv.paragraph(`🎸 **Status:** ${mMin} /${mZiel} min ${mIcon}${mFlair}`);
 > > > > ```
-> > > > ➤ `INPUT[number:inpra_min]` min (Manual Entry)
+> > > > ➤ `INPUT[number:inpra_min]` min
 > > > > 
-> > > > **Today's Practice Sessions:**
-> > > > ```dataviewjs
-> > > > const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
-> > > > const logs = dv.pages('"0_Calendar/4_Projectlogs"')
-> > > >     .where(p => (p.cal_date == dStr || p.file.name.includes(dStr)) && (p.file.name.toLowerCase().includes("inpra") || p.file.name.toLowerCase().includes("practice")));
-> > > > 
-> > > > if (logs.length > 0) {
-> > > >     for (let l of logs) {
-> > > >         dv.header(4, `🎸 ${l.file.name} (${l.duration || 15} min)`);
-> > > >         if (l.notes || l.exercises) {
-> > > >             dv.paragraph(l.notes || (Array.isArray(l.exercises) ? l.exercises.join(", ") : l.exercises));
-> > > >         } else {
-> > > >             dv.paragraph(`_Log: [[${l.file.name}]] (${l.duration || 15} min recorded)_`);
-> > > >         }
-> > > >     }
-> > > > } else {
-> > > >     dv.paragraph(`> [!info] **No Inpra Log Today**\n> ➡️ Check your [[2_Areas/5_Creativity/Plan/Inpra_Plan|🎸 Inpra Plan]] or generate a new log:\n> \`BUTTON[generate-inpra-log]\` \`BUTTON[generate-inpra]\``);
-> > > > }
-> > > > ```
+> > > > **Today's Setup:**
+> > > > <%- tp.variables.inpraSync.trim().replace(/\n/g, '\n> > > > ') %>
+> > > > ---
+> > > > <%- tp.variables.inpraLinkMd %>
 > 
 > > [!quote|flat] 📺 Entertainment (Passive)
 > > *Unplug & Consume: Gaming, Movies, Series, etc.*
@@ -1107,7 +1096,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > **Action:** `BUTTON[add-entropy]`
 
 > [!pink] N - Night / Sleep
-> > [!quote|flat] 🌙 [[2_Areas/1_Selfcare/Plan/PM_Routine|PM_Routine]]
+> > [!quote|flat] 🌙 [[<%- tp.variables.pmRoutinePath %>|PM_Routine]]
 > > - **Selfcare** PM: `INPUT[toggle:selfcare_pm]`
 > > - **Journal** PM: `INPUT[toggle:journal_pm]` 
 > > 	- *Gratitude, Fascinating, Braindump*
@@ -1145,18 +1134,8 @@ if (engine && engine.renderChakraColumns) {
 
 
 
-> [!info] 📑 Today's Project Logs & Protocols (`4_Projectlogs` & `5_Protocols`)
-> ```dataviewjs
-> const dStr = dv.current().cal_date || dv.current().file.name.substring(0, 10);
-> const logs = dv.pages('"0_Calendar/4_Projectlogs" or "0_Calendar/5_Protocols"')
->     .where(p => p.cal_date == dStr || p.file.name.includes(dStr) || p.file.mtime.toFormat("yyyy-MM-dd") == dStr);
-> if (logs.length > 0) {
->     dv.table(["📄 Log / Protocol", "📂 Location", "🕒 Last Modified"], logs.map(p => [p.file.link, p.file.folder, p.file.mtime.toFormat("HH:mm")]));
-> } else {
->     dv.paragraph("_No project logs or protocols generated for today yet._");
-> }
-> ```
+[^1]: L-E-B-E-N by Birkenbihl
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
-`BUTTON[freezer]` `BUTTON[archive-month-logs]`
+`BUTTON[archive-month]`

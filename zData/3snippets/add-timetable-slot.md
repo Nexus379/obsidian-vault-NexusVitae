@@ -144,6 +144,47 @@ try {
 
     new Notice(`⚡ Deploy complete! Filled Slots ${startSlot.id} to ${endSlot.id}.`);
 
+    // 🔱 7. LOOP OPTION: Add another slot for same/different subject
+    const loopChoice = await tp.system.suggester(
+        [
+            `➕ Add another slot for '${routine.label}' (Same subject)`,
+            "➕ Add slot for a DIFFERENT subject",
+            "✅ Done (Finish setup)"
+        ],
+        ["same", "different", "done"],
+        false,
+        "🔁 Add another time slot to this Timetable?"
+    );
+
+    if (loopChoice === "same") {
+        // Run again pre-selecting same subject
+        const nextDayGroup = await tp.system.suggester(dayOptions.map(d => d.l), dayOptions, false, `🗓️ Choose NEXT Day(s) for '${routine.label}':`);
+        if (nextDayGroup) {
+            const nextStart = await tp.system.suggester(numericSlots.map(s => s.label), numericSlots, false, `🛫 Select START Slot for '${routine.label}':`);
+            if (nextStart) {
+                const nextValidEnd = numericSlots.filter(s => s.id >= nextStart.id);
+                const nextEnd = await tp.system.suggester(nextValidEnd.map(s => s.label), nextValidEnd, false, `🛬 Select END Slot for '${routine.label}':`);
+                if (nextEnd) {
+                    await app.fileManager.processFrontMatter(file, (frontmatter) => {
+                        nextDayGroup.v.forEach(dayPrefix => {
+                            for (let slotId = nextStart.id; slotId <= nextEnd.id; slotId++) {
+                                frontmatter[`tt_${dayPrefix}_${slotId}`] = finalKey;
+                            }
+                        });
+                    });
+                    new Notice(`⚡ Deploy complete! Added second slot for '${routine.label}'.`);
+                }
+            }
+        }
+    } else if (loopChoice === "different") {
+        // Re-trigger script for another subject
+        const templater = app.plugins.plugins["templater-obsidian"]?.templater?.current_functions_object;
+        if (templater) {
+            const snippet = app.vault.getAbstractFileByPath("zData/3snippets/add-timetable-slot.md");
+            if (snippet) await templater.include_file(snippet);
+        }
+    }
+
 } catch(e) {
     new Notice("🔥 Error: " + e.message, 10000);
 }

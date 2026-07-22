@@ -38,7 +38,7 @@ tp.variables.ARCH = {
     c: { label: "Calendar",  folder: "0_Calendar",  icon: "📅", prompt: "0calendarprompt", trigger: ["c","cal"] },
     s: { label: "Stars",     folder: "1_Stars",     icon: "✨", prompt: "1starsprompt", trigger: ["s","stars"] },
     a: { label: "Areas",     folder: "2_Areas",     icon: "💠", prompt: "2areasprompt", trigger: ["a","areas"] },
-    p: { label: "Projects",  folder: "3_Projects",  icon: "🧩", prompt: "3projectsprompt", trigger: ["p","projects"] },
+    p: { label: "Projects",  folder: "3_Projects",  icon: "🧩", prompt: "3projectsprompt", trigger: ["p","pro","project","projects"] },
     t: { label: "Tasks",     folder: "4_Tasks",     icon: "🛠️", prompt: "4tasksprompt", trigger: ["t","tasks"] },
     n: { label: "Notes",     folder: "5_Notes",     icon: "✏️", prompt: "5notesprompt", trigger: ["n","notes"] },
     r: { label: "Resources", folder: "6_Resources", icon: "🔖", prompt: "6resourcesprompt", trigger: ["r","resources"] }
@@ -54,21 +54,22 @@ const promptMap = {
     "log": ARCH.c.prompt, "rev": ARCH.c.prompt, "studylog": ARCH.c.prompt, "jou": ARCH.c.prompt,
     "plan": ARCH.c.prompt, "weekplan": ARCH.c.prompt, "week": ARCH.c.prompt,"fitness": ARCH.c.prompt, "inpra": ARCH.c.prompt, "routine": ARCH.c.prompt, "meal": ARCH.c.prompt, "shopping": ARCH.c.prompt, "srs": ARCH.c.prompt, "spaced": ARCH.c.prompt, "wardrobe": ARCH.c.prompt,
     "s": ARCH.s.prompt, "stars": ARCH.s.prompt, "purpose": ARCH.s.prompt, "vision": ARCH.s.prompt, "goal": ARCH.s.prompt, "goals": ARCH.s.prompt,
-    "a": ARCH.a.prompt, "areas": ARCH.a.prompt, "selfcare": ARCH.a.prompt, "relation": ARCH.a.prompt, "person": ARCH.a.prompt,
+    "a": ARCH.a.prompt, "areas": ARCH.a.prompt, "selfcare": ARCH.a.prompt, "relation": ARCH.a.prompt, "character": ARCH.a.prompt, "char": ARCH.a.prompt,
     "mind": ARCH.a.prompt, "organize": ARCH.a.prompt, "creativity": ARCH.a.prompt, "activity": ARCH.a.prompt,
     "entertain": ARCH.a.prompt, "entertainment": ARCH.a.prompt,
-    "p": ARCH.p.prompt, "projects": ARCH.p.prompt, "prodo": ARCH.p.prompt, "progo": ARCH.p.prompt, "prostudy": ARCH.p.prompt,
+    "p": ARCH.p.prompt, "pro": ARCH.p.prompt, "project": ARCH.p.prompt, "projects": ARCH.p.prompt, "prodo": ARCH.p.prompt, "progo": ARCH.p.prompt, "prostudy": ARCH.p.prompt,
     "promeet": ARCH.p.prompt, "probuy": ARCH.p.prompt, "propay": ARCH.p.prompt, "procook": ARCH.p.prompt, "procraft": ARCH.p.prompt, "proget": ARCH.p.prompt,
     "t": ARCH.t.prompt, "tasks": ARCH.t.prompt, "todo": ARCH.t.prompt, "togo": ARCH.t.prompt, "tostudy": ARCH.t.prompt,
     "tomeet": ARCH.t.prompt, "tobuy": ARCH.t.prompt, "topay": ARCH.t.prompt, "tocook": ARCH.t.prompt, "tocraft": ARCH.t.prompt,
     "toget": ARCH.t.prompt, "get": ARCH.t.prompt, "toenjoy": ARCH.t.prompt,
     "n": ARCH.n.prompt, "notes": ARCH.n.prompt, "fleet": ARCH.n.prompt, "lit": ARCH.n.prompt, "perma": ARCH.n.prompt,
-    "atomic": ARCH.n.prompt, "anki": ARCH.n.prompt, "nutri": ARCH.n.prompt, "ever": ARCH.n.prompt,
+    "atomic": ARCH.n.prompt, "studycards": ARCH.n.prompt, "studycard": ARCH.n.prompt, "srs": ARCH.n.prompt, "vocab": ARCH.n.prompt, "vocabcards": ARCH.n.prompt, "vocabcard": ARCH.n.prompt, "spacedcard": ARCH.n.prompt, "nutri": ARCH.n.prompt, "ever": ARCH.n.prompt,
     "r": ARCH.r.prompt, "resources": ARCH.r.prompt, "ai": ARCH.r.prompt, "article": ARCH.r.prompt, "book": ARCH.r.prompt,
     "class": ARCH.r.prompt, "course": ARCH.r.prompt, "film": ARCH.r.prompt, "game": ARCH.r.prompt, "guide": ARCH.r.prompt,
     "museum": ARCH.r.prompt, "music": ARCH.r.prompt, "paper": ARCH.r.prompt, "recipe": ARCH.r.prompt,
     "reference": ARCH.r.prompt, "serie": ARCH.r.prompt, "series": ARCH.r.prompt, "video": ARCH.r.prompt,
-    "boardgame": ARCH.r.prompt
+    "boardgame": ARCH.r.prompt, "software": ARCH.r.prompt, "softwaremaintenance": ARCH.r.prompt,
+    "maintenance": ARCH.r.prompt, "app": ARCH.r.prompt, "plugin": ARCH.r.prompt
 };
 
 // 🔱 4. DETECTION LOGIC
@@ -189,13 +190,7 @@ tp.variables.preSelectedSub = subFolderDetected;
 // Only rename physically if it's not a pure Chronos event and the name has changed
 if (!isChronos && cleanTitle && cleanTitle.trim() !== "" && cleanTitle !== rawTitle) {
     const checkExist = app.vault.getAbstractFileByPath(`${folderPath}/${cleanTitle}.md`);
-    if (checkExist instanceof tp.obsidian.TFile) {
-        new Notice(`ℹ️ Note already exists: ${cleanTitle}. Opening & revealing...`);
-        const leaf = app.workspace.getLeaf(false);
-        await leaf.openFile(checkExist);
-        app.commands.executeCommandById("file-explorer:reveal-active-file");
-        return;
-    } else {
+    if (!checkExist) {
         await tp.file.rename(cleanTitle);
         // Short stabilization pause for Obsidian
         await new Promise(r => setTimeout(r, 150));

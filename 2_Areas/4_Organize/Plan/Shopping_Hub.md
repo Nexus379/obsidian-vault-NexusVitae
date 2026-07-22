@@ -57,7 +57,8 @@ cssclasses:
 > [!multi-column]
 >
 > > [!todo] 1. Choose Strategy
-> > `INPUT[inlineSelect(option(value, "💎 Value / Price-Perf."), option(budget, "💸 Budget / Discount"), option(pure, "🌿 Pure / Organic"), option(market, "🍎 Local Market")):shopping_strategy]`
+> > `INPUT[inlineSelect(option(value, "Best Value"), option(budget, "Cheap / Discount"), option(pure_cheap, "Organic Cheap"), option(pure, "Organic / Best"), option(market, "Local Market"), option(pref, "Preferred Vendor")):shopping_strategy]`
+> > `$= "Active: " + (dv.current().shopping_strategy || "value")`
 >
 > > [!todo] 2. Generate Manual List
 > > `BUTTON[generate-shopping-list]`
@@ -122,10 +123,24 @@ const pages = dv.pages('#6resource/entity').where(p => {
     return false;
 });
 
+const strategy = String(dv.current().shopping_strategy || "value");
+const enginePath = app.vault.adapter.basePath + "/zData/2scripts/itemsNexusEngine.js";
+let Nexus = null;
+try {
+    delete require.cache[require.resolve(enginePath)];
+    Nexus = await require(enginePath)(app);
+} catch (e) {
+    console.error(e);
+}
+
 if(pages.length > 0) {
-    dv.table(['Item', 'Refill For / Stock', 'Action'], pages.map(p => {
+    dv.table(['Item', 'Vendor', 'Est. Price', 'Refill For / Stock', 'Action'], pages.map(p => {
         let targets = [];
         let actions = [];
+        const item = Nexus ? Nexus.find(p.file.name) : null;
+        const price = Nexus && item ? Nexus.getStrategicPrice(item.id, strategy, 1.0) : null;
+        const vendor = price && price.vendor ? price.vendor : (p.pref_vendor || "unknown");
+        const total = price && price.unit_price > 0 ? `~${price.total.toFixed(2)}` : "";
         
         // 1. Handle manual refill toggles
         for (let key in p) {
@@ -150,6 +165,8 @@ if(pages.length > 0) {
         
         return [
             p.file.link, 
+            vendor,
+            total,
             targets.join('<br>'),
             actions.join('<br>')
         ];

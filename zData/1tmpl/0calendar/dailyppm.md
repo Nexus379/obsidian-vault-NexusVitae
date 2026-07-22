@@ -3,6 +3,19 @@
 if (!tp.variables) tp.variables = {};
 const dv = app.plugins.plugins.dataview?.api;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
+let nexusConfig = {
+    roots: { calendar: "0_Calendar" },
+    areas: { mainPlans: {} }
+};
+try {
+    const cfgFile = app.vault.getAbstractFileByPath("zData/4values/NexusVitae_SystemConfig.json");
+    if (cfgFile) nexusConfig = Object.assign(nexusConfig, JSON.parse(await app.vault.read(cfgFile)));
+} catch (e) { console.error("Nexus system config load failed:", e); }
+const cfgRoot = (key, fallback) => nexusConfig?.roots?.[key] || fallback;
+const cfgAreaPlan = (key, fallback) => nexusConfig?.areas?.mainPlans?.[key] || fallback;
+const calendarRoot = cfgRoot("calendar", "0_Calendar");
+const weeklyPlanRoot = `${calendarRoot}/7_Plan`;
+tp.variables.shoppingHubPath = cfgAreaPlan("shopping", "2_Areas/4_Organize/Plan/Shopping_Hub.md");
 
 // 🔱 2. SMART CLEAN & FALLBACK (Für Direkt-Start ohne Prompt)
 // Erkennt "Untitled" oder den "Entry-..." Platzhalter vom Router
@@ -100,11 +113,11 @@ if (dv) {
     const pYear = momentDay.format("YYYY");
     const pKw = momentDay.format("WW");
     const pMonth = momentDay.format("MM");
-    const weeklyRoutinePath = `0_Calendar/7_Plan/${pYear}/${pMonth}/${pYear}-W${pKw}_routine.md`;
+    const weeklyRoutinePath = `${weeklyPlanRoot}/${pYear}/${pMonth}/${pYear}-W${pKw}_routine.md`;
     
     let routinePage = dv.page(weeklyRoutinePath);
     if (!routinePage) {
-        routinePage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+        routinePage = dv.page(cfgAreaPlan("routine", "2_Areas/4_Organize/Plan/Routine_Timeblocking.md"));
     }
     if (routinePage) {
         const enginePath = "zData/2scripts/routineEngine.js";
@@ -523,13 +536,13 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 
 > [!multi-column]
 >
-> > [!todo|flat] 💸 Horizon 0: To-Buy
-> > <small style="opacity:0.45;font-style:italic;">(open #4task/tobuy items — empty = nothing queued, or tasks not tagged tobuy)</small>
+> > [!todo|flat] 💸 Horizon 0: To-Buy (Single Items)
+> > <small style="opacity:0.45;font-style:italic;">(open #4task/tobuy items linked to projects or daily procurement)</small>
 > > ```dataview
 > > TABLE WITHOUT ID
 > >   file.link AS "Item",
 > >   due AS "Deadline",
-> >   parent AS "Project"
+> >   choice(project3, project3, parent) AS "Project"
 > > FROM #4task/tobuy
 > > WHERE !completed
 > > SORT due ASC
@@ -547,9 +560,8 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > SORT due ASC
 > > ```
 >
->[[2_Areas/4_Organize/Plan/Shopping_Hub|➡️ Open Central Procurement Hub]]
+>[[<%- tp.variables.shoppingHubPath %>|➡️ Open Central Procurement Hub]]
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
-
-`BUTTON[freezer]` `BUTTON[archive-month-logs]`
+`BUTTON[archive-month]`

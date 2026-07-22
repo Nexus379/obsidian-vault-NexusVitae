@@ -1,83 +1,80 @@
 ---
 cssclasses:
   - wide-page
+  - srs-card-dashboard
 ---
 
-# 🎴 Community Plugin SRS Flashcards Overview
+# Vocabcards Overview
 
 ![[zData/5design_modul/OverviewNavigationModul]]
 
----
-
-> [!info] 🎴 Flashcards Repetition Matrix (Y: Discipline | X: Next Review Horizon)
-
 ```dataviewjs
-const pages = dv.pages('"5_Notes" or "6_Resources"')
-    .where(p => p.archtype && (p.archtype.includes("#5note/3atomic/srs") || p.file.tags.includes("#srs/sync")));
+const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  "\"": "&quot;",
+  "'": "&#39;"
+}[char]));
+const render = (html, cls) => {
+  const node = dv.el("div", "", { cls });
+  node.innerHTML = html;
+  return node;
+};
+const first = value => Array.isArray(value) ? value[0] : value;
+const label = value => String(first(value) ?? "Vocabulary").replace(/^#/, "");
+const arch = page => String(page.archtype ?? "");
+const tags = page => Array.isArray(page.file?.tags) ? page.file.tags : [];
+const isVocab = page => arch(page).includes("#5note/3atomic/vocabcards") || tags(page).includes("#vocabcards");
+const link = page => `<a class="internal-link" data-href="${esc(page.file.path)}" href="${esc(page.file.path)}">${esc(page.file.name)}</a>`;
+const deckName = page => String(page.deck || label(page.discipline || page.discTag || page.areaTag) || "Vocabulary");
 
-const today = moment().startOf('day');
+const pages = dv.pages('"5_Notes" or "6_Resources"').where(isVocab).array();
+const today = moment().startOf("day");
+const dueDiff = page => page.space_date ? moment(page.space_date).startOf("day").diff(today, "days") : 9999;
 
-const discSet = new Set();
-pages.forEach(p => {
-    let disc = p.discipline || p.discTag || p.areaTag || "Vocabulary & Facts";
-    if (Array.isArray(disc)) disc = disc[0];
-    discSet.add(disc.replace(/^#/, ''));
-});
-
-const sortedDiscs = Array.from(discSet).sort();
-
-const columns = [
-    "Discipline",
-    "🚨 Overdue",
-    "📅 Due Today",
-    "🌱 1–3 Days",
-    "🌿 4–7 Days",
-    "🌳 8+ Days"
-];
-
-const tableRows = [];
-
-sortedDiscs.forEach(disc => {
-    const discPages = pages.filter(p => {
-        let d = p.discipline || p.discTag || p.areaTag || "Vocabulary & Facts";
-        if (Array.isArray(d)) d = d[0];
-        return d.replace(/^#/, '') === disc;
-    });
-
-    const overdue = [];
-    const dueTodayCol = [];
-    const days1to3 = [];
-    const days4to7 = [];
-    const mastered = [];
-
-    discPages.forEach(p => {
-        if (!p.space_date) {
-            mastered.push(p.file.link);
-            return;
-        }
-        const due = moment(p.space_date);
-        const diffDays = due.diff(today, 'days');
-
-        if (diffDays < 0) overdue.push(`${p.file.link} <small style="opacity:0.6;">(${Math.abs(diffDays)}d)</small>`);
-        else if (diffDays === 0) dueTodayCol.push(p.file.link);
-        else if (diffDays <= 3) days1to3.push(p.file.link);
-        else if (diffDays <= 7) days4to7.push(p.file.link);
-        else mastered.push(p.file.link);
-    });
-
-    tableRows.push([
-        `**${disc}**`,
-        overdue.length > 0 ? overdue.join("<br>") : "-",
-        dueTodayCol.length > 0 ? dueTodayCol.join("<br>") : "-",
-        days1to3.length > 0 ? days1to3.join("<br>") : "-",
-        days4to7.length > 0 ? days4to7.join("<br>") : "-",
-        mastered.length > 0 ? mastered.join("<br>") : "-"
-    ]);
-});
-
-if (pages.length > 0) {
-    dv.table(columns, tableRows);
-} else {
-    dv.paragraph("_No SRS Flashcards found. Create a note with template `3atomic_srs`._");
+const groups = new Map();
+for (const page of pages) {
+  const key = deckName(page);
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key).push(page);
 }
+
+render(Array.from(groups.entries()).sort((a, b) => a[0].localeCompare(b[0])).map(([deck, cards]) => {
+  const due = cards.filter(page => dueDiff(page) <= 0).length;
+  return `
+    <div class="nxs-deck-card">
+      <div>
+        <div class="nxs-card-kicker">Spaced Repetition Plugin</div>
+        <div class="nxs-card-title">${esc(deck)}</div>
+        <div class="nxs-card-meta">
+          <span class="nxs-card-pill">${cards.length} cards</span>
+          <span class="nxs-card-pill">${due} due</span>
+          <span class="nxs-card-pill">plugin deck</span>
+        </div>
+      </div>
+    </div>
+  `;
+}).join("") || `<div class="nxs-deck-card"><div class="nxs-card-title">No vocabcards yet</div><div class="nxs-card-meta"><span class="nxs-card-pill">Use n-vocab</span></div></div>`, "nxs-card-grid");
+
+const cards = pages.sort((a, b) => dueDiff(a) - dueDiff(b)).slice(0, 40).map(page => {
+  const diff = dueDiff(page);
+  const state = diff < 0 ? "is-overdue" : diff === 0 ? "is-due" : "is-future";
+  const dueText = diff === 9999 ? "plugin schedule" : diff < 0 ? `${Math.abs(diff)}d overdue` : diff === 0 ? "due today" : `in ${diff}d`;
+  return `
+    <div class="nxs-study-card ${state}">
+      <div>
+        <div class="nxs-card-kicker">${esc(deckName(page))}</div>
+        <div class="nxs-card-title">${link(page)}</div>
+      </div>
+      <div class="nxs-card-meta">
+        <span class="nxs-card-pill">${esc(dueText)}</span>
+        <span class="nxs-card-pill">#vocabcards</span>
+      </div>
+    </div>
+  `;
+}).join("");
+
+dv.header(2, "Cards");
+render(cards || `<div class="nxs-study-card"><div class="nxs-card-title">No vocabcards found.</div></div>`, "nxs-card-row");
 ```

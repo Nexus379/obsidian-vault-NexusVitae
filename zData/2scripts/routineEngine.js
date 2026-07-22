@@ -82,7 +82,7 @@ function routineEngine() {
         edu_class:       { label: "Classes", icon: "🏫", group: "6. Third Eye", aliases: ["school", "abitur", "erwachsenenbildung", "learning"] },
         input_read:      { label: "Reading", icon: "📚", group: "6. Third Eye", aliases: ["read", "book", "study", "research", "lesen", "buch", "studieren", "reading", "learning"] },
         pkm_process:     { label: "Vault", icon: "⚗️", group: "6. Third Eye", aliases: ["obsidian", "notes", "pkm", "vault", "notizen", "wissen", "knowledge"] },
-        pkm_memorize:    { label: "Recall", icon: "⚡", group: "6. Third Eye", aliases: ["anki", "flashcards", "memorize", "karteikarten", "auswendig", "wiederholen", "recall"] },
+        pkm_memorize:    { label: "Recall", icon: "⚡", group: "6. Third Eye", aliases: ["flashcards", "srs", "vocabcards", "memorize", "karteikarten", "auswendig", "wiederholen", "recall"] },
         strategy_plan:   { label: "Strategy", icon: "📐", group: "6. Third Eye", aliases: ["goals", "vision", "strategy", "planung", "strategie", "planning"] },
         dream_journal:   { label: "Dreams", icon: "👁️", group: "6. Third Eye", aliases: ["dream", "subconscious"] },
 

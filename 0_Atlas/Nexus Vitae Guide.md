@@ -199,7 +199,7 @@ Install and enable the following core plugins from `Settings` ⚙️ ➔ `Commun
 - **Meta Bind:** Mandatory for interactive buttons, sliders, and input fields. [Open Meta Bind](obsidian://show-plugin?id=obsidian-meta-bind-plugin).
 - **Templater:** Powers daily note, project, task, and resource generation. [Open Templater](obsidian://show-plugin?id=templater-obsidian).
 - **Dataview:** Query support for legacy tables and overview lists. [Open Dataview](obsidian://show-plugin?id=dataview).
-- **Spaced Repetition:** Community Flashcards plugin for reviewing single-line cards (`::`). [Open Spaced Repetition](obsidian://show-plugin?id=spaced-repetition).
+- **Spaced Repetition:** Obsidian Spaced Repetition plugin for reviewing `#vocabcards` notes and single-line cards (`::`). [Open Spaced Repetition](obsidian://show-plugin?id=spaced-repetition).
 
 ### Step 4: Templater Settings Configuration
 1. Go to `Settings` ⚙️ ➔ `Templater`.

@@ -2,6 +2,16 @@
 // 🔱 1. INITIALIZATION & DATE
 const dv = app.plugins.plugins.dataview?.api;
 const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
+let nexusConfig = {
+    roots: { calendar: "0_Calendar" },
+    areas: { mainPlans: {} }
+};
+try {
+    const cfgFile = app.vault.getAbstractFileByPath("zData/4values/NexusVitae_SystemConfig.json");
+    if (cfgFile) nexusConfig = Object.assign(nexusConfig, JSON.parse(await app.vault.read(cfgFile)));
+} catch (e) { console.error("Nexus system config load failed:", e); }
+tp.variables.weeklyPlanRoot = `${nexusConfig?.roots?.calendar || "0_Calendar"}/7_Plan`;
+tp.variables.routineMainPath = nexusConfig?.areas?.mainPlans?.routine || "2_Areas/4_Organize/Plan/Routine_Timeblocking.md";
 
 // 🔱 2. PATH LOGISTICS (Backsafe for direct template starts)
 if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
@@ -270,8 +280,8 @@ const dObj = moment(String(dStr), "YYYY-MM-DD");
 const dayMap = {1:"mon",2:"tue",3:"wed",4:"thu",5:"fri",6:"sat",0:"sun"};
 const day = dObj.isValid() ? dayMap[dObj.day()] : dayMap[moment().day()];
 const weekName = dObj.isValid() ? dObj.format("YYYY-[W]WW") : moment().format("YYYY-[W]WW");
-let rPage = dv.pages('"0_Calendar/7_Plan"').where(p => p.file.name === weekName + "_routine").first();
-if (!rPage) rPage = dv.page("2_Areas/4_Organize/Plan/Routine_Timeblocking");
+let rPage = dv.pages('"<%- tp.variables.weeklyPlanRoot %>"').where(p => p.file.name === weekName + "_routine").first();
+if (!rPage) rPage = dv.page("<%- tp.variables.routineMainPath %>");
 
 const planned = (engine && rPage) ? engine.getChakraMinutes(rPage, day) : {};
 const actual  = engine ? engine.getActualChakraMinutes(c) : {};   // auto-pulled from tracked time via engine groups
@@ -335,4 +345,4 @@ if (engine) {
 ---
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 
-`BUTTON[freezer]` `BUTTON[archive-month-logs]`
+`BUTTON[archive-month]`

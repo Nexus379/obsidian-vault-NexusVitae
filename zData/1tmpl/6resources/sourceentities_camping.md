@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -60,6 +60,9 @@ season_rating: 3
 pack_size_cm: ""
 material: ""
 pl_score: 0
+pref_vendor: ""
+pref_price: 0.00
+unit_price: 0.00
 price_cheap: 0.00
 vendor_cheap: ""
 price_value: 0.00
@@ -80,7 +83,7 @@ vendor_market: ""
 | 🏷️ **Type** | `INPUT[suggester(option(tent, ⛺ Tent), option(sleeping_bag, 🛏️ Sleeping Bag), option(sleeping_pad, 🛌 Sleeping Pad), option(cooking, 🍳 Cooking), option(water_filter, 💧 Water Filter), option(backpack, 🎒 Backpack), option(tool, 🔪 Tool)):camping_type]` |     |
 | 🏷️ **Brand** | `INPUT[text:brand]` |     |
 | 🏪 **Vendor** | `INPUT[text:pref_vendor]` |     |
-| 💰 **Price** | `INPUT[number:unit_price]` € |     |
+| 💰 **Price** | `VIEW[{unit_price}]` € |     |
 | ⚖️ **Weight** | `INPUT[number:weight_g]` g |     |
 | 🧑‍🤝‍🧑 **Capacity** | `INPUT[number:capacity_persons]` Personen |     |
 | 🌧️ **Waterproof** | `INPUT[number:water_column_mm]` mm |     |
@@ -89,17 +92,8 @@ vendor_market: ""
 | 🧱 **Material** | `INPUT[text:material]` |     |
 | ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
+<%- tp.file.include("[[zData/5design_modul/ShoppingPriceMatrix]]") %>
+
 ## 📝 Source & Notes
 - 
 - 
@@ -109,33 +103,5 @@ vendor_market: ""
 > Click here to add an owner to this item:
 > `BUTTON[add-wardrobe-owner]`
 
-`
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
-
-`
-
-
 

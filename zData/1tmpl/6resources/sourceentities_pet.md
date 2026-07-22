@@ -1,4 +1,4 @@
-﻿<%-*
+<%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
 
@@ -56,6 +56,9 @@ brand: ""
 material: ""
 durability: 5
 pl_score: 0
+pref_vendor: ""
+pref_price: 0.00
+unit_price: 0.00
 price_cheap: 0.00
 vendor_cheap: ""
 price_value: 0.00
@@ -77,22 +80,13 @@ vendor_market: ""
 | 🏷️ **Type** | `INPUT[suggester(option(toy, 🧶 Toy), option(hygiene, 🧽 Hygiene), option(furniture, 🛋️ Furniture), option(food_bowl, 🥣 Bowl), option(carrier, 🎒 Carrier)):item_type]` |     |
 | 🏷️ **Brand** | `INPUT[text:brand]` |     |
 | 🏪 **Vendor** | `INPUT[text:pref_vendor]` |     |
-| 💰 **Price** | `INPUT[number:unit_price]` € |     |
+| 💰 **Price** | `VIEW[{unit_price}]` € |     |
 | 🧱 **Material** | `INPUT[text:material]` |     |
 | 🛡️ **Durability**| `INPUT[number:durability]` / 10 |     |
 | ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
+<%- tp.file.include("[[zData/5design_modul/ShoppingPriceMatrix]]") %>
+
 ## 📝 Source & Notes
 - 
 - 
@@ -102,33 +96,5 @@ vendor_market: ""
 > Click here to add an owner to this item:
 > `BUTTON[add-wardrobe-owner]`
 
-`
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
-
-price_cheap: 0.00
-vendor_cheap: ""
-price_value: 0.00
-vendor_value: ""
-price_pure_cheap: 0.00
-vendor_pure_cheap: ""
-price_pure: 0.00
-vendor_pure: ""
-price_market: 0.00
-vendor_market: ""
----
-
-`
-
-
 

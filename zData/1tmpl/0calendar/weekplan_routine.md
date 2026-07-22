@@ -1,6 +1,9 @@
 <%-*
+if (!tp.variables) tp.variables = {};
 // 1. Zieldatum ermitteln (entweder übergebenes Datum oder heute)
 const targetMoment = moment(tp.variables.targetDate || tp.date.now("YYYY-MM-DD"), "YYYY-MM-DD");
+const dateStr = targetMoment.format("YYYY-MM-DD");
+const energy = tp.variables.energy || "3";
 
 // 2. Jahr und Kalenderwoche extrahieren
 const year = targetMoment.format("YYYY");
@@ -8,29 +11,32 @@ const kw = targetMoment.format("WW"); // Gibt immer zwei Ziffern zurück (z.B. "
 
 // 3. Das exakte Format für dich zusammenbauen (z.B. "2026-W29")
 const weekString = `${year}-W${kw}`;
+const planYear = tp.variables.planYear || year;
+const planKw = tp.variables.planKw || kw;
 
 // 4. (Optional aber empfohlen) Die Datei direkt beim Erstellen richtig benennen!
-await tp.file.rename(`${weekString}_routine`);
-
 // 5. Start der YAML-Metadaten
 tR += "---\n";
 %>
 banner: "![[xAttachment/Images/Banner/anime-style-cozy-home-interior-with-furnishings.jpg]]"
 banner_y: 0.5
 banner_icon: 🧩
-fileTitle: "<%- tp.variables.title || (year + '-W' + kw + '_routine') %>"
+fileTitle: "<%- tp.variables.title || (planYear + '-W' + planKw + '_routine') %>"
 arch:
   - "#0cal"
 archtype:
-  - "#0cal/7plan"
+  - "#0cal/7plan/routine"
+cal_date: <%- dateStr %>
+energy: "<%- energy %>"
 frozen: false
-plan_year: "<%- year %>"
-plan_kw: "<%- kw %>"
+plan_type: routine
+plan_year: "<%- planYear %>"
+plan_kw: "<%- planKw %>"
 
 
 ---
 
-# 🧩 Nexus Timeblocking (Routines): <%- year %>-W<%- kw %>
+# 🧩 Nexus Timeblocking (Routines): <%- planYear %>-W<%- planKw %>
 
 `BUTTON[setup-routine]` `BUTTON[edit-routine]` `BUTTON[sync-timetable]` 
 
@@ -132,4 +138,4 @@ dv.table(headers, rows);
 
 `BUTTON[reset-schedule]`
 
-`BUTTON[freeze-week]` `BUTTON[archive]`
+`BUTTON[freeze-week]` `BUTTON[archive]` `BUTTON[archive-month]`

@@ -13,12 +13,12 @@ aliases:
 // 1. INITIALISIERUNG
 if (window.studOffset === undefined) window.studOffset = 0;
 
-// Filter: Student-Mode ODER Disziplin vorhanden ODER Anki-Type
+// Filter: Student-Mode ODER Disziplin vorhanden ODER SRS-Type
 const studFiles = dv.pages()
-    .where(p => p.persona === "student" || (p.discipline && String(p.discipline).trim() !== "") || String(p.archtype).includes("anki"));
+    .where(p => p.persona === "student" || (p.discipline && String(p.discipline).trim() !== "") || String(p.archtype).includes("vocabcards") || String(p.archtype).includes("studycards"));
 
 const config = {
-    anki: { icon: "🎴", color: "#a6e3a1" },  // Grün
+    srs: { icon: "🎴", color: "#a6e3a1" },  // Grün
     exam: { icon: "🔥", color: "#ff5555" },  // Rot
     study: { icon: "🎓", color: "#89dceb" }, // Blau
     note: { icon: "📝", color: "#bd93f9" }   // Lila
@@ -60,7 +60,7 @@ for (let i = 0; i < daysM; i++) {
         let dTxt = d ? String(d).replace("#disc/", "").substring(0, 3).toUpperCase() : "";
         
         let type = "study";
-        if(String(p.archtype).includes("anki")) type = "anki";
+        if(String(p.archtype).includes("vocabcards") || String(p.archtype).includes("studycards")) type = "srs";
         if(String(p.archtype).includes("exam") || String(p.archtype).includes("test")) type = "exam";
         if(String(p.arch).includes("#5note") && type === "study") type = "note";
         
@@ -88,7 +88,7 @@ for (let i = 0; i < daysM; i++) {
 
     // 🔍 STATUS ICONS
     gridH += `<div style="margin-top: auto; display: flex; justify-content: center; gap: 3px; font-size: 0.75em; opacity: 0.6;">`;
-    if(dayFiles.some(p => String(p.archtype).includes("anki"))) gridH += `<span>🎴</span>`;
+    if(dayFiles.some(p => String(p.archtype).includes("vocabcards") || String(p.archtype).includes("studycards"))) gridH += `<span>🎴</span>`;
     if(dayFiles.some(p => String(p.archtype).includes("exam"))) gridH += `<span>🔥</span>`;
     if(dayFiles.some(p => p.persona === "student")) gridH += `<span>🎓</span>`;
     gridH += `</div>`;
@@ -112,7 +112,7 @@ const studyPages = dv.pages()
     .where(p => 
         (p.persona === "student" || 
          (p.archtype && String(p.archtype).includes("tostudy")) ||
-         (p.archtype && String(p.archtype).includes("anki"))) &&
+         (p.archtype && (String(p.archtype).includes("vocabcards") || String(p.archtype).includes("studycards")))) &&
         p.status !== "done" && p.status !== "archive"
     );
 
@@ -122,7 +122,7 @@ const processed = studyPages.map(p => {
     const diff = nextDate ? nextDate.diff(today, 'days') : null;
     
     let typeIcon = "📖"; 
-    if (String(p.archtype).includes("anki")) typeIcon = "🎴";
+    if (String(p.archtype).includes("vocabcards") || String(p.archtype).includes("studycards")) typeIcon = "🎴";
     if (String(p.archtype).includes("exam")) typeIcon = "🔥";
     if (String(p.archtype).includes("test")) typeIcon = "📝";
 

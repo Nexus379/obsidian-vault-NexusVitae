@@ -32,18 +32,23 @@ async function generateInpraLog(app, dv, moment) {
     const pieces = engine.getPractice(plan, dayStr);
     if (pieces.length === 0) return null; // kein Üben geplant
 
-    const instr = plan.instr_active || "Instrument";
-    const book = plan.instr_book || "";
+    const instr = plan.inpra_active || "Instrument";
+    const book = plan.inpra_book || "";
 
     // Log-Blöcke: pro Stück eine Bewertungs-Tabelle (Haltung/Rhythmus/Melodie/Gefühl)
     let blocks = [];
     pieces.forEach(p => {
-        blocks.push(`### 🎵 ${p.exercise}`);
-        blocks.push(`| 🧍 Posture | 🥁 Rhythm | 🎵 Melody | 💗 Feeling |`);
-        blocks.push(`|:---:|:---:|:---:|:---:|`);
-        blocks.push(`|  |  |  |  |`);
+        const prefix = `inpra_${dayStr}_${p.slot}`;
+        const durationText = p.minutes ? `${p.minutes} min` : "open duration";
+        const ratingVals = `const c = dv.current(); const vals = [c["${prefix}_posture"], c["${prefix}_rhythm"], c["${prefix}_melody"], c["${prefix}_feeling"]].map(Number).filter(n => n > 0);`;
+        
+        blocks.push(`### Piece ${p.slot}: ${p.exercise}`);
+        blocks.push(`> **Planned time:** ${durationText}`);
+        blocks.push(`| Posture (1-5) | Rhythm (1-5) | Melody (1-5) | Feeling (1-5) | Avg Rating | Status |`);
+        blocks.push(`|:---:|:---:|:---:|:---:|:---:|:---:|`);
+        blocks.push(`| \`INPUT[slider:${prefix}_posture]\` | \`INPUT[slider:${prefix}_rhythm]\` | \`INPUT[slider:${prefix}_melody]\` | \`INPUT[slider:${prefix}_feeling]\` | \`$= ${ratingVals} vals.length ? (vals.reduce((a,b)=>a+b,0)/vals.length).toFixed(1) : "-"\` | \`$= ${ratingVals} vals.length && (vals.reduce((a,b)=>a+b,0)/vals.length) >= 4 ? "ready" : "practice"\` |`);
         blocks.push(``);
-        blocks.push(`> [!note]- Note for next time`);
+        blocks.push(`> [!note]- Note & Focus for next session`);
         blocks.push(`> `);
         blocks.push(``);
     });
@@ -57,15 +62,21 @@ arch: ["#0cal"]
 archtype: ["#0cal/4projectlog"]
 status: 1active
 date: ${logDate.format("YYYY-MM-DD")}
-instr_active: "${instr}"
+inpra_active: "${instr}"
+duration: 15
 cssclasses: ["dashboard-no-border"]
 ---
 
 # 🎼 Inpra Log: ${logDate.format("dddd, MMM Do YYYY")}
 
 > [!info] 🎸 **${instr}**${book ? "  ·  " + book : ""}
-> Rate each piece (1-5): **Posture · Rhythm · Melody · Feeling**.
-> Avg ≥ 4 → ready for the next piece/level.
+> **Practice Duration Target:** Standard 15–20 min session (automatically synced to Daily PLM).  
+> 
+> 💡 **Practice Rating Scale (1-5):**  
+> - **1-2:** Clean finger placement & steady metronome pulse.  
+> - **3-4:** Solid tempo with natural dynamics & minimal pauses.  
+> - **5 (Mastery):** Flawless performance with full emotional expression.  
+> *(Avg Rating ≥ 4 → Ready to advance manually.)*
 
 ---
 

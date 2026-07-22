@@ -21,7 +21,7 @@ function inpraEngine() {
         mastery: MASTERY,
 
         // Holt die geplanten Übungen/Stücke EINES Tages aus einem Plan (weekplan_inpra oder Master).
-        // page = dv.page(...), dayPrefix = "mon".."sun". 3 Slots: inpra_<day>_ex_1..3 (Text) + _lvl_1..3 (Mastery).
+        // page = dv.page(...), dayPrefix = "mon".."sun". 3 planned slots: inpra_<day>_ex_1..3 + _min_1..3.
         getPractice: (page, dayPrefix) => {
             const items = [];
             for (let i = 1; i <= 3; i++) {
@@ -30,7 +30,7 @@ function inpraEngine() {
                     items.push({
                         slot: i,
                         exercise: String(ex).trim(),
-                        mastery: Number(page[`inpra_${dayPrefix}_lvl_${i}`]) || 0
+                        minutes: Number(page[`inpra_${dayPrefix}_min_${i}`]) || 0
                     });
                 }
             }
