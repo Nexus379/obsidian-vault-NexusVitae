@@ -722,7 +722,7 @@ if (dv) {
 
 [^1]
 
-> [!pink] ##### 📖 L - Lernen <br> <small> Study / Life Long Study </small>
+> [!pink]- 📖 L - Lernen <br> <small> Study / Life Long Study </small>
 > 🙏*Clean house, Clean Self; 🔱 Clear Mind, Clear Thoughts*
 > > [!quote|flat] ☀️[[<%- tp.variables.amRoutinePath %>|AM_Routine]]
 > > - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
@@ -777,7 +777,7 @@ if (dv) {
 > > <%- tp.variables.inpraLinkMd %>
 > > ➤ `BUTTON[generate-inpra-log]`
 
->[!pink] ##### 🍎 E - Energie <br> <small> Energy </small>
+>[!pink]- 🍎 E - Energie <br> <small> Energy </small>
 > 
 > ```dataviewjs
 > // 🔱 START OF CALCULATION (wrapped as a Promise so other blocks can await it)
@@ -959,8 +959,8 @@ if (dv) {
 > > > > - **Magnesium:** Relaxes muscles & CNS.
 > > > > - **Zinc + Selenium:** Immune & hormone repair.
 > > > > - **Glycine:** Lowers core temp for sleep.
-
-> [!info] ###### 🛒 Procurement & Supply
+>
+> ###### 🛒 Procurement & Supply
 >
 > > [!multi-column]
 > >
@@ -1011,7 +1011,7 @@ if (dv) {
 > > > **Household & Quick Extras:** `BUTTON[add-shopping-extra]`
 > > > `VIEW[{shopping_extras}]`
 
->[!pink] ##### 🏃 B - Bewegung / Bewusstsein <br> <small> Movement / Awareness </small>
+>[!pink]- 🏃 B - Bewegung / Bewusstsein <br> <small> Movement / Awareness </small>
 > >[!quote] ###### Basics doing
 > > <%- tp.variables.routineSync.replace(/\n/g, "\n> > ") %>
 > 
@@ -1057,7 +1057,7 @@ if (dv) {
 > > > ```
 > > 
 
-> [!pink] ##### 💗 E - Emotionen / Einstellung <br> <small> Emotions / Mind-Set </small>
+> [!pink]- 💗 E - Emotionen / Einstellung <br> <small> Emotions / Mind-Set </small>
 > >[!multi-column]
 > > 
 > > > [!journal] **Resonance Radar:** 
@@ -1205,7 +1205,7 @@ if (dv) {
 > > }
 > > ```
 
-> [!pink] 🌙 N - Nachtruhe <br> <small> Night / Sleep </small>
+> [!pink]-  🌙 N - Nachtruhe <br> <small> Night / Sleep </small>
 > - **Sleep from previouse night** <%- schlaf %>h `$= Number(<%- schlaf %>) >= 7 ? "🟢" : "🔴"`
 >
 > > [!quote|flat] 🌙 [[<%- tp.variables.pmRoutinePath %>|PM_Routine]]
