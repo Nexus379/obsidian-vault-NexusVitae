@@ -38,12 +38,12 @@ const archData = [
 // Areas Detail
 const areasData = [
     { label: "🌸 Selfcare", count: countTag("#2area/1selfcare"), color: "#f38ba8" },
-    { label: "🦄 Relation", count: countTag("#2area/2relationship"), color: "#fab387" },
-    { label: "🧠 Mind", count: countTag("#2area/3mind"), color: "#f9e2af" },
-    { label: "🧩 Organize", count: countTag("#2area/4organize"), color: "#a6e3a1" },
-    { label: "🎨 Creativity", count: countTag("#2area/5creativity"), color: "#74c7ec" },
-    { label: "🚵🏽 Activity", count: countTag("#2area/6activity"), color: "#89b4fa" },
-    { label: "🕹️ Entertain", count: countTag("#2area/7entertain"), color: "#cba6f7" }
+    { label: "🦄 Relation", count: countTag("#2area/4relationship"), color: "#fab387" },
+    { label: "🧠 Mind", count: countTag("#2area/6mind"), color: "#f9e2af" },
+    { label: "🧩 Organize", count: countTag("#2area/3drive"), color: "#a6e3a1" },
+    { label: "🎨 Creativity", count: countTag("#2area/2creativity"), color: "#74c7ec" },
+    { label: "🚵🏽 Activity", count: countTag("#2area/3drive"), color: "#89b4fa" },
+    { label: "🕹️ Entertain", count: countTag("#2area/7crown"), color: "#cba6f7" }
 ];
 
 // Notes Detail

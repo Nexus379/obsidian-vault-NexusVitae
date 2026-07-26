@@ -24,12 +24,12 @@ if (gChoice !== null) {
 
     await app.fileManager.processFrontMatter(tFile, (fm) => {  
         // ⚡ HIER SIND DEINE NEUEN VARIABLEN:
-        let currentLevel = Number(fm["space_lvl"]) || 0;  
+        let currentLevel = Number(fm["study_lvl"]) || 0;  
         nextLvl = (gChoice === "reset") ? 0 : Math.max(0, Math.min(srsIntervals.length - 1, currentLevel + gChoice));
 
-        fm["space_lvl"] = nextLvl;  
-        fm["space_rank"] = srsRanks[Math.min(nextLvl, srsRanks.length - 1)] || "Nexus Core";  
-        fm["space_date"] = moment().add(srsIntervals[nextLvl], 'days').format("YYYY-MM-DD");  
+        fm["study_lvl"] = nextLvl;  
+        fm["study_rank"] = srsRanks[Math.min(nextLvl, srsRanks.length - 1)] || "Nexus Core";  
+        fm["study_date"] = moment().add(srsIntervals[nextLvl], 'days').format("YYYY-MM-DD");  
     });
 
     const icon = visualIcons[Math.min(nextLvl, visualIcons.length - 1)] || "🔱";  

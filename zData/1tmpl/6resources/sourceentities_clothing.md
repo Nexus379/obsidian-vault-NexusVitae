@@ -43,7 +43,7 @@ tags:
 aliases:
 explore_lvl: 5finish
 priority: 
-subject: "Wardrobe & Apparel"
+subject: "Vestis & Apparel"
 persona: "stylist"
 status: 1active
 entity_class: "apparel"
@@ -52,7 +52,7 @@ state: "active"
 qty: 0
 needs_refill: false
 shelf_life_months: 60
-# --- 👕 WARDROBE SPECS ---
+# --- 👕 VESTIS SPECS ---
 brand: ""
 size: ""
 color: ""
@@ -104,7 +104,7 @@ vendor_market: ""
 
 > [!info] 👤 Ownership & Inventory
 > Click here to add an owner to this item:
-> `BUTTON[add-wardrobe-owner]`
+> `BUTTON[add-vestis-owner]`
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 

@@ -62,7 +62,7 @@ review:
 
 # <%- icon %> <%- displayTitle %>
 
-> [!abstract] Resonance & Regeneration (Horizon 2)
+> [!abstract] Resonance & Regeneration (GTD Horizon 2 · Areas of Focus)
 > Focus on the connection to self, energetic alignment, and physical foundation. The space for silence and healing.
 
 ---

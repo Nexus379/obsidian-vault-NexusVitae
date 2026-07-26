@@ -31,8 +31,8 @@ if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
 
 tR += "---";
 %>
-arch: ["#0cal/1review"]
-archtype: ["#0cal/1review/yearly"]
+arch: ["#0cal/6review"]
+archtype: ["#0cal/6review/yearly"]
 rev_module: "<%- revModule %>"
 rev_start: <%- start %>
 rev_end: <%- end %>
@@ -99,7 +99,7 @@ status: 1active
 > > - **Avg Energy:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.energy.avg() * 10) / 10 || 0) + "** / 5")`
 > > - **Avg Sleep:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
 > > - **Total Fitness:** `$= dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.mobility_am) || 0) + (Number(p.mobility_pm) || 0), 0)` min
-> > - **Total Music:** `$= dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.inpra_min) || 0), 0)` min
+> > - **Total Music:** `$= dv.pages().where(p => p.inpra_active && p.date >= "<%- start %>" && p.date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.inpra_min_1)||0)+(Number(p.inpra_min_2)||0)+(Number(p.inpra_min_3)||0), 0)` min
 <%* } -%>
 <%* if (isMaster || revModule === "ppm" || revModule === "proj") { -%>
 >
@@ -166,7 +166,7 @@ status: 1active
 > <small style="opacity:0.5; text-transform:uppercase;">Summarizing your Half-Yearly Reviews</small>
 >
 >> ```dataviewjs
->> const halfyears = dv.pages().where(p => String(p.archtype).includes("#0cal/1review/halfyear") && p.rev_end >= "<%- start %>" && p.rev_end <= "<%- end %>").sort(p => p.rev_end, "asc");
+>> const halfyears = dv.pages().where(p => String(p.archtype).includes("#0cal/6review/halfyear") && p.rev_end >= "<%- start %>" && p.rev_end <= "<%- end %>").sort(p => p.rev_end, "asc");
 >> let filteredH = halfyears;
 >> if ("<%- revModule %>" !== "master") {
 >>     filteredH = halfyears.where(w => w.rev_module === "<%- revModule %>" && w.connected_log === "<%- logConnect %>");

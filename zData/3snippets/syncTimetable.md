@@ -40,7 +40,7 @@ const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM")
     
     if (!ttFile) {
         // Fallback auf Master
-        ttFile = app.vault.getAbstractFileByPath("2_Areas/3_Mind/Plan/Timetable.md");
+        ttFile = app.vault.getAbstractFileByPath("2_Areas/6_Mind/Plan/CourseTimetable.md");
     }
 
     if (!ttFile) {

@@ -25,7 +25,7 @@ async function generateWorkoutLog(app, dv, moment) {
     
     let fitPlan = dv.page(weeklyPath);
     if (!fitPlan) {
-        fitPlan = dv.page("2_Areas/6_Activity/Plan/Fitness_Routine.md");
+        fitPlan = dv.page("2_Areas/3_Drive/Plan/Fitness_Routine.md");
     }
     if (!fitPlan) throw new Error("Kein Wochenplan und keine Fitness_Routine.md gefunden!");
     
@@ -115,6 +115,20 @@ async function generateWorkoutLog(app, dv, moment) {
         }
     });
     
+    // 📈 D — Live session-progress block (this log computes it; dailyplm only mirrors the result).
+    //    Built as single-quoted lines so its inner backticks / ${} stay literal inside the content template.
+    const progressBlock = [
+        '> [!success] 🎯 **Session Progress** <small>(live — mirrored into today\'s PLM)</small>',
+        '> ```dataviewjs',
+        '> const engine = require(app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js")();',
+        '> const f = app.vault.getAbstractFileByPath(dv.current().file.path);',
+        '> const r = engine.parseWorkoutCompletion(f ? await app.vault.read(f) : "");',
+        '> const filled = Math.round(r.pct / 10);',
+        '> const bar = "🟩".repeat(filled) + "⬜".repeat(Math.max(0, 10 - filled));',
+        '> dv.paragraph(`🏋️ **${r.done} / ${r.total} sets logged** — ${bar} **${r.pct}%**`);',
+        '> ```'
+    ].join("\n");
+
     // Markdown zusammenbauen
     const fileName = `Workout_${logDate.format("YYYY-MM-DD")}`;
     const folderPath = `0_Calendar/4_Projectlogs/Routine/${year}/${month}`;
@@ -143,6 +157,8 @@ cssclasses: ["dashboard-no-border"]
 > - **Dancing / Free Flow:** \`20 min Flow\`
 > 
 > *RIR = Reps in Reserve (Wie viele Wiederholungen hättest du noch geschafft?)*
+
+${progressBlock}
 
 ---
 

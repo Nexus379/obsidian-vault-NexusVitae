@@ -15,7 +15,7 @@ const cfgRoot = (key, fallback) => nexusConfig?.roots?.[key] || fallback;
 const cfgAreaPlan = (key, fallback) => nexusConfig?.areas?.mainPlans?.[key] || fallback;
 const calendarRoot = cfgRoot("calendar", "0_Calendar");
 const weeklyPlanRoot = `${calendarRoot}/7_Plan`;
-tp.variables.shoppingHubPath = cfgAreaPlan("shopping", "2_Areas/4_Organize/Plan/Shopping_Hub.md");
+tp.variables.shoppingHubPath = cfgAreaPlan("shopping", "2_Areas/1_Selfcare/Household/Shopping_Hub.md");
 
 // 🔱 2. SMART CLEAN & FALLBACK (Für Direkt-Start ohne Prompt)
 // Erkennt "Untitled" oder den "Entry-..." Platzhalter vom Router
@@ -117,7 +117,7 @@ if (dv) {
     
     let routinePage = dv.page(weeklyRoutinePath);
     if (!routinePage) {
-        routinePage = dv.page(cfgAreaPlan("routine", "2_Areas/4_Organize/Plan/Routine_Timeblocking.md"));
+        routinePage = dv.page(cfgAreaPlan("routine", "2_Areas/3_Drive/Plan/Routine_Timeblocking.md"));
     }
     if (routinePage) {
         const enginePath = "zData/2scripts/routineEngine.js";
@@ -196,6 +196,55 @@ if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
     await tp.file.move(finalDest);
 }
 
+// 🔱 6.6 EXPRESSION SYNC (Teaching + Content Creator — weekly-plan first, master fallback)
+const _expDay = moment(dateStr).locale('en').format("ddd").toLowerCase();
+const _expY = moment(dateStr).format("YYYY"); const _expM = moment(dateStr).format("MM"); const _expKw = moment(dateStr).format("WW");
+
+// 📖 Teaching
+let teachBlocks = ""; let teachLinkPath = "";
+try {
+    const wPath = `${weeklyPlanRoot}/${_expY}/${_expM}/${_expY}-W${_expKw}_teach.md`;
+    const mPath = cfgAreaPlan("teach", "2_Areas/5_Expression/Plan/Teaching_Plan.md");
+    let p = dv ? dv.page(wPath) : null;
+    teachLinkPath = p ? wPath : mPath;
+    if (!p && dv) p = dv.page(mPath);
+    if (p) {
+        let items = [];
+        for (let i = 1; i <= 2; i++) {
+            let t = p[`teach_${_expDay}_topic_${i}`];
+            if (t && String(t).trim() !== "") {
+                let len = Number(p[`teach_${_expDay}_len_${i}`]) || 0;
+                let diff = p[`teach_${_expDay}_diff_${i}`] || "";
+                items.push(`- ${String(t).trim()}${len ? ` _(${len} min)_` : ""}${diff ? ` · ⚡${diff}` : ""}`);
+            }
+        }
+        teachBlocks = items.length ? items.join("\n") : "_No lesson planned today._";
+    } else { teachBlocks = "⚠️ _No Teaching plan found._"; }
+} catch (e) { teachBlocks = "_Teach sync failed._"; console.error("Teach sync:", e); }
+tp.variables.teachSync = teachBlocks;
+tp.variables.teachLinkMd = teachLinkPath ? `➤ [[${teachLinkPath}|📖 Open ${teachLinkPath.includes("7_Plan") ? "Weekly" : "Master"} Teaching Plan]]` : "";
+
+// ✍️ Content Creator
+let concraftBlocks = ""; let concraftLinkPath = "";
+try {
+    const wPath = `${weeklyPlanRoot}/${_expY}/${_expM}/${_expY}-W${_expKw}_concraft.md`;
+    const mPath = cfgAreaPlan("concraft", "2_Areas/5_Expression/Plan/Content_Plan.md");
+    let p = dv ? dv.page(wPath) : null;
+    concraftLinkPath = p ? wPath : mPath;
+    if (!p && dv) p = dv.page(mPath);
+    if (p) {
+        let piece = p[`concraft_${_expDay}_piece`];
+        if (piece && String(piece).trim() !== "") {
+            let fmt = p[`concraft_${_expDay}_format`] || "";
+            let len = Number(p[`concraft_${_expDay}_len`]) || 0;
+            let pub = p[`concraft_${_expDay}_publish`] || "";
+            concraftBlocks = `- ${String(piece).trim()}${fmt ? ` · ${fmt}` : ""}${len ? ` _(${len} min)_` : ""}${pub ? `\n  🚀 ${pub}` : ""}`;
+        } else { concraftBlocks = "_Nothing scheduled to publish today._"; }
+    } else { concraftBlocks = "⚠️ _No Content plan found._"; }
+} catch (e) { concraftBlocks = "_Content sync failed._"; console.error("Concreat sync:", e); }
+tp.variables.concraftSync = concraftBlocks;
+tp.variables.concraftLinkMd = concraftLinkPath ? `➤ [[${concraftLinkPath}|✍️ Open ${concraftLinkPath.includes("7_Plan") ? "Weekly" : "Master"} Content Plan]]` : "";
+
 // 🔱 7. CLEANUP
 if (tp.variables && tp.variables.targetDate) delete tp.variables.targetDate;
 tR = "---\n";
@@ -210,7 +259,7 @@ persona: organizer
 energy: "<%- energy %>"
 cal0: 
 stars1:
-area2: ["#2area/4organize"]
+area2: ["#2area/3drive"]
 project3:
 task4:
 note5: []
@@ -226,6 +275,10 @@ maintask3: "<%- tp.variables.maintask3 %>"
 maintask4: "<%- tp.variables.maintask4 %>"
 maintask5: "<%- tp.variables.maintask5 %>"
 maintask6: "<%- tp.variables.maintask6 %>"
+teach_actual: 0
+teach_grasp:
+concraft_actual: 0
+concraft_resonance:
 cal_date: <%- dateStr %>
 
 ---
@@ -332,6 +385,21 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > ```
 
 ## 🛠️ Management & Focus
+
+> [!multi-column]
+>
+> > [!abstract|clean]- 📖 **Teaching — Today**
+> > <%- tp.variables.teachSync.replace(/\n/g, "\n> > ") %>
+> >
+> > **Actual:** `INPUT[number:teach_actual]` min · **Grasp:** `INPUT[inlineSelect(option(1),option(2),option(3),option(4),option(5)):teach_grasp]`
+> > <%- tp.variables.teachLinkMd %>
+>
+> > [!quote|clean]- ✍️ **Content — Today**
+> > <%- tp.variables.concraftSync.replace(/\n/g, "\n> > ") %>
+> >
+> > **Actual:** `INPUT[number:concraft_actual]` min · **Resonance:** `INPUT[inlineSelect(option(1),option(2),option(3),option(4),option(5)):concraft_resonance]`
+> > <%- tp.variables.concraftLinkMd %>
+
 > [!multi-column]
 > > [!calendar|wide-0] ⏳ Time Matrix
 > > ```dataviewjs

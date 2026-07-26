@@ -9,7 +9,7 @@ try {
     // If the current file isn't the routine plan, target the Master Routine Plan directly
     const isRoutinePlan = file.name.includes("Routine_Timeblocking") || file.name.toLowerCase().includes("routine");
     if (!isRoutinePlan) {
-        file = app.vault.getAbstractFileByPath("2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+        file = app.vault.getAbstractFileByPath("2_Areas/3_Drive/Plan/Routine_Timeblocking.md");
         if (!file) {
             new Notice("Routine_Timeblocking.md not found!");
             return;

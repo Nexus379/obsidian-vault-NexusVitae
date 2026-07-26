@@ -66,10 +66,10 @@ const noteTriggerMap = {
     studycards: "3atomic_studycards",
     studycard: "3atomic_studycards",
     srs: "3atomic_studycards",
-    vocab: "3atomic_vocabcards",
-    vocabcards: "3atomic_vocabcards",
-    vocabcard: "3atomic_vocabcards",
-    spacedcard: "3atomic_vocabcards",
+    vocab: "3atomic_cards",
+    cards: "3atomic_cards",
+    card: "3atomic_cards",
+    spacedcard: "3atomic_cards",
     ever: "5ever",
     evergreen: "5ever"
 };
@@ -89,16 +89,16 @@ if (!nChoice) {
         "4perma": `${notesRoot}/4_Permanent`,
         "3atomic": `${notesRoot}/3_Atomic`,
         "3atomic_studycards": `${notesRoot}/3_Atomic/studycards`,
-        "3atomic_vocabcards": `${notesRoot}/3_Atomic/vocabcards`,
+        "3atomic_cards": `${notesRoot}/3_Atomic/cards`,
         "5ever": `${notesRoot}/5_Evergreen`
     };
     targetFolder = directFolders[nChoice];
 }
 
 if (nChoice === "atomic_sub") {
-    const aOptions = ["1 Standard Atomic", "2 Studycards (Nexus SRS)", "3 Vocabcards (Spaced Repetition Plugin)"];
-    const aVals = ["3atomic", "3atomic_studycards", "3atomic_vocabcards"];
-    const aFoldersFull = [`${notesRoot}/3_Atomic`, `${notesRoot}/3_Atomic/studycards`, `${notesRoot}/3_Atomic/vocabcards`];
+    const aOptions = ["1 Standard Atomic", "2 Studycards (Nexus SRS)", "3 Cards (Spaced Repetition Plugin)"];
+    const aVals = ["3atomic", "3atomic_studycards", "3atomic_cards"];
+    const aFoldersFull = [`${notesRoot}/3_Atomic`, `${notesRoot}/3_Atomic/studycards`, `${notesRoot}/3_Atomic/cards`];
     let aIdx = await tp.system.suggester(aOptions, Array.from(aOptions.keys()));
     if (aIdx === null) return;
     nChoice = aVals[aIdx];
@@ -106,7 +106,7 @@ if (nChoice === "atomic_sub") {
 }
 
 // 🔱 5. SCIENCE-MODULE INTEGRATION (Delegiert die Abfrage!)
-const needsScience = ["4perma", "2lit", "3atomic", "3atomic_studycards", "3atomic_vocabcards", "5ever"];
+const needsScience = ["4perma", "2lit", "3atomic", "3atomic_studycards", "3atomic_cards", "5ever"];
 if (needsScience.includes(nChoice)) {
     if (typeof tp.user.disciplineEngine === "function") {
         const engine = tp.user.disciplineEngine();

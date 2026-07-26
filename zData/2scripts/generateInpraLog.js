@@ -22,7 +22,7 @@ async function generateInpraLog(app, dv, moment) {
     // Wochenplan zuerst, dann Master (Fallback)
     const weeklyPath = `0_Calendar/7_Plan/${year}/${month}/${year}-W${kw}_inpra.md`;
     let plan = dv.page(weeklyPath);
-    if (!plan) plan = dv.page("2_Areas/5_Creativity/Plan/Instrument_Mastery.md");
+    if (!plan) plan = dv.page("2_Areas/2_Creativity/Plan/Instrument_Mastery.md");
     if (!plan) throw new Error("Kein Inpra-Wochenplan und keine Instrument_Mastery.md gefunden!");
 
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/inpraEngine.js";
@@ -43,7 +43,7 @@ async function generateInpraLog(app, dv, moment) {
         const ratingVals = `const c = dv.current(); const vals = [c["${prefix}_posture"], c["${prefix}_rhythm"], c["${prefix}_melody"], c["${prefix}_feeling"]].map(Number).filter(n => n > 0);`;
         
         blocks.push(`### Piece ${p.slot}: ${p.exercise}`);
-        blocks.push(`> **Planned time:** ${durationText}`);
+        blocks.push(`> **Planned:** ${durationText} · ⏱️ **Practiced:** \`INPUT[number:inpra_min_${p.slot}]\` min`);
         blocks.push(`| Posture (1-5) | Rhythm (1-5) | Melody (1-5) | Feeling (1-5) | Avg Rating | Status |`);
         blocks.push(`|:---:|:---:|:---:|:---:|:---:|:---:|`);
         blocks.push(`| \`INPUT[slider:${prefix}_posture]\` | \`INPUT[slider:${prefix}_rhythm]\` | \`INPUT[slider:${prefix}_melody]\` | \`INPUT[slider:${prefix}_feeling]\` | \`$= ${ratingVals} vals.length ? (vals.reduce((a,b)=>a+b,0)/vals.length).toFixed(1) : "-"\` | \`$= ${ratingVals} vals.length && (vals.reduce((a,b)=>a+b,0)/vals.length) >= 4 ? "ready" : "practice"\` |`);
@@ -52,6 +52,17 @@ async function generateInpraLog(app, dv, moment) {
         blocks.push(`> `);
         blocks.push(``);
     });
+
+    // Live total = sum of the per-piece inpra_min_N inputs (single source of truth for the minutes).
+    // Built as single-quoted lines so inner backticks / ${} stay literal inside the content template.
+    const totalBlock = [
+        '> [!success] 🎼 **Session Total** <small>· sum of the minutes above — mirrored into today\'s PLM</small>',
+        '> ```dataviewjs',
+        '> const engine = require(app.vault.adapter.basePath + "/zData/2scripts/inpraEngine.js")();',
+        '> const total = engine.parseInpraMinutes(dv.current());',
+        '> dv.paragraph(`⏱️ **${total} min** practiced today`);',
+        '> ```'
+    ].join("\n");
 
     const fileName = `Inpra_${logDate.format("YYYY-MM-DD")}`;
     const folderPath = `0_Calendar/4_Projectlogs/Routine/${year}/${month}`;
@@ -77,6 +88,8 @@ cssclasses: ["dashboard-no-border"]
 > - **3-4:** Solid tempo with natural dynamics & minimal pauses.  
 > - **5 (Mastery):** Flawless performance with full emotional expression.  
 > *(Avg Rating ≥ 4 → Ready to advance manually.)*
+
+${totalBlock}
 
 ---
 

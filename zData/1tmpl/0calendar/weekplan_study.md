@@ -30,12 +30,12 @@ let topic = await tp.system.prompt("📝 Main topic / theme this week?", "");
 if (!topic) topic = "General Study";
 
 // 🔱 4. FOR WHOM (Original Naming Logic + Group Subfolders)
-const relFolder = "2_Areas/2_Relationship";
+const relFolder = "2_Areas/4_Relationship";
 const persons = app.vault.getMarkdownFiles()
-    .filter(f => f.path.startsWith(relFolder + "/") && f.basename.startsWith("Person_"));
+    .filter(f => f.path.startsWith(relFolder + "/") && /^(Character_|Person_)/.test(f.basename));
 
 const pOpts = ["🧍 Me / myself", ...persons.map(f => {
-    const cleanName = f.basename.replace(/^Person_/, "");
+    const cleanName = f.basename.replace(/^(Character_|Person_)/, "");
     const groupName = f.parent.name !== "2_Relationship" ? ` (${f.parent.name})` : "";
     return `👤 ${cleanName}${groupName}`;
 }), "➕ ✨ New person..."];
@@ -48,7 +48,7 @@ if (pick === "__new__") {
     let nn = await tp.system.prompt("👤 New person — name?", "");
     if (nn && nn.trim()) {
         nn = nn.trim().replace(/[\\/:*?"<>|]/g, ""); 
-        forName = "Person_" + nn; 
+        forName = "Character_" + nn; 
         
         const groupOpts = ["👨‍👩‍👧‍👦 Family", "👯 Friends", "🎓 Students", "💼 Colleagues", "❤️ Partner", "➕ Custom Group..."];
         const groupVals = ["Family", "Friends", "Students", "Colleagues", "Partner", "Custom"];
@@ -69,7 +69,7 @@ if (pick === "__new__") {
                 if (!app.vault.getAbstractFileByPath(cur)) await app.vault.createFolder(cur); 
             }
             
-            const profileYAML = `---\nbanner_icon: "👤"\narch:\n  - "#2area"\narchtype:\n  - "#2area/2relationship"\nstatus: 1active\npriority:\n  - "4"\narea2: "#2area/2relationship"\nparent: "[[2_Areas/2_Relationship]]"\n---\n# 👤 ${nn}\n\n> [!quote] "The quality of your life is the quality of your relationships."\n\n## 🤝 Profile & Base Data\n> [!multi-column]\n>\n> > [!info|wide-1] 👤 Vitals\n> > **Relation:** ${groupName}\n> > **Birthday:** \n>\n> > [!love|wide-1] 🎁 Traits & Preferences\n> > **Interests:** \n\n## 🚀 Active Responsibilities\n\`\`\`dataview\nTABLE status AS Status, persona AS Persona\nFROM "3_Projects"\nWHERE contains(area2, this.file.link) OR contains(parent, this.file.link)\nSORT file.mtime DESC\n\`\`\`\n`;
+            const profileYAML = `---\nbanner_icon: "👤"\narch:\n  - "#2area"\narchtype:\n  - "#2area/4relationship"\nstatus: 1active\npriority:\n  - "4"\narea2: "#2area/4relationship"\nparent: "[[0_Atlas/0_Dashboard/2-Areas/4-Relationship]]"\n---\n# 👤 ${nn}\n\n> [!quote] "The quality of your life is the quality of your relationships."\n\n## 🤝 Profile & Base Data\n> [!multi-column]\n>\n> > [!info|wide-1] 👤 Vitals\n> > **Relation:** ${groupName}\n> > **Birthday:** \n>\n> > [!love|wide-1] 🎁 Traits & Preferences\n> > **Interests:** \n\n## 🚀 Active Responsibilities\n\`\`\`dataview\nTABLE status AS Status, persona AS Persona\nFROM "3_Projects"\nWHERE contains(area2, this.file.link) OR contains(parent, this.file.link)\nSORT file.mtime DESC\n\`\`\`\n`;
             await app.vault.create(pPath, profileYAML);
         }
     }
@@ -78,7 +78,7 @@ if (pick === "__new__") {
 }
 
 const forLink = forName ? `[[${forName}]]` : "";
-const whoSlug = forName ? forName.replace(/^Person_/, "") : "me";
+const whoSlug = forName ? forName.replace(/^(Character_|Person_)/, "") : "me";
 
 // 🔱 5. SMART ROUTING & RENAME
 const baseName = `${py}-W${pk}_study_${whoSlug}`;

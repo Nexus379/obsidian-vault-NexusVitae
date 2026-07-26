@@ -19,7 +19,7 @@ if ((!tp.variables.sci || !tp.variables.disc) && typeof tp.user.disciplineEngine
 const persona = tp.variables.persona || "student";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
-const area = tp.variables.currentArea || tp.variables.area || "#2area/3mind";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/6mind";
 const icon = tp.variables.icon || "🍂";
 const luhmannId = tp.variables.luhmannId || ""; // 🔱 FIX: war nicht deklariert -> ReferenceError > ist es uebrehaupt noetig hier?
 

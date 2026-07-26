@@ -14,7 +14,7 @@ if (zettelFiles.length > 0) {
 // Wir nutzen Dataview, um die neuesten Dateien aus den aktuellen Arch-Tags zu holen
 const jour = dv.pages('#0cal/1plm AND !"zData" AND -"yArchive"').sort(p => p.cal_date ?? p.file.name, "desc").limit(1).file.link[0];
 const log = dv.pages('#0cal/2ppm AND !"zData" AND -"yArchive"').sort(p => p.cal_date ?? p.file.name, "desc").limit(1).file.link[0];
-const rev = dv.pages('#0cal/1review AND !"zData" AND -"yArchive"').sort(p => p.rev_end ?? p.cal_date ?? p.file.name, "desc").limit(1).file.link[0];
+const rev = dv.pages('#0cal/6review AND !"zData" AND -"yArchive"').sort(p => p.rev_end ?? p.cal_date ?? p.file.name, "desc").limit(1).file.link[0];
 
 let logs = [];
 if (jour) logs.push(">> - **Journal:** " + jour);

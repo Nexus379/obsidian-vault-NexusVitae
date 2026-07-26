@@ -51,9 +51,9 @@ priority:
 science: ["<%- sci %>"]
 discipline: ["<%- disc %>"]
 study_type: <%- studyType %>
-space_lvl: 0
-space_rank: "Ground Crew (Sprout)"
-space_date: <%- p1 %>
+study_lvl: 0
+study_rank: "Ground Crew (Sprout)"
+study_date: <%- p1 %>
 due: <%- deadline %>
 cal0:
 stars1:
@@ -93,7 +93,7 @@ review:
 > > [!todo|wide-1] Milestones & Objectives
 > > - [ ] **M1:** Source collection & Initial overview
 > > - [ ] **M2:** Deep dive & Note extraction (Atomic Notes)
-> > - [ ] **M3:** Synthesis & Spaced Repetition setup (Vocabcards)
+> > - [ ] **M3:** Synthesis & Spaced Repetition setup (Cards)
 >
 > > [!abstract|wide-1] Target State & Context
 > > **Key Learnings:** 

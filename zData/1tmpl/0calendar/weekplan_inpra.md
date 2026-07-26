@@ -30,7 +30,7 @@ inpra_book: ""
 > [!multi-column]
 >
 > > [!info] 🎸 **Instrument Setup**
-> > **Instrument:** `INPUT[suggestList("Piano", "Guitar", "Violin", "Flute", "Vocals", Other):inpra_active]`
+> > **Instrument:** `INPUT[suggestList("Piano", "Guitar", "Violin", "Flute", "Vocals", "Other"):inpra_active]`
 > > **Practice Book / Course:** `INPUT[text:inpra_book]`
 >
 > > [!abstract] 📊 **Weekly Resonance**

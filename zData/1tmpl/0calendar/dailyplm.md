@@ -16,10 +16,10 @@ const cfgAreaPlan = (key, fallback) => nexusConfig?.areas?.mainPlans?.[key] || f
 const calendarRoot = cfgRoot("calendar", "0_Calendar");
 const weeklyPlanRoot = `${calendarRoot}/7_Plan`;
 tp.variables.weeklyPlanRoot = weeklyPlanRoot;
-tp.variables.routineMainPath = cfgAreaPlan("routine", "2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+tp.variables.routineMainPath = cfgAreaPlan("routine", "2_Areas/3_Drive/Plan/Routine_Timeblocking.md");
 tp.variables.amRoutinePath = cfgAreaPlan("am_routine", "2_Areas/1_Selfcare/Plan/AM_Routine.md");
 tp.variables.pmRoutinePath = cfgAreaPlan("pm_routine", "2_Areas/1_Selfcare/Plan/PM_Routine.md");
-tp.variables.shoppingHubPath = cfgAreaPlan("shopping", "2_Areas/4_Organize/Plan/Shopping_Hub.md");
+tp.variables.shoppingHubPath = cfgAreaPlan("shopping", "2_Areas/1_Selfcare/Household/Shopping_Hub.md");
 
 // 🌐 i18n label helper (loads zData/2scripts/i18n.js via the same read+Function pattern as the engines).
 // L("key") returns the label in the current language, falling back to English, then the key itself.
@@ -212,7 +212,7 @@ try {
     const rMonth = rDate.format("MM");
     const rKw = rDate.format("WW");
     const weeklyRoutinePath = `${weeklyPlanRoot}/${rYear}/${rMonth}/${rYear}-W${rKw}_routine.md`;
-    const masterRoutinePath = cfgAreaPlan("routine", "2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+    const masterRoutinePath = cfgAreaPlan("routine", "2_Areas/3_Drive/Plan/Routine_Timeblocking.md");
 
     let rPage = dv.page(weeklyRoutinePath);
     let rLink = `[[${weeklyRoutinePath}|Week ${rKw} Routine Plan]]`;
@@ -313,7 +313,7 @@ try {
     const fMonth = fDate.format("MM");
     const fKw = fDate.format("WW");
     const weeklyFitnessPath = `${weeklyPlanRoot}/${fYear}/${fMonth}/${fYear}-W${fKw}_fitness.md`;
-    const masterFitnessPath = cfgAreaPlan("fitness", "2_Areas/6_Activity/Plan/Fitness_Routine.md");
+    const masterFitnessPath = cfgAreaPlan("fitness", "2_Areas/3_Drive/Plan/Fitness_Routine.md");
 
     let fPage = dv.page(weeklyFitnessPath);
     if (fPage) {
@@ -354,14 +354,14 @@ try {
                     let iconName = (baseKey === "custom")
                         ? `🔸 ${parts.slice(1).join(" ")}`
                         : (fitEngineData[baseKey] ? `${fitEngineData[baseKey].icon} ${fitEngineData[baseKey].label}` : `❓ ${baseKey}`);
-                    fitnessBlocks += `- [ ] ${reg.l}: ${iconName}${detail}\n`;
+                    fitnessBlocks += `- ${reg.l}: ${iconName}${detail}\n`;
                 });
             }
         });
 
         if (!dayHasTraining) fitnessBlocks = "_Rest day — no training scheduled._\n";
     } else {
-        fitnessBlocks = `⚠️ _No Fitness plan found._\n👉 [[${masterFitnessPath}|🏋️ Open Main Fitness Plan (Area 6)]] to create your routine!\n`;
+        fitnessBlocks = `⚠️ _No Fitness plan found._\n👉 [[${masterFitnessPath}|🏋️ Open Main Fitness Plan (Area 3 · Drive)]] to create your routine!\n`;
     }
 } catch (error) {
     console.error("Fitness Sync Error: ", error);
@@ -369,10 +369,10 @@ try {
 }
 tp.variables.fitnessSync = fitnessBlocks;
 tp.variables.fitnessLinkPath = fitnessLinkPath;
-const planLabel = fitnessLinkPath.includes("7_Plan") ? "Weekly Fitness Plan" : "Master Fitness Routine (Area 6)";
+const planLabel = fitnessLinkPath.includes("7_Plan") ? "Weekly Fitness Plan" : "Master Fitness Routine (Area 3 · Drive)";
 tp.variables.fitnessLinkMd = fitnessLinkPath
     ? `➤ [[${fitnessLinkPath}|🏋️ Open ${planLabel}]]`
-    : `👉 [[${cfgAreaPlan("fitness", "2_Areas/6_Activity/Plan/Fitness_Routine.md")}|🏋️ Open Master Fitness Routine (Area 6)]]`;
+    : `👉 [[${cfgAreaPlan("fitness", "2_Areas/3_Drive/Plan/Fitness_Routine.md")}|🏋️ Open Master Fitness Routine (Area 3 · Drive)]]`;
 
 // 🔱 5.7 INPRA SYNC (Instrumental Practice)
 let inpraBlocks = "";
@@ -383,7 +383,7 @@ try {
     const iMonth = iDate.format("MM");
     const iKw = iDate.format("WW");
     const weeklyInpraPath = `${weeklyPlanRoot}/${iYear}/${iMonth}/${iYear}-W${iKw}_inpra.md`;
-    const masterInpraPath = cfgAreaPlan("inpra", "2_Areas/5_Creativity/Plan/Instrument_Mastery.md");
+    const masterInpraPath = cfgAreaPlan("inpra", "2_Areas/2_Creativity/Plan/Instrument_Mastery.md");
     
     let iPage = dv.page(weeklyInpraPath);
     if (iPage) {
@@ -411,7 +411,7 @@ try {
             inpraBlocks = `_No specific exercise planned for ${activeInstr} today._\n`;
         }
     } else {
-        inpraBlocks = `⚠️ _No Instrumental Practice plan found._\n👉 [[${masterInpraPath}|🎼 Open Master Instrumental Practice Plan (Area 5)]] to create your routine!\n`;
+        inpraBlocks = `⚠️ _No Instrumental Practice plan found._\n👉 [[${masterInpraPath}|🎼 Open Master Instrumental Practice Plan (Area 2 · Creativity)]] to create your routine!\n`;
     }
 } catch (error) {
     console.error("Inpra Sync Error: ", error);
@@ -419,10 +419,54 @@ try {
 }
 tp.variables.inpraSync = inpraBlocks;
 tp.variables.inpraLinkPath = inpraLinkPath;
-const inpraLabel = inpraLinkPath.includes("7_Plan") ? "Weekly Practice Plan" : "Master Instrumental Practice Plan (Area 5)";
+const inpraLabel = inpraLinkPath.includes("7_Plan") ? "Weekly Practice Plan" : "Master Instrumental Practice Plan (Area 2 · Creativity)";
 tp.variables.inpraLinkMd = inpraLinkPath
     ? `➤ [[${inpraLinkPath}|🎼 Open ${inpraLabel}]]`
-    : `👉 [[${cfgAreaPlan("inpra", "2_Areas/5_Creativity/Plan/Instrument_Mastery.md")}|🎼 Open Master Instrumental Practice Plan (Area 5)]]`;
+    : `👉 [[${cfgAreaPlan("inpra", "2_Areas/2_Creativity/Plan/Instrument_Mastery.md")}|🎼 Open Master Instrumental Practice Plan (Area 2 · Creativity)]]`;
+
+// 🔱 5.8 AM / PM ROUTINE PULL (static snapshot → today's note, checkable)
+//    Reads the steps configured in AM_Routine / PM_Routine and writes them in as simple `- [ ]` items.
+//    NB: workout & inpra do NOT work like this — there you LOG how much you did (progressive training),
+//        so they stay log-based (workout log + Inpra log's inpra_min_N), never static checkboxes.
+let amRoutineSync = "", pmRoutineSync = "";
+try {
+    const rEnginePath = "zData/2scripts/routineEngine.js";
+    const rEngFile = app.vault.getAbstractFileByPath(rEnginePath);
+    let rEngine = {};
+    if (rEngFile) {
+        const rCode = await app.vault.read(rEngFile);
+        const rMod = { exports: {} };
+        new Function("module", "exports", rCode)(rMod, rMod.exports);
+        rEngine = (typeof rMod.exports === "function") ? (rMod.exports().all || {}) : {};
+    }
+    const pullRoutine = (routinePath, prefix, fallbackStart) => {
+        const rp = routinePath ? dv.page(routinePath) : null;
+        if (!rp) return `_${prefix.toUpperCase()}_Routine not found — set it up first._`;
+        const periods = Number(rp[`${prefix}_periods`]) || 0;
+        let cur = moment(String(rp[`${prefix}_start`] || fallbackStart), ["HH:mm", "h:mm A", "h:mma"]);
+        let items = [];
+        for (let i = 1; i <= periods; i++) {
+            let key = String(rp[`${prefix}${i}`] || "").trim();
+            let det = rp[`${prefix}${i}det`] ? String(rp[`${prefix}${i}det`]).trim() : "";
+            let dur = Number(rp[`${prefix}${i}dur`]) || 0;
+            if (!key || key === "free" || key === "undefined") { cur.add(dur, 'minutes'); continue; }
+            let icon = "🔸", lbl = key;
+            if (key === "custom") { lbl = det || "Custom"; det = ""; }
+            else if (rEngine[key]) { icon = rEngine[key].icon || "🔸"; lbl = rEngine[key].label || key; }
+            items.push(`- [ ] **${cur.format("HH:mm")}** ${icon} ${lbl}${det ? ` _(${det})_` : ""}`);
+            cur.add(dur, 'minutes');
+        }
+        return items.length ? items.join("\n") : `_No ${prefix.toUpperCase()} steps configured yet — open the routine to add some._`;
+    };
+    amRoutineSync = pullRoutine(tp.variables.amRoutinePath, "am", "06:00");
+    pmRoutineSync = pullRoutine(tp.variables.pmRoutinePath, "pm", "20:00");
+} catch (error) {
+    console.error("AM/PM Routine Pull Error: ", error);
+    amRoutineSync = "_AM routine pull failed — see console._";
+    pmRoutineSync = "_PM routine pull failed — see console._";
+}
+tp.variables.amRoutineSync = amRoutineSync;
+tp.variables.pmRoutineSync = pmRoutineSync;
 
 // 🔱 6. FINAL LOGISTICS (Folder-Check & Move)
 const [y, m] = dateStr.split("-");
@@ -474,7 +518,6 @@ journal_am: false
 journal_pm: false
 mobility_am: 0
 mobility_pm: 0
-inpra_min: 0
 selfcare_am: false
 selfcare_pm: false
 meal: []
@@ -511,8 +554,6 @@ if (dv) {
     if (pkmPage) todayPKM = pkmPage.file.path;
 }
 -%>
-**Professional:** [[<%- todayPPM %>|🌻 Go to today's Manager-Log (PPM)]]
-**Knowledge:** [[<%- todayPKM %>|🌼 Go to today's Study-Log (PKM)]]
 
 ---
 
@@ -540,10 +581,13 @@ if (dv) {
 > > > <small style="opacity:0.5;">Days remaining: `$= dv.current().focusM_start ? Math.max(0, 30 - moment().startOf('day').diff(moment(String(dv.current().focusM_start)).startOf('day'), 'days')) : 30` · Start: `$= dv.current().focusM_start ? moment(String(dv.current().focusM_start)).format("YYYY-MM-DD") : ""`</small>
 > > > 
 > > > `BUTTON[reset-focus]`
+> > > 
+> > > **Action:** `BUTTON[add-spark]`
 
 
 
 ## 🌿 Consuetudo (L-E-B-E-N)
+
 ```dataviewjs
 (async function(){ 
     const c = dv.current(); 
@@ -561,39 +605,47 @@ if (dv) {
     const vitaminTasks = (v && v.file.tasks) ? v.file.tasks : [];
     const isAlchemy = (t) => String(t.section).includes("Alchemy");
     
-    // P1: Lifestyle (Food) - 75% of Bold Tasks
+    // 🍎 E — Energie (food): 75% of the VitaminTracker's bold tasks
     const baseTasks = vitaminTasks.filter(t => !isAlchemy(t) && String(t.text).includes("**"));
     const compBase = baseTasks.filter(t => t.completed).length;
     const reqBase = Math.floor(baseTasks.length * 0.75);
-    const p1 = (compBase >= reqBase && baseTasks.length > 0) ? 1 : 0;
+    const p2 = (compBase >= reqBase && baseTasks.length > 0) ? 1 : 0;
 
-    // P2: Emotions (4/4 Toggles)
-    const p2 = ["journal_am","journal_pm","selfcare_am","selfcare_pm"].filter(k => String(c[k]) === "true").length / 4;
+    // 📖 L — Lernen (morning rituals: AM journal + selfcare done)
+    const p1 = (String(c["journal_am"]) === "true" && String(c["selfcare_am"]) === "true") ? 1 : 0;
     
-    // P3: Body (Mobility + Spontaneous Activity + Planned Workout Check)
+    // 🏃 B — Bewegung (movement total >= 30 min OR a logged workout)
     const sportTime = (Number(c["mobility_am"]) || 0) + (Number(c["mobility_pm"]) || 0) + (Number(c["activity_time"]) || 0);
     
-    // Read "did train?" from the Workout log (real reps live there) instead of empty act_ fields
-    let actuallyDidWorkout = false;
+    // D — MIRROR the Workout log's own result (single source of truth = fitnessEngine.parseWorkoutCompletion).
+    //     dailyplm does not re-parse or judge; it just reflects how much of today's session was logged.
+    let actuallyDidWorkout = false, workoutPct = 0;
     const _wDate = moment(dateValue).format("YYYY-MM-DD");
     const _wFile = app.vault.getAbstractFileByPath(`0_Calendar/4_Projectlogs/Routine/${moment(dateValue).format("YYYY")}/${moment(dateValue).format("MM")}/Workout_${_wDate}.md`);
     if (_wFile) {
-        const _wc = await app.vault.read(_wFile);
-        for (let _l of _wc.split("\n")) {
-            if (_l.startsWith("|") && !_l.includes("Target") && !_l.includes(":---:")) {
-                const _cells = _l.split("|").slice(2, -1);
-                if (_cells.some(x => x.trim() !== "" && !isNaN(parseInt(x.trim())))) { actuallyDidWorkout = true; break; }
-            }
-        }
+        try {
+            const _wc = await app.vault.read(_wFile);
+            const _fEngine = require(app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js")();
+            const _r = _fEngine.parseWorkoutCompletion(_wc);
+            actuallyDidWorkout = _r.didWorkout;
+            workoutPct = _r.pct;
+        } catch (e) { console.error("Workout mirror failed:", e); }
+    }
+    // D — MIRROR the Inpra log's practiced minutes (entered in the log, not here).
+    let inpraMinDone = 0;
+    const _iPage = dv.page(`0_Calendar/4_Projectlogs/Routine/${moment(dateValue).format("YYYY")}/${moment(dateValue).format("MM")}/Inpra_${_wDate}.md`);
+    if (_iPage) {
+        try { inpraMinDone = require(app.vault.adapter.basePath + "/zData/2scripts/inpraEngine.js")().parseInpraMinutes(_iPage); }
+        catch (e) { console.error("Inpra mirror failed:", e); }
     }
     const p3 = (sportTime >= 30 || actuallyDidWorkout) ? 1 : 0;
     
-    // P4: Entropy (Enjoyment Link)
+    // 💗 E — Emotionen (enjoyment: something enjoyed / unplugged today)
     const ent = c["entertain_link"];
     const p4 = (ent && (Array.isArray(ent) ? ent.length > 0 : String(ent).trim().length > 0)) ? 1 : 0;
     
-    // P5: Night (>= 7h Sleep)
-    const p5 = (Number(c.sleep) || 0) >= 7 ? 1 : 0;
+    // 🌙 N — Nachtruhe (>= 7h sleep + evening wind-down rituals)
+    const p5 = ((Number(c.sleep) || 0) >= 7 && String(c["journal_pm"]) === "true" && String(c["selfcare_pm"]) === "true") ? 1 : 0;
 
     // 🔱 BASE CHECK (Der Gatekeeper)
     const baseMet = (p1 === 1 && p2 === 1 && p3 === 1 && p4 === 1 && p5 === 1);
@@ -608,16 +660,17 @@ if (dv) {
     if (Number(c.energy) >= 4) bonus += 5;
     
     // Instrument practice bonus (inpra): minutes straight from the day note
-    const musicTime = Number(c["inpra_min"]) || 0;
+    const musicTime = inpraMinDone; // mirrored from the Inpra log (D)
     if (musicTime >= 15) bonus += 5;
     if (musicTime >= 30) bonus += 5;
 
     const compAlchemy = vitaminTasks.filter(t => isAlchemy(t) && t.completed).length;
     bonus += (compAlchemy * 2.5); // Bio-Hacks
 
-    // 🏋️ WORKOUT BONUS (Powered by 7_Plan)
+    // 🏋️ WORKOUT BONUS — scales with how much of the session was actually logged (mirrored from the Workout Log).
+    //    Full +15 Phoenix boost only for a fully logged workout; partial work → partial boost.
     if (actuallyDidWorkout) {
-        bonus += 15; // Phoenix boost for a completed workout! (+15%)
+        bonus += Math.round(15 * (workoutPct / 100));
     }
 
     // 🔱 THE CAP (Max 120%)
@@ -656,8 +709,8 @@ if (dv) {
 
     if (!baseMet) {
         let open = [];
-        if(!p1) open.push(`L (${compBase}/${reqBase})`); if(p2 < 1) open.push("E"); 
-        if(!p3) open.push("B"); if(!p4) open.push("E"); if(!p5) open.push("N");
+        if(!p1) open.push("L"); if(!p2) open.push(`E·Energie (${compBase}/${reqBase})`); 
+        if(!p3) open.push("B"); if(!p4) open.push("E·Emotionen"); if(!p5) open.push("N");
         if (totalPercent >= 100) {
             dv.paragraph("> [!success] **Pillars balanced out by pure Effort!** (Missed: " + open.join(" • ") + ")");
         } else {
@@ -666,21 +719,65 @@ if (dv) {
     }
 })()
 ```
+
 [^1]
 
-> [!pink] L - Lifestyle / Food  
+> [!pink] ##### 📖 L - Lernen <br> <small> Study / Life Long Study </small>
+> 🙏*Clean house, Clean Self; 🔱 Clear Mind, Clear Thoughts*
 > > [!quote|flat] ☀️[[<%- tp.variables.amRoutinePath %>|AM_Routine]]
 > > - **Selfcare** AM: `INPUT[toggle:selfcare_am]`  
 > > - **Journal** AM: `INPUT[toggle:journal_am]` 
 > > 	- *Gratitude, Fascinating, Braindump*
 > > 	- ✍️ *Better by hand — pen & paper. See [[Journaling Ideas]]*
 > > - **Mobility** AM: INPUT[number:mobility_am] min (Yoga, stretching, morning walk)
-> > - [ ] 🛏️ Make bed & air out the room
-> > - [ ] 🍽️ Empty dishwasher
-> > - [ ] 🍵 Make tea
-> > - [ ] 🪻 Give Flowers Love
-> ### Basics doing
-> <%- tp.variables.routineSync.replace(/\n/g, "\n> ") %>
+> > <%- tp.variables.amRoutineSync.replace(/\n/g, '\n> > ') %>
+>
+> ```nexus-sibling-logs
+> ```
+>
+> > [!multi-column]
+> > > [!blank]
+> > > **📚 Studycards** <small>due</small>
+> > > ```dataviewjs
+> > > const t = moment().startOf("day");
+> > > const due = dv.pages('"5_Notes" or "6_Resources"')
+> > >   .where(p => String(p.archtype).includes("3atomic/studycards") && p.study_date && moment(p.study_date).startOf("day").diff(t, "days") <= 0)
+> > >   .sort(p => p.study_date, "asc").slice(0, 4);
+> > > if (due.length) dv.list(due.map(p => `${p.file.link} <small>· ${p.study_rank || "—"}</small>`));
+> > > else dv.paragraph("<small>_✅ all clear_</small>");
+> > > ```
+> >
+> > > [!blank]
+> > > **🗂️ Cards** <small>due</small>
+> > > ```dataviewjs
+> > > const t = moment().startOf("day");
+> > > const due = dv.pages('"5_Notes" or "6_Resources"')
+> > >   .where(p => String(p.archtype).includes("3atomic/cards") && p.study_date && moment(p.study_date).startOf("day").diff(t, "days") <= 0)
+> > >   .sort(p => p.study_date, "asc").slice(0, 4);
+> > > if (due.length) dv.list(due.map(p => `${p.file.link} <small>· ${p.study_rank || "—"}</small>`));
+> > > else dv.paragraph("<small>_✅ all clear_</small>");
+> > > ```
+>
+> > [!soul] 🎸 **Instrument Practice** <small>· logged in the Inpra Log, mirrored here</small>
+> > ```dataviewjs
+> > const c = dv.current();
+> > const d = c.cal_date ? moment(String(c.cal_date)) : moment(c.file.name, "YYYY-MM-DD");
+> > const ip = dv.page(`0_Calendar/4_Projectlogs/Routine/${d.format("YYYY")}/${d.format("MM")}/Inpra_${d.format("YYYY-MM-DD")}.md`);
+> > let mMin = 0; try { mMin = ip ? require(app.vault.adapter.basePath + "/zData/2scripts/inpraEngine.js")().parseInpraMinutes(ip) : 0; } catch(e) {}
+> > const mZiel = 10;
+> > let mIcon = "⚪"; let mFlair = "";
+> > if (mMin >= 30) { mIcon = "🔥"; mFlair = " VIRTUOSO"; }
+> > else if (mMin >= mZiel) { mIcon = "🟢"; }
+> > else if (mMin > 0) { mIcon = "🟡"; }
+> > dv.paragraph(ip ? `🎸 **Status:** ${mMin} /${mZiel} min ${mIcon}${mFlair} <small>· mirrored from the Inpra Log</small>` : "<small>_No inpra logged yet — open the Practice Plan → generate today's Inpra Log to enter minutes._</small>");
+> > ```
+> > **Today's Setup:**
+> > <%- tp.variables.inpraSync.trim().replace(/\n/g, '\n> > ') %>
+> > ---
+> > <%- tp.variables.inpraLinkMd %>
+> > ➤ `BUTTON[generate-inpra-log]`
+
+>[!pink] ##### 🍎 E - Energie <br> <small> Energy </small>
 > 
 > ```dataviewjs
 > // 🔱 START OF CALCULATION (wrapped as a Promise so other blocks can await it)
@@ -710,6 +807,24 @@ if (dv) {
 >            }
 >      }
 > 
+>      // E — MIRROR the Meal log's actuals (cooked/eaten entered THERE, live until freeze).
+>      // As soon as anything is cooked in today's Meal log, its actual nutrients REPLACE the planned
+>      // baseline; spontaneous adds below still apply on top. No log / nothing cooked -> planned baseline.
+>      let mealLogUsed = false;
+>      try {
+>            const _md = c.cal_date ? moment(String(c.cal_date)) : moment(c.file.name, "YYYY-MM-DD");
+>            const _mlPage = dv.page(`0_Calendar/4_Projectlogs/Routine/${_md.format("YYYY")}/${_md.format("MM")}/Meal_${_md.format("YYYY-MM-DD")}.md`);
+>            if (_mlPage) {
+>                const _mEng = require(app.vault.adapter.basePath + "/zData/2scripts/mealEngine.js")();
+>                const _act = _mEng.parseMealActuals(_mlPage, dv);
+>                if (_act.anyCooked) {
+>                    for (const k in totals) totals[k] = 0;
+>                    for (const k in _act.totals) totals[k] = _act.totals[k];
+>                    mealLogUsed = true;
+>                }
+>            }
+>      } catch(e) { console.error("Meal mirror failed:", e); }
+>
 >      ["kcal", "protein_g", "fat_total_g", "carbs_total_g", "vit_c_mg", "iron_total_mg", "magnesium_mg", "zinc_mg"].forEach(m => {
 >            if(totals[m] === undefined) totals[m] = 0;
 >      });
@@ -775,14 +890,14 @@ if (dv) {
 >            processAtom(c.food_rem, false);
 >      }
 >      
->      return { totals, mealLog, atomLog };
+>      return { totals, mealLog, atomLog, mealLogUsed };
 > })();
 > 
 > // 🔱 4. VISUAL SYNTHESIS
 > const data = await window.dailyResonancePromise;
 > 
 > if (data.mealLog.length === 0 && data.atomLog.length === 0) {
->      dv.paragraph("_Following baseline plan..._");
+>      dv.paragraph(data.mealLogUsed ? "🍱 <small>_Mirroring today's Meal Log actuals._</small>" : "_Following baseline plan..._");
 > } else {
 >      let outHtml = `<div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 10px; padding: 10px; background: var(--background-secondary-alt); border-radius: 8px;">`;
 >      if (data.mealLog.length > 0) {
@@ -797,12 +912,12 @@ if (dv) {
 > ```
 > > [!multi-column]
 > > > [!blank]
-> > > ### 🍽️ Planned Menu (Baseline)
+> > > ###### 🍽️ Planned Menu (Baseline)
 > > > <%- tp.variables.activePlanLink %>
 > > > <%- tp.variables.plannedMealsText.replace(/\n/g, "\n> > > ") %>
 > > > 
 > > > ---
-> > > **Actions:** `BUTTON[sync-fridge-meals]` `BUTTON[add-remove-meal]` `BUTTON[add-remove-alchemy]`
+> > > **Actions:** `BUTTON[generate-meal-log]` `BUTTON[sync-fridge-meals]` `BUTTON[add-remove-meal]` `BUTTON[add-remove-alchemy]`
 > >
 > > > [!info] **Live Resonance (Actuals)**
 > > > ```dataviewjs
@@ -844,8 +959,8 @@ if (dv) {
 > > > > - **Magnesium:** Relaxes muscles & CNS.
 > > > > - **Zinc + Selenium:** Immune & hormone repair.
 > > > > - **Glycine:** Lowers core temp for sleep.
->
-> ## 🛒 Procurement & Supply
+
+> [!info] ###### 🛒 Procurement & Supply
 >
 > > [!multi-column]
 > >
@@ -896,7 +1011,53 @@ if (dv) {
 > > > **Household & Quick Extras:** `BUTTON[add-shopping-extra]`
 > > > `VIEW[{shopping_extras}]`
 
-> [!pink] E - Emotions
+>[!pink] ##### 🏃 B - Bewegung / Bewusstsein <br> <small> Movement / Awareness </small>
+> >[!quote] ###### Basics doing
+> > <%- tp.variables.routineSync.replace(/\n/g, "\n> > ") %>
+> 
+> > [!multi-column]
+> > > [!blank]
+> > > **Today's Training:**
+> > > <%- tp.variables.fitnessSync.trim().replace(/\n/g, '\n> > > ') %>
+> > > ```dataviewjs
+> > > const c = dv.current();
+> > > const d = c.cal_date ? moment(String(c.cal_date)) : moment(c.file.name, "YYYY-MM-DD");
+> > > const p = `0_Calendar/4_Projectlogs/Routine/${d.format("YYYY")}/${d.format("MM")}/Workout_${d.format("YYYY-MM-DD")}.md`;
+> > > const f = app.vault.getAbstractFileByPath(p);
+> > > if (!f) { dv.paragraph("<small>_No workout logged yet — open the log to enter your sets._</small>"); }
+> > > else {
+> > >   const engine = require(app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js")();
+> > >   const r = engine.parseWorkoutCompletion(await app.vault.read(f));
+> > >   const filled = Math.round(r.pct / 10);
+> > >   const bar = "🟩".repeat(filled) + "⬜".repeat(Math.max(0, 10 - filled));
+> > >   dv.paragraph(`🏋️ **${r.done}/${r.total} sets** ${bar} **${r.pct}%** <small>· mirrored from the Workout Log</small>`);
+> > > }
+> > > ```
+> > > ---
+> > > <%- tp.variables.fitnessLinkMd %>
+> > > 
+> > > ➤ `BUTTON[generate-workout-log]` `BUTTON[snapshot-week-fitness]`
+> > > [!blank]
+> > > ```dataviewjs
+> > > const c = dv.current();
+> > > const am = Number(c["mobility_am"]) || 0;
+> > > const pm = Number(c["mobility_pm"]) || 0;
+> > > const act = Number(c["activity_time"]) || 0;
+> > > const gesamt = am + pm + act;
+> > > const ziel = 30;
+> > > 
+> > > let icon = "⚪"; let flair = "";
+> > > if (gesamt >= 90) { icon = "🦅"; flair = " PHOENIX RUN"; }
+> > > else if (gesamt >= 60) { icon = "✨"; flair = " SHINE"; }
+> > > else if (gesamt >= ziel) { icon = "🟢"; }
+> > > else if (gesamt > 0) { icon = "🟡"; }
+> > > 
+> > > dv.paragraph(`🏃🏽 **Movement Total:** ${gesamt} / ${ziel} min ${icon}${flair}`);
+> > > dv.paragraph(`<small style="opacity:0.7;">🧘 Mobility AM: <b>${am} min</b> · 🌙 Mobility PM: <b>${pm} min</b> · ⚡ Activity: <b>${act} min</b></small>`);
+> > > ```
+> > 
+
+> [!pink] ##### 💗 E - Emotionen / Einstellung <br> <small> Emotions / Mind-Set </small>
 > >[!multi-column]
 > > 
 > > > [!journal] **Resonance Radar:** 
@@ -937,37 +1098,7 @@ if (dv) {
 > > >     });
 > > > });
 > > >```
-
->[!pink] ## B - Body / Movement
-> > [!multi-column]
-> > > [!blank]
-> > > ```dataviewjs
-> > > const c = dv.current();
-> > > const am = Number(c["mobility_am"]) || 0;
-> > > const pm = Number(c["mobility_pm"]) || 0;
-> > > const act = Number(c["activity_time"]) || 0;
-> > > const gesamt = am + pm + act;
-> > > const ziel = 30;
-> > > 
-> > > let icon = "⚪"; let flair = "";
-> > > if (gesamt >= 90) { icon = "🦅"; flair = " PHOENIX RUN"; }
-> > > else if (gesamt >= 60) { icon = "✨"; flair = " SHINE"; }
-> > > else if (gesamt >= ziel) { icon = "🟢"; }
-> > > else if (gesamt > 0) { icon = "🟡"; }
-> > > 
-> > > dv.paragraph(`🏃🏽 **Movement Total:** ${gesamt} / ${ziel} min ${icon}${flair}`);
-> > > dv.paragraph(`<small style="opacity:0.7;">🧘 Mobility AM: <b>${am} min</b> · 🌙 Mobility PM: <b>${pm} min</b> · ⚡ Activity: <b>${act} min</b></small>`);
-> > > ```
-> > 
-> > > [!blank]
-> > > **Today's Training:**
-> > > <%- tp.variables.fitnessSync.trim().replace(/\n/g, '\n> > > ') %>
-> > > ---
-> > > <%- tp.variables.fitnessLinkMd %>
-> > > 
-> > > ➤ `BUTTON[snapshot-week-fitness]`
-
-> [!pink] E - Entropy / Relaxation
+>
 > >[!multi-column]
 > > 
 > > > [!blank]
@@ -1045,25 +1176,7 @@ if (dv) {
 > > > > **🎨 Creativity**
 > > > > Painting/Drawing, Crafting, etc.
 > > > > `INPUT[inlineList:creativity_link]`
-> > > > 
-> > > > 🎸 **Instrument Practice**
-> > > > ```dataviewjs
-> > > > const c = dv.current();
-> > > > const mMin = Number(c["inpra_min"]) || 0;
-> > > > const mZiel = 10;
-> > > > let mIcon = "⚪"; let mFlair = "";
-> > > > if (mMin >= 30) { mIcon = "🔥"; mFlair = " VIRTUOSO"; }
-> > > > else if (mMin >= mZiel) { mIcon = "🟢"; }
-> > > > else if (mMin > 0) { mIcon = "🟡"; }
-> > > > dv.paragraph(`🎸 **Status:** ${mMin} /${mZiel} min ${mIcon}${mFlair}`);
-> > > > ```
-> > > > ➤ `INPUT[number:inpra_min]` min
-> > > > 
-> > > > **Today's Setup:**
-> > > > <%- tp.variables.inpraSync.trim().replace(/\n/g, '\n> > > > ') %>
-> > > > ---
-> > > > <%- tp.variables.inpraLinkMd %>
-> 
+>  
 > > [!quote|flat] 📺 Entertainment (Passive)
 > > *Unplug & Consume: Gaming, Movies, Series, etc.*
 > > `INPUT[inlineList:entertain_link]`
@@ -1091,31 +1204,29 @@ if (dv) {
 > >     dv.paragraph("_No recent entertainment activity found._");
 > > }
 > > ```
-> > 
-> 
-> > **Action:** `BUTTON[add-entropy]`
 
-> [!pink] N - Night / Sleep
+> [!pink] 🌙 N - Nachtruhe <br> <small> Night / Sleep </small>
+> - **Sleep from previouse night** <%- schlaf %>h `$= Number(<%- schlaf %>) >= 7 ? "🟢" : "🔴"`
+>
 > > [!quote|flat] 🌙 [[<%- tp.variables.pmRoutinePath %>|PM_Routine]]
 > > - **Selfcare** PM: `INPUT[toggle:selfcare_pm]`
 > > - **Journal** PM: `INPUT[toggle:journal_pm]` 
 > > 	- *Gratitude, Fascinating, Braindump*
 > > 	- ✍️ *Better by hand — pen & paper. See [[Journaling Ideas]]*
 > > - **Mobility** PM: INPUT[number:mobility_pm] min (Evening stretches, relaxation)
-> > - [ ] 🍽️ Load & start dishwasher
-> > - [ ] 🗑️ Check trash & take out if needed
-> > - [ ] 🛋️ 5-Minute Reset (clear tables & surfaces)
-> > - [ ] 📱 Plug in devices & switch to offline mode
+> > <%- tp.variables.pmRoutineSync.replace(/\n/g, '\n> > ') %>
 
-> 
-> - **Sleep:** <%- schlaf %>h `$= Number(<%- schlaf %>) >= 7 ? "🟢" : "🔴"`
 
 ```dataviewjs
 const c = dv.current();
 const base = app.vault.adapter.basePath;
 let engine = null; try { engine = require(base + "/zData/2scripts/routineEngine.js")(); } catch(e) {}
 if (engine && engine.renderChakraColumns) {
-  const actual = engine.getActualChakraMinutes(c);
+  // Inject today's practiced minutes (mirrored from the Inpra log) so music counts toward chakra time.
+  const _d = c.cal_date ? moment(String(c.cal_date)) : moment(c.file.name, "YYYY-MM-DD");
+  const _ip = dv.page(`0_Calendar/4_Projectlogs/Routine/${_d.format("YYYY")}/${_d.format("MM")}/Inpra_${_d.format("YYYY-MM-DD")}.md`);
+  let _inMin = 0; try { _inMin = require(base + "/zData/2scripts/inpraEngine.js")().parseInpraMinutes(_ip); } catch(e) {}
+  const actual = engine.getActualChakraMinutes(Object.assign({}, c, { inpra_min_total: _inMin }));
   const chakras = [
     {g:"1. Root", icon:"❤️", col:"239,83,80"},
     {g:"2. Sacral", icon:"🧡", col:"255,152,0"},
@@ -1133,9 +1244,11 @@ if (engine && engine.renderChakraColumns) {
 
 
 
-
 [^1]: L-E-B-E-N by Birkenbihl
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
+
+> [!success]- 🛰️ **Close the day**
+> Reflect & log today's Daily Review (revD): `BUTTON[create-daily-review]`
 
 `BUTTON[archive-month]`

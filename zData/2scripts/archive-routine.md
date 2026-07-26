@@ -6,7 +6,7 @@
 try {
 let file = app.workspace.getActiveFile();
 let planType = "Routine";
-let targetPath = "2_Areas/4_Organize/Plan/Routine_Timeblocking.md";
+let targetPath = "2_Areas/3_Drive/Plan/Routine_Timeblocking.md";
 
 if (file && file.name.includes("Timetable")) {
     planType = "Timetable";

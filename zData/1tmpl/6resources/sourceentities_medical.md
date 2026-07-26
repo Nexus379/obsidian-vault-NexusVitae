@@ -93,7 +93,7 @@ vendor_market: "Vor-Ort Apotheke"
 
 > [!info] 👤 Ownership & Inventory
 > Click here to add an owner to this item:
-> `BUTTON[add-wardrobe-owner]`
+> `BUTTON[add-vestis-owner]`
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 

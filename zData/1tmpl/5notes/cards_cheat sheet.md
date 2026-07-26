@@ -13,5 +13,5 @@
 > Answer line 2
 > ```
 >
-> Use `#vocabcards` for cards reviewed by the Obsidian Spaced Repetition community plugin.
-> Use `#studycards` for Nexus-internal Studycard notes with `space_lvl`, `space_rank`, and `space_date`.
+> Use `#cards` for cards reviewed by the Obsidian Spaced Repetition community plugin.
+> Use `#studycards` for Nexus-internal Studycard notes with `study_lvl`, `study_rank`, and `study_date`.

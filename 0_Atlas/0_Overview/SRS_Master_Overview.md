@@ -10,7 +10,7 @@ cssclasses:
 
 <div class="nxs-card-links">
   <a class="internal-link" data-href="0_Atlas/0_Overview/SRS_Studycards_Overview.md" href="0_Atlas/0_Overview/SRS_Studycards_Overview.md">Studycards</a>
-  <a class="internal-link" data-href="0_Atlas/0_Overview/SRS_Flashcards_Overview.md" href="0_Atlas/0_Overview/SRS_Flashcards_Overview.md">Vocabcards</a>
+  <a class="internal-link" data-href="0_Atlas/0_Overview/SRS_Flashcards_Overview.md" href="0_Atlas/0_Overview/SRS_Flashcards_Overview.md">Cards</a>
 </div>
 
 ```dataviewjs
@@ -25,29 +25,29 @@ const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({
 const first = value => Array.isArray(value) ? value[0] : value;
 const arch = page => String(page.archtype ?? "");
 const tags = page => Array.isArray(page.file?.tags) ? page.file.tags : [];
-const isVocab = page => arch(page).includes("#5note/3atomic/vocabcards") || tags(page).includes("#vocabcards");
-const isStudy = page => page.space_rank != null || page.space_lvl != null || arch(page).includes("#5note/3atomic/studycards");
+const isCard = page => arch(page).includes("#5note/3atomic/cards") || tags(page).includes("#cards");
+const isStudy = page => page.study_rank != null || page.study_lvl != null || arch(page).includes("#5note/3atomic/studycards");
 const link = page => `<a class="internal-link" data-href="${esc(page.file.path)}" href="${esc(page.file.path)}">${esc(page.file.name)}</a>`;
 const label = value => String(first(value) ?? "General").replace(/^#/, "");
 const deckName = page => String(page.deck || label(page.discipline || page.discTag || page.areaTag) || "General");
 
 const pages = dv.pages('"5_Notes" or "6_Resources"')
-  .where(page => isVocab(page) || isStudy(page))
+  .where(page => isCard(page) || isStudy(page))
   .array();
 
 const today = moment().startOf("day");
-const dueDiff = page => page.space_date ? moment(page.space_date).startOf("day").diff(today, "days") : 9999;
+const dueDiff = page => page.study_date ? moment(page.study_date).startOf("day").diff(today, "days") : 9999;
 const overdue = pages.filter(page => dueDiff(page) < 0);
 const dueToday = pages.filter(page => dueDiff(page) === 0);
 const future = pages.filter(page => dueDiff(page) > 0 && dueDiff(page) < 9999);
 const unscheduled = pages.filter(page => dueDiff(page) === 9999);
-const vocab = pages.filter(isVocab);
+const cards = pages.filter(isCard);
 const study = pages.filter(isStudy);
 
 const summary = [
   ["All cards", pages.length, "combined Nexus + plugin review pool"],
   ["Studycards", study.length, "Nexus internal ranks"],
-  ["Vocabcards", vocab.length, "Obsidian Spaced Repetition plugin"],
+  ["Cards", cards.length, "Obsidian Spaced Repetition plugin"],
   ["Due now", overdue.length + dueToday.length, `${overdue.length} overdue, ${dueToday.length} today`]
 ];
 
@@ -108,8 +108,8 @@ const queue = pages
     const diff = dueDiff(page);
     const state = diff < 0 ? "is-overdue" : diff === 0 ? "is-due" : "is-future";
     const dueText = diff < 0 ? `${Math.abs(diff)}d overdue` : diff === 0 ? "due today" : `in ${diff}d`;
-    const type = isVocab(page) ? "Vocabcard" : "Studycard";
-    const rank = page.space_rank || (page.space_lvl != null ? `Level ${page.space_lvl}` : "plugin schedule");
+    const type = isCard(page) ? "Card" : "Studycard";
+    const rank = page.study_rank || (page.study_lvl != null ? `Level ${page.study_lvl}` : "plugin schedule");
     return `
       <div class="nxs-study-card ${state}">
         <div>
@@ -128,6 +128,6 @@ dv.header(2, "Review Queue");
 render(queue || `<div class="nxs-study-card"><div class="nxs-card-title">No cards due in the next 7 days.</div></div>`, "nxs-card-row");
 
 if (unscheduled.length) {
-  dv.paragraph(`<small>${unscheduled.length} cards have no space_date yet.</small>`);
+  dv.paragraph(`<small>${unscheduled.length} cards have no study_date yet.</small>`);
 }
 ```

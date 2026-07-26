@@ -59,9 +59,3 @@ dv.table(["⌚ Time", "Routine"], rows);
 ---~End~---
 
 ---
-```dataviewjs
-
-```
-
-
-

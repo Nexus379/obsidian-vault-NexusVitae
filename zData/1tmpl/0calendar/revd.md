@@ -1,7 +1,7 @@
 <%-*
 // 🔱 1. INITIALIZATION & DATE
 const dv = app.plugins.plugins.dataview?.api;
-const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
+const dateStr = tp.variables.targetDate || (String(tp.file.title).match(/\d{4}-\d{2}-\d{2}/) || [])[0] || tp.date.now("YYYY-MM-DD");
 let nexusConfig = {
     roots: { calendar: "0_Calendar" },
     areas: { mainPlans: {} }
@@ -11,7 +11,7 @@ try {
     if (cfgFile) nexusConfig = Object.assign(nexusConfig, JSON.parse(await app.vault.read(cfgFile)));
 } catch (e) { console.error("Nexus system config load failed:", e); }
 tp.variables.weeklyPlanRoot = `${nexusConfig?.roots?.calendar || "0_Calendar"}/7_Plan`;
-tp.variables.routineMainPath = nexusConfig?.areas?.mainPlans?.routine || "2_Areas/4_Organize/Plan/Routine_Timeblocking.md";
+tp.variables.routineMainPath = nexusConfig?.areas?.mainPlans?.routine || "2_Areas/3_Drive/Plan/Routine_Timeblocking.md";
 
 // 🔱 2. PATH LOGISTICS (Backsafe for direct template starts)
 if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
@@ -69,7 +69,11 @@ const f_am = Number(getVal(plm, "mobility_am", 0));
 const f_pm = Number(getVal(plm, "mobility_pm", 0));
 tp.variables.fitness_revD = f_am + f_pm;
 
-tp.variables.music_revD = Number(getVal(plm, "inpra_min", 0));
+// Music now lives in the Inpra log (sum of the per-piece inpra_min_N fields), not on the day note.
+const [_iY_d, _iM_d] = dateStr.split("-");
+const _iLog_d = dv.page(`0_Calendar/4_Projectlogs/Routine/${_iY_d}/${_iM_d}/Inpra_${dateStr}.md`);
+let _iMin_d = 0; if (_iLog_d) for (const _k of Object.keys(_iLog_d)) { if (/^inpra_min_\d+$/.test(_k)) _iMin_d += Number(_iLog_d[_k]) || 0; }
+tp.variables.music_revD = _iMin_d;
 
 tp.variables.kcal_revD      = getVal(plm, "nexus_kcal", 0);
 tp.variables.protein_revD   = getVal(plm, "nexus_protein_g", 0);
@@ -284,7 +288,9 @@ let rPage = dv.pages('"<%- tp.variables.weeklyPlanRoot %>"').where(p => p.file.n
 if (!rPage) rPage = dv.page("<%- tp.variables.routineMainPath %>");
 
 const planned = (engine && rPage) ? engine.getChakraMinutes(rPage, day) : {};
-const actual  = engine ? engine.getActualChakraMinutes(c) : {};   // auto-pulled from tracked time via engine groups
+const _ipD = dv.page(`0_Calendar/4_Projectlogs/Routine/${dObj.format("YYYY")}/${dObj.format("MM")}/Inpra_${dObj.format("YYYY-MM-DD")}.md`);
+let _imD = 0; if (_ipD) for (const _k of Object.keys(_ipD)) { if (/^inpra_min_\d+$/.test(_k)) _imD += Number(_ipD[_k]) || 0; }
+const actual  = engine ? engine.getActualChakraMinutes(Object.assign({}, c, { inpra_min_total: _imD })) : {};   // music from Inpra log + tracked time via engine groups
 
 // Data prep is LOCAL (single day). Actual minutes come from the engine (music -> Sacral, fitness -> Solar…).
 const chakras = [

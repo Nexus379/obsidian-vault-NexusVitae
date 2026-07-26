@@ -13,7 +13,7 @@
 //                    is a pure DASHBOARD/aggregator, never a data source for "today".
 //                    (Fitness)
 //
-// SRS, Wardrobe, and Study also have weekplan templates and can resolve through
+// SRS, Vestis, and Study also have weekplan templates and can resolve through
 // this same map.
 // Timetable IS its own module (behavior: "fallback") since it's a genuine
 // recurring weekly plan (school/uni schedule). It additionally gets manually
@@ -27,7 +27,7 @@ function planPaths() {
             label: "Fitness",
             icon: "🚵🏽",
             behavior: "autocreate",
-            masterPath: "2_Areas/6_Activity/Plan/Fitness_Routine", // dashboard only, NOT a fallback data source
+            masterPath: "2_Areas/3_Drive/Plan/Fitness_Routine", // dashboard only, NOT a fallback data source
             weeklyPrefix: "fitness",
             weekplanTemplate: "weekplan_fitness"
         },
@@ -36,7 +36,7 @@ function planPaths() {
             label: "Instrument",
             icon: "🎸",
             behavior: "fallback",
-            masterPath: "2_Areas/5_Creativity/Plan/Instrument_Mastery",
+            masterPath: "2_Areas/2_Creativity/Plan/Instrument_Mastery",
             weeklyPrefix: "inpra",
             weekplanTemplate: "weekplan_inpra"
         },
@@ -45,7 +45,7 @@ function planPaths() {
             label: "Routine",
             icon: "🧩",
             behavior: "fallback",
-            masterPath: "2_Areas/4_Organize/Plan/Routine_Timeblocking",
+            masterPath: "2_Areas/3_Drive/Plan/Routine_Timeblocking",
             weeklyPrefix: "routine",
             weekplanTemplate: "weekplan_routine"
         },
@@ -54,7 +54,7 @@ function planPaths() {
             label: "Timetable",
             icon: "🧠",
             behavior: "fallback",
-            masterPath: "2_Areas/3_Mind/Plan/Timetable",
+            masterPath: "2_Areas/6_Mind/Plan/CourseTimetable",
             weeklyPrefix: "timetable",
             weekplanTemplate: "weekplan_timetable"
         },
@@ -72,25 +72,25 @@ function planPaths() {
             label: "Spaced Repetition",
             icon: "ðŸ§ ",
             behavior: "fallback",
-            masterPath: "2_Areas/3_Mind/Plan/Spaced_Repetition",
+            masterPath: "2_Areas/6_Mind/Plan/Spaced_Repetition",
             weeklyPrefix: "srs",
             weekplanTemplate: "weekplan_srs"
         },
         wd: {
             key: "wd",
-            label: "Wardrobe",
+            label: "Vestis",
             icon: "ðŸ‘—",
             behavior: "fallback",
-            masterPath: "2_Areas/1_Selfcare/Plan/Wardrobe",
-            weeklyPrefix: "wardrobe",
-            weekplanTemplate: "weekplan_wardrobe"
+            masterPath: "2_Areas/1_Selfcare/Plan/Vestis",
+            weeklyPrefix: "vestis",
+            weekplanTemplate: "weekplan_vestis"
         },
         st: {
             key: "st",
             label: "Study",
             icon: "ðŸ“š",
             behavior: "fallback",
-            masterPath: "2_Areas/3_Mind/Plan/Study_Plan",
+            masterPath: "2_Areas/6_Mind/Plan/Study_Plan",
             weeklyPrefix: "study",
             weekplanTemplate: "weekplan_study"
         }
@@ -107,7 +107,7 @@ function planPaths() {
         timetable: "tt",
         meal: "mp",
         srs: "sr", spaced: "sr",
-        wardrobe: "wd",
+        vestis: "wd",
         study: "st"
     };
 

@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # 💠 Areas Dashboard (Life Management)
-| [[0_Atlas/0_Dashboard/2-Areas|💠Areas]] | [[0_Atlas/Bases/2-Areas/Areas.base|⚙️Areasbase]] | [[0_Atlas/0_Dashboard/2-Areas/1-Selfcare|🌸Selfcare]] | [[0_Atlas/0_Dashboard/2-Areas/2-Relationship|🦄Relationship]] | [[0_Atlas/0_Dashboard/2-Areas/3-Mind|🧠Mind]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize|🧩Organize]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/2-Areas/5-Creativity|🎨Creativity]] | [[0_Atlas/0_Dashboard/2-Areas/6-Activity|🏔️Activity]] | [[0_Atlas/0_Dashboard/2-Areas/7-Entertainment|🕹️Entertainment]] |
+| [[0_Atlas/0_Dashboard/2-Areas|💠Areas]] | [[0_Atlas/Bases/2-Areas/Areas.base|⚙️Areasbase]] | [[0_Atlas/0_Dashboard/2-Areas/1-Selfcare|❤️Selfcare]] | [[0_Atlas/0_Dashboard/2-Areas/2-Creativity|🧡Creativity]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive|💛Drive]] | [[0_Atlas/0_Dashboard/2-Areas/4-Relationship|💚Relationship]] | [[0_Atlas/0_Dashboard/2-Areas/5-Expression|💙Expression]] | [[0_Atlas/0_Dashboard/2-Areas/6-Mind|💜Mind]] | [[0_Atlas/0_Dashboard/2-Areas/7-Crown|🤍Crown]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Fitnessboard|🏋️Fitness]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -24,12 +24,12 @@ cssclasses:
 > >          // Paths exactly according to your Nexus Guide
 > >          const areas = [
 > >              { label: "🌸 Selfcare", path: '"2_Areas/1_Selfcare"', color: "#ff9999" }, 
-> >              { label: "🧠 Mind", path: '"2_Areas/3_Mind"', color: "#ffcc99" },      
-> >              { label: "🦄 Relation", path: '"2_Areas/2_Relationship"', color: "#ffb3ff" }, 
-> >              { label: "🧩 Organize", path: '"2_Areas/4_Organize"', color: "#b3ffb3" },    
-> >              { label: "🎨 Creative", path: '"2_Areas/5_Creativity"', color: "#99ccff" },  
-> >              { label: "🚵🏽 Activity", path: '"2_Areas/6_Activity"', color: "#9999ff" },    
-> >              { label: "🕹️ Entertain", path: '"2_Areas/7_Entertainment"', color: "#cc99ff" } 
+> >              { label: "🧠 Mind", path: '"2_Areas/6_Mind"', color: "#ffcc99" },      
+> >              { label: "🦄 Relation", path: '"2_Areas/4_Relationship"', color: "#ffb3ff" }, 
+> >              { label: "🧩 Organize", path: '"2_Areas/3_Drive"', color: "#b3ffb3" },    
+> >              { label: "🎨 Creative", path: '"2_Areas/2_Creativity"', color: "#99ccff" },  
+> >              { label: "🚵🏽 Activity", path: '"2_Areas/3_Drive"', color: "#9999ff" },    
+> >              { label: "🕹️ Entertain", path: '"2_Areas/7_Crown"', color: "#cc99ff" } 
 > >          ];
 > > 
 > >          const counts = areas.map(a => dv.pages(a.path).where(p => p.inbox !== true).length);
@@ -84,23 +84,23 @@ cssclasses:
 > > > > > > `$= dv.list(dv.pages('#2area/1selfcare AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > >
 > > > > > > [!soul]- 🦄 Relation
-> > > > > > `$= dv.list(dv.pages('#2area/2relationship AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/4relationship AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > > 
 > > > > > > [!mind]- 🧠 Mind
-> > > > > > `$= dv.list(dv.pages('#2area/3mind AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/6mind AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > 
 > > > > > [!multi-column]
 > > > > > > [!organize]- 🧩 Organize
-> > > > > > `$= dv.list(dv.pages('#2area/4organize AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/3drive AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > >
 > > > > > > [!creativity]- 🎨 Creativity
-> > > > > > `$= dv.list(dv.pages('#2area/5creativity AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/2creativity AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > >
 > > > > > > [!activity]- 🚵🏽 Activity
-> > > > > > `$= dv.list(dv.pages('#2area/6activity AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/3drive AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 > > > > >
 > > > > > > [!collect]- 🕹️ Entertainment
-> > > > > > `$= dv.list(dv.pages('#2area/7entertain AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
+> > > > > > `$= dv.list(dv.pages('#2area/7crown AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).limit(3).file.link)`
 
 > [!source] **Areas Library**
 > ![[0_Atlas/Bases/2-Areas/Areas.base]]

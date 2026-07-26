@@ -222,7 +222,7 @@ function routineEngine() {
         // data = a page / frontmatter-like object holding the tracked minute fields.
         getActualChakraMinutes: (data) => {
             const ACTUAL_FIELDS = {
-                inpra_min:     "music_practice",   // instrument practice
+                inpra_min_total: "music_practice", // instrument practice (mirrored from the Inpra log)
                 mobility_am:   "workout_stretch",  // morning mobility
                 mobility_pm:   "workout_stretch",  // evening mobility
                 activity_time: "sport_active",     // spontaneous activity / sport

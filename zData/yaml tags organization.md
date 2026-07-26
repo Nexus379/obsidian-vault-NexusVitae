@@ -11,24 +11,24 @@ archtype:
   - "#0cal/1plm"
   - "#0cal/2ppm"
   - "#0cal/3pkm"
-  - "#0cal/1review"
-  - "#0cal/1review/weekly"
-  - "#0cal/1review/monthly"
-  - "#0cal/1review/quarterly"
-  - "#0cal/1review/halfyear"
-  - "#0cal/1review/yearly"
+  - "#0cal/6review"
+  - "#0cal/6review/weekly"
+  - "#0cal/6review/monthly"
+  - "#0cal/6review/quarterly"
+  - "#0cal/6review/halfyear"
+  - "#0cal/6review/yearly"
   - "#0cal/4projectlog"
   - "#0cal/5protocol"
   - "#1stars/1purpose"
   - "#1stars/2vision"
   - "#1stars/3goals"
   - "#2area/1selfcare"
-  - "#2area/3mind"
-  - "#2area/2relationship"
-  - "#2area/4organize"
-  - "#2area/5creativity"
-  - "#2area/6activity"
-  - "#2area/7entertain"
+  - "#2area/6mind"
+  - "#2area/4relationship"
+  - "#2area/3drive"
+  - "#2area/2creativity"
+  - "#2area/3drive"
+  - "#2area/7crown"
   - "#3project/prodo"
   - "#3project/progo"
   - "#3project/prostudy"
@@ -57,7 +57,7 @@ archtype:
   - "#5note/4permanent"
   - "#5note/3atomic"
   - "#5note/3atomic/studycards"
-  - "#5note/3atomic/vocabcards"
+  - "#5note/3atomic/cards"
   - "#5note/5evergreen"
   - "#6resource/ai"
   - "#6resource/article"
@@ -491,12 +491,12 @@ difficulty:
 
 ### 2 Area
 #2area/1selfcare
-#2area/3mind
-#2area/2relationship
-#2area/4organize
-#2area/5creativity
-#2area/6activity
-#2area/7entertain
+#2area/6mind
+#2area/4relationship
+#2area/3drive
+#2area/2creativity
+#2area/3drive
+#2area/7crown
 
 ### 3 Projects
 #3project
@@ -533,7 +533,7 @@ difficulty:
 #5note/4permanent
 #5note/3atomic
 #5note/3atomic/studycards
-#5note/3atomic/vocabcards
+#5note/3atomic/cards
 #5note/5evergreen
 
 ### 6 Resource

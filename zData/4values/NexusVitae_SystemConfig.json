@@ -35,14 +35,16 @@
       "meal": "2_Areas/1_Selfcare/Plan/Meal_Plan.md",
       "am_routine": "2_Areas/1_Selfcare/Plan/AM_Routine.md",
       "pm_routine": "2_Areas/1_Selfcare/Plan/PM_Routine.md",
-      "wardrobe": "2_Areas/1_Selfcare/Plan/Wardrobe.md",
-      "timetable": "2_Areas/3_Mind/Plan/Timetable.md",
-      "study": "2_Areas/3_Mind/Plan/Study_Plan.md",
-      "srs": "2_Areas/3_Mind/Plan/Spaced_Repetition.md",
-      "routine": "2_Areas/4_Organize/Plan/Routine_Timeblocking.md",
-      "shopping": "2_Areas/4_Organize/Plan/Shopping_Hub.md",
-      "inpra": "2_Areas/5_Creativity/Plan/Instrument_Mastery.md",
-      "fitness": "2_Areas/6_Activity/Plan/Fitness_Routine.md"
+      "vestis": "2_Areas/1_Selfcare/Plan/Vestis.md",
+      "timetable": "2_Areas/6_Mind/Plan/CourseTimetable.md",
+      "study": "2_Areas/6_Mind/Plan/Study_Plan.md",
+      "srs": "2_Areas/6_Mind/Plan/Spaced_Repetition.md",
+      "routine": "2_Areas/3_Drive/Plan/Routine_Timeblocking.md",
+      "shopping": "2_Areas/1_Selfcare/Household/Shopping_Hub.md",
+      "inpra": "2_Areas/2_Creativity/Plan/Instrument_Mastery.md",
+      "fitness": "2_Areas/3_Drive/Plan/Fitness_Routine.md",
+      "teach": "2_Areas/5_Expression/Plan/Teaching_Plan.md",
+      "concraft": "2_Areas/5_Expression/Plan/Content_Plan.md"
     }
   },
   "generated": {

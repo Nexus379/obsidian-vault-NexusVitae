@@ -4,7 +4,7 @@ cssclasses:
   - srs-card-dashboard
 ---
 
-# Vocabcards Overview
+# Cards Overview
 
 ![[zData/5design_modul/OverviewNavigationModul]]
 
@@ -25,13 +25,13 @@ const first = value => Array.isArray(value) ? value[0] : value;
 const label = value => String(first(value) ?? "Vocabulary").replace(/^#/, "");
 const arch = page => String(page.archtype ?? "");
 const tags = page => Array.isArray(page.file?.tags) ? page.file.tags : [];
-const isVocab = page => arch(page).includes("#5note/3atomic/vocabcards") || tags(page).includes("#vocabcards");
+const isCard = page => arch(page).includes("#5note/3atomic/cards") || tags(page).includes("#cards");
 const link = page => `<a class="internal-link" data-href="${esc(page.file.path)}" href="${esc(page.file.path)}">${esc(page.file.name)}</a>`;
 const deckName = page => String(page.deck || label(page.discipline || page.discTag || page.areaTag) || "Vocabulary");
 
-const pages = dv.pages('"5_Notes" or "6_Resources"').where(isVocab).array();
+const pages = dv.pages('"5_Notes" or "6_Resources"').where(isCard).array();
 const today = moment().startOf("day");
-const dueDiff = page => page.space_date ? moment(page.space_date).startOf("day").diff(today, "days") : 9999;
+const dueDiff = page => page.study_date ? moment(page.study_date).startOf("day").diff(today, "days") : 9999;
 
 const groups = new Map();
 for (const page of pages) {
@@ -55,7 +55,7 @@ render(Array.from(groups.entries()).sort((a, b) => a[0].localeCompare(b[0])).map
       </div>
     </div>
   `;
-}).join("") || `<div class="nxs-deck-card"><div class="nxs-card-title">No vocabcards yet</div><div class="nxs-card-meta"><span class="nxs-card-pill">Use n-vocab</span></div></div>`, "nxs-card-grid");
+}).join("") || `<div class="nxs-deck-card"><div class="nxs-card-title">No cards yet</div><div class="nxs-card-meta"><span class="nxs-card-pill">Use n-card</span></div></div>`, "nxs-card-grid");
 
 const cards = pages.sort((a, b) => dueDiff(a) - dueDiff(b)).slice(0, 40).map(page => {
   const diff = dueDiff(page);
@@ -69,12 +69,12 @@ const cards = pages.sort((a, b) => dueDiff(a) - dueDiff(b)).slice(0, 40).map(pag
       </div>
       <div class="nxs-card-meta">
         <span class="nxs-card-pill">${esc(dueText)}</span>
-        <span class="nxs-card-pill">#vocabcards</span>
+        <span class="nxs-card-pill">#cards</span>
       </div>
     </div>
   `;
 }).join("");
 
 dv.header(2, "Cards");
-render(cards || `<div class="nxs-study-card"><div class="nxs-card-title">No vocabcards found.</div></div>`, "nxs-card-row");
+render(cards || `<div class="nxs-study-card"><div class="nxs-card-title">No cards found.</div></div>`, "nxs-card-row");
 ```

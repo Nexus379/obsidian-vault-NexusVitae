@@ -1,16 +1,16 @@
 <%*
 // 🔱 1. AREA-CHOICE FIRST (Die Basis für alles)
 const areaOptions = [
-    "1 🌸 Selfcare", "2 🦄 Relationship", "3 🧠 Mind", 
-    "4 🧩 Organize", "5 🎨 Creativity", "6 🚵🏽 Activity", "7 🕹️ Entertainment"
+    "1 ❤️ Selfcare", "2 🧡 Creativity", "3 💛 Drive",
+    "4 💚 Relationship", "5 💙 Expression", "6 💜 Mind", "7 🤍 Crown"
 ];
 const areaFolders = [
-    "1_Selfcare", "2_Relationship", "3_Mind", "4_Organize", "5_Creativity", "6_Activity", "7_Entertainment"
+    "1_Selfcare", "2_Creativity", "3_Drive", "4_Relationship", "5_Expression", "6_Mind", "7_Crown"
 ];
 const areaTags = [
-    "#2area/1selfcare", "#2area/2relationship", "#2area/3mind", "#2area/4organize", "#2area/5creativity", "#2area/6activity", "#2area/7entertain"
+    "#2area/1selfcare", "#2area/2creativity", "#2area/3drive", "#2area/4relationship", "#2area/5expression", "#2area/6mind", "#2area/7crown"
 ];
-const areaTemplates = ["1selfcare", "2relation", "3mind", "4organize", "5creativity", "6activity", "7entertain"];
+const areaTemplates = ["1selfcare", "2creativity", "3drive", "4relation", "5expression", "6mind", "7crown"];
 
 // SICHERHEIT: Fallback für tp.variables
 if (!tp.variables) tp.variables = {};
@@ -24,16 +24,12 @@ const preSub = v.preSelectedSub || "";
 const originTrigger = String(v.originTrigger || v.activeTrigger || "").toLowerCase();
 const areaTriggerMap = {
     selfcare: 0,
-    relation: 1,
-    relationship: 1,
-    character: 1,
-    char: 1,
-    mind: 2,
-    organize: 3,
-    creativity: 4,
-    activity: 5,
-    entertain: 6,
-    entertainment: 6
+    creativity: 1, creative: 1, art: 1, music: 1, hobby: 1,
+    drive: 2, organize: 2, activity: 2, fitness: 2, discipline: 2,
+    relation: 3, relationship: 3, character: 3, char: 3,
+    expression: 4, teach: 4, content: 4, voice: 4, language: 4,
+    mind: 5, study: 5, knowledge: 5,
+    crown: 6, spirit: 6, meditation: 6, entertain: 6, entertainment: 6
 };
 
 if (preSub) {
@@ -57,7 +53,7 @@ if (aIdx === null || aIdx === -1) {
 const targetArea = areaFolders[aIdx];
 const targetAreaTag = areaTags[aIdx];
 let contentTemplate = areaTemplates[aIdx];
-if (originTrigger === "character" || originTrigger === "char") contentTemplate = "2relation_character";
+if (originTrigger === "character" || originTrigger === "char") contentTemplate = "4relation_character";
 
 // 🔱 3. DISCIPLINE ENGINE
 // Sicherstellen, dass tp.variables existiert, bevor wir darauf schreiben

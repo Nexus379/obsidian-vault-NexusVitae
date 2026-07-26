@@ -3,7 +3,7 @@ const tFile = tp.config.target_file;
 if (!tFile) return;
 
 const dv = app.plugins.plugins.dataview?.api;
-const hub = dv ? dv.page("2_Areas/4_Organize/Plan/Shopping_Hub") : null;
+const hub = dv ? dv.page("2_Areas/1_Selfcare/Household/Shopping_Hub") : null;
 let strategy = String((hub && hub.shopping_strategy) || "value").toLowerCase();
 
 if (strategy === "budget") strategy = "cheap";

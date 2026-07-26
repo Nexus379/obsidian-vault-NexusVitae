@@ -48,7 +48,7 @@ try {
     const kw    = target.format("WW");
 
     // 2. Master lesen
-    const masterFile = app.vault.getAbstractFileByPath("2_Areas/4_Organize/Plan/Routine_Timeblocking.md");
+    const masterFile = app.vault.getAbstractFileByPath("2_Areas/3_Drive/Plan/Routine_Timeblocking.md");
     if (!masterFile) { new Notice("❌ Master Routine_Timeblocking not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 

@@ -71,9 +71,9 @@ discipline: ["<%- disc %>"]
 topic: "<%- sub %>"
 persona: "<%- persona %>"
 due: <%- today %>
-space_lvl: 0
-space_rank: "Ground Crew (Sprout)"
-space_date: <%- p1 %>
+study_lvl: 0
+study_rank: "Ground Crew (Sprout)"
+study_date: <%- p1 %>
 lastgrade: 0
 cal0:
 stars1:
@@ -107,9 +107,9 @@ tags: ["#studycards"]
 > > [!info|wide-0] 🛡️ Nexus Progression
 > > **Starfleet Rank:**
 > > 
-> >  `VIEW[{space_rank}]` 
-> >  `$= const icons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"]; const lvl = dv.current().space_lvl || 0; dv.paragraph(icons[Math.min(lvl, icons.length - 1)] + " **Level " + lvl + "**")`
-> > 🔥 **Next Dynamic Session:** `VIEW[{space_date}]`  
+> >  `VIEW[{study_rank}]` 
+> >  `$= const icons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"]; const lvl = dv.current().study_lvl || 0; dv.paragraph(icons[Math.min(lvl, icons.length - 1)] + " **Level " + lvl + "**")`
+> > 🔥 **Next Dynamic Session:** `VIEW[{study_date}]`  
 [[cards_cheat sheet]]
 
 

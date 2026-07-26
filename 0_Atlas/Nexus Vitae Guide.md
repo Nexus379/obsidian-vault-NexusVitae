@@ -12,10 +12,10 @@ frozen: true
 ## 🚀 Quick-Start
 ### 1. Plan 
 - Fill your Plan
-	- [[2_Areas/4_Organize/Plan/Routine_Timeblocking|Routine-Timeblocking]]
-	- [[2_Areas/6_Activity/Plan/Fitness_Routine|Fitness_Routine]]
+	- [[2_Areas/3_Drive/Plan/Routine_Timeblocking|Routine-Timeblocking]]
+	- [[2_Areas/3_Drive/Plan/Fitness_Routine|Fitness_Routine]]
 	- [[2_Areas/1_Selfcare/Plan/Meal_Plan|Meal_Plan]]
-	- [[2_Areas/3_Mind/Plan/Timetable|Timetable]]
+	- [[2_Areas/6_Mind/Plan/CourseTimetable|Timetable]]
 
 ### 2. Create a File
 There are three ways to start a new entry:
@@ -199,7 +199,7 @@ Install and enable the following core plugins from `Settings` ⚙️ ➔ `Commun
 - **Meta Bind:** Mandatory for interactive buttons, sliders, and input fields. [Open Meta Bind](obsidian://show-plugin?id=obsidian-meta-bind-plugin).
 - **Templater:** Powers daily note, project, task, and resource generation. [Open Templater](obsidian://show-plugin?id=templater-obsidian).
 - **Dataview:** Query support for legacy tables and overview lists. [Open Dataview](obsidian://show-plugin?id=dataview).
-- **Spaced Repetition:** Obsidian Spaced Repetition plugin for reviewing `#vocabcards` notes and single-line cards (`::`). [Open Spaced Repetition](obsidian://show-plugin?id=spaced-repetition).
+- **Spaced Repetition:** Obsidian Spaced Repetition plugin for reviewing `#cards` notes and single-line cards (`::`). [Open Spaced Repetition](obsidian://show-plugin?id=spaced-repetition).
 
 ### Step 4: Templater Settings Configuration
 1. Go to `Settings` ⚙️ ➔ `Templater`.

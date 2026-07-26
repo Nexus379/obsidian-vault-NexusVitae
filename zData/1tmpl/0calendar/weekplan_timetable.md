@@ -37,7 +37,7 @@ tt_periods: 16
 tt_breaks: 2:15, 4:15, 6:30
 ---
 
-# 🗓️ Nexus Timetable
+# 🗓️ Course Timetable
 
 `BUTTON[setup-timetable]` `BUTTON[edit-timetable]`
 

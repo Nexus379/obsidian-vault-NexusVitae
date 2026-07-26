@@ -43,7 +43,7 @@ try {
     const month = target.format("MM");
     const kw = target.format("WW");
 
-    const masterFile = app.vault.getAbstractFileByPath("2_Areas/5_Creativity/Plan/Instrument_Mastery.md");
+    const masterFile = app.vault.getAbstractFileByPath("2_Areas/2_Creativity/Plan/Instrument_Mastery.md");
     if (!masterFile) { new Notice("Master Instrument_Mastery not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 

@@ -29,7 +29,7 @@ async function generateShoppingList(app, dv, moment) {
     const fullPath = `${folderPath}/${fileName}`;
     
     // 1. Strategie auslesen
-    const hubPage = dv.page("2_Areas/4_Organize/Plan/Shopping_Hub");
+    const hubPage = dv.page("2_Areas/1_Selfcare/Household/Shopping_Hub");
     const strategy = hubPage && hubPage.shopping_strategy ? hubPage.shopping_strategy : "value";
     
     // Engine laden
@@ -67,6 +67,25 @@ async function generateShoppingList(app, dv, moment) {
         }
     }
     
+    // E3/E4 — Fridge stock from the daily Meal logs: leftovers (cooked − me − others) of the
+    // last LEFTOVER_DAYS still cover planned servings of the same recipe, so we don't re-buy
+    // (e.g. 4 portions Lasagne cooked, 1 eaten → 3 leftovers cover the next planned Lasagne).
+    // Leftovers older than the freshness window are ignored (then it IS bought again).
+    let leftoverStock = {};
+    try {
+        const mEngPath = app.vault.adapter.basePath + "/zData/2scripts/mealEngine.js";
+        delete require.cache[require.resolve(mEngPath)];
+        const mEng = require(mEngPath)();
+        for (let b = 0; b < mEng.LEFTOVER_DAYS; b++) {
+            const d = moment(referenceDate).subtract(b, 'days');
+            const lp = dv.page(`0_Calendar/4_Projectlogs/Routine/${d.format("YYYY")}/${d.format("MM")}/Meal_${d.format("YYYY-MM-DD")}.md`);
+            if (!lp) continue;
+            for (const row of mEng.parseMealActuals(lp, dv).leftovers) {
+                leftoverStock[row.path] = (leftoverStock[row.path] || 0) + row.leftover;
+            }
+        }
+    } catch(e) { console.error("Leftover stock scan failed:", e); }
+
     let neededAtoms = {};
     for (let [recipeName, neededServings] of Object.entries(recipeCounts)) {
         const recipe = dv.page(recipeName);
@@ -74,9 +93,12 @@ async function generateShoppingList(app, dv, moment) {
 
         let stored = Number(recipe.portions_stored) || 0;
         let pDate = recipe.prep_date ? moment(String(recipe.prep_date)) : null;
-        let shelfLife = Number(recipe.prep_shelf_life) || 4; 
+        let shelfLife = Number(recipe.prep_shelf_life) || 4;
         let isExpired = (stored > 0 && pDate && referenceDate.diff(pDate, 'days') > shelfLife);
         if (isExpired) stored = 0;
+
+        // Add fresh Meal-log leftovers for this recipe to the stock.
+        stored += leftoverStock[String(recipeName).split("|")[0].trim()] || 0;
 
         let deficit = neededServings - stored;
         let rYield = Number(recipe.portions) || 1; 

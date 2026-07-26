@@ -44,6 +44,18 @@ function inpraEngine() {
         avgQuality: (posture, rhythm, melody, feeling) => {
             const vals = [posture, rhythm, melody, feeling].map(Number).filter(n => n > 0);
             return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;
+        },
+
+        // Single source of truth for "minutes practiced today": sum of the per-piece fields
+        // inpra_min_1..N from an Inpra log page. dailyplm / reviews / chakra-time only MIRROR this
+        // total live (like fitnessEngine.parseWorkoutCompletion) — nothing is stored on the day note.
+        parseInpraMinutes: (page) => {
+            if (!page) return 0;
+            let total = 0;
+            for (const key of Object.keys(page)) {
+                if (/^inpra_min_\d+$/.test(key)) total += Number(page[key]) || 0;
+            }
+            return total;
         }
     };
 }

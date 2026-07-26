@@ -40,7 +40,7 @@ const calSubfolder = ARCHTYPES_CAL.map(m => m.subfolder);
 const calSuffix    = ARCHTYPES_CAL.map(m => m.id);
 
 // 🔱 4. TRIGGER & DATE DETECTION (NEU: Erkennt jetzt Fitness & Musik)
-const planSubkeys = ["fitness", "inpra", "routine", "meal", "srs", "wardrobe", "spaced", "study", "timetable"];
+const planSubkeys = ["fitness", "inpra", "routine", "meal", "srs", "vestis", "spaced", "study", "timetable", "teach", "concraft"];
 
 if (!activeTrigger) {
     const lowered = rawTitle.toLowerCase();
@@ -99,7 +99,7 @@ if (preSub) {
 
 if (cIdx === null || cIdx === -1) {
     // 🎯 HIER WAR DER FEHLER: JETZT SIND FITNESS & CO MIT INDEX 6 DRIN!
-    const triggerMap = { plm:0, ppm:1, pkm:2, projectlog:3, proj:3, prjlog:3, protocol:4, prot:4, prtcl:4, rev:5, plan:6, fitness:6, inpra:6, routine:6, meal:6, srs:6, spaced:6, wardrobe:6, study:6, timetable:6 };
+    const triggerMap = { plm:0, ppm:1, pkm:2, projectlog:3, proj:3, prjlog:3, protocol:4, prot:4, prtcl:4, rev:5, plan:6, fitness:6, inpra:6, routine:6, meal:6, srs:6, spaced:6, vestis:6, study:6, timetable:6, teach:6, concraft:6 };
     if (triggerMap[activeTrigger] !== undefined) cIdx = triggerMap[activeTrigger];
 }
 
@@ -281,11 +281,13 @@ if (cIdx === 6) {
             "⏰ Timeblocking (Routines)", 
             "🍱 Meal Plan", 
             "🧠 Spaced Repetition", 
-            "👗 Wardrobe",
+            "👗 Vestis",
             "📚 Study Plan",
-            "🗓️ Timetable"
+            "🗓️ Timetable",
+            "📖 Teaching Plan",
+            "✍️ Content Creator"
         ];
-        const planKeys = ["fitness", "inpra", "routine", "meal", "srs", "wardrobe", "study", "timetable"];
+        const planKeys = ["fitness", "inpra", "routine", "meal", "srs", "vestis", "study", "timetable", "teach", "concraft"];
         
         subType = await tp.system.suggester(planOptions, planKeys, false, "📋 Welchen Wochenplan möchtest du anlegen?");
         if (!subType) return; 
@@ -298,9 +300,11 @@ if (cIdx === 6) {
         "meal": "weekplan_meal",
         "spaced": "weekplan_srs",
         "srs": "weekplan_srs",
-        "wardrobe": "weekplan_wardrobe",
+        "vestis": "weekplan_vestis",
         "study": "weekplan_study",
-        "timetable": "weekplan_timetable"
+        "timetable": "weekplan_timetable",
+        "teach": "weekplan_teach",
+        "concraft": "weekplan_concraft"
     };
 
     planTemp = planMap[subType] || "weekplan";
@@ -407,7 +411,7 @@ if (finalTempName) {
             const pk = tp.variables.planKw || tp.date.now("WW");
             tR += raw.replace(/\{\{YEAR\}\}/g, py).replace(/\{\{KW\}\}/g, pk);
         } else {
-            // Templater weekplan (inpra/srs/wardrobe/study): run normally.
+            // Templater weekplan (inpra/srs/vestis/study): run normally.
             tR += await tp.file.include(tFile);
         }
     } else {

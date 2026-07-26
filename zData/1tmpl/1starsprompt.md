@@ -47,7 +47,7 @@ if (sIdx === null || sIdx === -1) return;
 
 // 🔱 2.1 AREA-ZUTEILUNG (GTD Omni-Bridge: which Area of Focus does this Star serve?)
 const areaLabels = ["1 🌸 Selfcare", "2 🦄 Relationship", "3 🧠 Mind", "4 🧩 Organize", "5 🎨 Creativity", "6 🚵🏽 Activity", "7 🕹️ Entertainment"];
-const areaValues = ["#2area/1selfcare", "#2area/2relationship", "#2area/3mind", "#2area/4organize", "#2area/5creativity", "#2area/6activity", "#2area/7entertain"];
+const areaValues = ["#2area/1selfcare", "#2area/4relationship", "#2area/6mind", "#2area/3drive", "#2area/2creativity", "#2area/3drive", "#2area/7crown"];
 const aPick = await tp.system.suggester(areaLabels, areaValues, false, "💠 Which Area of Focus does this Star serve?");
 tp.variables.currentArea = aPick || "area_undefined";
 

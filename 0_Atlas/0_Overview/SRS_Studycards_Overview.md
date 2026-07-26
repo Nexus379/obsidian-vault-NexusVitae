@@ -24,17 +24,17 @@ const render = (html, cls) => {
 const first = value => Array.isArray(value) ? value[0] : value;
 const label = value => String(first(value) ?? "Concept Knowledge").replace(/^#/, "");
 const arch = page => String(page.archtype ?? "");
-const isStudy = page => page.space_rank != null || page.space_lvl != null || arch(page).includes("#5note/3atomic/studycards");
+const isStudy = page => page.study_rank != null || page.study_lvl != null || arch(page).includes("#5note/3atomic/studycards");
 const link = page => `<a class="internal-link" data-href="${esc(page.file.path)}" href="${esc(page.file.path)}">${esc(page.file.name)}</a>`;
 const deckName = page => String(page.deck || label(page.discipline || page.discTag || page.areaTag) || "Concept Knowledge");
 
 const pages = dv.pages('"5_Notes" or "6_Resources"').where(isStudy).array();
 const today = moment().startOf("day");
-const dueDiff = page => page.space_date ? moment(page.space_date).startOf("day").diff(today, "days") : 9999;
+const dueDiff = page => page.study_date ? moment(page.study_date).startOf("day").diff(today, "days") : 9999;
 
 const ranks = new Map();
 for (const page of pages) {
-  const raw = page.space_rank || (page.space_lvl != null ? `Level ${page.space_lvl}` : "Unranked");
+  const raw = page.study_rank || (page.study_lvl != null ? `Level ${page.study_lvl}` : "Unranked");
   const key = String(raw);
   if (!ranks.has(key)) ranks.set(key, []);
   ranks.get(key).push(page);
@@ -60,7 +60,7 @@ const cards = pages.sort((a, b) => dueDiff(a) - dueDiff(b)).slice(0, 40).map(pag
   const diff = dueDiff(page);
   const state = diff < 0 ? "is-overdue" : diff === 0 ? "is-due" : "is-future";
   const dueText = diff === 9999 ? "no date" : diff < 0 ? `${Math.abs(diff)}d overdue` : diff === 0 ? "due today" : `in ${diff}d`;
-  const rank = page.space_rank || (page.space_lvl != null ? `Level ${page.space_lvl}` : "Unranked");
+  const rank = page.study_rank || (page.study_lvl != null ? `Level ${page.study_lvl}` : "Unranked");
   return `
     <div class="nxs-study-card ${state}">
       <div>

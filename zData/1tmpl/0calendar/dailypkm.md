@@ -122,7 +122,7 @@ try {
     
     let ttPage = dv.page(weeklyTtPath);
     if (!ttPage) {
-        ttPage = dv.page(cfgAreaPlan("timetable", "2_Areas/3_Mind/Plan/Timetable.md"));
+        ttPage = dv.page(cfgAreaPlan("timetable", "2_Areas/6_Mind/Plan/CourseTimetable.md"));
     }
 
     if (ttPage && ["mon", "tue", "wed", "thu", "fri"].includes(dayPrefix)) {
@@ -194,7 +194,7 @@ discipline:
 subject: ""
 cal0: 
 stars1:
-area2: ["#2area/3mind"]
+area2: ["#2area/6mind"]
 project3:
 task4:
 note5: 
@@ -337,7 +337,7 @@ createDashboardBox("Cognitive Load", bMap, "brain_drain", "#b873f0", "🧠");
 
 ```dataviewjs
 const pages = dv.pages('(#5note/3atomic/studycards OR #5note/3atomic) AND !"zData" AND -"yArchive"')
-    .where(p => p.space_rank != null && p.status !== "archive" && p.status !== "archived");
+    .where(p => p.study_rank != null && p.status !== "archive" && p.status !== "archived");
 
 const ranks = ["Cadet 🎖️", "Ensign 🔰", "Lieutenant 🎗️", "Commander 🎖️", "Captain 👨‍✈️"];
 
@@ -349,11 +349,11 @@ if (pages.length > 0) {
 
     const rows = [];
     grouped.forEach(g => {
-        let r1 = g.rows.filter(p => !p.space_rank || p.space_rank === 1).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        let r2 = g.rows.filter(p => p.space_rank === 2).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        let r3 = g.rows.filter(p => p.space_rank === 3).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        let r4 = g.rows.filter(p => p.space_rank === 4).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        let r5 = g.rows.filter(p => p.space_rank >= 5).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r1 = g.rows.filter(p => !p.study_rank || p.study_rank === 1).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r2 = g.rows.filter(p => p.study_rank === 2).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r3 = g.rows.filter(p => p.study_rank === 3).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r4 = g.rows.filter(p => p.study_rank === 4).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+        let r5 = g.rows.filter(p => p.study_rank >= 5).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
         rows.push([`**${g.key}**`, r1, r2, r3, r4, r5]);
     });
 
@@ -367,13 +367,13 @@ if (pages.length > 0) {
 <small style="opacity:0.45;font-style:italic;">(Study Cards whose SRS Stardate interval is due today for review)</small>
 ```dataview
 TABLE WITHOUT ID
-  space_rank as "Rank",
+  study_rank as "Rank",
   file.link as "Mission / Topic",
-  space_date as "Due Stardate"
-WHERE space_date != null
-  AND date(space_date) = date(today) 
+  study_date as "Due Stardate"
+WHERE study_date != null
+  AND date(study_date) = date(today) 
   AND status != "archive"
-SORT space_date ASC
+SORT study_date ASC
 LIMIT 5
 ```
 
@@ -381,13 +381,13 @@ LIMIT 5
 <small style="opacity:0.45;font-style:italic;">(past-due SRS Study Cards — empty = you're all caught up!)</small>
 ```dataview
 TABLE WITHOUT ID
-  space_rank as "Rank",
+  study_rank as "Rank",
   file.link as "Mission / Topic",
-  space_date as "Stardate Due"
-WHERE space_date != null
-  AND date(space_date) < date(today) 
+  study_date as "Stardate Due"
+WHERE study_date != null
+  AND date(study_date) < date(today) 
   AND status != "archive"
-SORT space_date ASC
+SORT study_date ASC
 LIMIT 8
 ```
 

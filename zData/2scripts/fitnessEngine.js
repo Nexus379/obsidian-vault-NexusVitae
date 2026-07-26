@@ -163,6 +163,25 @@ function fitnessEngine() {
 
     return {
         all: EXERCISES,
+
+        // 📈 D — Single source of truth for "how much of today's workout is actually logged".
+        //    The Workout Log displays this live (until freeze); dailyplm only MIRRORS the result
+        //    (no re-parsing of its own, no checkboxes). Same function → later reused by the native processor.
+        parseWorkoutCompletion: (content) => {
+            if (!content) return { total: 0, done: 0, pct: 0, didWorkout: false };
+            let total = 0, done = 0;
+            for (const raw of String(content).split("\n")) {
+                const line = raw.trim();
+                if (!line.startsWith("|")) continue;
+                const cells = line.split("|").map(c => c.trim());
+                // Table shape: | Set N | Target | Actual | RIR | Status |  → cells[1]=Set, cells[3]=Actual
+                if (!/^set\s*\d+/i.test(cells[1] || "")) continue; // skip header + separator rows
+                total++;
+                if ((cells[3] || "") !== "") done++; // an "Actual" value was entered
+            }
+            const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+            return { total, done, pct, didWorkout: done > 0 };
+        },
         
         getLabels: () => Object.keys(EXERCISES).sort().map(k => ({ key: k, ...EXERCISES[k] })),
         

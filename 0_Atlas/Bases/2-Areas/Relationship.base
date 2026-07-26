@@ -1,7 +1,7 @@
 filters:
   and:
     - arch.contains("#2area")
-    - archtype.contains("#2area/2relationship")
+    - archtype.contains("#2area/4relationship")
     - inbox != true
     - status != "archive"
     - status != "archived"

@@ -43,7 +43,7 @@ try {
     const kw    = target.format("WW");
 
     // 2. Master lesen (nur fit_* wird kopiert)
-    const masterFile = app.vault.getAbstractFileByPath("2_Areas/6_Activity/Plan/Fitness_Routine.md");
+    const masterFile = app.vault.getAbstractFileByPath("2_Areas/3_Drive/Plan/Fitness_Routine.md");
     if (!masterFile) { new Notice("❌ Master Fitness_Routine not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 

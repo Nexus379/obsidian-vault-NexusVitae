@@ -15,7 +15,7 @@ try {
     if (cfgFile) nexusConfig = Object.assign(nexusConfig, JSON.parse(await app.vault.read(cfgFile)));
 } catch (e) { console.error("Nexus system config load failed:", e); }
 tp.variables.weeklyPlanRoot = `${nexusConfig?.roots?.calendar || "0_Calendar"}/7_Plan`;
-tp.variables.routineMainPath = nexusConfig?.areas?.mainPlans?.routine || "2_Areas/4_Organize/Plan/Routine_Timeblocking.md";
+tp.variables.routineMainPath = nexusConfig?.areas?.mainPlans?.routine || "2_Areas/3_Drive/Plan/Routine_Timeblocking.md";
 
 const isMaster = (revModule === "master");
 
@@ -43,8 +43,8 @@ if (!tp.variables.finalTitle || !tp.variables.targetFolder) {
 
 tR += "---";
 %>
-arch: ["#0cal/1review"]
-archtype: ["#0cal/1review/weekly"]
+arch: ["#0cal/6review"]
+archtype: ["#0cal/6review/weekly"]
 rev_module: "<%- revModule %>"
 rev_start: <%- start %>
 rev_end: <%- end %>
@@ -139,7 +139,7 @@ status: 1active
 > > - **Weekly Avg Mood:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.mood.avg() * 10) / 10 || 0) + "** / 5")`
 > > - **Sleep Avg:** `$= const p = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>"); dv.paragraph("**" + (Math.round(p.sleep.avg() * 10) / 10 || 0) + "** h")`
 > > - **Fitness Total:** `$= dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.mobility_am) || 0) + (Number(p.mobility_pm) || 0), 0)` min
-> > - **Music Total:** `$= dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= "<%- start %>" && p.cal_date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.inpra_min) || 0), 0)` min
+> > - **Music Total:** `$= dv.pages().where(p => p.inpra_active && p.date >= "<%- start %>" && p.date <= "<%- end %>").array().reduce((sum, p) => sum + (Number(p.inpra_min_1)||0)+(Number(p.inpra_min_2)||0)+(Number(p.inpra_min_3)||0), 0)` min
 
 ### 🌈 Chakra Balance (Plan vs Actual)
 ```dataviewjs
@@ -171,7 +171,10 @@ const chakras = [
 const plm = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= start && p.cal_date <= end).array();
 const istSum = {}; chakras.forEach(ch => istSum[ch.g] = 0);
 plm.forEach(x => {
-  const act = engine ? engine.getActualChakraMinutes(x) : {};
+  const _xd = moment(String(x.cal_date));
+  const _xip = dv.page(`0_Calendar/4_Projectlogs/Routine/${_xd.format("YYYY")}/${_xd.format("MM")}/Inpra_${_xd.format("YYYY-MM-DD")}.md`);
+  let _xim = 0; if (_xip) for (const _k of Object.keys(_xip)) { if (/^inpra_min_\d+$/.test(_k)) _xim += Number(_xip[_k]) || 0; }
+  const act = engine ? engine.getActualChakraMinutes(Object.assign({}, x, { inpra_min_total: _xim })) : {};
   chakras.forEach(ch => {
     const manual = Number(x[ch.key]) || 0;
     istSum[ch.g] += manual > 0 ? manual : (act[ch.g] || 0);

@@ -9,7 +9,7 @@ cssclasses:
 ---
 
 # 💫 Dashboard
-| [[0_Atlas/0_Dashboard/0-Dashboard|💫Dashy]] | [[0_Atlas/0_Dashboard/0-Inbox|💌Inbox]] | [[0_Atlas/0_Dashboard/0-Calendar|📅Calendar]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|🎓Studyboard]] | [[0_Atlas/0_Dashboard/2-Areas/4-Organize_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/7-Reviews|🛰️Reviews]] |
+| [[0_Atlas/0_Dashboard/0-Dashboard|💫Dashy]] | [[0_Atlas/0_Dashboard/0-Inbox|💌Inbox]] | [[0_Atlas/0_Dashboard/0-Calendar|📅Calendar]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|🎓Studyboard]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/7-Reviews|🛰️Reviews]] |
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 

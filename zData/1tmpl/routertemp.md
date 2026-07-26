@@ -21,7 +21,7 @@ if (!tp.variables) tp.variables = {};
 // We save the match to remove it precisely later
 const dateMatch = rawTitle.match(/^\d{4}-\d{2}-\d{2}/);
 const loweredTitle = rawTitle.toLowerCase();
-const calendarTriggerKeys = ["projectlog","protocol","plm","pkm","ppm","proj","prot","rev", "plan","fitness","music","routine","meal","shopping","wardrobe","srs", "spaced"];
+const calendarTriggerKeys = ["projectlog","protocol","plm","pkm","ppm","proj","prot","rev", "plan","fitness","music","routine","meal","shopping","vestis","srs", "spaced","teach","concraft"];
 const detectedCalTrigger = calendarTriggerKeys.find(key => new RegExp(`(^|[\\s_-])${key}($|[\\s_-])`, "i").test(loweredTitle));
 if (dateMatch || detectedCalTrigger) {
     if (!selection) selection = "0calendarprompt";
@@ -45,14 +45,14 @@ tp.variables.ARCH = {
 };
 
 const ARCH = tp.variables.ARCH;
-const CHRONOS_TRIGGERS = ["cal", "plm", "pkm", "ppm", "jou", "studylog", "log", "projectlog", "proj", "prot", "rev", "plan", "weekplan", "week"];
+const CHRONOS_TRIGGERS = ["cal", "plm", "pkm", "ppm", "jou", "studylog", "log", "projectlog", "proj", "prot", "rev", "plan", "weekplan", "week", "teach", "concraft"];
 
 // 🔱 3. PROMPT-MAPPING
 const promptMap = {
     "c": ARCH.c.prompt, "cal": ARCH.c.prompt, "plm": ARCH.c.prompt, "ppm": ARCH.c.prompt, "pkm": ARCH.c.prompt,
     "projectlog": ARCH.c.prompt, "proj": ARCH.c.prompt, "protocol": ARCH.c.prompt, "prot": ARCH.c.prompt,
     "log": ARCH.c.prompt, "rev": ARCH.c.prompt, "studylog": ARCH.c.prompt, "jou": ARCH.c.prompt,
-    "plan": ARCH.c.prompt, "weekplan": ARCH.c.prompt, "week": ARCH.c.prompt,"fitness": ARCH.c.prompt, "inpra": ARCH.c.prompt, "routine": ARCH.c.prompt, "meal": ARCH.c.prompt, "shopping": ARCH.c.prompt, "srs": ARCH.c.prompt, "spaced": ARCH.c.prompt, "wardrobe": ARCH.c.prompt,
+    "plan": ARCH.c.prompt, "weekplan": ARCH.c.prompt, "week": ARCH.c.prompt,"fitness": ARCH.c.prompt, "inpra": ARCH.c.prompt, "routine": ARCH.c.prompt, "meal": ARCH.c.prompt, "shopping": ARCH.c.prompt, "srs": ARCH.c.prompt, "spaced": ARCH.c.prompt, "vestis": ARCH.c.prompt, "teach": ARCH.c.prompt, "concraft": ARCH.c.prompt,
     "s": ARCH.s.prompt, "stars": ARCH.s.prompt, "purpose": ARCH.s.prompt, "vision": ARCH.s.prompt, "goal": ARCH.s.prompt, "goals": ARCH.s.prompt,
     "a": ARCH.a.prompt, "areas": ARCH.a.prompt, "selfcare": ARCH.a.prompt, "relation": ARCH.a.prompt, "character": ARCH.a.prompt, "char": ARCH.a.prompt,
     "mind": ARCH.a.prompt, "organize": ARCH.a.prompt, "creativity": ARCH.a.prompt, "activity": ARCH.a.prompt,
@@ -63,7 +63,7 @@ const promptMap = {
     "tomeet": ARCH.t.prompt, "tobuy": ARCH.t.prompt, "topay": ARCH.t.prompt, "tocook": ARCH.t.prompt, "tocraft": ARCH.t.prompt,
     "toget": ARCH.t.prompt, "get": ARCH.t.prompt, "toenjoy": ARCH.t.prompt,
     "n": ARCH.n.prompt, "notes": ARCH.n.prompt, "fleet": ARCH.n.prompt, "lit": ARCH.n.prompt, "perma": ARCH.n.prompt,
-    "atomic": ARCH.n.prompt, "studycards": ARCH.n.prompt, "studycard": ARCH.n.prompt, "srs": ARCH.n.prompt, "vocab": ARCH.n.prompt, "vocabcards": ARCH.n.prompt, "vocabcard": ARCH.n.prompt, "spacedcard": ARCH.n.prompt, "nutri": ARCH.n.prompt, "ever": ARCH.n.prompt,
+    "atomic": ARCH.n.prompt, "studycards": ARCH.n.prompt, "studycard": ARCH.n.prompt, "srs": ARCH.n.prompt, "vocab": ARCH.n.prompt, "cards": ARCH.n.prompt, "card": ARCH.n.prompt, "spacedcard": ARCH.n.prompt, "nutri": ARCH.n.prompt, "ever": ARCH.n.prompt,
     "r": ARCH.r.prompt, "resources": ARCH.r.prompt, "ai": ARCH.r.prompt, "article": ARCH.r.prompt, "book": ARCH.r.prompt,
     "class": ARCH.r.prompt, "course": ARCH.r.prompt, "film": ARCH.r.prompt, "game": ARCH.r.prompt, "guide": ARCH.r.prompt,
     "museum": ARCH.r.prompt, "music": ARCH.r.prompt, "paper": ARCH.r.prompt, "recipe": ARCH.r.prompt,

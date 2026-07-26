@@ -1,7 +1,7 @@
 filters:
   and:
     - arch.contains("#2area")
-    - archtype.contains("#2area/3mind")
+    - archtype.contains("#2area/6mind")
     - inbox != true
     - status != "archive"
     - status != "archived"
