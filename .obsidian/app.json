@@ -1,6 +1,6 @@
 {
   "strictLineBreaks": false,
-  "showLineNumber": true,
+  "showLineNumber": false,
   "newFileLocation": "folder",
   "newFileFolderPath": "0_Inbox",
   "attachmentFolderPath": "0_Inbox",
