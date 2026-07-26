@@ -147,9 +147,29 @@
               "icon": "lucide-info",
               "title": "File properties for README"
             }
+          },
+          {
+            "id": "bcd328d9e2172a9b",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {},
+              "icon": "clock",
+              "title": "Chronology"
+            }
+          },
+          {
+            "id": "d8f35e578adf2e4e",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       },
       {
         "id": "93fb1a17dccd2f4c",
@@ -162,7 +182,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +191,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks"
             }
           },
           {
@@ -253,13 +272,13 @@
       "chronology:Open Chronology": false,
       "obsidian-kanban:Create new board": false,
       "local-backup:Run local backup": false,
-      "flashcards-obsidian:Generate flashcards": false
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "feca3469e911da7b",
+  "active": "d8f35e578adf2e4e",
   "lastOpenFiles": [
-    "0_Atlas/Nexus Vitae Guide.md",
     "README.md",
+    "0_Atlas/Nexus Vitae Guide.md",
     "zData/yaml tags organization.md",
     "0_Inbox/Untitled 1.md",
     "zData/1tmpl/5notesprompt.md",
