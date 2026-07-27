@@ -8,16 +8,13 @@
   "callout-manager",
   "chronology",
   "callout-suggestions",
-  "heatmap-calendar",
   "obsidian-style-settings",
   "supercharged-links-obsidian",
   "tag-wrangler",
-  "obsidian-charts",
   "obsidian-kanban",
   "local-backup",
   "better-export-pdf",
   "flashcards-obsidian",
-  "obsidian-spaced-repetition",
-  "editing-toolbar",
-  "banners-reloaded"
+  "obsidian-to-anki-plugin",
+  "editing-toolbar"
 ]
