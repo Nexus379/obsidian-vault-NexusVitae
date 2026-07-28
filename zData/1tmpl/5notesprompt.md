@@ -47,6 +47,9 @@ if (pID) {
     if (structure && structure !== "new") {
         finalLID = (structure === "child") ? childID : siblingID;
         title = `${finalLID} ${title}`;
+    } else {
+	    // 🛡️ ESC oder "New Branch" → kein Parent übernehmen!
+		pLink = "";
     }
 }
 
@@ -127,6 +130,7 @@ if (needsScience.includes(nChoice)) {
 			const shortCode = selectedDisc.code || selectedDisc.label.substring(0, 3).toUpperCase();
 				
 			tp.variables.cleanDisc = shortCode;
+			tp.variables.icon = selectedDisc.icon || "";  // 🌟 DAS FEHLT NOCH!
 				
 			// 🌟 2. Verschiebt die Datei z.B. nach "5_Notes/3_Atomic/cards/LAT/"
 				

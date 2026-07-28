@@ -204,7 +204,6 @@ cal_date: <%- dateStr %>
 ---
 
 # 🎓 <%- dateStr %> - <%- displayTitle %>
-> [!abstract] 🔱 Nexus Sync: <%- energy %>/5 | Brain: <%- drainVal %>/5
 
 <%- tp.file.include("[[zData/5design_modul/CalendarLog]]") %>
 
@@ -251,30 +250,7 @@ cal_date: <%- dateStr %>
 > > > 
 > > > 
 
-
-> > [!quote|flat] 📜 On this day
-> > ```dataview
-> > LIST FROM "0_Calendar/3_PKM"
-> > WHERE file.day.month = this.file.day.month AND file.day.day = this.file.day.day
-> > AND contains(file.name, " pkm")
-> > AND file.name != this.file.name
-> > ```
-
-## 🚀 Fokus
-
-
-
 ## 🏫 Academy Logistics
-
-### 🎓 Daily Study Tracker
-
-
-
-> [!info] 🔱 Click here to log a discipline:
-> `BUTTON[add-disc-pkm]`
-
-
-<%- tp.variables.timetableSync %>
 
 
 >[!log]
@@ -335,74 +311,87 @@ cal_date: <%- dateStr %>
 > }
 > ```
 
+
+<%- tp.variables.timetableSync %>
+
+
+
+> [!info]  🎓 Daily Study Tracker
+> 🔱 Click here to log a discipline:
+> `BUTTON[add-disc-pkm]`
+
+ > ~~ Study ~~
+
+
 ## 🚀 Studyplan & Mastery Matrix
 
 > [!info] 🎖️ **Star Trek Rank Mastery Matrix (Disciplines vs. Ranks)**
 > *Every SRS Card is a Study Card, but not every Study Card is an SRS Card!*
+> 
+> ```dataviewjs
+> const pages = dv.pages('(#5note/3atomic/studycards OR #5note/3atomic) AND !"zData" AND -"yArchive"')
+>     .where(p => p.study_rank != null && p.status !== "archive" && p.status !== "archived");
+> 
+> const ranks = ["Cadet 🎖️", "Ensign 🔰", "Lieutenant 🎗️", "Commander 🎖️", "Captain 👨‍✈️"];
+> 
+> if (pages.length > 0) {
+>     const grouped = pages.groupBy(p => {
+>         let disc = p.discipline ? (Array.isArray(p.discipline) ? p.discipline[0] : p.discipline) : "General";
+>         return String(disc).replace("#disc/", "").toUpperCase();
+>     });
+> 
+>     const rows = [];
+>     grouped.forEach(g => {
+>         let r1 = g.rows.filter(p => !p.study_rank || p.study_rank === 1).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+>         let r2 = g.rows.filter(p => p.study_rank === 2).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+>         let r3 = g.rows.filter(p => p.study_rank === 3).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+>         let r4 = g.rows.filter(p => p.study_rank === 4).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+>         let r5 = g.rows.filter(p => p.study_rank >= 5).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
+>         rows.push([`**${g.key}**`, r1, r2, r3, r4, r5]);
+>     });
+> 
+>     dv.table(["📚 Discipline (Y-Axis)", "Cadet (L1)", "Ensign (L2)", "Lieutenant (L3)", "Commander (L4)", "Captain (L5)"], rows);
+> } else {
+>     dv.paragraph("_No active Study Cards found. Create cards via 3atomic_studycards!_");
+> }
+> ```
 
-```dataviewjs
-const pages = dv.pages('(#5note/3atomic/studycards OR #5note/3atomic) AND !"zData" AND -"yArchive"')
-    .where(p => p.study_rank != null && p.status !== "archive" && p.status !== "archived");
-
-const ranks = ["Cadet 🎖️", "Ensign 🔰", "Lieutenant 🎗️", "Commander 🎖️", "Captain 👨‍✈️"];
-
-if (pages.length > 0) {
-    const grouped = pages.groupBy(p => {
-        let disc = p.discipline ? (Array.isArray(p.discipline) ? p.discipline[0] : p.discipline) : "General";
-        return String(disc).replace("#disc/", "").toUpperCase();
-    });
-
-    const rows = [];
-    grouped.forEach(g => {
-        let r1 = g.rows.filter(p => !p.study_rank || p.study_rank === 1).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        let r2 = g.rows.filter(p => p.study_rank === 2).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        let r3 = g.rows.filter(p => p.study_rank === 3).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        let r4 = g.rows.filter(p => p.study_rank === 4).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        let r5 = g.rows.filter(p => p.study_rank >= 5).map(p => p.file.link).slice(0, 3).join("<br>") || "—";
-        rows.push([`**${g.key}**`, r1, r2, r3, r4, r5]);
-    });
-
-    dv.table(["📚 Discipline (Y-Axis)", "Cadet (L1)", "Ensign (L2)", "Lieutenant (L3)", "Commander (L4)", "Captain (L5)"], rows);
-} else {
-    dv.paragraph("_No active Study Cards found. Create cards via 3atomic_studycards!_");
-}
-```
-
-### 🧠 Spaced Repetition (SRS Due Reviews)
-<small style="opacity:0.45;font-style:italic;">(Study Cards whose SRS Stardate interval is due today for review)</small>
-```dataview
-TABLE WITHOUT ID
-  study_rank as "Rank",
-  file.link as "Mission / Topic",
-  study_date as "Due Stardate"
-WHERE study_date != null
-  AND date(study_date) = date(today) 
-  AND status != "archive"
-SORT study_date ASC
-LIMIT 5
-```
-
-### ⚠️ SRS Delay (Overdue Reviews)
-<small style="opacity:0.45;font-style:italic;">(past-due SRS Study Cards — empty = you're all caught up!)</small>
-```dataview
-TABLE WITHOUT ID
-  study_rank as "Rank",
-  file.link as "Mission / Topic",
-  study_date as "Stardate Due"
-WHERE study_date != null
-  AND date(study_date) < date(today) 
-  AND status != "archive"
-SORT study_date ASC
-LIMIT 8
-```
-
-### 🌑 Knowledge Secured. Mind Kindled. 🎻🌊
+> [!mind] 🧠 Spaced Repetition 
+> ##### SRS Due Reviews
+> <small style="opacity:0.45;font-style:italic;">(Study Cards whose SRS Stardate interval is due today for review)</small>
+> ```dataview
+> TABLE WITHOUT ID
+>   study_rank as "Rank",
+>   file.link as "Mission / Topic",
+>   study_date as "Due Stardate"
+> WHERE study_date != null
+>   AND date(study_date) = date(today) 
+>   AND status != "archive"
+> SORT study_date ASC
+> LIMIT 5
+> ```
+> 
+> ##### SRS Delay 
+> <small style="opacity:0.45;font-style:italic;">(past-due SRS Study Cards — empty = you're all caught up!)</small>
+> ```dataview
+> TABLE WITHOUT ID
+>   study_rank as "Rank",
+>   file.link as "Mission / Topic",
+>   study_date as "Stardate Due"
+> WHERE study_date != null
+>   AND date(study_date) < date(today) 
+>   AND status != "archive"
+> SORT study_date ASC
+> LIMIT 8
+> ```
+> 
 
 ---
 
 [[lit- |+ Literature Note]] | [[perma- |+ Permanent Note]]
 
 ---
+###### 🌑 Knowledge Secured. Mind Kindled. 🎻🌊
 
 <%- tp.file.include("[[zData/5design_modul/ConnexioModul]]") %>
 

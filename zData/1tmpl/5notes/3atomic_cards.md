@@ -8,9 +8,9 @@ const area = tp.variables.currentArea || tp.variables.area || "";
 const sci = tp.variables.sciTag || tp.variables.sci || "#science";
 const disc = tp.variables.discTag || tp.variables.disc || "#disc/general";
 
-// 🌟 Holt automatisch "LAT" direkt aus disc!
+// 🌟 Holt den automatischen Code ("LAT") + Icon ("🏛️") aus dem Wizard
 const cleanDisc = tp.variables.cleanDisc || disc.split('/').pop().replace('#', '').substring(0, 3).toUpperCase();
-const cleanTag = cleanDisc.toLowerCase();
+const icon = tp.variables.icon || "";
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -74,7 +74,7 @@ child: []
 # 🎴 Card: <%- luhmannId %> <%- displayTitle %>
 
 > [!mind] 🛰️ Mission Control Display
-> **Project:** <%- pLink || "None" %>
+> **Parent:** <%- pLink || "None" %>
 > 
 > > [!multi-column]
 > > > [!calendar|wide-5] Ebbinghaus Prime-Chain (99% Retention)
@@ -149,8 +149,8 @@ child: []
 > > >
 > > >! after syncing with Anki, you can delete it.
 
-## %- displayTitle %>
-TARGET DECK: <%- cleanDisc %>::Subdeck::subsubdeck::subsubdeckdeck
+## <%- displayTitle %>
+TARGET DECK: Nexus::<%- icon %><%- cleanDisc%>
 FILE TAGS: <%- disc %>
 
 

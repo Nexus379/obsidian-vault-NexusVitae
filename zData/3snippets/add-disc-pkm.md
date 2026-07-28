@@ -45,13 +45,30 @@ if (selectedKey) {
     // 4. The Output Format (Clean & Scannable) for the Editor
     const output = `${disc.icon} **${disc.label}**\n📝 Topic: \`INPUT[text:${fieldTopic}]\`\n⏱️ Time: \`INPUT[number:${fieldTime}]\` min.\n<small style="opacity:0.65;font-style:italic;font-size:0.9em;">(Sci: ${sciTags})</small>\n\n`;
 
-    // 5. Insert into the Editor
+        // 5. Insert BEFORE the ~~ Study ~~ marker
     const activeView = app.workspace.activeLeaf?.view;
     if (activeView && activeView.editor) {
         const editor = activeView.editor;
-        const cursor = editor.getCursor();
-        editor.replaceRange(output, cursor);
-        new Notice(`✅ ${disc.label} added to Study Metrics`);
+        const totalLines = editor.lineCount();
+        let markerLine = -1;
+
+        // Suche die Zeile mit ~~ Study ~~
+        for (let i = 0; i < totalLines; i++) {
+            if (editor.getLine(i).includes("~~ Study ~~")) {
+                markerLine = i;
+                break;
+            }
+        }
+
+        if (markerLine >= 0) {
+            // Füge direkt VOR der Marker-Zeile ein
+            editor.replaceRange(output, { line: markerLine, ch: 0 });
+            new Notice(`✅ ${disc.label} added to Study Metrics`);
+        } else {
+            // Fallback: Marker nicht gefunden → am Cursor einfügen
+            editor.replaceRange(output, editor.getCursor());
+            new Notice(`⚠️ Marker '~~ Study ~~' not found – inserted at cursor`);
+        }
     } else {
         new Notice("❌ Editor not found.");
     }

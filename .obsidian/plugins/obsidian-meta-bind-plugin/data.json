@@ -16,8 +16,8 @@
   "buttonTemplates": [
     {
       "label": "add Discpline",
-      "icon": "",
-      "style": "plain",
+      "icon": "plus",
+      "style": "default",
       "class": "",
       "cssStyle": "",
       "backgroundImage": "",

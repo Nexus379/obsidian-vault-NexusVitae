@@ -91,7 +91,7 @@ child: []
 # 🎓 Studycard: <%- luhmannId %> <%- displayTitle %>
 
 >[!mind] 🛰️ Mission Control Display
-> **Project:** <%- pLink || "None" %>
+> **Parent:** <%- pLink || "None" %>
 > 
 > > [!multi-column]
 > > > [!calendar|wide-5] Ebbinghaus Prime-Chain (99% Retention)
