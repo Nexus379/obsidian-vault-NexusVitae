@@ -141,7 +141,7 @@ function disciplineEngine() {
         media_studies:    { label: "Media Studies", icon: "📱", disc: "#disc/MediaStudies", area: "#2area/5expression", sci: ["#sci/SocialSci"], persona: "analyst" }
     };
 
-    // 🔱 AUTOMATISCHE GENERIERUNG: SCI_MAP als Single Source of Truth
+        // 🔱 AUTOMATISCHE GENERIERUNG: SCI_MAP als Single Source of Truth
     const SCI_MAP = {}; 
     for (const [key, data] of Object.entries(DISCIPLINES)) {
         if (data.sci) {
@@ -154,9 +154,30 @@ function disciplineEngine() {
 
     return {
         all: DISCIPLINES,
-        groups: SCI_MAP, // Exportieren unter "groups", damit deine Templates/Apps nichts anpassen müssen
+        groups: SCI_MAP,
         
-        getDisciplineLabels: () => Object.keys(DISCIPLINES).sort().map(k => ({ key: k, ...DISCIPLINES[k] })),
+        getDisciplineLabels: () => {
+            const generatedCodes = new Set();
+            
+            const getUniqueCode = (item) => {
+                if (item.code) return item.code;
+                const name = item.label.replace(/[^a-zA-Z]/g, "").toUpperCase();
+                let code = name.substring(0, 3);
+                let length = 4;
+                while (generatedCodes.has(code) && length <= name.length) {
+                    code = name.substring(0, length);
+                    length++;
+                }
+                generatedCodes.add(code);
+                return code;
+            };
+
+            return Object.keys(DISCIPLINES).sort().map(k => ({
+                key: k,
+                code: getUniqueCode(DISCIPLINES[k]),
+                ...DISCIPLINES[k]
+            }));
+        },
         getSciTags: (discKey) => DISCIPLINES[discKey]?.sci || ["#sci/General"]
     };
 }
