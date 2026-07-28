@@ -96,7 +96,7 @@ if (!nChoice) {
 }
 
 if (nChoice === "atomic_sub") {
-    const aOptions = ["1 Standard Atomic", "2 Studycards (Nexus SRS)", "3 Cards (Spaced Repetition Plugin)"];
+    const aOptions = ["1 Standard Atomic", "2 Studycards (Nexus SRS)", "3 Cards (Anki)"];
     const aVals = ["3atomic", "3atomic_studycards", "3atomic_cards"];
     const aFoldersFull = [`${notesRoot}/3_Atomic`, `${notesRoot}/3_Atomic/studycards`, `${notesRoot}/3_Atomic/cards`];
     let aIdx = await tp.system.suggester(aOptions, Array.from(aOptions.keys()));
@@ -122,6 +122,19 @@ if (needsScience.includes(nChoice)) {
             tp.variables.discTag = selectedDisc.disc;
             tp.variables.subText = selectedDisc.label;
             tp.variables.persona = selectedDisc.persona;
+			
+			// 🌟 1. Berechnet "LAT", "HIS", "BIO" (oder nimmt benutzerdefinierten 'code')
+			const shortCode = selectedDisc.code || selectedDisc.label.substring(0, 3).toUpperCase();
+				
+			tp.variables.cleanDisc = shortCode;
+				
+			// 🌟 2. Verschiebt die Datei z.B. nach "5_Notes/3_Atomic/cards/LAT/"
+				
+			if (shortCode) {
+				
+				targetFolder += "/" + shortCode;
+				
+			}
         }
     }
 }

@@ -1,5 +1,7 @@
 ---
 shopping_extras: []
+status: archived
+archived_at: 2026-07-28 20:01
 ---
 <%-*
 // 🔱 1. INITIALISIERUNG & STABILISIERUNG (Gegen Sync-Fehler)

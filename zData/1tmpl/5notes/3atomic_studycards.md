@@ -86,50 +86,44 @@ LID: "<%- luhmannId %>"
 parent: "<%- pLink %>"
 sibling: []
 child: []
-deck: "Nexus/General"
-tags: ["#studycards"]
 
 ---
 # 🎓 Studycard: <%- luhmannId %> <%- displayTitle %>
-## 🛰️ Mission Control Display
-**Project:** <%- pLink || "None" %>
 
-> [!multi-column]
-> > [!calendar|wide-5] Ebbinghaus Prime-Chain (99% Retention)
-> > **Last Session:** <%- today %> (Initial Capture)
-> > **Target Session (P1):** <%- p1 %>
-> > 
-> >> <small style="opacity:0.6; font-style:italic;">Each next step is calculated from the successful completion of the previous one.</small>
-> >
-> > **Status:**
-> > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]` 
+>[!mind] 🛰️ Mission Control Display
+> **Project:** <%- pLink || "None" %>
 > 
-> > [!info|wide-0] 🛡️ Nexus Progression
-> > **Starfleet Rank:**
+> > [!multi-column]
+> > > [!calendar|wide-5] Ebbinghaus Prime-Chain (99% Retention)
+> > > **Last Session:** <%- today %> (Initial Capture)
+> > > **Target Session (P1):** <%- p1 %>
+> > > 
+> > >> <small style="opacity:0.6; font-style:italic;">Each next step is calculated from the successful completion of the previous one.</small>
+> > >
+> > > **Status:**
+> > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]` 
 > > 
-> >  `VIEW[{study_rank}]` 
-> >  `$= const icons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"]; const lvl = dv.current().study_lvl || 0; dv.paragraph(icons[Math.min(lvl, icons.length - 1)] + " **Level " + lvl + "**")`
-> > 🔥 **Next Dynamic Session:** `VIEW[{study_date}]`  
-[[cards_cheat sheet]]
-
-
-## 🚀 Flashcards
-
-Enter question :: Enter answer
-
-Enter question ::: Enter answer
+> > > [!info|wide-0] 🛡️ Nexus Progression
+> > > **Starfleet Rank:**
+> > > 
+> > >  `VIEW[{study_rank}]` 
+> > >  `$= const icons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"]; const lvl = dv.current().study_lvl || 0; dv.paragraph(icons[Math.min(lvl, icons.length - 1)] + " **Level " + lvl + "**")`
+> > > 🔥 **Next Dynamic Session:** `VIEW[{study_date}]`  
 
 
 
 
----
+
+
  
-`BUTTON[spaced]`
+
 
 ---
 **System Action:**
 [[0_Atlas/0_Dashboard/5-Notes|⬅️ Back to Notes Dashboard]] |[[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]
 [[n-lit|+ Create Note]] | [[p-active|+ Create Project]] 
+
+`BUTTON[spaced]`
 
 ---
 

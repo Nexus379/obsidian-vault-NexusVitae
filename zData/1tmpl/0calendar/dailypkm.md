@@ -208,11 +208,50 @@ cal_date: <%- dateStr %>
 
 <%- tp.file.include("[[zData/5design_modul/CalendarLog]]") %>
 
-> [!multi-column]
-> > [!abstract|flat] 📅 Focus
-> > **Monthly Aim:** `INPUT[text(placeholder(Monthly Study Goal...)):focusM_pkm]`
-> > **Daily Mission:** `INPUT[text(placeholder(What to conquer today?)):focusD_pkm]`
-> 
+
+> [!abstract|flat] 📅 Focus
+> > [!multi-column]
+> > > [!blank]
+> > > **Monthly Aim:** `INPUT[text(placeholder(Monthly Study Goal...)):focusM_pkm]`
+> > > **Daily Mission:** `INPUT[text(placeholder(What to conquer today?)):focusD_pkm]`
+> >
+> > > [!blank]
+> > > ```dataviewjs
+> > > // ⚡ NEXUS VITALITY DASHBOARD (Energy & Brain-Drain)
+> > > const tFile = app.vault.getAbstractFileByPath(dv.current().file.path);
+> > > const c = dv.current();
+> > > 
+> > > const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
+> > > const bMap = {"5":"🧠 Fresh / Ready", "4":"💡 Focused", "3":"😐 Average", "2":"🥱 Tired", "1":"🍳 Fried"};
+> > > 
+> > > // Das "display: flex" sorgt dafür, dass die Elemente nebeneinander stehen
+> > > const container = dv.container.createEl("div", { 
+> > >     style: "display: flex; gap: 15px; margin-bottom: 20px;" 
+> > > });
+> > > 
+> > > // Funktion zum Erstellen der Boxen
+> > > function createDashboardBox(title, map, fieldName, color, icon) {
+> > >     const box = container.createEl("div", { 
+> > >         style: `flex: 1; padding: 12px; background: var(--background-secondary-alt); border-radius: 8px; border-left: 4px solid ${color};` 
+> > >     });
+> > >     box.createEl("div", { text: `${icon} ${title}`, style: "opacity: 0.7; font-weight: bold; text-transform: uppercase; font-size: 0.75em; margin-bottom: 8px;" });
+> > >     const valText = box.createEl("div", { text: map[String(c[fieldName])] || c[fieldName], style: "font-weight: bold; font-size: 1.1em;" });
+> > >     const slider = box.createEl("input", { type: "range", attr: { min: "1", max: "5", value: String(c[fieldName] || 3), step: "1" }, style: "width: 100%; margin-top: 10px; cursor: pointer;" });
+> > >     
+> > >     slider.addEventListener("input", async (e) => { 
+> > >         valText.innerText = map[e.target.value]; 
+> > >         await app.fileManager.processFrontMatter(tFile, fm => fm[fieldName] = Number(e.target.value)); 
+> > >     });
+> > > }
+> > > 
+> > > // Boxen generieren
+> > > createDashboardBox("System Energy", eMap, "energy", "var(--interactive-accent)", "⚡");
+> > > createDashboardBox("Cognitive Load", bMap, "brain_drain", "#b873f0", "🧠");
+> > > ```
+> > > 
+> > > 
+
+
 > > [!quote|flat] 📜 On this day
 > > ```dataview
 > > LIST FROM "0_Calendar/3_PKM"
@@ -220,40 +259,6 @@ cal_date: <%- dateStr %>
 > > AND contains(file.name, " pkm")
 > > AND file.name != this.file.name
 > > ```
-
-```dataviewjs
-// ⚡ NEXUS VITALITY DASHBOARD (Energy & Brain-Drain)
-const tFile = app.vault.getAbstractFileByPath(dv.current().file.path);
-const c = dv.current();
-
-const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
-const bMap = {"5":"🧠 Fresh / Ready", "4":"💡 Focused", "3":"😐 Average", "2":"🥱 Tired", "1":"🍳 Fried"};
-
-// Das "display: flex" sorgt dafür, dass die Elemente nebeneinander stehen
-const container = dv.container.createEl("div", { 
-    style: "display: flex; gap: 15px; margin-bottom: 20px;" 
-});
-
-// Funktion zum Erstellen der Boxen
-function createDashboardBox(title, map, fieldName, color, icon) {
-    const box = container.createEl("div", { 
-        style: `flex: 1; padding: 12px; background: var(--background-secondary-alt); border-radius: 8px; border-left: 4px solid ${color};` 
-    });
-    box.createEl("div", { text: `${icon} ${title}`, style: "opacity: 0.7; font-weight: bold; text-transform: uppercase; font-size: 0.75em; margin-bottom: 8px;" });
-    const valText = box.createEl("div", { text: map[String(c[fieldName])] || c[fieldName], style: "font-weight: bold; font-size: 1.1em;" });
-    const slider = box.createEl("input", { type: "range", attr: { min: "1", max: "5", value: String(c[fieldName] || 3), step: "1" }, style: "width: 100%; margin-top: 10px; cursor: pointer;" });
-    
-    slider.addEventListener("input", async (e) => { 
-        valText.innerText = map[e.target.value]; 
-        await app.fileManager.processFrontMatter(tFile, fm => fm[fieldName] = Number(e.target.value)); 
-    });
-}
-
-// Boxen generieren
-createDashboardBox("System Energy", eMap, "energy", "var(--interactive-accent)", "⚡");
-createDashboardBox("Cognitive Load", bMap, "brain_drain", "#b873f0", "🧠");
-```
-
 
 ## 🚀 Fokus
 
