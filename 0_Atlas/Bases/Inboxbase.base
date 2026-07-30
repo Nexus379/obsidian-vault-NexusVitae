@@ -3,7 +3,7 @@ filters:
     - inbox == true
 views:
   - type: table
-    name: Allbox
+    name: 💌 Allbox
     groupBy:
       property: archtype
       direction: ASC

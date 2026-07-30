@@ -16,13 +16,13 @@ if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
 }
 if (!title || title.trim() === "") title = "Cook-" + tp.date.now("HH-mm");
 
-// Physisches Umbenennen für Stabilität
+// Physical rename for stability
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); 
 }
 
-// 🔱 3. CLEANING (Entfernt Trigger wie 7tocook- oder t-)
+// 🔱 3. CLEANING (strips triggers such as 7tocook- or t-)
 let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(7tocook-|t-|4task-)/i, "").trim();
 
 tR += "---"  

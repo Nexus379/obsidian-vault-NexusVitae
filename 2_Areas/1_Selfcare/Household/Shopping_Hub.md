@@ -28,6 +28,7 @@ child: []
 summary:
 review:
 shopping_strategy: value
+shopping_travel_city: ""
 shopping_extras: []
 cssclasses:
   - dashboard-no-border

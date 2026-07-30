@@ -9,7 +9,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Entertainment
+    name: 🕉️ Crown
     order:
       - file.name
       - status
@@ -24,4 +24,3 @@ views:
       note.status: 90
       note.priority: 70
       file.mtime: 120
-

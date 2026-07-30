@@ -1,24 +1,24 @@
 <%-*
-// ðŸ”± 1. DATA-RECOVERY & SAFE VARIABLES
-if (!tp.variables) tp.variables = {}; // ðŸ›¡ï¸ Crash-Schutz
+// 🔱 1. DATA-RECOVERY & SAFE VARIABLES
+if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
 let title = tp.variables.title || tp.file.title;
 let pLink = tp.variables.pLink || "";
 let luhmannId = tp.variables.luhmannId || "";
 
-// ðŸ”± 2. FALLBACK: Untitled Check
+// 🔱 2. FALLBACK: Untitled Check
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
-    title = await tp.system.prompt("ðŸ•ï¸ Fitness Note: Name of Item?", "");
+    title = await tp.system.prompt("🏕️ Fitness Note: Name of Item?", "");
 }
 if (!title || title.trim() === "") title = "AtomicFitness-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
-    await new Promise(r => setTimeout(r, 200)); // Kurze Stabilisierung
+    await new Promise(r => setTimeout(r, 200)); // Short stabilization
 }
 
-// ðŸ”± 3. TITEL-CLEANING fÃ¼r die H1
+// 🔱 3. TITLE CLEANING for the H1
 let displayTitle = title;
 if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
 displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(Fitness-|c-)/i, "").trim();
@@ -47,11 +47,11 @@ persona: "hiker"
 status: 1active
 entity_class: "outdoor_gear"
 fitness_type: "tent"
-state: "active"
+storage_location: "gym_corner"
 qty: 0
 needs_refill: false
 shelf_life_months: 120
-# --- ðŸ•ï¸ OUTDOOR SPECS ---
+# --- 🏕️ OUTDOOR SPECS ---
 brand: ""
 weight_g: 0
 capacity_persons: 0
@@ -75,31 +75,31 @@ price_market: 0.00
 vendor_market: ""
 ---
 
-# ðŸ•ï¸  <%- luhmannId %>   <%- displayTitle %>
+# 🏕️  <%- luhmannId %>   <%- displayTitle %>
 
-## ðŸ”¬ Gear Lab
-| ðŸ•ï¸ Specification | âš–ï¸ Value |     |
+## 🔬 Gear Lab
+| 🏕️ Specification | ⚖️ Value |     |
 | :------------- | :------- | --- |
-| ðŸ·ï¸ **Type** | `INPUT[suggester(option(tent, â›º Tent), option(sleeping_bag, ðŸ›ï¸ Sleeping Bag), option(sleeping_pad, ðŸ›Œ Sleeping Pad), option(cooking, ðŸ³ Cooking), option(water_filter, ðŸ’§ Water Filter), option(backpack, ðŸŽ’ Backpack), option(tool, ðŸ”ª Tool)):fitness_type]` |     |
-| ðŸ·ï¸ **Brand** | `INPUT[text:brand]` |     |
-| ðŸª **Vendor** | `INPUT[text:pref_vendor]` |     |
-| ðŸ’° **Price** | `VIEW[{unit_price}]` â‚¬ |     |
-| âš–ï¸ **Weight** | `INPUT[number:weight_g]` g |     |
-| ðŸ§‘â€ðŸ¤â€ðŸ§‘ **Capacity** | `INPUT[number:capacity_persons]` Personen |     |
-| ðŸŒ§ï¸ **Waterproof** | `INPUT[number:water_column_mm]` mm |     |
-| â„ï¸ **Season Rating** | `INPUT[number:season_rating]` (1-4) |     |
-| ðŸ“ **Pack Size** | `INPUT[text:pack_size_cm]` |     |
-| ðŸ§± **Material** | `INPUT[text:material]` |     |
-| â­ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
+| 🏷️ **Type** | `INPUT[suggester(option(tent, ⛺ Tent), option(sleeping_bag, 🛏️ Sleeping Bag), option(sleeping_pad, 🛌 Sleeping Pad), option(cooking, 🍳 Cooking), option(water_filter, 💧 Water Filter), option(backpack, 🎒 Backpack), option(tool, 🔪 Tool)):fitness_type]` |     |
+| 🏷️ **Brand** | `INPUT[text:brand]` |     |
+| 🏪 **Vendor** | `INPUT[text:pref_vendor]` |     |
+| 💰 **Price** | `VIEW[{unit_price}]` € |     |
+| ⚖️ **Weight** | `INPUT[number:weight_g]` g |     |
+| 🧑‍🤝‍🧑 **Capacity** | `INPUT[number:capacity_persons]` persons |     |
+| 🌧️ **Waterproof** | `INPUT[number:water_column_mm]` mm |     |
+| ❄️ **Season Rating** | `INPUT[number:season_rating]` (1-4) |     |
+| 📏 **Pack Size** | `INPUT[text:pack_size_cm]` |     |
+| 🧱 **Material** | `INPUT[text:material]` |     |
+| ⭐ **PL Score** | `INPUT[number:pl_score]` / 10 |     |
 
 <%- tp.file.include("[[zData/5design_modul/ShoppingPriceMatrix]]") %>
 
-## ðŸ“ Source & Notes
+## 📝 Source & Notes
 - 
 - 
 - 
 
-> [!info] ðŸ‘¤ Ownership & Inventory
+> [!info] 👤 Ownership & Inventory
 > Click here to add an owner to this item:
 > `BUTTON[add-vestis-owner]`
 

@@ -41,7 +41,7 @@ priority:
 persona:
 cover: ""
 plattform: ""
-author:
+creator:
 genre:
 publisher:
 pub_date:

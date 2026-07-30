@@ -1,14 +1,14 @@
 <%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
-if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
+if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
 const luhmannId = tp.variables.luhmannId || "";
 const persona = tp.variables.persona || "student";
-const area = tp.variables.currentArea || tp.variables.area || "";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/6mind";
 const sci = tp.variables.sciTag || tp.variables.sci || "#science";
 const disc = tp.variables.discTag || tp.variables.disc || "#disc/general";
 
-// 🌟 Holt den automatischen Code ("LAT") + Icon ("🏛️") aus dem Wizard
+// 🌟 Fetches the automatic code ("LAT") and icon from the wizard
 const cleanDisc = tp.variables.cleanDisc || disc.split('/').pop().replace('#', '').substring(0, 3).toUpperCase();
 const icon = tp.variables.icon || "";
 
@@ -24,10 +24,10 @@ if (!title || title.trim() === "") title = "Card-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
-    await new Promise(r => setTimeout(r, 200)); // Kurze Stabilisierung
+    await new Promise(r => setTimeout(r, 200)); // Short stabilization
 }
 
-// 🔱 3. TITEL-CLEANING 
+// 🔱 3. TITLE CLEANING for the H1
 let displayTitle = title;
 if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
 displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(card-|vocab-|srs-|atomic-|n-)/i, "").trim();
@@ -122,14 +122,14 @@ child: []
 > > > a) die Insel
 > > > b) der Wohnblock
 > > >
-> > > (*kann auch 1., 2., 3., / `-, -, -` *)
+> > > (*can also be 1., 2., 3., / `-, -, -` *)
 > > >
-> > >C ; Rom wurde der Legende nach im Jahr {{c1::753}} v. Chr. gegründet.
+> > >C ; According to legend, Rome was founded in {{c1::753}} BC.
 > > > Die Stadt wuchs besonders schnell, 
 > > > da sie strategisch klug am Fluss {{c2::Tiber}} lag.
 > >
-> > **4. Image Occlusion (Hiding parts of images)** ❌ Do not do this via text in Obsidian! Drag the image directly into the Anki app:
 > > > [!info]- 🗺️ How to use Image Occlusion
+> > > ❌ Do not do this via text in Obsidian! Drag the image directly into the Anki app:
 > > >  Since Regex can only read text, you cannot use it to draw graphical boxes on images directly in Obsidian. Instead, use this standard workflow:
 > > > 
 > > > 2. Open the **Anki app** on your computer.
@@ -139,8 +139,7 @@ child: []
 > > > 
 > > > Anki will instantly generate the flashcards for you. It's much faster and less frustrating than trying to force this graphical process through Obsidian!
 > > 
-> > **5. DELETE and FROZEN**
-> > > [!caution] How to delete and freeze
+> > > [!caution]- How to DELETE and FREEZE
 > > > 
 > > > Q ; What is the capital of Italy?
 > > > A ; Rome
@@ -164,7 +163,7 @@ A ; Rome
 ---
 `BUTTON[spaced]`
 
-[[0_Atlas/Dashboard/5Notes|⬅️ Zurück zum Notes-Dashboard]] |[[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]
+[[0_Atlas/0_Dashboard/5-Notes|⬅️ Back to the Notes dashboard]] |[[n-lit|+ Create Literature Note]] | [[n-perma|+ Distill to Permanent]]
 
 ---
 

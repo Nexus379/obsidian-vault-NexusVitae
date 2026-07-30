@@ -20,7 +20,7 @@ try {
  let kw = fm.plan_kw;
  let year = fm.plan_year;
 
-// Falls die Metadaten leer sind, aus dem Dateinamen (z.B. "2026-W29_routine") lesen
+// If the metadata is empty, read it from the file name (e.g. "2026-W29_routine")
 if (!kw || !year) {
     const match = file.name.match(/(\d{4})-?W(\d{1,2})/);
     if (match) {
@@ -29,7 +29,7 @@ if (!kw || !year) {
     }
 }
 
-// Monat berechnen (Backticks für die String-Interpolation wichtig!)
+// Compute the month (the backticks matter for the string interpolation)
 const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM") : null;
     
     let ttFile = null;
@@ -39,12 +39,12 @@ const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM")
     }
     
     if (!ttFile) {
-        // Fallback auf Master
+        // Fallback to the master
         ttFile = app.vault.getAbstractFileByPath("2_Areas/6_Mind/Plan/CourseTimetable.md");
     }
 
     if (!ttFile) {
-        new Notice("🔥 Fehler: Timetable (Weder Wochenplan noch Master) nicht gefunden.");
+        new Notice("🔥 Error: no Timetable found — neither weekly plan nor master.");
         return;
     }
     const ttCache = app.metadataCache.getFileCache(ttFile);
@@ -74,7 +74,7 @@ const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM")
         }
     }
 
-    // Pro Tag die erste und letzte Vorlesung ermitteln
+// Determine the first and last lecture of each day
     const dailySchedule = {};
     days.forEach(day => {
         let firstBlock = 999;
@@ -86,7 +86,7 @@ const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM")
             if (val && val !== "free" && val !== "break") {
                 if (i < firstBlock) firstBlock = i;
                 if (i > lastBlock) lastBlock = i;
-                // Nimm den Namen des ersten Blocks als Event-Namen (z.B. german_studies)
+// Take the name of the first block as the event name (e.g. german_studies)
                 if (firstBlock === i) {
                     let parts = String(val).split("|");
                     className = parts[0].replace(/_/g, " ");
@@ -132,13 +132,13 @@ const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM")
         }
     }
 
-    // 3. ABGLEICH UND ÜBERSCHREIBEN (in app.fileManager)
+    // 3. RECONCILE AND OVERWRITE (in app.fileManager)
     await app.fileManager.processFrontMatter(file, (frontmatter) => {
         days.forEach(day => {
             const sched = dailySchedule[day];
-            if (!sched) return; // Nichts zu tun an diesem Tag
+            if (!sched) return; // Nothing to do on this day
 
-            // Formatierungs-Strings für die Anzeige
+            // Formatting strings for the display
             const classStr = `${sched.startClass.format("HH:mm")} - ${sched.endClass.format("HH:mm")}`;
             const commInStr = `${sched.startCommute.format("HH:mm")} - ${sched.startClass.format("HH:mm")}`;
             const commOutStr = `${sched.endClass.format("HH:mm")} - ${sched.endCommute.format("HH:mm")}`;
@@ -148,7 +148,7 @@ const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM")
                 const rStart = rtBlock.start;
                 const rEnd = rtBlock.end;
 
-                // Helfer: Überschneiden sich zwei Zeiträume (auch nur teilweise)?
+                // Helper: do two time ranges overlap, even partially?
                 const overlaps = (aStart, aEnd, bStart, bEnd) => {
                     return Math.max(aStart.valueOf(), bStart.valueOf()) < Math.min(aEnd.valueOf(), bEnd.valueOf());
                 };
@@ -161,7 +161,7 @@ const month = (year && kw) ? moment(`${year}-W${kw}`, "YYYY-[W]WW").format("MM")
                     assigned = true;
                 }
                 
-                // 2. Check Commute IN (Morgen) - Nur wenn noch nicht durch Class belegt
+// 2. Check commute IN (morning) — only when not already taken by a class
                 if (!assigned && overlaps(rStart, rEnd, sched.startCommute, sched.startClass)) {
                     frontmatter[`rt_${day}_${i}`] = `custom|🚲 / 🚌 Commute (${commInStr})`;
                     assigned = true;

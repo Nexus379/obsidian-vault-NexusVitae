@@ -3,7 +3,7 @@
  * 🍱 NEXUS MEAL EDITOR (Unified Matrix Format)
  */
 try {
-    const file = tp.config.active_file;  // Datei, in der der Button sitzt (Plan-Master oder Wochenplan)
+    const file = tp.config.active_file;  // The file the button sits in (plan master or weekly plan)
     if (!file) return;
 
     const days = [

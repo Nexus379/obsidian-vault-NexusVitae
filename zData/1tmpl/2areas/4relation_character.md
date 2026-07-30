@@ -17,7 +17,7 @@ let characterType = "real_life";
 let sourceType = "";
 let sourceLink = "";
 
-// Abfrage des Namens
+// Ask for the name
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
     let nn = await tp.system.prompt("Name of the Character?", "");
     if (nn) {
@@ -27,12 +27,12 @@ if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
     }
     isNew = true;
 } else if (!title.startsWith("Character_")) {
-    // Falls Datei manuell benannt wurde, aber das Präfix fehlt
+// If the file was named by hand but the prefix is missing
     title = "Character_" + title.trim().replace(/[\\/:*?"<>|]/g, "");
     isNew = true;
 }
 
-// Abfrage der Gruppe
+// Ask for the group
 if (isNew) {
     const typeOpts = ["Real Life", "Film / Series", "Game", "Book / Media", "Original Character"];
     const typeVals = ["real_life", "film_series", "game", "book_media", "oc"];
@@ -122,26 +122,26 @@ if (isNew) {
 const relFolder = "2_Areas/4_Relationship";
 const targetDir = groupName !== "Uncategorized" ? `${relFolder}/${groupName}` : relFolder;
 
-// Ordner erstellen, falls nicht existent
+// Create the folder if it does not exist
 let currentPath = "";
 for (const seg of targetDir.split("/")) { 
     currentPath = currentPath ? currentPath + "/" + seg : seg; 
     if (!app.vault.getAbstractFileByPath(currentPath)) await app.vault.createFolder(currentPath); 
 }
 
-// Physisches Umbenennen
+// Physical rename for stability
 if (tp.file.title !== title) {
     await tp.file.rename(title);
 }
 
-// Physisches Verschieben in den korrekten Gruppen-Ordner
+// Physically move into the correct group folder
 const finalDest = `${targetDir}/${title}.md`;
 if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
     await new Promise(r => setTimeout(r, 200)); 
     await tp.file.move(finalDest);
 }
 
-// 🔱 4. CLEANING FÜR DIE ÜBERSCHRIFT (ohne "Character_")
+// 🔱 4. CLEANING FOR THE HEADING (without "Character_")
 let displayTitle = title.replace(/^Character_/, "").trim();
 
 tR += "---"  
@@ -208,7 +208,7 @@ review:
 ---
 
 ## 🚀 Active Responsibilities
-*(Hier erscheinen automatisch alle aktiven Projekte, die du für diesen Character managst).*
+*(Every active project you manage for this character appears here automatically).*
 
 ```dataview
 TABLE status AS Status, persona AS Persona
@@ -218,7 +218,7 @@ SORT file.mtime DESC
 ```
 
 ## 📂 Reference & Documents
-*(Hier sammeln sich Dokumente und Notizen, die mit diesem Character verlinkt sind).*
+*(Documents and notes linked to this character collect here).*
 
 ```dataview
 TABLE file.folder AS Folder, file.mtime AS "Last Modified"

@@ -27,19 +27,19 @@
 >>[!pink]- [[0_Atlas/0_Dashboard/2-Areas|💠Areas]] 
 >> - [[0_Atlas/Bases/2-Areas/Areas.base|Areasbase]]
 >>
->> - [[0_Atlas/0_Dashboard/2-Areas/1-Selfcare|❤️Selfcare]]
+>> - [[0_Atlas/0_Dashboard/2-Areas/1-Selfcare|🌸Selfcare]]
 >>
->> - [[0_Atlas/0_Dashboard/2-Areas/2-Creativity|🧡Creativity]]
+>> - [[0_Atlas/0_Dashboard/2-Areas/2-Creativity|🎨Creativity]]
 >>
->> - [[0_Atlas/0_Dashboard/2-Areas/3-Drive|💛Drive]]
+>> - [[0_Atlas/0_Dashboard/2-Areas/3-Drive|🔥Drive]]
 >>
->> - [[0_Atlas/0_Dashboard/2-Areas/4-Relationship|💚Relationship]]
+>> - [[0_Atlas/0_Dashboard/2-Areas/4-Relationship|🦄Relationship]]
 >>
->> - [[0_Atlas/0_Dashboard/2-Areas/5-Expression|💙Expression]]
+>> - [[0_Atlas/0_Dashboard/2-Areas/5-Expression|🗣️Expression]]
 >>
->> - [[0_Atlas/0_Dashboard/2-Areas/6-Mind|💜Mind]]
+>> - [[0_Atlas/0_Dashboard/2-Areas/6-Mind|🧠Mind]]
 >>
->> - [[0_Atlas/0_Dashboard/2-Areas/7-Crown|🤍Crown]]
+>> - [[0_Atlas/0_Dashboard/2-Areas/7-Crown|🕉️Crown]]
 >>
 >> - [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Financeboard|🪙Finance]]
 >>

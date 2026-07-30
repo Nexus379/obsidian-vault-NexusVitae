@@ -1,4 +1,4 @@
-﻿---
+---
 cssclasses:
   - wide-page
   - dashboard-no-border

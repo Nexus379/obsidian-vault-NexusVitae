@@ -17,7 +17,7 @@ if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
 }
 if (!title) title = "Creativity-" + tp.date.now("HH-mm");
 
-// Physisches Umbenennen für Stabilität
+// Physical rename for stability
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); 
@@ -26,8 +26,8 @@ if (tp.file.title !== title) {
 // 🔱 THROAT-CHAKRA PROMPT (Speaking your Truth)
 let balanceFocus = await tp.system.prompt("🎨 Sacral Chakra: What do you want to create today?", "Letting my creative truth flow.");
 
-// 🔱 3. CLEANING (Entfernt Trigger wie 8tocraft- oder t-)
-let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(5creativity-|a-|2area-)/i, "").trim();
+// 🔱 3. CLEANING (strips triggers such as 8tocraft- or t-)
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(2creativity-|a-|2area-)/i, "").trim();
 
 tR += "---"  
 %>

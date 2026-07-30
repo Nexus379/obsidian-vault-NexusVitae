@@ -8,7 +8,7 @@ if (!dv) {
     return;
 }
 
-// 🔱 Datum aus der aktiven Tages-Notiz (nicht "heute"), damit auch alte/künftige Logs korrekt syncen
+// 🔱 Date from the active daily note (not "today"), so old and future logs sync correctly
 const dailyFile = tp.config.active_file;
 let refDate = moment();
 if (dailyFile) {
@@ -21,7 +21,7 @@ if (dailyFile) {
     }
 }
 
-// 🔱 Wochenplan zuerst, dann Master (wie dailyplm)
+// 🔱 Weekly plan first, then the master (same as dailyplm)
 const y = refDate.format("YYYY"), mth = refDate.format("MM"), kw = refDate.format("WW");
 let planPage = dv.page(`0_Calendar/7_Plan/${y}/${mth}/${y}-W${kw}_meal`);
 if (!planPage) planPage = dv.page("2_Areas/1_Selfcare/Plan/Meal_Plan.md");

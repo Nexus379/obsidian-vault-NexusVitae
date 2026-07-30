@@ -128,7 +128,7 @@ summary:
 review:
 # 🔱 Meta Bind Texts (Use comma separation for multiple entries)
 original_title: ""
-author: ""
+creator: ""
 director: ""
 publisher: ""
 pub_date: ""

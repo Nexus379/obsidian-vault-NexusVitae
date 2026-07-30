@@ -1,9 +1,9 @@
 <%-*
 /**
  * 📸 NEXUS SNAPSHOT WEEK (Meal)
- * Kopiert den Master-Meal-Plan als editierbare Wochen-Datei nach vorn.
- * Copy-Regel: alle ${day}_* Felder (Slots brk/ben/lun/snk/eve + add/rem).
- * Berechnete Nährwerte (${day}_kcal etc.) werden vom Diagnostics-Block der Woche neu gerechnet.
+ * Copies the master meal plan forward as an editable weekly file.
+ * Copy rule: all ${day}_ fields (slots brk/ben/lun/snk/eve + add/rem).
+ * Calculated nutrition values (${day}_kcal etc.) are recomputed by the week's diagnostics block.
  */
 try {
     const renderWeekplan = (raw, values) => {
@@ -34,7 +34,7 @@ try {
 
     const dayPrefix = /^(mon|tue|wed|thu|fri|sat|sun)_/;
 
-    // 1. Ziel-Woche wählen (default: erste FREIE Woche ab nächster — überspringt schon geplante)
+// 1. Pick the target week (default: the first FREE week from next — skips planned ones)
     let probe = moment().add(1, 'week');
     for (let i = 0; i < 60; i++) {
         const py = probe.format("YYYY"), pm = probe.format("MM"), pk = probe.format("WW");
@@ -55,7 +55,7 @@ try {
     if (!masterFile) { new Notice("❌ Master Meal_Plan not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 
-    // 3. Zielpfad + Kollisionsschutz
+// 3. Target path + collision guard (never overwrite an already planned week)
     const folder = `0_Calendar/7_Plan/${year}/${month}`;
     const finalDest = `${folder}/${year}-W${kw}_meal.md`;
     if (app.vault.getAbstractFileByPath(finalDest)) {
@@ -82,7 +82,7 @@ try {
     await app.vault.create(finalDest, body);
     await new Promise(r => setTimeout(r, 150));
 
-    // 5. Snapshot: alle ${day}_* vom Master in die neue Woche kopieren
+// 5. Snapshot: copy every ${day}_* from the master into the new week
     const newFile = app.vault.getAbstractFileByPath(finalDest);
     await app.fileManager.processFrontMatter(newFile, (fm) => {
         for (const k of Object.keys(masterFm)) {

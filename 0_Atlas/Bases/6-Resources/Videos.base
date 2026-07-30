@@ -1,17 +1,18 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/video")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/video")
 views:
   - type: table
-    name: Videos
+    name: 💻 Videos
     order:
       - cover
       - file.name
-      - author
+      - creator
       - plattform
       - status
       - rating
+      - ranking
       - url
       - file.path
     sort:
@@ -20,6 +21,20 @@ views:
     columnSize:
       cover: 90
       file.name: 240
-      note.author: 160
+      note.creator: 160
       note.plattform: 120
       note.status: 90
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - creator
+      - plattform
+      - url
+    sort:
+      - property: file.mtime
+        direction: DESC

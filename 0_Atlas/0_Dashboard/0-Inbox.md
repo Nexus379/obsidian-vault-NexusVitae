@@ -13,7 +13,7 @@ cssclasses:
 > [!multi-column]
 > > [!blank]
 > > 
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### 💌 **INTAKE**
 > > ```dataviewjs
 > > { 
 > >     const chartContainer = this.container;
@@ -21,7 +21,7 @@ cssclasses:
 > >     const now = Date.now();
 > >     
 > >     // Sets container size (you can adjust px here)
-> >     chartContainer.style.width = "300px";
+> >     chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >     chartContainer.style.margin = "0 auto"; // Centers the chart
 > >     
 > >     // 🛡️ SAFETY: Check if we have already rendered
@@ -63,7 +63,7 @@ cssclasses:
 > >                 }]
 > >             },
 > >             options: {
-> >                 cutout: '75%', // Thickness of the ring (75% hole)
+> >                 maintainAspectRatio: false, cutout: '76%', // Thickness of the ring (75% hole)
 > >                 animation: false, // 🛑 RELAX: No jumping while typing
 > >                 plugins: {
 > >                     legend: { position: 'bottom', labels: { color: textColor, font: { size: 9 } } }

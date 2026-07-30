@@ -4,7 +4,7 @@ let luhmannId = tp.variables.luhmannId || "R" + tp.date.now("YYYYMMDDHHmm");
 let title = tp.variables.title || tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 
-// FALLBACK: Falls du im Ordner auf "Neue Notiz" klickst (Untitled Check)
+// FALLBACK: for when you click "New note" inside the folder (Untitled check)
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
 	    title = await tp.system.prompt("🏫 Class/Subject Name?", "");
@@ -13,7 +13,7 @@ if (!title) title = "Class-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
-    await new Promise(r => setTimeout(r, 200)); // Kurze Stabilisierung
+    await new Promise(r => setTimeout(r, 200)); // Short stabilization
 }
 
 let sci = tp.variables.sciTag || "#science";
@@ -49,7 +49,7 @@ child:
 summary:
 review:
 # 🔱 Meta Bind Texts (Use comma separation for multiple entries)
-author: ""
+creator: ""
 original_title: ""
 publisher: ""
 pub_date: ""
@@ -66,7 +66,7 @@ subject:
 > **ID:** <%- luhmannId %> 
 > 
 > **Teacher:** 
-> `INPUT[inlineList:author]` 
+> `INPUT[inlineList:creator]` 
 > 
 > **Discipline:** `$= dv.current().discipline`
 > 

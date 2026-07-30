@@ -20,7 +20,7 @@ function inpraEngine() {
         dimensions: DIMENSIONS,
         mastery: MASTERY,
 
-        // Holt die geplanten Übungen/Stücke EINES Tages aus einem Plan (weekplan_inpra oder Master).
+        // Reads the planned exercises/pieces of ONE day from a plan (weekplan_inpra or master).
         // page = dv.page(...), dayPrefix = "mon".."sun". 3 planned slots: inpra_<day>_ex_1..3 + _min_1..3.
         getPractice: (page, dayPrefix) => {
             const items = [];
@@ -37,10 +37,10 @@ function inpraEngine() {
             return items;
         },
 
-        // Progression: Ø-Qualität (oder Mastery) >= 4 → reif fürs nächste Stück/Level.
+        // Progression: average quality (or mastery) >= 4 → ready for the next piece/level.
         readyToAdvance: (value) => Number(value) >= 4,
 
-        // Ø der 4 Dimensionen (für die Log-Auswertung)
+        // Average of the four dimensions (for the log evaluation)
         avgQuality: (posture, rhythm, melody, feeling) => {
             const vals = [posture, rhythm, melody, feeling].map(Number).filter(n => n > 0);
             return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;

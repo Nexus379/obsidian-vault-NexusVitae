@@ -8,7 +8,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Stars
+    name: ✨ Stars
     groupBy:
       property: archtype
       direction: ASC

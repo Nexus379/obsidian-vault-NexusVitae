@@ -2441,7 +2441,7 @@
       "unit_price": 2,
       "unit_type": "500g",
       "label": "Washing Soda",
-      "icon": "ðŸ§¼",
+      "icon": "🧼",
       "val": {
         "ph_level": 11,
         "power": "High"
@@ -2453,9 +2453,9 @@
         ]
       },
       "props": [
-        "Stark fettlÃ¶send",
-        "WasserenthÃ¤rter",
-        "Perfekt fÃ¼r DIY-Waschmittel"
+        "Stark fettlösend",
+        "Wasserenthärter",
+        "Perfekt für DIY-Waschmittel"
       ],
       "lang": {
         "de": "Waschsoda",
@@ -2482,7 +2482,7 @@
       "unit_price": 2.5,
       "unit_type": "500g",
       "label": "Citric Acid",
-      "icon": "ðŸ‹",
+      "icon": "🍋",
       "val": {
         "ph_level": 2,
         "power": "High"
@@ -2494,12 +2494,12 @@
         ]
       },
       "props": [
-        "KalklÃ¶ser Nummer 1",
-        "NatÃ¼rlicher WeichspÃ¼ler-Ersatz",
+        "Kalklöser Nummer 1",
+        "Natürlicher Weichspüler-Ersatz",
         "Vorsicht bei Marmor"
       ],
       "lang": {
-        "de": "ZitronensÃ¤ure",
+        "de": "Zitronensäure",
         "en": "Citric Acid"
       },
       "prices": {

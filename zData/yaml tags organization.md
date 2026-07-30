@@ -23,11 +23,11 @@ archtype:
   - "#1stars/2vision"
   - "#1stars/3goals"
   - "#2area/1selfcare"
-  - "#2area/6mind"
-  - "#2area/4relationship"
-  - "#2area/3drive"
   - "#2area/2creativity"
   - "#2area/3drive"
+  - "#2area/4relationship"
+  - "#2area/5expression"
+  - "#2area/6mind"
   - "#2area/7crown"
   - "#3project/prodo"
   - "#3project/progo"
@@ -38,6 +38,7 @@ archtype:
   - "#3project/procook"
   - "#3project/procraft"
   - "#3project/proget"
+  - "#3project/protake"
   - "#4task/todo"
   - "#4task/togo"
   - "#4task/tostudy"
@@ -52,6 +53,7 @@ archtype:
   - "#4task/tocook"
   - "#4task/tocraft"
   - "#4task/toget"
+  - "#4task/totake"
   - "#5note/1fleeting"
   - "#5note/2literature"
   - "#5note/4permanent"
@@ -75,6 +77,7 @@ archtype:
   - "#6resource/reference"
   - "#6resource/serie"
   - "#6resource/video"
+  - "#6resource/software"
   - "#6resource/entity"
   - "#6resource/entity/ingredients"
   - "#6resource/entity/camping"
@@ -134,7 +137,7 @@ plattform:
   - Anthropic-AI
   - Perplexity-AI
   - Local
-author:
+creator:
 creator_sort:
 artist:
 director_sort:
@@ -490,13 +493,14 @@ difficulty:
 #1stars/3goals
 
 ### 2 Area
-#2area/1selfcare
-#2area/6mind
-#2area/4relationship
-#2area/3drive
-#2area/2creativity
-#2area/3drive
-#2area/7crown
+The seven areas follow the chakras in ascending order:
+#2area/1selfcare      🌸 Root — grounding, body, provision
+#2area/2creativity    🎨 Sacral — making, flow, pleasure
+#2area/3drive         🔥 Solar Plexus — will, drive, fitness, finances
+#2area/4relationship  🦄 Heart — connection, people
+#2area/5expression    🗣️ Throat — voice, teaching, content
+#2area/6mind          🧠 Third Eye — knowledge, study, timetable
+#2area/7crown         🕉️ Crown — meaning, stillness, spirituality
 
 ### 3 Projects
 #3project

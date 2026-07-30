@@ -13,16 +13,16 @@ cssclasses:
 > [!multi-column]
 >  
 > > [!blank|wide-0]
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### 🔖 **INPUT FLOW**
 > > 
 > > ```dataviewjs
 > > {
 > >      const container = this.container;
-> >      container.style.width = "260px";
+> >      container.style.width = "100%"; container.style.maxWidth = "240px"; container.style.height = "230px";
 > >      container.style.margin = "0 auto";
 > > 
 > >      if (!container.querySelector('canvas')) {
-> >          // 🔱 FIX 1: Findet Ressourcen jetzt lückenlos in ALLEN Meta-Feldern
+> >          // 🔱 FIX 1: finds resources across ALL meta fields, with no gaps
 > >          const entries = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => {
 > >              const allTags = (String(p.arch || "") + " " + String(p.archtype || "") + " " + String(p.file.etags || "")).toLowerCase();
 > >              return allTags.includes("#6") || p.file.path.includes("6_Resources");
@@ -37,9 +37,9 @@ cssclasses:
 > >                  const meta = (p.file.path + " " + String(p.arch || "") + " " + String(p.archtype || "") + " " + String(p.file.tags || "")).toLowerCase();
 > >                  
 > >                  // 🔱 FIX 2: Die "Fallen" umgehen
-> >                  // '\b' zwingt Dataview, nur nach dem alleinstehenden Wort zu suchen.
-> >                  if (tag === "ai") return meta.match(/\bai\b/) || meta.includes("#6resource/ai"); // Kein Treffer mehr bei "Daily" oder "Email"
-> >                  if (tag === "game") return meta.match(/\bgames?\b/) && !meta.includes("boardgame"); // Trennt normale Games von Boardgames
+> >                  // '\b' forces Dataview to match the standalone word only.
+> >                  if (tag === "ai") return meta.match(/\bai\b/) || meta.includes("#6resource/ai"); // No longer matches "Daily" or "Email"
+> >                  if (tag === "game") return meta.match(/\bgames?\b/) && !meta.includes("boardgame"); // Keeps plain games apart from board games
 > >                  
 > >                  return meta.includes(tag);
 > >              }).length
@@ -59,7 +59,7 @@ cssclasses:
 > >                  }]
 > >              },
 > >              options: {
-> >                  cutout: '85%',
+> >                  maintainAspectRatio: false, cutout: '76%',
 > >                  animation: false,
 > >                  plugins: {
 > >                      legend: { 
@@ -91,7 +91,7 @@ cssclasses:
 > > > const recent = dv.pages('!"zData" AND -"yArchive"')
 > > >      .where(p => p.inbox !== true)
 > > >      .where(p => {
-> > >          // 🔱 FIX 3: Auch hier die Metadaten sicher kombinieren
+> > >          // 🔱 FIX 3: combine the metadata safely here too
 > > >          const allTags = (String(p.arch || "") + " " + String(p.archtype || "") + " " + String(p.file.etags || "")).toLowerCase();
 > > >          return allTags.includes("#6") || p.file.path.includes("6_Resources");
 > > >      })
@@ -104,7 +104,7 @@ cssclasses:
 > > > const getEmoji = (p) => {
 > > >      const meta = (p.file.path + " " + String(p.archtype || "") + " " + String(p.arch || "") + " " + String(p.file.tags || "")).toLowerCase();
 > > >      
-> > >      // 🔱 Emojis erweitert, damit das Radar noch besser aussieht
+> > >      // 🔱 More emoji so the radar reads better
 > > >      if (meta.includes("📚") || meta.includes("book")) return "📚";
 > > >      if (meta.includes("🎥") || meta.includes("video") || meta.includes("film") || meta.includes("serie")) return "🎥";
 > > >      if (meta.includes("📄") || meta.includes("article") || meta.includes("paper")) return "📄";

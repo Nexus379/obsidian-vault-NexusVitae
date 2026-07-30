@@ -9,7 +9,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Vision
+    name: 🧭 Vision
     order:
       - file.name
       - status

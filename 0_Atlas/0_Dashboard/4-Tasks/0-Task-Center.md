@@ -5,18 +5,18 @@ cssclasses:
 ---
 
 # Task Center
-| [[0_Atlas/0_Dashboard/4-Tasks|🛠️Tasks]] | [[0_Atlas/Bases/Tasksbase.base|⚙️Tasksbase]] | [[0_Atlas/0_Dashboard/4-Tasks/0-Task-Center|🎯Task Center]] | [[0_Atlas/0_Dashboard/4-Tasks/1-ToDo|📝ToDo]] | [[0_Atlas/0_Dashboard/4-Tasks/2-ToGo|🏃ToGo]] | [[0_Atlas/0_Dashboard/4-Tasks/3-ToStudy|🎓ToStudy]] | [[0_Atlas/0_Dashboard/4-Tasks/4-ToMeet|🤝ToMeet]] | [[0_Atlas/0_Dashboard/4-Tasks/5-ToBuy|🛒ToBuy]] | [[0_Atlas/0_Dashboard/4-Tasks/6-ToPay|💳ToPay]] | [[0_Atlas/0_Dashboard/4-Tasks/7-ToCook|🍳ToCook]] | [[0_Atlas/0_Dashboard/4-Tasks/8-ToCraft|✂️ToCraft]] | [[0_Atlas/0_Dashboard/4-Tasks/9-ToGet|📥ToGet]] |
+![[zData/5design_modul/TaskNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
 >[!multi-column]
 >
 > > [!blank|wide-0]
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### 🎛️ **COMMAND CENTER**
 > > ```dataviewjs
 > > {
 > >     const container = this.container;
-> >     container.style.width = "250px";
+> >     container.style.width = "100%"; container.style.maxWidth = "240px"; container.style.height = "230px";
 > >     container.style.margin = "0 auto";
 > >     const clean = value => String(value ?? "").toLowerCase();
 > >     const hasTaskContext = p => clean(p.arch).includes("#4task") || clean(p.archtype).includes("#4task") || p.file.path.includes("4_Tasks");
@@ -32,7 +32,7 @@ cssclasses:
 > >     ];
 > >     const hasData = values.some(v => v > 0);
 > >     const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
-> >     const chartData = { type: 'doughnut', data: { labels: hasData ? ["Active", "Review", "Passive", "Idea", "Done"] : ["All Clear"], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ["#a6e3a1", "#cba6f7", "#f9e2af", "#fab387", "#94e2d5"] : ["var(--background-modifier-border)"], borderWidth: 0 }] }, options: { cutout: '80%', animation: false, plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
+> >     const chartData = { type: 'doughnut', data: { labels: hasData ? ["Active", "Review", "Passive", "Idea", "Done"] : ["All Clear"], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ["#a6e3a1", "#cba6f7", "#f9e2af", "#fab387", "#94e2d5"] : ["var(--background-modifier-border)"], borderWidth: 0 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '76%', animation: false, plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
 > >     const interval = setInterval(() => { if (window.renderChart) { const oldCanvas = container.querySelector('canvas'); if (oldCanvas) oldCanvas.remove(); window.renderChart(chartData, container); clearInterval(interval); } }, 150);
 > > }
 > > ```
@@ -86,7 +86,7 @@ cssclasses:
 > >     return list.length ? list.map(i => "> " + formatNest(i)).join("\n") : "> *clear*";
 > > };
 > > 
-> > // Hier wird das Markdown fehlerfrei und millimetergenau für Obsidian zusammengebaut:
+> > // The markdown is assembled here exactly the way Obsidian needs it:
 > > const markdown = `> [!multi-column]
 > > >
 > > > > [!error] Prio 1
@@ -111,123 +111,10 @@ cssclasses:
 
  ## Status Board
 ```dataviewjs
-const clean = value => String(value ?? "").toLowerCase();
-const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-const hasTaskContext = p => clean(p.arch).includes("#4task") || clean(p.archtype).includes("#4task") || p.file.path.includes("4_Tasks");
-const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
-const items = [];
-pages.where(p => hasTaskContext(p)).forEach(p => items.push({ name: p.file.name, path: p.file.path, status: clean(p.status) || "1active", priority: String(p.priority ?? ""), due: p.due, archtype: String(dv.array(p.archtype).join(", ")), source: "Task File" }));
-pages.where(p => hasTaskContext(p) || p.file.tasks.where(t => clean(t.text).includes("#4task")).length).file.tasks.where(t => !t.path.includes("zData") && !t.path.includes("yArchive")).where(t => hasTaskContext(dv.page(t.path)) || clean(t.text).includes("#4task")).forEach(t => {
-    const p = dv.page(t.path);
-    items.push({ name: t.text.replace(/#[^\s]+/g, "").trim(), path: t.path, status: t.completed ? "done" : (clean(p.status) || "inline"), priority: String(t.priority ?? p.priority ?? ""), due: t.due || p.due, archtype: String(dv.array(p.archtype).join(", ")), source: p.file.name });
-});
-const statuses = [
-    { key: "0start", title: "Start", color: "#89dceb" },
-    { key: "1active", title: "Active", color: "#a6e3a1" },
-    { key: "review", title: "Review", color: "#cba6f7" },
-    { key: "2passive", title: "Passive", color: "#f9e2af" },
-    { key: "3idea", title: "Idea", color: "#fab387" },
-    { key: "inline", title: "Inline", color: "#bac2de" },
-    { key: "done", title: "Done", color: "#94e2d5" }
-];
-const dueSort = item => item.due ? moment(item.due.toString()).valueOf() : 9999999999999;
-const dueLabel = item => item.due ? moment(item.due.toString()).format("DD.MM.YYYY") : "";
-const archLabel = item => item.archtype.replace(/#4task\//g, "").replace(/#4task/g, "").trim();
-let html = `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:10px;">`;
-for (const status of statuses) {
-    const list = items.filter(item => item.status === status.key).sort((a, b) => dueSort(a) - dueSort(b)).slice(0, 18);
-    html += `<div style="border-left:3px solid ${status.color}; background:var(--background-secondary); border-radius:6px; padding:8px;">`;
-    html += `<div style="font-size:.72em; font-weight:800; color:${status.color}; text-transform:uppercase; margin-bottom:6px;">${status.title} · ${list.length}</div>`;
-    if (!list.length) html += `<div style="font-size:.7em; color:var(--text-faint);">empty</div>`;
-    for (const item of list) {
-        html += `<div style="padding:5px 0; border-top:1px solid var(--background-modifier-border);"><a class="internal-link" href="${item.path}" style="font-size:.78em; font-weight:650; color:var(--text-normal); text-decoration:none;">${esc(item.name)}</a><div style="font-size:.62em; color:var(--text-muted);">${esc(item.source)}${archLabel(item) ? " · " + esc(archLabel(item)) : ""}${dueLabel(item) ? " · " + dueLabel(item) : ""}</div></div>`;
-    }
-    html += `</div>`;
-}
-html += `</div>`;
-dv.el("div", html);
+await require(app.vault.adapter.basePath + "/zData/2scripts/taskCenter.js")().statusBoard(dv);
 ```
 
 ## Task Type Board
 ```dataviewjs
-const clean = value => String(value ?? "").toLowerCase();
-const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-const hasTaskContext = p => clean(p.arch).includes("#4task") || clean(p.archtype).includes("#4task") || p.file.path.includes("4_Tasks");
-const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true);
-const openStatus = p => !["done", "canceled", "archive", "archived", "bin"].includes(clean(p.status)) && p.done !== true;
-
-const types = [
-  { label: "Cook", key: "tocook", color: "#f38ba8" },
-  { label: "Craft", key: "tocraft", color: "#fab387" },
-  { label: "Pay", key: "topay", color: "#f9e2af" },
-  { label: "Buy", key: "tobuy", color: "#eed49f" },
-  { label: "Do", key: "todo", color: "#a6e3a1" },
-  { label: "Go", key: "togo", color: "#94e2d5" },
-  { label: "Meet", key: "tomeet", color: "#89dceb" },
-  { label: "Study", key: "tostudy", color: "#89b4fa" },
-  { label: "Get", key: "toget", color: "#cba6f7" }
-];
-
-const getTypeKey = (archtype, text) => {
-  const hay = `${clean(archtype)} ${clean(text)}`;
-  const found = types.find(t => hay.includes(t.key));
-  return found ? found.key : "other";
-};
-
-const items = [];
-
-pages.where(p => hasTaskContext(p) && openStatus(p)).forEach(p => {
-  items.push({
-    name: p.file.name,
-    path: p.file.path,
-    due: p.due,
-    source: "Task File",
-    type: getTypeKey(dv.array(p.archtype).join(" "), "")
-  });
-});
-
-pages
-  .where(p => hasTaskContext(p) || p.file.tasks.where(t => clean(t.text).includes("#4task")).length)
-  .file.tasks
-  .where(t => !t.completed)
-  .where(t => hasTaskContext(dv.page(t.path)) || clean(t.text).includes("#4task"))
-  .forEach(t => {
-    const p = dv.page(t.path);
-    items.push({
-      name: t.text.replace(/#[^\s]+/g, "").trim(),
-      path: t.path,
-      due: t.due || p.due,
-      source: p.file.name,
-      type: getTypeKey(dv.array(p.archtype).join(" "), t.text)
-    });
-  });
-
-const dueSort = item => item.due ? moment(item.due.toString()).valueOf() : 9999999999999;
-const dueLabel = item => item.due ? moment(item.due.toString()).format("DD.MM") : "";
-
-const grouped = new Map();
-types.forEach(t => grouped.set(t.key, []));
-grouped.set("other", []);
-
-items.forEach(i => {
-  if (!grouped.has(i.type)) grouped.set(i.type, []);
-  grouped.get(i.type).push(i);
-});
-
-let html = `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:10px;">`;
-
-for (const t of [...types, { label: "Other", key: "other", color: "var(--text-muted)" }]) {
-  const list = (grouped.get(t.key) ?? []).sort((a, b) => dueSort(a) - dueSort(b));
-  const top = list.slice(0, 6);
-  html += `<div style="border-left:3px solid ${t.color}; background:var(--background-secondary); border-radius:6px; padding:8px;">`;
-  html += `<div style="font-size:.72em; font-weight:800; color:${t.color}; text-transform:uppercase; margin-bottom:6px;">${esc(t.label)} · ${list.length}</div>`;
-  if (!top.length) html += `<div style="font-size:.7em; color:var(--text-faint);">empty</div>`;
-  for (const item of top) {
-    html += `<div style="padding:5px 0; border-top:1px solid var(--background-modifier-border);"><a class="internal-link" href="${item.path}" style="font-size:.78em; font-weight:650; color:var(--text-normal); text-decoration:none;">${esc(item.name)}</a><div style="font-size:.62em; color:var(--text-muted);">${esc(item.source)}${dueLabel(item) ? " · " + dueLabel(item) : ""}</div></div>`;
-  }
-  html += `</div>`;
-}
-
-html += `</div>`;
-dv.el("div", html);
+await require(app.vault.adapter.basePath + "/zData/2scripts/taskCenter.js")().typeBoard(dv);
 ```

@@ -12,7 +12,7 @@ const srsRanks = [
 "Spacetime Weaver", "Supernova", "Singularity", "Shapeshifter", "Nexus Core"  
 ];
 
-// 🎨 Icons für Notice & Display
+// 🎨 Icons for notice & display
 const visualIcons = ["🌱", "🌿", "🍀", "⚓", "🖖", "🎖️", "🚢", "🏛️", "📡", "🛰️", "☄️", "🌌", "🛸", "👁️", "🌀", "✨", "🎭", "🔱", "💎", "👑", "🌟", "🪐", "🌠", "🌌"];
 
 const grades = ["🔴 1: Blackout (Reset)", "🟠 2: Hard (Stagnate)", "🟡 3: Okay (+1 Level)", "🟢 4: Good (+2 Levels)", "🔥 5: Perfect (+3 Levels)"];  
@@ -23,7 +23,7 @@ if (gChoice !== null) {
     let nextLvl;
 
     await app.fileManager.processFrontMatter(tFile, (fm) => {  
-        // ⚡ HIER SIND DEINE NEUEN VARIABLEN:
+        // ⚡ THE NEW VARIABLES:
         let currentLevel = Number(fm["study_lvl"]) || 0;  
         nextLvl = (gChoice === "reset") ? 0 : Math.max(0, Math.min(srsIntervals.length - 1, currentLevel + gChoice));
 

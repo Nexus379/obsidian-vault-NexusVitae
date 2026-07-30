@@ -1,9 +1,9 @@
 <%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
-if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
+if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
 const persona = tp.variables.persona || "queen_king";
-const area = tp.variables.currentArea || tp.variables.area || "";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/6mind";
 const sci = tp.variables.sciTag || tp.variables.sci || "#science";
 const disc = tp.variables.discTag || tp.variables.disc || "#disc";
 const sub = tp.variables.sub || "";

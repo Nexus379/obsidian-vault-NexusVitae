@@ -3,7 +3,7 @@ properties:
     displayName: status
 views:
   - type: table
-    name: Table
+    name: 💫 Dashboard
     order:
       - Inbox
       - file.name

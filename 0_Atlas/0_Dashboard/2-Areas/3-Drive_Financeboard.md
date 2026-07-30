@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # 🪙 Finance Dashboard
-| [[0_Atlas/0_Dashboard/2-Areas|💠Areas]] | [[0_Atlas/Bases/2-Areas/Areas.base|⚙️Areasbase]] | [[0_Atlas/0_Dashboard/2-Areas/1-Selfcare|❤️Selfcare]] | [[0_Atlas/0_Dashboard/2-Areas/2-Creativity|🧡Creativity]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive|💛Drive]] | [[0_Atlas/0_Dashboard/2-Areas/4-Relationship|💚Relationship]] | [[0_Atlas/0_Dashboard/2-Areas/5-Expression|💙Expression]] | [[0_Atlas/0_Dashboard/2-Areas/6-Mind|💜Mind]] | [[0_Atlas/0_Dashboard/2-Areas/7-Crown|🤍Crown]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Fitnessboard|🏋️Fitness]] |
+![[zData/5design_modul/AreaNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -12,12 +12,12 @@ cssclasses:
 >[!multi-column]
 >
 > > [!blank|wide-0]
-> > ### 💹 **FINANCIAL FLOW**
+> > #### 💹 **FINANCIAL FLOW**
 > >
 > > ```dataviewjs
 > > {
 > >      const chartContainer = this.container;
-> >      chartContainer.style.width = "300px";
+> >      chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >      chartContainer.style.margin = "0 auto";
 > >
 > >      const pages = dv.pages('!"zData" AND -"yArchive"').where(p => p.inbox !== true).where(p => p.amount != null);
@@ -39,7 +39,7 @@ cssclasses:
 > >              }]
 > >          },
 > >          options: { 
-> >              cutout: '75%', 
+> >              maintainAspectRatio: false, cutout: '76%', 
 > >              animation: false,
 > >              plugins: { 
 > >                  legend: { position: 'bottom', labels: { color: textColor, font: { size: 10 } } } 

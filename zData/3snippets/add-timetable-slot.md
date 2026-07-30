@@ -7,11 +7,23 @@ try {
     let file = app.workspace.getActiveFile();
     if (!file) return;
 
-    // If the current file isn't the Timetable, target the Timetable directly
-    if (!file.name.includes("Timetable")) {
-        file = app.vault.getAbstractFileByPath("2_Areas/6_Mind/Plan/CourseTimetable.md");
+    // If the current file isn't a Timetable, fall back to the Master.
+    // Case-insensitive on purpose: the weekly files are named "2026-W31_timetable.md"
+    // (lowercase) — a case-sensitive check would silently edit the MASTER instead of
+    // the week you have open, and the whole point of a weekly plan would be lost.
+    // Also accept a weekly file that carries plan_type: timetable in its frontmatter.
+    const fmHere = app.metadataCache.getFileCache(file)?.frontmatter || {};
+    const isTimetable = /timetable/i.test(file.name) || String(fmHere.plan_type || "") === "timetable";
+
+    if (!isTimetable) {
+        const planPath = app.vault.adapter.basePath + "/zData/2scripts/planPaths.js";
+        let masterPath = "2_Areas/6_Mind/Plan/CourseTimetable.md";
+        try { delete require.cache[require.resolve(planPath)]; } catch(e) {}
+        try { masterPath = require(planPath)().get("tt") + ".md"; } catch(e) {}
+
+        file = app.vault.getAbstractFileByPath(masterPath);
         if (!file) {
-            new Notice("Timetable.md not found!");
+            new Notice("Timetable not found: " + masterPath);
             return;
         }
     }

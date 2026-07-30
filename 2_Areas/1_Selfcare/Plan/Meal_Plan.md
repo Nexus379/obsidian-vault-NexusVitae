@@ -43,6 +43,15 @@ sun_ben: []
 sun_lun: []
 sun_snk: []
 sun_eve: []
+# How many eat that day — the shopping list plans this many servings per meal.
+# A single meal can override it: "[[Lasagne]] x3". Empty = 1.
+mon_eaters: 
+tue_eaters: 
+wed_eaters: 
+thu_eaters: 
+fri_eaters: 
+sat_eaters: 
+sun_eaters: 
 mon_add: []
 fri_rem: []
 wed_add: []

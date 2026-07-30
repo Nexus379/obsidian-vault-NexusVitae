@@ -10,7 +10,7 @@ properties:
     displayName: mobility-sum
 views:
   - type: table
-    name: Table
+    name: 📅 Calendar
     groupBy:
       property: archtype
       direction: ASC

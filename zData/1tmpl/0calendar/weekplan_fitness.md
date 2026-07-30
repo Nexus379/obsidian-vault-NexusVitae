@@ -8,18 +8,18 @@ const kw = tp.variables.planKw || targetMoment.format("WW");
 const energy = tp.variables.energy || "3";
 const displayTitle = tp.variables.displayTitle || `${year}-W${kw}_fitness`;
 
-// 🔱 2. AUTOMATISCHE TRAININGS-WOCHE ERKENNUNG
+// 🔱 2. AUTOMATIC TRAINING WEEK DETECTION
 let currentWeek = 1;
 
-// Suche alle vorherigen Fitness-Pläne
+// Find all previous fitness plans
 const allFit = app.vault.getMarkdownFiles().filter(f => f.name.includes("_fitness") && f.name !== tp.file.title);
 
 if (allFit.length > 0) {
-    // Sortiere nach Name absteigend (damit die neueste Woche ganz oben steht)
+// Sort by name descending, so the newest week sits at the top
     allFit.sort((a, b) => b.name.localeCompare(a.name));
     const lastFile = allFit[0];
     
-    // Lies die Daten der letzten Woche aus
+// Read the data of last week
     const cache = app.metadataCache.getFileCache(lastFile);
     if (cache && cache.frontmatter && cache.frontmatter.training_week) {
         currentWeek = Number(cache.frontmatter.training_week) + 1;

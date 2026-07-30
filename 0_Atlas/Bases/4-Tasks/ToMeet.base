@@ -11,7 +11,7 @@ filters:
     - status != "bin"
 views:
   - type: table
-    name: ToMeet
+    name: 📅 ToMeet
     order:
       - file.name
       - status

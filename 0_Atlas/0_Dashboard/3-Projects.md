@@ -13,11 +13,11 @@ cssclasses:
 >[!multi-column]
 >
 > > [!blank|wide-0]
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### 🚧 **PROJECT FLOW**
 > > ```dataviewjs
 > > {
 > >      const container = this.container;
-> >      container.style.width = "250px";
+> >      container.style.width = "100%"; container.style.maxWidth = "240px"; container.style.height = "230px";
 > >      container.style.margin = "0 auto"; 
 > > 
 > >      if (!container.querySelector('canvas')) {
@@ -43,7 +43,7 @@ cssclasses:
 > >                  }]
 > >              },
 > >              options: {
-> >                  cutout: '85%',
+> >                  maintainAspectRatio: false, cutout: '76%',
 > >                  animation: false,
 > >                  plugins: {
 > >                      legend: { 
@@ -81,9 +81,15 @@ cssclasses:
 > > > 
 > > > let html = `<div style="display: flex; flex-direction: column; gap: 2px; padding: 5px 0;">`;
 > > > pages.forEach(p => {
-> > >      let dotColor = p.priority == "🔴" ? "#f38ba8" : (p.priority == "🟡" ? "#f9e2af" : "#a6e3a1");
+> > >      // priority holds "1".."5" (1 = highest), never an emoji — comparing against 🔴/🟡 made every dot green.
+> > >      const prio = String(dv.array(p.priority)[0] ?? "").trim();
+> > >      let dotColor = prio === "1" ? "#f38ba8" : (prio === "2" ? "#f9e2af" : "#a6e3a1");
 > > >      const tasksOpen = p.file.tasks ? p.file.tasks.where(t => !t.completed).length : 0;
 > > >      const dueDate = p.due ? moment(p.due.toString()).format("DD.MM") : "--";
+> > >      // The slot on the right read p.phase, which nothing writes: "Phase" is the LABEL of
+> > >      // the explore_lvl input. Projects now carry that field too, so status says whether a
+> > >      // project runs and explore_lvl how far it has come — two independent axes.
+> > >      const phase = String(dv.array(p.explore_lvl)[0] ?? "").replace(/^[0-9]/, "");
 > > > 
 > > >      html += `<div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; border-bottom: 1px solid var(--background-modifier-border);">
 > > >          <div style="display: flex; align-items: center; gap: 12px;">
@@ -93,7 +99,7 @@ cssclasses:
 > > >          </div>
 > > >          <div style="display: flex; gap: 15px; align-items: center;">
 > > >              <div style="font-size: 0.7em; color: var(--text-faint); font-weight: bold;">📅 ${dueDate}</div>
-> > >              <div style="font-size: 0.65em; color: var(--text-muted); font-style: italic; width: 60px; text-align: right;">${p.phase || ""}</div>
+> > >              <div style="font-size: 0.65em; color: var(--text-muted); font-style: italic; width: 60px; text-align: right;">${phase}</div>
 > > >          </div>
 > > >      </div>`;
 > > > });

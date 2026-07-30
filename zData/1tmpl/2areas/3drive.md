@@ -13,11 +13,11 @@ let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
-    title = await tp.system.prompt("🧩 Organize: Name of Administrative Responsibility?", "");
+    title = await tp.system.prompt("🔥 Drive: Name of Responsibility you push forward?", "");
 }
 if (!title) title = "Organize-" + tp.date.now("HH-mm");
 
-// Physisches Umbenennen für Stabilität
+// Physical rename for stability
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); 
@@ -26,8 +26,8 @@ if (tp.file.title !== title) {
 // 🔱 SOLAR-PLEXUS PROMPT (Will & Discipline)
 let balanceFocus = await tp.system.prompt("🔥 What will you drive forward today?", "Acting with discipline and momentum.");
 
-// 🔱 3. CLEANING (Entfernt Trigger wie 8tocraft- oder t-)
-let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(4organize-|a-|2area-)/i, "").trim();
+// 🔱 3. CLEANING (strips triggers such as 8tocraft- or t-)
+let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(3drive-|a-|2area-)/i, "").trim();
 
 tR += "---"  
 %>

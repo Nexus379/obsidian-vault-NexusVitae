@@ -1,8 +1,8 @@
 <%*
-// 🔱 1. AREA-CHOICE FIRST (Die Basis für alles)
+// 🔱 1. AREA CHOICE FIRST (the basis for everything)
 const areaOptions = [
-    "1 ❤️ Selfcare", "2 🧡 Creativity", "3 💛 Drive",
-    "4 💚 Relationship", "5 💙 Expression", "6 💜 Mind", "7 🤍 Crown"
+    "1 🌸 Selfcare", "2 🎨 Creativity", "3 🔥 Drive",
+    "4 🦄 Relationship", "5 🗣️ Expression", "6 🧠 Mind", "7 🕉️ Crown"
 ];
 const areaFolders = [
     "1_Selfcare", "2_Creativity", "3_Drive", "4_Relationship", "5_Expression", "6_Mind", "7_Crown"
@@ -12,7 +12,7 @@ const areaTags = [
 ];
 const areaTemplates = ["1selfcare", "2creativity", "3drive", "4relation", "5expression", "6mind", "7crown"];
 
-// SICHERHEIT: Fallback für tp.variables
+// SAFETY: fallback for tp.variables
 if (!tp.variables) tp.variables = {};
 const v = tp.variables;
 if (!v.SYS) v.SYS = { tmpl: "zData/1tmpl", inbox: "0_Inbox" };
@@ -44,7 +44,7 @@ if (aIdx === -1) {
     aIdx = await tp.system.suggester(areaOptions, Array.from(areaOptions.keys()));
 }
 
-// Wenn ESC gedrückt wurde: Abbruch statt 'undefined' Fehler
+// If ESC was pressed: abort instead of an 'undefined' error
 if (aIdx === null || aIdx === -1) {
     new Notice("Selection cancelled. No changes made.");
     return; 
@@ -56,7 +56,7 @@ let contentTemplate = areaTemplates[aIdx];
 if (originTrigger === "character" || originTrigger === "char") contentTemplate = "4relation_character";
 
 // 🔱 3. DISCIPLINE ENGINE
-// Sicherstellen, dass tp.variables existiert, bevor wir darauf schreiben
+// Make sure tp.variables exists before writing to it
 if (!tp.variables) tp.variables = {};
 tp.variables.area = targetAreaTag;
 tp.variables.currentArea = targetAreaTag;
@@ -85,7 +85,7 @@ if (typeof tp.user.disciplineEngine === "function") {
 }
 
 // 🔱 4. TITLE & LOGISTICS
-// Sicherheits-Fallbacks für SYS und ARCH, falls das Template direkt gestartet wird
+// Safety fallbacks for SYS and ARCH, in case the template is started directly
 const SYS = v.SYS;
 const ARCH = v.ARCH;
 

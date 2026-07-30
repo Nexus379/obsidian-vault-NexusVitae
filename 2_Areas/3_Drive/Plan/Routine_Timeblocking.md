@@ -2,7 +2,7 @@
 banner: "![[xAttachment/Images/Banner/anime-style-cozy-home-interior-with-furnishings.jpg]]"
 banner_y: 0.5%
 banner_icon: 🧩
-inbox: true
+inbox: false
 persona: ""
 arch:
   - "#2area"
@@ -77,12 +77,12 @@ const getD = (key) => {
     let parts = String(key).split("|");
     let baseKey = parts[0];
     
-    // Details auslesen und Klammern entfernen (z.B. "Breakfast")
+    // Read the detail and strip the brackets (e.g. "Breakfast")
     let detail = parts.length > 1 ? parts.slice(1).join(" ") : ""; 
     
     if (baseKey === "custom") return `🔸 **${detail}**`;
 
-    // 💡 AM/PM Routinen als anklickbare Links (Hover für Mini-Vorschau!)
+    // 💡 AM/PM routines as clickable links (hover for a mini preview!)
     if (baseKey === "am_routine") {
         return `<div style="padding: 6px; border-radius: 8px; background-color: rgba(128, 128, 128, 0.15); box-shadow: 0 0 8px rgba(128, 128, 128, 0.15); text-align: center;"><span style="font-family: 'Courier New', Courier, monospace; font-size: 0.85em; font-weight: bold;">[[2_Areas/1_Selfcare/Plan/AM_Routine|🌅 AM Protocol]]</span></div>`;
     }
@@ -92,10 +92,10 @@ const getD = (key) => {
     
     if (engine && engine.all && engine.all[baseKey]) {
         const r = engine.all[baseKey];
-        // Zieht die Farbe direkt aus der Engine
+        // Takes the colour straight from the engine
         const bgColor = r.color || "transparent"; 
         
-        // HTML für Styling (Pastell, Glow)
+        // HTML for styling (pastel, glow)
         let html = `<div style="padding: 6px; border-radius: 8px; background-color: ${bgColor}; box-shadow: 0 0 8px ${bgColor}; text-align: center;">`;
         
         if (detail) {

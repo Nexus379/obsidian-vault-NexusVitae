@@ -11,7 +11,7 @@ filters:
     - status != "bin"
 views:
   - type: table
-    name: ToBuy
+    name: 💰 ToBuy
     order:
       - file.name
       - status

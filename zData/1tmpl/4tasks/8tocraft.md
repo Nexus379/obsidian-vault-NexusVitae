@@ -15,13 +15,13 @@ if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
 }
 if (!title || title.trim() === "") title = "Craft-" + tp.date.now("HH-mm");
 
-// Physisches Umbenennen für Stabilität
+// Physical rename for stability
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); 
 }
 
-// 🔱 3. CLEANING (Entfernt Trigger wie 8tocraft- oder t-)
+// 🔱 3. CLEANING (strips triggers such as 8tocraft- or t-)
 let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(8tocraft-|t-|4task-)/i, "").trim();
 
 tR += "---"  

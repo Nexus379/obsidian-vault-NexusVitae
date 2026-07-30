@@ -11,7 +11,7 @@ filters:
     - status != "bin"
 views:
   - type: table
-    name: ToStudy
+    name: 🎓 ToStudy
     order:
       - file.name
       - status

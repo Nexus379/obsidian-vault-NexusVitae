@@ -17,8 +17,8 @@ const calendarRoot = cfgRoot("calendar", "0_Calendar");
 const weeklyPlanRoot = `${calendarRoot}/7_Plan`;
 tp.variables.shoppingHubPath = cfgAreaPlan("shopping", "2_Areas/1_Selfcare/Household/Shopping_Hub.md");
 
-// 🔱 2. SMART CLEAN & FALLBACK (Für Direkt-Start ohne Prompt)
-// Erkennt "Untitled" oder den "Entry-..." Platzhalter vom Router
+// 🔱 2. SMART CLEAN & FALLBACK (for a direct start without a prompt)
+// Detects "Untitled" or the "Entry-..." placeholder from the router
 let currentFileTitle = tp.variables.title || tp.file.title;
 const dateStr = tp.variables.targetDate || tp.date.now("YYYY-MM-DD");
 const [year, month] = dateStr.split("-");
@@ -28,10 +28,10 @@ const isPlaceholder = currentFileTitle.toLowerCase().includes(defaultName.toLowe
 let cleanPart = "";
 
 if (tp.variables.title && !tp.variables.title.includes("Entry-")) {
-    cleanPart = tp.variables.title.replace(/plm/i, "").replace(/ppm/i, "").replace(/pkm/i, "").replace(/^- /, "").trim(); // Übernahme vom Router/Prompt
+    cleanPart = tp.variables.title.replace(/plm/i, "").replace(/ppm/i, "").replace(/pkm/i, "").replace(/^- /, "").trim(); // Taken over from the router/prompt
 } else {
     const untitledPattern = new RegExp(defaultName + "(\\s\\d+)?", "i");
-    // Manueller Fallback: Wir filtern Platzhalter, "plm" und das Datum heraus
+// Manual fallback: filter out placeholders, "plm" and the date
     cleanPart = currentFileTitle.replace(/Entry-\d{2}-\d{2}/i, "")
                                 .replace(untitledPattern, "")
                                 .replace(new RegExp(defaultName, "i"), "")
@@ -43,7 +43,7 @@ if (tp.variables.title && !tp.variables.title.includes("Entry-")) {
                                 .trim();
 }
 
-// 🔱 2.1 PPM-SPEZIFIKUM: Falls leer, fragen wir nach dem strategischen Fokus
+// 🔱 2.1 PPM SPECIFIC: when empty, ask for the strategic focus
 if (!tp.variables.finalTitle && (!cleanPart || cleanPart.toLowerCase() === "daily log")) {
     const focus = await tp.system.prompt("🌻 Nexus PPM: Strategic Focus for today?", "");
     if (focus) cleanPart = focus;
@@ -53,19 +53,19 @@ if (!tp.variables.finalTitle && (!cleanPart || cleanPart.toLowerCase() === "dail
 let finalTitle = `${dateStr} ppm${cleanPart ? " - " + cleanPart : ""}`;
 const pureFocus = cleanPart || "";
 
-// 🔱 3. DATEI-STABILISIERUNG (Physisches Umbenennen)
+// 🔱 3. FILE STABILISATION (physical rename for stability
 if (!tp.variables.finalTitle && currentFileTitle !== finalTitle) {
     await tp.file.rename(finalTitle);
     await new Promise(r => setTimeout(r, 200)); 
 }
 
-// Variablen für das restliche Template festschreiben
+// Fix the variables for the rest of the template
 tp.variables.title = finalTitle;
 tp.variables.targetDate = dateStr;
 const displayTitle = cleanPart || "Daily Strategy";
 
 // 🔱 4. LINKED FOCI (PLM/PPM)
-// Hinweis: Aim-Fields werden hier nicht benötigt, PPM zieht sich PKM-Fokus später selbst.
+// Note: aim fields are not needed here; PPM pulls the PKM focus itself later.
 const energy = tp.variables.energy || tp.frontmatter?.energy || "3";
 tp.variables.energy = energy;
 
@@ -76,8 +76,8 @@ let aim1Focus = "";
 let aim3Focus = "";
 
 if (dv) {
-    // Wir suchen in den entsprechenden Ordnern nach einer Datei, 
-    // die mit dem Datum beginnt, egal was danach im Namen steht.
+// We look in the matching folders for a file
+// that starts with the date, whatever follows in the name.
     const plmPage = dv.pages(`"0_Calendar/1_PLM/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} plm`));
     const pkmPage = dv.pages(`"0_Calendar/3_PKM/${y}/${m}"`).find(p => p.file.name.startsWith(`${dateStr} pkm`));
     
@@ -87,10 +87,10 @@ if (dv) {
 
 // 🔱 5.1 MONTHLY STRATEGY SYNC (Pulls the last set monthly focus)
 let focusM_ppm = "";
-let focusM_Date = dateStr; // Fallback auf heute
+let focusM_Date = dateStr; // Fallback to today
 
 if (dv) {
-    // Suche alle PPMs im aktuellen Monatsordner
+    // Find every PPM in the current month folder
     const monthlyLogs = dv.pages(`"0_Calendar/2_PPM/${year}/${month}"`)
         .where(p => p.focusM_ppm && p.focusM_ppm !== "")
         .sort(p => p.file.name, "desc");
@@ -153,7 +153,7 @@ if (dv) {
                 let baseKey = parts[0];
                 let detail = parts.length > 1 ? ` (${parts.slice(1).join(" ")})` : "";
                 
-                // 🔥 DER FILTER: Zieht NUR PPM/Arbeits-Aufgaben (Kein Haushalt, kein Studium!)
+                // 🔥 THE FILTER: only PPM/work tasks (no household, no study!)
                 if (engineData && engineData[baseKey] && getAxis(engineData[baseKey].persona) === "PPM") {
                     let label = engineData[baseKey].label; 
                     let icon = engineData[baseKey].icon || "💼";
@@ -183,10 +183,10 @@ tp.variables.maintask6 = uniqueWorkTasks[5] || "";
 const targetFolder = `0_Calendar/2_PPM/${y}/${m}`;
 const finalDest = `${targetFolder}/${finalTitle}.md`;
 
-// Monthly Focus Start (falls nicht gesetzt)
+// Monthly focus start (if not set)
 const focusStart = (tp.frontmatter && tp.frontmatter.focusM_start) ? tp.frontmatter.focusM_start : focusM_Date;
 
-// Falls die Datei noch nicht am richtigen Ort liegt (z.B. nach Alt+E in der Inbox)
+// If the file is not in the right place yet (e.g. after Alt+E in the inbox)
 if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
     let currentPath = "";
     for (const seg of targetFolder.split('/')) {
@@ -291,7 +291,7 @@ cal_date: <%- dateStr %>
 <%-*
 // 🔱 3. DYNAMISCHE LINKS ZU DEN ANDEREN LOGS
 
-// Pfade zu den Schwester-Logs (Journal & Study)
+// Paths to the sibling logs (journal and study)
 const todayPLM = `0_Calendar/1_PLM/${year}/${month}/${dateStr} plm`;
 const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 %>
@@ -314,7 +314,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const logDate = curr.file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || "";
 > > > const [yy, mm] = logDate.split("-");
 > > > 
-> > > // Sucht gezielt nach "[Datum] plm" und "[Datum] pkm"
+> > > // Looks specifically for "[date] plm" and "[date] pkm"
 > > > const plm = dv.pages(`"0_Calendar/1_PLM/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} plm`));
 > > > const pkm = dv.pages(`"0_Calendar/3_PKM/${yy}/${mm}"`).find(p => p.file.name.startsWith(`${logDate} pkm`));
 > > > 
@@ -340,10 +340,10 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > > const currentEnergy = dv.current().energy || "3";
 > > > const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
 > > > 
-> > > // Container für das Interface-Element erstellen
+> > > // Create the container for the interface element
 > > > const container = dv.container.createEl("div", { style: "font-size: 0.85em; font-family: var(--font-interface);" });
 > > > 
-> > > // Label und Status-Text-Element
+> > > // Label and status text element
 > > > const label = container.createEl("small", { text: "⚡ Energy Level: ", style: "opacity: 0.8;" });
 > > > const statusText = container.createEl("span", { 
 > > >     text: eMap[String(currentEnergy)] || currentEnergy, 
@@ -359,12 +359,12 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > >     style: "width: 100%; max-width: 150px; margin-top: 6px; cursor: pointer;"
 > > > });
 > > > 
-> > > // Event-Listener für Interaktionen
+> > > // Event listeners for interactions
 > > > slider.addEventListener("input", async (e) => {
 > > >     const val = e.target.value;
 > > >     statusText.innerText = eMap[val] || val;
 > > >     
-> > >     // Schreibt den Wert direkt zurück in das YAML Frontmatter der aktuellen Datei
+> > >     // Writes the value straight back into the current file's YAML frontmatter
 > > >     await app.fileManager.processFrontMatter(tFile, (fm) => {
 > > >         fm["energy"] = Number(val);
 > > >     });
@@ -404,13 +404,13 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > [!calendar|wide-0] ⏳ Time Matrix
 > > ```dataviewjs
 > > (() => {
-> >    if (dv.viewCount && dv.viewCount > 1) return; // ruhig bleiben
+> >    if (dv.viewCount && dv.viewCount > 1) return; // stay quiet
 > >    const hours = ['08','09','10','11','12','13','14','15','16','17','18','19','20'];
 > >    const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || dv.current().file.name;
 > >    const archIcons = { "#0cal":"📅", "#1stars":"✨", "#2area":"💠", "#3project":"🚧", "#4task":"🛠️", "#5note":"✏️", "#6resource":"🔖" };
 > >    const items = [];
 > >    
-> >    // Logische Exklusion von archivierten, stornierten oder gelöschten Elementen
+> >    // Logical exclusion of archived, cancelled or deleted items
 > >    dv.pages('!"zData" AND -"yArchive" AND -"0_Atlas"').where(p => {
 > >        if (!p.arch || !String(p.arch).includes("#4task")) return false;
 > >        const stat = String(p.status || "").toLowerCase();
@@ -484,7 +484,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > > [!decent|wide-4]
 > > ```dataviewjs
 > > (() => {
-> >    if (dv.viewCount && dv.viewCount > 1) return; // ruhig bleiben
+> >    if (dv.viewCount && dv.viewCount > 1) return; // stay quiet
 > >    const logDate = dv.current().file.name.match(/\d{4}-\d{2}-\d{2}/)?.[0] || moment().format("YYYY-MM-DD");
 > >    const today = moment(logDate);
 > >    const nextWeek = moment(logDate).add(7,'days');
@@ -492,10 +492,10 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > >    const allItems = [];
 > >    
 > >    dv.pages().where(p => {
-> >        // 1. Basis-Prüfung: Ist es ein Task und unvollständig?
+> >        // 1. Basic check: is it a task, and unfinished?
 > >        if (!p.arch || !String(p.arch).includes("#4task") || p.completed) return false;
 > >        
-> >        // 2. Status-Exklusion: Archiviert, abgebrochen oder gelöscht ignorieren
+> >        // 2. Status exclusion: ignore archived, cancelled or deleted
 > >        const stat = String(p.status || "").toLowerCase();
 > >        if (stat.includes("archive") || stat.includes("archived") || stat.includes("canceled") || stat.includes("bin")) return false;
 > >        
@@ -529,7 +529,7 @@ const todayPKM = `0_Calendar/3_PKM/${year}/${month}/${dateStr} pkm`;
 > ```dataviewjs
 > const projs = dv.pages('#3project');
 > 
-> // ⚡ FIX: Sicherer Check für den Status (fängt Arrays und leere Felder ab)
+> // ⚡ FIX: safe status check (catches arrays and empty fields)
 > const active = projs.where(p => p.status && String(p.status).includes("1active")).limit(10).map(p => p.file.link);
 > const passive = projs.where(p => p.status && String(p.status).includes("2passive")).limit(10).map(p => p.file.link);
 > const idea = projs.where(p => p.status && String(p.status).includes("3idea")).limit(10).map(p => p.file.link);

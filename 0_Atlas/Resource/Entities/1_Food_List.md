@@ -10,14 +10,15 @@ cssclasses:
 
 ## 🧊 Inventory List
 
-> [!tip] Lebensmittel-Übersicht für dein Zuhause
+> [!tip] Food entities stored at home. Field names match the ingredient template.
 
 ```dataview
-TABLE 
-    price AS "Price",
-    shop AS "Shop",
-    kcal AS "Kcal (per 100g)",
-    stock_level AS "Stock"
+TABLE
+    unit_price AS "💶 Price",
+    pref_vendor AS "⭐ Vendor",
+    kcal AS "🔥 Kcal (per 100g)",
+    qty AS "🔢 Qty",
+    choice(needs_refill, "🔴 refill", "🟢 ok") AS "🛒 Stock"
 FROM "6_Resources/_Entities/Home/Nutrition"
 SORT file.name ASC
 ```

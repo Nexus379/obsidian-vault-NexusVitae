@@ -4,7 +4,7 @@ cssclasses:
   - wide-page
 ---
 # 🌻 PPM Dashboard (Manage)
-| [[0_Atlas/0_Dashboard/0-Calendar|📅Calendar]] | [[0_Atlas/Bases/Calendarbase.base|⚙️Calendarbase]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PLM|🌷PLM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM|🌻PPM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🌼PKM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|🎓Studyboard]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/7-Reviews|🛰️Reviews]] |
+![[zData/5design_modul/CalNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -13,11 +13,11 @@ cssclasses:
 >[!multi-column]
 >
 > > [!blank|wide-0]
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### 🌻 **EXECUTION FLOW**
 > > ```dataviewjs
 > > {
 > >      const container = this.container;
-> >      container.style.width = "250px";
+> >      container.style.width = "100%"; container.style.maxWidth = "240px"; container.style.height = "230px";
 > >      container.style.margin = "0 auto";
 > > 
 > >      if (!container.querySelector('canvas')) {
@@ -52,7 +52,7 @@ cssclasses:
 > >                  }]
 > >              },
 > >              options: {
-> >                  cutout: '85%',
+> >                  maintainAspectRatio: false, cutout: '76%',
 > >                  animation: false,
 > >                  plugins: {
 > >                      legend: { 
@@ -93,7 +93,9 @@ cssclasses:
 > > > 
 > > > let html = `<div style="display: flex; flex-direction: column; gap: 2px; padding: 5px 0;">`;
 > > > pages.forEach(p => {
-> > >      let dotColor = p.priority == "🔴" ? "#f38ba8" : (p.priority == "🟡" ? "#f9e2af" : "#a6e3a1");
+> > >      // priority holds "1".."5" (1 = highest), never an emoji — comparing against 🔴/🟡 made every dot green.
+> > >      const prio = String(dv.array(p.priority)[0] ?? "").trim();
+> > >      let dotColor = prio === "1" ? "#f38ba8" : (prio === "2" ? "#f9e2af" : "#a6e3a1");
 > > >      const tasksOpen = p.file.tasks ? p.file.tasks.where(t => !t.completed).length : 0;
 > > >      const dueDate = p.due ? moment(p.due.toString()).format("DD.MM") : "--";
 > > > 

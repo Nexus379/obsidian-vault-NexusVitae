@@ -60,12 +60,12 @@ await app.fileManager.processFrontMatter(tp.config.active_file, (fm) => {
     if (!fm[targetProperty]) fm[targetProperty] = [];
     if (!Array.isArray(fm[targetProperty])) fm[targetProperty] = [fm[targetProperty]];
 
-    // Eintrag hinzufügen, falls noch nicht vorhanden
+    // Add the entry if it is not there yet
     if (!fm[targetProperty].includes(selected.value)) {
         fm[targetProperty].push(selected.value);
     }
 
-    // Falls ADD und Datenbank-Item -> Mengen-Variable (qty_) initialisieren
+// If ADD and a database item -> initialise the quantity variable (qty_)
     if (type === "add" && selected.isDb) {
         const safeKey = selected.value.toLowerCase().replace(/[^a-z0-9]/g, '_');
         const propertyName = `qty_${safeKey}`;

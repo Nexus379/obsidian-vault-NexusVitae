@@ -4,7 +4,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const area = tp.variables.currentArea || tp.variables.area || "";
-const icon = "🎀"; // Feste Verankerung für Pro-Craft
+const icon = "🎀"; // Fixed anchor for Pro-Craft
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -50,6 +50,7 @@ discipline: ["<%- disc %>"]
 area2: "<%- area %>"
 merchant: "<%- merchant %>"
 cost: <%- cost %>
+explore_lvl: 0blueprint
 due: <%- deadline %>
 cal0:
 stars1:
@@ -80,6 +81,8 @@ review:
 > > > **Inbox:** `INPUT[toggle:inbox]`
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
+> > > **Phase:**
+> > > `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
 ## 🎨 Crafting Blueprint
 

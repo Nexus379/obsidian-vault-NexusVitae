@@ -9,7 +9,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Fleeting
+    name: 🍂 Fleeting
     order:
       - file.name
       - status

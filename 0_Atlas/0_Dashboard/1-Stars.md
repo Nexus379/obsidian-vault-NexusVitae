@@ -15,12 +15,13 @@ banner_y: 0
 
 >[!multi-column]
 > 
-> > [!hub|wide-0] 🗺️ **ATLAS & ACTION**
+> > [!blank|wide-0]
+> > #### ✨ **NORTH STAR**
 > > 
 > > ```dataviewjs
 > > {
 > >     const chartContainer = this.container;
-> >     chartContainer.style.width = "280px";
+> >     chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >     chartContainer.style.margin = "0 auto";
 > >     
 > >     if (chartContainer.innerHTML.length < 50) {
@@ -49,7 +50,7 @@ banner_y: 0
 > >                 }]
 > >             },
 > >             options: {
-> >                 cutout: '80%', // Elegant, thin orbit
+> >                 maintainAspectRatio: false, cutout: '76%', // Elegant, thin orbit
 > >                 plugins: {
 > >                     legend: { 
 > >                         position: 'bottom', 

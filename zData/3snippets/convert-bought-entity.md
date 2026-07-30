@@ -2,20 +2,20 @@
 // 🛒 CONVERT BOUGHT ITEM TO PERMANENT ENTITY NOTE
 // Creates a new resource entity in 6_Resources/_Entities/... when bought
 
-const itemName = await tp.system.prompt("🛒 Gekauftes Item Name? (z.B. Glasreiniger)", "");
+const itemName = await tp.system.prompt("🛒 Name of the purchased item? (e.g. glass cleaner)", "");
 if (!itemName || itemName.trim() === "") return;
 
 const cleanName = itemName.trim();
 
 const categories = [
     { label: "1 🧹 Household Item", tmpl: "zData/1tmpl/6resources/sourceentities_household.md", folder: "6_Resources/_Entities/Home/Drugstore/Household" },
-    { label: "2 🥦 Ingredient / Food", tmpl: "zData/1tmpl/6resources/sourceentities_ingredients.md", folder: "6_Resources/_Entities/Nutrition/Ingredients" },
-    { label: "3 🔌 Tech & Electronics", tmpl: "zData/1tmpl/6resources/sourceentities_tech.md", folder: "6_Resources/_Entities/Electronics_Tech" },
-    { label: "4 💊 Medical / Health", tmpl: "zData/1tmpl/6resources/sourceentities_medical.md", folder: "6_Resources/_Entities/Medical" },
-    { label: "5 👕 Clothing", tmpl: "zData/1tmpl/6resources/sourceentities_clothing.md", folder: "6_Resources/_Entities/Clothing" },
-    { label: "6 🏋️ Fitness Gear", tmpl: "zData/1tmpl/6resources/sourceentities_fitness.md", folder: "6_Resources/_Entities/Fitness" },
-    { label: "7 🎨 Art & Stationery", tmpl: "zData/1tmpl/6resources/sourceentities_art.md", folder: "6_Resources/_Entities/Stationery_Art" },
-    { label: "8 ⛺ Camping Gear", tmpl: "zData/1tmpl/6resources/sourceentities_camping.md", folder: "6_Resources/_Entities/Camping_Outdoors" }
+    { label: "2 🥦 Ingredient / Food", tmpl: "zData/1tmpl/6resources/sourceentities_ingredients.md", folder: "6_Resources/_Entities/Home/Nutrition/Ingredients" },
+    { label: "3 🔌 Tech & Electronics", tmpl: "zData/1tmpl/6resources/sourceentities_tech.md", folder: "6_Resources/_Entities/Home/Electronics_Tech" },
+    { label: "4 💊 Medical / Health", tmpl: "zData/1tmpl/6resources/sourceentities_medical.md", folder: "6_Resources/_Entities/Home/Medical" },
+    { label: "5 👕 Clothing", tmpl: "zData/1tmpl/6resources/sourceentities_clothing.md", folder: "6_Resources/_Entities/Home/Clothing" },
+    { label: "6 🏋️ Fitness Gear", tmpl: "zData/1tmpl/6resources/sourceentities_fitness.md", folder: "6_Resources/_Entities/Home/Fitness" },
+    { label: "7 🎨 Art & Stationery", tmpl: "zData/1tmpl/6resources/sourceentities_art.md", folder: "6_Resources/_Entities/Home/Stationery_Art" },
+    { label: "8 ⛺ Camping Gear", tmpl: "zData/1tmpl/6resources/sourceentities_camping.md", folder: "6_Resources/_Entities/Home/Camping_Outdoors" }
 ];
 
 const catIdx = await tp.system.suggester(categories.map(c => c.label), Array.from(categories.keys()));

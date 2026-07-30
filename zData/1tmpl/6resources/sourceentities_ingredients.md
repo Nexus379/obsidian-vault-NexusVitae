@@ -44,7 +44,7 @@ persona: "alchemist"
 status: 1active
 entity_class: "ingredient"
 ingre_type: "staple_pantry"
-state: "pantry"
+storage_location: "pantry"
 qty: 0
 needs_refill: false
 shelf_life_months: 12

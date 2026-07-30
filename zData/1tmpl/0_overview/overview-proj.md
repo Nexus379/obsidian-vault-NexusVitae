@@ -9,6 +9,10 @@ cssclasses:
 
 # 🚀 Project Cockpit: [[<%- projName %>]]
 
+![[zData/5design_modul/OverviewNavigationModul]]
+
+**Create & process:** `BUTTON[t-btn]` `BUTTON[n-btn]` `BUTTON[log-plan-btn]` `BUTTON[archive]`
+
 > [!info] 🧩 Linked Project Overview & Cockpit
 
 ---

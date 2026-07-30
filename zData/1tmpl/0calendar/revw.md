@@ -169,7 +169,7 @@ const chakras = [
 // ACTUAL: sum over the week's dailyplm notes; each day's actuals are auto-pulled via the engine
 // (manual ct_ override wins per day, else the engine maps tracked time to its chakra).
 const plm = dv.pages().where(p => String(p.archtype).includes("#0cal/1plm") && p.cal_date >= start && p.cal_date <= end).array();
-const istSum = {}; chakras.forEach(ch => istSum[ch.g] = 0);
+const actualSum = {}; chakras.forEach(ch => actualSum[ch.g] = 0);
 plm.forEach(x => {
   const _xd = moment(String(x.cal_date));
   const _xip = dv.page(`0_Calendar/4_Projectlogs/Routine/${_xd.format("YYYY")}/${_xd.format("MM")}/Inpra_${_xd.format("YYYY-MM-DD")}.md`);
@@ -177,7 +177,7 @@ plm.forEach(x => {
   const act = engine ? engine.getActualChakraMinutes(Object.assign({}, x, { inpra_min_total: _xim })) : {};
   chakras.forEach(ch => {
     const manual = Number(x[ch.key]) || 0;
-    istSum[ch.g] += manual > 0 ? manual : (act[ch.g] || 0);
+    actualSum[ch.g] += manual > 0 ? manual : (act[ch.g] || 0);
   });
 });
 
@@ -191,7 +191,7 @@ if (engine && rPage && engine.getChakraMinutes) {
 }
 
 // SHARED renderer — same bars as dailyplm, only the data prep above differs (week sums vs single day).
-const rows = chakras.map(ch => ({ icon: ch.icon, label: t(ch.lkey), col: ch.col, p: planSum[ch.g] || 0, ist: istSum[ch.g] || 0 }));
+const rows = chakras.map(ch => ({ icon: ch.icon, label: t(ch.lkey), col: ch.col, plan: planSum[ch.g] || 0, actual: actualSum[ch.g] || 0 }));
 if (engine && engine.renderChakraBars) {
   const out = engine.renderChakraBars(rows, { plan: t("chakra_plan"), act: t("chakra_act"), legend: t("chakra_legend") });
   dv.paragraph(out.bars);

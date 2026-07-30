@@ -9,7 +9,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Goals
+    name: 🎯 Goals
     order:
       - file.name
       - status

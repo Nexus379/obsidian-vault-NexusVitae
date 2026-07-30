@@ -1,0 +1,226 @@
+filters:
+  and:
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/entity")
+formulas:
+  Refill: |
+    if(needs_refill == true || needs_refill == "true", "🔴 now",
+      if(qty == 0, "⚪ empty", "🟢 ok")
+    )
+  Best: |
+    if(price_cheap > 0, "🏷️ " + vendor_cheap + " " + price_cheap,
+      if(price_value > 0, "⚖️ " + vendor_value + " " + price_value,
+        if(unit_price > 0, "📦 " + unit_price, "➖")
+      )
+    )
+  Bio: |
+    if(price_pure > 0, "🌱 " + vendor_pure + " " + price_pure,
+      if(price_pure_cheap > 0, "🌱 " + vendor_pure_cheap + " " + price_pure_cheap, "➖")
+    )
+  Spread: |
+    if(price_cheap > 0, price_market - price_cheap, 0)
+properties:
+  formula.Refill:
+    displayName: 🛒 refill
+  formula.Best:
+    displayName: 🏷️ best price
+  formula.Bio:
+    displayName: 🌱 organic
+  formula.Spread:
+    displayName: 📊 spread
+  note.storage_location:
+    displayName: 📍 storage
+  note.entity_class:
+    displayName: 🏷️ kind
+  note.unit_price:
+    displayName: 💶 unit
+  note.pref_vendor:
+    displayName: ⭐ preferred
+  note.pref_price:
+    displayName: ⭐ price
+  note.pl_score:
+    displayName: ⚖️ value
+  note.qty:
+    displayName: 🔢 qty
+  note.needs_refill:
+    displayName: 🛒 refill?
+  note.min_stock:
+    displayName: 📉 min
+  note.shelf_life_months:
+    displayName: ⏳ months
+  note.brand:
+    displayName: 🏭 brand
+  note.explore_lvl:
+    displayName: 🔬 explored
+  note.nextstudy:
+    displayName: 📅 next study
+  note.subject:
+    displayName: 📚 subject
+  note.vendor_cheap:
+    displayName: 🏷️ cheap at
+  note.price_cheap:
+    displayName: 🏷️ cheap
+  note.vendor_value:
+    displayName: ⚖️ value at
+  note.price_value:
+    displayName: ⚖️ value
+  note.vendor_market:
+    displayName: 🏪 market at
+  note.price_market:
+    displayName: 🏪 market
+views:
+  - type: table
+    name: 📦 All Entities
+    order:
+      - file.name
+      - entity_class
+      - storage_location
+      - qty
+      - formula.Refill
+      - unit_price
+      - status
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 240
+      note.entity_class: 150
+      note.storage_location: 150
+      note.qty: 70
+      formula.Refill: 100
+      note.unit_price: 90
+  - type: table
+    name: 🛒 Restock
+    filters:
+      or:
+        - needs_refill == true
+        - needs_refill == "true"
+        - qty == 0
+    order:
+      - file.name
+      - formula.Refill
+      - qty
+      - min_stock
+      - storage_location
+      - formula.Best
+      - pref_vendor
+    sort:
+      - property: formula.Refill
+        direction: DESC
+      - property: min_stock
+        direction: DESC
+      - property: qty
+        direction: ASC
+    columnSize:
+      file.name: 240
+      formula.Refill: 100
+      note.qty: 70
+      note.min_stock: 70
+      note.storage_location: 150
+      formula.Best: 190
+  - type: table
+    name: 💶 Price Matrix
+    filters:
+      or:
+        - unit_price > 0
+        - price_cheap > 0
+        - price_value > 0
+    order:
+      - file.name
+      - unit_price
+      - vendor_cheap
+      - price_cheap
+      - vendor_value
+      - price_value
+      - vendor_market
+      - price_market
+      - formula.Spread
+    sort:
+      - property: price_market
+        direction: DESC
+    columnSize:
+      file.name: 220
+      note.unit_price: 80
+      note.vendor_cheap: 120
+      note.price_cheap: 80
+      note.vendor_value: 120
+      note.price_value: 80
+      note.vendor_market: 120
+      note.price_market: 80
+  - type: table
+    name: 🌱 Organic vs Cheap
+    filters:
+      or:
+        - price_pure > 0
+        - price_pure_cheap > 0
+    order:
+      - file.name
+      - formula.Best
+      - formula.Bio
+      - pref_vendor
+      - pref_price
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 240
+      formula.Best: 200
+      formula.Bio: 200
+  - type: table
+    name: ⚖️ Value Ranking
+    filters:
+      and:
+        - pl_score > 0
+    order:
+      - file.name
+      - pl_score
+      - brand
+      - unit_price
+      - entity_class
+      - status
+    sort:
+      - property: pl_score
+        direction: DESC
+    columnSize:
+      file.name: 240
+      note.pl_score: 90
+      note.brand: 140
+      note.unit_price: 90
+  - type: table
+    name: 📍 By Storage
+    order:
+      - storage_location
+      - file.name
+      - entity_class
+      - qty
+      - formula.Refill
+      - shelf_life_months
+    sort:
+      - property: storage_location
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.storage_location: 170
+      file.name: 240
+      note.entity_class: 150
+  - type: table
+    name: 🔬 Research Queue
+    filters:
+      and:
+        - explore_lvl != "5finish"
+    order:
+      - file.name
+      - explore_lvl
+      - nextstudy
+      - subject
+      - science
+      - discipline
+    sort:
+      - property: nextstudy
+        direction: ASC
+    columnSize:
+      file.name: 240
+      note.explore_lvl: 110
+      note.nextstudy: 110
+      note.subject: 140

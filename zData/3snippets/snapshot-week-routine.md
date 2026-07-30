@@ -1,8 +1,8 @@
 <%-*
 /**
  * 📸 NEXUS SNAPSHOT WEEK (Routine)
- * Kopiert die Master-Routine als EDITIERBARE Wochen-Datei nach vorn (Vorausplanung).
- * Gegenstück zum Archive-Button (rückwärts, eingefroren) — hier: vorwärts, frozen:false.
+ * Copies the master routine forward as an EDITABLE weekly file (planning ahead).
+ * Counterpart to the archive button (backwards, frozen) — here: forwards, frozen:false.
  */
 try {
     const renderWeekplan = (raw, values) => {
@@ -31,7 +31,7 @@ try {
         return out;
     };
 
-    // 1. Ziel-Woche wählen (default: erste FREIE Woche ab nächster — überspringt schon geplante)
+// 1. Pick the target week (default: the first FREE week from next — skips planned ones)
     let probe = moment().add(1, 'week');
     for (let i = 0; i < 60; i++) {
         const py = probe.format("YYYY"), pm = probe.format("MM"), pk = probe.format("WW");
@@ -52,7 +52,7 @@ try {
     if (!masterFile) { new Notice("❌ Master Routine_Timeblocking not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 
-    // 3. Zielpfad + Kollisionsschutz (eine schon geplante Woche NICHT überschreiben)
+// 3. Target path + collision guard (never overwrite an already planned week)
     const folder = `0_Calendar/7_Plan/${year}/${month}`;
     const finalDest = `${folder}/${year}-W${kw}_routine.md`;
     if (app.vault.getAbstractFileByPath(finalDest)) {
@@ -79,7 +79,7 @@ try {
     await app.vault.create(finalDest, body);
     await new Promise(r => setTimeout(r, 150));
 
-    // 5. Der eigentliche Snapshot: alle rt_* vom Master in die neue Woche kopieren
+// 5. The actual snapshot: copy every rt_* from the master into the new week
     const newFile = app.vault.getAbstractFileByPath(finalDest);
     await app.fileManager.processFrontMatter(newFile, (fm) => {
         for (const k of Object.keys(masterFm)) {

@@ -1,8 +1,8 @@
 <%-*
 /**
  * 📸 NEXUS SNAPSHOT WEEK (Fitness)
- * Kopiert die Master-Fitness-Routine als editierbare Wochen-Datei nach vorn.
- * training_week wird NICHT kopiert, sondern auto-erkannt (letzte _fitness-Woche + 1) — wie das Original.
+ * Copies the master fitness routine forward as an editable weekly file.
+ * training_week is NOT copied but auto-detected (last _fitness week + 1) — same as the original.
  */
 try {
     const renderWeekplan = (raw, values) => {
@@ -26,7 +26,7 @@ try {
         return out;
     };
 
-    // 1. Ziel-Woche wählen (default: erste FREIE Woche ab nächster — überspringt schon geplante)
+// 1. Pick the target week (default: the first FREE week from next — skips planned ones)
     let probe = moment().add(1, 'week');
     for (let i = 0; i < 60; i++) {
         const py = probe.format("YYYY"), pm = probe.format("MM"), pk = probe.format("WW");
@@ -42,12 +42,12 @@ try {
     const month = target.format("MM");
     const kw    = target.format("WW");
 
-    // 2. Master lesen (nur fit_* wird kopiert)
+// 2. Read the master (only fit_* is copied)
     const masterFile = app.vault.getAbstractFileByPath("2_Areas/3_Drive/Plan/Fitness_Routine.md");
     if (!masterFile) { new Notice("❌ Master Fitness_Routine not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 
-    // 3. training_week auto-erkennen: letzte _fitness-Woche + 1 (Fallback 1)
+// 3. Auto-detect training_week: last _fitness week + 1 (fallback 1)
     let currentWeek = 1;
     const allFit = app.vault.getMarkdownFiles().filter(f => f.name.includes("_fitness"));
     if (allFit.length > 0) {
@@ -84,7 +84,7 @@ try {
     await app.vault.create(finalDest, body);
     await new Promise(r => setTimeout(r, 150));
 
-    // 6. Snapshot: fit_* vom Master kopieren, training_week = auto-erkannt
+    // 6. Snapshot: copy fit_ fields from the master, training_week = auto-detected
     const newFile = app.vault.getAbstractFileByPath(finalDest);
     await app.fileManager.processFrontMatter(newFile, (fm) => {
         for (const k of Object.keys(masterFm)) {

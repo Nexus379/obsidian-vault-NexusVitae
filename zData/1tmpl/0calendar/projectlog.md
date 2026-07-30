@@ -3,93 +3,93 @@
 const dv = app.plugins.plugins.dataview?.api;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 
-// 🎯 FIX: Übernimmt das Datum aus dem Dateinamen (falls manuell gesetzt), 
-// bevor es auf das heutige Datum zurückfällt!
+// 🎯 FIX: takes the date from the file name (when set by hand),
+// before it falls back to the date of today
 const matchDate = tp.file.title.match(/^\d{4}-\d{2}-\d{2}/);
 const dateStr = tp.variables.targetDate || (matchDate ? matchDate[0] : tp.date.now("YYYY-MM-DD"));
 const [yy, mm] = dateStr.split("-");
 
-// 🔱 2. PROJECT LINK & DYNAMIC SELECTOR (Mit Fallbacks & Router-Sync)
+// 🔱 2. PROJECT LINK & DYNAMIC SELECTOR (with fallbacks and router sync)
 let logConnect = (tp.variables && tp.variables.logConnect) ? tp.variables.logConnect : "";
 let displayTitle = (tp.variables && tp.variables.displayTitle) ? tp.variables.displayTitle : "";
 
-// NEXUS-SYNC: Fängt den sauberen Namen aus dem Router auf
+// NEXUS SYNC: catches the clean name coming from the router
 if (!displayTitle && tp.variables && tp.variables.title && !tp.variables.title.includes(defaultName)) {
     displayTitle = tp.variables.title;
 }
 
-let selStat = "1_Active"; // Standard-Fallback
+// The status is read from the project's FRONTMATTER, never from its path — 3_Projects is
+// flat, so a status change never moves a folder. These are the values the project
+// templates and Projects.base use.
+const STAT_LABELS = ["⚡ Active", "💤 Passive", "☁️ Idea", "🔄 Recurring"];
+const STAT_VALS = ["1active", "2passive", "3idea", "0recurring"];
+
+let selStat = "1active"; // default fallback
 let needsPrompt = true;
 
-// 🚀 SMART PATH DETECTION: Prüft, ob die Datei manuell direkt in einem Projekt-Ordner erstellt wurde
+// 🚀 SMART PATH DETECTION: was this file created directly inside a project folder?
 const currentFolderPath = tp.file.folder(true);
-const pathMatch = currentFolderPath.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)\/([^/]+)/);
+const pathMatch = currentFolderPath.match(/3_Projects\/([^/]+)/);
 
 if (pathMatch) {
-    // Ordner erkannt! Wir nehmen Status und Name direkt aus dem Dateipfad
-    selStat = pathMatch[1];
-    displayTitle = pathMatch[2];
+    // Folder recognised — the name comes from the path, the status from the project note.
+    displayTitle = pathMatch[1];
+    const proj = dv ? dv.pages('"3_Projects"').where(p => String(p.arch ?? "").includes("#3project") && p.file.name === displayTitle).first() : null;
+    selStat = (proj && proj.status) ? String(proj.status) : "1active";
     needsPrompt = false;
-} 
-// FALL A: DER ROUTER HAT SCHON EIN PROJEKT ÜBERGEBEN
+}
+// CASE A: the router already handed over a project
 else if (displayTitle && displayTitle !== "Unlinked" && !displayTitle.includes(defaultName) && displayTitle !== "") {
     const existingProj = dv
         ? dv.pages('"3_Projects"')
-            .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/") && p.file.name === displayTitle)
+            .where(p => String(p.arch ?? "").includes("#3project") && p.file.name === displayTitle)
             .first()
         : null;
-    if (existingProj) {
-        let match = existingProj.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
-        selStat = match ? match[1] : "1_Active";
+    if (existingProj && existingProj.status) {
+        selStat = String(existingProj.status);
     } else {
-        const statLabels = ["🟢 1_Active", "🟡 2_Passive", "💡 3_Idea", "🔄 0_Recurring"];
-        const statFolders = ["1_Active", "2_Passive", "3_Idea", "0_Recurring"];
-        selStat = await tp.system.suggester(statLabels, statFolders, false, `🚦 Status for Router-Project '${displayTitle}'?`) || "1_Active";
+        selStat = await tp.system.suggester(STAT_LABELS, STAT_VALS, false, `🚦 Status for router project '${displayTitle}'?`) || "1active";
     }
     needsPrompt = false;
 }
 
-// FALL B: ES GIBT NOCH KEIN PROJEKT (Das Dataview-Dropdown startet)
+// CASE B: no project known yet — offer the list
 if (needsPrompt) {
-    const projs = dv ? dv.pages('"3_Projects"').where(p => !p.file.path.includes("/Logs/")).sort(p => p.file.mtime, "desc") : [];
+    const projs = dv ? dv.pages('"3_Projects"').where(p => String(p.arch ?? "").includes("#3project")).sort(p => p.file.mtime, "desc") : [];
     const projOptions = ["➕ ✨ Create New Project"];
     const projPaths = ["NEW"];
 
     for (let p of projs) {
-        let match = p.file.path.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
-        let stat = match ? match[1] : "1_Active";
+        const stat = p.status ? String(p.status) : "1active";
         projOptions.push(`🧩 ${p.file.name} (${stat})`);
         projPaths.push(`${p.file.name}|${stat}`);
     }
 
     const pick = await tp.system.suggester(projOptions, projPaths, false, "🔗 Select Project or Create New:");
-    
-    if (!pick) { 
+
+    if (!pick) {
         displayTitle = await tp.system.prompt("📝 Project Name? (Manual Fallback)", "General") || "General";
-        selStat = "1_Active";
+        selStat = "1active";
     } else if (pick === "NEW") {
         displayTitle = await tp.system.prompt("📝 Name of the NEW Project?", "New Project") || "New Project";
-        const statLabels = ["🟢 1_Active", "🟡 2_Passive", "💡 3_Idea", "🔄 0_Recurring"];
-        const statFolders = ["1_Active", "2_Passive", "3_Idea", "0_Recurring"];
-        selStat = await tp.system.suggester(statLabels, statFolders, false, "🚦 Initial Project Status?") || "1_Active";
+        selStat = await tp.system.suggester(STAT_LABELS, STAT_VALS, false, "🚦 Initial Project Status?") || "1active";
     } else {
         const parts = pick.split("|");
-        displayTitle = parts[0];  
-        selStat = parts[1];       
+        displayTitle = parts[0];
+        selStat = parts[1];
     }
 }
 
-// 🛡️ SICHERHEIT: Entfernt illegale Zeichen aus dem Titel, damit die Ordner-Erstellung nicht crasht
+// 🛡️ SAFETY: strips illegal characters from the title so folder creation cannot crash
 displayTitle = displayTitle.replace(/[\\/:"*?<>|]+/g, "-").trim();
 
-// 🔱 3. VARIABLEN ZUSAMMENFÜHREN
+// 🔱 3. MERGE THE VARIABLES
 if (!logConnect || logConnect === "[[Unlinked]]" || logConnect === "") {
     logConnect = `[[${displayTitle}]]`;
 }
 
-// YAML-Tag generieren
-const statTagsMap = { "1_Active": "1active", "2_Passive": "2passive", "3_Idea": "3idea", "0_Recurring": "0recurring", "4_Archive": "4archive" };
-const finalStatus = statTagsMap[selStat] || "1active";
+// selStat already holds the frontmatter value — no folder-name mapping needed any more.
+const finalStatus = STAT_VALS.includes(selStat) ? selStat : "1active";
 
 // 🔱 4. THE ONLY REAL PROMPT (Your "this")
 let focus_LOG = await tp.system.prompt(`🎯Focus in '${displayTitle}'?`, "Work Step");
@@ -118,21 +118,23 @@ const dIcon = discData.icon || "📝";
 const sciTag   = discData.sci || ["#sci/General"];
 
 // 🔱 5.1 FLEX-TAGGING
-const axisMap = { "PLM": "1selfcare", "PPM": "4organize", "PKM": "3mind" };
+const axisMap = { "PLM": "1selfcare", "PPM": "3drive", "PKM": "6mind" };
 const areaBase = tp.variables.ARCH?.a?.tag || "#2area";
 const areaTag = axisMap[pArea] ? `${areaBase}/${axisMap[pArea]}` : `${areaBase}/unknown`;
  
-// 🔱 6. PATH LOGISTICS & RENAME (Die neue Weiche)
-let targetFolder = "";
-
-// WEICHE: Ist es ein echtes Projekt oder nur ein allgemeines Log ("General")?
-if (displayTitle === "General" || displayTitle === "Unlinked") {
-    const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
-    targetFolder = `${baseCal}/4_Projectlogs/${yy}/${displayTitle}/${mm}`;
-} else {
-    // 🎯 DAS NEUE PARA-SYSTEM GREIFT HIER
-    targetFolder = `3_Projects/${selStat}/${displayTitle}/Logs/${yy}/${mm}`;
-}
+// 🔱 6. PATH LOGISTICS & RENAME
+//
+// Every log lands in the calendar — GTD-clean, because a log is a time thing, not a
+// project artefact. The project folder holds the project note and its cockpit; the
+// cockpit is what gathers this project's logs, protocols, tasks and notes.
+//
+// This used to branch: a real project wrote to 3_Projects/<status>/<Project>/Logs/,
+// which put time things inside the PARA tree and made the cockpit pointless.
+//
+// Order is name → year → month, the same as the routine logs
+// (4_Projectlogs/Routine/YYYY/MM), so every log folder reads the same way.
+const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
+const targetFolder = `${baseCal}/4_Projectlogs/${displayTitle}/${yy}/${mm}`;
 
 // Ensure folder structure
 let currentPath = "";

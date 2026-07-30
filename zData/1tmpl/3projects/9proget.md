@@ -24,13 +24,13 @@ const gOptions = ["💼 Revenue Stream / Contract", "🤝 Sponsorship / Grant", 
 const gValues  = ["income", "sponsor", "gift", "windfall"];
 let gainType = await tp.system.suggester(gOptions, gValues, false, "✨ What kind of pure gain project is this?") || "income";
 
-// Item-Abfrage (sinnvoll bei Geschenken oder Sach-Sponsoring)
+// Item prompt (useful for gifts or in-kind sponsoring)
 let item = "";
 if (gainType === "gift" || gainType === "sponsor") {
     item = await tp.system.prompt("🎁/🤝 What is the item/asset? (Leave blank if pure money)", "");
 }
 
-// WICHTIG: Hier nutzen wir deine exakte Variable 'payee'
+// IMPORTANT: this uses your exact variable "payee"
 let payee = await tp.system.prompt("👤 From whom (Payee/Giver)?", "Name/Company");
 let amount = await tp.system.prompt("💰 Expected Value/Amount?", "0.00");
 let account = await tp.system.suggester(["🏦 Bank", "🔵 PayPal", "💵 Cash", "💎 Physical Asset"], ["Bank", "PayPal", "Cash", "Physical"]) || "TBD";
@@ -54,6 +54,7 @@ gain_type: "<%- gainType %>"
 status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "1"
+explore_lvl: 0blueprint
 due: <%- deadline %>
 amount: <%- amount %>
 item: "<%- item %>"
@@ -86,6 +87,8 @@ review:
 > > > **Inbox:** `INPUT[toggle:inbox]`
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
+> > > **Phase:**
+> > > `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
 > [!success] Pure Gain Project (Horizon 1) - <%- gainType %>
 > **From (Payee):** `<%- payee %>` | **Expected**: `<%- amount %> €`

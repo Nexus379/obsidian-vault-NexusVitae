@@ -16,7 +16,7 @@ if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
 }
 if (!title || title.trim() === "") title = "Get-" + tp.date.now("HH-mm");
 
-// Physisches Umbenennen für Stabilität
+// Physical rename for stability
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); 
@@ -27,18 +27,18 @@ const gOptions = ["💼 Income / Salary", "🎁 Present / Gift", "🤝 Sponsorsh
 const gValues  = ["income", "gift", "sponsor", "windfall"];
 let gainType = await tp.system.suggester(gOptions, gValues, false, "✨ What kind of pure gain is this?") || "income";
 
-// NEU: Item-Abfrage (nur wenn es ein Geschenk ist)
+// New: ask for the item (only when it is a present)
 let item = "";
 if (gainType === "gift") {
     item = await tp.system.prompt("🎁 What is the item/present?", "Description of the item");
 }
 
-// KORREKTUR: Die Systemvariable ist und bleibt 'payee'
+// Correction: the system variable is and stays "payee"
 let payee = await tp.system.prompt("👤 From whom (Payee/Source)?", "Name/Company");
 let amount = await tp.system.prompt("💰 Expected Value/Amount?", "0.00");
 let account = await tp.system.suggester(["🏦 Bank", "🔵 PayPal", "💵 Cash", "💎 Physical Asset (No Bank)"], ["Bank", "PayPal", "Cash", "Physical"]) || "TBD";
 
-// 🔱 4. CLEANING (Entfernt Trigger wie 7toget- oder g-)
+// 🔱 4. CLEANING (strips triggers such as 7toget- or g-)
 let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(9toget-|g-|t-|4task-)/i, "").trim();
 
 tR += "---"  

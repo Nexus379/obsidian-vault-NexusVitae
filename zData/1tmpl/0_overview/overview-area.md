@@ -9,6 +9,10 @@ cssclasses:
 
 # 🏔️ Area Cockpit: [[<%- areaName %>]]
 
+![[zData/5design_modul/OverviewNavigationModul]]
+
+**Anlegen & verarbeiten:** `BUTTON[a-btn]` `BUTTON[p-btn]` `BUTTON[t-btn]` `BUTTON[n-btn]`
+
 > [!info] 💠 Linked Area Overview & Cockpit
 
 ---

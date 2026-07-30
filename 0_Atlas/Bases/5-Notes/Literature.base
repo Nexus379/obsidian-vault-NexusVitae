@@ -9,7 +9,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Literature
+    name: 📘 Literature
     order:
       - file.name
       - status

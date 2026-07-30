@@ -91,7 +91,7 @@ child:
 summary:
 review:
 # 🔱 Meta Bind Texts (Use comma separation for multiple entries)
-author: ""
+creator: ""
 original_title: ""
 publisher: ""
 pub_date: ""
@@ -117,7 +117,7 @@ chapter: ""
 > > > **Science:** `$= dv.current().science`
 > > > 
 > > > **Author:** 
-> > > `INPUT[inlineList:author]` 
+> > > `INPUT[inlineList:creator]` 
 > > > 
 > > > **DOI:** [Link via DOI](https://doi.org/<%- doi %>)
 

@@ -30659,7 +30659,7 @@
       "unit_price": 1.5,
       "unit_type": "100g",
       "label": "Chamomile Tea",
-      "icon": "ðŸŒ¼",
+      "icon": "🌼",
       "val": {
         "caffeine": 0
       },
@@ -30671,9 +30671,9 @@
         ]
       },
       "props": [
-        "Hellt Haare in der Sonne natÃ¼rlich auf",
+        "Hellt Haare in der Sonne natürlich auf",
         "Beruhigt gereizte Kopfhaut",
-        "EntzÃ¼ndungshemmend beim Trinken"
+        "Entzündungshemmend beim Trinken"
       ],
       "lang": {
         "de": "Kamillentee",

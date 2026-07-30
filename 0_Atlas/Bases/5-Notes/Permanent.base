@@ -1,7 +1,7 @@
 filters:
   and:
     - arch.contains("#5note")
-    - archtype.contains("#5note/3permanent")
+    - archtype.contains("#5note/4permanent")
     - inbox != true
     - status != "archive"
     - status != "archived"
@@ -9,7 +9,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Permanent
+    name: 📜 Permanent
     order:
       - LID
       - file.name

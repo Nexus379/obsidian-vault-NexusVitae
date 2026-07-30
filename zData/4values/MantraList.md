@@ -1,0 +1,395 @@
+# 🧘 Mantra List
+- I am. 🌌
+- So hum. (I am that.) 🕉️
+- Om shanti, shanti, shanti. ✨
+- I am whole, I am healed, I am free. 🕊️
+- Breathing in, I calm myself. Breathing out, I smile. 🌬️
+- I am rooted. I am rising. 🌳
+- Peace begins with me. 🙏
+- I am the stillness beneath the storm. 🌊
+- I am light. I am love. I am limitless. ✨
+- Let there be peace, and let it begin with me. 🌍
+- I am here. I am now. I am enough. 💛
+- I release. I renew. I return to myself. 🍃
+- With every breath, I am becoming. 🌬️
+- I am the peace I am looking for. 🧘
+- Sat chit ananda. (Truth, consciousness, bliss.) 🌸
+- I soften. I open. I trust. 🌺
+- Love is all there is. ❤️
+- I am grounded in this moment. 🌱
+- I breathe in life. I breathe out love. 🫁
+- All is well. All is whole. All is one. 🌙
+- I am divinely guided. 🌟
+- I am the silence between the thoughts. 🤍
+- Gate gate pāragate. (Gone, gone, gone beyond.) 🛸
+- I am returning to myself. 🌀
+- In this breath, I am home. 🏡
+- I surrender to what is. 🌊
+- I am infinite. ♾️
+- I am rooted in strength and open in heart. 🌳
+- I am loved, I am loving, I am love. ❤️
+- Stillness is my superpower. 🧘
+- I rise. I shine. I am. 🌅
+- My heart is a sanctuary. 🏡
+- I am the calm in every storm. 🌊
+- Strength flows through me like a river. 💪
+- I am worthy of deep, boundless love. 🌸
+- In stillness, I find all answers. 🌙
+- I carry courage in every breath. 🔥
+- Love is my nature. Love is my guide. ❤️
+- I am gentle with myself and powerful in the world. 🌿
+- I am unshakeable. 🪨
+- My heart is always open. 🚪
+- I am a vessel of infinite peace. 🫧
+- I breathe in strength, I breathe out doubt. 🌬️
+- I love deeply, fully, freely. 💛
+- Silence restores me. Stillness holds me. 🤍
+- I am fiercer than my fears. 🦁
+- Love flows through me effortlessly. 🌊
+- I return to calm, again and again. 🔄
+- I am a warrior of light. 🌟
+- My love heals everything it touches. 🩹
+- I am held by the universe. 🌌
+- I am bold. I am bright. I am brave. ⚡
+- My presence is a gift to the world. 🎁
+- I am peaceful in my power. ⚖️
+- I give love freely and receive it fully. 🫂
+- Calm is my nature, strength is my foundation. 🏔️
+- I am awake. I am alive. I am grateful. 🙏
+- I am an unstoppable force of quiet strength. 🌊
+- Love multiplies wherever I go. ✨
+- I am a mountain — still, steady, eternal. 🏔️
+- My soul overflows with warmth and grace. 🌺
+- I am protected. I am guided. I am never alone. 🌙
+- I lead with love in all that I do. 💫
+- My breath is my anchor. 🪝
+- I am a magnet for love, peace, and abundance. 🧲
+- I stand tall in my truth. 🌲
+- Every heartbeat is a reminder of my strength. 💗
+- I trust the love that lives inside me. 🌸
+- The universe conspires in my favor. 🌌
+- I am vast. I am open. I am free. 🦋
+- With every inhale, I receive. With every exhale, I release. 🌬️
+- I am the love I have been searching for. ❤️‍🔥
+- Rooted like a tree, fluid like water, bright like fire. 🌊🔥🌿
+- I am fully alive in this moment. ⚡
+- Grace is my guide. Love is my language. ✨
+- I am everything I need. I am home. 🏡
+- I am a soul on a sacred journey. 🛤️
+- My roots go deep, my branches reach high. 🌳
+- I radiate what I wish to receive. ☀️
+- I am the author of my own becoming. ✍️
+- I walk in beauty, I walk in grace. 🌺
+- Every cell of my body is alive with possibility. ⚡
+- I soften into the truth of who I am. 🌸
+- I am woven from stardust and intention. 🌌
+- My spirit is resilient, my heart is wide open. 🦅
+- I choose presence over perfection. 🍵
+- I am a living prayer. 🙏
+- Love is the ground beneath my feet. ❤️
+- I move through life with ease and flow. 🌊
+- I am a lighthouse in my own storm. 🕯️
+- My inner world creates my outer world. 🌍
+- I am becoming more myself every single day. 🌱
+- I hold space for my own healing. 🩻
+- I am as vast as the ocean, as still as the deep. 🌊
+- My strength is quiet and unshakeable. 🪨
+- I breathe and the universe breathes with me. 🌬️
+- I am home in my own skin. 🏡
+- I let love lead. Always. ❤️‍🔥
+- I trust the mystery of my own unfolding. 🌀
+- I am present, I am powerful, I am peace. ✨
+- My soul knows the way. 🧭
+- I bloom in my own sacred time. 🌸
+- I am a channel for something greater than me. 🌟
+- Every moment I choose love, I choose freedom. 🦋
+- I am aligned with my highest self. 👑
+- The universe holds me. I let go. 🌌
+- I am made of ancient light. 🌟
+- My heart knows what my mind cannot yet see. 🌙
+- I am the stillness that holds everything together. 🤍
+- I breathe, therefore I belong. 🌬️
+- I walk gently and leave love behind. 🌸
+- I am boundless. I am timeless. I am free. ♾️
+- My wounds are sacred, my healing is holy. 🩹
+- I choose depth over distraction. 🌊
+- I am at one with all that is. 🕉️
+- My presence alone is powerful. ⚡
+- I honor the wisdom within me. 🦉
+- I am a thread in the fabric of all life. 🌿
+- I return to love, over and over again. ❤️
+- I trust the silence as much as the song. 🎶
+- My soul is older than my fears. 🌌
+- I am enough, right now, in this breath. 🌬️
+- I carry light into every room I enter. 🕯️
+- I release and I rise. 🎈
+- My joy is an act of courage. 🌻
+- I am deeply, completely, divinely whole. 🌕
+- The universe speaks to me in quiet moments. 🤫
+- I am anchored in love and lifted by grace. ⚓
+- I welcome all of myself — shadow and light. 🌗
+- I am a miracle in motion. ✨
+- My path unfolds perfectly in divine timing. 🌀
+- I give myself permission to be at peace. 🌿
+- I am the love that never runs out. ❤️‍🔥
+- I trust what I cannot yet understand. 🧭
+- I am forever becoming, never unfinished. 🌱
+- In me, the universe knows itself. 🌌
+- I am the eye of my own storm. 🌀
+- My heart is a compass, and love is true north. 🧭
+- I dissolve into the infinite and return whole. 🌌
+- I am held, even when I feel alone. 🫂
+- My breath is a bridge between earth and sky. 🌬️
+- I move slowly and arrive everywhere. 🐢
+- I am a living expression of the divine. 🕊️
+- I choose to bloom even in the dark. 🌑🌸
+- I am beyond my story. ✨
+- My light is not diminished by another's brightness. 🌟
+- I surrender, and in surrendering, I find strength. 🏳️
+- I am woven into the heartbeat of the universe. 💓
+- My silence speaks louder than my worries. 🤫
+- I am a river — always moving, always clear. 🌊
+- I meet myself with compassion, every single time. 🩹
+- The deeper I go within, the more I find. 🌿
+- I am the prayer and the answer. 🙏
+- I carry the stars within me. 🌠
+- My love is a force that nothing can contain. ❤️‍🔥
+- I breathe in grace, I exhale everything else. 🌬️
+- I am sacred ground. 🌍
+- Every ending in me births a new beginning. 🔄
+- I am the seeker and the destination. 🛤️
+- I trust what grows slowly. 🌱
+- I am in harmony with all of life. 🎶
+- Nothing is lost. Everything transforms. 🦋
+- I am awake to the miracle of this moment. ⚡
+- My soul is at ease in its own company. 🧘
+- I am the love the world has always needed. ❤️
+- I rest in the arms of the infinite. 🌙
+- I am the dawn after every dark night. 🌅
+- My heart beats in rhythm with the universe. 💓
+- I am vast enough to hold my own pain. 🌌
+- I walk in the direction of my dreams. 🛤️
+- I am a spark of the eternal flame. 🔥
+- My spirit is untameable and free. 🦅
+- I breathe in possibility, I breathe out limitation. 🌬️
+- I am the gardener of my own soul. 🪴
+- Every wave of emotion passes through me safely. 🌊
+- I am a sanctuary for my own being. 🏡
+- My mind is a clear, still lake. 🪞
+- I am worthy of the beauty I seek. 🌸
+- I forgive, I release, I move forward. 🕊️
+- I am more than the sum of my experiences. ✨
+- My path is lit from within. 🕯️
+- I am the grace I have been praying for. 🙏
+- I step forward, and the path appears. 👣
+- I am infinite potential in human form. ♾️
+- Love is my oxygen. ❤️
+- I am a child of the cosmos. 🌌
+- My inner silence is louder than the world's noise. 🤫
+- I grow through every season of my life. 🍂🌸❄️🌞
+- I am sovereign over my own energy. 👑
+- I receive with an open and grateful heart. 🤲
+- My soul is eternally at rest. 🌙
+- I honor every version of myself that got me here. 🪞
+- I am a sacred being on a sacred path. 🛤️
+- My love is ancient and without end. ❤️‍🔥
+- I am soft and I am strong. 🌸🪨
+- Every inhale is a new beginning. 🌬️
+- I am the stillness beneath all movement. 🌊
+- I trust the depth of my own knowing. 🧭
+- I am whole in this very moment. 🌕
+- My spirit dances freely. 🕊️
+- I draw wisdom from every experience. 🦉
+- I am divinely timed and perfectly placed. ⏳
+- My energy is a gift to the world. ✨
+- I am open, I am ready, I am willing. 🚪
+- I carry peace wherever I go. 🌿
+- My soul does not age; it deepens. 🌊
+- I am the quiet center of my existence. 🧘
+- I forgive the past and bless the future. 🌅
+- I am a vessel of universal love. 🫧
+- My purpose is unfolding beautifully. 🌸
+- I am fully present in this sacred now. 📍
+- My mind rests in its own nature. 🌙
+- I am gentle, I am fierce, I am whole. 🌗
+- The world is better because I am in it. 🌍
+- I create space for miracles to enter. 🚪
+- My heart is brave enough to stay open. ❤️
+- I am always exactly where I need to be. 📍
+- I release all that dims my light. 🌟
+- I am an expression of pure consciousness. 🌌
+- My healing ripples out into the world. 🌊
+- I am connected to the wisdom of all ages. 📚
+- I breathe love into every corner of my being. ❤️
+- I am alive to the wonder of existence. ⚡
+- My soul speaks and I listen. 👂
+- I am deserving of deep rest and renewal. 🛋️
+- Every day I grow more into myself. 🌱
+- I am rooted in love and rising in grace. 🌳
+- My inner world is rich and luminous. 🌟
+- I am a blessing to all I encounter. 🙏
+- I hold the universe gently in my awareness. 🌌
+- My breath is my most faithful companion. 🌬️
+- I am the love that never leaves. ❤️
+- I trust the beauty of my becoming. 🦋
+- My spirit knows no boundaries. 🌅
+- I am always finding my way home. 🏡
+- I release judgment and embrace understanding. 🕊️
+- I am the morning and the stillness it brings. 🌅
+- My heart is a garden in eternal bloom. 🌺
+- I am aligned with the pulse of life itself. 💓
+- I welcome all that is meant for me. 🤲
+- My being radiates calm and clarity. ☀️
+- I am a keeper of my own sacred flame. 🔥
+- I trust the river of my life. 🌊
+- I am peace walking on two feet. 🧘
+- My truth is my greatest compass. 🧭
+- I am woven from wonder. ✨
+- I breathe and the world breathes with me. 🌬️
+- My love is a healing force. 🩹
+- I am free from all that no longer serves me. 🎈
+- I am in perfect harmony with myself. 🎶
+- My soul is nourished by stillness. 🍵
+- I trust the unfolding of my life completely. 🌀
+- I am luminous from the inside out. 🌟
+- My heart leads and I follow willingly. ❤️
+- I am grounded in the present, open to the infinite. 🌿
+- I am the miracle I have been waiting for. ✨
+- My peace is not dependent on the world outside. 🏡
+- I honor my body as a sacred temple. 🏛️
+- I am a wave of the infinite ocean. 🌊
+- My spirit is nourished by love and silence. 🌙
+- I am forever held in the arms of grace. 🤍
+- I choose compassion for myself above all. 🌸
+- My soul is a lantern in the night. 🕯️
+- I am the living answer to my own prayers. 🙏
+- I breathe beauty into every moment. 🌺
+- I am the deep breath before the storm and after it. 🌬️
+- My soul remembers its own wholeness. 🌕
+- I am rooted in the wisdom of my ancestors. 🌳
+- Every cell of my being vibrates with life. ⚡
+- I am a reflection of all that is beautiful. 🪞
+- My inner light cannot be extinguished. 🕯️
+- I am the space where healing happens. 🩹
+- My love is a river that never runs dry. 🌊
+- I am awake to the magic of the ordinary. 🪄
+- My spirit is ancient, my heart is new. 🌅
+- I am one with the rhythm of the earth. 🌍
+- My mind is a clear sky, thoughts are passing clouds. ☁️
+- I am sovereign in my own stillness. 👑
+- Every breath connects me to all of life. 🌬️
+- I am grounded, I am grateful, I am grace. 🙏
+- My heart expands with every act of love. ❤️
+- I am a living embodiment of peace. 🕊️
+- My truth shines brightly and without apology. 🌟
+- I am at home in the unknown. 🌌
+- My soul is a sacred, untouchable space. 🏛️
+- I am eternally connected to all living things. 🌿
+- My healing is not linear, and that is beautiful. 🌀
+- I am a force of nature, gentle and unstoppable. 🌊
+- My heart knows the language of the universe. 💓
+- I am worthy of every good thing. 💛
+- My spirit rises with the sun every morning. 🌅
+- I am the love I give, reflected back to me. 🪞
+- Every moment of stillness restores me. 🍵
+- I am fully, deeply, beautifully alive. ⚡
+- My journey is my greatest teacher. 🛤️
+- I am open to being transformed by love. 🦋
+- My strength is rooted in surrender. 🌊
+- I am a bridge between the earth and the stars. 🌌
+- My heart beats in service to something greater. 💓
+- I am the silence that heals. 🤫
+- My light is needed exactly where I am. 🕯️
+- I am returning to myself with every breath. 🌬️
+- My joy is sacred and deeply deserved. 🌻
+- I am a co-creator with the universe. 🌌
+- My presence ripples out further than I know. 🌊
+- I am held in perfect, divine love. ❤️
+- My spirit is free in all directions. 🦅
+- I am the peace the world is longing for. 🕊️
+- My inner wisdom always knows the way. 🧭
+- I am open to receiving beyond what I can imagine. 🤲
+- My soul's language is love. ❤️‍🔥
+- I am nourished by the beauty around me. 🌸
+- My light grows brighter with every breath. 🌟
+- I am a living act of gratitude. 🙏
+- My energy is pure, clear, and powerful. ⚡
+- I am the answer to my own longing. ✨
+- My love knows no beginning and no end. ❤️
+- I am at peace with the pace of my life. 🐢
+- My spirit is a song the universe is singing. 🎶
+- I am free to be exactly who I am. 🦋
+- My body is wise and I honor its wisdom. 🌿
+- I am in sacred dialogue with life itself. 🕉️
+- My heart is a compass always pointing toward truth. 🧭
+- I am woven from love, light, and endless grace. ✨
+- My path is blessed and divinely guided. 🌟
+- I am the depth of the ocean, the height of the sky. 🌊🌌
+- My silence holds more than words ever could. 🤍
+- I am the warmth of the sun on a cold morning. ☀️
+- My soul is singing, even in the silence. 🎶
+- I am anchored in love, set free by grace. ⚓
+- My becoming is a beautiful, endless unfolding. 🌸
+- I am home within myself, always and forever. 🏡
+- My love transforms everything it touches. ❤️‍🔥
+- I am breathing the same air as all who ever lived. 🌬️
+- My spirit knows no fear, only love. 🕊️
+- I am the serenity I have always sought. 🧘
+- My heart is brave, wide open, and unafraid. ❤️
+- I am a new beginning with every sunrise. 🌅
+- My light is ancient. My love is eternal. ✨
+- I am held by something vast and unseen. 🌌
+- My soul blooms in the soil of stillness. 🌸
+- I am in perfect communion with all of life. 🌍
+- My every breath is an act of faith. 🌬️
+- I am a prayer made flesh. 🙏
+- My heart is the most sacred place I know. ❤️
+- I am the calm that precedes every miracle. 🌊
+- My spirit expands beyond all I can perceive. 🌌
+- I am the love that holds the world together. ❤️
+- My existence is a gift I choose to unwrap daily. 🎁
+- I am deeply seen by the universe. 🌟
+- My joy is a revolution. 🌻
+- I am a guardian of my own sacred energy. 🛡️
+- My roots hold me while my soul soars. 🦅
+- I am the living pulse of creation itself. 💓
+- My compassion begins with me. 🌸
+- I am beyond all limitation, in all directions. ♾️
+- My spirit is at play in the field of existence. 🌿
+- I am grateful for the miracle of being alive. 🙏
+- My heart is forever expanding into love. ❤️
+- I am the universe experiencing itself through me. 🌌
+- My breath is a homecoming, every single time. 🏡
+- I am light remembering itself. ✨
+- My love is the most powerful force I possess. ❤️‍🔥
+- I am, and that is enough. 🌕
+- Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present. 🎁
+- Quiet the mind, and the soul will speak. 🕊️
+- What you seek is seeking you. ✨
+- The soul always knows what to do to heal itself. 🩹
+- Clarity of mind leads to magic in the world. ✨
+- Breathe in the future, breathe out the past. 🌬️
+- Your energy introduces you before you even speak. ✨
+- Order in the system, freedom in the mind. 🔱
+- Deep breath. Your system is ready. You are ready. 🌌
+- My attention is my most valuable currency. I spend it wisely. ⚖️
+- Faith is taking the first step even when you don't see the whole staircase. 👣
+- Magic happens when you don't give up. 🪄
+- Let your light shine so bright that others can see their way out of the dark. 🕯️
+- A grateful heart is a magnet for miracles. ✨
+- I honor my own pace; I am not in a race. 🐢
+- Not every thought is a command; some are just warnings. ⚠️
+- Your energy is a battery. Close the background apps. 🔋
+- I am the sky; everything else is just the weather. ☁️
+- Growth is a spiral, not a straight line. 🌀
+- Starve your distractions, feed your focus. 🦅
+- Stop shrinking to fit in places you've outgrown. 🦋
+- Forgive yourself for not knowing what you didn't know. 🩹
+- If it costs you your peace, it is too expensive. 💳
+- Worrying is suffering twice. ⏳
+- I have survived 100% of my bad days. 🏆
+- The obstacle is the way. 🧗
+- I am not my thoughts; I am the observer of my thoughts. 👁️
+- My mind is still, my heart is open. 🪷
+- Peace is my baseline, not my destination. 🌊
+- Stillness speaks. 🤫

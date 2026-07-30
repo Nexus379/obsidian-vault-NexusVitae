@@ -70,7 +70,7 @@ function planPaths() {
         sr: {
             key: "sr",
             label: "Spaced Repetition",
-            icon: "ðŸ§ ",
+            icon: "🧠",
             behavior: "fallback",
             masterPath: "2_Areas/6_Mind/Plan/Spaced_Repetition",
             weeklyPrefix: "srs",
@@ -79,7 +79,7 @@ function planPaths() {
         wd: {
             key: "wd",
             label: "Vestis",
-            icon: "ðŸ‘—",
+            icon: "👗",
             behavior: "fallback",
             masterPath: "2_Areas/1_Selfcare/Plan/Vestis",
             weeklyPrefix: "vestis",
@@ -88,7 +88,7 @@ function planPaths() {
         st: {
             key: "st",
             label: "Study",
-            icon: "ðŸ“š",
+            icon: "📚",
             behavior: "fallback",
             masterPath: "2_Areas/6_Mind/Plan/Study_Plan",
             weeklyPrefix: "study",

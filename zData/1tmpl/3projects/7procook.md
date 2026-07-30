@@ -4,7 +4,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const area = tp.variables.currentArea || tp.variables.area || "";
-const icon = "🍜"; // Feste Verankerung für Pro-Cook
+const icon = "🍜"; // Fixed anchor for Pro-Cook
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -21,7 +21,7 @@ if (tp.file.title !== title) {
     await new Promise(r => setTimeout(r, 200)); 
 }
 
-// 🔱 3. COOK SPECIFICS (Amount bleibt für Ernährung frei!)
+// 🔱 3. COOK SPECIFICS (amount stays free for nutrition!)
 let merchant = await tp.system.prompt("🛒 Grocery Store / Merchant?", "Local Market/Supermarket");
 let cost     = await tp.system.prompt("💰 Estimated Cost (Money)?", "0.00");
 let amount   = await tp.system.prompt("⚖️ Amount (Nutrition/Portions)?", "1 Portion");
@@ -50,6 +50,7 @@ area2: "<%- area %>"
 merchant: "<%- merchant %>"
 cost: <%- cost %>
 amount: "<%- amount %>"
+explore_lvl: 0blueprint
 due: <%- deadline %>
 cal0:
 stars1:
@@ -77,6 +78,8 @@ review:
 > > > **Inbox:** `INPUT[toggle:inbox]`
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
+> > > **Phase:**
+> > > `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
 > **Cost:** `<%- cost %>`
 > **Merchant:** `<%- merchant %>` 

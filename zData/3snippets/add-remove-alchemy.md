@@ -4,11 +4,11 @@
  * Path: zData/3snippets/add-daily-alchemy.md
  */
 
-// 🔱 0. DATEI SICHER GREIFEN (tp.config.active_file = Datei in der der Button sitzt,
-//        robuster als getActiveFile() das nur das fokussierte Pane liefert)
+// 🔱 0. GRAB THE FILE SAFELY (tp.config.active_file = the file the button sits in,
+//        more robust than getActiveFile(), which only returns the focused pane)
 const activeFile = tp.config.active_file;
 if (!activeFile) {
-    new Notice("❌ Fehler: Konnte die aktuelle Datei nicht finden.");
+    new Notice("❌ Error: could not find the current file.");
     return;
 }
 
@@ -19,7 +19,7 @@ try {
     const engineInit = require(enginePath);
     Nexus = await engineInit(app);
 } catch (e) {
-    new Notice("❌ Fehler: Nexus Engine konnte nicht geladen werden.");
+    new Notice("❌ Error: could not load the Nexus Engine.");
     return;
 }
 const foodDb = Nexus.getDomain("FOOD");

@@ -10,7 +10,7 @@ const ids = life.getAllKitchenIds(category);
 const p = life.getPersona(category);
 const a = persona.getAxis(p);
 
-// Fokus auf die Zubereitungsart
+// Focus on the preparation method
 const selectedId = await tp.system.suggester(labels, ids, false, "How will you prepare it? 🔥");
 
 if (selectedId) {

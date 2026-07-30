@@ -11,14 +11,20 @@ try {
     let prefix = "";
     let planType = "";
 
-    // 1. Auto-detect which plan we are in
-    if (fm.hasOwnProperty("tt_start") || Object.keys(fm).some(k => k.startsWith("tt_"))) {
+    // 1. Auto-detect which plan we are in.
+//    Frontmatter first, file name only as a fallback — and case-insensitive,
+//    because the weekly files are lowercase ("2026-W31_fitness.md"),
+//    while the masters are capitalised ("Fitness_Routine.md", "Meal_Plan.md").
+    const nameLc = file.name.toLowerCase();
+    const declared = String(fm.plan_type || "").toLowerCase();
+
+    if (declared === "timetable" || Object.keys(fm).some(k => k.startsWith("tt_")) || nameLc.includes("timetable")) {
         prefix = "tt_"; planType = "Timetable";
-    } else if (fm.hasOwnProperty("rt_start") || Object.keys(fm).some(k => k.startsWith("rt_"))) {
+    } else if (declared === "routine" || Object.keys(fm).some(k => k.startsWith("rt_")) || nameLc.includes("routine")) {
         prefix = "rt_"; planType = "RoutinePlan";
-    } else if (Object.keys(fm).some(k => k.startsWith("fit_")) || file.name.includes("Fitness")) {
+    } else if (declared === "fitness" || Object.keys(fm).some(k => k.startsWith("fit_")) || nameLc.includes("fitness")) {
         prefix = "fit_"; planType = "FitnessPlan";
-    } else if (fm.hasOwnProperty("mon_brk") || file.name.includes("Meal")) {
+    } else if (declared === "meal" || fm.hasOwnProperty("mon_brk") || nameLc.includes("meal")) {
         prefix = ""; planType = "MealPlan"; // Meal Plan uses direct days (mon_brk)
     } else {
         new Notice("❌ This is not a recognized Nexus Plan.");

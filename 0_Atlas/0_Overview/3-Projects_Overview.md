@@ -1,31 +1,39 @@
 ---
 cssclasses:
-  - wide-page
+  - nexus-v2
+  - dashboard-no-border
+banner_icon: 🚧
 ---
 
-# 🧩 Projects Overview
+# 🚧 Projects
 
-![[zData/5design_modul/OverviewNavigationModul]]
+<div class="nv-kicker">Everything with an end. What has no end belongs in an area.</div>
 
----
+![[zData/5design_modul/MainNav|MainNav]]
 
-> [!info] Clean Overview: Active & Passive Projects
+<div class="nv-nav">
+<a class="internal-link" href="0_Atlas/0_Dashboard/3-Projects/1-Active">⚡ Active</a>
+<a class="internal-link" href="0_Atlas/0_Dashboard/3-Projects/2-Passive">⏳ Passive</a>
+<a class="internal-link" href="0_Atlas/0_Dashboard/3-Projects/3-Idea">💡 Ideas</a>
+<a class="internal-link" href="0_Atlas/0_Dashboard/3-Projects/0-Recurring">🔄 Recurring</a>
+</div>
+
+**Create & process:** `BUTTON[p-btn]` `BUTTON[plan-replicator]`
+
+<small>The project cockpit is created from the project note itself — its button sits there.</small>
 
 ```dataviewjs
-const pages = dv.pages('"3_Projects"')
-    .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/") && !p.file.path.includes("/Protocols/") && !p.file.path.includes("zData"))
-    .sort(p => p.file.mtime, "desc");
-
-if (pages.length > 0) {
-    dv.table(
-        ["🧩 Project", "🚦 Status", "🕒 Last Modified"],
-        pages.map(p => [
-            p.file.link,
-            p.status || "1active",
-            p.file.mtime.toFormat("yyyy-MM-dd HH:mm")
-        ])
-    );
-} else {
-    dv.paragraph("_No projects found._");
-}
+const dash = await require(app.vault.adapter.basePath + "/zData/2scripts/dashEngine.js")().load(dv, app);
+dv.el("div", dash.sectionPage({
+  filter: p => p.isProject,
+  tableTitle: "All projects",
+  columns: ["Entry", "Type", "Status", "Prio", "Due"],
+  sort: "priority",
+  groups: [
+    { label: "⚡ Active",    filter: p => p.status === "1active",    sub: "laufen",       href: "0_Atlas/0_Dashboard/3-Projects/1-Active" },
+    { label: "⏳ Passive",   filter: p => p.status === "2passive",   sub: "pausiert",     href: "0_Atlas/0_Dashboard/3-Projects/2-Passive" },
+    { label: "💡 Ideen",     filter: p => p.status === "3idea",      sub: "ungeboren",    href: "0_Atlas/0_Dashboard/3-Projects/3-Idea" },
+    { label: "🔄 Recurring", filter: p => p.status === "0recurring", sub: "wiederkehrend", href: "0_Atlas/0_Dashboard/3-Projects/0-Recurring" },
+  ],
+}));
 ```

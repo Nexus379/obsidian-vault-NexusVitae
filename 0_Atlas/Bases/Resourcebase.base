@@ -1,9 +1,9 @@
 filters:
   and:
-    - arch.contains("#6resou")
+    - arch.contains("#6resource")
 views:
   - type: table
-    name: Resources
+    name: 🔖 Resources
     groupBy:
       property: archtype
       direction: ASC

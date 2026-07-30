@@ -16,7 +16,7 @@ cssclasses:
 > > ```dataviewjs
 > > {
 > >      const chartContainer = this.container;
-> >      chartContainer.style.width = "300px";
+> >      chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >      chartContainer.style.margin = "0 auto";
 > >
 > >      const allReviews = dv.pages('#0cal/6review AND !"zData" AND -"yArchive"').where(p => p.inbox !== true);
@@ -38,7 +38,7 @@ cssclasses:
 > >              }]
 > >          },
 > >          options: { 
-> >              cutout: '75%', 
+> >              maintainAspectRatio: false, cutout: '76%', 
 > >              animation: false,
 > >              plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 10 } } } } 
 > >          }

@@ -155,7 +155,7 @@ properties:
     displayName: nextduestate
 views:
   - type: table
-    name: Task Allview
+    name: 🛠️ Task Allview
     groupBy:
       property: due
       direction: ASC
@@ -221,7 +221,7 @@ views:
       note.Resource: 107
       note.location: 106
   - type: table
-    name: Status
+    name: 🚦 Status
     groupBy:
       property: Status
       direction: ASC
@@ -232,7 +232,7 @@ views:
       - Do
       - Due
   - type: cards
-    name: card
+    name: 🃏 Cards
     sort:
       - property: archtype
         direction: ASC

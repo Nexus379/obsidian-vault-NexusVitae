@@ -1,6 +1,6 @@
 <%-*
 // 🔱 1. INITIALISIERUNG & DATA-RECOVERY
-if (!tp.variables) tp.variables = {}; // 🛡️ Der lebenswichtige Crash-Schutz!
+if (!tp.variables) tp.variables = {}; // 🛡️ Der lebenswichtige Crash protection!
 
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 const SYS = tp.variables.SYS || { tmpl: "zData/1tmpl" };
@@ -34,7 +34,7 @@ if (lastFile) {
     pLink = `[[${lastFile.basename}]]`; 
 }
 
-// 🔱 3. ID-BERECHNUNG
+// 🔱 3. ID CALCULATION
 let finalLID = "";
 if (pID) {
     const isDigit = (char) => /\d/.test(char);
@@ -48,12 +48,12 @@ if (pID) {
         finalLID = (structure === "child") ? childID : siblingID;
         title = `${finalLID} ${title}`;
     } else {
-	    // 🛡️ ESC oder "New Branch" → kein Parent übernehmen!
+	    // 🛡️ ESC or "New Branch" → do not adopt a parent!
 		pLink = "";
     }
 }
 
-// 🔱 4. TYP-AUSWAHL
+// 🔱 4. TYPE CHOICE
 const nOptions = ["1 🍂 Fleeting", "2 📘 Literature", "3 🗃️ Atomic...", "4 📜 Permanent", "5 🌳 Evergreen"];
 const nVals = ["1fleet", "2lit", "atomic_sub", "4perma", "5ever"];
 const nFolders = ["1_Fleeting", "2_Literature", "3_Atomic", "4_Permanent", "5_Evergreen"];
@@ -108,7 +108,7 @@ if (nChoice === "atomic_sub") {
     targetFolder = aFoldersFull[aIdx];
 }
 
-// 🔱 5. SCIENCE-MODULE INTEGRATION (Delegiert die Abfrage!)
+// 🔱 5. SCIENCE MODULE INTEGRATION (delegates the question)
 const needsScience = ["4perma", "2lit", "3atomic", "3atomic_studycards", "3atomic_cards", "5ever"];
 if (needsScience.includes(nChoice)) {
     if (typeof tp.user.disciplineEngine === "function") {
@@ -125,14 +125,20 @@ if (needsScience.includes(nChoice)) {
             tp.variables.discTag = selectedDisc.disc;
             tp.variables.subText = selectedDisc.label;
             tp.variables.persona = selectedDisc.persona;
+
+            // The area comes from the chosen discipline — the same handover the project
+            // prompt does. Without it every note template fell through to its own fallback,
+            // so notes were filed under Mind or with an empty area2 regardless of subject.
+            tp.variables.area = selectedDisc.area;
+            tp.variables.currentArea = selectedDisc.area;
 			
-			// 🌟 1. Berechnet "LAT", "HIS", "BIO" (oder nimmt benutzerdefinierten 'code')
+			// 🌟 1. Computes "LAT", "HIS", "BIO" (or takes a user-defined 'code')
 			const shortCode = selectedDisc.code || selectedDisc.label.substring(0, 3).toUpperCase();
 				
 			tp.variables.cleanDisc = shortCode;
-			tp.variables.icon = selectedDisc.icon || "";  // 🌟 DAS FEHLT NOCH!
+			tp.variables.icon = selectedDisc.icon || "";  // 🌟 STILL MISSING!
 				
-			// 🌟 2. Verschiebt die Datei z.B. nach "5_Notes/3_Atomic/cards/LAT/"
+			// 🌟 2. Moves the file, e.g. to "5_Notes/3_Atomic/cards/LAT/"
 				
 			if (shortCode) {
 				
@@ -143,11 +149,11 @@ if (needsScience.includes(nChoice)) {
     }
 }
 
-// 🔱 6. FINALE VARIABLEN-ÜBERGABE (Wichtig für dein Template!)
+// 🔱 6. FINAL VARIABLE HANDOVER (needed by the template!)
 tp.variables.luhmannId = finalLID;
 tp.variables.title = title;
 tp.variables.pLink = pLink;
-// Diese kommen aus dem ScienceModule:
+// These come from the ScienceModule:
 tp.variables.sci = tp.variables.sciTag || "#science";
 tp.variables.disc = tp.variables.discTag || "#disc";
 

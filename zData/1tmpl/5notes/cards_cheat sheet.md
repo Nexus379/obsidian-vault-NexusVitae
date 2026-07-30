@@ -30,9 +30,9 @@
 > > a) die Insel
 > > b) der Wohnblock
 > >
-> > (*kann auch 1., 2., 3., / `-, -, -` *)
+> > (*can also be 1., 2., 3., / `-, -, -` *)
 > >
-> >C ; Rom wurde der Legende nach im Jahr {{c1::753}} v. Chr. gegründet.
+> >C ; According to legend, Rome was founded in {{c1::753}} BC.
 > > Die Stadt wuchs besonders schnell, 
 > > da sie strategisch klug am Fluss {{c2::Tiber}} lag.
 >

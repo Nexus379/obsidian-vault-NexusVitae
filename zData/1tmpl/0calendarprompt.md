@@ -39,7 +39,7 @@ const calLabel     = ARCHTYPES_CAL.map(m => `${m.subfolder.split("_")[0]} ${m.ic
 const calSubfolder = ARCHTYPES_CAL.map(m => m.subfolder);
 const calSuffix    = ARCHTYPES_CAL.map(m => m.id);
 
-// 🔱 4. TRIGGER & DATE DETECTION (NEU: Erkennt jetzt Fitness & Musik)
+// 🔱 4. TRIGGER & DATE DETECTION (also recognises fitness and music)
 const planSubkeys = ["fitness", "inpra", "routine", "meal", "srs", "vestis", "spaced", "study", "timetable", "teach", "concraft"];
 
 if (!activeTrigger) {
@@ -87,7 +87,7 @@ if (!dateStr) {
 }
 tp.variables.targetDate = dateStr;
 
-// 🔱 5. MODULE SELECTION (NEU: Erkennt jetzt Index 6 für Pläne!)
+// 🔱 5. MODULE SELECTION (index 6 covers the plans)
 let cIdx = null;
 const preSub = tp.variables.preSelectedSub || "";
 if (preSub) {
@@ -98,7 +98,7 @@ if (preSub) {
 }
 
 if (cIdx === null || cIdx === -1) {
-    // 🎯 HIER WAR DER FEHLER: JETZT SIND FITNESS & CO MIT INDEX 6 DRIN!
+    // Fitness and the other plan types all route to index 6
     const triggerMap = { plm:0, ppm:1, pkm:2, projectlog:3, proj:3, prjlog:3, protocol:4, prot:4, prtcl:4, rev:5, plan:6, fitness:6, inpra:6, routine:6, meal:6, srs:6, spaced:6, vestis:6, study:6, timetable:6, teach:6, concraft:6 };
     if (triggerMap[activeTrigger] !== undefined) cIdx = triggerMap[activeTrigger];
 }
@@ -143,7 +143,7 @@ const dv = app.plugins?.plugins?.dataview?.api;
 
 if (cIdx === 3 && dv && ARCH.p) {
     const projects = dv.pages(`"${ARCH.p.folder}"`)
-        .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/"))
+        .where(p => String(p.arch ?? "").includes("#3project"))
         .sort(p => p.file.mtime, "desc").limit(15).file.path.array();
     const labels   = projects.map(p => "🧩 " + p.split("/").pop().replace(".md",""));
     const pick = await tp.system.suggester(["➕ Manual Entry", ...labels], ["MAN", ...projects], false, "🔗 Link to Project?");
@@ -161,7 +161,8 @@ if (cIdx === 3 && dv && ARCH.p) {
     if (logConnect) {
         tp.variables.displayTitle = logConnect.replace(/[\[\]]/g, "");
         tp.variables.title = tp.variables.displayTitle;
-        tp.variables.customPath = `${ARCH.c.folder}/${activeMod.subfolder}/${y}/${tp.variables.displayTitle}/${m}`;
+        // Name → year → month, the same order projectlog and the routine logs use.
+        tp.variables.customPath = `${ARCH.c.folder}/${activeMod.subfolder}/${tp.variables.displayTitle}/${y}/${m}`;
     }
 }
 else if (cIdx === 4 && dv) {
@@ -224,7 +225,7 @@ if (cIdx === 5) {
     
     if (modChoice.id === "proj" && dv && ARCH.p) {
         const projects = dv.pages(`"${ARCH.p.folder}"`)
-            .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/"))
+            .where(p => String(p.arch ?? "").includes("#3project"))
             .sort(p => p.file.mtime, "desc").limit(15).file.path.array();
         const labels   = projects.map(p => "🧩 " + p.split("/").pop().replace(".md",""));
         const pick     = await tp.system.suggester(["➕ Manual Entry", ...labels], ["MAN", ...projects], false, "🔗 Select Project?");
@@ -289,7 +290,7 @@ if (cIdx === 6) {
         ];
         const planKeys = ["fitness", "inpra", "routine", "meal", "srs", "vestis", "study", "timetable", "teach", "concraft"];
         
-        subType = await tp.system.suggester(planOptions, planKeys, false, "📋 Welchen Wochenplan möchtest du anlegen?");
+        subType = await tp.system.suggester(planOptions, planKeys, false, "📋 Which weekly plan do you want to create?");
         if (!subType) return; 
     }
 

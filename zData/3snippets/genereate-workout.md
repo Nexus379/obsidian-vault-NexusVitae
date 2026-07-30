@@ -34,7 +34,7 @@ try {
         for (let ex of shuffled.slice(0, volume)) {
             let metric = defaultSets; 
             if (ex.baseTime) {
-                let extraTime = (tWeek - 1) * 2; // Steigerung: 2 Min pro Woche
+                let extraTime = (tWeek - 1) * 2; // Increase: 2 min per week
                 metric = `${ex.baseTime + extraTime} Min.`;
             } else if (region === "mobility") {
                 metric = "Dynamic Warmup";

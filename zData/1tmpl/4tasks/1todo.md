@@ -1,7 +1,7 @@
 <%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
 if (!tp.variables) tp.variables = {};
-const persona = tp.variables.persona || "warrior"; // Fallback auf dein Frontmatter
+const persona = tp.variables.persona || "warrior"; // Fallback to the frontmatter
 const area = tp.variables.currentArea || tp.variables.area || "";
 const deadline = tp.variables.deadline || tp.date.now("YYYY-MM-DD", 1);
 

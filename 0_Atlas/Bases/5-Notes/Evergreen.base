@@ -9,7 +9,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Evergreen
+    name: 🌳 Evergreen
     order:
       - LID
       - file.name

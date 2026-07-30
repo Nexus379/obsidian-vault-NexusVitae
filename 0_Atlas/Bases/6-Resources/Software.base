@@ -1,15 +1,17 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/software")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/software")
 views:
   - type: table
-    name: Software
+    name: 💽 Software
     order:
       - file.name
       - software_type
       - maintenance_status
       - version
+      - rating
+      - ranking
       - vendor
       - plattform
       - url
@@ -26,3 +28,20 @@ views:
       note.version: 100
       note.vendor: 140
       note.plattform: 140
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - software_type
+      - maintenance_status
+      - version
+      - rating
+      - ranking
+      - next_check
+    sort:
+      - property: file.mtime
+        direction: DESC

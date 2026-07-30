@@ -1,21 +1,21 @@
 <%-*
 if (!tp.variables) tp.variables = {};
-// 1. Zieldatum ermitteln (entweder übergebenes Datum oder heute)
+// 1. Determine the target date (the one handed in, or today)
 const targetMoment = moment(tp.variables.targetDate || tp.date.now("YYYY-MM-DD"), "YYYY-MM-DD");
 const dateStr = targetMoment.format("YYYY-MM-DD");
 const energy = tp.variables.energy || "3";
 
-// 2. Jahr und Kalenderwoche extrahieren
+// 2. Extract year and calendar week
 const year = targetMoment.format("YYYY");
-const kw = targetMoment.format("WW"); // Gibt immer zwei Ziffern zurück (z.B. "29")
+const kw = targetMoment.format("WW"); // Always returns two digits (e.g. "29")
 
-// 3. Das exakte Format für dich zusammenbauen (z.B. "2026-W29")
+// 3. Assemble the exact format (e.g. "2026-W29")
 const weekString = `${year}-W${kw}`;
 const planYear = tp.variables.planYear || year;
 const planKw = tp.variables.planKw || kw;
 
-// 4. (Optional aber empfohlen) Die Datei direkt beim Erstellen richtig benennen!
-// 5. Start der YAML-Metadaten
+// 4. (Optional but recommended) name the file correctly right at creation
+// 5. Start of the YAML metadata
 tR += "---\n";
 %>
 banner: "![[xAttachment/Images/Banner/anime-style-cozy-home-interior-with-furnishings.jpg]]"

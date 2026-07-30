@@ -6,7 +6,7 @@ banner: "![[xAttachment/Images/Banner/fantasy-landscape-sunset.jpg]]"
 banner_y: 0
 ---
 # Purpose Central
-| [[0_Atlas/0_Dashboard/1-Stars|🌟Stars]] | [[0_Atlas/Bases/1-Stars/Stars.base|⚙️Starsbase]] | [[0_Atlas/0_Dashboard/1-Stars/1-Purpose|🌟Purpose]] | [[0_Atlas/0_Dashboard/1-Stars/2-Vision|🧭Vision]] | [[0_Atlas/0_Dashboard/1-Stars/3-Goals|🎯Goals]] |
+![[zData/5design_modul/StarsNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -14,12 +14,13 @@ banner_y: 0
 
 >[!multi-column]
 > 
-> > [!hub|wide-0] 🗺️ **ATLAS & ACTION**
+> > [!blank|wide-0]
+> > #### 🌟 **THE WHY**
 > > 
 > > ```dataviewjs
 > > {
 > >     const chartContainer = this.container;
-> >     chartContainer.style.width = "280px";
+> >     chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >     chartContainer.style.margin = "0 auto";
 > >     if (chartContainer.innerHTML.length < 50) {
 > >         const linked = p => {
@@ -36,7 +37,7 @@ banner_y: 0
 > >         ];
 > >         const hasData = values.some(v => v > 0);
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
-> >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Purpose', 'Vision', 'Goals', 'Projects', 'Tasks', 'Knowledge'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#cba6f7', '#89b4fa', '#94e2d5', '#fab387', '#f38ba8', '#a6e3a1'] : ['var(--background-modifier-border)'], borderWidth: 0, hoverOffset: 12 }] }, options: { cutout: '80%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 12, weight: 'bold', family: 'serif' }, padding: 20, usePointStyle: true } } } } };
+> >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Purpose', 'Vision', 'Goals', 'Projects', 'Tasks', 'Knowledge'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#cba6f7', '#89b4fa', '#94e2d5', '#fab387', '#f38ba8', '#a6e3a1'] : ['var(--background-modifier-border)'], borderWidth: 0, hoverOffset: 12 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '76%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 10, weight: "bold", family: "serif" }, padding: 10, boxWidth: 8, usePointStyle: true } } } } };
 > >         const renderInterval = setInterval(() => { if (window.renderChart) { const oldCanvas = chartContainer.querySelector('canvas'); if (oldCanvas) oldCanvas.remove(); window.renderChart(chartData, chartContainer); clearInterval(renderInterval); } }, 150);
 > >         setTimeout(() => clearInterval(renderInterval), 5000);
 > >     }
@@ -66,10 +67,10 @@ banner_y: 0
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```
 > >
-> > > [!project] **Projects and Tasks**
+> > > [!project] **Projects**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due
-> > > FROM "3_Projects" OR "4_Tasks" AND !"zData" AND -"yArchive"
+> > > FROM "3_Projects" AND !"zData" AND -"yArchive"
 > > > WHERE (contains(string(stars1), "1_Purpose") OR contains(string(stars1), "1purpose") OR contains(string(parent), "1_Purpose") OR contains(string(file.outlinks), "1_Purpose")) AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```

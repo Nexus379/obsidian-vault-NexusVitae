@@ -24,7 +24,7 @@ try {
             subTypes: [
                 { id: "book", icon: "📖", label: "Book" },
                 { id: "film", icon: "🎬", label: "Film" },
-                { id: "serie", icon: "📺", label: "Serie" }, // Wird zu "Series"
+                { id: "serie", icon: "📺", label: "Series" },
                 { id: "game", icon: "🎮", label: "Game" }
             ]
         },
@@ -32,24 +32,24 @@ try {
             display: "🎨 Creativity", 
             type: "creativity_link", 
             arch: ["#2area", "#3project"], 
-            archtype: "#2area/5creativity",
-            query: '"2_Areas/5_Creativity"',
-            folder: "2_Areas/5_Creativity"
+            archtype: "#2area/2creativity",
+            query: '"2_Areas/2_Creativity"',
+            folder: "2_Areas/2_Creativity"
         },
         { 
-            display: "🧘 Activity", 
+            display: "🔥 Drive / Activity", 
             type: "activity_link", 
             arch: ["#2area"], 
-            archtype: "#2area/6activity",
-            query: '"2_Areas/6_Activity"',
-            folder: "2_Areas/6_Activity"
+            archtype: "#2area/3drive",
+            query: '"2_Areas/3_Drive"',
+            folder: "2_Areas/3_Drive"
         }
     ];
 
     const mode = await tp.system.suggester(entropyModes.map(m => m.display), entropyModes, false, "Entropy Category:");
     if (!mode) return;
 
-    // 🔱 2. DATEN ABRUFEN ODER NEU ERSTELLEN
+    // 🔱 2. FETCH THE DATA OR CREATE IT
     const pages = dv.pages(mode.query);
     const existingItems = pages
         .sort(p => p.file.mtime, "desc")
@@ -69,10 +69,10 @@ try {
         itemTitle = await tp.system.prompt(`Enter Title for ${mode.display}:`);
         if (!itemTitle) return;
 
-        // --- 🎯 NEU: DYNAMISCHE PERSONA ABFRAGE ---
+        // --- 🎯 DYNAMIC PERSONA PROMPT ---
         let selectedPersona = "seeker"; // Fallback
         try {
-            // Lade die Persona Engine dynamisch
+// Load the persona engine dynamically
             const file = app.vault.getAbstractFileByPath("zData/2scripts/personaEngine.js");
             if (file) {
                 const code = await app.vault.read(file);

@@ -42,7 +42,7 @@ tt_breaks: 2:15, 4:15, 6:30
 `BUTTON[setup-timetable]` `BUTTON[edit-timetable]`
 
 ```dataviewjs
-// 1. DATEN AUS DEM YAML LESEN
+// 1. READ THE DATA FROM THE YAML
 const c = dv.current();
 const startTime = c.tt_start || "08:00";     
 const classDuration = Number(c.tt_duration) || 45;      

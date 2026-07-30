@@ -70,11 +70,11 @@ const AXIS_GROUPS = {
     ]
 };
 	
-    // 🔱 DNA-Mapping: Berechnung findet nur beim Laden statt
+    // 🔱 DNA mapping: computed once at load time
     const personaToAxisMap = {};
     for (const [axisName, pList] of Object.entries(AXIS_GROUPS)) {
         pList.forEach(pKey => {
-            // Hier speichern wir die Axis direkt im Mapping, damit der Zugriff später instant ist
+            // Store the axis directly in the map so lookups are instant later
             personaToAxisMap[pKey] = axisName;
         });
     }
@@ -82,10 +82,10 @@ const AXIS_GROUPS = {
         all: PERSONA,
         groups: AXIS_GROUPS,
         
-        // Label-Helper für Suggester
+        // Label helper for the suggester
         getPersonaLabels: () => Object.keys(PERSONA).sort().map(k => ({ key: k, ...PERSONA[k] })),
         
-        // DNA-Helper: Gibt die Achse für eine Persona zurück
+        // DNA helper: returns the axis for a persona
         getAxis: (pKey) => personaToAxisMap[pKey] || "Unknown"
     };
 }

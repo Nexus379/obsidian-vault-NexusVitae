@@ -14,14 +14,14 @@ cssclasses:
 >[!multi-column]
 >
 > > [!blank|wide-0]
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### ✏️ **THOUGHT FLOW**
 > > ```dataviewjs
 > > {
 > >     const chartContainer = this.container;
 > >     const days = 30; 
 > >     const start = moment().subtract(days, 'days').startOf('day');
 > >     
-> >     chartContainer.style.width = "250px";
+> >     chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >     chartContainer.style.margin = "0 auto";
 > > 
 > >     if (chartContainer.innerHTML.length < 50) {
@@ -55,7 +55,7 @@ cssclasses:
 > >                 }]
 > >             },
 > >             options: {
-> >                 cutout: '80%',
+> >                 maintainAspectRatio: false, cutout: '76%',
 > >                 plugins: {
 > >                     legend: { position: 'bottom', labels: { color: textColor, font: { size: 9 } } }
 > >                 }

@@ -5,8 +5,8 @@
 async function itemsNexusEngine(app, domainFilter = "ALL") {
     const DATABASE = {};
 
-    // === 1. FOOD: aus den normalisierten JSON-Dateien (Quelle der Wahrheit) ===
-    // Volle val{} wird übernommen — KEIN valKeys-Whitelist mehr (der schnitt Eisen/Magnesium/etc. ab).
+    // === 1. FOOD: from the normalised JSON files (the source of truth) ===
+    // The full val{} is taken over — no valKeys whitelist any more (that one cut off iron, magnesium etc.).
     if (domainFilter === "ALL" || domainFilter === "FOOD") {
         const foodFiles = ["ingre_fresh.json", "ingre_pantry.json", "ingre_consumables.json"];
         for (const fn of foodFiles) {
@@ -39,9 +39,52 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
                 }
             }
         }
+
+        // === 1b. TRAVEL OVERLAY ===
+        // Abroad only the prices and the shops change — spinach has the same iron in Rome.
+        // So instead of cloning 2 MB of nutrition data per city, a thin per-city file
+        // overrides just those fields. Everything not listed keeps the home value.
+        // Active city comes from the Shopping Hub (shopping_travel_city); empty = at home.
+        try {
+            const hub = app.metadataCache.getCache("2_Areas/1_Selfcare/Household/Shopping_Hub.md");
+            const city = String(hub?.frontmatter?.shopping_travel_city || "").trim();
+            if (city) {
+                const path = `6_Resources/_Entities/Travel/${city}/ingre_prices.json`;
+                let raw = await app.vault.adapter.read(path);
+                if (raw.charCodeAt(0) === 0xFEFF) raw = raw.slice(1);
+                const over = JSON.parse(raw);
+
+                // Only these may be overridden. Nutrition, latin, sci, season stay untouched.
+                const PRICE_KEYS = [
+                    "unit_price", "pref_vendor", "pref_price",
+                    "vendor_cheap", "price_cheap", "vendor_value", "price_value",
+                    "vendor_best", "price_best", "vendor_pure", "price_pure",
+                    "vendor_pure_cheap", "price_pure_cheap", "vendor_market", "price_market"
+                ];
+
+                let hits = 0;
+                for (const [id, patch] of Object.entries(over)) {
+                    const base = DATABASE[id];
+                    if (!base || !patch || typeof patch !== "object") continue;
+                    for (const k of PRICE_KEYS) {
+                        if (patch[k] !== undefined) base[k] = patch[k];
+                    }
+                    // Shops are the other thing that changes — replace the list, keep the rest of meta.
+                    if (patch.meta && patch.meta.locations) {
+                        base.meta = { ...base.meta, locations: patch.meta.locations };
+                    }
+                    if (patch.prices) base.prices = patch.prices;
+                    base.travel_city = city;
+                    hits++;
+                }
+                console.log(`[Nexus Engine] Travel overlay "${city}": ${hits} item(s) repriced.`);
+            }
+        } catch (e) {
+            // No overlay for this city yet — home prices simply stay in effect.
+        }
     }
 
-    // === 2. MAINTENANCE: Entities weiter aus MD-Notizen (nur wenn Dataview verfügbar) ===
+    // === 2. MAINTENANCE: entities still come from MD notes (only when Dataview is available) ===
     if (domainFilter === "ALL" || domainFilter === "MAINTENANCE") {
         const dv = app.plugins.plugins.dataview?.api;
         if (dv) {
@@ -76,41 +119,86 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
     return {
         all: DATABASE,
         
-        // Filtert nach FOOD oder MAINTENANCE
+        // Filters by FOOD or MAINTENANCE
         getDomain: (domainName) => {
             return Object.fromEntries(Object.entries(DATABASE).filter(([k, v]) => v.domain === domainName));
         },
 
-        // 🌐 Die ultimative Sprach-Suche
+        // Every name an item can be reached by: botanical, label, all translations.
+        namesOf: (item) => [
+            item.latin,
+            item.label,
+            ...Object.values(item.lang || {})
+        ].filter(Boolean).map(v => String(v).toLowerCase()),
+
+        // 🌐 The ultimate language search — EXACT.
+        // Recipes and the shopping list resolve atom IDs through here, so it must never
+        // guess: a near-miss that silently returns the wrong ingredient would change what
+        // you actually buy. Use search() when a human is typing.
         find: (input) => {
             if (!input) return null;
-            const search = input.toLowerCase().replace(/[\s-]/g, '_');
-            
+            const search = String(input).toLowerCase().replace(/[\s-]/g, '_');
+
             if (DATABASE[search]) return DATABASE[search];
-            
+
             for (let key in DATABASE) {
                 const item = DATABASE[key];
-                const searchPool = [
-                    item.latin?.toLowerCase(),
-                    item.label?.toLowerCase(),
-                    ...Object.values(item.lang || {}).map(v => String(v).toLowerCase())
-                ].map(v => v?.replace(/[\s-]/g, '_')).filter(Boolean);
-                
-                if (searchPool.includes(search)) return item;
+                const pool = [
+                    item.latin,
+                    item.label,
+                    ...Object.values(item.lang || {})
+                ].filter(Boolean).map(v => String(v).toLowerCase().replace(/[\s-]/g, '_'));
+
+                if (pool.includes(search)) return item;
             }
             return null;
         },
 
-        // 📝 Obsidian Link Generator (Linkt jetzt auf die echte MD Datei!)
+        // 🔎 The ultimate language search — FUZZY, for when a human types.
+        // You may know the vegetable only in French, or half-remember the spelling:
+        // missing accents ("epinard"), typos ("spinaat") and stems ("spina") all land,
+        // across latin, label and every lang.* translation.
+        // Returns matches sorted best-first, never a single silent guess.
+        search: (input, opt) => {
+            if (!input) return [];
+            const limit = (opt && opt.limit) || 12;
+            const minScore = (opt && opt.minScore) || 35;
+
+            let i18n = null;
+            try { i18n = require("./i18n.js")(); } catch (e) { return []; }
+            if (typeof i18n.norm !== "function" || typeof i18n.fuzzyScore !== "function") return [];
+
+            const term = i18n.norm(input);
+            if (!term) return [];
+
+            const hits = [];
+            for (let key in DATABASE) {
+                const item = DATABASE[key];
+                const names = [item.latin, item.label, ...Object.values(item.lang || {})]
+                    .filter(Boolean).map(String).concat(key);
+                let best = 0;
+                for (const name of names) {
+                    const s = i18n.fuzzyScore(term, i18n.norm(name));
+                    if (s > best) best = s;
+                    if (best === 100) break;
+                }
+                if (best >= minScore) hits.push({ ...item, id: item.id || key, score: best });
+            }
+            return hits
+                .sort((a, b) => b.score - a.score || String(a.label).localeCompare(String(b.label)))
+                .slice(0, limit);
+        },
+
+        // 📝 Obsidian link generator (links to the real MD file)
         getLink: (key, targetLang = "de") => {
             const item = DATABASE[key];
             if (!item) return `[[${key}]]`;
             const name = (item.lang && item.lang[targetLang]) || item.label || key;
-            // Wir linken auf die tatsächliche Markdown-Datei (key ist der Dateiname)
+            // We link to the actual markdown file (the key is the file name)
             return `[[${key}|${item.icon || "📦"} ${name}]]`;
         },
 
-        // 💰 Errechnet den Preis nach ausgewählter Strategie (Budget/Cheap, Value, Pure, Market)
+        // 💰 Resolves the price for the chosen strategy (budget/cheap, value, pure, market)
         getStrategicPrice: (key, strategy = "value", amount = 1.0) => {
             const item = DATABASE[key];
             if (!item) return null;
@@ -129,7 +217,7 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
                 vendor = item.vendor_best || vendor;
             }
 
-            // Falls JSON-Datenbank ein prices-Objekt besitzt
+            // If the JSON database has a prices object
             if (price === 0 && item.prices && typeof item.prices === "object" && Object.keys(item.prices).length > 0) {
                 if (s === "cheap") {
                     let lowest = Infinity, bestV = "";
@@ -153,13 +241,13 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
                 }
             }
             
-            // Fallback auf 'value', falls gewählte Strategie leer ist
+            // Fall back to "value" when the chosen strategy is empty
             if (price === 0 && s !== "value" && s !== "pref") {
                 price = Number(item.price_value) || Number(item.price_best) || 0;
                 vendor = item.vendor_value || item.vendor_best || "";
             }
             
-            // Fallback auf Standard / Legacy (pref_price oder unit_price)
+            // Fallback to standard / legacy (pref_price or unit_price)
             if (price === 0) {
                 price = Number(item.pref_price) || Number(item.unit_price) || (item.prices ? Number(Object.values(item.prices)[0]) : 0) || 0;
                 vendor = item.pref_vendor || (item.prices ? Object.keys(item.prices)[0] : "unknown") || "unknown";
@@ -173,13 +261,13 @@ async function itemsNexusEngine(app, domainFilter = "ALL") {
             };
         },
 
-        // 🧪 Dynamische Nährwert-Rechnung für ALLE Variablen
+        // 🧪 Dynamic nutrition maths for ALL variables
         calculate: (key, amount = 1.0) => {
             const item = DATABASE[key];
             if (!item || !item.val) return null;
 
             let results = {};
-            // energy{kcal,kj} liegt jetzt getrennt von val — für die Rechnung wieder zusammenführen
+            // energy{kcal,kj} now sits apart from val — merged back for the calculation
             const src = Object.assign({}, item.energy || {}, item.val || {});
             for (let stat in src) {
                 const value = src[stat];

@@ -1,0 +1,197 @@
+filters:
+  and:
+    - arch.contains("#3project")
+    - inbox != true
+    - status != "archive"
+    - status != "archived"
+    - status != "bin"
+    - status != "canceled"
+formulas:
+  Type: |
+    if(archtype.contains("prodo"), "🛠️ Do",
+      if(archtype.contains("progo"), "🏃🏽 Go",
+        if(archtype.contains("prostudy"), "🎓 Study",
+          if(archtype.contains("promeet"), "📅 Meet",
+            if(archtype.contains("probuy"), "💰 Buy",
+              if(archtype.contains("propay"), "💵 Pay",
+                if(archtype.contains("procook"), "🍜 Cook",
+                  if(archtype.contains("procraft"), "🎀 Craft",
+                    if(archtype.contains("proget"), "📥 Get",
+                      if(archtype.contains("protake"), "📥 Take", "➖")
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  Phase: |
+    if(explore_lvl == "0blueprint", "📝 Blueprint",
+      if(explore_lvl == "1research", "🔍 Research",
+        if(explore_lvl == "3investing", "⏳ Investing",
+          if(explore_lvl == "4polish", "✨ Polish",
+            if(explore_lvl == "5finish", "🏁 Finish", "➖")
+          )
+        )
+      )
+    )
+  State: |
+    if(status == "0recurring", "🔄",
+      if(status == "0start", "🚀",
+        if(status == "1active", "⚡",
+          if(status == "2passive", "💤",
+            if(status == "3idea", "💡",
+              if(status == "review", "🔍",
+                if(status == "done", "✅", "➖")
+              )
+            )
+          )
+        )
+      )
+    )
+properties:
+  formula.Type:
+    displayName: 🧩 type
+  formula.Phase:
+    displayName: 📝 phase
+  formula.State:
+    displayName: 🚦 state
+  note.explore_lvl:
+    displayName: 📝 phase raw
+  note.priority:
+    displayName: ❗ prio
+  note.due:
+    displayName: 📅 due
+  note.persona:
+    displayName: 🎭 persona
+  note.amount:
+    displayName: 💶 amount
+  note.cost:
+    displayName: 💶 cost
+  note.summary:
+    displayName: 📄 summary
+views:
+  - type: table
+    name: 🧩 Projects
+    order:
+      - file.name
+      - formula.Type
+      - formula.State
+      - formula.Phase
+      - priority
+      - due
+      - file.path
+    sort:
+      - property: due
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 260
+      formula.Type: 110
+      formula.State: 80
+      formula.Phase: 130
+      note.priority: 70
+      note.due: 110
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - formula.Type
+      - formula.Phase
+      - priority
+      - due
+      - summary
+    sort:
+      - property: priority
+        direction: ASC
+      - property: due
+        direction: ASC
+    columnSize:
+      file.name: 240
+      formula.Type: 110
+      formula.Phase: 130
+      note.priority: 70
+      note.due: 110
+  - type: table
+    name: 🔄 Recurring
+    filters:
+      and:
+        - status == "0recurring"
+    order:
+      - file.name
+      - formula.Type
+      - formula.Phase
+      - due
+    sort:
+      - property: due
+        direction: ASC
+    columnSize:
+      file.name: 240
+      formula.Type: 110
+  - type: table
+    name: ⏳ Passive & Ideas
+    filters:
+      or:
+        - status == "2passive"
+        - status == "3idea"
+    order:
+      - file.name
+      - formula.Type
+      - formula.State
+      - formula.Phase
+      - priority
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 240
+      formula.Type: 110
+      formula.State: 80
+      formula.Phase: 130
+  - type: table
+    name: 📝 By Phase
+    groupBy:
+      property: explore_lvl
+      direction: ASC
+    order:
+      - file.name
+      - formula.Type
+      - formula.State
+      - priority
+      - due
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 240
+      formula.Type: 110
+  - type: table
+    name: 💰 Money
+    filters:
+      or:
+        - archtype.contains("probuy")
+        - archtype.contains("propay")
+        - archtype.contains("proget")
+        - archtype.contains("protake")
+    order:
+      - file.name
+      - formula.Type
+      - formula.State
+      - amount
+      - cost
+      - due
+    sort:
+      - property: due
+        direction: ASC
+    columnSize:
+      file.name: 240
+      formula.Type: 110
+      note.amount: 100
+      note.cost: 100

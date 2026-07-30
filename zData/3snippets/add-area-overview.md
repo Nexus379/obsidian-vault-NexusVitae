@@ -3,7 +3,7 @@ const targetTitle = tp.file.title;
 const overviewFolderName = "2_Areas";
 const targetFolder = `0_Atlas/0_Overview/${overviewFolderName}`;
 
-// 1. Ordner automatisch erstellen falls nicht vorhanden
+// 1. Create the folder automatically if it does not exist
 let currentPath = "";
 for (const seg of targetFolder.split('/')) {
     currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;

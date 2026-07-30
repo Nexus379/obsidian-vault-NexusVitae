@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # Atomic Notes Central
-| [[0_Atlas/0_Dashboard/5-Notes|✏️Notes]] | [[0_Atlas/Bases/5-Notes/Notes.base|⚙️Notesbase]] | [[0_Atlas/0_Dashboard/5-Notes/1-Fleeting|🍂Fleeting]] | [[0_Atlas/0_Dashboard/5-Notes/2-Literature|📘Literatur]] | [[0_Atlas/0_Dashboard/5-Notes/4-Permanent|📜Permanent]] | [[0_Atlas/0_Dashboard/5-Notes/3-Atomic|🗃️Atomic]] | [[0_Atlas/0_Dashboard/5-Notes/5-Evergreen|📗Evergreen]] |
+![[zData/5design_modul/NoteNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -13,11 +13,11 @@ cssclasses:
 >[!multi-column]
 >
 > > [!blank|wide-0]
-> > ### NEXUS NAVIGATOR
+> > #### 🗃️ **ATOMIC FLOW**
 > > ```dataviewjs
 > > {
 > >     const container = this.container;
-> >     container.style.width = "280px";
+> >     container.style.width = "100%"; container.style.maxWidth = "240px"; container.style.height = "230px";
 > >     container.style.margin = "0 auto";
 > >     if (!container.querySelector('canvas')) {
 > >         const pages = dv.pages('#5note/3atomic AND !"zData" AND -"yArchive"').where(p => p.inbox !== true);
@@ -29,7 +29,7 @@ cssclasses:
 > >         ];
 > >         const hasData = values.some(v => v > 0);
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
-> >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Atomic', 'Studycards', 'Cards', 'Nutrition'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#a6e3a1', '#89b4fa', '#f9e2af', '#fab387'] : ['var(--background-modifier-border)'], borderWidth: 0 }] }, options: { cutout: '80%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
+> >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Atomic', 'Studycards', 'Cards', 'Nutrition'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#a6e3a1', '#89b4fa', '#f9e2af', '#fab387'] : ['var(--background-modifier-border)'], borderWidth: 0 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '76%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
 > >         const interval = setInterval(() => { if (window.renderChart) { const oldCanvas = container.querySelector('canvas'); if (oldCanvas) oldCanvas.remove(); window.renderChart(chartData, container); clearInterval(interval); } }, 150);
 > >     }
 > > }
@@ -58,7 +58,7 @@ cssclasses:
 > > > [!project] **Linked Work**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due
-> > > FROM "3_Projects" OR "4_Tasks" AND !"zData" AND -"yArchive"
+> > > FROM "3_Projects" AND !"zData" AND -"yArchive"
 > > > WHERE (contains(string(note5), "3_Atomic") OR contains(string(note5), "3atomic") OR contains(string(archtype), "#5note/3atomic") OR contains(string(file.outlinks), "3_Atomic")) AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```

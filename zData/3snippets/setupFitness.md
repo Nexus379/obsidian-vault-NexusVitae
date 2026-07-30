@@ -6,7 +6,7 @@ try {
     const profilePath = "zData/4values/Fitness_Profile.md";
     let profileFile = app.vault.getAbstractFileByPath(profilePath);
     
-    // Falls die Datei noch nicht existiert, wird sie hiermit heimlich im Hintergrund erstellt
+// If the file does not exist yet, it is created quietly in the background
     if (!profileFile) {
         profileFile = await app.vault.create(profilePath, "---\ntraining_phase: \"\"\nfocus_metric: \"\"\nequipment_wearable: []\nequipment_weights: []\n---\n# 🎒 Nexus Arsenal\nProfile data managed by script.");
     }

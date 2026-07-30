@@ -168,7 +168,7 @@ Everything goes into: `0_Inbox` and sorts through `[[zData/1tmpl/routertemp|rout
 * **0_Calendar** (1_PLM, 2_PPM, 3_PKM, 4_Projectlogs, 5_Protocols, 6_Reviews)
 * **0_Inbox** (The central entry point)
 * **1_Stars** (1_Purpose, 2_Vision, 3_Goals)
-* **2_Areas** (1_Selfcare, 2_Relationship, 3_Mind, 4_Organize, 5_Creativity, 6_Activity, 7_Entertainment)
+* **2_Areas** (1_Selfcare, 2_Creativity, 3_Drive, 4_Relationship, 5_Expression, 6_Mind, 7_Crown)
 * **3_Projects** (0_Recurring, 1_Active, 2_Passive, 3_Idea)
 * **4_Tasks** (GTD-Contexts)
 * **5_Notes** (1_Fleeting, 2_Literature, 4_Permanent, 3_Atomic, 5_Evergreen)
@@ -203,7 +203,7 @@ Install and enable the following core plugins from `Settings` ⚙️ ➔ `Commun
 
 ### Step 4: Templater Settings Configuration
 1. Go to `Settings` ⚙️ ➔ `Templater`.
-2. Set **Template Folder Location** (Vorlagen-Ordner) to: `zData/1tmpl`.
+2. Set **Template Folder Location** to: `zData/1tmpl`.
 3. Enable **Trigger Templater on new file creation**.
 
 ### Step 5: Initial Setup Snippets

@@ -37,7 +37,7 @@ try {
     let current = moment(start, ["HH:mm", "h:mm A", "h:mma", "H:mm", "h A", "ha", "h a"]);
     let targetEnd = moment(end, ["HH:mm", "h:mm A", "h:mma", "H:mm", "h A", "ha", "h a"]);
     
-    // Falls das Ende nach Mitternacht liegt (z.B. 06:00 bis 01:00 nachts)
+// If the end falls after midnight (e.g. 06:00 to 01:00)
     if (targetEnd.isBefore(current) || targetEnd.isSame(current)) {
         targetEnd.add(1, 'days');
     }
@@ -45,7 +45,7 @@ try {
     let calculatedPeriods = 0;
     let tempCurrent = moment(current);
 
-    // Berechnet die exakte Anzahl der Blöcke, bis die Endzeit erreicht ist
+// Computes the exact number of blocks until the end time is reached
     while(calculatedPeriods < 40) { // Failsafe (Maximal 40 Blöcke)
         calculatedPeriods++;
         tempCurrent.add(Number(duration), 'minutes');
@@ -59,7 +59,7 @@ try {
     }
     // ------------------------------------
 
-    // Schreibt die Werte (inklusive des berechneten rt_periods) in dein YAML
+// Writes the values (including the computed rt_periods) into your YAML
     await app.fileManager.processFrontMatter(file, (frontmatter) => {
         frontmatter.rt_start = start;
         frontmatter.rt_end = end;

@@ -3,11 +3,11 @@
 if (!tp.variables) tp.variables = {};
 if (!tp.variables.SYS) tp.variables.SYS = { tmpl: "zData/1tmpl", inbox: "0_Inbox" };
 if (!tp.variables.ARCH) tp.variables.ARCH = { p: { folder: "3_Projects" } };
-// 🔱 1. PROJECT-CHOICE FIRST (Die Basis wie beim Area-Prompt)
+// 🔱 1. PROJECT CHOICE FIRST (same basis as the area prompt)
 const pStatusOpt = ["1 ⚡ Active", "2 ⏳ Passive", "3 ☁️ Idea", "0 🔄 Recurring"];
 const pStatusVal = ["1active", "2passive", "3idea", "0recurring"];
 
-// 🔱 EXAKTE LISTE: 1-8 bleiben unangetastet, 9 wird ergänzt
+// 🔱 EXACT LIST: 1-8 stay untouched, 9 is added
 const pStyleOpt  = ["1 🛠️ Pro-Do", "2 🏃🏽 Pro-Go", "3 🎓 Pro-Study", "4 📅 Pro-Meet", "5 💰 Pro-Buy", "6 💵 Pro-Pay", "7 🍜 Pro-Cook", "8 🎀 Pro-Craft", "9 📥 Pro-Get"];
 const pStyleVal  = ["1prodo", "2progo", "3prostudy", "4promeet", "5probuy", "6propay", "7procook", "8procraft", "9proget"];
 
@@ -69,7 +69,7 @@ if (typeof tp.user.disciplineEngine === "function") {
         tp.variables.sci = selectedDisc.sci.join('", "');
         tp.variables.disc = selectedDisc.disc;
         tp.variables.discIcon = selectedDisc.icon;
-        tp.variables.area = selectedDisc.area; // Direkt für die Projekte sichern!
+        tp.variables.area = selectedDisc.area; // Store it straight away for the projects!
         tp.variables.currentArea = selectedDisc.area;
         tp.variables.persona = selectedDisc.persona;
     } else {
@@ -79,12 +79,12 @@ if (typeof tp.user.disciplineEngine === "function") {
         tp.variables.area = "";
     }
 } else {
-    new Notice("⚠️ disciplineEngine.js nicht gefunden!");
+    new Notice("⚠️ disciplineEngine.js not found!");
     tp.variables.sci = "";
     tp.variables.disc = "";
 }
 
-// 🔱 4. TITLE & LOGISTICS (Hier nutzen wir die Router-Daten)
+// 🔱 4. TITLE & LOGISTICS (using the router data)
 const { SYS, ARCH } = tp.variables;
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 let title = tp.variables.title || tp.file.title;
@@ -96,30 +96,23 @@ if (!title) title = "Project-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) await tp.file.rename(title);
 
-// 🎯 NEU: Clean Display Title (wichtig für einen sauberen Ordnernamen)
+// 🎯 NEW: clean display title (matters for a clean folder name)
 let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(1prodo-|p-|3project-)/i, "").trim();
 
-// 🎯 NEU: GTD Ordner-Mapping
-const statusFolderMap = {
-    "1active": "1_Active",
-    "2passive": "2_Passive",
-    "3idea": "3_Idea",
-    "0recurring": "0_Recurring"
-};
-const statFolder = statusFolderMap[pStatus] || "1_Active";
-
-// WICHTIG: Falls dein Router 'p' statt 'projects' nutzt, hier ARCH.p.folder nutzen!
+// IMPORTANT: if your router uses "p" instead of "projects", use ARCH.p.folder here
 const projectRoot = (ARCH && ARCH.p && ARCH.p.folder) ? ARCH.p.folder : "3_Projects";
 
-// 🎯 NEU: Der Pfad zielt jetzt in den GTD-Ordner
-const targetFolder = `${projectRoot}/${statFolder}/${displayTitle}`;
+// 🎯 Flat by name — status lives in the frontmatter, never in the path. A project
+// keeps its folder for its whole life; changing status is a field edit, not a move.
+// The status shows up through Supercharged Links, Projects.base and the State formula.
+const targetFolder = `${projectRoot}/${displayTitle}`;
 
-// 🛡️ SICHERHEITS-NETZ: Variablen für das finale Template (1prodo) abspeichern!
+// 🛡️ SAFETY NET: store the variables for the final template (1prodo)
 tp.variables.projectStatus = pStatus;
 tp.variables.title = title; 
 tp.variables.displayTitle = displayTitle; 
 
-// Folder-Bot (Sichert die Struktur)
+// Folder bot (secures the structure)
 if (!app.vault.getAbstractFileByPath(targetFolder)) {
     let check = "";
     for (const seg of targetFolder.split('/')) {
@@ -140,4 +133,15 @@ if (tFile) {
 } else {
     new Notice("❌ Nexus Error: Template " + tPath + " missing.");
 }
+
+// 🔱 6. THE PROJECT NOTE *IS* THE COCKPIT
+// Appended here rather than in each of the ten project templates: every project comes
+// through this prompt, so one line reaches all of them and a new project type cannot be
+// forgotten.
+//
+// No separate _Cockpit file: ConnexioModul already collects tasks, notes, resources,
+// areas and stars for every note in both directions. Only the calendar side was missing —
+// logs and protocols carry #0cal, which Connexio does not cover. That is what this adds,
+// plus the open checkboxes so the project can be worked from its own note.
+tR += await tp.file.include("[[zData/5design_modul/ProjectCockpitModul]]");
 -%>

@@ -11,7 +11,7 @@ filters:
     - status != "bin"
 views:
   - type: table
-    name: ToDo
+    name: 🛠️ ToDo
     order:
       - file.name
       - status

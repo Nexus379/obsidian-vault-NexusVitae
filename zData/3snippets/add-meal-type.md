@@ -10,7 +10,7 @@ const ids = life.getAllKitchenIds(category);
 const p = life.getPersona(category);
 const a = persona.getAxis(p);
 
-// Ein inspirierender Prompt für die Art des Gerichts
+// An inspiring prompt for the kind of dish
 const selectedId = await tp.system.suggester(labels, ids, false, "What are you creating today? 🥘");
 
 if (selectedId) {

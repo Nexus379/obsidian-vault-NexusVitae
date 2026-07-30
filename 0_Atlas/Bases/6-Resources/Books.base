@@ -1,16 +1,17 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/book")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/book")
 views:
   - type: table
-    name: Books
+    name: 📔 Books
     order:
       - cover
       - file.name
       - creator
       - status
       - rating
+      - ranking
       - discipline
       - science
       - file.path
@@ -23,3 +24,20 @@ views:
       note.creator: 170
       note.status: 90
       note.rating: 80
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - creator
+      - chapter_now
+      - volume
+      - volume_max
+      - rating
+      - ranking
+    sort:
+      - property: file.mtime
+        direction: DESC

@@ -1,17 +1,17 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/museum")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/museum")
 views:
   - type: table
-    name: Museums
+    name: 🖼️ Museums
     order:
       - cover
       - file.name
       - status
       - rating
+      - ranking
       - location
-      - area2
       - file.path
     sort:
       - property: file.name
@@ -21,3 +21,17 @@ views:
       file.name: 240
       note.status: 90
       note.rating: 80
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - location
+      - rating
+      - ranking
+    sort:
+      - property: file.mtime
+        direction: DESC

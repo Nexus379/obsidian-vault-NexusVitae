@@ -4,7 +4,7 @@ cssclasses:
   - dashboard-no-border
 ---
 # Passive Projects
-| [[0_Atlas/0_Dashboard/3-Projects|🚧Projects]] | [[0_Atlas/0_Dashboard/3-Projects/0-Recurring|🔄Recurring]] | [[0_Atlas/0_Dashboard/3-Projects/1-Active|⚡Active]] | [[0_Atlas/0_Dashboard/3-Projects/2-Passive|⏳Passive]] | [[0_Atlas/0_Dashboard/3-Projects/3-Idea|💡Ideas]] |
+![[zData/5design_modul/ProjectNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -13,11 +13,11 @@ cssclasses:
 >[!multi-column]
 >
 > > [!blank|wide-0]
-> > ### NEXUS NAVIGATOR
+> > #### ⏳ **ON HOLD**
 > > ```dataviewjs
 > > {
 > >     const container = this.container;
-> >     container.style.width = "280px";
+> >     container.style.width = "100%"; container.style.maxWidth = "240px"; container.style.height = "230px";
 > >     container.style.margin = "0 auto";
 > >     if (!container.querySelector('canvas')) {
 > >         const status = "2passive";
@@ -42,7 +42,7 @@ cssclasses:
 > >                 labels: hasData ? types.map(t => t.label) : ["No projects yet"],
 > >                 datasets: [{ data: hasData ? counts : [1], backgroundColor: hasData ? types.map(t => t.color) : ["var(--background-modifier-border)"], borderWidth: 0 }]
 > >             },
-> >             options: { cutout: '80%', animation: false, plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } }
+> >             options: { responsive: true, maintainAspectRatio: false, cutout: '76%', animation: false, plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } }
 > >         };
 > >         const interval = setInterval(() => {
 > >             if (window.renderChart) {

@@ -12,7 +12,7 @@ let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.
 const activeTrigger = tp.variables.originTrigger || ""; 
 
 // 🔱 2. TASK SELECTION
-// Die bestehenden Nummern (1-8) bleiben EXAKT wie sie waren!
+// The existing numbers (1-8) stay EXACTLY as they were.
 const tOptions = ["1 🛠️ Todo", "2 🏃🏽 Togo", "3 🎓 Tostudy", "4 📅 Tomeet", "5 💰 Tobuy", "6 💵 Topay", "7 🍜 Tocook", "8 🎀 Tocraft", "9 📥 Toget"];
 const tValues  = ["1todo", "2togo", "3tostudy", "4tomeet", "5tobuy", "6topay", "7tocook", "8tocraft", "9toget"];
 
@@ -40,28 +40,28 @@ const triggerMap = {
     "craft": "8tocraft",
     "tocraft": "8tocraft",
     "8tocraft": "8tocraft",
-    "get": "9toget",       // 🔱 NEU (Nummer 9)
+    "get": "9toget",       // 🔱 number 9
     "toget": "9toget",
     "9toget": "9toget",
     "receive": "9toget",
     "income": "9toget"
 };
 
-// Wenn kein Trigger
+// If there is no trigger
 let choice = triggerMap[activeTrigger] || await tp.system.suggester(tOptions, tValues, false, "🛠️ Category?");
-if (!choice) choice = "1todo"; // 🔱 DER FALLBACK
+if (!choice) choice = "1todo"; // 🔱 THE FALLBACK
 
-// 🔱 3. DEADLINE-MATRIX (Deine Vorgaben)
+// 🔱 3. DEADLINE MATRIX
 const deadlineConfig = {
-    "1todo": 1,    // +1 Tag
-    "2togo": 14,   // 14 Tage
-    "3tostudy": 1, // +1 Tag
-    "4tomeet": 0,  // Eigenes Datum
-    "5tobuy": 7,   // 7 Tage
-    "6topay": 3,   // 3 Tage
+    "1todo": 1,    // +1 day
+    "2togo": 14,   // 14 days
+    "3tostudy": 1, // +1 day
+    "4tomeet": 0,  // Own date
+    "5tobuy": 7,   // 7 days
+    "6topay": 3,   // 3 days
     "7tocook": 0,  
-    "8tocraft": 14, // 14 Tage
-    "9toget": 3    // 🔱 NEU
+    "8tocraft": 14, // 14 days
+    "9toget": 3
 };
 
 const daysToAdd = deadlineConfig[choice] || 0;
@@ -72,25 +72,32 @@ tp.variables.deadline = await tp.system.prompt(
     suggestion
 );
 
-// 🔱 4. PROJECT ASSIGNMENT (Das neue GTD-Routing für Tasks)
+// 🔱 4. PROJECT ASSIGNMENT (the GTD routing for tasks)
 let pLink = "";
 let targetFolder = taskRoot;
 
-// SMART PATH DETECTION: created directly inside a project's Tasks folder → auto-link, skip the prompt
+// EVERY task lands in taskRoot. A task is its own GTD horizon (task4), not a part of a
+// project — so it never gets a folder inside 3_Projects. The link to the project lives in
+// project3 in the frontmatter, and the project's cockpit is what collects them again.
+// A project subfolder would store the same fact twice, and worse: renaming the project
+// would orphan the folder while the frontmatter link kept working.
+
+// SMART PATH DETECTION: created inside a project folder → adopt that project as the link,
+// but still file the task under taskRoot. 3_Projects is flat, so the pattern is
+// <root>/<Project> with no status segment.
 const _fp = tp.file.folder(true).replace(/\\/g, "/");
-const _pm = _fp.match(new RegExp(projectRootPattern + "\\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)\\/([^/]+)\\/Tasks"));
+const _pm = _fp.match(new RegExp(projectRootPattern + "\\/([^/]+)"));
 
 if (_pm) {
-    pLink = `[[${_pm[2]}]]`;
-    targetFolder = `${projectRoot}/${_pm[1]}/${_pm[2]}/Tasks`;
+    pLink = `[[${_pm[1]}]]`;
 } else {
-    const projs = dv ? dv.pages(`"${projectRoot}"`).where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Tasks/")).sort(p => p.file.mtime, "desc") : [];
+    const projs = dv ? dv.pages(`"${projectRoot}"`).where(p => String(p.arch ?? "").includes("#3project")).sort(p => p.file.mtime, "desc") : [];
     const projOptions = ["✖️ No Project (General Task)", "➕ ✨ Create New Project"];
     const projPaths = ["NONE", "NEW"];
 
     for (let p of projs) {
-        let match = p.file.path.match(new RegExp(projectRootPattern + "\\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)"));
-        let stat = match ? match[1] : "1_Active";
+        // The status comes from the frontmatter, not from the path.
+        const stat = p.status ? String(p.status) : "1active";
         projOptions.push(`🧩 ${p.file.name} (${stat})`);
         projPaths.push(`${p.file.name}|${stat}`);
     }
@@ -98,24 +105,23 @@ if (_pm) {
     const pick = await tp.system.suggester(projOptions, projPaths, false, "🔗 Link Task to Project?");
 
     if (pick === "NEW") {
-        // Create a new project on the fly (parity with projectlog)
+        // Create a new project on the fly (parity with projectlog).
+        // 3_Projects is flat: the status is asked for and written to the frontmatter,
+        // it is not part of the path — otherwise every status change would move folders.
         const pName = (await tp.system.prompt("📝 Name of the NEW Project?", "New Project") || "New Project").replace(/[\\/:"*?<>|]+/g, "-").trim();
-        const statLabels = ["🟢 1_Active", "🟡 2_Passive", "💡 3_Idea", "🔄 0_Recurring"];
-        const statFolders = ["1_Active", "2_Passive", "3_Idea", "0_Recurring"];
-        const pStat = await tp.system.suggester(statLabels, statFolders, false, "🚦 Initial Project Status?") || "1_Active";
+        const statLabels = ["⚡ Active", "💤 Passive", "☁️ Idea", "🔄 Recurring"];
+        const statVals = ["1active", "2passive", "3idea", "0recurring"];
+        const pStat = await tp.system.suggester(statLabels, statVals, false, "🚦 Initial Project Status?") || "1active";
+        tp.variables.projectStatus = pStat;
         pLink = `[[${pName}]]`;
-        targetFolder = `${projectRoot}/${pStat}/${pName}/Tasks`;
     } else if (pick && pick !== "NONE") {
-        // Existing project selected → build the project Tasks path
-        const parts = pick.split("|");
-        const pName = parts[0];
-        const pStat = parts[1];
+        // Existing project selected → link only; the task still lives in taskRoot.
+        const pName = pick.split("|")[0];
         pLink = `[[${pName}]]`;
-        targetFolder = `${projectRoot}/${pStat}/${pName}/Tasks`;
     }
 }
 
-// Variablen sichern, damit die Templates (z.B. 1todo.md) den Link nutzen können
+// Save the variables so the templates (e.g. 1todo.md) can use the link
 tp.variables.pLink = pLink;
 
 // 🔱 5. TITLE & LOGISTICS
@@ -131,14 +137,14 @@ if (tp.file.title !== title) {
     await new Promise(r => setTimeout(r, 200));
 }
 
-// Ordnerstruktur bauen (entweder 4_Tasks oder der Projekt-Ordner)
+// Build the folder structure — always taskRoot
 let pathAcc = "";
 for (const seg of targetFolder.split('/').filter(s => s)) {
     pathAcc += (pathAcc ? "/" : "") + seg;
     if (!app.vault.getAbstractFileByPath(pathAcc)) await app.vault.createFolder(pathAcc);
 }
 
-// 🔱 6. RENAME & MOVE (Stabilisiert)
+// 🔱 6. RENAME & MOVE (stabilised)
 const finalPath = `${targetFolder}/${title}.md`;
 if (tp.file.path !== finalPath && !app.vault.getAbstractFileByPath(finalPath)) {
     await tp.file.move(finalPath);

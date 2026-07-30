@@ -52,7 +52,7 @@ if (selectedKey) {
         const totalLines = editor.lineCount();
         let markerLine = -1;
 
-        // Suche die Zeile mit ~~ Study ~~
+// Find the line containing the Study marker
         for (let i = 0; i < totalLines; i++) {
             if (editor.getLine(i).includes("~~ Study ~~")) {
                 markerLine = i;
@@ -61,11 +61,11 @@ if (selectedKey) {
         }
 
         if (markerLine >= 0) {
-            // Füge direkt VOR der Marker-Zeile ein
+            // Insert directly BEFORE the marker line
             editor.replaceRange(output, { line: markerLine, ch: 0 });
             new Notice(`✅ ${disc.label} added to Study Metrics`);
         } else {
-            // Fallback: Marker nicht gefunden → am Cursor einfügen
+// Fallback: marker not found → insert at the cursor
             editor.replaceRange(output, editor.getCursor());
             new Notice(`⚠️ Marker '~~ Study ~~' not found – inserted at cursor`);
         }

@@ -1,6 +1,6 @@
 <%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
-if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
+if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
 let title = tp.variables.title || tp.file.title;
 let pLink = tp.variables.pLink || "";
@@ -15,10 +15,10 @@ if (!title || title.trim() === "") title = "AtomicTech-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
-    await new Promise(r => setTimeout(r, 200)); // Kurze Stabilisierung
+    await new Promise(r => setTimeout(r, 200)); // Short stabilization
 }
 
-// 🔱 3. TITEL-CLEANING für die H1
+// 🔱 3. TITLE CLEANING for the H1
 let displayTitle = title;
 if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
 displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(tech-|t-)/i, "").trim();
@@ -48,7 +48,7 @@ persona: "engineer"
 status: 1active
 entity_class: "tech_gear"
 tech_type: "component"
-state: "active"
+storage_location: "desk"
 qty: 0
 needs_refill: false
 shelf_life_months: 60

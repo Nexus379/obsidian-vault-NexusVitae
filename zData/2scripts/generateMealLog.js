@@ -24,7 +24,7 @@ async function generateMealLog(app, dv, moment) {
     let plan = dv.page(weeklyPath);
     let planPath = weeklyPath;
     if (!plan) { planPath = "2_Areas/1_Selfcare/Plan/Meal_Plan.md"; plan = dv.page(planPath); }
-    if (!plan) throw new Error("Kein Meal-Wochenplan und keine Meal_Plan.md gefunden!");
+    if (!plan) throw new Error("No meal weekly plan and no Meal_Plan.md found!");
 
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/mealEngine.js";
     try { delete require.cache[require.resolve(enginePath)]; } catch(e) {}
@@ -95,7 +95,7 @@ ${blocks.join("\n")}
 [[${planPath.replace(".md", "")}|➡️ Back to Meal Plan]]
 `;
 
-    // Verschachtelte Ordner sicher anlegen (Routine/YYYY/MM)
+    // Create nested folders safely (Routine/YYYY/MM)
     let cPath = "";
     for (const seg of folderPath.split('/')) {
         cPath = cPath === "" ? seg : `${cPath}/${seg}`;

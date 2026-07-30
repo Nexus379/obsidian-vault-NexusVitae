@@ -23,18 +23,37 @@ try {
     const routines = engine.getRoutineLabels();
 
     // 3. Build Searchable Labels (Including Aliases)
-    const displayLabels = routines.map((r) => {
+    const rowLabel = (r) => {
         let searchTerms = [];
         if (r.aliases) searchTerms = searchTerms.concat(r.aliases);
         if (r.alias) searchTerms = searchTerms.concat(r.alias);
         if (r.tags) searchTerms = searchTerms.concat(r.tags);
         const termString = searchTerms.length > 0 ? `   🔍 [${searchTerms.join(", ")}]` : "";
         return `${r.icon}${r.label} (${r.key})${termString}`;
-    });
+    };
 
-    // 4. Selection via Suggester
-    const selected = await tp.system.suggester(displayLabels, routines);
+    // 4. Selection via Suggester. The first entry is the escape hatch: if none of the
+    // wordings matches how you happen to think of the thing, type your own word and let
+    // the engine match it (typos, umlauts, stems, loose letter order).
+    const SEARCH = { key: "__search__" };
+    let selected = await tp.system.suggester(
+        ["🔎 Search with your own words…"].concat(routines.map(rowLabel)),
+        [SEARCH].concat(routines)
+    );
     if (!selected) return;
+
+    if (selected.key === "__search__") {
+        const term = await tp.system.prompt("🔎 What are you looking for? (any wording)");
+        if (!term) return;
+        const hits = engine.searchRoutines(term);
+        if (hits.length === 0) {
+            new Notice(`❌ Nothing close to "${term}" — showing the full list.`);
+            selected = await tp.system.suggester(routines.map(rowLabel), routines);
+        } else {
+            selected = await tp.system.suggester(hits.map(rowLabel), hits);
+        }
+        if (!selected) return;
+    }
 
     // 5. Prompts for Detail and Duration (With strict 15 min fallback)
     const detail = await tp.system.prompt("Optional detail (Enter for none):");

@@ -16,7 +16,7 @@ if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
 }
 if (!title || title.trim() === "") title = "Take-" + tp.date.now("HH-mm");
 
-// Physisches Umbenennen für Stabilität
+// Physical rename for stability
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); 
@@ -27,7 +27,7 @@ let payee = await tp.system.prompt("👤 From whom (Source)?", "Name/Company");
 let amount = await tp.system.prompt("💰 Expected Amount?", "0.00");
 let account = await tp.system.suggester(["💳 Visa", "🔵 PayPal", "🏦 Bank", "💵 Cash"], ["Visa", "PayPal", "Bank", "Cash"]) || "TBD";
 
-// 🔱 4. CLEANING (Entfernt Trigger wie 7totake- oder t-)
+// 🔱 4. CLEANING (strips triggers such as 7totake- or t-)
 let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(7totake-|t-|4task-)/i, "").trim();
 
 tR += "---"  

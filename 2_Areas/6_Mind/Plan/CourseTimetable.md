@@ -2,7 +2,7 @@
 banner: "![[xAttachment/Images/Banner/kachelschwarz-lichtblau.jpg]]"
 banner_y: 0.35
 banner_icon: 🧠
-inbox: true
+inbox: false
 persona: ""
 arch:
   - "#2area"
@@ -23,10 +23,11 @@ tt_breaks: 2:15, 4:15, 6:30
 
 # 🗓️ Course Timetable
 
-`BUTTON[setup-timetable]` `BUTTON[edit-timetable]`
+`BUTTON[setup-timetable]` `BUTTON[edit-timetable]` `BUTTON[generate-course-timetable]`
+<small style="opacity:0.45;font-style:italic;">(Generate Week Timetable = this week as its own diverging weekly file — the master stays untouched)</small>
 
 ```dataviewjs
-// 1. DATEN AUS DEM YAML LESEN
+// 1. READ THE DATA FROM THE YAML
 const c = dv.current();
 const startTime = c.tt_start || "08:00";     
 const classDuration = Number(c.tt_duration) || 45;      

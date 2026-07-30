@@ -4,7 +4,7 @@ const persona = tp.variables.persona || "";
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const area = tp.variables.currentArea || tp.variables.area || "";
-const icon = "💰"; // Feste Verankerung für Pro-Buy
+const icon = "💰"; // Fixed anchor for Pro-Buy
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -43,6 +43,7 @@ archtype:
 status: "<%- tp.variables.projectStatus || '1active' %>"
 priority:
   - "3"
+explore_lvl: 0blueprint
 due: <%- deadline %>
 amount: <%- amount %>
 vendor: "<%- vendor %>"
@@ -73,6 +74,8 @@ review:
 > > > **Inbox:** `INPUT[toggle:inbox]`
 > > > **Status:**
 > > > `INPUT[suggester(option(0recurring, 🔄 Recurring), option(0start, 🚀 Start), option(1active, ⚡ Active), option(2passive, 💤 Passive), option(3idea, 💡 Idea), option(done, ✅ Done), option(canceled, ❌ Canceled), option(review, 🔍 Review), option(archived, 📦 Archived), option(bin, 🗑️ Bin)):status]`
+> > > **Phase:**
+> > > `INPUT[suggester(option(0blueprint, 📝 Blueprint), option(1research, 🔍 Research), option(3investing, ⏳ Investing), option(4polish, ✨ Polish), option(5finish, 🏁 Finish)):explore_lvl]`
 
 - 💵 Price: `INPUT[number:amount]` € at <%- vendor %>
 

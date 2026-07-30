@@ -5,15 +5,43 @@
  */
 try {
 let file = app.workspace.getActiveFile();
-let planType = "Routine";
-let targetPath = "2_Areas/3_Drive/Plan/Routine_Timeblocking.md";
 
-if (file && file.name.includes("Timetable")) {
+// 🔎 Plan detection — in this order, because only the first two are reliable:
+//   1. plan_type in the frontmatter (written by the weekplan_* templates)
+//   2. the YAML prefixes tt_ / fit_ / rt_
+//   3. the file name, case-insensitive
+// The file name alone is NOT enough: the masters are capitalised ("CourseTimetable.md"),
+// the weekly files are lowercase ("2026-W31_timetable.md"). Comparing against "Timetable"
+// misses every weekly file — and since the target path used to fall back to the master,
+// archiving a week would have archived the MASTER instead.
+const fmActive = file ? (app.metadataCache.getFileCache(file)?.frontmatter || {}) : {};
+const nameLc = file ? file.name.toLowerCase() : "";
+const hasPrefix = (p) => Object.keys(fmActive).some(k => k.startsWith(p));
+
+let planType = null;
+const declared = String(fmActive.plan_type || "").toLowerCase();
+
+if (declared === "timetable" || hasPrefix("tt_") || nameLc.includes("timetable")) {
     planType = "Timetable";
-    targetPath = file.path;
-} else if (file && file.name.includes("Fitness")) {
+} else if (declared === "fitness" || hasPrefix("fit_") || nameLc.includes("fitness")) {
     planType = "Fitness";
+} else if (declared === "routine" || hasPrefix("rt_") || nameLc.includes("routine")) {
+    planType = "Routine";
+}
+
+// Detected    -> archive the open file itself (week OR master).
+// Not detected -> the master routine as fallback, path from planPaths instead of hardcoded.
+let targetPath;
+if (planType && file) {
     targetPath = file.path;
+} else {
+    planType = "Routine";
+    targetPath = "2_Areas/3_Drive/Plan/Routine_Timeblocking.md";
+    try {
+        const pp = app.vault.adapter.basePath + "/zData/2scripts/planPaths.js";
+        delete require.cache[require.resolve(pp)];
+        targetPath = require(pp)().get("rt") + ".md";
+    } catch(e) {}
 }
     
     const rFile = app.vault.getAbstractFileByPath(targetPath);
@@ -140,9 +168,9 @@ if (file && file.name.includes("Timetable")) {
     const month = moment().locale('en').format("MM_MMMM");
     const kw = moment().format("WW");
     
-    let folder = "4_Organize";
-    if (planType === "Timetable") folder = "3_Mind";
-    if (planType === "Fitness") folder = "6_Activity";
+    let folder = "3_Drive";
+    if (planType === "Timetable") folder = "6_Mind";
+    if (planType === "Fitness") folder = "3_Drive";
     
     const targetBase = `yArchive/${year}/${month}/2_Areas`;
     const title = `${planType}_Archive_W${kw}_${moment().format("HHmm")}`;

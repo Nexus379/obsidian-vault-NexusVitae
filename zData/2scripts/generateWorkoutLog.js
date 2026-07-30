@@ -27,7 +27,7 @@ async function generateWorkoutLog(app, dv, moment) {
     if (!fitPlan) {
         fitPlan = dv.page("2_Areas/3_Drive/Plan/Fitness_Routine.md");
     }
-    if (!fitPlan) throw new Error("Kein Wochenplan und keine Fitness_Routine.md gefunden!");
+    if (!fitPlan) throw new Error("No weekly plan and no Fitness_Routine.md found!");
     
     // Engine laden
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/fitnessEngine.js";
@@ -54,7 +54,7 @@ async function generateWorkoutLog(app, dv, moment) {
     else if (cycleWeek === 3) { phase = "🔥 Bruce Lee Overreach (Peak)"; intensity = "90% (RIR: 1)"; targetMultiplier = "🔥 MAX OVERLOAD (4 Sets Max Density)"; }
     else if (cycleWeek === 4) { phase = "🔋 Deload Phase"; intensity = "60% (RIR: 4)"; targetMultiplier = "🔋 Active Recovery (-40% Volume)"; }
 
-    // Finde heutige Übungen & berechne dynamische Soll-Werte (Targets)
+    // Find today's exercises & compute the dynamic targets
     let hasExercises = false;
     let workoutBlocks = [];
     
@@ -72,7 +72,7 @@ async function generateWorkoutLog(app, dv, moment) {
                     let exData = (engine && engine.all) ? engine.all[baseKey] : null;
                     let fitFamily = exData ? exData.fit_family : "";
                     
-                    // 🎯 DYNAMISCHE ZIEL-BERECHNUNG (SOLL-WERTE nach Cycle-Woche)
+                    // 🎯 DYNAMIC TARGET CALCULATION (target values by cycle week)
                     let targetGoal = "";
                     if (fitFamily && (fitFamily.includes("static") || fitFamily.includes("bruce_lee") || fitFamily.includes("stretching"))) {
                         // Isometrische / Halte-Übungen (in Sekunden)
@@ -93,7 +93,7 @@ async function generateWorkoutLog(app, dv, moment) {
                     }
                     
                     workoutBlocks.push(`#### ${nameStr}`);
-                    workoutBlocks.push(`> 🎯 **Target Goal (Woche ${cycleWeek}):** \`${targetGoal}\``);
+                    workoutBlocks.push(`> 🎯 **Target Goal (week ${cycleWeek}):** \`${targetGoal}\``);
                     workoutBlocks.push(`| Set | Target | Actual Reps / Weight | RIR (0-4) | Status |`);
                     workoutBlocks.push(`|:---:|:---:|:---:|:---:|:---:|`);
                     if (cycleWeek === 4) {
@@ -156,7 +156,7 @@ cssclasses: ["dashboard-no-border"]
 > - **Running / Cycling / Swimming:** \`5.0 km (25 min)\` or \`Pace 5:00\`
 > - **Dancing / Free Flow:** \`20 min Flow\`
 > 
-> *RIR = Reps in Reserve (Wie viele Wiederholungen hättest du noch geschafft?)*
+> *RIR = Reps in Reserve (how many more reps could you have done?)*
 
 ${progressBlock}
 
@@ -168,8 +168,8 @@ ${workoutBlocks.join("\n")}
 [[${fitPlan.file.path.replace(".md", "")}|➡️ Back to Fitness Plan]]
 `;
 
-    // Datei speichern
-    // Verschachtelte Ordner sicher anlegen (Routine/YYYY/MM)
+    // Save the file
+    // Create nested folders safely (Routine/YYYY/MM)
     let cPath = "";
     for (const seg of folderPath.split('/')) {
         cPath = cPath === "" ? seg : `${cPath}/${seg}`;

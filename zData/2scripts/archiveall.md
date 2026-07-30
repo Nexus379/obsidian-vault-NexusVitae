@@ -34,7 +34,7 @@ else if (currentPath.includes("4_Tasks")) category = "4_Tasks";
 else if (currentPath.includes("5_Notes")) category = "5_Notes";
 else if (currentPath.includes("6_Resources")) category = "6_Resources";
 
-// 🔱 3. UNTERSTRUKTUR (Spezial-Handling für Kalender-Module)
+// 🔱 3. SUBSTRUCTURE (special handling for calendar modules)
 let subPath = "";
 if (category === "0_Calendar") {
     const mods = ["1_PLM", "2_PPM", "3_PKM", "4_Projectlogs", "5_Protocols", "6_Reviews"];
@@ -42,8 +42,8 @@ if (category === "0_Calendar") {
     subPath = foundMod ? `/${foundMod}` : "/DailyLogs";
 }
 
-// 🔱 4. ZIEL-PFAD BAUEN (Logik: Archiv > Jahr > Monat > Kategorie > [SubModul])
-// Das hält jeden Ordner klein und das System schnell.
+// 🔱 4. BUILD THE TARGET PATH (archive > year > month > category > [submodule])
+// This keeps every folder small and the system fast.
 const targetBase = `yArchive/${year}/${month}/${category}${subPath}`;
 
 // 🔱 5. YAML-UPDATE (Status-Sicherung)
@@ -52,14 +52,14 @@ await app.fileManager.processFrontMatter(file, (fm) => {
     fm["archived_at"] = tp.date.now("YYYY-MM-DD HH:mm");
 });
 
-// 🔱 6. ORDNER-BOT MIT SICHERHEITS-PAUSEN
+// 🔱 6. FOLDER BOT WITH SAFETY PAUSES
 let checkPath = "";
 const segments = targetBase.split('/');
 for (const seg of segments) {
     checkPath = checkPath === "" ? seg : `${checkPath}/${seg}`;
     if (!app.vault.getAbstractFileByPath(checkPath)) {
         await app.vault.createFolder(checkPath);
-        await new Promise(r => setTimeout(r, 100)); // Kurze Pause für das System
+        await new Promise(r => setTimeout(r, 100)); // Short pause for the system
     }
 }
 

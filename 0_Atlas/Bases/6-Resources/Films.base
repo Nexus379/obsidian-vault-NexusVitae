@@ -1,10 +1,10 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/film")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/film")
 views:
   - type: table
-    name: Films
+    name: 🎬 Films
     order:
       - cover
       - file.name
@@ -12,6 +12,7 @@ views:
       - plattform
       - status
       - rating
+      - ranking
       - file.path
     sort:
       - property: file.name
@@ -22,3 +23,18 @@ views:
       note.creator: 160
       note.plattform: 120
       note.status: 90
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - creator
+      - plattform
+      - rating
+      - ranking
+    sort:
+      - property: file.mtime
+        direction: DESC

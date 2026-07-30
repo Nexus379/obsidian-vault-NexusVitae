@@ -1,8 +1,8 @@
 <%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
-if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
+if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
-const area = tp.variables.currentArea || tp.variables.area || "";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/6mind";
 const sci = tp.variables.sciTag || tp.variables.sci || "#science";
 const disc = tp.variables.discTag || tp.variables.disc || "#disc";
 const icon = tp.variables.icon || "🗃️";
@@ -21,10 +21,10 @@ if (!title || title.trim() === "") title = "Atomic-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
-    await new Promise(r => setTimeout(r, 200)); // Kurze Stabilisierung
+    await new Promise(r => setTimeout(r, 200)); // Short stabilization
 }
 
-// 🔱 3. TITEL-CLEANING (displayTitle statt dTitle!)
+// 🔱 3. TITLE CLEANING for the H1
 let displayTitle = title;
 if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
 displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(atomic-|n-)/i, "").trim();

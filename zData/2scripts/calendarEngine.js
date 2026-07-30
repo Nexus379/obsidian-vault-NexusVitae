@@ -97,7 +97,7 @@ const handleBtnClick = async (type, btn) => {
         const templateFile = app.vault.getAbstractFileByPath(routerPath);
         const inbox = app.vault.getAbstractFileByPath("0_Inbox");
         if (!tPlugin || !templateFile || !inbox) {
-            new Notice("CalendarLog: Templater, Router oder 0_Inbox fehlt.");
+            new Notice("CalendarLog: Templater, router or 0_Inbox is missing.");
             return;
         }
 

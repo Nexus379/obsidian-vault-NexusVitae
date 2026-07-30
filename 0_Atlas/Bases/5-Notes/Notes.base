@@ -8,7 +8,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Notes
+    name: ✏️ Notes
     order:
       - file.name
       - archtype

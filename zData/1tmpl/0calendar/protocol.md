@@ -10,9 +10,10 @@ let inheritedProject = "";
 
 // SMART PATH DETECTION: created directly inside a project's Protocols folder → link the project automatically
 if (!logConnect) {
+    // 3_Projects is flat: <root>/<Project>/… — no status segment to skip over.
     const _fp = tp.file.folder(true).replace(/\\/g, "/");
-    const _pm = _fp.match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)\/([^/]+)/);
-    if (_pm) logConnect = `[[${_pm[2]}]]`;
+    const _pm = _fp.match(/3_Projects\/([^/]+)/);
+    if (_pm) logConnect = `[[${_pm[1]}]]`;
 }
 
 if (!logConnect || logConnect === "MAN") {
@@ -60,30 +61,25 @@ const dIcon = discData.icon || "📝";
 const sciTag = discData.sci || ["#sci/General"];
 
 // 🔱 4.1 FLEX-TAGGING
-const axisMap = { "PLM": "1selfcare", "PPM": "4organize", "PKM": "3mind" };
+const axisMap = { "PLM": "1selfcare", "PPM": "3drive", "PKM": "6mind" };
 const areaBase = tp.variables.ARCH?.a?.tag || "#2area";
 const areaTag = axisMap[pArea] ? `${areaBase}/${axisMap[pArea]}` : `${areaBase}/unknown`;
 
-// 🔱 5. PATH LOGISTICS — PARA weiche (mirror projectlog): live WITH the project if it's a real one
+// 🔱 5. PATH LOGISTICS
+//
+// Every protocol lands in the calendar — same rule as projectlog: a protocol is a time
+// thing, so its folder carries only what never changes (name, year, month). It used to
+// branch into 3_Projects/<status>/<Project>/Protocols/, which put the project's STATUS
+// into the path: every status change would then have had to move the whole subtree.
+//
+// The project connection lives in the frontmatter and is what the cockpit reads.
 const baseCal = (tp.variables.ARCH && tp.variables.ARCH.c && tp.variables.ARCH.c.folder) ? tp.variables.ARCH.c.folder : "0_Calendar";
 
-// Resolve the linked project → its status folder (1_Active/2_Passive/…) if it exists in 3_Projects
+// The linked project's name is the folder; no lookup of its status folder needed any more.
 let projName = String(inheritedProject || logConnect).replace(/[\[\]]/g, "").replace(".md", "").split("/").pop().split("|")[0].trim();
-let projStat = "";
-if (dv && projName && projName !== "Unlinked") {
-    const projPage = dv.pages('"3_Projects"')
-        .where(p => !p.file.path.includes("/Logs/") && !p.file.path.includes("/Protocols/") && !p.file.path.includes("/Tasks/") && p.file.name === projName)
-        .first();
-    if (projPage) {
-        const mt = String(projPage.file.path).match(/3_Projects\/(1_Active|2_Passive|3_Idea|0_Recurring|4_Archive)/);
-        projStat = mt ? mt[1] : "";
-    }
-}
+const nameForFolder = (projName && projName !== "Unlinked") ? projName : folderContext;
 
-// Real project → nest under it; otherwise → central protocol folder (loose/unlinked protocols)
-const targetFolder = projStat
-    ? `3_Projects/${projStat}/${projName}/Protocols/${yy}/${mm}`
-    : `${baseCal}/5_Protocols/${yy}/${folderContext}`;
+const targetFolder = `${baseCal}/5_Protocols/${nameForFolder}/${yy}/${mm}`;
 
 let currentPath = "";
 for (const seg of targetFolder.split('/')) {

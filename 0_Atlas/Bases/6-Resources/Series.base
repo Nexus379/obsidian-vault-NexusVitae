@@ -1,17 +1,18 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/serie")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/serie")
 views:
   - type: table
-    name: Series
+    name: 🎞️ Series
     order:
       - cover
       - file.name
-      - author
+      - creator
       - plattform
       - status
       - rating
+      - ranking
       - file.path
     sort:
       - property: file.name
@@ -19,6 +20,22 @@ views:
     columnSize:
       cover: 90
       file.name: 240
-      note.author: 160
+      note.creator: 160
       note.plattform: 120
       note.status: 90
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - creator
+      - season
+      - episode
+      - episode_max
+      - plattform
+    sort:
+      - property: file.mtime
+        direction: DESC

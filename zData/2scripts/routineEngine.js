@@ -4,109 +4,109 @@ function routineEngine() {
         // ==========================================
         // 🌌 0. MACRO PROTOCOLS (Triggers)
         // ==========================================
-        am_trigger:      { label: "AM Macro", icon: "🌅", group: "0. Macro", aliases: ["am", "morning-macro"] },
-        pm_trigger:      { label: "PM Macro", icon: "🌙", group: "0. Macro", aliases: ["pm", "evening-macro"] },
+        am_trigger:      { label: "AM Macro", icon: "🌅", group: "0. Macro" },
+        pm_trigger:      { label: "PM Macro", icon: "🌙", group: "0. Macro" },
 
         // ==========================================
         // 🔴 1. ROOT (Muladhara) - Survival, Body, Foundation
         // ==========================================
-        sleep_rest:      { label: "Sleep & Recovery", icon: "🛌", group: "1. Root", aliases: ["sleep", "nap", "rest", "insomnia", "schlafen", "nickerchen", "ausruhen", "ruhen", "sleeping", "snooze"] },
-        hygiene_basic:   { label: "Hygiene", icon: "🚿", group: "1. Root", aliases: ["shower", "teeth", "wash", "bath", "grooming", "zähneputzen", "duschen", "waschen", "körperpflege", "baden", "brush", "dental", "hygiene", "toothbrush"] },
-        selfcare_routine:{ label: "Selfcare", icon: "🛁", group: "1. Root", aliases: ["selfcare", "skincare", "wellness", "pflege", "hautpflege", "beauty", "grooming"] },
-        health_medical:  { label: "Health", icon: "⚕️", group: "1. Root", aliases: ["doctor", "hospital", "pharmacy", "dentist", "sick", "arzt", "apotheke", "zahnarzt", "krank", "gesundheit", "health", "medical", "checkup"] },
-        chore_cleaning:  { label: "Cleaning", icon: "🧹", group: "1. Root", aliases: ["clean", "tidy", "trash", "dishes", "vacuum", "putzen", "aufräumen", "müll", "geschirr", "staubsaugen", "cleaning", "mop", "sweep"] },
-        chore_deep:      { label: "Deep Clean", icon: "🧽", group: "1. Root", aliases: ["purge", "declutter", "ausmisten", "entrümpeln", "grundreinigung", "großputz", "springclean", "organize"] },
-        chore_laundry:   { label: "Laundry", icon: "🧺", group: "1. Root", aliases: ["laundry", "ironing", "washing machine", "clothes", "wäsche", "bügeln", "waschmaschine", "washing"] },
-        shop_groceries:  { label: "Groceries", icon: "🛒", group: "1. Root", aliases: ["groceries", "supermarket", "shopping", "einkaufen", "lebensmittel", "supermarkt", "grocery"] },
-        gear_repair:     { label: "Maintenance", icon: "⚙️", group: "1. Root", aliases: ["repair", "fix", "tools", "bauen", "werkzeug", "reparieren", "basteln", "maintenance", "build"] },
-        meal_eating:     { label: "Meals", icon: "🍽️", group: "1. Root", aliases: ["breakfast", "lunch", "dinner", "snack", "eat", "essen", "frühstück", "mittagessen", "abendessen", "mahlzeit", "eating", "food", "meal"] },
-        meal_prep:       { label: "Meal Prep", icon: "🍱", group: "1. Root", aliases: ["cook", "bake", "meal prep", "gluten-free", "kitchen", "kochen", "backen", "mealprep", "zubereiten", "cooking", "prep", "baking"] },
-        admin_finance:   { label: "Life Admin", icon: "📊", group: "1. Root", aliases: ["taxes", "budget", "finance", "bills", "mail", "admin", "steuern", "finanzen", "rechnungen", "papierkram"] },
-        transit_local:   { label: "Transit", icon: "🚆", group: "1. Root", aliases: ["commute", "bus", "train", "car", "drive", "pendeln", "bahn", "auto", "fahren", "transport", "driving"] },
+        sleep_rest:      { label: "Sleep & Recovery", icon: "🛌", group: "1. Root" },
+        hygiene_basic:   { label: "Hygiene", icon: "🚿", group: "1. Root" },
+        selfcare_routine:{ label: "Selfcare", icon: "🛁", group: "1. Root" },
+        health_medical:  { label: "Health", icon: "⚕️", group: "1. Root" },
+        chore_cleaning:  { label: "Cleaning", icon: "🧹", group: "1. Root" },
+        chore_deep:      { label: "Deep Clean", icon: "🧽", group: "1. Root" },
+        chore_laundry:   { label: "Laundry", icon: "🧺", group: "1. Root" },
+        shop_groceries:  { label: "Groceries", icon: "🛒", group: "1. Root" },
+        gear_repair:     { label: "Maintenance", icon: "⚙️", group: "1. Root" },
+        meal_eating:     { label: "Meals", icon: "🍽️", group: "1. Root" },
+        meal_prep:       { label: "Meal Prep", icon: "🍱", group: "1. Root" },
+        admin_finance:   { label: "Life Admin", icon: "📊", group: "1. Root" },
+        transit_local:   { label: "Transit", icon: "🚆", group: "1. Root" },
 
         // ==========================================
         // 🟠 2. SACRAL (Svadhisthana) - Experience, Art, Pleasure
         // ==========================================
-        culture_event:   { label: "Culture", icon: "🏛️", group: "2. Sacral", aliases: ["museum", "cinema", "theater", "gallery", "concert"] },
-        art_visual:      { label: "Visual Art", icon: "🎨", group: "2. Sacral", aliases: ["draw", "paint", "sketch", "photography", "illustration"] },
-        craft_manual:    { label: "Handcraft", icon: "✂️", group: "2. Sacral", aliases: ["diy", "build", "sew", "knit", "woodwork", "crafting", "töpfern"] },
-        dance_pure:      { label: "Dancing", icon: "💃", group: "2. Sacral", aliases: ["dance", "ballet", "hiphop", "tanzen"] },
-        music_practice:  { label: "Music", icon: "🎸", group: "2. Sacral", aliases: ["instrument", "sing", "piano", "guitar", "audio"] },
-        hobby_misc:      { label: "Misc Hobby", icon: "🧩", group: "2. Sacral", aliases: ["collecting", "leisure", "freizeit", "basteln"] },
-        dining_out:      { label: "Dining Out", icon: "🍷", group: "2. Sacral", aliases: ["restaurant", "date", "bar", "cafe"] },
-        gaming_digital:  { label: "Video Games", icon: "🎮", group: "2. Sacral", aliases: ["gaming", "pc", "console", "play"] },
-        gaming_tabletop: { label: "Tabletop", icon: "🃏", group: "2. Sacral", aliases: ["mtg", "board game", "chess", "cards"] },
-        rest_passive:    { label: "Screen Time", icon: "🍿", group: "2. Sacral", aliases: ["series", "movie", "star trek", "netflix", "watch"] },
-        intimacy_sex:    { label: "Intimacy", icon: "🔥", group: "2. Sacral", aliases: ["sex", "partner", "romance", "sensuality"] },
+        culture_event:   { label: "Culture", icon: "🏛️", group: "2. Sacral" },
+        art_visual:      { label: "Visual Art", icon: "🎨", group: "2. Sacral" },
+        craft_manual:    { label: "Handcraft", icon: "✂️", group: "2. Sacral" },
+        dance_pure:      { label: "Dancing", icon: "💃", group: "2. Sacral" },
+        music_practice:  { label: "Music", icon: "🎸", group: "2. Sacral" },
+        hobby_misc:      { label: "Misc Hobby", icon: "🧩", group: "2. Sacral" },
+        dining_out:      { label: "Dining Out", icon: "🍷", group: "2. Sacral" },
+        gaming_digital:  { label: "Video Games", icon: "🎮", group: "2. Sacral" },
+        gaming_tabletop: { label: "Tabletop", icon: "🃏", group: "2. Sacral" },
+        rest_passive:    { label: "Screen Time", icon: "🍿", group: "2. Sacral" },
+        intimacy_sex:    { label: "Intimacy", icon: "🔥", group: "2. Sacral" },
 
         // ==========================================
         // 🟡 3. SOLAR PLEXUS (Manipura) - Power, Work, Will
         // ==========================================
-        workout_str:     { label: "Strength", icon: "💪", group: "3. Solar Plexus", aliases: ["gym", "weights", "strength", "krafttraining", "gewichte", "muskeln", "kraft", "lifting", "resistance"] },
-        workout_cardio:  { label: "Cardio", icon: "🏃‍♀️", group: "3. Solar Plexus", aliases: ["run", "jog", "swim", "cardio", "laufen", "joggen", "ausdauer", "schwimmen", "running", "biking", "endurance"] },
-        workout_stretch: { label: "Stretching", icon: "🧘", group: "3. Solar Plexus", aliases: ["stretch", "mobility", "yoga", "dehnen", "stretching", "beweglichkeit", "mobilität", "flexibility", "warmup"] },
-        sport_active:    { label: "Sports", icon: "🎾", group: "3. Solar Plexus", aliases: ["tennis", "bouldering", "climbing", "team sport", "sport", "klettern", "bouldern", "sports"] },
-        cold_exposure:   { label: "Cold Exposure", icon: "🧊", group: "3. Solar Plexus", aliases: ["cold shower", "ice bath", "eisbad", "kälte", "kaltdusche", "icebath", "coldshower"] },
-        work_deep:       { label: "Deep Work", icon: "🧠", group: "3. Solar Plexus", aliases: ["focus", "project", "programming", "coding", "c++", "python", "arbeit", "fokus", "programmieren", "konzentration", "work", "deepwork"] },
-        work_admin:      { label: "Shallow Work", icon: "💼", group: "3. Solar Plexus", aliases: ["emails", "admin", "organizing", "verwaltung", "organisieren", "email"] },
-        skill_acquire:   { label: "Hard Skills", icon: "🎯", group: "3. Solar Plexus", aliases: ["drilling", "practice", "lernen", "üben", "fähigkeit", "drillen", "skill"] },
-        habit_tracking:  { label: "Habits", icon: "📈", group: "3. Solar Plexus", aliases: ["tracker", "goals", "setup", "review", "gewohnheiten", "ziele", "habits"] },
+        workout_str:     { label: "Strength", icon: "💪", group: "3. Solar Plexus" },
+        workout_cardio:  { label: "Cardio", icon: "🏃‍♀️", group: "3. Solar Plexus" },
+        workout_stretch: { label: "Stretching", icon: "🧘", group: "3. Solar Plexus" },
+        sport_active:    { label: "Sports", icon: "🎾", group: "3. Solar Plexus" },
+        cold_exposure:   { label: "Cold Exposure", icon: "🧊", group: "3. Solar Plexus" },
+        work_deep:       { label: "Deep Work", icon: "🧠", group: "3. Solar Plexus" },
+        work_admin:      { label: "Shallow Work", icon: "💼", group: "3. Solar Plexus" },
+        skill_acquire:   { label: "Hard Skills", icon: "🎯", group: "3. Solar Plexus" },
+        habit_tracking:  { label: "Habits", icon: "📈", group: "3. Solar Plexus" },
 
         // ==========================================
         // 🟢 4. HEART (Anahata) - Connection, Nature, Life Cycles
         // ==========================================
-        social_family:   { label: "Family", icon: "👪", group: "4. Heart", aliases: ["family", "kids", "parents", "partner", "relatives", "familie", "kinder", "eltern", "verwandte"] },
-        social_friends:  { label: "Friends", icon: "🥂", group: "4. Heart", aliases: ["friends", "meetup", "social", "party", "freunde", "treffen", "hangout"] },
-        event_ceremony:  { label: "Ceremony", icon: "🕊️", group: "4. Heart", aliases: ["wedding", "birthday", "anniversary"] },
-        pet_care:        { label: "Pet Care", icon: "🐾", group: "4. Heart", aliases: ["dog", "cat", "vet", "walk", "haustier", "hund", "katze", "gassi", "tierarzt", "pet"] },
-        nature_outdoors: { label: "Nature", icon: "🌲", group: "4. Heart", aliases: ["forest", "hike", "park", "nature", "natur", "wald", "wandern", "spaziergang", "draußen", "hiking", "outdoors", "walk"] },
-        acts_of_service: { label: "Service", icon: "🤲", group: "4. Heart", aliases: ["helping", "charity", "volunteer", "helfen"] },
+        social_family:   { label: "Family", icon: "👪", group: "4. Heart" },
+        social_friends:  { label: "Friends", icon: "🥂", group: "4. Heart" },
+        event_ceremony:  { label: "Ceremony", icon: "🕊️", group: "4. Heart" },
+        pet_care:        { label: "Pet Care", icon: "🐾", group: "4. Heart" },
+        nature_outdoors: { label: "Nature", icon: "🌲", group: "4. Heart" },
+        acts_of_service: { label: "Service", icon: "🤲", group: "4. Heart" },
 
         // ==========================================
         // 🔵 5. THROAT (Vishuddha) - Expression, Communication
         // ==========================================
-        journal_log:     { label: "Journal", icon: "✍️", group: "5. Throat", aliases: ["diary", "writing", "reflection", "tagebuch", "schreiben", "reflektieren", "journal", "journaling"] },
-        work_sync:       { label: "Meetings", icon: "🤝", group: "5. Throat", aliases: ["meeting", "call", "zoom", "sync"] },
-        difficult_convo: { label: "Deep Talk", icon: "⚖️", group: "5. Throat", aliases: ["conflict", "resolution", "aussprache"] },
-        language_learn:  { label: "Languages", icon: "🗣️", group: "5. Throat", aliases: ["vocabulary", "sprachen", "phonetics", "duolingo", "vokabeln", "language"] },
-        output_create:   { label: "Content", icon: "📝", group: "5. Throat", aliases: ["writing", "blog", "video", "publish"] },
-        teaching:        { label: "Teaching", icon: "🎓", group: "5. Throat", aliases: ["mentoring", "lehren", "tutor", "unterrichten", "teaching", "tutoring"] },
-        social_cafe:     { label: "Café", icon: "☕", group: "5. Throat", aliases: ["coffee", "chat", "networking"] },
+        journal_log:     { label: "Journal", icon: "✍️", group: "5. Throat" },
+        work_sync:       { label: "Meetings", icon: "🤝", group: "5. Throat" },
+        difficult_convo: { label: "Deep Talk", icon: "⚖️", group: "5. Throat" },
+        language_learn:  { label: "Languages", icon: "🗣️", group: "5. Throat" },
+        output_create:   { label: "Content", icon: "📝", group: "5. Throat" },
+        teaching:        { label: "Teaching", icon: "🎓", group: "5. Throat" },
+        social_cafe:     { label: "Café", icon: "☕", group: "5. Throat" },
 
         // ==========================================
         // 🟣 6. THIRD EYE (Ajna) - Knowledge, Vision, Travel
         // ==========================================
-        weekly_review:   { label: "Weekly Review", icon: "🗺️", group: "6. Third Eye", aliases: ["weekly review", "review", "planung", "planning"] },
-        travel_long:     { label: "Travel", icon: "✈️", group: "6. Third Eye", aliases: ["vacation", "journey", "backpacking"] },
-        travel_short:    { label: "Day Trip", icon: "🎒", group: "6. Third Eye", aliases: ["trip", "daytrip", "weekend"] },
-        edu_class:       { label: "Classes", icon: "🏫", group: "6. Third Eye", aliases: ["school", "abitur", "erwachsenenbildung", "learning"] },
-        input_read:      { label: "Reading", icon: "📚", group: "6. Third Eye", aliases: ["read", "book", "study", "research", "lesen", "buch", "studieren", "reading", "learning"] },
-        pkm_process:     { label: "Vault", icon: "⚗️", group: "6. Third Eye", aliases: ["obsidian", "notes", "pkm", "vault", "notizen", "wissen", "knowledge"] },
-        pkm_memorize:    { label: "Recall", icon: "⚡", group: "6. Third Eye", aliases: ["flashcards", "srs", "vocabcards", "memorize", "karteikarten", "auswendig", "wiederholen", "recall"] },
-        strategy_plan:   { label: "Strategy", icon: "📐", group: "6. Third Eye", aliases: ["goals", "vision", "strategy", "planung", "strategie", "planning"] },
-        dream_journal:   { label: "Dreams", icon: "👁️", group: "6. Third Eye", aliases: ["dream", "subconscious"] },
+        weekly_review:   { label: "Weekly Review", icon: "🗺️", group: "6. Third Eye" },
+        travel_long:     { label: "Travel", icon: "✈️", group: "6. Third Eye" },
+        travel_short:    { label: "Day Trip", icon: "🎒", group: "6. Third Eye" },
+        edu_class:       { label: "Classes", icon: "🏫", group: "6. Third Eye" },
+        input_read:      { label: "Reading", icon: "📚", group: "6. Third Eye" },
+        pkm_process:     { label: "Vault", icon: "⚗️", group: "6. Third Eye" },
+        pkm_memorize:    { label: "Recall", icon: "⚡", group: "6. Third Eye" },
+        strategy_plan:   { label: "Strategy", icon: "📐", group: "6. Third Eye" },
+        dream_journal:   { label: "Dreams", icon: "👁️", group: "6. Third Eye" },
 
         // ==========================================
         // ⚪ 7. CROWN (Sahasrara) - Spirit, Stillness
         // ==========================================
-        mindfulness:     { label: "Meditation", icon: "🧘‍♀️", group: "7. Crown", aliases: ["meditate", "breathe", "silence", "mindfulness", "meditieren", "achtsamkeit", "stille", "meditation", "calm"] },
-        breathwork:      { label: "Breathwork", icon: "🎐", group: "7. Crown", aliases: ["prana", "breathing", "atmen", "atemübung", "atmung", "breathwork"] },
-        stoic_study:     { label: "Philosophy", icon: "⚖️", group: "7. Crown", aliases: ["stoicism", "philosophy", "faith", "philosophie", "stoizismus"] },
-        gratitude_log:   { label: "Gratitude", icon: "🙏", group: "7. Crown", aliases: ["thankful", "dankbarkeit", "humble", "dankbar", "gratitude"] },
-        fasting:         { label: "Fasting", icon: "⏳", group: "7. Crown", aliases: ["fasting", "detox", "cleanse", "fasten"] },
-        retreat_solo:    { label: "Retreat", icon: "🏕️", group: "7. Crown", aliases: ["solitude", "alone", "retreat"] },
+        mindfulness:     { label: "Meditation", icon: "🧘‍♀️", group: "7. Crown" },
+        breathwork:      { label: "Breathwork", icon: "🎐", group: "7. Crown" },
+        stoic_study:     { label: "Philosophy", icon: "⚖️", group: "7. Crown" },
+        gratitude_log:   { label: "Gratitude", icon: "🙏", group: "7. Crown" },
+        fasting:         { label: "Fasting", icon: "⏳", group: "7. Crown" },
+        retreat_solo:    { label: "Retreat", icon: "🏕️", group: "7. Crown" },
 
         // ==========================================
         // 🌌 8. AURA / SOUL STAR (Bindu) - Beyond Boundaries
         // ==========================================
-        space_walk:      { label: "Spacewalk", icon: "👨‍🚀", group: "8. Aura", aliases: ["space", "universe"] },
-        void_thinking:   { label: "Void Mind", icon: "🌌", group: "8. Aura", aliases: ["nothingness", "meta", "void"] },
-        quantum_leap:    { label: "Quantum Leap", icon: "⚛️", group: "8. Aura", aliases: ["breakthrough", "paradigm shift"] },
-        lucid_dreaming:  { label: "Lucid Dreams", icon: "🌠", group: "8. Aura", aliases: ["lucid dream", "astral"] },
-        flow_mastery:    { label: "Flow State", icon: "🌀", group: "8. Aura", aliases: ["time-distortion", "hyperfocus", "mastery"] },
-        sensory_deprive: { label: "Sensory Depriv.", icon: "🕳️", group: "8. Aura", aliases: ["floating", "weightless"] },
-        energy_clear:    { label: "Energy Clear", icon: "✨", group: "8. Aura", aliases: ["aura", "frequency", "reset"] },
-        universal_sync:  { label: "Cosmic Sync", icon: "📡", group: "8. Aura", aliases: ["astrology", "alignment", "manifesting"] }
+        space_walk:      { label: "Spacewalk", icon: "👨‍🚀", group: "8. Aura" },
+        void_thinking:   { label: "Void Mind", icon: "🌌", group: "8. Aura" },
+        quantum_leap:    { label: "Quantum Leap", icon: "⚛️", group: "8. Aura" },
+        lucid_dreaming:  { label: "Lucid Dreams", icon: "🌠", group: "8. Aura" },
+        flow_mastery:    { label: "Flow State", icon: "🌀", group: "8. Aura" },
+        sensory_deprive: { label: "Sensory Depriv.", icon: "🕳️", group: "8. Aura" },
+        energy_clear:    { label: "Energy Clear", icon: "✨", group: "8. Aura" },
+        universal_sync:  { label: "Cosmic Sync", icon: "📡", group: "8. Aura" }
     };
 
     const CHAKRA_COLORS = {
@@ -155,10 +155,31 @@ function routineEngine() {
         flow_mastery:"seeker", sensory_deprive:"mystic", energy_clear:"mystic", universal_sync:"mystic"
     };
 
+    // ─── 🌐 LANGUAGE LAYER ────────────────────────────────────────────────
+    // The routine KEYS stay language-neutral; the words you may reach them by, and the
+    // way a word is folded for comparison, both live in i18n.js and follow LANG.
+    let i18n = null;
+    try { i18n = require("./i18n.js")(); } catch (e) { /* fall back below */ }
+
     for (let key in ROUTINES) {
         ROUTINES[key].color = CHAKRA_COLORS[ROUTINES[key].group] || "transparent";
         ROUTINES[key].persona = ROUTINE_PERSONA[key] || null;
+        // Search words for the current language (English always rides along).
+        ROUTINES[key].aliases = (i18n && i18n.routineAliases) ? i18n.routineAliases(key) : [];
     }
+
+    // ─── 🔎 SEARCH HELPERS ────────────────────────────────────────────────
+    // Folding and scoring live in i18n.js, shared with the ingredient search. Without
+    // i18n we degrade gracefully: neutral folding and exact matching only.
+    const norm = (i18n && typeof i18n.norm === "function")
+        ? i18n.norm
+        : (s) => String(s || "").normalize("NFC").toLowerCase()
+            .normalize("NFD").replace(/[̀-ͯ]/g, "")
+            .replace(/[^a-z0-9]/g, "");
+
+    const scoreOne = (i18n && typeof i18n.fuzzyScore === "function")
+        ? i18n.fuzzyScore
+        : (t, c) => (t && c && t === c) ? 100 : 0;
 
     return {
         all: ROUTINES,
@@ -183,14 +204,14 @@ function routineEngine() {
             return axes;
         },
         // 🌈 Compact chakra column chart (Säulendiagramm) — just actual minutes, decent/subtle.
-        // rows: [{icon, col:"r,g,b", ist:minutes}]. For a small live overview (dailyplm).
+        // rows: [{icon, col:"r,g,b", actual:minutes}]. For a small live overview (dailyplm).
         renderChakraColumns: (rows) => {
-            const maxV = Math.max(30, ...rows.map(r => r.ist || 0));
+            const maxV = Math.max(30, ...rows.map(r => r.actual || 0));
             let h = `<div style="display:flex; gap:6px; align-items:flex-end; height:52px; font-family:var(--font-interface);">`;
             rows.forEach(r => {
-                const px = Math.max(3, Math.round(((r.ist || 0) / maxV) * 36));
+                const px = Math.max(3, Math.round(((r.actual || 0) / maxV) * 36));
                 h += `<div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-end; flex:1;">`;
-                h += `<div style="font-size:0.6em; opacity:0.5;">${r.ist ? r.ist + "′" : ""}</div>`;
+                h += `<div style="font-size:0.6em; opacity:0.5;">${r.actual ? r.actual + "′" : ""}</div>`;
                 h += `<div style="width:55%; height:${px}px; background:rgba(${r.col},0.8); border-radius:3px 3px 0 0;"></div>`;
                 h += `<div style="font-size:0.85em; margin-top:3px;">${r.icon}</div>`;
                 h += `</div>`;
@@ -198,9 +219,9 @@ function routineEngine() {
             h += `</div>`;
             return h;
         },
-        // 🌈 Chakra-Zeit: GEPLANTE Minuten pro Chakra-Gruppe für einen Tag (aus dem Timeblock).
-        // page = Routine-Plan (dv.page), dayPrefix = "mon".."sun". Jeder belegte Block = rt_duration min
-        // für das Chakra seiner (ersten) Routine.
+        // 🌈 Chakra time: PLANNED minutes per chakra group for one day (from the timeblock).
+        // page = routine plan (dv.page), dayPrefix = "mon".."sun". Every filled block = rt_duration min
+        // counted for the chakra of its (first) routine.
         getChakraMinutes: (page, dayPrefix) => {
             const dur = Number(page.rt_duration) || 60;
             const total = Number(page.rt_periods) || 14;
@@ -240,45 +261,55 @@ function routineEngine() {
         // used by dailyplm (single day) AND revw (week rollup). The callers still
         // build their own `rows` (day-values vs summed-week differ) — only the HTML
         // lives here, so a design tweak touches one function, not every template.
-        // rows: [{icon, label, col:"r,g,b", p:planMin, ist:actualMin}]
+        // rows: [{icon, label, col:"r,g,b", plan:planMin, actual:actualMin}]
         // opt:  {plan, act, legend}  (labels; come from i18n.t on the caller side)
         renderChakraBars: (rows, opt) => {
             opt = opt || {};
             const planL = opt.plan || "Plan", actL = opt.act || "Actual";
             const legend = opt.legend || "light bar = planned, solid = actual";
-            const maxV = Math.max(60, ...rows.map(r => Math.max(r.p, r.ist)));
+            const maxV = Math.max(60, ...rows.map(r => Math.max(r.plan, r.actual)));
             let bars = `<div style="font-family: var(--font-interface); font-size:0.85em; line-height:1.5;">`;
             rows.forEach(r => {
-                const pw = Math.round((r.p / maxV) * 100);
-                const lw = Math.round((r.ist / maxV) * 100);
+                const pw = Math.round((r.plan / maxV) * 100);
+                const lw = Math.round((r.actual / maxV) * 100);
                 bars += `<div style="margin-bottom:5px;">`;
                 bars += `<span style="display:inline-block; width:135px;">${r.icon} ${r.label}</span>`;
-                bars += `<span style="opacity:0.55;">${planL} ${r.p}′ · ${actL} ${r.ist}′</span>`;
+                bars += `<span style="opacity:0.55;">${planL} ${r.plan}′ · ${actL} ${r.actual}′</span>`;
                 bars += `<div style="background:var(--background-modifier-border); border-radius:4px; height:12px; position:relative; margin-top:2px;">`;
                 bars += `<div style="width:${pw}%; background:rgba(${r.col},0.35); height:100%; border-radius:4px; position:absolute;"></div>`;
                 bars += `<div style="width:${lw}%; background:rgba(${r.col},0.95); height:100%; border-radius:4px; position:absolute;"></div>`;
                 bars += `</div></div>`;
             });
             bars += `</div>`;
-            const totalP = rows.reduce((a, r) => a + r.p, 0);
-            const totalI = rows.reduce((a, r) => a + r.ist, 0);
+            const totalP = rows.reduce((a, r) => a + r.plan, 0);
+            const totalI = rows.reduce((a, r) => a + r.actual, 0);
             const sigma = `<small style="opacity:0.6;">Σ ${planL} ${totalP}′ · ${actL} ${totalI}′  —  ${legend}</small>`;
             return { bars, sigma };
         },
         getByChakra: (targetChakra) => Object.keys(ROUTINES)
             .filter(k => ROUTINES[k].group === targetChakra)
             .map(k => ({ key: k, ...ROUTINES[k] })),
-        searchRoutines: (searchTerm) => {
-            const lowerTerm = searchTerm.toLowerCase();
+        // 🔎 Brain-friendly search: you should not have to hit the system's word.
+        // Tolerates umlauts, typos, word stems and loose letter order, and returns the
+        // hits sorted by how well they match (best first) with a `score` on each.
+        searchRoutines: (searchTerm, opt) => {
+            const term = norm(searchTerm);
+            if (!term) return [];
+            const minScore = (opt && opt.minScore) || 30;
+            const limit = (opt && opt.limit) || 12;
+
             return Object.keys(ROUTINES)
-                .filter(k => {
+                .map(k => {
                     const r = ROUTINES[k];
-                    if (k.toLowerCase().includes(lowerTerm)) return true;
-                    if (r.label.toLowerCase().includes(lowerTerm)) return true;
-                    if (r.aliases && r.aliases.some(alias => alias.toLowerCase().includes(lowerTerm))) return true;
-                    return false;
+                    // Every word this routine can be reached by.
+                    const cands = [k, r.label].concat(r.aliases || []).map(norm).filter(Boolean);
+                    let best = 0;
+                    for (const c of cands) best = Math.max(best, scoreOne(term, c));
+                    return { key: k, ...r, score: best };
                 })
-                .map(k => ({ key: k, ...ROUTINES[k] }));
+                .filter(r => r.score >= minScore)
+                .sort((a, b) => b.score - a.score || a.label.localeCompare(b.label))
+                .slice(0, limit);
         }
     };
 }

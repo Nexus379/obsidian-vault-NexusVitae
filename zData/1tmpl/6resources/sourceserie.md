@@ -4,7 +4,7 @@ let luhmannId = tp.variables.luhmannId || "R" + tp.date.now("YYYYMMDDHHmm");
 let title = tp.variables.title || tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 
-// FALLBACK: Falls du im Ordner auf "Neue Notiz" klickst (Untitled Check)
+// FALLBACK: for when you click "New note" inside the folder (Untitled check)
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
 	    title = await tp.system.prompt("🎞️ Series Name?", "");
@@ -13,7 +13,7 @@ if (!title) title = "Series-" + tp.date.now("HH-mm");
 
 if (tp.file.title !== title) {
     await tp.file.rename(title);
-    await new Promise(r => setTimeout(r, 200)); // Kurze Stabilisierung
+    await new Promise(r => setTimeout(r, 200)); // Short stabilization
 }
 
 // 🔱 2. STYLE-SELECTION (Erweitert)
@@ -69,17 +69,17 @@ if (style === "Anime") { gOptions = ["Shonen", "Seinen", "Shojo", "Isekai", "Sli
 gOptions.push("[+] Custom...");
 let genre = await tp.system.suggester(gOptions, gOptions);
 if (genre === "[+] Custom...") genre = await tp.system.prompt("Genre?");
-if (!genre) genre = "Unknown"; // Fallback, falls weggedrückt
+if (!genre) genre = "Unknown"; // Fallback if dismissed
 
 // 6. 🔱 PROGRESS LOGIC (Current Season & Episodes mit Fallback)
 let vol = await tp.system.prompt("❄️ Current Season (Volume)?", "1");
-if (!vol) vol = "1"; // Fallback auf Staffel 1
+if (!vol) vol = "1"; // Fallback to season 1
 
 let epNow = await tp.system.prompt("📺 Episode Now?", "1");
-if (!epNow) epNow = "1"; // Fallback auf Folge 1
+if (!epNow) epNow = "1"; // Fallback to episode 1
 
 let epMax = await tp.system.prompt("🏁 Episode Max (this Season)?", "12");
-if (!epMax) epMax = "12"; // Fallback auf 12 Folgen
+if (!epMax) epMax = "12"; // Fallback to 12 episodes
 
 let p = Math.round((parseInt(epNow) / parseInt(epMax)) * 100);
 let bar = "░░░░░░░░░░ 0%";
@@ -129,7 +129,7 @@ summary:
 review:
 # 🔱 Meta Bind Texts (Use comma separation for multiple entries)
 original_title: ""
-author: ""
+creator: ""
 director: ""
 publisher: ""
 pub_date: ""
@@ -142,6 +142,8 @@ plattform: ""
 season: <%- vol %>
 episode: <%- epNow %>
 ep_rating: 0
+# Mirrors s<n>_max of the CURRENT season — bases cannot address a dynamic key.
+episode_max: <%- epMax %>
 s<%- vol %>_max: <%- epMax %>
 
 ---
@@ -156,7 +158,7 @@ s<%- vol %>_max: <%- epMax %>
 > > > 
 > > > **Season:** `INPUT[number:season]`
 > > > **Episode:** `INPUT[number:episode]` 
-> > >**Rating:** `INPUT[suggester(option(0, "➖ noch nicht bewertet"), option(1, "⭐ 1"), option(2, "⭐⭐ 2"), option(3, "⭐⭐⭐ 3"), option(4, "⭐⭐⭐⭐ 4"), option(5, "⭐⭐⭐⭐⭐ 5")):ep_rating]`
+> > >**Rating:** `INPUT[suggester(option(0, "➖ not rated yet"), option(1, "⭐ 1"), option(2, "⭐⭐ 2"), option(3, "⭐⭐⭐ 3"), option(4, "⭐⭐⭐⭐ 4"), option(5, "⭐⭐⭐⭐⭐ 5")):ep_rating]`
 > > > `BUTTON[add-episode]` 
 > > 
 > > > [!blank]
@@ -184,19 +186,19 @@ for (let i = 0; i < lines.length; i++) {
         if (!seasons[currentSeason]) seasons[currentSeason] = [];
     }
     
-    // Die neue Logik für deine kompakte Zeile: #### 🎬 E02 ➖ | 2026-06-25
+    // The new logic for the compact line: #### 🎬 E02 ➖ | 2026-06-25
     if (line.startsWith("#### 🎬 E") && currentSeason) {
         let cleanLine = line.replace("#### 🎬 E", "").trim();
         let parts = cleanLine.split("|");
         
-        // Trennt die Episode (02) von den Sternen (➖ oder ⭐⭐⭐)
+// Splits the episode (02) from the stars
         let epAndRating = parts[0].trim();
         let ep = epAndRating.split(" ")[0]; 
         let rating = epAndRating.replace(ep, "").trim() || "➖"; 
         
         let date = parts[1] ? parts[1].trim() : "";
         
-        // Notiz-Vorschau aus der Zeile direkt darunter lesen
+// Read the note preview from the line directly below
         let note = "";
         if (lines[i+1] && lines[i+1].startsWith("📝")) {
             note = lines[i+1].replace("📝", "").trim();

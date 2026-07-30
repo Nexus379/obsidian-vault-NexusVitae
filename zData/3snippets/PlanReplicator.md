@@ -39,8 +39,8 @@ try {
         return out;
     };
 
-    // 1. ZIEL-WOCHE ABFRAGEN
-    const targetKwInput = await tp.system.prompt("🗓️ Für welche KW möchtest du den Plan erstellen/kopieren?", nextKw);
+    // 1. ASK FOR THE TARGET WEEK
+    const targetKwInput = await tp.system.prompt("🗓️ Which calendar week should the plan be created/copied for?", nextKw);
     if (!targetKwInput) return;
     const targetKw = targetKwInput.padStart(2, '0');
 
@@ -52,25 +52,25 @@ try {
         "🍱 Meal Plan"
     ];
     const planKeys = ["routine", "fitness", "inpra", "meal"];
-    const planType = await tp.system.suggester(planOptions, planKeys, false, "📋 Welchen Plan möchtest du replizieren?");
+    const planType = await tp.system.suggester(planOptions, planKeys, false, "📋 Which plan do you want to replicate?");
     if (!planType) return;
 
     // 3. LETZTEN PLAN SUCHEN (Source)
     const allPlans = app.vault.getMarkdownFiles().filter(f => f.name.includes(`_${planType}`));
     if (allPlans.length === 0) {
-        new Notice(`❌ Keine alten ${planType}-Pläne gefunden zum Kopieren!`);
+        new Notice(`❌ No earlier ${planType} plans found to copy from!`);
         return;
     }
-    // Sortiere absteigend, um den neuesten zu finden
+// Sort descending to find the newest one
     allPlans.sort((a, b) => b.name.localeCompare(a.name));
     const sourceFile = allPlans[0];
     const sourceCache = app.metadataCache.getFileCache(sourceFile);
     const sourceFm = sourceCache?.frontmatter || {};
 
-    // 4. SMART FILTER: Nur Planungs-Daten kopieren, keine Ausführung!
+// 4. SMART FILTER: copy planning data only, never the execution values
     const dataToCopy = {};
     for (let key in sourceFm) {
-        // Ignoriere Obsidian-interne Felder und reine Ausführungs-Felder (act_, lvl, min)
+// Ignore Obsidian-internal fields and pure execution fields (act_, lvl, min)
         if (["position", "arch", "archtype"].includes(key)) continue;
         if (planType === "inpra" && key.startsWith("inpra_")) {
             dataToCopy[key] = sourceFm[key];
@@ -84,7 +84,7 @@ try {
         else if (planType === "meal" && /^(mon|tue|wed|thu|fri|sat|sun)_/.test(key)) dataToCopy[key] = sourceFm[key];
     }
 
-    // 5. ZIEL-DATEI PRÜFEN ODER ERSTELLEN
+    // 5. CHECK OR CREATE THE TARGET FILE
     const targetMoment = moment(`${year}-W${targetKw}`, "YYYY-[W]WW").startOf("isoWeek");
     const targetName = `${year}-W${targetKw}_${planType}`;
     const targetFolder = `0_Calendar/7_Plan/${year}/${targetMoment.format("MM")}`;
@@ -94,27 +94,27 @@ try {
     let mode = "overwrite";
 
     if (targetFile) {
-        // Kollisions-Abfrage
+        // Collision prompt
         const conflictChoice = await tp.system.suggester(
-            ["♻️ Alles überschreiben (Hard Reset)", "➕ Nur Lücken füllen (Ergänzen)"], 
+            ["♻️ Overwrite everything (hard reset)", "➕ Fill the gaps only"], 
             ["overwrite", "fill"], 
             false, 
-            `⚠️ Der Plan für KW ${targetKw} existiert bereits. Was tun?`
+            `⚠️ The plan for week ${targetKw} already exists. What now?`
         );
         if (!conflictChoice) return;
         mode = conflictChoice;
     } else {
-        // Erstelle Ordner, falls nötig
+        // Create the folder if needed
         let curr = "";
         for (const seg of targetFolder.split("/")) {
             curr = curr === "" ? seg : `${curr}/${seg}`;
             if (!app.vault.getAbstractFileByPath(curr)) await app.vault.createFolder(curr);
         }
         
-        // Hole das Template
+// Fetch the template
         const tmplMap = { routine: "weekplan_routine", fitness: "weekplan_fitness", inpra: "weekplan_inpra", meal: "weekplan_meal" };
         const tmplFile = app.vault.getAbstractFileByPath(`zData/1tmpl/0calendar/${tmplMap[planType]}.md`);
-        if (!tmplFile) { new Notice("❌ Template fehlt im zData-Ordner!"); return; }
+        if (!tmplFile) { new Notice("❌ Template missing in the zData folder!"); return; }
         
         let body = await app.vault.read(tmplFile);
         body = renderWeekplan(body, {
@@ -127,7 +127,7 @@ try {
         });
         await app.vault.create(targetPath, body);
         targetFile = app.vault.getAbstractFileByPath(targetPath);
-        await new Promise(r => setTimeout(r, 200)); // Kurz warten, bis Obsidian die Datei registriert
+        await new Promise(r => setTimeout(r, 200)); // Wait briefly until Obsidian registers the file
     }
 
     // 6. DATEN INFIZIEREN (Schreibe YAML)
@@ -136,7 +136,7 @@ try {
             if (mode === "overwrite") {
                 fm[key] = dataToCopy[key];
             } else if (mode === "fill") {
-                // Nur einfügen, wenn das Feld in der neuen Datei noch leer ist
+                // Only insert when the field in the new file is still empty
                 if (!fm[key] || fm[key] === "free" || fm[key] === "") {
                     fm[key] = dataToCopy[key];
                 }
@@ -144,11 +144,11 @@ try {
         }
     });
 
-    // 7. FERTIG! DATEI ÖFFNEN
-    new Notice(`✅ ${planType.toUpperCase()} erfolgreich für KW ${targetKw} repliziert!`);
+    // 7. DONE! OPEN THE FILE
+    new Notice(`✅ ${planType.toUpperCase()} replicated successfully for week ${targetKw}!`);
     app.workspace.getLeaf('tab').openFile(targetFile);
 
 } catch(e) {
-    new Notice("🔥 Fehler beim Replizieren: " + e.message, 10000);
+    new Notice("🔥 Replication failed: " + e.message, 10000);
 }
 -%>

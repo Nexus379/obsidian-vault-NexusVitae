@@ -9,7 +9,7 @@ const fmCache = fileCache?.frontmatter || {};
 // 1. Alte Portionen auslesen
 const oldP = Number(fmCache.portions) || 1;
 
-// 2. Prompt aufrufen (BEVOR wir die Datei bearbeiten)
+// 2. Ask first (BEFORE touching the file)
 const newP_input = await tp.system.prompt(`Current: ${oldP} serv. | New serving count?`, oldP);
 const newP = Number(newP_input);
 
@@ -25,16 +25,16 @@ let changedItems = [];
 await app.fileManager.processFrontMatter(activeFile, (fm) => {
     fm.portions = newP; // Portionen updaten
     
-    // Alle qty_ Felder durchsuchen und umrechnen
+// Walk all qty_ fields and rescale them
     Object.keys(fm).forEach(key => {
         if (key.startsWith("qty_")) {
             let val = Number(fm[key]);
             
             if (val > 0) {
                 let newVal = Math.round((val * ratio) * 1000) / 1000;
-                fm[key] = newVal; // Wert im YAML überschreiben
+                fm[key] = newVal; // Overwrite the value in the YAML
                 
-                // Für unsere Erfolgsmeldung merken
+                // Remember it for the success notice
                 changedItems.push(`${key}: ${val} -> ${newVal}`);
             }
         }

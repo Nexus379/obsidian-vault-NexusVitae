@@ -14,27 +14,50 @@ cssclasses:
 > > 
 > > **Quick Links:**
 > > 🍎 [[1_Food_List|Food & Nutrition]]
-> > 💊 Medical & Health
-> > 💻 Electronics & Tech
+> > 🛒 [[Entities.base#🛒 Restock|What needs buying]]
+> > 💶 [[Entities.base#💶 Price Matrix|Where it is cheapest]]
+> > 📍 [[Entities.base#📍 By Storage|Where things live]]
 >
-> > [!info|flat] ✈️ **Travel (Tokyo)**
+> > [!info|flat] ✈️ **Travel**
 > >
-> > **Quick Links:**
-> > 🍎 Food & Nutrition (Tokyo)
-> > 👘 Fashion & Cosplay
+> > ```dataviewjs
+> > const hub = dv.page("2_Areas/1_Selfcare/Household/Shopping_Hub");
+> > const city = hub && hub.shopping_travel_city ? String(hub.shopping_travel_city).trim() : "";
+> > if (city) {
+> >     dv.paragraph(`Active: **${city}** — prices come from \`Travel/${city}/ingre_prices.json\`.`);
+> > } else {
+> >     dv.paragraph("_At home. Set **shopping_travel_city** in the [[Shopping_Hub]] to switch to local prices._");
+> > }
+> > ```
 
 ---
 
 ## 📋 Global Inventory Database
 
-> [!tip] Alle physischen Ressourcen im gesamten Nexus-System.
+> [!tip] Every physical resource across the Nexus, indexed by Bases.
 
-```dataview
-TABLE 
-    price AS "Price",
-    shop AS "Shop",
-    kcal AS "Kcal",
-    stock_level AS "Stock"
-FROM "6_Resources/_Entities"
-SORT file.name ASC
-```
+![[Entities.base#📦 All Entities]]
+
+---
+
+## 🛒 What needs buying
+
+![[Entities.base#🛒 Restock]]
+
+---
+
+## 💶 Where it is cheapest
+
+![[Entities.base#💶 Price Matrix]]
+
+---
+
+## ⚖️ Worth the money
+
+![[Entities.base#⚖️ Value Ranking]]
+
+---
+
+## 📍 Where it lives
+
+![[Entities.base#📍 By Storage]]

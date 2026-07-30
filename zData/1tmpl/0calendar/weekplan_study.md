@@ -36,7 +36,7 @@ const persons = app.vault.getMarkdownFiles()
 
 const pOpts = ["🧍 Me / myself", ...persons.map(f => {
     const cleanName = f.basename.replace(/^(Character_|Person_)/, "");
-    const groupName = f.parent.name !== "2_Relationship" ? ` (${f.parent.name})` : "";
+    const groupName = f.parent.name !== "4_Relationship" ? ` (${f.parent.name})` : "";
     return `👤 ${cleanName}${groupName}`;
 }), "➕ ✨ New person..."];
 const pVals = ["__me__", ...persons.map(f => f.basename), "__new__"];
@@ -87,7 +87,8 @@ let targetFolder = "";
 if (whoSlug === "me") {
     targetFolder = `0_Calendar/7_Plan/${py}/${mm}`;
 } else {
-    targetFolder = `3_Projects/1_Active/Studyplan_${whoSlug}/Plans/${py}`;
+    // 3_Projects is flat — the status lives in the frontmatter, never in the path.
+    targetFolder = `3_Projects/Studyplan_${whoSlug}/Plans/${py}`;
 }
 
 let tPath = "";
@@ -150,7 +151,7 @@ tt_breaks: "2:15, 4:15, 6:30"
 <small style="opacity:0.45;font-style:italic;">(empty grid? run Setup Timetable for start/periods, then Edit Timetable to place disciplines)</small>
 
 ```dataviewjs
-// 1. DATEN AUS DEM YAML LESEN
+// 1. READ THE DATA FROM THE YAML
 const c = dv.current();
 const startTime = c.tt_start || "08:00";     
 const classDuration = Number(c.tt_duration) || 45;      

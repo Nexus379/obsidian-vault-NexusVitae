@@ -19,23 +19,23 @@ async function generateInpraLog(app, dv, moment) {
     const month = logDate.format("MM");
     const kw = logDate.format("WW");
 
-    // Wochenplan zuerst, dann Master (Fallback)
+    // Weekly plan first, then the master (fallback)
     const weeklyPath = `0_Calendar/7_Plan/${year}/${month}/${year}-W${kw}_inpra.md`;
     let plan = dv.page(weeklyPath);
     if (!plan) plan = dv.page("2_Areas/2_Creativity/Plan/Instrument_Mastery.md");
-    if (!plan) throw new Error("Kein Inpra-Wochenplan und keine Instrument_Mastery.md gefunden!");
+    if (!plan) throw new Error("No Inpra weekly plan and no Instrument_Mastery.md found!");
 
     const enginePath = app.vault.adapter.basePath + "/zData/2scripts/inpraEngine.js";
     try { delete require.cache[require.resolve(enginePath)]; } catch(e) {}
     const engine = require(enginePath)();
 
     const pieces = engine.getPractice(plan, dayStr);
-    if (pieces.length === 0) return null; // kein Üben geplant
+    if (pieces.length === 0) return null; // no practice planned
 
     const instr = plan.inpra_active || "Instrument";
     const book = plan.inpra_book || "";
 
-    // Log-Blöcke: pro Stück eine Bewertungs-Tabelle (Haltung/Rhythmus/Melodie/Gefühl)
+    // Log blocks: one rating table per piece (posture / rhythm / melody / feel)
     let blocks = [];
     pieces.forEach(p => {
         const prefix = `inpra_${dayStr}_${p.slot}`;
@@ -99,7 +99,7 @@ ${blocks.join("\n")}
 [[${plan.file.path.replace(".md", "")}|➡️ Back to Practice Plan]]
 `;
 
-    // Verschachtelte Ordner sicher anlegen (Routine/YYYY/MM)
+    // Create nested folders safely (Routine/YYYY/MM)
     let cPath = "";
     for (const seg of folderPath.split('/')) {
         cPath = cPath === "" ? seg : `${cPath}/${seg}`;
@@ -110,7 +110,7 @@ ${blocks.join("\n")}
     if (!existing) {
         await app.vault.create(filePath, content);
     }
-    // Existiert schon → nicht überschreiben (Bewertungen bleiben erhalten)
+    // Already exists -> do not overwrite (ratings stay intact)
 
     return `[[${fileName}]]`;
 }

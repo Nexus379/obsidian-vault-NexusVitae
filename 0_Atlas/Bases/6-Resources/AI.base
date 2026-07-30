@@ -1,16 +1,17 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/ai")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/ai")
 views:
   - type: table
-    name: AI
+    name: 🤖 AI
     order:
       - cover
       - file.name
       - plattform
       - status
       - rating
+      - ranking
       - url
       - discipline
       - science
@@ -24,3 +25,18 @@ views:
       note.plattform: 120
       note.status: 90
       note.rating: 80
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - plattform
+      - rating
+      - ranking
+      - url
+    sort:
+      - property: file.mtime
+        direction: DESC

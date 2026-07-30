@@ -10,16 +10,16 @@ let disc = tp.variables?.disc || "";
 let icon = tp.variables?.discIcon || tp.variables?.icon || "🌸";
 let area = tp.variables?.currentArea || tp.variables?.area || "#2area/1selfcare";
 
-// 🔱 2. FALLBACK & PROMPTS (Zuerst alle Fenster!)
+// 🔱 2. FALLBACK & PROMPTS (all the dialogs first!)
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
     title = await tp.system.prompt("🌸 Selfcare: Name of Responsibility?", "");
 }
 if (!title) title = "Selfcare-" + tp.date.now("HH-mm-ss");
 
-// 🔱 3. ROOT-CHAKRA PROMPT (Muss vor das Rename!)
+// 🔱 3. ROOT CHAKRA PROMPT (must come before the rename)
 let balanceFocus = await tp.system.prompt("🌸 Root Chakra: What is your focus for grounding today?", "Nourishing my physical foundation.");
 
-// 🔱 4. RENAME (Erst wenn alle Prompts durch sind)
+// 🔱 4. RENAME (only once every prompt is done)
 if (tp.file.title !== title) {
     await tp.file.rename(title);
     await new Promise(r => setTimeout(r, 200)); 

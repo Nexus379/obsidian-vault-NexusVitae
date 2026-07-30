@@ -10,7 +10,7 @@ const ids = life.getAllKitchenIds(category);
 const p = life.getPersona(category);
 const a = persona.getAxis(p);
 
-// Ein freundlicherer, englischer Prompt für den Suggester
+// A friendlier prompt for the suggester
 const selectedId = await tp.system.suggester(labels, ids, false, "What do you need for this? 🌬️");
 
 if (selectedId) {

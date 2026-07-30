@@ -1,7 +1,7 @@
 filters:
   and:
     - arch.contains("#5note")
-    - archtype.contains("#5note/4atomic")
+    - archtype.contains("#5note/3atomic")
     - inbox != true
     - status != "archive"
     - status != "archived"
@@ -9,7 +9,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Atomic
+    name: 🗃️ Atomic
     order:
       - LID
       - file.name

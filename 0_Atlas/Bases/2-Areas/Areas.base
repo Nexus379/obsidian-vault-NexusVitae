@@ -8,7 +8,7 @@ filters:
     - status != "canceled"
 views:
   - type: table
-    name: Areas
+    name: 💠 Areas
     groupBy:
       property: archtype
       direction: ASC
@@ -17,15 +17,12 @@ views:
       - archtype
       - status
       - priority
-      - file.mtime
-      - file.path
     sort:
       - property: file.mtime
         direction: DESC
     columnSize:
-      file.name: 260
+      file.name: 191
       note.archtype: 150
       note.status: 90
       note.priority: 70
       file.mtime: 120
-

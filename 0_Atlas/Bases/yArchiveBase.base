@@ -1,9 +1,28 @@
 filters:
-  and:
+  or:
+    # The archive is a PLACE, not a state: 85 of 86 files in yArchive/ carry no
+    # status at all (dashboards, design modules, Gen-1 leftovers never had one).
+    # Filtering on status alone showed a single file.
+    - file.path.contains("yArchive")
     - status.containsAny("archived", "archive")
 views:
   - type: table
-    name: Table
+    name: 📦 Archive
+    order:
+      - file.name
+      - file.path
+      - file.mtime
+    sort:
+      - property: file.path
+        direction: ASC
+    columnSize:
+      file.name: 220
+      file.path: 320
+  - type: table
+    name: 🗂️ By Status
+    filters:
+      and:
+        - status.containsAny("archived", "archive")
     groupBy:
       property: arch
       direction: ASC

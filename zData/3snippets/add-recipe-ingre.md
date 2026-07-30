@@ -33,7 +33,7 @@ const startIdx = content.indexOf(startMarker);
 const endIdx = content.indexOf(endMarker);
 
 if (startIdx === -1 || endIdx === -1) { 
-    new Notice("❌ missing in Template!"); return; 
+    new Notice("❌ Ingredient markers not found in this template!"); return; 
 }
 
 // Callout-Präfix sichern (z.B. "> > ")
@@ -43,7 +43,7 @@ const linePrefix = content.substring(lastNewline + 1, endIdx);
 const section = content.substring(startIdx, endIdx);
 let categories = [];
 
-// Sucht exakt nach: #### **Name:**
+// Matches exactly: #### **Name:**
 const catMatches = section.match(/#### \*\*([^*]+):\*\*/g);
 if (catMatches) {
     catMatches.forEach(c => {
@@ -54,13 +54,13 @@ if (catMatches) {
 if (categories.length === 0) categories.push("Standard / Main");
 categories.push("+ New Category...");
 
-const targetCat = await tp.system.suggester(categories, categories, false, "In welche Kategorie?");
+const targetCat = await tp.system.suggester(categories, categories, false, "Into which category?");
 if (!targetCat) return;
 
 let finalCat = targetCat;
-if (targetCat === "+ New Category...") finalCat = await tp.system.prompt("Name der Kategorie?");
+if (targetCat === "+ New Category...") finalCat = await tp.system.prompt("Category name?");
 
-// 🔱 3. FRONTMATTER UPDATE (Nur ingredients!)
+// 🔱 3. FRONTMATTER UPDATE (ingredients only)
 await app.fileManager.processFrontMatter(file, (f) => {
     if (!f.ingredients) f.ingredients = [];
     if (!Array.isArray(f.ingredients)) f.ingredients = [f.ingredients];
@@ -68,7 +68,7 @@ await app.fileManager.processFrontMatter(file, (f) => {
     if (f[propName] === undefined) f[propName] = 1.0;
 });
 
-// 🔱 4. EINZEILIGE INJECTION (Mit Callout- und Marker-Schutz)
+// 🔱 4. SINGLE-LINE INJECTION (guarded against callouts and markers)
 const uLabel = selected.unit === "100ml" ? "×100ml" : (selected.unit === "piece" ? "×1 pc" : "×100g");
 const newItem = `* ${selected.icon} **${selected.label}**\n${linePrefix}\t* \`INPUT[number(placeholder(1.0)):${propName}]\` <small style="opacity:0.55;">${uLabel}</small>`;
 let updated = "";
@@ -83,13 +83,13 @@ if (targetCat === "+ New Category...") {
     if (catPos !== -1) {
         const nextCatPos = content.indexOf("#### **", catPos + catString.length);
         if (nextCatPos !== -1 && nextCatPos < endIdx) {
-            // Sicherer Insert VOR der nächsten Kategorie
+// Safe insert BEFORE the next category
             let lineStart = content.lastIndexOf("\n", nextCatPos - 1);
             let preText = content.substring(0, lineStart + 1);
             let postText = content.substring(lineStart + 1);
             updated = preText + linePrefix + newItem + "\n" + postText;
         } else {
-            // Sicherer Insert am Ende der Liste
+// Safe insert at the end of the list
             updated = content.replace(linePrefix + endMarker, linePrefix + newItem + "\n" + linePrefix + endMarker);
         }
     } else {

@@ -24,7 +24,7 @@ if (tp.file.title !== title) {
 let attendees = await tp.system.prompt("👥 Attendees?", "Self/Others");
 let location  = await tp.system.prompt("📍 Location?", "Discord/Office/Home");
 
-// Prompts absichern, falls man einfach ESC drückt
+// Guard the prompts in case ESC is pressed
 if (!attendees) attendees = "we";
 if (!location) location = "idk";
 

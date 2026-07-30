@@ -24,7 +24,7 @@ try {
             subTypes: [
                 { id: "book", icon: "📖", label: "Book" },
                 { id: "film", icon: "🎬", label: "Film" },
-                { id: "serie", icon: "📺", label: "Serie" }, // Wird zu "Series"
+                { id: "serie", icon: "📺", label: "Series" },
                 { id: "game", icon: "🎮", label: "Game" }
             ]
         },
@@ -49,7 +49,7 @@ try {
     const mode = await tp.system.suggester(entropyModes.map(m => m.display), entropyModes, false, "Entropy Category:");
     if (!mode) return;
 
-    // 🔱 2. DATEN ABRUFEN ODER NEU ERSTELLEN
+    // 🔱 2. FETCH THE DATA OR CREATE IT
     const pages = dv.pages(mode.query);
     const existingItems = pages
         .sort(p => p.file.mtime, "desc")
@@ -69,10 +69,10 @@ try {
         itemTitle = await tp.system.prompt(`Enter Title for ${mode.display}:`);
         if (!itemTitle) return;
 
-        // --- 🎯 NEU: DYNAMISCHE PERSONA ABFRAGE ---
+        // --- 🎯 DYNAMIC PERSONA PROMPT ---
         let selectedPersona = "seeker"; // Fallback
         try {
-            // Lade die Persona Engine dynamisch
+// Load the persona engine dynamically
             const file = app.vault.getAbstractFileByPath("zData/2scripts/personaEngine.js");
             if (file) {
                 const code = await app.vault.read(file);

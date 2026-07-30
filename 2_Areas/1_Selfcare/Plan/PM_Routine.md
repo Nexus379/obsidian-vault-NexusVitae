@@ -17,7 +17,7 @@ pm2dur: 15
 ---
 ```dataviewjs
 const c = dv.current();
-const prefix = "pm"; // IN DER ABEND-DATEI HIER "pm" EINTRAGEN!
+const prefix = "pm"; // IN THE EVENING FILE, PUT "pm" HERE!
 const periods = Number(c[prefix + "_periods"]) || 0;
 let current = moment(c[prefix + "_start"] || "06:00", ["HH:mm"]);
 
@@ -25,7 +25,7 @@ const enginePath = app.vault.adapter.basePath + "/zData/2scripts/routineEngine.j
 let engine = null;
 try { engine = require(enginePath)(); } catch(e) {}
 
-// getD nimmt jetzt Routine und Detail als zwei getrennte Parameter!
+// getD now takes routine and detail as two separate parameters!
 const getD = (baseKey, detail) => {
     if (!baseKey || baseKey === "free" || baseKey === "undefined") return "—";
     
@@ -46,7 +46,7 @@ const getD = (baseKey, detail) => {
 
 const rows = [];
 for (let i = 1; i <= periods; i++) {
-    // Hier werden jetzt alle drei separaten Felder abgerufen
+    // All three separate fields are read here now
     let val = String(c[prefix + i] || "");
     let det = c[prefix + i + "det"] ? String(c[prefix + i + "det"]) : "";
     let stepDur = Number(c[prefix + i + "dur"]) || 0; 

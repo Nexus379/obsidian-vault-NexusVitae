@@ -32,19 +32,19 @@ const resources = [
     { label: "14 🎞️ Serie", val: "sourceserie", folder: "Series" },
     { label: "15 💻 Video", val: "sourcevideo", folder: "Videos" },
     { label: "16 🎲 Boardgame", val: "sourceboardgame", folder: "Boardgame" },
-    { label: "17 Software Maintenance", val: "sourcesoftware", folder: "Software_Maintenance" },
-    { label: "18 🥦 Ingredient", val: "sourceentities_ingredients", folder: "_Entities/Nutrition/Ingredients" },
-    { label: "19 ⛺ Camping Gear", val: "sourceentities_camping", folder: "_Entities/Camping_Outdoors" },
-    { label: "20 🔌 Tech & Electronics", val: "sourceentities_tech", folder: "_Entities/Electronics_Tech" },
-    { label: "21 🎨 Art & Stationery", val: "sourceentities_art", folder: "_Entities/Stationery_Art" },
-    { label: "22 👕 Clothing", val: "sourceentities_clothing", folder: "_Entities/Clothing" },
-    { label: "23 🏋️ Fitness Gear", val: "sourceentities_fitness", folder: "_Entities/Fitness" },
+    { label: "17 💻 Software", val: "sourcesoftware", folder: "Software" },
+    { label: "18 🥦 Ingredient", val: "sourceentities_ingredients", folder: "_Entities/Home/Nutrition/Ingredients" },
+    { label: "19 ⛺ Camping Gear", val: "sourceentities_camping", folder: "_Entities/Home/Camping_Outdoors" },
+    { label: "20 🔌 Tech & Electronics", val: "sourceentities_tech", folder: "_Entities/Home/Electronics_Tech" },
+    { label: "21 🎨 Art & Stationery", val: "sourceentities_art", folder: "_Entities/Home/Stationery_Art" },
+    { label: "22 👕 Clothing", val: "sourceentities_clothing", folder: "_Entities/Home/Clothing" },
+    { label: "23 🏋️ Fitness Gear", val: "sourceentities_fitness", folder: "_Entities/Home/Fitness" },
     { label: "24 🧹 Household Item", val: "sourceentities_household", folder: "_Entities/Home/Drugstore/Household" },
-    { label: "25 💊 Medical", val: "sourceentities_medical", folder: "_Entities/Medical" },
-    { label: "26 🎵 Music Gear", val: "sourceentities_music", folder: "_Entities/Music_Audio" },
-    { label: "27 🧴 Personal Care", val: "sourceentities_personal", folder: "_Entities/Personal" },
-    { label: "28 🐕 Pet Item", val: "sourceentities_pet", folder: "_Entities/Pets" },
-    { label: "29 ⚔️ LARP Gear", val: "sourceentities_larp", folder: "_Entities/LARP" }
+    { label: "25 💊 Medical", val: "sourceentities_medical", folder: "_Entities/Home/Medical" },
+    { label: "26 🎵 Music Gear", val: "sourceentities_music", folder: "_Entities/Home/Music_Audio" },
+    { label: "27 🧴 Personal Care", val: "sourceentities_personal", folder: "_Entities/Home/Personal" },
+    { label: "28 🐕 Pet Item", val: "sourceentities_pet", folder: "_Entities/Home/Pets" },
+    { label: "29 ⚔️ LARP Gear", val: "sourceentities_larp", folder: "_Entities/Home/LARP" }
 ];
 
 let nIdx = null;

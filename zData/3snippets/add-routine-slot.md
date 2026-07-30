@@ -6,12 +6,26 @@ try {
     let file = app.workspace.getActiveFile();
     if (!file) return;
 
-    // If the current file isn't the routine plan, target the Master Routine Plan directly
-    const isRoutinePlan = file.name.includes("Routine_Timeblocking") || file.name.toLowerCase().includes("routine");
+    // If the current file isn't a routine plan, fall back to the Master.
+    // Frontmatter first (plan_type / rt_ prefix), filename case-insensitive as
+    // Fallback — the weekly files are named lowercase, like "2026-W31_routine.md".
+// The master path comes from planPaths, not hardcoded.
+    const fmHere = app.metadataCache.getFileCache(file)?.frontmatter || {};
+    const isRoutinePlan = String(fmHere.plan_type || "") === "routine"
+        || Object.keys(fmHere).some(k => k.startsWith("rt_"))
+        || /routine/i.test(file.name);
+
     if (!isRoutinePlan) {
-        file = app.vault.getAbstractFileByPath("2_Areas/3_Drive/Plan/Routine_Timeblocking.md");
+        let masterPath = "2_Areas/3_Drive/Plan/Routine_Timeblocking.md";
+        try {
+            const pp = app.vault.adapter.basePath + "/zData/2scripts/planPaths.js";
+            delete require.cache[require.resolve(pp)];
+            masterPath = require(pp)().get("rt") + ".md";
+        } catch(e) {}
+
+        file = app.vault.getAbstractFileByPath(masterPath);
         if (!file) {
-            new Notice("Routine_Timeblocking.md not found!");
+            new Notice("Routine plan not found: " + masterPath);
             return;
         }
     }
@@ -138,7 +152,7 @@ try {
     let finalValue = subj.key;
 
     // --- 5. SMART DETAIL PROMPT ---
-    // Der ausgewählte Alias wird als Default vorgeschlagen → landet als bold Detail
+    // The chosen alias is offered as the default -> ends up as the bold detail
     const seed = subj.seed || "";
     if (finalValue !== "free" && finalValue !== "break" && finalValue !== "custom") {
         const detail = await tp.system.prompt("Optional Detail:", seed);

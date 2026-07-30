@@ -76,7 +76,7 @@ await app.vault.process(file, (content) => {
             newText += `**Season Rating:** \`INPUT[suggester(option(0, "➖"), option(1, "⭐ 1"), option(2, "⭐⭐ 2"), option(3, "⭐⭐⭐ 3"), option(4, "⭐⭐⭐⭐ 4"), option(5, "⭐⭐⭐⭐⭐ 5")):s${cVol}_rating]\`\n`;
         }
         
-        // Exakt dein gewünschtes, kompaktes Format ohne Leerzeilen
+        // The exact compact format, without blank lines
         newText += `#### 🎬 E${formatEp} ${stars} | ${dateStr}\n`;
         newText += `- 📝 `; 
 

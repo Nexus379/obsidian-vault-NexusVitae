@@ -11,7 +11,7 @@ filters:
     - status != "bin"
 views:
   - type: table
-    name: ToCook
+    name: 🍜 ToCook
     order:
       - file.name
       - status

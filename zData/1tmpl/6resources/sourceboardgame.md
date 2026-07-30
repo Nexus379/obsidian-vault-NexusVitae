@@ -105,7 +105,7 @@ child:
 summary:
 review:
 # 🔱 Meta Bind Texts (Use comma separation for multiple entries)
-author: ""
+creator: ""
 original_title: ""
 publisher: ""
 pub_date: ""
@@ -129,7 +129,7 @@ volume_title: "<%- volTitle %>"
 > > > [!blank]
 > > > **ID:** <%- luhmannId %> `$= dv.current().volume ? '| **Expansion:** ' + dv.current().volume : ''` `$= dv.current().volume_title ? '- ' + dv.current().volume_title : ''`
 > > > 
-> > > **Designer:** `$= dv.current().author`
+> > > **Designer:** `$= dv.current().creator`
 > > > 
 > > > **Genre:** `$= dv.current().genre`
 > > > 

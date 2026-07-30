@@ -1,5 +1,5 @@
 ### Quick Capture
-`BUTTON[stars-btn]` `BUTTON[a-btn]` `BUTTON[p-btn]` `BUTTON[t-btn]` `BUTTON[n-btn]` `BUTTON[r-btn]`
+`BUTTON[c-btn]` `BUTTON[stars-btn]` `BUTTON[a-btn]` `BUTTON[p-btn]` `BUTTON[t-btn]` `BUTTON[n-btn]` `BUTTON[r-btn]`
 
 > [!blank]
 > ### &#127769; Last Logs

@@ -4,7 +4,7 @@ cssclasses:
   - wide-page
 ---
 # 🎓 Studyboard
-| [[0_Atlas/0_Dashboard/0-Calendar|📅Calendar]] | [[0_Atlas/Bases/Calendarbase.base|⚙️Calendarbase]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PLM|🌷PLM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM|🌻PPM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🌼PKM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|🎓Studyboard]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/7-Reviews|🛰️Reviews]] |
+![[zData/5design_modul/CalNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -13,14 +13,14 @@ cssclasses:
 > [!multi-column]
 > > [!blank]
 > > 
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### 🎓 **STUDY FLOW**
 > > ```dataviewjs
 > > { 
 > >      const chartContainer = this.container;
 > >      const REFRESH_COOLDOWN = 60000; 
 > >      const now = Date.now();
 > >      
-> >      chartContainer.style.width = "300px";
+> >      chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >      chartContainer.style.margin = "0 auto"; 
 > >      
 > >      if (!window.lastPieRender) window.lastPieRender = 0;
@@ -64,7 +64,7 @@ cssclasses:
 > >                  }]
 > >              },
 > >              options: {
-> >                  cutout: '75%', 
+> >                  maintainAspectRatio: false, cutout: '76%', 
 > >                  animation: false, 
 > >                  plugins: {
 > >                      legend: { 
@@ -112,8 +112,10 @@ cssclasses:
 > >          { label: "Future", days: 30, color: "var(--text-muted)" }
 > >     ];
 > > 
-> >     const allPages = dv.pages('"4_Tasks/3-ToStudy" OR "5_Notes"')
-> >          .where(p => p.status !== "done" && (p.nextstudy || p.due));
+> >     // 4_Tasks has no subfolders — ToStudy is recognised by its archtype,
+> >     // not by a path. "4_Tasks/3-ToStudy" never existed and returned nothing.
+> >     const allPages = dv.pages('#4task/tostudy OR "5_Notes"')
+> >          .where(p => p.status !== "done" && (p.study_date || p.nextstudy || p.due));
 > > 
 > >     let html = '<div style="display: flex; gap: 15px; overflow-x: auto; padding: 10px; align-items: flex-start; background: var(--background-secondary); border-radius: 8px;">';
 > > 
@@ -122,21 +124,21 @@ cssclasses:
 > >          html += `<div style="font-size: 0.9em; font-weight: bold; text-align: center; color: ${tf.color}; margin-bottom: 12px; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px;">${tf.label}</div>`;
 > > 
 > >          const cards = allPages.filter(p => {
-> >              const d = p.nextstudy || p.due;
+> >              const d = p.study_date || p.nextstudy || p.due;
 > >              if (!d) return false;
 > >              const diff = moment(d.toString()).diff(today, 'days');
 > >              if (tf.days === 0) return diff <= 0;
 > >              if (tf.days === 3) return diff > 0 && diff <= 3;
 > >              if (tf.days === 7) return diff > 3 && diff <= 7;
 > >              return diff > 7 && diff <= 30;
-> >          }).sort(p => p.nextstudy || p.due, 'asc');
+> >          }).sort(p => p.study_date || p.nextstudy || p.due, 'asc');
 > > 
 > >          cards.forEach(p => {
-> >              const lvl = p.spacelvl || 0;
+> >              const lvl = p.study_lvl || 0;
 > >              const disc = p.discipline ? String(p.discipline).replace("#disc/", "").split(',')[0].toUpperCase() : "GEN";
-> >              const dateVal = p.nextstudy || p.due;
+> >              const dateVal = p.study_date || p.nextstudy || p.due;
 > >              const dateStr = dateVal ? moment(dateVal.toString()).format("DD.MM.") : "--.--";
-> >              const rankName = p.spacerank ? String(p.spacerank).split('(')[0].trim() : "Initiate";
+> >              const rankName = p.study_rank ? String(p.study_rank).split('(')[0].trim() : "Initiate";
 > >              const cleanTitle = p.file.name.replace(/^[0-9a-z.]+ /i, "").replace(/^(Quest:|Study:|Atomic:)/i, "").trim();
 > > 
 > >              html += '<div style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px; margin-bottom: 8px; box-shadow: var(--shadow-s);">';
@@ -169,44 +171,6 @@ cssclasses:
 > > ```
 
 ```dataviewjs
-// 🔱 NEXUS MINERVA: INTELLIGENT STUDY RADAR
-const today = moment();
-
-// 1. DATA PULL
-const studyNotes = dv.pages('(#5note OR #4task/tostudy) AND !"zData" AND -"yArchive"')
-    .where(p => p.inbox !== true)
-    .where(p => p.discipline && !String(p.status).includes("spaced"));
-
-// 2. LOGIC-ENGINE 
-const processedNotes = studyNotes.map(p => {
-    const isRepeat = (Number(p.RecDays) > 0) ? "🔁" : "📌";
-    
-    let isUrgent = false;
-    const due = p.due ? moment(p.due.toString()) : null;
-    const doDate = p.do ? moment(p.do.toString()) : null;
-    
-    if (!due && !doDate && !p.project) {
-        isUrgent = true; 
-    } else if (due && due.diff(today, 'days') <= 7) {
-        isUrgent = true; 
-    }
-
-    return {
-        link: p.file.link,
-        disc: p.discipline,
-        type: isRepeat,
-        urgent: isUrgent ? "🔥 SOFORT" : "☁️ Später",
-        status: p["repetition-status"] || "1-new"
-    };
-});
-
-// 3. VISUAL COCKPIT
-dv.header(2, "📚 Strategic Learning Queue");
-
-dv.table(["Urgency", "Type", "Subject", "Topic", "Stage"], 
-    processedNotes
-    .sort(n => n.urgent, "desc")
-    .map(n => [n.urgent, n.type, n.disc, n.link, n.status])
-);
+await require(app.vault.adapter.basePath + "/zData/2scripts/studyRadar.js")().render(dv);
 ```
 ---

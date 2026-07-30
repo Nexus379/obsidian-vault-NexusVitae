@@ -7,7 +7,7 @@ banner: "![[xAttachment/Images/Banner/fantasy-landscape-sunset.jpg]]"
 banner_y: 0
 ---
 # Selfcare Central
-| [[0_Atlas/0_Dashboard/2-Areas|💠Areas]] | [[0_Atlas/Bases/2-Areas/Areas.base|⚙️Areasbase]] | [[0_Atlas/0_Dashboard/2-Areas/1-Selfcare|❤️Selfcare]] | [[0_Atlas/0_Dashboard/2-Areas/2-Creativity|🧡Creativity]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive|💛Drive]] | [[0_Atlas/0_Dashboard/2-Areas/4-Relationship|💚Relationship]] | [[0_Atlas/0_Dashboard/2-Areas/5-Expression|💙Expression]] | [[0_Atlas/0_Dashboard/2-Areas/6-Mind|💜Mind]] | [[0_Atlas/0_Dashboard/2-Areas/7-Crown|🤍Crown]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Fitnessboard|🏋️Fitness]] |
+![[zData/5design_modul/AreaNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
@@ -15,36 +15,40 @@ banner_y: 0
 
 >[!multi-column]
 > 
-> > [!hub|wide-0] 🗺️ **ATLAS & ACTION**
+> > [!blank|wide-0]
+> > #### 🌸 **BODY & PROVISION**
+> >
 > > 
 > > ```dataviewjs
 > > {
 > >     const chartContainer = this.container;
-> >     chartContainer.style.width = "280px";
+> >     chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >     chartContainer.style.margin = "0 auto";
 > >     if (chartContainer.innerHTML.length < 50) {
-> >         const linked = p => {
-> >             const hay = String([p.file.path, p.file.outlinks, p.arch, p.archtype, p.area2, p.parent, p.sibling, p.child, p.project3, p.task4, p.note5, p.resource6].join(' ')).toLowerCase();
-> >             return hay.includes('#2area/1selfcare') || hay.includes('2area/1selfcare') || hay.includes('2_areas/1_selfcare') || hay.includes('1_selfcare') || hay.includes('1selfcare');
-> >         };
-> >         const values = [
-> >             dv.pages('#2area/1selfcare AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).length,
-> >             dv.pages('"3_Projects" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
-> >             dv.pages('"4_Tasks" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
-> >             dv.pages('"5_Notes" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
-> >             dv.pages('"6_Resources" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length,
-> >             dv.pages('"0_Calendar" AND !"zData" AND -"yArchive"').where(p => p.inbox !== true).where(linked).length
-> >         ];
+> >         // One vault pass instead of six — computed and cached in dashEngine.js
+> >         const _d = await require(app.vault.adapter.basePath + "/zData/2scripts/dashEngine.js")().load(dv, app);
+> >         const _c = _d.areaCounts('1selfcare');
+> >         const values = [_c.own, _c.projects, _c.tasks, _c.notes, _c.resources, _c.calendar];
 > >         const hasData = values.some(v => v > 0);
 > >         const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
-> >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Selfcare', 'Projects', 'Tasks', 'Notes', 'Resources', 'Logs'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#ff9999', '#fab387', '#f38ba8', '#a6e3a1', '#cba6f7', '#89b4fa'] : ['var(--background-modifier-border)'], borderWidth: 0, hoverOffset: 12 }] }, options: { cutout: '80%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 12, weight: 'bold', family: 'serif' }, padding: 20, usePointStyle: true } } } } };
-> >         const renderInterval = setInterval(() => { if (window.renderChart) { const oldCanvas = chartContainer.querySelector('canvas'); if (oldCanvas) oldCanvas.remove(); window.renderChart(chartData, chartContainer); clearInterval(renderInterval); } }, 150);
-> >         setTimeout(() => clearInterval(renderInterval), 5000);
+> >         const chartData = { type: 'doughnut', data: { labels: hasData ? ['Selfcare', 'Projects', 'Tasks', 'Notes', 'Resources', 'Logs'] : ['Empty Orbit'], datasets: [{ data: hasData ? values : [1], backgroundColor: hasData ? ['#ff9999', '#fab387', '#f38ba8', '#a6e3a1', '#cba6f7', '#89b4fa'] : ['var(--background-modifier-border)'], borderWidth: 0, hoverOffset: 12 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '76%', plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 10, weight: "bold", family: "serif" }, padding: 10, boxWidth: 8, usePointStyle: true } } } } };
+> >         const _draw = () => { const c = chartContainer.querySelector('canvas'); if (c) c.remove(); window.renderChart(chartData, chartContainer); };
+> >         if (window.renderChart) _draw();
+> >         else { let w = 60; const t = () => { if (window.renderChart) return _draw(); if ((w *= 1.6) < 4000) setTimeout(t, w); }; setTimeout(t, w); }
 > >     }
 > > }
 > > ```
 > > 
 > > ![[zData/5design_modul/QuickCaptureModul|QuickCaptureModul]]
+> >
+> > ##### 🎯 Open here
+> > ```dataview
+> > LIST
+> > FROM "4_Tasks" AND !"zData" AND -"yArchive"
+> > WHERE contains(string(area2), "1selfcare") AND status != "done" AND status != "canceled" AND inbox != true
+> > SORT priority ASC, due ASC
+> > LIMIT 5
+> > ```
 >
 > >[!blank|wide-5] 📊 Status & Records
 > > 
@@ -64,10 +68,10 @@ banner_y: 0
 > > > SORT due ASC, file.mtime DESC
 > > > ```
 > >
-> > > [!project] **Projects and Tasks**
+> > > [!project] **Projects**
 > > > ```dataview
 > > > TABLE archtype, status, priority, due
-> > > FROM "3_Projects" OR "4_Tasks" AND !"zData" AND -"yArchive"
+> > > FROM "3_Projects" AND !"zData" AND -"yArchive"
 > > > WHERE (contains(string(area2), "1_Selfcare") OR contains(string(area2), "1selfcare") OR contains(string(archtype), "#2area/1selfcare") OR contains(string(file.outlinks), "1_Selfcare")) AND inbox != true
 > > > SORT priority DESC, due ASC, file.mtime DESC
 > > > ```

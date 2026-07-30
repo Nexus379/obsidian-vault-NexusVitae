@@ -1,7 +1,7 @@
 <%-*
 /**
  * 📸 NEXUS SNAPSHOT WEEK (Content)
- * Kopiert den Master-Content-Plan als editierbare Wochen-Datei nach vorn (nur concraft_*-Felder).
+ * Copies the master content plan forward as an editable weekly file (concraft_ fields only).
  */
 try {
     const renderWeekplan = (raw, values) => {
@@ -21,7 +21,7 @@ try {
         return out;
     };
 
-    // 1. Ziel-Woche wählen (default: erste FREIE Woche ab nächster)
+// 1. Pick the target week (default: the first FREE week from next — skips planned ones)
     let probe = moment().add(1, 'week');
     for (let i = 0; i < 60; i++) {
         const py = probe.format("YYYY"), pm = probe.format("MM"), pk = probe.format("WW");
@@ -37,12 +37,12 @@ try {
     const month = target.format("MM");
     const kw    = target.format("WW");
 
-    // 2. Master lesen (nur concraft_* wird kopiert)
+// 2. Read the master (only concraft_* is copied)
     const masterFile = app.vault.getAbstractFileByPath("2_Areas/5_Expression/Plan/Content_Plan.md");
     if (!masterFile) { new Notice("❌ Master Content plan not found!"); return; }
     const masterFm = app.metadataCache.getFileCache(masterFile)?.frontmatter || {};
 
-    // 3. Zielpfad + Kollisionsschutz
+// 3. Target path + collision guard (never overwrite an already planned week)
     const folder = `0_Calendar/7_Plan/${year}/${month}`;
     const finalDest = `${folder}/${year}-W${kw}_concraft.md`;
     if (app.vault.getAbstractFileByPath(finalDest)) {
@@ -64,7 +64,7 @@ try {
     await app.vault.create(finalDest, body);
     await new Promise(r => setTimeout(r, 150));
 
-    // 5. Snapshot: concraft_* vom Master kopieren
+    // 5. Snapshot: copy concraft_ fields from the master
     const newFile = app.vault.getAbstractFileByPath(finalDest);
     await app.fileManager.processFrontMatter(newFile, (fm) => {
         for (const k of Object.keys(masterFm)) {

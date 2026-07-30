@@ -1,9 +1,9 @@
 <%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
-if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
+if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
 const persona = tp.variables.persona || "queen_king";
-const area = tp.variables.currentArea || tp.variables.area || "analyst";
+const area = tp.variables.currentArea || tp.variables.area || "#2area/6mind";
 const sci = tp.variables.sciTag || tp.variables.sci || "#science";
 const disc = tp.variables.discTag || tp.variables.disc || "#disc";
 const luhmannId = tp.variables.luhmannId || "";
@@ -11,7 +11,7 @@ const luhmannId = tp.variables.luhmannId || "";
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 
-// Wenn kein pLink übergeben wurde, fragt das System nach der Quelle
+// When no pLink was handed over, the system asks for the source
 if (!pLink) {
     const src = await tp.system.prompt("🔗 Source (Resource Name)?", "");
     pLink = src ? `[[${src}]]` : "";

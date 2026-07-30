@@ -11,7 +11,7 @@ filters:
     - status != "bin"
 views:
   - type: table
-    name: ToPay
+    name: 💵 ToPay
     order:
       - file.name
       - status

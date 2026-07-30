@@ -41,7 +41,8 @@ priority:
 persona:
 cover: ""
 plattform: ""
-author:
+url: ""
+creator:
 publisher:
 pub_date:
 rating: 

@@ -12,11 +12,11 @@ cssclasses:
 >[!multi-column]
 >
 > > [!blank|wide-0]
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### 🛠️ **ACTION FLOW**
 > > ```dataviewjs
 > > {
 > >     const container = this.container;
-> >     container.style.width = "250px";
+> >     container.style.width = "100%"; container.style.maxWidth = "240px"; container.style.height = "230px";
 > >     container.style.margin = "0 auto";
 > >     const clean = value => String(value ?? "").toLowerCase();
 > >     const hasTaskContext = p => clean(p.arch).includes("#4task") || clean(p.archtype).includes("#4task") || p.file.path.includes("4_Tasks");
@@ -45,7 +45,7 @@ cssclasses:
 > >     });
 > >     const hasData = counts.some(v => v > 0);
 > >     const textColor = getComputedStyle(document.body).getPropertyValue('--text-normal').trim() || '#cdd6f4';
-> >     const chartData = { type: 'doughnut', data: { labels: hasData ? types.map(t => t.label) : ["All Clear"], datasets: [{ data: hasData ? counts : [1], backgroundColor: hasData ? types.map(t => t.color) : ["var(--background-modifier-border)"], borderWidth: 0 }] }, options: { cutout: '80%', animation: false, plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
+> >     const chartData = { type: 'doughnut', data: { labels: hasData ? types.map(t => t.label) : ["All Clear"], datasets: [{ data: hasData ? counts : [1], backgroundColor: hasData ? types.map(t => t.color) : ["var(--background-modifier-border)"], borderWidth: 0 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '76%', animation: false, plugins: { legend: { position: 'bottom', labels: { color: textColor, font: { size: 9, weight: 'bold' }, usePointStyle: true } } } } };
 > >     const interval = setInterval(() => { if (window.renderChart) { const oldCanvas = container.querySelector('canvas'); if (oldCanvas) oldCanvas.remove(); window.renderChart(chartData, container); clearInterval(interval); } }, 150);
 > > }
 > > ```

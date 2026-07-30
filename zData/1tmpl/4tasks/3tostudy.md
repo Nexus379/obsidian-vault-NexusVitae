@@ -22,21 +22,21 @@ if ((!tp.variables.sci || !tp.variables.disc) && typeof tp.user.disciplineEngine
     }
 }
 
-// 🛡️ SICHERES AUSLESEN (nachdem das Modul eventuell Variablen gesetzt hat)
+// 🛡️ SAFE READ (after the module may have set variables)
 const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const sub = tp.variables.sub || "";
 const area = tp.variables.currentArea || tp.variables.area || "";
 const icon = tp.variables.icon || "🎓";
 
-// 🔱 2. FALLBACK & RENAMING (Dein gewünschter Schutz)
+// 🔱 2. FALLBACK & RENAMING (the requested guard)
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 
 if (!title || title.toLowerCase().includes(defaultName.toLowerCase())) {
     title = await tp.system.prompt("🎓 To-Study: Topic / Subject?", "");
 }
 
-// BACKSAFE: Falls Prompt mit ESC geschlossen wird
+// BACKSAFE: in case the prompt is closed with ESC
 if (!title || title.trim() === "") {
     title = "ToStudy-" + tp.date.now("HH-mm");
 }
@@ -54,7 +54,7 @@ let studyType = await tp.system.suggester(sOpt, sVal) || "general";
 const today = tp.date.now("YYYY-MM-DD");
 const p1 = tp.date.now("YYYY-MM-DD", 1); 
 
-// 🔱 4. CLEANING FÜR DEN DISPLAY-TITLE
+// 🔱 4. CLEANING FOR THE DISPLAY TITLE
 let displayTitle = title.replace(/^\d+[\d.a-z]*\s+/i, "").replace(/^(3tostudy-|t-|4task-)/i, "").trim();
 
 tR += "---"  

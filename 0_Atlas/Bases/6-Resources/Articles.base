@@ -1,16 +1,17 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/article")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/article")
 views:
   - type: table
-    name: Articles
+    name: 🗞️ Articles
     order:
       - cover
       - file.name
       - creator
       - status
       - rating
+      - ranking
       - url
       - discipline
       - science
@@ -24,3 +25,18 @@ views:
       note.creator: 160
       note.status: 90
       note.rating: 80
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - creator
+      - rating
+      - ranking
+      - url
+    sort:
+      - property: file.mtime
+        direction: DESC

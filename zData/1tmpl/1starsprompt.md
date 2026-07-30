@@ -51,7 +51,7 @@ const areaValues = ["#2area/1selfcare", "#2area/4relationship", "#2area/6mind", 
 const aPick = await tp.system.suggester(areaLabels, areaValues, false, "💠 Which Area of Focus does this Star serve?");
 tp.variables.currentArea = aPick || "area_undefined";
 
-// Pfad bauen (Nutzt dynamisch ARCH.s.folder vom Router)
+// Build the path (uses ARCH.s.folder from the router dynamically)
 const targetFolder = `${ARCH.s.folder}/${sFolders[sIdx]}`;
 const templateFile = sTemps[sIdx];
 
@@ -59,7 +59,7 @@ const templateFile = sTemps[sIdx];
 if (tp.file.title !== title) await tp.file.rename(title);
 await new Promise(r => setTimeout(r, 400)); 
 
-// Folder-Bot (Baut die Struktur falls nötig)
+// Folder bot (builds the structure if needed)
 if (!app.vault.getAbstractFileByPath(targetFolder)) {
     let curr = "";
     for (const seg of targetFolder.split('/')) {
@@ -74,7 +74,7 @@ if (tp.file.path !== finalPath && !app.vault.getAbstractFileByPath(finalPath)) {
 }
 await new Promise(r => setTimeout(r, 400)); 
 
-// 🔱 4. FINALE ÜBERGABE (Nutzt dynamisch SYS.tmpl vom Router)
+// 🔱 4. FINAL HANDOVER (uses SYS.tmpl from the router dynamically)
 const tPath = `${SYS.tmpl}/1stars/${templateFile}.md`;
 const tFile = app.vault.getAbstractFileByPath(tPath);
 

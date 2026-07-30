@@ -1,6 +1,6 @@
 <%-*
 // 🔱 1. DATA-RECOVERY & SAFE VARIABLES
-if (!tp.variables) tp.variables = {}; // 🛡️ Crash-Schutz
+if (!tp.variables) tp.variables = {}; // 🛡️ Crash protection
 
 // 🔱 DISCIPLINE INHERIT-OR-ASK: caller (dailypkm) may pass sci/disc; if not, ask. Mirrors 3tostudy.
 if ((!tp.variables.sci || !tp.variables.disc) && typeof tp.user.disciplineEngine === "function") {
@@ -21,7 +21,7 @@ const sci = tp.variables.sci || "";
 const disc = tp.variables.disc || "";
 const area = tp.variables.currentArea || tp.variables.area || "#2area/6mind";
 const icon = tp.variables.icon || "🍂";
-const luhmannId = tp.variables.luhmannId || ""; // 🔱 FIX: war nicht deklariert -> ReferenceError > ist es uebrehaupt noetig hier?
+const luhmannId = tp.variables.luhmannId || ""; // 🔱 FIX: was not declared -> ReferenceError. Is it needed here at all?
 
 let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.title;
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
@@ -38,7 +38,7 @@ if (tp.file.title !== title) {
     await new Promise(r => setTimeout(r, 200)); 
 }
 
-// 🔱 3. TITEL-CLEANING
+// 🔱 3. TITLE CLEANING for the H1
 let displayTitle = title;
 if (luhmannId && title.startsWith(luhmannId)) { displayTitle = title.substring(luhmannId.length); }
 displayTitle = displayTitle.replace(/^[-\s]+/, "").replace(/^(fleet-|n-|r-)/i, "").trim();

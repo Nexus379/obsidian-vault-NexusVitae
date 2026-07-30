@@ -42,6 +42,7 @@ archtype:
 status: <%- tp.variables.projectStatus || "1active" %>
 priority:
   - "1"
+explore_lvl: 0blueprint
 due: <%- deadline %>
 amount: <%- amount %>
 payee: "<%- payee %>"

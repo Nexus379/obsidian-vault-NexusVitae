@@ -1,0 +1,1 @@
+| [[0_Atlas/0_Dashboard/3-Projects|🧩Projects]] | [[0_Atlas/Bases/3-Projects/Projects.base|⚙️Projectsbase]] | [[0_Atlas/0_Dashboard/3-Projects/0-Recurring|🔄Recurring]] | [[0_Atlas/0_Dashboard/3-Projects/1-Active|⚡Active]] | [[0_Atlas/0_Dashboard/3-Projects/2-Passive|⏳Passive]] | [[0_Atlas/0_Dashboard/3-Projects/3-Idea|☁️Idea]] |

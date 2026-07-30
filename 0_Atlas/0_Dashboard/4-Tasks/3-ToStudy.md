@@ -5,18 +5,18 @@ cssclasses:
 ---
 
 # ToStudy
-| [[0_Atlas/0_Dashboard/4-Tasks|🛠️Tasks]] | [[0_Atlas/Bases/Tasksbase.base|⚙️Tasksbase]] | [[0_Atlas/0_Dashboard/4-Tasks/0-Task-Center|🎯Task Center]] | [[0_Atlas/0_Dashboard/4-Tasks/1-ToDo|📝ToDo]] | [[0_Atlas/0_Dashboard/4-Tasks/2-ToGo|🏃ToGo]] | [[0_Atlas/0_Dashboard/4-Tasks/3-ToStudy|🎓ToStudy]] | [[0_Atlas/0_Dashboard/4-Tasks/4-ToMeet|🤝ToMeet]] | [[0_Atlas/0_Dashboard/4-Tasks/5-ToBuy|🛒ToBuy]] | [[0_Atlas/0_Dashboard/4-Tasks/6-ToPay|💳ToPay]] | [[0_Atlas/0_Dashboard/4-Tasks/7-ToCook|🍳ToCook]] | [[0_Atlas/0_Dashboard/4-Tasks/8-ToCraft|✂️ToCraft]] | [[0_Atlas/0_Dashboard/4-Tasks/9-ToGet|📥ToGet]] |
+![[zData/5design_modul/TaskNav]]
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
 
 > [!multi-column]
 >
 > > [!blank|wide-0]
-> > ### NEXUS NAVIGATOR
+> > #### 🎓 **STUDY QUEUE**
 > > ```dataviewjs
 > > {
 > >     const container = this.container;
-> >     container.style.width = "250px";
+> >     container.style.width = "100%"; container.style.maxWidth = "240px"; container.style.height = "230px";
 > >     container.style.margin = "0 auto";
 > >     const clean = value => String(value ?? "").toLowerCase();
 > >     const hasTaskContext = p => clean(p.arch).includes("#4task") || clean(p.archtype).includes("#4task") || p.file.path.includes("4_Tasks");
@@ -48,7 +48,7 @@ cssclasses:
 > >             }]
 > >         },
 > >         options: {
-> >             cutout: '80%',
+> >             maintainAspectRatio: false, cutout: '76%',
 > >             animation: false,
 > >             plugins: {
 > >                 legend: {

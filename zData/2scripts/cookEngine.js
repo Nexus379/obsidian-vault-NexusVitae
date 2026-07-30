@@ -150,10 +150,10 @@ function cookEngine() {
     };
 
     return {
-        // Hilfsfunktion, um die Persona einer Kategorie abzufragen
+        // Helper: look up the persona of a category
         getPersona: (category) => lifeData[category]?.persona || "seeker",
 
-        // Deine gewünschten Namen für die Abfrage der Daten
+        // The field names used to read the data
         getKitchenLabel: (category, id) => {
             const item = lifeData[category]?.items.find(i => i.id === id);
             return item ? item.label : id;

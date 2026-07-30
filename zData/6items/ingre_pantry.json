@@ -28028,7 +28028,7 @@
       "unit_price": 1.5,
       "unit_type": "100g",
       "label": "Baking Soda",
-      "icon": "ðŸ¥£",
+      "icon": "🥣",
       "val": {
         "ph_level": 8
       },
@@ -28039,7 +28039,7 @@
         ]
       },
       "props": [
-        "Neutralisiert GerÃ¼che",
+        "Neutralisiert Gerüche",
         "Sanftes Peeling/Scheuermittel",
         "Backtriebmittel"
       ],
@@ -28068,7 +28068,7 @@
       "unit_price": 2,
       "unit_type": "100ml",
       "label": "Apple Cider Vinegar",
-      "icon": "ðŸŽ",
+      "icon": "🍎",
       "val": {
         "ph_level": 3
       },
@@ -28080,9 +28080,9 @@
         ]
       },
       "props": [
-        "GlanzspÃ¼lung fÃ¼r Haare",
-        "SchlieÃŸt die Schuppenschicht",
-        "Basis fÃ¼r Essigreiniger"
+        "Glanzspülung für Haare",
+        "Schließt die Schuppenschicht",
+        "Basis für Essigreiniger"
       ],
       "lang": {
         "de": "Apfelessig",
@@ -28109,7 +28109,7 @@
       "unit_price": 4,
       "unit_type": "100ml",
       "label": "Coconut Oil",
-      "icon": "ðŸ¥¥",
+      "icon": "🥥",
       "val": {
         "fat_g": 100
       },
@@ -28123,10 +28123,10 @@
       "props": [
         "Pre-Wash Haarmaske",
         "Make-up Entferner",
-        "HitzebestÃ¤ndig beim Braten"
+        "Hitzebeständig beim Braten"
       ],
       "lang": {
-        "de": "KokosÃ¶l",
+        "de": "Kokosöl",
         "en": "Coconut Oil"
       },
       "prices": {
@@ -28150,7 +28150,7 @@
       "unit_price": 5,
       "unit_type": "100g",
       "label": "Raw Honey",
-      "icon": "ðŸ¯",
+      "icon": "🍯",
       "val": {
         "sugar_g": 82
       },
@@ -28161,9 +28161,9 @@
         ]
       },
       "props": [
-        "NatÃ¼rlicher Feuchtigkeitsspender",
+        "Natürlicher Feuchtigkeitsspender",
         "Sanftes Aufhellen der Haare",
-        "EnthÃ¤lt natÃ¼rliche Enzyme"
+        "Enthält natürliche Enzyme"
       ],
       "lang": {
         "de": "Honig",

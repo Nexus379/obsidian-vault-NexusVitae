@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "language": "",
   "roots": {
     "calendar": "0_Calendar",
     "stars": "1_Stars",
@@ -48,8 +49,9 @@
     }
   },
   "generated": {
-    "groceryOutputFolder": "0_Calendar/4_Projectlogs/Utilities",
-    "workoutOutputFolder": "0_Calendar/4_Projectlogs/Fitness"
+    "routineLogFolder": "0_Calendar/4_Projectlogs/Routine",
+    "groceryOutputFolder": "0_Calendar/4_Projectlogs/Routine",
+    "workoutOutputFolder": "0_Calendar/4_Projectlogs/Routine"
   },
   "metaBind": {
     "dataPath": ".obsidian/plugins/obsidian-meta-bind-plugin/data.json"

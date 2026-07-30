@@ -7,9 +7,18 @@ filters:
     - status != "archived"
     - status != "bin"
     - status != "canceled"
+properties:
+  note.character_type:
+    displayName: 🎭 kind
+  note.source_type:
+    displayName: 📖 source
+  note.source_media:
+    displayName: 🎞️ from
+  note.relation:
+    displayName: 👥 group
 views:
   - type: table
-    name: Relationship
+    name: 🦄 Relationship
     order:
       - file.name
       - status
@@ -24,4 +33,68 @@ views:
       note.status: 90
       note.priority: 70
       file.mtime: 120
-
+  - type: table
+    name: 🧑 Real People
+    filters:
+      or:
+        # Plain relationship notes (4relation.md) never set character_type at all —
+        # only the character template does. No field means a real person.
+        - character_type == "real_life"
+        - character_type == ""
+    order:
+      - file.name
+      - relation
+      - status
+      - priority
+      - file.mtime
+    sort:
+      - property: relation
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 240
+      note.relation: 150
+      note.status: 90
+      note.priority: 70
+  - type: table
+    name: 🎭 Fiction
+    filters:
+      or:
+        - character_type == "film_series"
+        - character_type == "game"
+        - character_type == "book_media"
+        - character_type == "oc"
+    order:
+      - file.name
+      - character_type
+      - source_media
+      - relation
+      - status
+    sort:
+      - property: character_type
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 240
+      note.character_type: 130
+      note.source_media: 200
+      note.relation: 140
+  - type: table
+    name: 👥 By Group
+    order:
+      - relation
+      - file.name
+      - character_type
+      - status
+      - file.mtime
+    sort:
+      - property: relation
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.relation: 170
+      file.name: 240
+      note.character_type: 130

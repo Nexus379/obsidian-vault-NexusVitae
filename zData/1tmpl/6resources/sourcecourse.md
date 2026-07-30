@@ -93,11 +93,13 @@ arch:
   - "#6resource"
 archtype:
   - "#6resource/course"
-author: "<%- instructor %>"
+creator: "<%- instructor %>"
 science: ["<%- sci %>"]
 discipline: ["<%- disc %>"]
 progress: <%- p %>
 progressBar: "<%- bar %>"
+status:
+  - 1active
 persona:
 plattform: ""
 genre:
@@ -123,7 +125,7 @@ review:
 > > > [!blank]
 > > > **ID:** <%- luhmannId %> 
 > > > 
-> > > **Instructor:** `$= dv.current().author`
+> > > **Instructor:** `$= dv.current().creator`
 > > > 
 > > > **Progress:** `$= dv.current().progressBar`
 > > > 

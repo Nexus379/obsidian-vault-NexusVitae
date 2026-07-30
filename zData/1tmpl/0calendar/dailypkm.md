@@ -111,7 +111,7 @@ if (tp.file.path !== finalDest && !app.vault.getAbstractFileByPath(finalDest)) {
 // 🔱 6.5 TIMETABLE SYNC (Auto-Extraction)
 let timetableBlocks = "";
 try {
-    // 1. Finde den passenden Wochentag heraus (z.B. "mon", "tue")
+// 1. Work out the matching weekday (e.g. "mon", "tue")
     const ttDate = moment(dateStr);
     const dayPrefix = ttDate.locale('en').format("ddd").toLowerCase(); 
 
@@ -128,7 +128,7 @@ try {
     if (ttPage && ["mon", "tue", "wed", "thu", "fri"].includes(dayPrefix)) {
         let dailySubjects = new Set(); // Set verhindert doppelte Einträge bei Doppelstunden
         
-        // 3. Durchsuche das YAML der Timetable nach den Einträgen für diesen Tag
+// 3. Search the timetable YAML for the entries of this day
         for (let key in ttPage) {
             if (key.startsWith(`tt_${dayPrefix}_`)) {
                 let val = ttPage[key];
@@ -138,7 +138,7 @@ try {
             }
         }
 
-        // 4. Wenn wir Fächer gefunden haben, lade die Discipline Engine
+// 4. If subjects were found, load the discipline engine
         if (dailySubjects.size > 0) {
             let engineData = {};
             if (typeof tp.user.disciplineEngine === "function") {
@@ -146,8 +146,8 @@ try {
                 engineData = engine.all || {};
             }
 
-            // 5. Baue die Blöcke exakt im Format deines Button-Skripts
-            timetableBlocks += `> [!info] 🗓️ **Timetable Sync: ${ttDate.format("dddd")}**\n>\n> Die folgenden Fächer stehen heute auf dem Plan:\n\n`;
+// 5. Build the blocks in exactly the format of your button script
+            timetableBlocks += `> [!info] 🗓️ **Timetable Sync: ${ttDate.format("dddd")}**\n>\n> Today's subjects:\n\n`;
             
             for (let subjKey of dailySubjects) {
                 let disc = engineData[subjKey];
@@ -172,7 +172,7 @@ try {
     console.error("Timetable Sync Error: ", error);
 }
 
-// Speichere die gebauten Blöcke als Variable, um sie unten auszugeben
+// Keep the built blocks in a variable to output them below
 tp.variables.timetableSync = timetableBlocks;
 
 
@@ -223,12 +223,12 @@ cal_date: <%- dateStr %>
 > > > const eMap = {"5":"🔱 Amazing", "4":"🔋 High", "3":"🙂 Medium", "2":"🪫 Low", "1":"⭕ Empty"};
 > > > const bMap = {"5":"🧠 Fresh / Ready", "4":"💡 Focused", "3":"😐 Average", "2":"🥱 Tired", "1":"🍳 Fried"};
 > > > 
-> > > // Das "display: flex" sorgt dafür, dass die Elemente nebeneinander stehen
+> > > // The "display: flex" is what puts the elements side by side
 > > > const container = dv.container.createEl("div", { 
 > > >     style: "display: flex; gap: 15px; margin-bottom: 20px;" 
 > > > });
 > > > 
-> > > // Funktion zum Erstellen der Boxen
+> > > // Function for building the boxes
 > > > function createDashboardBox(title, map, fieldName, color, icon) {
 > > >     const box = container.createEl("div", { 
 > > >         style: `flex: 1; padding: 12px; background: var(--background-secondary-alt); border-radius: 8px; border-left: 4px solid ${color};` 
@@ -266,29 +266,29 @@ cal_date: <%- dateStr %>
 >     }
 > } catch (e) {}
 > 
-> // Sucht nach allen generierten Schlüsseln, die auf "_min" enden
+> // Finds every generated key ending in "_min"
 > for (let key in c) {
 >     if (key.endsWith("_min")) {
 >         let baseKey = key.replace("_min", "");
 >         
 >         // Prüft, ob Meta-Bind den Eintrag angelegt hat
 >         if (c[baseKey] !== undefined || c[key] !== undefined) {
->             // Macht aus einem leeren Feld eine 0 für die Berechnung
+>             // Turns an empty field into a 0 for the calculation
 >             let time = Number(c[key]) || 0; 
 >             
 >             // Rohdaten des Themas abgreifen
 >             let rawTopic = c[baseKey] || "---"; 
 >             
->             // SICHERHEITS-CHECK FÜR LINKS:
->             // Falls du mehrere Links wie "[[n-lit1]], [[n-lit2]]" einträgst, 
->             // macht Dataview ein Array daraus. Das fangen wir hier sauber ab:
+>             // SAFETY CHECK FOR LINKS:
+>             // If you enter several links such as "[[n-lit1]], [[n-lit2]]", 
+>             // Dataview turns it into an array. Caught cleanly here:
 >             let topic = Array.isArray(rawTopic) ? rawTopic.join(", ") : rawTopic;
 >             
->             // Entfernt nur die Zufalls-ID und übernimmt den Namen aus der Discipline Engine
+>             // Strips only the random ID and takes the name from the discipline engine
 >             let subjKey = baseKey.replace(/_\d{4}$/, "");
 >             let subj = disciplineData[subjKey]?.label || subjKey.split("_").map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(" ");
 >             
->             // Zeigt die Zeit an, oder "---" wenn sie 0 / leer ist
+>             // Shows the time, or "---" when it is 0 / empty
 >             let displayTime = time > 0 ? `${time} min` : `---`;
 >             
 >             sessions.push([`**${subj}**`, topic, displayTime]);
@@ -299,7 +299,7 @@ cal_date: <%- dateStr %>
 > 
 > if (sessions.length > 0) {
 >     dv.table(["Discipline", "Topic", "Time"], sessions);
->     // Hier ist das optische Upgrade: Die "Total Time" Box
+>     // The visual upgrade: the "Total Time" box
 >     dv.paragraph(`
 >         <div style="text-align: center; padding: 10px; background: var(--background-secondary-alt); border-radius: 8px; margin-top: 10px;">
 >             <span style="opacity: 0.8; text-transform: uppercase; font-size: 0.8em;">Total Study Time Today</span><br>

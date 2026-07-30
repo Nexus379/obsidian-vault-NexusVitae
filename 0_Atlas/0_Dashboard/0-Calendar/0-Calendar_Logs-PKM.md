@@ -4,7 +4,7 @@ cssclasses:
   - wide-page
 ---
 # 🎓 PKM
-| [[0_Atlas/0_Dashboard/0-Calendar|📅Calendar]] | [[0_Atlas/Bases/Calendarbase.base|⚙️Calendarbase]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PLM|🌷PLM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PPM|🌻PPM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Logs-PKM|🌼PKM]] | [[0_Atlas/0_Dashboard/0-Calendar/0-Calendar_Studyboard|🎓Studyboard]] | [[0_Atlas/0_Dashboard/2-Areas/3-Drive_Financeboard|🪙Finance]] | [[0_Atlas/0_Dashboard/7-Reviews|🛰️Reviews]] |
+![[zData/5design_modul/CalNav]]
 
 
 ![[zData/5design_modul/NavigationModul|NavigationModul]]
@@ -14,14 +14,14 @@ cssclasses:
 > [!multi-column]
 > > [!blank]
 > > 
-> > ### 🔱 **NEXUS NAVIGATOR**
+> > #### 🌼 **LEARNING FLOW**
 > > ```dataviewjs
 > > { 
 > >      const chartContainer = this.container;
 > >      const REFRESH_COOLDOWN = 60000; 
 > >      const now = Date.now();
 > >      
-> >      chartContainer.style.width = "300px";
+> >      chartContainer.style.width = "100%"; chartContainer.style.maxWidth = "240px"; chartContainer.style.height = "230px";
 > >      chartContainer.style.margin = "0 auto"; 
 > >      
 > >      if (!window.lastPieRender) window.lastPieRender = 0;
@@ -65,7 +65,7 @@ cssclasses:
 > >                  }]
 > >              },
 > >              options: {
-> >                  cutout: '75%', 
+> >                  maintainAspectRatio: false, cutout: '76%', 
 > >                  animation: false, 
 > >                  plugins: {
 > >                      legend: { 
@@ -103,7 +103,7 @@ cssclasses:
 > > 
 > > ```dataviewjs
 > > dv.table(
-> >     ["Log", "Fokus & Themen"],
+> >     ["Log", "Focus & Topics"],
 > >     dv.pages('"0_Calendar/3_PKM"')
 > >         .where(p => p.file.name.toLowerCase().includes(" pkm"))
 > >         .sort(p => p.file.ctime, 'desc')
@@ -111,25 +111,25 @@ cssclasses:
 > >         .map(p => {
 > >             let topics = [];
 > >             
-> >             // Durchsucht alle YAML-Variablen der Notiz
+> >             // Searches every YAML variable of the note
 > >             for (let key in p) {
-> >                 // Prüft, ob der Name wie eine deiner generierten IDs aussieht (z.B. "mathematics_1234")
+> >                 // Checks whether the name looks like one of the generated IDs (e.g. "mathematics_1234")
 > >                 if (/[a-z_]+_\d{4}/.test(key) && p[key]) {
 > >                     // Schneidet die Zahlen ab, um den Fachnamen zu bekommen
 > >                     let rawDisc = key.replace(/_\d{4}$/, '');
 > >                     
-> >                     // Macht den Fachnamen hübsch (z.B. "computer_sci" -> "Computer Sci")
+> >                     // Prettify the subject name (e.g. "computer_sci" -> "Computer Sci")
 > >                     let cleanDisc = rawDisc.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 > >                     
-> >                     // Baut den Text zusammen: "Fach: Dein eingetipptes Thema"
+> >                     // Assemble the text: "Subject: the topic you typed"
 > >                     topics.push(`**${cleanDisc}:** ${p[key]}`);
 > >                 }
 > >             }
 > >             
-> >             // Falls Themen gefunden wurden, werden sie untereinander aufgelistet
+> >             // If topics were found, list them one below the other
 > >             return [
 > >                 p.file.link, 
-> >                 topics.length > 0 ? topics.join("<br>") : "*(kein Thema eingetragen)*"
+> >                 topics.length > 0 ? topics.join("<br>") : "*(no topic entered)*"
 > >             ];
 > >         })
 > > )

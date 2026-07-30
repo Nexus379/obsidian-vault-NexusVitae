@@ -1,7 +1,7 @@
 
 # 💊 Nexus Vital-Tracker: Molecular Command Center
 
-> [!abstract] **Strategische Ausrichtung** Dieses Modul synchronisiert die physische Einnahme (Checkboxes) mit der molekularen Berechnung aus dem Meal Plan und deinen Supplement-Silos.
+> [!abstract] **Strategic alignment** This module syncs the physical intake (checkboxes) with the molecular calculation from the meal plan and your supplement silos.
 
 ---
 
@@ -49,9 +49,9 @@
 > > Code snippet
 > > 
 > > ```dataviewjs
-> > // Protein-Ziel: 120g
+> > // Protein target: 120g
 > > const target = 120;
-> > const current = 94; // Beispielwert aus der Engine
+> > const current = 94; // Example value from the engine
 > > const pct = Math.min(100, (current/target)*100).toFixed(0);
 > > dv.paragraph(`**Protein:** ${current}g / ${target}g`);
 > > dv.paragraph(`<progress value="${pct}" max="100"></progress> ${pct}%`);
@@ -62,7 +62,7 @@
 > > Code snippet
 > > 
 > > ```dataviewjs
-> > // Magnesium-Ziel: 350mg
+> > // Magnesium target: 350mg
 > > const targetM = 350;
 > > const currentM = 180; 
 > > const pctM = Math.min(100, (currentM/targetM)*100).toFixed(0);
@@ -85,6 +85,6 @@
 
 ## 🛠️ Quick-Infuze (Apotheke & Drogerie)
 
-`BUTTON[add-atom-synthesis]` _(Nutze diesen Button, um spontan ein Supplement aus deinem Silo hinzuzufügen, falls die Grafik oben noch im roten Bereich ist.)_
+`BUTTON[add-atom-synthesis]` _(Use this button to add a supplement from your silo on the spot, if the graphic above is still in the red.)_
 
 ---

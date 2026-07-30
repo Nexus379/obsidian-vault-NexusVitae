@@ -44,7 +44,7 @@ persona: "organizer"
 status: 1active
 entity_class: "household_supply"
 household_type: "cleaning_supply"
-state: "active"
+storage_location: "utility_room"
 qty: 0
 needs_refill: false
 shelf_life_months: 36

@@ -7,7 +7,7 @@ resType = resType.charAt(0).toUpperCase() + resType.slice(1);
 
 const targetFolder = `0_Atlas/0_Overview/6_Resources/${resType}`;
 
-// 1. Ordner automatisch erstellen
+// 1. Create the folder automatically
 let currentPath = "";
 for (const seg of targetFolder.split('/')) {
     currentPath = currentPath === "" ? seg : `${currentPath}/${seg}`;

@@ -90,7 +90,7 @@ child:
 summary:
 review:
 # 🔱 Meta Bind Texts (Use comma separation for multiple entries)
-author: ""
+creator: ""
 original_title: ""
 publisher: ""
 pub_date: ""
@@ -119,7 +119,7 @@ chapter: ""
 > > > **Discipline:** `$= dv.current().discipline`
 > > > 
 > > > **Author:** 
-> > > `INPUT[inlineList:author]`
+> > > `INPUT[inlineList:creator]`
 
 <%- tp.file.include("[[zData/3snippets/sortName.md]]") %>
 

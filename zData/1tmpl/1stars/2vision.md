@@ -5,10 +5,10 @@ let title = (tp.variables && tp.variables.title) ? tp.variables.title : tp.file.
 let pLink = (tp.variables && tp.variables.pLink) ? tp.variables.pLink : "";
 const defaultName = String(app.vault.getConfig("newFileName") || "Untitled");
 
-// Variablen für die Frontmatter vorbereiten
+// Prepare the variables for the frontmatter
 let sci = "";
 let disc = "";
-let icon = "🧭"; // Default Icon für Visionen
+let icon = "🧭"; // Default icon for visions
 let area = tp.variables.currentArea || tp.variables.area || "";
 
 // 🚀 DIE NEUE ENGINE ZÜNDEN
@@ -28,7 +28,7 @@ if (typeof tp.user.disciplineEngine === "function") {
         }
     }
 } else {
-    new Notice("⚠️ disciplineEngine.js nicht gefunden!");
+    new Notice("⚠️ disciplineEngine.js not found!");
 }
 
 // 🔱 2. FALLBACK & RENAME

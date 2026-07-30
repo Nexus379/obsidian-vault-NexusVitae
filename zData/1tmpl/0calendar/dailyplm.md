@@ -171,13 +171,13 @@ tp.variables.nexusYaml = Object.entries(nexusBase).map(([k, v]) => `${k}: ${v}`)
 tp.variables.nexusJson = JSON.stringify(nexusBase);
 
 // 5.3 Mantra Randomizer
-const mantraFile = app.vault.getAbstractFileByPath("zData/4values/MantraListe.md");
-let zufallsMantra = "Focus on the Essential. 🔱"; 
+const mantraFile = app.vault.getAbstractFileByPath("zData/4values/MantraList.md");
+let randomMantra = "Focus on the Essential."; 
 if (mantraFile) {
     const mContent = await app.vault.read(mantraFile);
     const listItems = mContent.split("\n").map(l => l.trim()).filter(l => l.startsWith("- ")).map(l => l.replace(/^- /, "").trim());
     if (listItems.length > 0) {
-        zufallsMantra = listItems[Math.floor(Math.random() * listItems.length)];
+        randomMantra = listItems[Math.floor(Math.random() * listItems.length)];
     }
 }
 
@@ -566,10 +566,9 @@ if (dv) {
 > > > 
 > > > `INPUT[text:focusD_plm]`
 > > >
-> > >  **Mantra:** 
-> > >   
-> > >   <%- zufallsMantra %> 
-> > >  🔱🌈  
+> > >  **Mantra:**
+> > >
+> > > <span style="color:var(--color-accent); font-style:italic; font-size:1.1em; line-height:1.5;">🔱 <%- randomMantra %> 🌈</span>
 > > > <br>
 > >
 > > > [!blank|wide-2]
@@ -598,7 +597,7 @@ if (dv) {
     const dayPref = moment(dateValue).locale('en').format("ddd").toLowerCase();
     const weekName = moment(dateValue).format("YYYY-[W]WW");
     
-    // Smart Sync with Weekly Plans (aus 0_Calendar/7_Plan/)
+    // Smart Sync with Weekly Plans (from 0_Calendar/7_Plan/)
     const fitPage = dv.pages('"<%- tp.variables.weeklyPlanRoot %>"').where(p => p.file.name === weekName + "_fitness").first();
 
     // --- 2. THE 5 PILLARS (L-E-B-E-N) ---
@@ -679,7 +678,7 @@ if (dv) {
     // --- 4. VISUAL EVOLUTION (Strict Logic) ---
     let icon = "🌸"; let status = "BUILDING FOUNDATION"; let color = "var(--text-faint)";
 
-    // Der neue Gatekeeper: Du hast alle 5 Pillars ODER du hast es mit Boni ausgeglichen!
+    // The new gatekeeper: all 5 pillars, OR balanced out with bonuses!
     if (totalPercent >= 100) {
         icon = "💖"; status = "SYNC COMPLETE"; color = "var(--interactive-accent)";
         if (totalPercent >= 110) { icon = "🔥"; status = "OVERCHARGE"; color = "#ff7b00"; }
@@ -1043,21 +1042,21 @@ if (dv) {
 > > > const am = Number(c["mobility_am"]) || 0;
 > > > const pm = Number(c["mobility_pm"]) || 0;
 > > > const act = Number(c["activity_time"]) || 0;
-> > > const gesamt = am + pm + act;
-> > > const ziel = 30;
+> > > const totalMin = am + pm + act;
+> > > const goalMin = 30;
 > > > 
 > > > let icon = "⚪"; let flair = "";
-> > > if (gesamt >= 90) { icon = "🦅"; flair = " PHOENIX RUN"; }
-> > > else if (gesamt >= 60) { icon = "✨"; flair = " SHINE"; }
-> > > else if (gesamt >= ziel) { icon = "🟢"; }
-> > > else if (gesamt > 0) { icon = "🟡"; }
+> > > if (totalMin >= 90) { icon = "🦅"; flair = " PHOENIX RUN"; }
+> > > else if (totalMin >= 60) { icon = "✨"; flair = " SHINE"; }
+> > > else if (totalMin >= goalMin) { icon = "🟢"; }
+> > > else if (totalMin > 0) { icon = "🟡"; }
 > > > 
-> > > dv.paragraph(`🏃🏽 **Movement Total:** ${gesamt} / ${ziel} min ${icon}${flair}`);
+> > > dv.paragraph(`🏃🏽 **Movement Total:** ${totalMin} / ${goalMin} min ${icon}${flair}`);
 > > > dv.paragraph(`<small style="opacity:0.7;">🧘 Mobility AM: <b>${am} min</b> · 🌙 Mobility PM: <b>${pm} min</b> · ⚡ Activity: <b>${act} min</b></small>`);
 > > > ```
 > > 
 
-> [!pink]- 💗 E - Emotionen / Einstellung <br> <small> Emotions / Mind-Set </small>
+> [!pink]- 💗 E - Emotions / Mind-Set
 > >[!multi-column]
 > > 
 > > > [!journal] **Resonance Radar:** 
@@ -1236,7 +1235,7 @@ if (engine && engine.renderChakraColumns) {
     {g:"6. Third Eye", icon:"💜", col:"171,71,188"},
     {g:"7. Crown", icon:"🤍", col:"236,64,122"},
   ];
-  const rows = chakras.map(ch => ({ icon: ch.icon, col: ch.col, ist: actual[ch.g] || 0 }));
+  const rows = chakras.map(ch => ({ icon: ch.icon, col: ch.col, actual: actual[ch.g] || 0 }));
   dv.paragraph(`<small style="opacity:0.55;">🌈 Chakra time today</small>`);
   dv.paragraph(engine.renderChakraColumns(rows));
 }

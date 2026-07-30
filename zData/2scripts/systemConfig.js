@@ -14,6 +14,9 @@ async function load(app, configPath = DEFAULT_CONFIG_PATH) {
 function defaults() {
   return {
     version: 1,
+    // Display language. Empty = follow Obsidian's own interface language.
+    // Set "en" / "de" to force one regardless of the app setting.
+    language: "",
     roots: {
       calendar: "0_Calendar",
       stars: "1_Stars",

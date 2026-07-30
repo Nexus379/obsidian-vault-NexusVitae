@@ -94,9 +94,11 @@ status:
   - 1active
 priority:
   - "1"
+rating:
+ranking:
 persona:
 # 🔱 Meta Bind Texts (Use comma separation for multiple entries)
-author: ""
+creator: ""
 original_title: ""
 publisher: ""
 pub_date: ""
@@ -129,7 +131,7 @@ volume_max:
 > > > **ID:** <%- luhmannId %> `$= dv.current().volume ? '| **Volume:** ' + dv.current().volume : ''` `$= dv.current().volume_title ? '- ' + dv.current().volume_title : ''`
 > > > 
 > > > **Author:**
-> > > `INPUT[inlineList:author]`
+> > > `INPUT[inlineList:creator]`
 > > > 
 > > > **Genre:**
 > > > `INPUT[inlineList:genre]`

@@ -1,17 +1,17 @@
 filters:
   and:
-    - arch.contains("#6resou")
-    - archtype.contains("#6resou/boardgame")
+    - arch.contains("#6resource")
+    - archtype.contains("#6resource/boardgame")
 views:
   - type: table
-    name: Boardgame
+    name: 🎲 Boardgame
     order:
       - cover
       - file.name
       - creator
       - status
       - rating
-      - area2
+      - ranking
       - file.path
     sort:
       - property: file.name
@@ -22,3 +22,17 @@ views:
       note.creator: 160
       note.status: 90
       note.rating: 80
+  - type: table
+    name: ⚡ Active
+    filters:
+      or:
+        - status == "1active"
+        - status == "0start"
+    order:
+      - file.name
+      - creator
+      - rating
+      - ranking
+    sort:
+      - property: file.mtime
+        direction: DESC
